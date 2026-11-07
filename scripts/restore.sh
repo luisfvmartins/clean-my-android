@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Script de Restauração para Motorola Edge Debloat
+# Clean My Android - Script de Restauração (Rollback)
+# Autor: Luís Martins (@luisfvmartins)
+# Repositório: https://github.com/luisfvmartins/clean-my-android
 # ==============================================================================
 
 set -e

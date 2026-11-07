@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Motorola Edge 60 Pro (Hello UI / Android 14/15) - Debloat & Degoogle Script
+# Clean My Android - Debloat, Degoogle & Extreme Optimization Script
 # Autor: Luís Martins (@luisfvmartins)
-# Repositório: https://github.com/luisfvmartins/motorola-edge-debloat-degoogle
+# Repositório: https://github.com/luisfvmartins/clean-my-android
 # ==============================================================================
 
 set -e
 
 echo "=================================================================="
-echo " Motorola Edge Series - Debloat & Degoogle Automático via ADB     "
+echo "          Clean My Android - Otimização & Debloat Automático      "
 echo "=================================================================="
 
 # 1. Verifica conectividade ADB

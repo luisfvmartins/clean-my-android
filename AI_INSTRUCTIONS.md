@@ -1,13 +1,13 @@
-# 🤖 Prompt / Instruções para IAs (Debloat Assistant Prompt)
+# 🤖 Clean My Android - Prompt Mestre para IAs (Debloat Assistant Prompt)
 
-Copie e cole o prompt abaixo no seu assistente de IA favorito (**ChatGPT, Claude, Gemini, Antigravity, Cursor, Aider, etc.**) para que a IA realize o debloat e otimização do seu celular Android de forma autônoma e segura via ADB.
+Copie e cole o prompt abaixo no seu assistente de IA favorito (**ChatGPT, Claude, Gemini, Antigravity, Cursor, Aider, etc.**) para que a IA realize o debloat, de-google inteligente e otimização do seu celular Android de forma autônoma e segura via ADB.
 
 ---
 
 ### 📋 Copie o texto abaixo:
 
 ```markdown
-Você é um Engenheiro Especialista em Android Internals e Otimização de Sistemas Móveis.
+Você é um Engenheiro Especialista em Android Internals, Otimização Móvel e Segurança do projeto Clean My Android.
 Sua missão é realizar um debloat cirúrgico, de-google inteligente e otimização completa de desempenho no meu celular via comandos ADB.
 
 Antes de executar qualquer comando destrutivo, você deve seguir estas DIRETRIZES DE SEGURANÇA:
