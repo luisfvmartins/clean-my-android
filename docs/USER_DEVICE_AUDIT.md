@@ -2,7 +2,7 @@
 
 Este documento orienta cada colaborador do **Clean My Android** a preparar uma contribuição por Pull Request (PR), registrar o estado do aparelho antes das alterações, documentar cada intervenção e produzir um relatório comparativo depois da otimização.
 
-O objetivo é criar um histórico técnico individual, verificável e reproduzível — não apenas uma lista de aplicativos removidos.
+O objetivo é construir uma base pública e cumulativa de auditorias técnicas, verificáveis e reproduzíveis. Cada Pull Request aprovado acrescenta uma nova auditoria ao repositório principal, sem substituir os relatórios já existentes.
 
 > **Princípio central:** nenhum resultado pode ser inventado. Toda métrica deve indicar método, condição de coleta e evidência. Quando não for possível medir, registrar como "Não mensurado" ou "Inconclusivo".
 
@@ -56,7 +56,26 @@ O repositório original é público. Não presuma que o fork será privado. Inve
 - Inclua no Pull Request somente relatórios e evidências sanitizados e necessários à revisão.
 - O PR será enviado ao repositório original para análise; isso não significa que será aceito ou incorporado.
 
-## 3. Estrutura de arquivos por dispositivo
+## 3. Estrutura cumulativa de relatórios no repositório principal
+
+O repositório original manterá uma coleção de auditorias em `reports/`. Cada dispositivo deve ter seu próprio diretório, com nome padronizado e exclusivo. Exemplo:
+
+```text
+reports/
+├── README.md
+├── motorola-edge-60-pro-android-16/
+│   └── ... relatório e evidências sanitizadas ...
+├── samsung-galaxy-s20-fe-android-16/
+│   └── ... relatório e evidências sanitizadas ...
+└── outro-fabricante-modelo-versao/
+    └── ... relatório e evidências sanitizadas ...
+```
+
+**Regra de contribuição:** cada PR deve adicionar uma nova pasta de dispositivo, ou atualizar somente a pasta daquele mesmo dispositivo quando for uma revisão identificada do relatório. Não substitua, apague ou altere relatórios de outros colaboradores. O objetivo é que cada PR aprovado aumente a coleção de dispositivos documentados na branch principal.
+
+A pasta `reports/README.md` funciona como índice da coleção. Ao adicionar uma auditoria, inclua nela um link para o novo relatório, com fabricante/modelo, versão Android/ROM e data da auditoria. Não crie entradas com dados não verificados.
+
+## 4. Estrutura de arquivos por dispositivo
 
 Crie um diretório com nome descritivo, sem identificadores pessoais. Exemplo:
 
@@ -99,7 +118,7 @@ reports/
 
 A estrutura é uma referência. Não crie arquivos vazios para aparentar que uma coleta foi realizada. Registre limitações quando uma informação não estiver disponível.
 
-## 4. Diagnóstico inicial — ANTES
+## 5. Diagnóstico inicial — ANTES
 
 Antes de qualquer alteração, identifique o dispositivo e registre o estado original.
 
@@ -163,7 +182,7 @@ Para permitir uma comparação justa, anote:
 
 RAM livre, temperatura e consumo de bateria variam com o uso. Uma única leitura não comprova melhoria sustentada.
 
-## 5. Capturas de tela
+## 6. Capturas de tela
 
 Quando possível, registrar imagens equivalentes antes e depois:
 
@@ -182,7 +201,7 @@ As capturas devem ser legíveis, mostrar contexto e não ser manipuladas para su
 
 Se a captura não puder ser obtida, registre a limitação.
 
-## 6. Registro das alterações
+## 7. Registro das alterações
 
 Toda alteração deve ser documentada em `changes/change-log.md`, incluindo:
 
@@ -203,7 +222,7 @@ Toda alteração deve ser documentada em `changes/change-log.md`, incluindo:
 
 Não classifique um pacote como dispensável apenas pelo nome ou fabricante.
 
-## 7. Diagnóstico final — DEPOIS
+## 8. Diagnóstico final — DEPOIS
 
 Após as alterações, repita as coletas do diagnóstico inicial com os mesmos métodos e, tanto quanto possível, nas mesmas condições.
 
@@ -222,7 +241,7 @@ Verifique:
 
 Um aplicativo continuar instalado não prova que sua função está operacional. Teste o recurso real.
 
-## 8. Comparativo antes e depois
+## 9. Comparativo antes e depois
 
 O relatório deve comparar os dados coletados, sem preencher lacunas com estimativas.
 
@@ -251,7 +270,7 @@ Além das métricas, comparar:
 
 Não confundir remoção de pacote para o usuário atual com remoção física da partição do sistema. Diferencie desativação, desinstalação para usuário, remoção de atualização e remoção com root.
 
-## 9. Modelo de relatório final
+## 10. Modelo de relatório final
 
 O arquivo `comparison-report.md` deverá conter:
 
@@ -277,7 +296,7 @@ O arquivo `comparison-report.md` deverá conter:
 
 A conclusão deve responder: o que mudou, o que foi preservado, o que deixou de funcionar, quais melhorias foram medidas, quais resultados são inconclusivos e como reverter alterações.
 
-## 10. Instruções para a IA
+## 11. Instruções para a IA
 
 A IA utilizada pelo usuário deverá:
 
@@ -321,7 +340,7 @@ A IA utilizada pelo usuário deverá:
 
 A auditoria só estará concluída quando o estado inicial estiver registrado, os pacotes estiverem analisados ou marcados como pendentes, as alterações estiverem documentadas, o estado final tiver sido coletado, as funções essenciais tiverem sido testadas e o relatório comparativo estiver produzido.
 
-## 11. Enviar sua contribuição por Pull Request
+## 12. Enviar sua contribuição por Pull Request
 
 O relatório individual deve ficar em uma pasta própria, por exemplo `reports/SEU_DISPOSITIVO/`. Para contribuir com o projeto original, siga este fluxo:
 
@@ -330,8 +349,10 @@ O relatório individual deve ficar em uma pasta própria, por exemplo `reports/S
 3. Adicione somente os arquivos sanitizados do relatório.
 4. Revise o diff completo e confirme que não há identificadores, credenciais, notificações ou dados pessoais.
 5. Envie a branch para o seu fork.
-6. Abra um Pull Request do seu fork para `luisfvmartins/clean-my-android:main`.
-7. Descreva o modelo, versão Android/ROM, escopo da auditoria, principais resultados, testes realizados e limitações.
+6. Atualize `reports/README.md` com um link para a nova auditoria.
+7. Confira se a pasta do dispositivo ainda não existe. Se já existir, verifique se é uma atualização legítima do mesmo aparelho e preserve o histórico relevante.
+8. Abra um Pull Request do seu fork para `luisfvmartins/clean-my-android:main`.
+9. Descreva o modelo, versão Android/ROM, escopo da auditoria, principais resultados, testes realizados e limitações.
 8. Aguarde a revisão. Atenda aos pedidos de alteração, se houver.
 
 Exemplo de comandos Git:
@@ -356,7 +377,7 @@ Depois, no GitHub, use **Compare & pull request** e confirme:
 
 Se não tiver Git configurado, abra o PR pela interface do GitHub após enviar os arquivos pela interface web. Não faça commit diretamente na branch principal do repositório original.
 
-O Pull Request é uma proposta de contribuição, não uma publicação automática na versão principal. O mantenedor revisará o conteúdo e poderá aceitar, solicitar ajustes ou rejeitar a contribuição.
+O Pull Request é uma proposta de contribuição. Após aprovação e merge, a nova pasta e sua entrada no índice passam a integrar o repositório principal e ficam disponíveis para todos. Assim, as auditorias aprovadas formam uma coleção cumulativa, semelhante ao catálogo colaborativo do CleanYourTV. O mantenedor revisará o conteúdo e poderá aceitar, solicitar ajustes ou rejeitar a contribuição.
 ---
 
 **O objetivo não é produzir os maiores números de otimização. É construir um histórico técnico confiável, verificável e reproduzível de cada dispositivo.**
