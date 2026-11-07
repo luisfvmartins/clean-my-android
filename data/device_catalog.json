@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "devices": [
+    {
+      "id": "motorola-moto-g54-5g",
+      "manufacturer": "Motorola",
+      "model": "Moto G54 5G",
+      "model_code": "XT2343-1",
+      "android_version": "15",
+      "android_version_status": "confirmada",
+      "audit_status": "Inventário técnico publicado",
+      "component_count": 462,
+      "component_count_label": "componentes auditados no inventário local",
+      "component_count_note": "A versão pública omite 29 aplicativos instalados pelo usuário e apresenta 394 componentes de sistema/fabricante.",
+      "component_count_status": "auditado",
+      "report": "docs/AUDITORIA_MOTO_G54_5G.md",
+      "catalog": "docs/auditorias/moto-g54/README.md"
+    },
+    {
+      "id": "motorola-edge-60-pro",
+      "manufacturer": "Motorola",
+      "model": "Edge 60 Pro",
+      "model_code": "XT2507-1",
+      "android_version": null,
+      "android_version_status": "pendente de confirmação",
+      "audit_status": "Relatório publicado; validação funcional pendente",
+      "component_count": 501,
+      "component_count_label": "componentes mapeados no inventário inicial",
+      "component_count_note": "A versão canônica do Android e os testes funcionais permanecem pendentes de validação presencial.",
+      "component_count_status": "mapeado",
+      "report": "reports/motorola-edge-60-pro/README.md",
+      "catalog": "reports/motorola-edge-60-pro/README.md"
+    }
+  ]
+}
