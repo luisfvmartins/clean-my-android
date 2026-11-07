@@ -2,7 +2,7 @@
 
 Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporadas ao **Clean My Android** por Pull Requests. Cada dispositivo possui uma documentação própria para que resultados, limitações e recomendações não sejam generalizados para outros modelos.
 
-**Princípio:** uma auditoria publicada é um registro técnico, não uma autorização para executar os mesmos comandos em outro aparelho.
+**Princípio:** uma auditoria publicada é um registro técnico, não uma autorização para executar os mesmos comandos em outro aparelho. Consulte também as [estatísticas do projeto](../docs/ESTATISTICAS.md), geradas a partir do catálogo estruturado.
 
 ## Catálogo
 
