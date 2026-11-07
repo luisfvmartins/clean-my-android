@@ -461,6 +461,19 @@ adb shell pm enable com.google.android.projection.gearhead
 
 ---
 
+
+## 🧾 Auditoria individual: fork e relatório antes/depois
+
+Cada usuário deve trabalhar em seu próprio fork e manter um histórico individual do dispositivo. O processo documenta o estado inicial, inventário de pacotes, permissões, recursos, alterações, testes, capturas de tela e comparação final.
+
+1. Crie seu [fork do Clean My Android](https://github.com/luisfvmartins/clean-my-android/fork).
+2. Leia o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md).
+3. Utilize o [prompt mestre para IA](AI_INSTRUCTIONS.md) para orientar a coleta, análise, otimização e geração do relatório.
+4. Salve os resultados em `reports/SEU_DISPOSITIVO/` no seu fork ou em uma cópia local.
+5. Revise e remova dados sensíveis antes de publicar.
+
+**Privacidade:** forks de repositórios públicos também são públicos por padrão. Não publique IMEI, número de série, MAC, tokens, contas, notificações ou logs brutos. Mantenha evidências completas localmente ou em repositório privado e publique apenas material sanitizado.
+
 ## 📄 Licença
 
 Distribuído sob a licença **MIT**. Veja [`LICENSE`](LICENSE) para mais informações.  
