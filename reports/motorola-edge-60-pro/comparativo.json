@@ -1,0 +1,86 @@
+{
+  "device_model": "Motorola Edge 60 Pro (XT2507-1)",
+  "codename": "cybert",
+  "architecture": "arm64-v8a",
+  "os_version": "Pendente de confirmação (versões de framework indicam 17/API 37, mas getprop canônico não foi registrado)",
+  "audit_period": "2026-11-06 a 2026-11-07",
+  "metrics": [
+    {
+      "indicator": "Memória RAM Livre",
+      "before": "4.5 GB (aprox. 4.608.000 KB)",
+      "after": "7.2 GB (aprox. 7.372.800 KB)",
+      "variation": "+2.7 GB (+58.7% de RAM disponível)",
+      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
+    },
+    {
+      "indicator": "Armazenamento Livre (/data)",
+      "before": "193 GB livres",
+      "after": "~197 GB livres",
+      "variation": "~4 GB de aumento no espaço livre de /data (ganho agregado decorrente da remoção de atualizações em /data/app e limpeza de dados/caches; ganho por aplicativo NÃO mensurado individualmente)",
+      "evidence": "df -h /data observado no Passo 398; ganho individual por pacote não medido"
+    },
+    {
+      "indicator": "Quantidade Total de Pacotes",
+      "before": "501 pacotes catalogados",
+      "after": "492 pacotes no espaço do usuário 0 (9 pacotes desinstalados para o usuário 0)",
+      "variation": "-9 pacotes desinstalados para o usuário 0 (7 de sistema com installed=false + 2 de terceiros purgados)",
+      "evidence": "pm list packages -f Passo 73 vs Passo 451/620"
+    },
+    {
+      "indicator": "Pacotes de Aplicativos Habilitados",
+      "before": "441 pacotes ativos",
+      "after": "257 pacotes ativos",
+      "variation": "-184 pacotes ativos em execução",
+      "evidence": "pm list packages -e --user 0"
+    },
+    {
+      "indicator": "Pacotes Desativados (DISABLED_USER)",
+      "before": "60 pacotes desativados de fábrica",
+      "after": "244 pacotes desativados",
+      "variation": "+184 pacotes congelados via ADB",
+      "evidence": "pm list packages -d Passo 89 vs Passo 701"
+    },
+    {
+      "indicator": "Daemons de Adware Ativos em RAM",
+      "before": "Glance, Taboola, InMobi, DT Ignite ativos (~750 MB RSS)",
+      "after": "Processos de adware identificados finalizados na sessão",
+      "variation": "Eliminação dos processos de adware monitorados",
+      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
+    },
+    {
+      "indicator": "Google QuickSearchBox em RAM",
+      "before": "873 MB RSS (Search: 480 MB + GoogleApp: 393 MB)",
+      "after": "0 MB (Processo eliminado da RAM)",
+      "variation": "-873 MB de carga contínua",
+      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
+    },
+    {
+      "indicator": "Perfis Ativos em Background",
+      "before": "User 0 + User 11 (duplicação de GMS consumindo 269 MB RSS)",
+      "after": "Apenas User 0 ativo (User 11 stopped, User 10 removed)",
+      "variation": "-269 MB de processos duplicados",
+      "evidence": "am stop-user -f 11 / dumpsys meminfo Passo 384"
+    },
+    {
+      "indicator": "Temperatura Térmica em Espera",
+      "before": "37°C a 40°C",
+      "after": "33.0°C",
+      "variation": "-4°C a -7°C (redução térmica observada)",
+      "evidence": "dumpsys battery Passo 384"
+    },
+    {
+      "indicator": "Verificação Play Integrity / Bancos",
+      "before": "Não coletado formalmente",
+      "after": "Pendente de validação presencial",
+      "variation": "Nenhum teste de integridade via API nem logs de aplicativos bancários foram executados na sessão",
+      "evidence": "Registros de execução não contêm chamadas Play Integrity API nem testes de apps de banco"
+    },
+    {
+      "indicator": "Testes Funcionais (Voz, SMS, Biometria)",
+      "before": "Não coletado em log",
+      "after": "Pendente de validação presencial pelo usuário",
+      "variation": "Pilha RIL mantida intacta; dependente de validação em uso real",
+      "evidence": "Ausência de logs de testes de áudio/biometria na sessão ADB"
+    }
+  ]
+}
