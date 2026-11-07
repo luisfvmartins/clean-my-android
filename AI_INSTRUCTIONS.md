@@ -2,7 +2,7 @@
 
 Este arquivo orienta assistentes de IA (ChatGPT, Claude, Gemini, Antigravity e outros) a auditar, otimizar e documentar um dispositivo Android de forma individual, segura e verificável.
 
-**Leia também:** [Auditoria individual do dispositivo](docs/USER_DEVICE_AUDIT.md). Esse documento contém o procedimento para criar o fork, organizar evidências, produzir o relatório antes/depois e publicar os resultados.
+**Leia também:** [Auditoria individual do dispositivo](docs/USER_DEVICE_AUDIT.md). Esse documento contém o procedimento para preparar uma contribuição, organizar evidências, produzir o relatório antes/depois e enviá-lo por Pull Request.
 
 ---
 
@@ -31,16 +31,18 @@ O resultado deverá incluir:
 
 Siga o procedimento e a estrutura de arquivos definidos em [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
 
-### 2. Fork e destino dos dados
+### 2. Fork, branch e Pull Request
 
-Antes de começar, confirme se o usuário está trabalhando em um fork próprio ou em uma cópia local.
+Antes de começar, confirme se o usuário está trabalhando em um fork próprio ou em uma cópia local. Para colaboradores externos, o fluxo padrão é fork + branch + Pull Request (PR) para o repositório original.
 
 - Oriente a criação do fork em https://github.com/luisfvmartins/clean-my-android caso necessário.
-- Se houver integração GitHub disponível, confirme o destino e a conta antes de criar ou enviar arquivos.
-- Nunca faça commit no repositório original.
-- Nunca afirme que criou fork, arquivo, commit ou publicação sem confirmação da ferramenta.
-- Se não houver integração, forneça instruções manuais de Git.
-- O fork público não deve receber dados brutos ou sensíveis. Oriente o usuário a manter dados brutos localmente/privados e publicar somente material sanitizado.
+- Configure `origin` para o fork do colaborador e `upstream` para https://github.com/luisfvmartins/clean-my-android.
+- Crie uma branch exclusiva para cada contribuição; não trabalhe diretamente na branch `main` do fork.
+- Se houver integração GitHub disponível, confirme o repositório de origem, destino, branch e conta antes de criar ou enviar arquivos.
+- Nunca faça commit diretamente no repositório original nem abra um PR sem autorização explícita.
+- Nunca afirme que criou fork, branch, arquivo, commit, push ou PR sem confirmação da ferramenta.
+- Se não houver integração, forneça instruções manuais de Git e para abrir o PR pela interface do GitHub.
+- Mantenha dados brutos localmente ou em repositório privado. O fork e o PR devem conter apenas dados e evidências sanitizados e necessários à revisão.
 
 ### 3. Identificação e diagnóstico inicial — não modificar
 
@@ -167,19 +169,21 @@ Quando tecnicamente possível e autorizado, obtenha capturas equivalentes antes 
 
 Salve em `before/screenshots/` e `after/screenshots/`. Não publique notificações, mensagens, contas, números, localização ou outros dados pessoais. Se não for possível capturar, registre a limitação; não simule imagens.
 
-### 11. Publicação no fork
+### 11. Contribuição por Pull Request
 
-Antes de publicar:
+Antes de enviar a contribuição:
 
-1. Confirme o repositório de destino e que é o fork do usuário.
-2. Verifique a visibilidade do repositório.
-3. Revise arquivos, logs e imagens em busca de dados sensíveis.
-4. Apresente a lista de arquivos que serão enviados.
-5. Solicite autorização explícita para o commit/push.
-6. Publique somente após aprovação.
-7. Informe o resultado confirmado e os links dos arquivos.
+1. Confirme o fork do colaborador (`origin`) e o repositório original (`upstream`).
+2. Verifique a visibilidade do fork.
+3. Crie uma branch exclusiva para a auditoria.
+4. Revise o diff completo, logs e imagens em busca de dados sensíveis.
+5. Apresente a lista de arquivos que serão enviados e solicite autorização explícita para commit e push.
+6. Envie a branch ao fork do colaborador, nunca diretamente ao repositório original.
+7. Com autorização explícita, abra um Pull Request direcionado a `luisfvmartins/clean-my-android:main`.
+8. Inclua no PR o modelo do aparelho, Android/ROM, escopo, resumo dos resultados, testes, limitações e confirmação de sanitização.
+9. Informe o link do PR somente após confirmação real da criação.
 
-Nunca envie dados ao repositório original. Nunca publique dados brutos sem revisão.
+O PR é uma proposta para revisão; não prometa aceitação ou incorporação. Nunca publique dados brutos ou sensíveis.
 
 ### 12. Critério de conclusão
 
