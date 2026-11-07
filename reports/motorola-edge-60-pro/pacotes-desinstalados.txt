@@ -1,0 +1,24 @@
+# Pacotes Desinstalados para o Usuário 0 no Motorola Edge 60 Pro
+# Inclui adwares e desinstalações físicas de stubs/atualizações
+
+ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp # Toques para Celular Grátis - Adware instalado silenciosamente em background via DT Ignite / AMX. Exibia anúncios invasivos.
+all.documentreader.filereader.office.viewer # Leitor e Visualizador de Todos os Documentos - Adware instalado silenciosamente via DT Ignite / AMX. Rastreava arquivos e solicitava permissões amplas.
+wool.match.color.sort.jam.puzzle # Wool Match / Color Sort Jam - Jogo patrocinado baixado automaticamente em background pelo instalador da operadora.
+com.oakever.tiletrip # Tile Trip - Jogo de puzzle baixado silenciosamente pelo Digital Turbine.
+com.puzzlegames.puzzlebrickslegend # Puzzle Bricks Legend - Jogo patrocinado pré-carregado que executava serviços de anúncios em background.
+com.airbnb.android # Airbnb - Aplicativo de terceiros dispensável removido a pedido do usuário.
+com.handmark.expressweather # 1Weather / Express Weather - Aplicativo redundante de clima com publicidade integrada.
+com.motorola.genie # Moto Feedback / Genie - Módulo de coleta de sugestões e telemetria de feedback da Motorola.
+com.google.android.apps.subscriptions.red # YouTube Red / Music Subscriptions - Serviço legado de assinaturas do YouTube Music desativado no processo de De-Google.
+
+# Purgas físicas de atualizações em /data/app para recuperar armazenamento:
+com.android.chrome # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.google.android.apps.maps # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.google.android.apps.photos # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.google.android.gm # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.google.android.googlequicksearchbox # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.google.android.inputmethod.latin # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.google.android.youtube # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.inmobi.weather # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.motorola.mobiledesktop # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+com.motorola.smartfeed # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
