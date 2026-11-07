@@ -11,7 +11,7 @@
 ## 1. Recuperação dos Dados e Cadeia de Custódia Forense
 
 ### 1.1. Proveniência e Contexto Histórico
-A auditoria foi recuperada a partir da sessão operacional registrada sob o identificador **`2775a24c-1202-4911-836a-9f32885332b0`** (conduzida em 06 e 07 de novembro de 2026), que totalizou **816 passos operacionais** e **365 invocações de ferramentas**.
+A auditoria foi consolidada a partir dos registros operacionais de 06 e 07 de novembro de 2026. Identificadores internos da sessão e detalhes de execução do ambiente de coleta foram omitidos desta versão pública.
 
 Durante a referida sessão, o dispositivo esteve conectado através de **Depuração Sem Fio (Wireless ADB)** emparelhado via TLS com credenciais efêmeras (porta temporária e PIN de pareamento) e conectado na porta de serviço ADB local (`192.168.1.X:PORTA_LOCAL`, migrado dinamicamente conforme reconexões). Nível de permissão verificado: `shell:1000` (sem root, bootloader bloqueado).
 

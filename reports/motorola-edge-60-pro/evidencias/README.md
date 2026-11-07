@@ -9,7 +9,6 @@ Este diretório documenta as fontes de dados, comandos de extração forense, m�
 Todos os registros e inventários apresentados nesta auditoria foram obtidos a partir da execução de comandos no dispositivo conectado via **Android Debug Bridge (ADB)** e camada **Shizuku**:
 
 - **Sessão de Execução:** Histórico de auditoria forense registrado na base local do assistente técnico.
-- **Identificador de Sessão Interna:** `2775a24c-1202-4911-836a-9f32885332b0` (365 invocações de ferramentas e 816 etapas analisadas).
 - **Modo de Conexão:** Depuração Sem Fio (Wireless ADB) via pareamento TLS (porta efêmera + PIN de 6 dígitos) e conexão na porta TCP principal do dispositivo.
 - **Nível de Privilégio:** `shell:1000` (usuário não-root; bootloader bloqueado).
 - **Data da Auditoria:** 06 e 07 de novembro de 2026.

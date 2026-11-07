@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use este formulário para indicar um dispositivo ou discutir uma auditoria. Se você já possui os relatórios e evidências sanitizados, prefira enviar um Pull Request seguindo [CONTRIBUTING.md](../../blob/main/CONTRIBUTING.md).
+        Use este formulário para indicar um dispositivo ou discutir uma auditoria. Se você já possui os relatórios e evidências sanitizados, prefira enviar um Pull Request seguindo [CONTRIBUTING.md](https://github.com/luisfvmartins/clean-my-android/blob/main/CONTRIBUTING.md).
   - type: input
     id: device
     attributes:
