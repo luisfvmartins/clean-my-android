@@ -5,7 +5,9 @@ com.android.bips
 com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.calllogbackup
+com.android.carrierdefaultapp
 com.android.chrome
+com.android.companiondevicemanager
 com.android.contacts
 com.android.cts.ctsshim
 com.android.cts.priv.ctsshim
@@ -107,6 +109,7 @@ com.google.android.tts
 com.google.android.verifier
 com.google.android.verifier.overlay
 com.google.android.videos
+com.google.android.wfcactivation
 com.google.android.youtube
 com.google.ar.core
 com.google.mainline.adservices
