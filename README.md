@@ -64,7 +64,7 @@ Métricas reais obtidas no Motorola Edge 60 Pro (12 GB RAM / 256 GB Armazenament
 
 ---
 
-### 2. Motorola Moto G54 5G (`XT2343-1` / `cancunf` / Android 15)
+### Motorola Moto G54 5G (`XT2343-1` / `cancunf` / Android 15)
 
 A auditoria do Moto G54 está documentada em [`docs/AUDITORIA_MOTO_G54_5G.md`](docs/AUDITORIA_MOTO_G54_5G.md). O inventário público contém os componentes de sistema; aplicativos instalados pelo usuário e dados de rede foram omitidos por privacidade.
 
