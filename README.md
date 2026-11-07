@@ -472,9 +472,9 @@ Cada colaborador pode documentar seu próprio dispositivo com um relatório ante
 4. Salve os resultados em `reports/SEU_DISPOSITIVO/` no seu fork ou mantenha os dados brutos localmente.
 5. Revise e sanitize todos os arquivos e evidências.
 6. Crie uma branch exclusiva, envie-a ao seu fork e abra um **Pull Request para `luisfvmartins/clean-my-android:main`**.
-7. Aguarde a revisão do mantenedor; o PR poderá ser aceito, receber pedidos de ajustes ou ser rejeitado.
+7. Aguarde a revisão do mantenedor; após o merge, a auditoria será incorporada à coleção oficial em `reports/`, somando-se às contribuições anteriores. O PR poderá ser aceito, receber pedidos de ajustes ou ser rejeitado.
 
-**Privacidade:** forks de repositórios públicos também são públicos por padrão. Não publique IMEI, número de série, MAC, tokens, contas, notificações ou logs brutos. Mantenha evidências completas localmente ou em repositório privado. O Pull Request deve conter apenas material sanitizado e necessário à revisão.
+**Privacidade:** forks de repositórios públicos também são públicos por padrão. Não publique IMEI, número de série, MAC, tokens, contas, notificações ou logs brutos. Mantenha evidências completas localmente ou em repositório privado. O Pull Request deve conter apenas material sanitizado e necessário à revisão. Cada contribuição deve acrescentar uma pasta de dispositivo e atualizar o [índice de auditorias](reports/README.md), sem sobrescrever relatórios de outros colaboradores.
 ## 📄 Licença
 
 Distribuído sob a licença **MIT**. Veja [`LICENSE`](LICENSE) para mais informações.  
