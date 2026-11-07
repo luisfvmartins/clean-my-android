@@ -1,48 +1,77 @@
 # Auditorias de dispositivos Android
 
-Este diretório reúne auditorias colaborativas do [**Clean My Android**](https://github.com/luisfvmartins/clean-my-android). Cada entrada corresponde a um dispositivo e documenta seu estado antes/depois, alterações realizadas, testes, evidências e limitações.
+Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporadas ao **Clean My Android** por Pull Requests. Cada dispositivo possui uma documentação própria para que resultados, limitações e recomendações não sejam generalizados para outros modelos.
 
-## Como contribuir
+**Princípio:** uma auditoria publicada é um registro técnico, não uma autorização para executar os mesmos comandos em outro aparelho.
 
-1. Siga o [guia de auditoria individual](../docs/USER_DEVICE_AUDIT.md).
-2. Crie uma pasta exclusiva para seu dispositivo neste diretório (`reports/<fabricante-modelo>/`).
-3. Inclua somente relatórios e evidências estritamente sanitizados (sem PII ou identificadores de hardware).
-4. Adicione abaixo uma entrada com link para sua auditoria.
-5. Envie a contribuição por Pull Request para a branch `main`.
+## Catálogo
 
-Após a aprovação e o merge, a auditoria passa a fazer parte deste catálogo no repositório principal. Cada contribuição deve ser aditiva: não apague nem sobrescreva auditorias de outros dispositivos ou colaboradores. Atualizações de uma auditoria existente devem corresponder ao mesmo dispositivo e explicar a revisão realizada.
+| Fabricante / modelo | Identificação | Android / interface | Situação e escopo | Relatório |
+|---|---|---|---|---|
+| **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Inventário técnico publicado; consulte o relatório para distinguir observações, histórico e pendências | [Auditoria completa](../docs/AUDITORIA_MOTO_G54_5G.md) |
+| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Hello UI · versão canônica pendente de confirmação | Relatório publicado; validação funcional e coleta complementar pendentes | [Abrir relatório](motorola-edge-60-pro/README.md) |
 
----
+### Como interpretar os status
 
-## Dispositivos auditados
+- **Inventário publicado:** há dados coletados e documentação disponível; isso não significa que todas as alterações foram testadas.
+- **Validação pendente:** existem dados ou procedimentos que ainda precisam de confirmação no aparelho.
+- **Homologado para script:** só deve ser usado quando houver validação explícita do script, do modelo e da versão do sistema. A compatibilidade do script não é inferida a partir da existência de um relatório.
 
-| Dispositivo Comercial | Código de Modelo | Codename | SoC / Plataforma | Android / UI | Status da Auditoria | Documentação |
-|---|---|---|---|---|---|---|
-| **Motorola Edge 60 Pro** | `XT2507-1` | `cybert` | arm64-v8a | Pendente de confirmação | **Pendente de validação** (Auditoria documental concluída; SO e testes funcionais pendentes) | [📂 `motorola-edge-60-pro/`](motorola-edge-60-pro/README.md) |
-| **Motorola Moto G54 5G** | `XT2343-1` | `cancunf` | MediaTek Dimensity 7020 | Android 15 (Hello UI) | Concluída / Homologada | [📄 `AUDITORIA_MOTO_G54_5G.md`](../docs/AUDITORIA_MOTO_G54_5G.md) |
+## Como adicionar um dispositivo
 
----
+1. Leia o [guia de auditoria individual](../docs/USER_DEVICE_AUDIT.md).
+2. Crie uma pasta exclusiva em `reports/`, usando fabricante, modelo e versão Android quando necessário para diferenciar variantes.
+3. Registre identificação, inventário inicial, alterações autorizadas, inventário final, comparativo e limitações.
+4. Inclua somente arquivos sanitizados e necessários para verificar as conclusões.
+5. Adicione uma linha neste catálogo com os dados confirmados e o status correto.
+6. Envie a contribuição por Pull Request para a branch `main`.
 
-## Estrutura padrão para novos relatórios
+### Estrutura recomendada
 
-Cada dispositivo auditado neste diretório deve seguir o padrão:
+A estrutura pode ser simplificada quando uma coleta não estiver disponível. Não crie arquivos vazios nem invente resultados para preencher o modelo.
 
 ```text
-reports/<fabricante-modelo>/
-├── README.md                  # Sumário executivo, destaques técnicos e resultados
-├── auditoria.md               # Relatório forense detalhado e reproduzível
-├── inventario-antes.json      # Todos os pacotes mapeados pré-debloat em JSON válido
-├── inventario-depois.json     # Comparativo de pacotes pós-debloat em JSON válido
-├── pacotes-desativados.txt    # Lista nominal dos pacotes em estado disabled-user
-├── pacotes-desinstalados.txt  # Lista de pacotes desinstalados para o usuário 0
-├── permissoes-alteradas.json  # Revogações de permissões, AppOps e regras de rede
-├── comparativo.json          # Tabela de métricas quantitativas de desempenho
+reports/<fabricante-modelo-android>/
+├── README.md                  # Sumário e status da auditoria
+├── auditoria.md               # Método, evidências, análise e limitações
+├── inventario-antes.json      # Inventário anterior às alterações
+├── inventario-depois.json     # Inventário posterior às alterações
+├── comparativo.json           # Métricas antes/depois e condições de coleta
+├── pacotes-desativados.txt    # Registro do estado final, se aplicável
+├── permissoes-alteradas.json  # Alterações documentadas, se aplicável
 └── evidencias/
-    └── README.md              # Proveniência, comandos ADB executados e sanitização
+    └── README.md              # Proveniência e sanitização das evidências
 ```
 
-### Regras Mandatórias de Contribuição:
-1. **Evidência Real:** Nunca gere relatórios baseados em suposições ou dados fictícios. Todo dado apresentado deve ter sido extraído via ADB (`dumpsys`, `pm`, `getprop`, `df`, `free`). Informações sem comprovação devem ser explicitamente marcadas como "Pendente de validação".
-2. **Privacidade Absoluta (Zero PII):** Higienize previamente qualquer identificador pessoal ou de hardware (IMEI, MAC, Serial Number, contas de e-mail, tokens de API, números telefônicos e IPs reais).
-3. **Estrutura Aditiva:** Contribuições de novos aparelhos nunca devem sobrescrever nem alterar relatórios de outros modelos existentes.
-4. **Respeito ao Play Integrity e Estabilidade:** O debloat deve prezar pela manutenção de serviços essenciais de segurança e compatibilidade do sistema operacional.
+## Regras de qualidade e privacidade
+
+1. **Evidência real:** não publique dados simulados, inferências como fatos ou métricas sem método de coleta.
+2. **Antes e depois comparáveis:** informe data, condições e comandos utilizados. Uma medição isolada não comprova ganho causado pela alteração.
+3. **Separação de estados:** diferencie pacote instalado, habilitado, desabilitado e desinstalado para um usuário. Um snapshot histórico não é uma lista de execução.
+4. **Sem recomendações universais:** uma lista de pacotes de um modelo não deve ser aplicada a outro modelo, região ou firmware.
+5. **Sanitização obrigatória:** remova IMEI, serial, MAC, IP público ou identificável, contas, e-mails, números de telefone, tokens, chaves, notificações e dados pessoais.
+6. **Dados brutos privados:** mantenha dumps completos localmente ou em armazenamento privado; publique apenas os trechos estritamente necessários.
+7. **Contribuição aditiva:** não apague, substitua ou reescreva auditorias de outros dispositivos. Atualizações devem ser feitas na pasta do mesmo aparelho e explicar o motivo da revisão.
+8. **Validação transparente:** marque explicitamente testes não executados e resultados inconclusivos.
+
+## Fluxo de integração
+
+```text
+Coleta local
+    ↓
+Análise e autorização do proprietário
+    ↓
+Sanitização e revisão do material
+    ↓
+Fork + branch exclusiva
+    ↓
+Pull Request para main
+    ↓
+Revisão técnica e de privacidade
+    ↓
+Merge: auditoria incorporada ao catálogo
+```
+
+A abertura de um Pull Request não garante aprovação ou merge. Contribuições podem receber pedidos de correção quando faltarem evidências, houver exposição de dados pessoais ou recomendações inseguras.
+
+Consulte [CONTRIBUTING.md](../CONTRIBUTING.md) para o fluxo de envio e o [guia de auditoria](../docs/USER_DEVICE_AUDIT.md) para os detalhes técnicos.
