@@ -8,7 +8,7 @@ Este diretório reúne auditorias colaborativas do Clean My Android. Cada entrad
 2. Crie uma pasta exclusiva para seu dispositivo neste diretório.
 3. Inclua somente relatórios e evidências sanitizados.
 4. Adicione abaixo uma entrada com link para sua auditoria.
-5. Envie a contribuição por Pull Request para a branch `main).
+5. Envie a contribuição por Pull Request para a branch `main`.
 
 Após a aprovação e o merge, a auditoria passa a fazer parte deste catálogo no repositório principal. Cada contribuição deve ser aditiva: não apague nem sobrescreva auditorias de outros dispositivos ou colaboradores. Atualizações de uma auditoria existente devem corresponder ao mesmo dispositivo e explicar a revisão realizada.
 
