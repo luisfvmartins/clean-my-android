@@ -1,9 +1,33 @@
 # Evolução das contribuições
 
-O painel [EVOLUCAO_CONTRIBUICOES.md](EVOLUCAO_CONTRIBUICOES.md) apresenta a evolução de Pull Requests incorporadas, autores distintos e crescimento do catálogo de dispositivos.
+Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requests fechadas com campo merged_at preenchido; PRs rejeitadas ou fechadas sem merge não entram.
 
-Os dados de atividade são consultados na API REST do GitHub e atualizados diariamente pelo workflow [Atualizar painel de contribuições](../.github/workflows/contribution-dashboard.yml). Também é possível executá-lo manualmente na aba Actions.
+**Atualizado em:** 2026-11-07 (UTC)  
+**Repositório:** [luisfvmartins/clean-my-android](https://github.com/luisfvmartins/clean-my-android)
 
-A contagem de PRs considera apenas itens com merged_at preenchido. Não representa aprovação técnica universal, homologação de scripts ou teste funcional dos aparelhos.
+## Indicadores
 
-Para estatísticas estruturadas de aparelhos, consulte [Estatísticas do projeto](ESTATISTICAS.md).
+- **Pull Requests incorporadas:** 7
+- **Autores distintos com PR incorporada:** 1
+- **Dispositivos catalogados:** 2
+- **Fabricantes representados:** 1
+
+## Pull Requests incorporadas por ano
+
+| Ano de incorporação | Pull Requests |
+|---:|---:|
+| 2026 | 7 |
+
+## Escopo e limitações
+
+- Autores distintos são contados pelo login GitHub associado ao autor da PR incorporada. Isso não equivale a pessoas verificadas ou membros ativos atuais.
+- Uma PR representa uma contribuição integrada, mas pode conter vários arquivos ou dispositivos.
+- Dispositivos e fabricantes vêm de data/device_catalog.json; atividade de PR vem da API GitHub.
+- O painel não mede qualidade, linhas úteis, testes em aparelho ou homologação.
+- Os dados refletem o repositório no momento da atualização.
+
+## Atualização
+
+O workflow [Atualizar painel de contribuições](../.github/workflows/contribution-dashboard.yml) executa diariamente e também pode ser iniciado manualmente pela aba Actions. Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token pessoal é armazenado no repositório.
+
+Consulte também as [estatísticas do projeto](ESTATISTICAS.md) e o [catálogo de auditorias](../reports/README.md).
