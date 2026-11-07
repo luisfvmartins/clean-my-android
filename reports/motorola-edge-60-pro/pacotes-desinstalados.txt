@@ -1,24 +1,45 @@
-# Pacotes Desinstalados para o Usuário 0 no Motorola Edge 60 Pro
-# Inclui adwares e desinstalações físicas de stubs/atualizações
+# Pacotes Desinstalados para o Usuário 0 no Motorola Edge 60 Pro (XT2507-1)
+#
+# NOTA TÉCNICA SOBRE DESINSTALAÇÃO NO ANDROID (SEM ROOT):
+# 1. Aplicativos de terceiros (/data/app): a desinstalação via "pm uninstall --user 0" remove completamente o APK e os dados do usuário.
+# 2. Pacotes de sistema (/system, /product): o comando "pm uninstall -k --user 0" marca o pacote como "installed=false" para o Usuário 0 e limpa seus dados/cache em /data, mas o APK original de fábrica permanece preservado na partição de sistema (somente leitura). Não há exclusão física da partição do sistema.
+# 3. Atualizações de apps de sistema: quando um app de sistema é atualizado pela Play Store, a nova versão fica gravada em /data/app. O comando "pm uninstall <pacote>" remove essa atualização e reverte o aplicativo à versão base de fábrica.
+# 4. Mensuração de armazenamento: o ganho total de espaço livre observado na partição /data durante a sessão foi de aproximadamente 4 GB em termos agregados (de 193 GB para ~197 GB). No entanto, o ganho individual por pacote NÃO foi mensurado separadamente. Valores individuais não devem ser somados.
 
-ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp # Toques para Celular Grátis - Adware instalado silenciosamente em background via DT Ignite / AMX. Exibia anúncios invasivos.
-all.documentreader.filereader.office.viewer # Leitor e Visualizador de Todos os Documentos - Adware instalado silenciosamente via DT Ignite / AMX. Rastreava arquivos e solicitava permissões amplas.
-wool.match.color.sort.jam.puzzle # Wool Match / Color Sort Jam - Jogo patrocinado baixado automaticamente em background pelo instalador da operadora.
-com.oakever.tiletrip # Tile Trip - Jogo de puzzle baixado silenciosamente pelo Digital Turbine.
-com.puzzlegames.puzzlebrickslegend # Puzzle Bricks Legend - Jogo patrocinado pré-carregado que executava serviços de anúncios em background.
-com.airbnb.android # Airbnb - Aplicativo de terceiros dispensável removido a pedido do usuário.
-com.handmark.expressweather # 1Weather / Express Weather - Aplicativo redundante de clima com publicidade integrada.
-com.motorola.genie # Moto Feedback / Genie - Módulo de coleta de sugestões e telemetria de feedback da Motorola.
-com.google.android.apps.subscriptions.red # YouTube Red / Music Subscriptions - Serviço legado de assinaturas do YouTube Music desativado no processo de De-Google.
+# ==============================================================================
+# 1. Aplicativos de terceiros desinstalados completamente (2 pacotes)
+# ==============================================================================
+# APKs e dados de usuário removidos integralmente do dispositivo:
+ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp # Toques para Celular Grátis - Adware instalado em background via DT Ignite / AMX.
+all.documentreader.filereader.office.viewer # Leitor de Documentos - Adware instalado via DT Ignite / AMX.
 
-# Purgas físicas de atualizações em /data/app para recuperar armazenamento:
-com.android.chrome # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.google.android.apps.maps # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.google.android.apps.photos # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.google.android.gm # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.google.android.googlequicksearchbox # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.google.android.inputmethod.latin # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.google.android.youtube # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.inmobi.weather # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.motorola.mobiledesktop # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
-com.motorola.smartfeed # Limpeza de APK atualizado em /data/app (+4 GB recuperados)
+# ==============================================================================
+# 2. Pacotes de sistema desinstalados para o Usuário 0 (7 pacotes — installed=false)
+# ==============================================================================
+# Pacotes pré-carregados cuja instalação foi removida para o perfil de usuário 0:
+wool.match.color.sort.jam.puzzle # Jogo patrocinado pré-carregado pela operadora.
+com.oakever.tiletrip # Jogo de puzzle pré-carregado via DT Ignite.
+com.puzzlegames.puzzlebrickslegend # Jogo patrocinado pré-carregado com serviços de anúncios.
+com.airbnb.android # Aplicativo pré-instalado de terceiros dispensável.
+com.handmark.expressweather # Aplicativo redundante de clima com publicidade integrada.
+com.motorola.genie # Módulo de telemetria de sugestões e feedback da Motorola.
+com.google.android.apps.subscriptions.red # Serviço de gerenciamento de assinaturas do YouTube Music.
+
+# Total de pacotes desinstalados para o Usuário 0: 9 pacotes (2 de terceiros + 7 de sistema)
+
+# ==============================================================================
+# 3. Atualizações de sistema removidas de /data/app (10 pacotes — reversão à base)
+# ==============================================================================
+# O comando "pm uninstall <pacote>" removeu as atualizações baixadas pela Play Store
+# em /data/app, revertendo o binário para a imagem base da ROM.
+# O ganho de armazenamento individual por pacote não foi mensurado independentemente.
+com.android.chrome # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.google.android.apps.maps # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.google.android.apps.photos # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.google.android.gm # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.google.android.googlequicksearchbox # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.google.android.inputmethod.latin # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.google.android.youtube # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.inmobi.weather # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.motorola.mobiledesktop # Reversão à versão base de fábrica (atualização em /data/app removida)
+com.motorola.smartfeed # Reversão à versão base de fábrica (atualização em /data/app removida)

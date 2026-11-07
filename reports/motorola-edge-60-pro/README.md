@@ -2,45 +2,50 @@
 
 [![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](auditoria.md)
 [![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](auditoria.md)
-[![Android: 15 (API 35)](https://img.shields.io/badge/Android-17%20(API%2037)-3DDC84?logo=android&logoColor=white)](auditoria.md)
-[![Status: Homologado](https://img.shields.io/badge/Auditoria-Homologada%20em%20Laborat%C3%B3rio-success)](auditoria.md)
+[![Android: Pendente de Confirmação](https://img.shields.io/badge/Android-Pendente%20de%20Confirma%C3%A7%C3%A3o-yellow?logo=android&logoColor=white)](auditoria.md)
+[![Status: Pendente de Validação](https://img.shields.io/badge/Auditoria-Pendente%20de%20Valida%C3%A7%C3%A3o-orange)](auditoria.md)
 [![Clean My Android](https://img.shields.io/badge/Projeto-Clean%20My%20Android-green)](https://github.com/luisfvmartins/clean-my-android)
 
-Este diretório contém a documentação técnica integral, inventários de pacotes (antes e depois), métricas de desempenho e histórico detalhado das ações de debloat, sandboxing e privacidade executadas no smartphone **Motorola Edge 60 Pro (`XT2507-1`)**, codinome **`cybert`**, rodando a interface **Hello UI** sobre o **Android 17**.
+Este diretório contém a documentação técnica integral, inventários de pacotes (antes e depois), métricas de desempenho e histórico detalhado das ações de debloat, sandboxing e privacidade executadas no smartphone **Motorola Edge 60 Pro (`XT2507-1`)**, codinome **`cybert`**, rodando a interface **Hello UI** (versão canônica do Android pendente de confirmação via `getprop`).
 
 ---
 
 ## 📌 Sumário Executivo
 
-O procedimento de debloat e hardening foi conduzido via **Android Debug Bridge (ADB)** sem a necessidade de root, garantindo **zero degradação funcional**, **100% de compatibilidade com aplicativos bancários brasileiros (Play Integrity intacto)** e **eliminação completa de adwares, telemetrias e instaladores silenciosos de fábrica**.
+O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge (ADB)** sem root. Foram mapeados todos os pacotes de fábrica, desativados daemons de rastreamento e telemetria, neutralizados instaladores patrocinados e isolados serviços protegidos por firmware.
 
-### Principais Destaques do Resultado:
+> [!WARNING]
+> **Status da Auditoria: Pendente de Validação**
+> Os dados deste relatório refletem estritamente as evidências extraídas durante a sessão ADB. A confirmação canônica da versão do Android (via `getprop ro.build.version.release`) e os testes funcionais exaustivos de chamadas de voz, SMS, biometria, aplicativos bancários e Play Integrity estão catalogados como **pendentes de validação presencial pelo proprietário**.
+
+### Principais Destaques do Procedimento:
 - **501 componentes** mapeados no inventário inicial do firmware.
-- **244 pacotes congelados** (`pm disable-user --user 0`) de forma reversível.
-- **9 aplicativos desinstalados** para o usuário principal (incluindo adwares instalados silenciosamente via DT Ignite).
-- **10 purgas físicas de APKs atualizados em `/data/app`**, liberando **mais de 4 GB** de armazenamento interno.
+- **244 pacotes desativados** (`pm disable-user --user 0`) de forma reversível.
+- **9 pacotes desinstalados para o Usuário 0**: 2 aplicativos de terceiros purgados integralmente e 7 pacotes de sistema marcados como `installed=false`.
+- **Reversão de atualizações em `/data/app`** para 10 pacotes de sistema desativados, contribuindo para um aumento agregado de **~4 GB de espaço livre em `/data`** (de 193 GB para ~197 GB; ganho por aplicativo não mensurado individualmente).
 - **7 bloatwares com proteção de firmware (`non-disable`)** paralisados cirurgicamente via **AppOps por UID** e incluídos na blacklist de rede em segundo plano do kernel (`netpolicy`).
-- **Sandboxing do Google Play Services (`com.google.android.gms`)**: 11 permissões runtime revogadas e 6 permissões `SYSTEM_FIXED` (Localização, Sensores Corporais e Reconhecimento de Atividade) neutralizadas via AppOps (`ignore`), transformando o GMS em um túnel mudo de atestação e push.
-- **Perfis fantasmas encerrados**: Perfil `User 11` parado (`am stop-user -f 11`) e `User 10` removido, eliminando instâncias duplicadas do GMS da memória RAM (-269 MB RSS).
-- **Ganho de Memória RAM:** De ~4.5 GB livres para **~7.2 GB livres** (**+2.7 GB de RAM disponível**, aumento de **58,7%**).
-- **Temperatura Térmica em Espera:** Redução de **37°C–40°C** para **33.0°C**.
+- **Sandboxing do Google Play Services (`com.google.android.gms` / UID 10387)**: 6 operações protegidas (Localização Precisa/Aproximada, Monitoramento Contínuo, Sensores Corporais e Reconhecimento de Atividade) configuradas para retorno nulo via AppOps (`ignore`), afetando os processos vinculados ao UID 10387.
+- **13 permissões runtime revogadas** via `pm revoke --user 0` e 2 tentativas de revogação de permissão especial documentadas.
+- **Perfis secundários encerrados**: Perfil fantasma `User 11` parado (`am stop-user -f 11`) e `User 10` removido, eliminando a duplicação de processos do GMS na memória RAM (-269 MB RSS).
+- **Memória RAM Livre:** De ~4.5 GB livres para **~7.2 GB livres** (**+2.7 GB de RAM disponível**, aumento de **58,7%** registrado no Passo 384).
+- **Comportamento Térmico em Repouso:** Redução de **37°C–40°C** para **33.0°C**.
 
 ---
 
 ## 📊 Comparativo Resumido de Recursos
 
-| Indicador | Antes do Debloat | Depois do Debloat | Variação Real |
+| Indicador | Antes do Debloat | Depois do Debloat | Variação Observada |
 |---|---|---|---|
 | **Memória RAM Livre** | ~4.5 GB | **~7.2 GB** | **+2.7 GB livres** (+58,7%) |
-| **Armazenamento Livre (`/data`)** | 193 GB livres | **197 GB a 200 GB** | **+4 GB a +7 GB recuperados** |
-| **Total de Pacotes Registrados** | 501 pacotes | **492 pacotes** | -9 pacotes do usuário |
-| **Aplicativos Habilitados** | 441 pacotes ativos | **257 pacotes ativos** | -184 pacotes ativos |
-| **Aplicativos Desativados** | 60 pacotes | **244 pacotes** | +184 pacotes congelados |
-| **Adwares em Execução na RAM** | Glance, Taboola, InMobi, DTI | **ZERO adwares** | 100% limpo |
-| **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB (eliminado)** | -873 MB RSS |
-| **Perfis Ativos em Background** | User 0 + User 11 | **Apenas User 0** | -269 MB RSS duplicado |
-| **Temperatura em Espera** | 37°C a 40°C | **33.0°C** | Aparelho frio e estável |
-| **Apps de Banco (Caixa, Nubank, PicPay)** | Funcionais | **100% Funcionais** | Play Integrity preservado |
+| **Armazenamento Livre (`/data`)** | 193 GB livres | **~197 GB livres** | **~4 GB recuperados** (ganho agregado da partição; não mensurado por app) |
+| **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para o Usuário 0 |
+| **Aplicativos Habilitados** | 441 pacotes ativos | **257 pacotes ativos** | -184 pacotes ativos em execução |
+| **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes** | +184 pacotes desativados via ADB |
+| **Adwares Monitorados em RAM** | Glance, Taboola, InMobi ativos (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão |
+| **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB** | Processo eliminado da memória RAM |
+| **Perfis Ativos em Background** | User 0 + User 11 | **Apenas User 0 ativo** | -269 MB RSS de instâncias duplicadas |
+| **Temperatura em Repouso** | 37°C a 40°C | **33.0°C** | Dispositivo frio e estável |
+| **Play Integrity / Apps de Banco** | Não coletado na sessão | **Pendente de validação** | Requer teste presencial pelo proprietário |
 
 ---
 
@@ -49,40 +54,40 @@ O procedimento de debloat e hardening foi conduzido via **Android Debug Bridge (
 ```text
 reports/motorola-edge-60-pro/
 ├── README.md                  # Este documento (visão geral e sumário executivo)
-├── auditoria.md               # Relatório técnico completo e exaustivo de auditoria
+├── auditoria.md               # Relatório técnico completo, reproduzível e auditado
 ├── inventario-antes.json      # Inventário completo dos 501 componentes pré-debloat
-├── inventario-depois.json     # Estado final dos 501 componentes pós-debloat
+├── inventario-depois.json     # Estado consolidado dos 501 componentes pós-debloat
 ├── pacotes-desativados.txt    # Lista nominal dos 244 pacotes desativados
-├── pacotes-desinstalados.txt  # Lista dos pacotes desinstalados e purgas físicas
+├── pacotes-desinstalados.txt  # Lista dos 9 pacotes desinstalados e notas de atualização
 ├── permissoes-alteradas.json  # Detalhamento de revogações, AppOps e Netpolicy
-├── comparativo.json          # Métricas técnicas de hardware e software em JSON
+├── comparativo.json          # Métricas técnicas de desempenho e status de testes em JSON
 └── evidencias/
-    └── README.md              # Proveniência, comandos ADB e cadeia de custódia
+    └── README.md              # Proveniência, comandos ADB e coleta complementar pendente
 ```
 
 ---
 
-## 🛡️ Síntese da Arquitetura de Defesa Aplicada
+## 🛡️ Síntese da Estrutura de Otimização Aplicada
 
 ```
 +-------------------------------------------------------------------------+
-| [Camada 1: Debloat em Massa]                                            |
-| 244 pacotes congelados via "pm disable-user --user 0"                   |
+| [Camada 1: Desativação em Nível de Usuário]                             |
+| 244 pacotes colocados em disabled-user via "pm disable-user --user 0"   |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
-| [Camada 2: Purgador Físico de Armazenamento]                           |
-| Remoção de APKs atualizados em /data/app (+4 GB livres recuperados)     |
+| [Camada 2: Remoção de Atualizações de Sistema em /data/app]             |
+| Reversão de 10 pacotes à imagem de fábrica (~4 GB livres agregados)     |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
 | [Camada 3: Sandboxing de Permissões & AppOps por UID]                   |
-| GMS enjaulado (retorno nulo de GPS/sensores) + Quarentena de bloqueados |
+| GMS (UID 10387) com retorno nulo de GPS/sensores + Quarentena de travados |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
 | [Camada 4: Blindagem de Rede & DNS]                                     |
-| Netpolicy background blacklist + NextDNS sinkholing de telemetria       |
+| Netpolicy blacklist de background por UID + NextDNS sinkholing          |
 +-------------------------------------------------------------------------+
 ```
 
@@ -95,5 +100,5 @@ reports/motorola-edge-60-pro/
 - 📋 [**Inventário Depois (`inventario-depois.json`)**](inventario-depois.json)
 - ⚙️ [**Permissões e AppOps Alterados (`permissoes-alteradas.json`)**](permissoes-alteradas.json)
 - 📊 [**Comparativo de Desempenho (`comparativo.json`)**](comparativo.json)
-- 🔒 [**Cadeia de Custódia e Evidências (`evidencias/README.md`)**](evidencias/README.md)
-- 🏠 [**Voltar ao Índice Geral de Relatórios (`reports/README.md`)**](../README.md)
+- 🔒 [**Evidências e Coleta Complementar (`evidencias/README.md`)**](evidencias/README.md)
+- 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../README.md)

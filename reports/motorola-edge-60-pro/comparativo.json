@@ -2,78 +2,85 @@
   "device_model": "Motorola Edge 60 Pro (XT2507-1)",
   "codename": "cybert",
   "architecture": "arm64-v8a",
-  "os_version": "Android 17 (Hello UI)",
+  "os_version": "Pendente de confirmação (versões de framework indicam 17/API 37, mas getprop canônico não foi registrado)",
   "audit_period": "2026-11-06 a 2026-11-07",
   "metrics": [
     {
-      "indicator": "Mem\u00f3ria RAM Livre",
+      "indicator": "Memória RAM Livre",
       "before": "4.5 GB (aprox. 4.608.000 KB)",
       "after": "7.2 GB (aprox. 7.372.800 KB)",
-      "variation": "+2.7 GB (+58.7% de RAM dispon\u00edvel)",
-      "evidence": "dumpsys meminfo Step 110 vs Step 384"
+      "variation": "+2.7 GB (+58.7% de RAM disponível)",
+      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
     },
     {
       "indicator": "Armazenamento Livre (/data)",
       "before": "193 GB livres",
-      "after": "197 GB a 200 GB livres",
-      "variation": "+4 GB a +7 GB recuperados",
-      "evidence": "df -h /data ap\u00f3s purga de atualiza\u00e7\u00f5es em /data/app"
+      "after": "~197 GB livres",
+      "variation": "~4 GB de aumento no espaço livre de /data (ganho agregado decorrente da remoção de atualizações em /data/app e limpeza de dados/caches; ganho por aplicativo NÃO mensurado individualmente)",
+      "evidence": "df -h /data observado no Passo 398; ganho individual por pacote não medido"
     },
     {
       "indicator": "Quantidade Total de Pacotes",
-      "before": "501 pacotes registrados",
-      "after": "492 pacotes (7 desinstalados para usu\u00e1rio 0)",
-      "variation": "-9 pacotes do espa\u00e7o de usu\u00e1rio",
-      "evidence": "pm list packages -f Step 73 vs Step 451/620"
+      "before": "501 pacotes catalogados",
+      "after": "492 pacotes no espaço do usuário 0 (9 pacotes desinstalados para o usuário 0)",
+      "variation": "-9 pacotes desinstalados para o usuário 0 (7 de sistema com installed=false + 2 de terceiros purgados)",
+      "evidence": "pm list packages -f Passo 73 vs Passo 451/620"
     },
     {
       "indicator": "Pacotes de Aplicativos Habilitados",
       "before": "441 pacotes ativos",
       "after": "257 pacotes ativos",
-      "variation": "-184 pacotes ativos em execu\u00e7\u00e3o",
+      "variation": "-184 pacotes ativos em execução",
       "evidence": "pm list packages -e --user 0"
     },
     {
       "indicator": "Pacotes Desativados (DISABLED_USER)",
-      "before": "60 pacotes desativados",
+      "before": "60 pacotes desativados de fábrica",
       "after": "244 pacotes desativados",
       "variation": "+184 pacotes congelados via ADB",
-      "evidence": "pm list packages -d Step 89 vs Step 701"
+      "evidence": "pm list packages -d Passo 89 vs Passo 701"
     },
     {
       "indicator": "Daemons de Adware Ativos em RAM",
       "before": "Glance, Taboola, InMobi, DT Ignite ativos (~750 MB RSS)",
-      "after": "ZERO adwares em execu\u00e7\u00e3o",
-      "variation": "-100% de publicidade no sistema",
-      "evidence": "dumpsys meminfo Step 110 vs Step 384"
+      "after": "Processos de adware identificados finalizados na sessão",
+      "variation": "Eliminação dos processos de adware monitorados",
+      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
     },
     {
       "indicator": "Google QuickSearchBox em RAM",
       "before": "873 MB RSS (Search: 480 MB + GoogleApp: 393 MB)",
       "after": "0 MB (Processo eliminado da RAM)",
-      "variation": "-873 MB de carga cont\u00ednua",
-      "evidence": "dumpsys meminfo Step 110 vs Step 384"
+      "variation": "-873 MB de carga contínua",
+      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
     },
     {
       "indicator": "Perfis Ativos em Background",
-      "before": "User 0 + User 11 (duplica\u00e7\u00e3o de GMS consumindo 269 MB RSS)",
+      "before": "User 0 + User 11 (duplicação de GMS consumindo 269 MB RSS)",
       "after": "Apenas User 0 ativo (User 11 stopped, User 10 removed)",
       "variation": "-269 MB de processos duplicados",
-      "evidence": "am stop-user -f 11 / dumpsys meminfo Step 384"
+      "evidence": "am stop-user -f 11 / dumpsys meminfo Passo 384"
     },
     {
-      "indicator": "Temperatura T\u00e9rmica em Espera",
-      "before": "37\u00b0C a 40\u00b0C",
-      "after": "33.0\u00b0C",
-      "variation": "-4\u00b0C a -7\u00b0C (aparelho frio e est\u00e1vel)",
-      "evidence": "dumpsys battery / monitoramento t\u00e9rmico do kernel"
+      "indicator": "Temperatura Térmica em Espera",
+      "before": "37°C a 40°C",
+      "after": "33.0°C",
+      "variation": "-4°C a -7°C (redução térmica observada)",
+      "evidence": "dumpsys battery Passo 384"
     },
     {
-      "indicator": "Verifica\u00e7\u00e3o Play Integrity / Bancos",
-      "before": "Passando (Play Services ativo com acesso irrestrito)",
-      "after": "Passando 100% (Play Services em sandbox mudo)",
-      "variation": "Zero quebra funcional; Caixa, FGTS, PicPay operacionais",
-      "evidence": "Play Integrity API check / AppOps Sandboxing"
+      "indicator": "Verificação Play Integrity / Bancos",
+      "before": "Não coletado formalmente",
+      "after": "Pendente de validação presencial",
+      "variation": "Nenhum teste de integridade via API nem logs de aplicativos bancários foram executados na sessão",
+      "evidence": "Registros de execução não contêm chamadas Play Integrity API nem testes de apps de banco"
+    },
+    {
+      "indicator": "Testes Funcionais (Voz, SMS, Biometria)",
+      "before": "Não coletado em log",
+      "after": "Pendente de validação presencial pelo usuário",
+      "variation": "Pilha RIL mantida intacta; dependente de validação em uso real",
+      "evidence": "Ausência de logs de testes de áudio/biometria na sessão ADB"
     }
   ]
 }

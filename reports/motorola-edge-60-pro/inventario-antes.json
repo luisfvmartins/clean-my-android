@@ -1,7 +1,7 @@
 {
   "device": "Motorola Edge 60 Pro (XT2507-1)",
   "codename": "cybert",
-  "android_version": "17 (API 37)",
+  "android_version": "Pendente de confirmação (versões de framework indicam 17/API 37, mas getprop canônico não foi registrado)",
   "audit_date": "2026-11-06 / 2026-11-07",
   "total_packages": 501,
   "packages": [
