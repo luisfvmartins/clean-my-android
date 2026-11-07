@@ -8,6 +8,7 @@
 [![ADB](https://img.shields.io/badge/ADB-required-3C78A8)](https://developer.android.com/tools/adb)
 [![Root](https://img.shields.io/badge/Root-n%C3%A3o%20necess%C3%A1rio-2E8B57)](docs/USER_DEVICE_AUDIT.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Validação](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
 [Começar](#começar) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.md) · [Contribuir](CONTRIBUTING.md) · [Segurança](#segurança-em-primeiro-lugar)
 
@@ -110,6 +111,12 @@ As auditorias são específicas por aparelho e possuem diferentes níveis de val
 - **Limitações:** dados não coletados, testes não realizados e conclusões inconclusivas.
 
 Resultados sem evidência devem ser identificados como **não mensurados**, **não coletados** ou **pendentes de validação**. Não transforme estimativas em resultados comprovados.
+
+## Validação automatizada
+
+Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash e lista de componentes protegidos. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
+
+Consulte o [workflow de validação](.github/workflows/validate.yml) e o [validador](scripts/validate_repository.py).
 
 ## Segurança em primeiro lugar
 
