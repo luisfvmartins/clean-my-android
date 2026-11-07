@@ -1,7 +1,6 @@
 name: Solicitar auditoria de dispositivo
 description: Sugerir ou relatar uma auditoria para um aparelho Android
 title: "[AUDITORIA] Fabricante Modelo — Android"
-labels: ["audit"]
 body:
   - type: markdown
     attributes:
