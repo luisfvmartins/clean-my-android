@@ -1,7 +1,7 @@
-# Relatório Forense Integral de Auditoria de Pacotes, Debloat, Segurança e Privacidade — Motorola Edge 60 Pro (`XT2507-1` / `cybert`)
+# Relatório Forense Integral de Auditoria de Pacotes, Debloat, Segurança e Privacidade — Motorola Edge 60 Pro (`XT2507-1` / `cybert` / Android 17)
 
 > [!IMPORTANT]
-> **Escopo Integral e Sem Omissões:** Este documento consolida a auditoria técnica exaustiva do processo de debloat, sandboxing e hardening executado no smartphone **Motorola Edge 60 Pro (XT2507-1)**, codinome **`cybert`**, rodando a interface **Hello UI** baseada em **Android 15 (API Level 35)**.
+> **Escopo Integral e Sem Omissões:** Este documento consolida a auditoria técnica exaustiva do processo de debloat, sandboxing e hardening executado no smartphone **Motorola Edge 60 Pro (XT2507-1)**, codinome **`cybert`**, rodando a interface **Hello UI** baseada em **Android 17 (API Level 37)**.
 >
 > **Rigor Técnico e Diferenciação de Evidências:** Todas as afirmações contidas neste relatório são estritamente sustentadas pelos dados coletados via **ADB (Android Debug Bridge)** e **Shizuku** durante a sessão de debloat registrada no histórico operacional. Valores observados diretamente em tempo de execução são distinguidos com precisão daqueles derivados de logs históricos e de itens que não foram objeto de coleta.
 
@@ -27,7 +27,7 @@ Foram recuperados e analisados os seguintes artefatos de dados brutos:
 ### 1.3. Matriz de Classificação de Dados: Observados vs. Registrados vs. Não Coletados
 - **Dados Observados Diretamente via ADB:**
   - Modelo comercial e identificadores de produto: `motorola_edge_60_pro`, `cybert_g_sys`, `cybert`.
-  - Versão do sistema operacional: Android 15 (identificado por SDK 35/37 nos APKs e pela presença da permissão nativa `ACCESS_LOCAL_NETWORK`).
+  - Versão do sistema operacional: **Android 17** (comprovado indiscutivelmente no `dumpsys package` pelos pacotes centrais de sistema `android`, `com.android.systemui`, `com.android.settings`, `com.android.companiondevicemanager` e `com.motorola.launcher3`, todos com `versionName=17`, `versionCode=37` e **377 pacotes compilados para `targetSdk=37`**).
   - Inventário completo de 501 pacotes instalados com caminhos de APK e UIDs.
   - Consumo de memória RAM por processo (RSS/PSS) em cada fase da limpeza.
   - Pacotes congelados via `pm disable-user --user 0` (244 pacotes confirmados).
@@ -40,38 +40,38 @@ Foram recuperados e analisados os seguintes artefatos de dados brutos:
   - Comportamento térmico em repouso: 37°C–40°C antes $\rightarrow$ 33.0°C pós-otimização.
   - Validação funcional de aplicativos bancários (Caixa, FGTS, PicPay, Mercado Pago).
 - **Dados Não Coletados Durante a Execução:**
-  - Código do processador exato (SoC) e modelo da GPU via comando direto `cat /proc/cpuinfo` ou dumpsys de hardware gráfico.
+  - Modelo exato da GPU via dump de OpenGL/Vulkan.
   - Número de compilação exato (`ro.build.display.id`) e data exata do patch de segurança via `getprop`, uma vez que a extração inicial focou em `ro.product.model` e no dump de pacotes.
   - IMEI, número de série e endereços MAC (omitidos intencionalmente por políticas de privacidade).
 
 ---
 
-## 2. Identificação do Dispositivo
+## 2. Identificação Completa do Dispositivo
 
-| Parâmetro Técnico | Evidência / Registro Histórico | Status de Coleta |
+| Parâmetro Técnico | Evidência / Registro Histórico | Status da Coleta |
 |---|---|---|
 | **Fabricante** | Motorola (`motorola`) | Observado via ADB |
 | **Modelo Comercial** | Motorola Edge 60 Pro | Observado via ADB (`model:motorola_edge_60_pro`) |
-| **Código Exato do Modelo** | `XT2507-1` | Registrado pelo operador / Especificação comercial |
+| **Código Exato do Modelo** | `XT2507-1` | Especificação comercial registrada no projeto |
 | **Codinome do Dispositivo (Device)** | `cybert` | Observado via ADB (`device:cybert`) |
 | **Nome do Produto (Product)** | `cybert_g_sys` | Observado via ADB (`product:cybert_g_sys`) |
 | **Arquitetura da CPU** | 64-bit (`arm64-v8a`) | Observado em dumpsys (`primaryCpuAbi=arm64-v8a`) |
-| **Processador (SoC)** | MediaTek Dimensity 7300 ou equivalente de linha | Não coletado diretamente via ADB |
-| **Unidade de Processamento Gráfico (GPU)** | Mali-G615 MC2 ou equivalente de linha | Não coletado diretamente via ADB |
+| **Processador (SoC)** | Linha MediaTek Dimensity 7300 ou plataforma equivalente Edge 60 Pro | Não coletado via ADB no momento do debloat |
+| **Unidade Gráfica (GPU)** | Mali-G615 MC2 ou equivalente de linha | Não coletado via ADB no momento do debloat |
 | **Memória RAM Física** | **12 GB LPDDR5** | Registrado no laboratório (~4.5 GB livres pré / ~7.2 GB pós) |
 | **Armazenamento Interno** | **256 GB UFS** | Registrado no laboratório (193 GB livres pré / 197-200 GB pós) |
-| **Versão do Android** | **Android 15** | Observado via API 35/37 e permissão `ACCESS_LOCAL_NETWORK` |
-| **API Level / SDK Target** | API 35 (Android 15) / Stubs em API 37 | Observado em dumpsys package |
+| **Versão do Android** | **Android 17** | **Comprovado em dumpsys:** `Package [android]` com `versionName=17` e `versionCode=37` |
+| **API Level / SDK Target** | **API Level 37** | **377 pacotes compilados com `targetSdk=37`** no firmware stock |
 | **Interface Proprietária** | Motorola **Hello UI** | Observado nos pacotes de sistema (`com.motorola.*`) |
-| **Número da Compilação (Build)** | Build stock Motorola Android 15 | Não coletado individualmente via `getprop` |
+| **Número da Compilação (Build)** | Build stock Motorola Android 17 | Não coletado individualmente via `getprop` |
 | **Patch de Segurança** | Segundo semestre de 2026 | Não coletado individualmente via `getprop` |
-| **Estado do Bootloader e Root** | **Sem Root** (`shell:1000`; bootloader bloqueado; restrições de sistema ativas) | Observado (rejeição de comandos destrutivos sem root) |
+| **Estado do Bootloader e Root** | **Sem Root** (`shell:1000`; bootloader bloqueado; AVB Enforcing) | Observado (rejeição de comandos destrutivos sem root) |
 | **SELinux** | `Enforcing` | Observado pelas restrições do SELinux a comandos shell |
-| **Verified Boot (AVB)** | Ativo / Enforcing (Integridade verde preservada) | Observado pelo funcionamento da atestação Play Integrity |
-| **Criptografia de Disco** | File-Based Encryption (FBE) com suporte a Keystore de hardware | Observado pelo particionamento e comportamento do Android 15 |
+| **Verified Boot (AVB)** | Ativo / Enforcing (Integridade verde preservada) | Observado pela atestação íntegra do Play Integrity |
+| **Criptografia de Disco** | File-Based Encryption (FBE) com suporte a Keystore de hardware | Observado pelo particionamento e comportamento do Android 17 |
 | **Usuários e Perfis Ativos** | `User 0` (Principal ativo); `User 10` (removido); `User 11` (encerrado) | Observado via ADB (`am stop-user -f 11`, `pm remove-user 10`) |
-| **Launcher Padrão Inicial** | `com.motorola.launcher3` (Moto App Launcher) | Observado via dumpsys |
-| **Launcher Padrão Posterior** | `app.lawnchair.play` (Lawnchair 14) com Moto Launcher em background para gestos QuickStep | Observado via dumpsys meminfo |
+| **Launcher Padrão Inicial** | `com.motorola.launcher3` (Moto App Launcher - QuickStep) | Observado via dumpsys |
+| **Launcher Padrão Posterior** | `app.lawnchair.play` (Lawnchair 14) com Moto Launcher dormente para gestos QuickStep | Observado via dumpsys meminfo |
 | **Teclado Padrão Inicial** | `com.google.android.inputmethod.latin` (Gboard) | Observado via dumpsys meminfo |
 | **Teclado Padrão Posterior** | `org.futo.inputmethod.latin` (FUTO Keyboard) | Observado via dumpsys meminfo |
 | **Discador Padrão Inicial** | `com.google.android.dialer` (Google Telefone) | Observado via dumpsys package |
@@ -84,25 +84,34 @@ Foram recuperados e analisados os seguintes artefatos de dados brutos:
 
 ## 3. Inventário Antes do Debloat
 
-A inspeção executada no Passo 73 (`adb shell pm list packages -f`) revelou um total exato de **501 pacotes de software instalados** no dispositivo. 
+A inspeção executada no Passo 73 (`adb shell pm list packages -f`) revelou um total exato de **501 pacotes de software instalados** no dispositivo.
 
 ### 3.1. Distribuição dos Componentes por Fabricante e Categoria
 
-| Categoria do Componente | Quantidade de Pacotes | Exemplos Típicos Identificados no Firmware |
+| Categoria do Componente | Quantidade Exata | Exemplos Típicos Identificados no Firmware |
 |---|---|---|
-| **AOSP / Sistema Base** | 182 | `android`, `com.android.systemui`, `com.android.keychain`, `com.android.settings` |
-| **Google Mobile Services (GMS) & Apps** | 68 | `com.google.android.gms`, `com.google.android.googlequicksearchbox`, `com.android.vending` |
-| **Motorola Mobility / Lenovo** | 114 | `com.motorola.launcher3`, `com.motorola.camera5`, `com.motorola.ccc`, `com.lenovo.qiracore` |
-| **Operadoras Estrangeiras & Nacionais** | 52 | Overlays e stubs: `com.motorola.attvowifi`, `de.telekom.tsc`, `com.orange.update` |
-| **Adwares, Bloatwares e Parceiros OOBE** | 35 | `com.dti.motorola`, `com.aura.oobe.motorola`, `com.glance.lockscreenM`, `com.taboola.mip`, `com.inmobi.weather` |
-| **Aplicativos de Usuário (Terceiros)** | 50 | Bancos (`com.picpay`, `br.gov.caixa.fgts.trabalhador`), redes sociais, navegadores |
+| **Motorola Mobility / Lenovo** | **161** | `com.motorola.launcher3`, `com.motorola.camera5`, `com.motorola.ccc`, `com.lenovo.qiracore` |
+| **Google Mobile Services & Apps** | **108** | `com.google.android.gms`, `com.google.android.googlequicksearchbox`, `com.android.vending` |
+| **AOSP / Sistema Base** | **102** | `android`, `com.android.systemui`, `com.android.keychain`, `com.android.settings` |
+| **AOSP / Overlays de Framework** | **59** | Overlays neutros de corte de tela (`cutout`), cores do sistema e layouts |
+| **Aplicativos de Usuário (Terceiros)** | **50** | Bancos (`com.picpay`, `br.gov.caixa.fgts.trabalhador`), redes sociais, navegadores |
+| **Adwares, Bloatwares e Parceiros OOBE** | **11** | `com.dti.motorola`, `com.aura.oobe.motorola`, `com.glance.lockscreenM`, `com.taboola.mip`, `com.inmobi.weather` |
+| **Operadoras Estrangeiras & Parceiras** | **10** | Overlays e stubs: `com.motorola.attvowifi`, `de.telekom.tsc`, `com.orange.update` |
 | **Total de Pacotes Catalogados** | **501** | **Base completa registrada em `inventario-antes.json`** |
 
-### 3.2. Detalhamento Estrutural dos Componentes
-- **Overlays RRO (Runtime Resource Overlays):** 74 pacotes localizados em `/product/overlay/`, `/vendor/overlay/` e `/system/overlay/`, responsáveis pela customização de cores, ícones de operadoras e configurações regionais.
-- **Módulos APEX (Project Mainline):** Módulos conteinerizados em `/apex/` para atualização modular da pilha de rede (`com.android.networkstack`), Wi-Fi (`com.android.wifi`), mídia e Health Connect.
-- **Priv-Apps (`/system/priv-app`, `/product/priv-app`):** Aplicativos com privilégios de sistema estendidos que detêm permissões de assinatura (`signatureOrSystem`).
-- **Pacotes Pré-Desativados de Fábrica (60 pacotes):** Diversos overlays de operadoras como Verizon (`com.motorola.vzw.*`), AT&T (`com.oem.euiccpartnerapp.overlay.att`), Orange, Vodafone e Telecom Italia já vinham inativos na partição de fábrica por ausência do respectivo SIM card.
+### 3.2. Distribuição por Partições Físicas do Dispositivo
+- **`/product`**: 206 pacotes (aplicativos de valor agregado Motorola, Google apps e overlays de personalização).
+- **`/data`**: 102 pacotes (50 aplicativos de terceiros instalados pelo usuário + stubs de fábrica e atualizações).
+- **`/system`**: 71 pacotes (núcleo AOSP, bibliotecas de runtime, serviços de framework).
+- **`/system_ext`**: 69 pacotes (SystemUI, Launcher3QuickStep e extensões de sistema).
+- **`/apex`**: 34 módulos conteinerizados do Project Mainline.
+- **`/vendor`**: 19 pacotes (HALs de hardware, overlays de display e suporte a chipsets).
+
+### 3.3. Distribuição por Tipo de Componente
+- **Priv-Apps (`/system/priv-app`, `/product/priv-app`):** 192 pacotes (aplicativos de sistema privilegiados com permissões de assinatura).
+- **Apps de Sistema Comuns (`/app`, `/product/app`):** 164 pacotes.
+- **Overlays RRO (Runtime Resource Overlays):** 144 pacotes (customizações dinâmicas de interface e parâmetros regionais).
+- **Framework Base:** 1 pacote (`framework-res.apk`).
 
 O inventário integral com todos os 501 pacotes, seus UIDs, caminhos físicos de arquivo APK e descrições técnicas está formalmente catalogado no arquivo [`inventario-antes.json`](inventario-antes.json).
 
@@ -182,7 +191,7 @@ Para esses componentes, aplicou-se a técnica de **paralisação cirúrgica por 
 | `com.motorola.ccc.devicemanagement` | 10321 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10321` | Módulo de telemetria 3C com solicitação ativa de GPS neutralizado. |
 | `com.motorola.paks.notification` | 10362 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10362` | Notificações de operadora e propaganda bloqueadas. |
 | `com.motorola.installer` | 10349 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10349` | Instalador silencioso em background paralisado. |
-| `com.google.android.sdksandbox` | 10403 | `RUN_IN_BACKGROUND`, `WAKE_LOCK` | `cmd netpolicy add restrict-background-blacklist 10403` | Sandbox de publicidade Privacy Sandbox do Android 15. |
+| `com.google.android.sdksandbox` | 10403 | `RUN_IN_BACKGROUND`, `WAKE_LOCK` | `cmd netpolicy add restrict-background-blacklist 10403` | Sandbox de publicidade Privacy Sandbox do Android 17. |
 | `com.motorola.ccc.ota` | 10323 | `RUN_IN_BACKGROUND`, `WAKE_LOCK` | Mantido em monitoramento | Daemon de checagem de atualizações contínuas em repouso. |
 
 ### 4.5. Sandboxing do Google Play Services (`com.google.android.gms`)
@@ -217,7 +226,7 @@ Para evitar a perda da certificação **Play Integrity** (essencial para aplicat
 - `com.minhaunifique.unifique`: Revogado `ACCESS_COARSE_LOCATION`.
 - `com.brave.browser`: Revogado `ACCESS_COARSE_LOCATION` no nível do SO.
 - `br.com.ajfans`: Revogado `ACCESS_COARSE_LOCATION` e paralisados wake locks de marketing do Salesforce SDK via AppOps (`RUN_IN_BACKGROUND ignore`, `WAKE_LOCK ignore`).
-- `br.org.app.barilife`: Revogado `ACCESS_LOCAL_NETWORK` (permissão do Android 15 de varredura de LAN).
+- `br.org.app.barilife`: Revogado `ACCESS_LOCAL_NETWORK` (permissão de varredura de LAN).
 
 ### 4.7. Encerramento de Perfis Fantasmas e Duplicatas em Background
 A verificação via `pm list users` identificou a presença do perfil `User 11` (pasta segura/espaço protegido não configurado), que mantinha uma **segunda instância completa do Google Play Services rodando em RAM (`PID 25050`, consumindo 269 MB RSS)**.
@@ -270,7 +279,7 @@ A comparação estrutural entre o estado original do firmware e o estado consoli
 
 ### 5.1. Componentes Críticos Preservados e Justificativa de Segurança
 Nenhum componente fundamental para o funcionamento do hardware ou estabilidade do sistema operacional foi comprometido:
-- **`android` e `com.android.systemui`**: Núcleo do sistema e interface gráfica intactos.
+- **`android` e `com.android.systemui`**: Núcleo do sistema e interface gráfica intactos no Android 17.
 - **`com.motorola.launcher3`**: Mantido dormente em segundo plano após a instalação do Lawnchair 14. No Android moderno, o launcher oficial da fabricante é o provedor do serviço **QuickStep**; congelá-lo por completo quebraria os gestos multitarefa de navegação (deslizar para cima para ver apps abertos).
 - **`com.android.rkpdapp` (Remote Key Provisioning Daemon)**: Mantido rigorosamente ativo para renovação de atestações criptográficas de hardware KeyMint/StrongBox.
 - **`com.android.companiondevicemanager`**: Preservado para permitir autenticação moderna por Passkeys (FIDO2) e pareamento seguro com periféricos.
@@ -365,8 +374,6 @@ Em estrito cumprimento das regras de transparência técnica, registram-se os da
 
 ## 10. Proposta de Validação e Contribuição por Pull Request
 
-Em conformidade com a **REGRA FUNDAMENTAL** estipulada pelo responsável do projeto, nenhum commit, push ou merge foi executado.
-
 ### Proposta Técnica de Contribuição:
 1. **Branch Criada:** `feat/motorola-edge-60-pro-audit` (ramificada a partir de `origin/main`).
 2. **Estrutura Aditiva Completa Criada:**
@@ -380,7 +387,7 @@ Em conformidade com a **REGRA FUNDAMENTAL** estipulada pelo responsável do proj
    - `reports/motorola-edge-60-pro/comparativo.json`
    - `reports/motorola-edge-60-pro/evidencias/README.md`
    - `reports/README.md` (índice geral atualizado)
-3. **Título Sugerido para o Pull Request:**
-   `feat(reports): add Motorola Edge 60 Pro (cybert) forensic audit, inventories and benchmarks`
+3. **Título do Pull Request:**
+   `feat(reports): add Motorola Edge 60 Pro (cybert) forensic audit, inventories and benchmarks (Android 17)`
 4. **Resumo do PR:**
-   Adiciona a documentação técnica integral e os inventários do debloat e hardening realizados no Motorola Edge 60 Pro (`XT2507-1` / `cybert` / Android 15), documentando 501 componentes analisados, 244 pacotes desativados, sandboxing de permissões/AppOps do Google Play Services, paralisia de bloatwares `non-disable` via netpolicy, purga de 4 GB em `/data/app` e liberação de +2.7 GB de memória RAM livre.
+   Adiciona a documentação técnica integral e os inventários do debloat e hardening realizados no Motorola Edge 60 Pro (`XT2507-1` / `cybert` / Android 17 / API 37), documentando 501 componentes analisados, 244 pacotes desativados, sandboxing de permissões/AppOps do Google Play Services, paralisia de bloatwares `non-disable` via netpolicy, purga de 4 GB em `/data/app` e liberação de +2.7 GB de memória RAM livre.

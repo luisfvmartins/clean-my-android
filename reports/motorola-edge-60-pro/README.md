@@ -2,11 +2,11 @@
 
 [![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](auditoria.md)
 [![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](auditoria.md)
-[![Android: 15 (API 35)](https://img.shields.io/badge/Android-15%20(API%2035)-3DDC84?logo=android&logoColor=white)](auditoria.md)
+[![Android: 15 (API 35)](https://img.shields.io/badge/Android-17%20(API%2037)-3DDC84?logo=android&logoColor=white)](auditoria.md)
 [![Status: Homologado](https://img.shields.io/badge/Auditoria-Homologada%20em%20Laborat%C3%B3rio-success)](auditoria.md)
 [![Clean My Android](https://img.shields.io/badge/Projeto-Clean%20My%20Android-green)](https://github.com/luisfvmartins/clean-my-android)
 
-Este diretório contém a documentação técnica integral, inventários de pacotes (antes e depois), métricas de desempenho e histórico detalhado das ações de debloat, sandboxing e privacidade executadas no smartphone **Motorola Edge 60 Pro (`XT2507-1`)**, codinome **`cybert`**, rodando a interface **Hello UI** sobre o **Android 15**.
+Este diretório contém a documentação técnica integral, inventários de pacotes (antes e depois), métricas de desempenho e histórico detalhado das ações de debloat, sandboxing e privacidade executadas no smartphone **Motorola Edge 60 Pro (`XT2507-1`)**, codinome **`cybert`**, rodando a interface **Hello UI** sobre o **Android 17**.
 
 ---
 

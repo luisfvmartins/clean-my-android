@@ -1,7 +1,7 @@
 {
   "device": "Motorola Edge 60 Pro (XT2507-1)",
   "codename": "cybert",
-  "android_version": "15 (API 35)",
+  "android_version": "17 (API 37)",
   "audit_date": "2026-11-07",
   "total_packages_analyzed": 501,
   "packages_disabled_count": 244,

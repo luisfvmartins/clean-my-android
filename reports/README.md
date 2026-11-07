@@ -10,7 +10,7 @@ Aqui são arquivados os relatórios completos de engenharia reversa, análise de
 
 | Dispositivo Comercial | Código de Modelo | Codename | SoC / Plataforma | Android / UI | Status da Auditoria | Pasta do Relatório |
 |---|---|---|---|---|---|---|
-| **Motorola Edge 60 Pro** | `XT2507-1` | `cybert` | arm64-v8a | Android 15 (Hello UI) | **Concluída / Homologada** | [📂 `motorola-edge-60-pro/`](motorola-edge-60-pro/README.md) |
+| **Motorola Edge 60 Pro** | `XT2507-1` | `cybert` | arm64-v8a | Android 17 (Hello UI) | **Concluída / Homologada** | [📂 `motorola-edge-60-pro/`](motorola-edge-60-pro/README.md) |
 | **Motorola Moto G54 5G** | `XT2343-1` | `cancunf` | MediaTek Dimensity 7020 | Android 15 (Hello UI) | **Concluída / Homologada** | [📄 `AUDITORIA_MOTO_G54_5G.md`](../docs/AUDITORIA_MOTO_G54_5G.md) |
 
 ---
