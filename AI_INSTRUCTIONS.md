@@ -42,7 +42,7 @@ Antes de começar, confirme se o usuário está trabalhando em um fork próprio 
 - Nunca faça commit diretamente no repositório original nem abra um PR sem autorização explícita.
 - Nunca afirme que criou fork, branch, arquivo, commit, push ou PR sem confirmação da ferramenta.
 - Se não houver integração, forneça instruções manuais de Git e para abrir o PR pela interface do GitHub.
-- Mantenha dados brutos localmente ou em repositório privado. O fork e o PR devem conter apenas dados e evidências sanitizados e necessários à revisão.
+- Mantenha dados brutos localmente ou em repositório privado. O fork e o PR devem conter apenas dados e evidências sanitizados e necessários à revisão. Cada PR de auditoria deve ser aditivo: criar uma nova pasta exclusiva em `reports/`, atualizar `reports/README.md` e preservar todas as auditorias já existentes. Após o merge, a contribuição passa a integrar a coleção oficial no repositório principal.
 
 ### 3. Identificação e diagnóstico inicial — não modificar
 
@@ -179,11 +179,13 @@ Antes de enviar a contribuição:
 4. Revise o diff completo, logs e imagens em busca de dados sensíveis.
 5. Apresente a lista de arquivos que serão enviados e solicite autorização explícita para commit e push.
 6. Envie a branch ao fork do colaborador, nunca diretamente ao repositório original.
-7. Com autorização explícita, abra um Pull Request direcionado a `luisfvmartins/clean-my-android:main`.
-8. Inclua no PR o modelo do aparelho, Android/ROM, escopo, resumo dos resultados, testes, limitações e confirmação de sanitização.
-9. Informe o link do PR somente após confirmação real da criação.
+7. Garanta que o relatório esteja em uma pasta exclusiva em `reports/` e que `reports/README.md` inclua o link para essa nova auditoria.
+8. Confirme que o PR apenas adiciona a nova auditoria ou atualiza a auditoria do mesmo dispositivo; nunca apague, substitua ou altere relatórios de outros colaboradores.
+9. Com autorização explícita, abra um Pull Request direcionado a `luisfvmartins/clean-my-android:main`.
+10. Inclua no PR o modelo do aparelho, Android/ROM, escopo, resumo dos resultados, testes, limitações e confirmação de sanitização.
+11. Informe o link do PR somente após confirmação real da criação.
 
-O PR é uma proposta para revisão; não prometa aceitação ou incorporação. Nunca publique dados brutos ou sensíveis.
+O PR é uma proposta para revisão; não prometa aceitação antes do merge. Quando aprovado e integrado, seu conteúdo deve permanecer no repositório principal como parte de uma coleção cumulativa de dispositivos auditados. Nunca publique dados brutos ou sensíveis.
 
 ### 12. Critério de conclusão
 
