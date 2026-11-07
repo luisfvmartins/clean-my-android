@@ -1,0 +1,5 @@
+# REGISTRO HISTÓRICO DE PACOTES COM FLAG_PERSISTENT OBSERVADOS NO MOTO G54.
+# Não executar pm uninstall em lote. FLAG_PERSISTENT, isoladamente, não prova telemetria nem segurança para remoção.
+com.motorola.android.nativedropboxagent
+com.motorola.bach.modemstats
+com.bluetooth.aptxmode
