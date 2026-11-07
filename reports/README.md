@@ -8,8 +8,8 @@ Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporad
 
 | Fabricante / modelo | Identificação | Android / interface | Situação e escopo | Relatório |
 |---|---|---|---|---|
-| **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Inventário técnico publicado; relatório principal + sete arquivos de inventário por lote | [Resumo e índice](../docs/AUDITORIA_MOTO_G54_5G.md) · [Inventário por lote](../docs/auditorias/moto-g54/README.md) |
-| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Hello UI · versão canônica pendente de confirmação | Relatório publicado; validação funcional e coleta complementar pendentes | [Abrir relatório](motorola-edge-60-pro/README.md) |
+| **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Inventário técnico publicado; relatório principal + sete arquivos de inventário por lote | [Pasta do dispositivo](motorola/moto-g54-5g/README.md) · [Relatório principal](../docs/AUDITORIA_MOTO_G54_5G.md) · [Inventário por lote](../docs/auditorias/moto-g54/README.md) |
+| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Hello UI · versão canônica pendente de confirmação | Relatório publicado; validação funcional e coleta complementar pendentes | [Pasta do dispositivo](motorola/edge-60-pro/README.md) |
 
 ### Como interpretar os status
 
@@ -31,7 +31,7 @@ Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporad
 A estrutura pode ser simplificada quando uma coleta não estiver disponível. Não crie arquivos vazios nem invente resultados para preencher o modelo.
 
 ```text
-reports/<fabricante-modelo-android>/
+reports/<fabricante>/<modelo>/
 ├── README.md                  # Sumário e status da auditoria
 ├── auditoria.md               # Método, evidências, análise e limitações
 ├── inventario-antes.json      # Inventário anterior às alterações
