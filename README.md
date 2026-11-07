@@ -313,7 +313,48 @@ for pkg in "${NON_DISABLE_PKGS[@]}"; do
     fi
 done
 ```
-adb shell pm remove-user 10
+
+---
+
+### Etapa 9: Bloqueio de Telemetria no Nível de DNS (NextDNS API)
+
+Mesmo com os bloatwares congelados e permissões revogadas, alguns módulos de sistema podem tentar resolver domínios na internet. Para neutralizar isso de forma definitiva antes que os pacotes saiam do aparelho, integramos o **NextDNS**:
+
+```bash
+# 1. Configurar o DNS Privado diretamente no celular via ADB:
+adb shell settings put global private_dns_mode hostname
+adb shell settings put global private_dns_specifier "SEU_ID.dns.nextdns.io"
+
+# 2. Ativar Listas de Bloqueio Recomendadas via API:
+# OISD, HaGeZi Multi PRO, EasyPrivacy e Fanboy Annoyances
+curl -X POST -H "X-Api-Key: SUA_API_KEY" -H "Content-Type: application/json" \
+  -d '{"id":"oisd"}' https://api.nextdns.io/profiles/SEU_ID/privacy/blocklists
+
+curl -X POST -H "X-Api-Key: SUA_API_KEY" -H "Content-Type: application/json" \
+  -d '{"id":"easyprivacy"}' https://api.nextdns.io/profiles/SEU_ID/privacy/blocklists
+
+# 3. Adicionar Domínios de Telemetria Motorola/Lenovo/Adwares na Denylist via API:
+# Bloqueia checkin.motorola.com, telemetry.motorola.com, payjoy.com, inmobi.com, glance.in, etc.
+TELEMETRY_DOMAINS=(
+    "telemetry.motorola.com"
+    "checkin.motorola.com"
+    "blur.motorola.com"
+    "blur.com"
+    "payjoy.com"
+    "lenovomm.com"
+    "digitalturbine.com"
+    "inmobi.com"
+    "glance.in"
+    "taboola.com"
+    "ironsrc.com"
+    "google-analytics.com"
+    "crashlytics.com"
+)
+
+for domain in "${TELEMETRY_DOMAINS[@]}"; do
+    curl -s -X POST -H "X-Api-Key: SUA_API_KEY" -H "Content-Type: application/json" \
+      -d "{\"id\":\"$domain\",\"active\":true}" https://api.nextdns.io/profiles/SEU_ID/denylist
+done
 ```
 
 ---
