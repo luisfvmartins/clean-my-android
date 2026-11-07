@@ -462,18 +462,19 @@ adb shell pm enable com.google.android.projection.gearhead
 ---
 
 
-## 🧾 Auditoria individual: fork e relatório antes/depois
+## 🧾 Auditoria individual e contribuições por Pull Request
 
-Cada usuário deve trabalhar em seu próprio fork e manter um histórico individual do dispositivo. O processo documenta o estado inicial, inventário de pacotes, permissões, recursos, alterações, testes, capturas de tela e comparação final.
+Cada colaborador pode documentar seu próprio dispositivo com um relatório antes/depois. Para propor a inclusão desse material no projeto, o fluxo recomendado é **fork → branch → Pull Request (PR)**.
 
-1. Crie seu [fork do Clean My Android](https://github.com/luisfvmartins/clean-my-android/fork).
+1. Crie seu [fork do Clean My Android](https://github.com/luisfvmartins/clean-my-android/fork) (necessário para colaboradores sem acesso de escrita).
 2. Leia o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md).
 3. Utilize o [prompt mestre para IA](AI_INSTRUCTIONS.md) para orientar a coleta, análise, otimização e geração do relatório.
-4. Salve os resultados em `reports/SEU_DISPOSITIVO/` no seu fork ou em uma cópia local.
-5. Revise e remova dados sensíveis antes de publicar.
+4. Salve os resultados em `reports/SEU_DISPOSITIVO/` no seu fork ou mantenha os dados brutos localmente.
+5. Revise e sanitize todos os arquivos e evidências.
+6. Crie uma branch exclusiva, envie-a ao seu fork e abra um **Pull Request para `luisfvmartins/clean-my-android:main`**.
+7. Aguarde a revisão do mantenedor; o PR poderá ser aceito, receber pedidos de ajustes ou ser rejeitado.
 
-**Privacidade:** forks de repositórios públicos também são públicos por padrão. Não publique IMEI, número de série, MAC, tokens, contas, notificações ou logs brutos. Mantenha evidências completas localmente ou em repositório privado e publique apenas material sanitizado.
-
+**Privacidade:** forks de repositórios públicos também são públicos por padrão. Não publique IMEI, número de série, MAC, tokens, contas, notificações ou logs brutos. Mantenha evidências completas localmente ou em repositório privado. O Pull Request deve conter apenas material sanitizado e necessário à revisão.
 ## 📄 Licença
 
 Distribuído sob a licença **MIT**. Veja [`LICENSE`](LICENSE) para mais informações.  
