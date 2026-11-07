@@ -81,10 +81,26 @@ def validate_protected_packages() -> None:
         seen.add(value)
 
 
+def validate_statistics() -> None:
+    global checks
+    checks += 1
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/generate_statistics.py"), "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        fail(f"estatísticas desatualizadas ou inválidas: {detail}")
+
+
 def main() -> int:
     validate_json_files()
     validate_shell_scripts()
     validate_protected_packages()
+    validate_statistics()
 
     if errors:
         print(f"FALHA: {len(errors)} problema(s) encontrado(s) em {checks} verificações.")
