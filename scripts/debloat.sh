@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # Clean My Android - Debloat, Degoogle & Extreme Optimization Script
+# Homologado em:
+#   - Motorola Edge 60 Pro (cybert_g_sys / Hello UI / Android 14 & 15)
+#   - Motorola Moto G54 5G (XT2343-1 / cancunf_g_sysn / Android 15)
 # Autor: Luís Martins (@luisfvmartins)
 # Repositório: https://github.com/luisfvmartins/clean-my-android
 # ==============================================================================
@@ -17,26 +20,59 @@ if ! command -v adb &> /dev/null; then
     exit 1
 fi
 
-DEVICE_COUNT=$(adb devices | grep -v "List" | grep "device" | wc -l)
+DEVICE_COUNT=$(adb devices | grep -v "List" | grep -c "device" || true)
 if [ "$DEVICE_COUNT" -eq 0 ]; then
     echo "[-] Nenhum dispositivo ADB conectado ou autorizado."
     echo "    Ative a Depuração USB/Wi-Fi nas Opções de Desenvolvedor e tente novamente."
     exit 1
 fi
 
-echo "[+] Dispositivo detectado:"
+MODEL=$(adb shell getprop ro.product.model | tr -d '\r')
+CODENAME=$(adb shell getprop ro.product.device | tr -d '\r')
+ANDROID_VER=$(adb shell getprop ro.build.version.release | tr -d '\r')
+
+echo "[+] Dispositivo detectado: $MODEL ($CODENAME) - Android $ANDROID_VER"
 adb devices -l
 echo ""
 
-read -p "Deseja iniciar o processo completo de debloat e otimização? (s/N): " CONFIRM
+read -p "Deseja iniciar o processo completo de debloat, restauração de segurança e otimização? (s/N): " CONFIRM
 if [[ "$CONFIRM" != "s" && "$CONFIRM" != "S" ]]; then
     echo "Operação cancelada pelo usuário."
     exit 0
 fi
 
-# 2. Desinstalação completa de Adwares / Jogos fantasmas de terceiros
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROTECTED_LIST="$SCRIPT_DIR/../data/protected_essential_packages.txt"
+PERSISTENT_LIST="$SCRIPT_DIR/../data/persistent_uninstall_packages.txt"
+PKG_LIST="$SCRIPT_DIR/../data/disabled_packages.txt"
+
+# 2. Etapa 0: Auto-cura e proteção de pacotes essenciais do sistema (Play Integrity / Dolby / Settings Search)
 echo ""
-echo "=== [1/6] Removendo Adwares e Espiões em /data/app ==="
+echo "=== [1/9] Protegendo e Restaurando Componentes Críticos do Sistema ==="
+if [ -f "$PROTECTED_LIST" ]; then
+    while IFS= read -r pkg || [ -n "$pkg" ]; do
+        [ -z "$pkg" ] && continue
+        [[ "$pkg" =~ ^#.* ]] && continue
+        echo "Garantindo estado ativo (enabled): $pkg"
+        adb shell pm enable "$pkg" 2>/dev/null || true
+    done < "$PROTECTED_LIST"
+fi
+
+# 3. Etapa 1: Erradicar Daemons de Telemetria "Zumbis" (FLAG_PERSISTENT) que ignoram pm disable-user
+echo ""
+echo "=== [2/9] Erradicando Daemons de Telemetria FLAG_PERSISTENT (Zumbis em RAM) ==="
+if [ -f "$PERSISTENT_LIST" ]; then
+    while IFS= read -r pkg || [ -n "$pkg" ]; do
+        [ -z "$pkg" ] && continue
+        [[ "$pkg" =~ ^#.* ]] && continue
+        echo "Removendo daemon persistente para user 0: $pkg"
+        adb shell pm uninstall --user 0 "$pkg" 2>/dev/null || true
+    done < "$PERSISTENT_LIST"
+fi
+
+# 4. Desinstalação de Adwares pré-instalados em /data/app
+echo ""
+echo "=== [3/9] Removendo Adwares e Espiões Pré-Instalados em /data/app ==="
 THIRD_PARTY_BLOAT=(
     "com.google.android.safetycore"
     "com.google.android.contactkeys"
@@ -56,13 +92,11 @@ for pkg in "${THIRD_PARTY_BLOAT[@]}"; do
     adb shell pm uninstall "$pkg" 2>/dev/null || adb shell pm uninstall --user 0 "$pkg" 2>/dev/null || true
 done
 
-# 3. Liberação de espaço: Desinstalando atualizações de pacotes do sistema
+# 5. Liberação de espaço: Desinstalando atualizações de pacotes do sistema desnecessários
 echo ""
-echo "=== [2/6] Purgando atualizações de sistema em /data/app (+4 GB livres) ==="
+echo "=== [4/9] Purgando atualizações de bloatware de sistema em /data/app ==="
 DATA_UPDATES=(
     "android.autoinstalls.config.motorola.layout"
-    "com.android.chrome"
-    "com.android.vending"
     "com.aura.oobe.vodafone"
     "com.dti.amx"
     "com.dti.motorola"
@@ -72,7 +106,6 @@ DATA_UPDATES=(
     "com.google.android.apps.carrier.carrierwifi"
     "com.google.android.apps.docs"
     "com.google.android.apps.maps"
-    "com.google.android.apps.messaging"
     "com.google.android.apps.nbu.files"
     "com.google.android.apps.photos"
     "com.google.android.apps.restore"
@@ -84,9 +117,7 @@ DATA_UPDATES=(
     "com.google.android.as.oss"
     "com.google.android.calculator"
     "com.google.android.calendar"
-    "com.google.android.contacts"
     "com.google.android.deskclock"
-    "com.google.android.dialer"
     "com.google.android.gm"
     "com.google.android.gms.supervision"
     "com.google.android.googlequicksearchbox"
@@ -96,7 +127,6 @@ DATA_UPDATES=(
     "com.google.android.tts"
     "com.google.android.verifier"
     "com.google.android.videos"
-    "com.google.android.youtube"
     "com.google.ar.core"
     "com.inmobi.weather"
     "com.motorola.account"
@@ -111,12 +141,9 @@ for pkg in "${DATA_UPDATES[@]}"; do
     adb shell pm uninstall "$pkg" 2>/dev/null || true
 done
 
-# 4. Congelamento dos pacotes de sistema
+# 6. Congelamento e limpeza dos pacotes de sistema (disabled-user)
 echo ""
-echo "=== [3/6] Congelando pacotes de sistema desnecessários (disabled-user) ==="
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PKG_LIST="$SCRIPT_DIR/../data/disabled_packages.txt"
-
+echo "=== [5/9] Congelando e Limpando Pacotes de Bloatware/Telemetria (disabled-user) ==="
 if [ -f "$PKG_LIST" ]; then
     while IFS= read -r pkg || [ -n "$pkg" ]; do
         [ -z "$pkg" ] && continue
@@ -130,9 +157,9 @@ else
     echo "[-] Arquivo $PKG_LIST não encontrado!"
 fi
 
-# 5. Sandboxing do Google Play Services
+# 7. Sandboxing do Google Play Services
 echo ""
-echo "=== [4/8] Aplicando Sandboxing no Google Play Services (com.google.android.gms) ==="
+echo "=== [6/9] Aplicando Sandboxing no Google Play Services (com.google.android.gms) ==="
 PERMS=(
     "android.permission.ACCESS_FINE_LOCATION"
     "android.permission.ACCESS_COARSE_LOCATION"
@@ -156,7 +183,6 @@ for perm in "${PERMS[@]}"; do
     adb shell pm revoke com.google.android.gms "$perm" 2>/dev/null || true
 done
 
-# Sandboxing de baixo nível via AppOps (contorna limitações de SYSTEM_FIXED)
 GMS_UID=$(adb shell pm dump com.google.android.gms 2>/dev/null | grep -m 1 'userId=' | grep -oE '[0-9]+' || true)
 if [ -n "$GMS_UID" ]; then
     echo "[+] Neutralizando rastreamento SYSTEM_FIXED no UID $GMS_UID do Play Services via AppOps..."
@@ -169,12 +195,14 @@ if [ -n "$GMS_UID" ]; then
 fi
 echo "[+] Google Play Services isolado e neutralizado com sucesso."
 
-# 6. Revogação de Permissões Abusivas em Apps de Sistema e de Usuário
+# 8. Revogação de Permissões Abusivas em Apps de Sistema e de Usuário (Edge 60 Pro + Moto G54 5G)
 echo ""
-echo "=== [5/8] Revogando Permissões Abusivas (Sistema e Usuário) ==="
+echo "=== [7/9] Revogando Permissões Abusivas e Bloqueando Clipboard/Sensores ==="
 
-# Apps do Sistema
+# Apps do Sistema (Motorola Camera 3 [Moto G54] & Camera 5 [Edge 60 Pro], Multi-SIM, Play Store, Chrome, YouTube)
 echo "[+] Revogando permissões invasivas em apps de sistema..."
+adb shell pm revoke --user 0 com.motorola.camera3 android.permission.ACCESS_FINE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 com.motorola.camera3 android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
 adb shell pm revoke --user 0 com.motorola.camera5 android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
 adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_CONTACTS 2>/dev/null || true
 adb shell pm revoke --user 0 com.google.android.ext.services android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
@@ -183,8 +211,40 @@ adb shell pm revoke --user 0 com.android.companiondevicemanager android.permissi
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_BACKGROUND_LOCATION 2>/dev/null || true
 
-# Apps de Usuário (Terceiros)
-echo "[+] Revogando permissões invasivas em apps de terceiros..."
+for p in READ_SMS RECEIVE_SMS SEND_SMS RECORD_AUDIO; do
+    adb shell pm revoke com.android.vending "android.permission.$p" 2>/dev/null || true
+done
+
+for p in READ_CONTACTS RECORD_AUDIO CAMERA ACCESS_FINE_LOCATION; do
+    adb shell pm revoke com.android.chrome "android.permission.$p" 2>/dev/null || true
+done
+
+for p in CAMERA RECORD_AUDIO READ_MEDIA_IMAGES READ_MEDIA_VIDEO; do
+    adb shell pm revoke com.google.android.youtube "android.permission.$p" 2>/dev/null || true
+done
+
+# Apps de Usuário (Terceiros - Edge 60 Pro & Moto G54 5G)
+echo "[+] Revogando permissões invasivas e leitura de Clipboard em apps de terceiros..."
+for p in READ_CALL_LOG SEND_SMS ANSWER_PHONE_CALLS ACCESS_FINE_LOCATION ACCESS_COARSE_LOCATION; do
+    adb shell pm revoke com.whatsapp "android.permission.$p" 2>/dev/null || true
+done
+
+adb shell cmd appops set --uid com.openai.chatgpt READ_CLIPBOARD ignore 2>/dev/null || true
+adb shell cmd appops set --uid com.openai.chatgpt FINE_LOCATION ignore 2>/dev/null || true
+adb shell cmd appops set --uid com.openai.chatgpt COARSE_LOCATION ignore 2>/dev/null || true
+adb shell cmd appops set --uid com.openai.chatgpt MONITOR_LOCATION ignore 2>/dev/null || true
+adb shell cmd appops set --uid com.openai.chatgpt MONITOR_HIGH_POWER_LOCATION ignore 2>/dev/null || true
+adb shell pm revoke com.openai.chatgpt android.permission.CAMERA 2>/dev/null || true
+
+adb shell cmd appops set com.lemon.lvoverseas READ_CLIPBOARD ignore 2>/dev/null || true
+for p in CAMERA RECORD_AUDIO READ_MEDIA_IMAGES READ_MEDIA_VIDEO READ_MEDIA_AUDIO; do
+    adb shell pm revoke com.lemon.lvoverseas "android.permission.$p" 2>/dev/null || true
+done
+
+adb shell pm revoke --user 0 com.digidust.elokence.akinator.freemium android.permission.RECORD_AUDIO 2>/dev/null || true
+adb shell pm revoke --user 0 com.spotify.music android.permission.RECORD_AUDIO 2>/dev/null || true
+adb shell pm revoke --user 0 com.pinterest android.permission.CAMERA 2>/dev/null || true
+adb shell pm revoke --user 0 com.roblox.client android.permission.CAMERA 2>/dev/null || true
 adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO 2>/dev/null || true
 adb shell pm revoke --user 0 com.taxis99 android.permission.READ_CONTACTS 2>/dev/null || true
 adb shell pm revoke --user 0 com.taxis99 android.permission.CAMERA 2>/dev/null || true
@@ -195,9 +255,9 @@ adb shell cmd appops set br.com.ajfans RUN_IN_BACKGROUND ignore 2>/dev/null || t
 adb shell cmd appops set br.com.ajfans WAKE_LOCK ignore 2>/dev/null || true
 adb shell pm revoke --user 0 br.org.app.barilife android.permission.ACCESS_LOCAL_NETWORK 2>/dev/null || true
 
-# 7. Lockdown de Bloatwares Protegidos (Non-Disable)
+# 9. Lockdown de Bloatwares Protegidos (isNonDisablePackage)
 echo ""
-echo "=== [6/8] Paralisando Bloatwares com Proteção 'non-disable' via AppOps & Netpolicy ==="
+echo "=== [8/9] Paralisando Bloatwares com Proteção 'non-disable' via AppOps, Standby Bucket & NetPolicy ==="
 NON_DISABLE_PKGS=(
     "com.payjoy.access"
     "com.amazon.appmanager"
@@ -205,47 +265,39 @@ NON_DISABLE_PKGS=(
     "com.motorola.paks.notification"
     "com.motorola.installer"
     "com.google.android.sdksandbox"
-    "com.motorola.ccc.ota"
 )
 
 for pkg in "${NON_DISABLE_PKGS[@]}"; do
+    adb shell pm clear "$pkg" 2>/dev/null || true
+    adb shell am set-standby-bucket "$pkg" restricted 2>/dev/null || true
     UID=$(adb shell dumpsys package "$pkg" 2>/dev/null | grep -m 1 'appId=' | grep -oE '[0-9]+' || true)
     if [ -n "$UID" ]; then
         echo "Paralisando UID $UID ($pkg)..."
-        adb shell cmd appops set --uid "$UID" RUN_IN_BACKGROUND ignore 2>/dev/null || true
-        adb shell cmd appops set --uid "$UID" RUN_ANY_IN_BACKGROUND ignore 2>/dev/null || true
-        adb shell cmd appops set --uid "$UID" WAKE_LOCK ignore 2>/dev/null || true
-        adb shell cmd appops set --uid "$UID" START_FOREGROUND ignore 2>/dev/null || true
-        adb shell cmd appops set --uid "$UID" COARSE_LOCATION ignore 2>/dev/null || true
-        adb shell cmd appops set --uid "$UID" FINE_LOCATION ignore 2>/dev/null || true
+        for op in RUN_IN_BACKGROUND RUN_ANY_IN_BACKGROUND WAKE_LOCK START_FOREGROUND GET_USAGE_STATS REQUEST_INSTALL_PACKAGES POST_NOTIFICATION COARSE_LOCATION FINE_LOCATION; do
+            adb shell cmd appops set --uid "$pkg" "$op" ignore 2>/dev/null || adb shell cmd appops set --uid "$UID" "$op" ignore 2>/dev/null || true
+        done
         adb shell cmd netpolicy add restrict-background-blacklist "$UID" 2>/dev/null || true
     fi
 done
 
-# 8. Finalização de perfis fantasmas
+# 10. Limpeza de Perfis Fantasmas, Caches e Ajustes Finais
 echo ""
-echo "=== [7/8] Limpeza de Perfis Fantasmas secundários ==="
+echo "=== [9/9] Limpeza de Perfis Fantasmas, Caches e Ajustes Finais ==="
 adb shell am stop-user -f 11 2>/dev/null || true
 adb shell pm remove-user 10 2>/dev/null || true
-echo "[+] Perfis secundários limpos."
+adb shell pm trim-caches 999999999999 2>/dev/null || true
 
-# 9. Otimizações de Áudio (Wavelet) e Teclado
-echo ""
-echo "=== [8/8] Ajustes Finais ==="
-# Permissão especial para o Wavelet
 if adb shell pm list packages | grep -q "com.pittvandewitt.wavelet"; then
     echo "[+] Concedendo permissão DUMP ao Wavelet..."
     adb shell pm grant com.pittvandewitt.wavelet android.permission.DUMP 2>/dev/null || true
 fi
 
-# Se FUTO Keyboard estiver instalado, desativa o Gboard das IMEs
-if adb shell pm list packages | grep -q "org.futo.inputmethod.latin"; then
-    echo "[+] FUTO Keyboard detectado. Desativando Gboard das entradas ativas..."
+if adb shell pm list packages | grep -qE "org.futo.inputmethod.latin|helium314.keyboard"; then
+    echo "[+] Teclado FOSS detectado. Desativando Gboard das entradas ativas..."
     adb shell ime disable com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME 2>/dev/null || true
     adb shell cmd appops set com.google.android.inputmethod.latin RUN_IN_BACKGROUND ignore 2>/dev/null || true
 fi
 
-# Se Lawnchair estiver instalado, define como Launcher padrão
 if adb shell pm list packages | grep -q "app.lawnchair"; then
     echo "[+] Definindo Lawnchair como launcher padrão..."
     adb shell cmd role add-role-holder --user 0 android.app.role.HOME app.lawnchair.play 2>/dev/null || true
@@ -254,6 +306,8 @@ fi
 echo ""
 echo "=================================================================="
 echo " [OK] Debloat e Otimização concluídos com sucesso!"
+echo " Dispositivo: $MODEL ($CODENAME)"
 echo " Total de pacotes desativados no sistema: $(adb shell pm list packages -d --user 0 | wc -l)"
 echo " Espaço livre em disco: $(adb shell df -h /data | tail -n 1 | awk '{print $4}')"
+echo " Dica: Reinicie o aparelho ('adb reboot') para encerrar os processos persistentes."
 echo "=================================================================="

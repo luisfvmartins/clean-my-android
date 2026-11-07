@@ -1,0 +1,9 @@
+com.android.rkpdapp
+com.android.companiondevicemanager
+com.android.settings.intelligence
+com.dolby.daxservice
+com.motorola.dolby.dolbyui
+com.android.printspooler
+com.android.providers.contactkeys
+com.android.providers.userdictionary
+com.motorola.nfwlocationattribution

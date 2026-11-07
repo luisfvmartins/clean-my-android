@@ -13,11 +13,12 @@ Sua missão é realizar um debloat cirúrgico, de-google inteligente e otimizaç
 Antes de executar qualquer comando destrutivo, você deve seguir estas DIRETRIZES DE SEGURANÇA:
 
 1. REGRAS DE OURO DE SEGURANÇA:
-   - NUNCA desative nem desinstale componentes críticos de hardware: IMS/VoLTE/VoWiFi essenciais, Modem RIL, SurfaceFlinger, Telephony core, Bluetooth HAL, Wi-Fi Stack, KeyStore, KeyChain e PackageInstaller.
+   - NUNCA desative nem desinstale componentes críticos de hardware e segurança: IMS/VoLTE/VoWiFi essenciais, Modem RIL, SurfaceFlinger, Telephony core, Bluetooth HAL, Wi-Fi Stack, KeyStore, KeyChain, PackageInstaller, Remote Key Provisioning (`com.android.rkpdapp` — essencial para renovação de chaves KeyMint/StrongBox do Play Integrity!), `com.android.settings.intelligence` (indexador 100% offline da busca em Configurações), `com.dolby.daxservice` / `com.motorola.dolby.dolbyui` (Dolby Atmos offline), `com.android.companiondevicemanager` (Passkeys FIDO2) e `com.android.printspooler` (Salvar como PDF).
    - NUNCA desative o teclado padrão antes de confirmar que um teclado substituto (ex: FUTO Keyboard ou HeliBoard) já está instalado e ativo como IME padrão.
    - NUNCA desative o discador (Dialer) ou SMS antes de confirmar que há um substituto FOSS instalado (ex: Fossify Phone/Messages).
    - NUNCA delete ou congele totalmente o launcher original da fabricante sem antes definir o novo launcher como HOME. Além disso, no Android moderno, o launcher da fabricante provê o QuickStep (gestos multitarefa); mantenha-o dormente apenas para os gestos.
-   - NUNCA remova o Google Play Services (com.google.android.gms) se o usuário usa aplicativos bancários brasileiros (Caixa, FGTS, Nubank, PicPay, etc.), pois o Play Integrity API quebrará. Em vez disso, aplique o método SANDBOX: revogue todas as permissões invasivas (GPS, Câmera, Microfone, Contatos, SMS, Sensores).
+   - NUNCA remova o Google Play Services (`com.google.android.gms`) se o usuário usa aplicativos bancários brasileiros (Caixa, FGTS, Nubank, PicPay, Gov.br, etc.), pois o Play Integrity API quebrará. Em vez disso, aplique o método SANDBOX: revogue todas as permissões invasivas (GPS, Câmera, Microfone, Contatos, SMS, Sensores).
+   - ATENÇÃO AOS DAEMONS "ZUMBIS" (`FLAG_PERSISTENT`): No Android 15, pacotes compilados com `FLAG_PERSISTENT` (como `com.motorola.android.nativedropboxagent`, `com.motorola.bach.modemstats` e `com.bluetooth.aptxmode` / `MotoBtMetricsService`) ignoram o `pm disable-user --user 0` e continuam rodando em RAM! Para encerrá-los definitivamente sem root, use `adb shell pm uninstall --user 0 <pkg>` e reinicie o aparelho.
 
 2. COMPREENSÃO DO ANDROID 14/15:
    - Em ROMs stock modernas, o comando `pm uninstall -k --user 0 <pkg>` em apps de sistema falha com 'only root can delete system app'.

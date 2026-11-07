@@ -8,7 +8,10 @@
 
 > Inspirado na filosofia do projeto [**CleanMyTV**](https://github.com/timothywei/CleanMyTV): **zero lixo visual, zero telemetria invasiva, zero anúncios de fábrica e desempenho máximo**, mantendo **100% da compatibilidade com aplicativos bancários e notificações push**, tudo sem root.
 
-Testado e homologado no **Motorola Edge 60 Pro (`cybert_g_sys`) com Hello UI (Android 14/15)**, adaptável para qualquer smartphone Android moderno.
+Testado e homologado nos aparelhos:
+- **Motorola Edge 60 Pro (`cybert_g_sys`)** com Hello UI (Android 14/15)
+- **Motorola Moto G54 5G (`XT2343-1` / `cancunf_g_sysn`)** com Android 15 (auditoria forense integral de todos os 462 componentes em [`docs/AUDITORIA_MOTO_G54_5G.md`](docs/AUDITORIA_MOTO_G54_5G.md) e inventário JSON em [`data/inventory_moto_g54.json`](data/inventory_moto_g54.json))
+- Adaptável para qualquer smartphone Android 14/15 moderno.
 
 ---
 
@@ -50,11 +53,11 @@ O **Clean My Android** resolve tudo isso: neutraliza o bloatware, isola o Google
 
 ## 📊 Resultados Comprovados em Laboratório
 
-Métricas reais obtidas no Motorola Edge 60 Pro (12 GB RAM / 256 GB Armazenamento):
+### 1. Motorola Edge 60 Pro (`cybert_g_sys` — 12 GB RAM / 256 GB Armazenamento)
 
 | Métrica | Antes do Clean My Android | Depois do Clean My Android | Ganho Real |
 | :--- | :--- | :--- | :--- |
-| **Pacotes Inúteis / Bloatware** | ~440 pacotes ativos | **244 pacotes congelados/removidos** | Sistema 100% limpo |
+| **Pacotes Inúteis / Bloatware** | ~440 pacotes ativos | **266 pacotes congelados/removidos** | Sistema 100% limpo |
 | **Memória RAM Livre** | ~4.5 GB livres | **~7.2 GB livres** | **+2.7 GB de RAM livre** |
 | **Espaço de Armazenamento** | 193 GB livres | **197 GB a 200 GB livres** | **+4 GB a +7 GB recuperados** |
 | **Anúncios no Sistema** | Ativos (Glance, Taboola, InMobi) | **ZERO anúncios** | Telas e launcher limpos |
@@ -62,31 +65,50 @@ Métricas reais obtidas no Motorola Edge 60 Pro (12 GB RAM / 256 GB Armazenament
 | **Apps de Banco (Caixa, Nubank, PicPay)** | Funcionais | **100% Funcionais** | Play Integrity intacto |
 | **Privacidade** | Telemetria contínua | **Google Play Services enjaulado** | Zero acesso a GPS/Mic |
 
+### 2. Motorola Moto G54 5G (`cancunf_g_sysn` — 8 GB RAM / 256 GB Armazenamento / Android 15)
+
+| Métrica | Antes / Debloat Comum | Depois do Clean My Android (Moto G54) | Ganho Real |
+| :--- | :--- | :--- | :--- |
+| **Escopo Auditado** | Parcial | **462 componentes auditados (423 APKs + 39 APEX)** | Cobertura 100% ([ver relatório](docs/AUDITORIA_MOTO_G54_5G.md)) |
+| **Daemons Zumbis (`FLAG_PERSISTENT`)** | 3 rodando em RAM mesmo com `pm disable-user` | **ZERO processos zumbis em RAM (`ps -A`)** | Removidos com `pm uninstall --user 0` |
+| **Pressão de Swap ZRAM** | 1.5 GB usados | **1.0 GB usados** | **-500 MB de pressão em Swap** |
+| **Componentes Críticos Protegidos** | `rkpdapp`, `dolby` e `settings.intelligence` desativados por engano | **9 componentes críticos protegidos/restaurados** | Busca em Configs, Dolby Atmos e StrongBox 100% |
+| **Apps de Banco (PicPay, Pix, Gov.br)** | Risco de expiração de chaves KeyMint | **100% Funcionais (`rkpdapp` ativo no PID 4579)** | `MEETS_STRONG_INTEGRITY` preservado |
+
 ---
 
-## 🛡️ A Arquitetura de Defesa em 4 Camadas
+## 🛡️ A Arquitetura de Defesa em 5 Camadas
 
 ```
 +-------------------------------------------------------------------------+
-| [Camada 1: Debloat em Massa]                                            |
-| 244 pacotes inúteis congelados com "pm disable-user --user 0"           |
+| [Camada 0: Auto-Cura e Proteção de Componentes Críticos]                |
+| Garante que rkpdapp (KeyMint/StrongBox), Dolby Atmos, Settings Search,  |
+| Passkeys (companiondevicemanager) e PrintSpooler estejam sempre ativos  |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
-| [Camada 2: Purgador de Armazenamento]                                   |
-| Purgas físicas de APKs de atualização em /data/app (+4 GB livres)       |
+| [Camada 1: Erradicação de Daemons Zumbis FLAG_PERSISTENT + Debloat]     |
+| - Daemons persistentes (nativedropboxagent, modemstats, aptxmode)       |
+|   eliminados da RAM via "pm uninstall --user 0"                         |
+| - 266 pacotes inúteis congelados com "pm disable-user --user 0"         |
++-------------------------------------------------------------------------+
+                                    |
++-------------------------------------------------------------------------+
+| [Camada 2: Purgador de Armazenamento e Dados Residuais]                 |
+| Purga física de atualizações em /data/app + pm clear + pm trim-caches   |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
 | [Camada 3: Sandboxing de Permissões & AppOps por UID]                   |
-| - GPS, Sensores e Atividade Física do GMS forçados a retornar nulo/vazio|
-| - Bloatwares "non-disable" (PayJoy, Amazon) paralisados via AppOps      |
+| - GPS, Sensores, Clipboard e Microfone revogados/ignorados              |
+| - Bloatwares "non-disable" (3c_devicemanagement, Moto Installer,        |
+|   PAKS, PayJoy, Amazon) paralisados via AppOps + Standby Restricted     |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
-| [Camada 4: Blindagem de Rede & DNS]                                     |
+| [Camada 4: Blindagem de Rede (Kernel BPF NetPolicy) & DNS]              |
 | - Blacklist de rede em segundo plano no kernel Android (netpolicy)      |
-| - NextDNS bloqueando +450.000 domínios e 51 hosts de telemetria na nuvem|
+| - NextDNS / AdGuard DNS bloqueando domínios de telemetria e ad-tech     |
 +-------------------------------------------------------------------------+
 ```
 
@@ -306,9 +328,23 @@ adb shell pm remove-user 10
 
 #### A. Aplicativos de Sistema (Motorola / Google / AOSP):
 ```bash
-# Câmera Motorola (com.motorola.camera5) - Geotagging
+# Câmera Motorola (com.motorola.camera3 no Moto G54 / com.motorola.camera5 no Edge 60 Pro) - Geotagging
 # Evita gravar coordenadas de GPS (latitude/longitude) nos metadados EXIF das fotos
+adb shell pm revoke --user 0 com.motorola.camera3 android.permission.ACCESS_FINE_LOCATION
+adb shell pm revoke --user 0 com.motorola.camera3 android.permission.ACCESS_COARSE_LOCATION
 adb shell pm revoke --user 0 com.motorola.camera5 android.permission.ACCESS_COARSE_LOCATION
+
+# Daemons de Telemetria "Zumbis" FLAG_PERSISTENT (Moto G54 5G)
+# Pacotes FLAG_PERSISTENT ignoram pm disable-user e continuam rodando em RAM; pm uninstall --user 0 os encerra!
+adb shell pm uninstall --user 0 com.motorola.android.nativedropboxagent
+adb shell pm uninstall --user 0 com.motorola.bach.modemstats
+adb shell pm uninstall --user 0 com.bluetooth.aptxmode
+
+# Google Play Store (com.android.vending) - Leitura/Envio de SMS e Microfone
+adb shell pm revoke com.android.vending android.permission.READ_SMS
+adb shell pm revoke com.android.vending android.permission.RECEIVE_SMS
+adb shell pm revoke com.android.vending android.permission.SEND_SMS
+adb shell pm revoke com.android.vending android.permission.RECORD_AUDIO
 
 # Gerenciador Multi-SIM Motorola (com.motorola.msimsettings) - Acesso à Agenda
 adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_CONTACTS
@@ -316,11 +352,10 @@ adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_C
 # Google Ext Services (com.google.android.ext.services) - Localização
 adb shell pm revoke --user 0 com.google.android.ext.services android.permission.ACCESS_COARSE_LOCATION
 
-# Companion Device Manager (com.android.companiondevicemanager) - Localização e Bluetooth
+# Companion Device Manager (com.android.companiondevicemanager) - Revogar Localização (mantendo o pacote ativo para Passkeys FIDO2)
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_FINE_LOCATION
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_COARSE_LOCATION
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_BACKGROUND_LOCATION
-adb shell pm disable-user --user 0 com.android.companiondevicemanager
 
 # eSIM Activation Google (com.google.android.euicc) - Câmera
 adb shell pm revoke --user 0 com.google.android.euicc android.permission.CAMERA
@@ -328,6 +363,26 @@ adb shell pm revoke --user 0 com.google.android.euicc android.permission.CAMERA
 
 #### B. Aplicativos de Usuário (Terceiros):
 ```bash
+# WhatsApp (com.whatsapp) - Histórico de Chamadas Comuns, Envio de SMS e GPS Permanente
+adb shell pm revoke com.whatsapp android.permission.READ_CALL_LOG
+adb shell pm revoke com.whatsapp android.permission.SEND_SMS
+adb shell pm revoke com.whatsapp android.permission.ANSWER_PHONE_CALLS
+adb shell pm revoke com.whatsapp android.permission.ACCESS_FINE_LOCATION
+adb shell pm revoke com.whatsapp android.permission.ACCESS_COARSE_LOCATION
+
+# ChatGPT (com.openai.chatgpt) - Leitura Silenciosa da Área de Transferência (Clipboard), GPS e Câmera
+adb shell cmd appops set --uid com.openai.chatgpt READ_CLIPBOARD ignore
+adb shell cmd appops set --uid com.openai.chatgpt FINE_LOCATION ignore
+adb shell cmd appops set --uid com.openai.chatgpt COARSE_LOCATION ignore
+adb shell pm revoke com.openai.chatgpt android.permission.CAMERA
+
+# CapCut / ByteDance (com.lemon.lvoverseas) - Leitura de Clipboard, Câmera, Microfone e Galeria
+adb shell cmd appops set com.lemon.lvoverseas READ_CLIPBOARD ignore
+adb shell pm revoke com.lemon.lvoverseas android.permission.CAMERA
+adb shell pm revoke com.lemon.lvoverseas android.permission.RECORD_AUDIO
+adb shell pm revoke com.lemon.lvoverseas android.permission.READ_MEDIA_IMAGES
+adb shell pm revoke com.lemon.lvoverseas android.permission.READ_MEDIA_VIDEO
+
 # Uber (com.ubercab) - Microfone Permanente
 adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO
 
