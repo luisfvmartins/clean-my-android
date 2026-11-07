@@ -1,6 +1,6 @@
 # Auditoria individual do dispositivo Android
 
-Este documento orienta cada usuário do **Clean My Android** a criar seu próprio fork, registrar o estado do aparelho antes das alterações, documentar cada intervenção e produzir um relatório comparativo depois da otimização.
+Este documento orienta cada colaborador do **Clean My Android** a preparar uma contribuição por Pull Request (PR), registrar o estado do aparelho antes das alterações, documentar cada intervenção e produzir um relatório comparativo depois da otimização.
 
 O objetivo é criar um histórico técnico individual, verificável e reproduzível — não apenas uma lista de aplicativos removidos.
 
@@ -8,7 +8,7 @@ O objetivo é criar um histórico técnico individual, verificável e reproduzí
 
 ## 1. Fluxo recomendado
 
-1. Criar um fork próprio do repositório.
+1. Criar um fork próprio do repositório (para colaboradores sem acesso de escrita) e preparar uma branch de contribuição.
 2. Preparar uma pasta individual para o dispositivo.
 3. Fazer o diagnóstico inicial, sem modificar o aparelho.
 4. Salvar inventários, métricas, logs e capturas de tela.
@@ -17,9 +17,9 @@ O objetivo é criar um histórico técnico individual, verificável e reproduzí
 7. Executar as mudanças de forma controlada e registrar os resultados.
 8. Repetir as coletas iniciais nas mesmas condições.
 9. Gerar o relatório comparativo.
-10. Revisar e sanitizar os arquivos antes de publicá-los no fork.
+10. Revisar e sanitizar os arquivos, enviar a branch ao fork e abrir um Pull Request para o repositório original.
 
-## 2. Criar seu fork
+## 2. Preparar seu fork e a contribuição
 
 ### Pelo GitHub
 
@@ -40,10 +40,11 @@ Com o GitHub CLI instalado e autenticado:
 gh auth login
 gh repo fork luisfvmartins/clean-my-android --clone
 cd clean-my-android
+git remote add upstream https://github.com/luisfvmartins/clean-my-android.git
 git remote -v
 ```
 
-Confirme que `origin` aponta para seu fork, e não para o repositório original.
+Confirme que `origin` aponta para seu fork e que `upstream` aponta para o repositório original:
 
 ### Privacidade
 
@@ -52,8 +53,8 @@ O repositório original é público. Não presuma que o fork será privado. Inve
 - Não publique IMEI, número de série, endereços MAC, tokens, credenciais, contas ou dados pessoais.
 - Revise capturas de tela e logs antes de enviar.
 - Mantenha os dados brutos localmente ou em repositório privado.
-- Publique somente relatórios sanitizados.
-- Não envie relatórios individuais ao repositório original.
+- Inclua no Pull Request somente relatórios e evidências sanitizados e necessários à revisão.
+- O PR será enviado ao repositório original para análise; isso não significa que será aceito ou incorporado.
 
 ## 3. Estrutura de arquivos por dispositivo
 
@@ -280,7 +281,7 @@ A conclusão deve responder: o que mudou, o que foi preservado, o que deixou de 
 
 A IA utilizada pelo usuário deverá:
 
-1. Confirmar que o usuário está trabalhando em um fork próprio ou cópia local.
+1. Confirmar que o usuário está trabalhando em um fork próprio ou cópia local e identificar o repositório original como `upstream`.
 2. Identificar o dispositivo conectado e criar uma pasta individual para a auditoria.
 3. Fazer todas as coletas iniciais antes de modificar qualquer coisa.
 4. Analisar cada pacote individualmente, incluindo função, origem, permissões, AppOps, dependências e risco.
@@ -290,8 +291,8 @@ A IA utilizada pelo usuário deverá:
 8. Executar em pequenos grupos, registrar comandos e saídas e validar os resultados.
 9. Repetir as coletas iniciais depois das alterações.
 10. Produzir o relatório comparativo e organizar evidências.
-11. Sanitizar os arquivos e pedir autorização antes de publicar no GitHub.
-12. Nunca afirmar que criou um fork, capturou uma tela, mediu uma métrica ou publicou um arquivo sem confirmação real.
+11. Sanitizar os arquivos, criar uma branch própria, enviar a branch ao fork e preparar um Pull Request direcionado ao repositório original.
+12. Nunca abrir PR nem publicar arquivos sem autorização explícita; nunca afirmar que criou um fork, capturou uma tela, mediu uma métrica ou publicou um arquivo sem confirmação real.
 
 ### Classificação de risco
 
@@ -320,18 +321,42 @@ A IA utilizada pelo usuário deverá:
 
 A auditoria só estará concluída quando o estado inicial estiver registrado, os pacotes estiverem analisados ou marcados como pendentes, as alterações estiverem documentadas, o estado final tiver sido coletado, as funções essenciais tiverem sido testadas e o relatório comparativo estiver produzido.
 
-## 11. Publicar no seu fork
+## 11. Enviar sua contribuição por Pull Request
 
-Depois de revisar e sanitizar os arquivos, o usuário pode publicá-los:
+O relatório individual deve ficar em uma pasta própria, por exemplo `reports/SEU_DISPOSITIVO/`. Para contribuir com o projeto original, siga este fluxo:
+
+1. Atualize a branch principal do fork com o repositório original.
+2. Crie uma branch exclusiva para a auditoria.
+3. Adicione somente os arquivos sanitizados do relatório.
+4. Revise o diff completo e confirme que não há identificadores, credenciais, notificações ou dados pessoais.
+5. Envie a branch para o seu fork.
+6. Abra um Pull Request do seu fork para `luisfvmartins/clean-my-android:main`.
+7. Descreva o modelo, versão Android/ROM, escopo da auditoria, principais resultados, testes realizados e limitações.
+8. Aguarde a revisão. Atenda aos pedidos de alteração, se houver.
+
+Exemplo de comandos Git:
 
 ```bash
+git remote -v
+git fetch upstream
+git switch main
+git merge upstream/main
+git switch -c docs/auditoria-SEU-DISPOSITIVO
 git add reports/SEU_DISPOSITIVO/
-git commit -m "docs: add Android device audit report"
-git push origin main
+git diff --cached
+git commit -m "docs: add audit for SEU_DISPOSITIVO"
+git push -u origin docs/auditoria-SEU_DISPOSITIVO
 ```
 
-Se o repositório usar outra branch padrão, substitua `main` pelo nome correto. Não publique arquivos brutos ou dados sensíveis.
+Depois, no GitHub, use **Compare & pull request** e confirme:
+- **Base repository:** `luisfvmartins/clean-my-android`
+- **Base:** `main`
+- **Head repository:** seu fork
+- **Compare:** sua branch de auditoria
 
+Se não tiver Git configurado, abra o PR pela interface do GitHub após enviar os arquivos pela interface web. Não faça commit diretamente na branch principal do repositório original.
+
+O Pull Request é uma proposta de contribuição, não uma publicação automática na versão principal. O mantenedor revisará o conteúdo e poderá aceitar, solicitar ajustes ou rejeitar a contribuição.
 ---
 
 **O objetivo não é produzir os maiores números de otimização. É construir um histórico técnico confiável, verificável e reproduzível de cada dispositivo.**
