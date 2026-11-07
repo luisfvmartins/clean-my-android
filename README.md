@@ -226,12 +226,10 @@ adb shell pm uninstall com.google.android.contactkeys
 ---
 
 ### Etapa 6: Enjaular o Google Play Services (Sandboxing de Permissões)
-Com este bloco de comandos, o Play Services perde qualquer permissão de espionar sua vida, mas continua vivo apenas para validar seus bancos:
+Com este bloco de comandos, o Play Services perde qualquer permissão de espionar sua vida, mas continua vivo apenas para validar seus bancos e entregar notificações push:
 
 ```bash
-adb shell pm revoke com.google.android.gms android.permission.ACCESS_FINE_LOCATION
-adb shell pm revoke com.google.android.gms android.permission.ACCESS_COARSE_LOCATION
-adb shell pm revoke com.google.android.gms android.permission.ACCESS_BACKGROUND_LOCATION
+# 1. Revogação de permissões padrão via PM
 adb shell pm revoke com.google.android.gms android.permission.CAMERA
 adb shell pm revoke com.google.android.gms android.permission.RECORD_AUDIO
 adb shell pm revoke com.google.android.gms android.permission.READ_CONTACTS
@@ -243,8 +241,17 @@ adb shell pm revoke com.google.android.gms android.permission.WRITE_CALL_LOG
 adb shell pm revoke com.google.android.gms android.permission.READ_SMS
 adb shell pm revoke com.google.android.gms android.permission.RECEIVE_SMS
 adb shell pm revoke com.google.android.gms android.permission.SEND_SMS
-adb shell pm revoke com.google.android.gms android.permission.ACTIVITY_RECOGNITION
-adb shell pm revoke com.google.android.gms android.permission.BODY_SENSORS
+
+# 2. Neutralização de permissões "SYSTEM_FIXED" via AppOps (UID do GMS)
+# O Android impede pm revoke em Localização e Atividade Física marcando como SYSTEM_FIXED.
+# Para contornar e forçar o envio de dados vazios/nulos sem quebrar os bancos:
+GMS_UID=$(adb shell pm dump com.google.android.gms | grep -m 1 'userId=' | grep -oE '[0-9]+')
+adb shell cmd appops set --uid $GMS_UID FINE_LOCATION ignore
+adb shell cmd appops set --uid $GMS_UID COARSE_LOCATION ignore
+adb shell cmd appops set --uid $GMS_UID MONITOR_LOCATION ignore
+adb shell cmd appops set --uid $GMS_UID MONITOR_HIGH_POWER_LOCATION ignore
+adb shell cmd appops set --uid $GMS_UID ACTIVITY_RECOGNITION ignore
+adb shell cmd appops set --uid $GMS_UID BODY_SENSORS ignore
 ```
 
 ---
@@ -258,6 +265,54 @@ adb shell pm list users
 
 # Encerra e remove os perfis fantasmas
 adb shell am stop-user -f 11
+adb shell pm remove-user 10
+```
+
+---
+
+### Etapa 8: Auditoria de Permissões Abusivas e Neutralização de Bloatwares "Non-Disable"
+
+#### 1. Revogar permissões que não fazem sentido em apps de terceiros:
+```bash
+# Uber: revogar microfone permanente (evita escuta 24/7)
+adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO
+
+# 99 Táxi: revogar leitura da agenda telefônica inteira
+adb shell pm revoke --user 0 com.taxis99 android.permission.READ_CONTACTS
+
+# Câmera Motorola: revogar geolocalização (impede gravar GPS nas fotos EXIF)
+adb shell pm revoke --user 0 com.motorola.camera5 android.permission.ACCESS_COARSE_LOCATION
+
+# Minha Unifique e Brave: revogar localização de operadora e navegador
+adb shell pm revoke --user 0 com.minhaunifique.unifique android.permission.ACCESS_COARSE_LOCATION
+adb shell pm revoke --user 0 com.brave.browser android.permission.ACCESS_COARSE_LOCATION
+```
+
+#### 2. Paralisar Bloatwares Protegidos como "Non-Disable":
+Fabricantes e operadoras protegem certos rastreadores contra o comando `pm disable` (`Failure: package is non-disable`). Paralisamos esses apps impedindo que executem em segundo plano, acordem a CPU ou acessem a rede:
+
+```bash
+NON_DISABLE_PKGS=(
+    "com.payjoy.access"                  # Rastreamento/trava de financiamento
+    "com.amazon.appmanager"              # Instalador da Amazon
+    "com.motorola.ccc.devicemanagement"  # Telemetria 3C com GPS
+    "com.motorola.paks.notification"     # Notificações de operadora/crédito
+    "com.motorola.installer"             # Instalador silencioso em segundo plano
+)
+
+for pkg in "${NON_DISABLE_PKGS[@]}"; do
+    UID=$(adb shell dumpsys package "$pkg" | grep -m 1 'appId=' | grep -oE '[0-9]+')
+    if [ -n "$UID" ]; then
+        adb shell cmd appops set --uid "$UID" RUN_IN_BACKGROUND ignore
+        adb shell cmd appops set --uid "$UID" RUN_ANY_IN_BACKGROUND ignore
+        adb shell cmd appops set --uid "$UID" WAKE_LOCK ignore
+        adb shell cmd appops set --uid "$UID" START_FOREGROUND ignore
+        adb shell cmd appops set --uid "$UID" COARSE_LOCATION ignore
+        adb shell cmd appops set --uid "$UID" FINE_LOCATION ignore
+        adb shell cmd netpolicy add restrict-background-blacklist "$UID"
+    fi
+done
+```
 adb shell pm remove-user 10
 ```
 
