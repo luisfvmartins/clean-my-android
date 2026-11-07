@@ -1,3 +1,5 @@
+# SNAPSHOT DO MOTO G54 5G: pacotes encontrados desativados na coleta.
+# NÃO é lista de recomendações nem lista para execução automática; os scripts não consomem este arquivo.
 android.autoinstalls.config.motorola.layout
 com.amazon.appmanager
 com.android.avatarpicker

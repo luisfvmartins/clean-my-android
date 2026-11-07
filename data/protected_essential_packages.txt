@@ -1,3 +1,5 @@
+# Componentes e funções protegidos contra desativação pelo script.
+# Esta é uma barreira mínima; não substitui a análise de dependências do aparelho.
 com.android.rkpdapp
 com.android.companiondevicemanager
 com.android.settings.intelligence
@@ -7,3 +9,38 @@ com.android.printspooler
 com.android.providers.contactkeys
 com.android.providers.userdictionary
 com.motorola.nfwlocationattribution
+com.android.phone
+com.android.server.telecom
+com.android.providers.telephony
+com.android.providers.contacts
+com.android.providers.media
+com.android.providers.settings
+com.android.permissioncontroller
+com.android.packageinstaller
+com.google.android.packageinstaller
+com.android.systemui
+com.android.settings
+com.android.stk
+com.android.simappdialog
+com.android.carrierdefaultapp
+com.android.emergency
+com.android.cellbroadcastreceiver
+com.android.cellbroadcastservice
+com.android.bluetooth
+com.android.bluetoothmidiservice
+com.android.nfc
+com.android.documentsui
+com.android.externalstorage
+com.android.inputmethod.latin
+com.mediatek.ims
+com.mediatek.telephony
+com.google.android.gms
+com.google.android.gsf
+com.android.vending
+com.android.dialer
+com.android.contacts
+com.google.android.dialer
+com.google.android.apps.messaging
+com.google.android.inputmethod.latin
+com.android.launcher3
+com.motorola.launcher3

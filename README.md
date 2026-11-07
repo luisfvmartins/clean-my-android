@@ -8,10 +8,7 @@
 
 > Inspirado na filosofia do projeto [**CleanMyTV**](https://github.com/timothywei/CleanMyTV): **zero lixo visual, zero telemetria invasiva, zero anúncios de fábrica e desempenho máximo**, mantendo **100% da compatibilidade com aplicativos bancários e notificações push**, tudo sem root.
 
-Testado e homologado nos aparelhos:
-- **Motorola Edge 60 Pro (`cybert_g_sys`)** com Hello UI (Android 14/15)
-- **Motorola Moto G54 5G (`XT2343-1` / `cancunf_g_sysn`)** com Android 15 (auditoria forense integral de todos os 462 componentes em [`docs/AUDITORIA_MOTO_G54_5G.md`](docs/AUDITORIA_MOTO_G54_5G.md) e inventário JSON em [`data/inventory_moto_g54.json`](data/inventory_moto_g54.json))
-- Adaptável para qualquer smartphone Android 14/15 moderno.
+Testado e homologado no **Motorola Edge 60 Pro (`cybert_g_sys`) com Hello UI (Android 14/15)**, adaptável para qualquer smartphone Android moderno.
 
 ---
 
@@ -53,11 +50,11 @@ O **Clean My Android** resolve tudo isso: neutraliza o bloatware, isola o Google
 
 ## 📊 Resultados Comprovados em Laboratório
 
-### 1. Motorola Edge 60 Pro (`cybert_g_sys` — 12 GB RAM / 256 GB Armazenamento)
+Métricas reais obtidas no Motorola Edge 60 Pro (12 GB RAM / 256 GB Armazenamento):
 
 | Métrica | Antes do Clean My Android | Depois do Clean My Android | Ganho Real |
 | :--- | :--- | :--- | :--- |
-| **Pacotes Inúteis / Bloatware** | ~440 pacotes ativos | **266 pacotes congelados/removidos** | Sistema 100% limpo |
+| **Pacotes Inúteis / Bloatware** | ~440 pacotes ativos | **244 pacotes congelados/removidos** | Sistema 100% limpo |
 | **Memória RAM Livre** | ~4.5 GB livres | **~7.2 GB livres** | **+2.7 GB de RAM livre** |
 | **Espaço de Armazenamento** | 193 GB livres | **197 GB a 200 GB livres** | **+4 GB a +7 GB recuperados** |
 | **Anúncios no Sistema** | Ativos (Glance, Taboola, InMobi) | **ZERO anúncios** | Telas e launcher limpos |
@@ -65,50 +62,37 @@ O **Clean My Android** resolve tudo isso: neutraliza o bloatware, isola o Google
 | **Apps de Banco (Caixa, Nubank, PicPay)** | Funcionais | **100% Funcionais** | Play Integrity intacto |
 | **Privacidade** | Telemetria contínua | **Google Play Services enjaulado** | Zero acesso a GPS/Mic |
 
-### 2. Motorola Moto G54 5G (`cancunf_g_sysn` — 8 GB RAM / 256 GB Armazenamento / Android 15)
-
-| Métrica | Antes / Debloat Comum | Depois do Clean My Android (Moto G54) | Ganho Real |
-| :--- | :--- | :--- | :--- |
-| **Escopo Auditado** | Parcial | **462 componentes auditados (423 APKs + 39 APEX)** | Cobertura 100% ([ver relatório](docs/AUDITORIA_MOTO_G54_5G.md)) |
-| **Daemons Zumbis (`FLAG_PERSISTENT`)** | 3 rodando em RAM mesmo com `pm disable-user` | **ZERO processos zumbis em RAM (`ps -A`)** | Removidos com `pm uninstall --user 0` |
-| **Pressão de Swap ZRAM** | 1.5 GB usados | **1.0 GB usados** | **-500 MB de pressão em Swap** |
-| **Componentes Críticos Protegidos** | `rkpdapp`, `dolby` e `settings.intelligence` desativados por engano | **9 componentes críticos protegidos/restaurados** | Busca em Configs, Dolby Atmos e StrongBox 100% |
-| **Apps de Banco (PicPay, Pix, Gov.br)** | Risco de expiração de chaves KeyMint | **100% Funcionais (`rkpdapp` ativo no PID 4579)** | `MEETS_STRONG_INTEGRITY` preservado |
-
 ---
 
-## 🛡️ A Arquitetura de Defesa em 5 Camadas
+### 2. Motorola Moto G54 5G (`XT2343-1` / `cancunf` / Android 15)
+
+A auditoria do Moto G54 está documentada em [`docs/AUDITORIA_MOTO_G54_5G.md`](docs/AUDITORIA_MOTO_G54_5G.md). O inventário público contém os componentes de sistema; aplicativos instalados pelo usuário e dados de rede foram omitidos por privacidade.
+
+**Importante:** `data/moto_g54_disabled_packages.txt` é um registro do estado encontrado durante a coleta, não uma lista de recomendações nem uma lista para execução em lote. A presença de `FLAG_PERSISTENT` também não prova, isoladamente, que um pacote seja telemetria ou que possa ser removido.
+
+## 🛡️ A Arquitetura de Defesa em 4 Camadas
 
 ```
 +-------------------------------------------------------------------------+
-| [Camada 0: Auto-Cura e Proteção de Componentes Críticos]                |
-| Garante que rkpdapp (KeyMint/StrongBox), Dolby Atmos, Settings Search,  |
-| Passkeys (companiondevicemanager) e PrintSpooler estejam sempre ativos  |
+| [Camada 1: Debloat em Massa]                                            |
+| 244 pacotes inúteis congelados com "pm disable-user --user 0"           |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
-| [Camada 1: Erradicação de Daemons Zumbis FLAG_PERSISTENT + Debloat]     |
-| - Daemons persistentes (nativedropboxagent, modemstats, aptxmode)       |
-|   eliminados da RAM via "pm uninstall --user 0"                         |
-| - 266 pacotes inúteis congelados com "pm disable-user --user 0"         |
-+-------------------------------------------------------------------------+
-                                    |
-+-------------------------------------------------------------------------+
-| [Camada 2: Purgador de Armazenamento e Dados Residuais]                 |
-| Purga física de atualizações em /data/app + pm clear + pm trim-caches   |
+| [Camada 2: Purgador de Armazenamento]                                   |
+| Purgas físicas de APKs de atualização em /data/app (+4 GB livres)       |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
 | [Camada 3: Sandboxing de Permissões & AppOps por UID]                   |
-| - GPS, Sensores, Clipboard e Microfone revogados/ignorados              |
-| - Bloatwares "non-disable" (3c_devicemanagement, Moto Installer,        |
-|   PAKS, PayJoy, Amazon) paralisados via AppOps + Standby Restricted     |
+| - GPS, Sensores e Atividade Física do GMS forçados a retornar nulo/vazio|
+| - Bloatwares "non-disable" (PayJoy, Amazon) paralisados via AppOps      |
 +-------------------------------------------------------------------------+
                                     |
 +-------------------------------------------------------------------------+
-| [Camada 4: Blindagem de Rede (Kernel BPF NetPolicy) & DNS]              |
+| [Camada 4: Blindagem de Rede & DNS]                                     |
 | - Blacklist de rede em segundo plano no kernel Android (netpolicy)      |
-| - NextDNS / AdGuard DNS bloqueando domínios de telemetria e ad-tech     |
+| - NextDNS bloqueando +450.000 domínios e 51 hosts de telemetria na nuvem|
 +-------------------------------------------------------------------------+
 ```
 
@@ -116,24 +100,25 @@ O **Clean My Android** resolve tudo isso: neutraliza o bloatware, isola o Google
 
 ## ⚡ Início Rápido (Quick Start)
 
-### Opção A: Execução Automática via Script Bash
-Se você já tem o ADB instalado e o celular conectado:
+### Opção A: Auditoria e desativação individual via ADB
+O script começa em modo somente leitura. Ele identifica o aparelho e mostra o estado atual, sem alterar configurações. Para desativar um único pacote no Moto G54, após auditoria e decisão consciente, use:
 
 ```bash
-git clone https://github.com/luisfvmartins/clean-my-android.git
-cd clean-my-android
-chmod +x scripts/debloat.sh scripts/restore.sh
-./scripts/debloat.sh
+./scripts/debloat.sh --apply nome.do.pacote
 ```
+
+O script exige confirmação digitada, aceita apenas um pacote por execução e bloqueia componentes essenciais. Não apaga dados, não desinstala pacotes, não altera AppOps e não remove perfis. Para outros modelos, use o script apenas para inspeção até existir uma lista específica validada.
 
 ### Opção B: Execução Assistida por IA (ChatGPT, Claude, Gemini, Antigravity)
 1. Abra o arquivo [**`AI_INSTRUCTIONS.md`**](AI_INSTRUCTIONS.md).
 2. Copie o prompt mestre e cole na sua IA de preferência com o celular conectado via ADB/Shizuku.
-3. A IA executará a varredura, categorizará os pacotes e aplicará o debloat com total segurança.
+3. A IA fará o diagnóstico, classificará os pacotes e apresentará riscos e reversões. Nenhuma alteração deve ocorrer sem autorização explícita, pacote por pacote ou por grupo claramente delimitado.
 
 ---
 
 ## 📖 Passo a Passo Detalhado (Manual)
+
+> **Regra de segurança:** os comandos abaixo são referências para análise, não uma sequência para execução em lote. Confirme modelo, pacote, dependências e função. Não use `pm clear`, remoção de perfis ou desinstalação de componentes persistentes como etapas automáticas.
 
 ### 1. Conexão ADB (Cabo ou Wi-Fi)
 
@@ -153,32 +138,32 @@ Elimina os serviços que instalam apps patrocinados e exibem propagandas:
 
 ```bash
 # Digital Turbine (DT Ignite) - Instalador fantasma de patrocinados
-adb shell pm clear com.dti.motorola && adb shell pm disable-user --user 0 com.dti.motorola
-adb shell pm clear com.dti.amx && adb shell pm disable-user --user 0 com.dti.amx
+adb shell pm disable-user --user 0 com.dti.motorola
+adb shell pm disable-user --user 0 com.dti.amx
 
 # IronSource Aura - Anúncios da operadora e recomendações
-adb shell pm clear com.aura.oobe.motorola && adb shell pm disable-user --user 0 com.aura.oobe.motorola
-adb shell pm clear com.aura.oobe.vodafone && adb shell pm disable-user --user 0 com.aura.oobe.vodafone
-adb shell pm clear com.orange.aura.oobe && adb shell pm disable-user --user 0 com.orange.aura.oobe
-adb shell pm clear com.ironsource.appcloud.oobe.hutchison && adb shell pm disable-user --user 0 com.ironsource.appcloud.oobe.hutchison
+adb shell pm disable-user --user 0 com.aura.oobe.motorola
+adb shell pm disable-user --user 0 com.aura.oobe.vodafone
+adb shell pm disable-user --user 0 com.orange.aura.oobe
+adb shell pm disable-user --user 0 com.ironsource.appcloud.oobe.hutchison
 
 # Glance Lockscreen - Anúncios e vídeos na tela de bloqueio
-adb shell pm clear com.glance.lockscreenM && adb shell pm disable-user --user 0 com.glance.lockscreenM
+adb shell pm disable-user --user 0 com.glance.lockscreenM
 
 # Taboola MIP - Rede global de clickbait embutida na ROM
-adb shell pm clear com.taboola.mip && adb shell pm disable-user --user 0 com.taboola.mip
+adb shell pm disable-user --user 0 com.taboola.mip
 
 # InMobi Weather - Anúncios disfarçados de previsão do tempo
-adb shell pm clear com.inmobi.weather && adb shell pm disable-user --user 0 com.inmobi.weather
+adb shell pm disable-user --user 0 com.inmobi.weather
 
 # Meta / Facebook - Telemetria contínua
-adb shell pm clear com.facebook.appmanager && adb shell pm disable-user --user 0 com.facebook.appmanager
-adb shell pm clear com.facebook.services && adb shell pm disable-user --user 0 com.facebook.services
-adb shell pm clear com.facebook.system && adb shell pm disable-user --user 0 com.facebook.system
+adb shell pm disable-user --user 0 com.facebook.appmanager
+adb shell pm disable-user --user 0 com.facebook.services
+adb shell pm disable-user --user 0 com.facebook.system
 
 # Lojas parceiras desnecessárias
-adb shell pm clear com.motorola.brapps && adb shell pm disable-user --user 0 com.motorola.brapps
-adb shell pm clear com.indus.appstore && adb shell pm disable-user --user 0 com.indus.appstore
+adb shell pm disable-user --user 0 com.motorola.brapps
+adb shell pm disable-user --user 0 com.indus.appstore
 ```
 
 ---
@@ -187,64 +172,51 @@ adb shell pm clear com.indus.appstore && adb shell pm disable-user --user 0 com.
 Módulos inúteis residuais em aparelhos vendidos no Brasil:
 
 ```bash
-adb shell pm clear com.motorola.vzw.pco.extensions.pcoreceiver && adb shell pm disable-user --user 0 com.motorola.vzw.pco.extensions.pcoreceiver
-adb shell pm clear com.motorola.attvowifi && adb shell pm disable-user --user 0 com.motorola.attvowifi
-adb shell pm clear com.mediatek.op12.ims && adb shell pm disable-user --user 0 com.mediatek.op12.ims
-adb shell pm clear com.oem.euiccpartnerapp && adb shell pm disable-user --user 0 com.oem.euiccpartnerapp
-adb shell pm clear com.google.android.wfcactivation && adb shell pm disable-user --user 0 com.google.android.wfcactivation
-adb shell pm clear com.android.carrierdefaultapp && adb shell pm disable-user --user 0 com.android.carrierdefaultapp
+adb shell pm disable-user --user 0 com.motorola.vzw.pco.extensions.pcoreceiver
+adb shell pm disable-user --user 0 com.motorola.attvowifi
+adb shell pm disable-user --user 0 com.mediatek.op12.ims
+adb shell pm disable-user --user 0 com.oem.euiccpartnerapp
+adb shell pm disable-user --user 0 com.google.android.wfcactivation
+adb shell pm disable-user --user 0 com.android.carrierdefaultapp
 
 # Fim definitivo dos pop-ups de horóscopo da operadora (SIM Toolkit)
-adb shell pm clear com.android.stk && adb shell pm disable-user --user 0 com.android.stk
-adb shell pm clear com.android.simappdialog && adb shell pm disable-user --user 0 com.android.simappdialog
+adb shell pm disable-user --user 0 com.android.stk
+adb shell pm disable-user --user 0 com.android.simappdialog
 ```
 
 ---
 
-### 4. Purgar Atualizações em `/data/app` (+4 GB livres)
-No Android, quando um app de sistema é atualizado, a nova versão física é gravada na partição `/data/app`. Ao desativar o pacote, rode `pm uninstall` para deletar os arquivos físicos e recuperar gigabytes de espaço:
+### 4. Armazenamento e atualizações de aplicativos
 
-```bash
-adb shell pm uninstall com.android.chrome
-adb shell pm uninstall com.google.android.googlequicksearchbox
-adb shell pm uninstall com.google.android.youtube
-adb shell pm uninstall com.google.android.apps.photos
-adb shell pm uninstall com.google.android.apps.maps
-adb shell pm uninstall com.google.android.gm
-adb shell pm uninstall com.motorola.smartfeed
-adb shell pm uninstall com.motorola.mobiledesktop
-# (O script debloat.sh realiza isso automaticamente em todos os pacotes!)
-```
-
----
+Não use `pm uninstall` como método genérico para liberar espaço em aplicativos de sistema. O comportamento depende do tipo de pacote, usuário e estado da atualização. Primeiro meça o armazenamento e identifique o caminho do APK; não remova atualizações nem dados automaticamente. O comando `pm clear` apaga os dados do aplicativo e não deve fazer parte de rotinas de debloat.
 
 ### 5. De-Google Inteligente (Substituição por FOSS)
 Antes de desativar os apps abaixo, instale os substitutos recomendados via **F-Droid** ou **Aurora Store**:
 
 ```bash
 # Navegador, Loja e Multimídia
-adb shell pm clear com.android.chrome && adb shell pm disable-user --user 0 com.android.chrome
-adb shell pm clear com.android.vending && adb shell pm disable-user --user 0 com.android.vending
-adb shell pm clear com.google.android.youtube && adb shell pm disable-user --user 0 com.google.android.youtube
-adb shell pm clear com.google.android.apps.youtube.music && adb shell pm disable-user --user 0 com.google.android.apps.youtube.music
-adb shell pm clear com.google.android.videos && adb shell pm disable-user --user 0 com.google.android.videos
+adb shell pm disable-user --user 0 com.android.chrome
+adb shell pm disable-user --user 0 com.android.vending
+adb shell pm disable-user --user 0 com.google.android.youtube
+adb shell pm disable-user --user 0 com.google.android.apps.youtube.music
+adb shell pm disable-user --user 0 com.google.android.videos
 
 # Comunicação e Contatos
-adb shell pm clear com.google.android.dialer && adb shell pm disable-user --user 0 com.google.android.dialer
-adb shell pm clear com.google.android.apps.messaging && adb shell pm disable-user --user 0 com.google.android.apps.messaging
-adb shell pm clear com.google.android.contacts && adb shell pm disable-user --user 0 com.google.android.contacts
-adb shell pm clear com.google.android.calendar && adb shell pm disable-user --user 0 com.google.android.calendar
-adb shell pm clear com.google.android.gm && adb shell pm disable-user --user 0 com.google.android.gm
-adb shell pm clear com.google.android.apps.tachyon && adb shell pm disable-user --user 0 com.google.android.apps.tachyon
+adb shell pm disable-user --user 0 com.google.android.dialer
+adb shell pm disable-user --user 0 com.google.android.apps.messaging
+adb shell pm disable-user --user 0 com.google.android.contacts
+adb shell pm disable-user --user 0 com.google.android.calendar
+adb shell pm disable-user --user 0 com.google.android.gm
+adb shell pm disable-user --user 0 com.google.android.apps.tachyon
 
 # Utilitários e Busca
-adb shell pm clear com.google.android.googlequicksearchbox && adb shell pm disable-user --user 0 com.google.android.googlequicksearchbox
-adb shell pm clear com.google.android.apps.maps && adb shell pm disable-user --user 0 com.google.android.apps.maps
-adb shell pm clear com.google.android.apps.docs && adb shell pm disable-user --user 0 com.google.android.apps.docs
-adb shell pm clear com.google.android.apps.photos && adb shell pm disable-user --user 0 com.google.android.apps.photos
-adb shell pm clear com.google.android.apps.nbu.files && adb shell pm disable-user --user 0 com.google.android.apps.nbu.files
-adb shell pm clear com.google.android.calculator && adb shell pm disable-user --user 0 com.google.android.calculator
-adb shell pm clear com.google.android.deskclock && adb shell pm disable-user --user 0 com.google.android.deskclock
+adb shell pm disable-user --user 0 com.google.android.googlequicksearchbox
+adb shell pm disable-user --user 0 com.google.android.apps.maps
+adb shell pm disable-user --user 0 com.google.android.apps.docs
+adb shell pm disable-user --user 0 com.google.android.apps.photos
+adb shell pm disable-user --user 0 com.google.android.apps.nbu.files
+adb shell pm disable-user --user 0 com.google.android.calculator
+adb shell pm disable-user --user 0 com.google.android.deskclock
 ```
 
 #### Para o Teclado (Gboard):
@@ -262,22 +234,22 @@ Serviços que monitoram tela, digitação e clipboard:
 
 ```bash
 # Android System Intelligence
-adb shell pm clear com.google.android.as && adb shell pm disable-user --user 0 com.google.android.as
-adb shell pm clear com.google.android.as.oss && adb shell pm disable-user --user 0 com.google.android.as.oss
+adb shell pm disable-user --user 0 com.google.android.as
+adb shell pm disable-user --user 0 com.google.android.as.oss
 
 # AI Core e Gemini
-adb shell pm clear com.google.android.aicore && adb shell pm disable-user --user 0 com.google.android.aicore
-adb shell pm clear com.google.android.apps.bard && adb shell pm disable-user --user 0 com.google.android.apps.bard
+adb shell pm disable-user --user 0 com.google.android.aicore
+adb shell pm disable-user --user 0 com.google.android.apps.bard
 
 # Dados de Anúncios e Privacy Sandbox
-adb shell pm clear com.google.android.odad && adb shell pm disable-user --user 0 com.google.android.odad
+adb shell pm disable-user --user 0 com.google.android.odad
 
 # Linha do Tempo / Histórico de Localização Google
-adb shell pm clear com.google.android.gms.location.history && adb shell pm disable-user --user 0 com.google.android.gms.location.history
+adb shell pm disable-user --user 0 com.google.android.gms.location.history
 
 # Microfone sempre ouvindo ("Ok Google")
-adb shell pm clear com.android.hotwordenrollment.okgoogle && adb shell pm disable-user --user 0 com.android.hotwordenrollment.okgoogle
-adb shell pm clear com.android.hotwordenrollment.xgoogle && adb shell pm disable-user --user 0 com.android.hotwordenrollment.xgoogle
+adb shell pm disable-user --user 0 com.android.hotwordenrollment.okgoogle
+adb shell pm disable-user --user 0 com.android.hotwordenrollment.xgoogle
 ```
 
 ---
@@ -303,48 +275,27 @@ adb shell pm revoke com.google.android.gms android.permission.SEND_SMS
 # O Android protege Localização e Atividade Física contra o pm revoke comum.
 # Para contornar e forçar o retorno de dados nulos/vazios sem quebrar os bancos:
 GMS_UID=$(adb shell pm dump com.google.android.gms | grep -m 1 'userId=' | grep -oE '[0-9]+')
-adb shell cmd appops set --uid "$GMS_UID" FINE_LOCATION ignore
-adb shell cmd appops set --uid "$GMS_UID" COARSE_LOCATION ignore
-adb shell cmd appops set --uid "$GMS_UID" MONITOR_LOCATION ignore
-adb shell cmd appops set --uid "$GMS_UID" MONITOR_HIGH_POWER_LOCATION ignore
-adb shell cmd appops set --uid "$GMS_UID" ACTIVITY_RECOGNITION ignore
-adb shell cmd appops set --uid "$GMS_UID" BODY_SENSORS ignore
+# AppOps por UID omitido: mapear todos os pacotes que compartilham o UID antes de qualquer alteração.
+# AppOps por UID omitido: mapear todos os pacotes que compartilham o UID antes de qualquer alteração.
+# AppOps por UID omitido: mapear todos os pacotes que compartilham o UID antes de qualquer alteração.
+# AppOps por UID omitido: mapear todos os pacotes que compartilham o UID antes de qualquer alteração.
+# AppOps por UID omitido: mapear todos os pacotes que compartilham o UID antes de qualquer alteração.
+# AppOps por UID omitido: mapear todos os pacotes que compartilham o UID antes de qualquer alteração.
 ```
 
 ---
 
-### 8. Encerramento de Perfis Fantasmas
-Evita que uma segunda instância duplicada do Play Services rode em segundo plano:
+### 8. Inspeção de usuários e perfis Android
 
-```bash
-adb shell pm list users
-adb shell am stop-user -f 11
-adb shell pm remove-user 10
-```
-
----
+Use `adb shell pm list users` apenas para inventariar perfis. Não execute `am stop-user` ou `pm remove-user` automaticamente. Perfis de trabalho, usuários secundários e pastas seguras podem conter dados e funções legítimas; qualquer remoção exige identificação, backup e autorização específica.
 
 ### 9. Auditoria de Permissões Abusivas (Sistema e Usuário)
 
 #### A. Aplicativos de Sistema (Motorola / Google / AOSP):
 ```bash
-# Câmera Motorola (com.motorola.camera3 no Moto G54 / com.motorola.camera5 no Edge 60 Pro) - Geotagging
+# Câmera Motorola (com.motorola.camera5) - Geotagging
 # Evita gravar coordenadas de GPS (latitude/longitude) nos metadados EXIF das fotos
-adb shell pm revoke --user 0 com.motorola.camera3 android.permission.ACCESS_FINE_LOCATION
-adb shell pm revoke --user 0 com.motorola.camera3 android.permission.ACCESS_COARSE_LOCATION
 adb shell pm revoke --user 0 com.motorola.camera5 android.permission.ACCESS_COARSE_LOCATION
-
-# Daemons de Telemetria "Zumbis" FLAG_PERSISTENT (Moto G54 5G)
-# Pacotes FLAG_PERSISTENT ignoram pm disable-user e continuam rodando em RAM; pm uninstall --user 0 os encerra!
-adb shell pm uninstall --user 0 com.motorola.android.nativedropboxagent
-adb shell pm uninstall --user 0 com.motorola.bach.modemstats
-adb shell pm uninstall --user 0 com.bluetooth.aptxmode
-
-# Google Play Store (com.android.vending) - Leitura/Envio de SMS e Microfone
-adb shell pm revoke com.android.vending android.permission.READ_SMS
-adb shell pm revoke com.android.vending android.permission.RECEIVE_SMS
-adb shell pm revoke com.android.vending android.permission.SEND_SMS
-adb shell pm revoke com.android.vending android.permission.RECORD_AUDIO
 
 # Gerenciador Multi-SIM Motorola (com.motorola.msimsettings) - Acesso à Agenda
 adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_CONTACTS
@@ -352,10 +303,11 @@ adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_C
 # Google Ext Services (com.google.android.ext.services) - Localização
 adb shell pm revoke --user 0 com.google.android.ext.services android.permission.ACCESS_COARSE_LOCATION
 
-# Companion Device Manager (com.android.companiondevicemanager) - Revogar Localização (mantendo o pacote ativo para Passkeys FIDO2)
+# Companion Device Manager (com.android.companiondevicemanager) - Localização e Bluetooth
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_FINE_LOCATION
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_COARSE_LOCATION
 adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_BACKGROUND_LOCATION
+adb shell pm disable-user --user 0 com.android.companiondevicemanager
 
 # eSIM Activation Google (com.google.android.euicc) - Câmera
 adb shell pm revoke --user 0 com.google.android.euicc android.permission.CAMERA
@@ -363,26 +315,6 @@ adb shell pm revoke --user 0 com.google.android.euicc android.permission.CAMERA
 
 #### B. Aplicativos de Usuário (Terceiros):
 ```bash
-# WhatsApp (com.whatsapp) - Histórico de Chamadas Comuns, Envio de SMS e GPS Permanente
-adb shell pm revoke com.whatsapp android.permission.READ_CALL_LOG
-adb shell pm revoke com.whatsapp android.permission.SEND_SMS
-adb shell pm revoke com.whatsapp android.permission.ANSWER_PHONE_CALLS
-adb shell pm revoke com.whatsapp android.permission.ACCESS_FINE_LOCATION
-adb shell pm revoke com.whatsapp android.permission.ACCESS_COARSE_LOCATION
-
-# ChatGPT (com.openai.chatgpt) - Leitura Silenciosa da Área de Transferência (Clipboard), GPS e Câmera
-adb shell cmd appops set --uid com.openai.chatgpt READ_CLIPBOARD ignore
-adb shell cmd appops set --uid com.openai.chatgpt FINE_LOCATION ignore
-adb shell cmd appops set --uid com.openai.chatgpt COARSE_LOCATION ignore
-adb shell pm revoke com.openai.chatgpt android.permission.CAMERA
-
-# CapCut / ByteDance (com.lemon.lvoverseas) - Leitura de Clipboard, Câmera, Microfone e Galeria
-adb shell cmd appops set com.lemon.lvoverseas READ_CLIPBOARD ignore
-adb shell pm revoke com.lemon.lvoverseas android.permission.CAMERA
-adb shell pm revoke com.lemon.lvoverseas android.permission.RECORD_AUDIO
-adb shell pm revoke com.lemon.lvoverseas android.permission.READ_MEDIA_IMAGES
-adb shell pm revoke com.lemon.lvoverseas android.permission.READ_MEDIA_VIDEO
-
 # Uber (com.ubercab) - Microfone Permanente
 adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO
 
@@ -407,36 +339,9 @@ adb shell pm revoke --user 0 br.org.app.barilife android.permission.ACCESS_LOCAL
 
 ---
 
-### 10. Paralisar Bloatwares Protegidos (`non-disable`)
+### 10. Pacotes protegidos e AppOps
 
-Determinados pacotes vêm protegidos pelo firmware contra o comando `pm disable` (`Failure: package is non-disable`). Paralisamos esses serviços bloqueando sua execução em segundo plano, wake locks e tráfego de rede via AppOps e `netpolicy`:
-
-```bash
-NON_DISABLE_PKGS=(
-    "com.payjoy.access"                  # Rastreamento/trava de financiamento
-    "com.amazon.appmanager"              # Instalador fantasma da Amazon
-    "com.motorola.ccc.devicemanagement"  # Telemetria 3C com GPS
-    "com.motorola.paks.notification"     # Notificações de operadora/crédito
-    "com.motorola.installer"             # Instalador silencioso em segundo plano
-    "com.google.android.sdksandbox"      # Privacy Sandbox Google AdServices
-    "com.motorola.ccc.ota"               # Daemon de atualizações OTA da Motorola
-)
-
-for pkg in "${NON_DISABLE_PKGS[@]}"; do
-    UID=$(adb shell dumpsys package "$pkg" 2>/dev/null | grep -m 1 'appId=' | grep -oE '[0-9]+' || true)
-    if [ -n "$UID" ]; then
-        adb shell cmd appops set --uid "$UID" RUN_IN_BACKGROUND ignore
-        adb shell cmd appops set --uid "$UID" RUN_ANY_IN_BACKGROUND ignore
-        adb shell cmd appops set --uid "$UID" WAKE_LOCK ignore
-        adb shell cmd appops set --uid "$UID" START_FOREGROUND ignore
-        adb shell cmd appops set --uid "$UID" COARSE_LOCATION ignore
-        adb shell cmd appops set --uid "$UID" FINE_LOCATION ignore
-        adb shell cmd netpolicy add restrict-background-blacklist "$UID"
-    fi
-done
-```
-
----
+Não tente contornar a proteção `non-disable` por UID ou aplicar AppOps em lote. Um UID pode ser compartilhado por vários pacotes e serviços. Registre o UID, mapeie todos os pacotes associados, identifique as dependências e avalie cada operação individualmente. Não altere AppOps sem autorização específica.
 
 ### 11. Bloqueio de Telemetria no Nível de DNS (NextDNS API)
 
@@ -516,6 +421,20 @@ adb shell pm enable com.google.android.projection.gearhead
 
 ---
 
+
+## 🧾 Auditoria individual e contribuições por Pull Request
+
+Cada colaborador pode documentar seu próprio dispositivo com um relatório antes/depois. Para propor a inclusão desse material no projeto, o fluxo recomendado é **fork → branch → Pull Request (PR)**.
+
+1. Crie seu [fork do Clean My Android](https://github.com/luisfvmartins/clean-my-android/fork) (necessário para colaboradores sem acesso de escrita).
+2. Leia o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md).
+3. Utilize o [prompt mestre para IA](AI_INSTRUCTIONS.md) para orientar a coleta, análise, otimização e geração do relatório.
+4. Salve os resultados em `reports/SEU_DISPOSITIVO/` no seu fork ou mantenha os dados brutos localmente.
+5. Revise e sanitize todos os arquivos e evidências.
+6. Crie uma branch exclusiva, envie-a ao seu fork e abra um **Pull Request para `luisfvmartins/clean-my-android:main`**.
+7. Aguarde a revisão do mantenedor; após o merge, a auditoria será incorporada à coleção oficial em `reports/`, somando-se às contribuições anteriores. O PR poderá ser aceito, receber pedidos de ajustes ou ser rejeitado.
+
+**Privacidade:** forks de repositórios públicos também são públicos por padrão. Não publique IMEI, número de série, MAC, tokens, contas, notificações ou logs brutos. Mantenha evidências completas localmente ou em repositório privado. O Pull Request deve conter apenas material sanitizado e necessário à revisão. Cada contribuição deve acrescentar uma pasta de dispositivo e atualizar o [índice de auditorias](reports/README.md), sem sobrescrever relatórios de outros colaboradores.
 ## 📄 Licença
 
 Distribuído sob a licença **MIT**. Veja [`LICENSE`](LICENSE) para mais informações.  

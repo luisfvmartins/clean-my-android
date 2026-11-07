@@ -1,52 +1,43 @@
 #!/usr/bin/env bash
-# ==============================================================================
-# Clean My Android - Script de Restauração (Rollback)
-# Autor: Luís Martins (@luisfvmartins)
-# Repositório: https://github.com/luisfvmartins/clean-my-android
-# ==============================================================================
+# Clean My Android — reativação individual, com confirmação.
+set -Eeuo pipefail
 
-set -e
+usage() {
+  cat <<'EOF'
+Uso:
+  ./restore.sh PACOTE
 
-if [ -z "$1" ]; then
-    echo "Uso:"
-    echo "  ./restore.sh <nome.do.pacote>        # Reativa ou reinstala um pacote específico"
-    echo "  ./restore.sh --all                  # Reativa todos os pacotes da lista e restaura daemons persistentes"
-    echo ""
-    echo "Exemplo: ./restore.sh com.motorola.mobiledesktop"
-    exit 1
+Reativa somente um pacote por execução. Não há restauração em massa.
+EOF
+}
+if ! command -v adb >/dev/null 2>&1; then
+  echo "Erro: ADB não está instalado." >&2; exit 1
 fi
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PKG_LIST="$SCRIPT_DIR/../data/disabled_packages.txt"
-PERSISTENT_LIST="$SCRIPT_DIR/../data/persistent_uninstall_packages.txt"
-
-if [ "$1" == "--all" ]; then
-    if [ ! -f "$PKG_LIST" ]; then
-        echo "[-] Arquivo $PKG_LIST não encontrado!"
-        exit 1
-    fi
-    echo "[!] Reativando todos os pacotes de disabled_packages.txt..."
-    while IFS= read -r pkg || [ -n "$pkg" ]; do
-        [ -z "$pkg" ] && continue
-        [[ "$pkg" =~ ^#.* ]] && continue
-        echo "Reativando: $pkg"
-        adb shell pm enable "$pkg" 2>/dev/null || true
-    done < "$PKG_LIST"
-
-    if [ -f "$PERSISTENT_LIST" ]; then
-        echo "[!] Reinstalando daemons persistentes para user 0..."
-        while IFS= read -r pkg || [ -n "$pkg" ]; do
-            [ -z "$pkg" ] && continue
-            [[ "$pkg" =~ ^#.* ]] && continue
-            echo "Reinstalando: $pkg"
-            adb shell cmd package install-existing --user 0 "$pkg" 2>/dev/null || true
-            adb shell pm enable "$pkg" 2>/dev/null || true
-        done < "$PERSISTENT_LIST"
-    fi
-    echo "[+] Todos os pacotes foram restaurados."
+if [[ ${#} -ne 1 || "$1" == "--help" || "$1" == "-h" ]]; then usage; exit 2; fi
+PACKAGE="$1"
+if [[ ! "$PACKAGE" =~ ^[A-Za-z0-9_]+(\.[A-Za-z0-9_]+)+$ ]]; then
+  echo "Erro: nome de pacote inválido." >&2; exit 2
+fi
+mapfile -t DEVICES < <(adb devices | awk 'NR > 1 && $2 == "device" {print $1}')
+if [[ ${#DEVICES[@]} -ne 1 ]]; then
+  echo "Erro: conecte e autorize exatamente um dispositivo ADB. Detectados: ${#DEVICES[@]}." >&2
+  adb devices -l; exit 1
+fi
+ADB=(adb -s "${DEVICES[0]}")
+if ! "${ADB[@]}" shell pm path "$PACKAGE" 2>/dev/null | tr -d '\r' | grep -q '^package:'; then
+  echo "Erro: pacote não encontrado: $PACKAGE" >&2; exit 3
+fi
+if ! "${ADB[@]}" shell pm list packages -d --user 0 | tr -d '\r' | grep -Fxq "package:$PACKAGE"; then
+  echo "$PACKAGE não consta como desativado para o usuário 0. Nenhuma alteração."; exit 0
+fi
+echo "Ação solicitada: reativar somente $PACKAGE."
+read -r -p "Para confirmar, digite exatamente: REATIVAR $PACKAGE : " CONFIRM
+if [[ "$CONFIRM" != "REATIVAR $PACKAGE" ]]; then
+  echo "Cancelado. Nenhuma alteração realizada."; exit 0
+fi
+"${ADB[@]}" shell pm enable --user 0 "$PACKAGE"
+if ! "${ADB[@]}" shell pm list packages -d --user 0 | tr -d '\r' | grep -Fxq "package:$PACKAGE"; then
+  echo "Confirmado: $PACKAGE não está mais desativado para o usuário 0."
 else
-    echo "Restaurando pacote: $1"
-    adb shell cmd package install-existing --user 0 "$1" 2>/dev/null || true
-    adb shell pm enable "$1"
-    echo "[+] Pacote $1 restaurado com sucesso."
+  echo "Não foi possível confirmar a reativação de $PACKAGE." >&2; exit 4
 fi
