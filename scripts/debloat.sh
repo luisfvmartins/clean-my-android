@@ -132,7 +132,7 @@ fi
 
 # 5. Sandboxing do Google Play Services
 echo ""
-echo "=== [4/6] Aplicando Sandboxing no Google Play Services (com.google.android.gms) ==="
+echo "=== [4/8] Aplicando Sandboxing no Google Play Services (com.google.android.gms) ==="
 PERMS=(
     "android.permission.ACCESS_FINE_LOCATION"
     "android.permission.ACCESS_COARSE_LOCATION"
@@ -155,18 +155,83 @@ PERMS=(
 for perm in "${PERMS[@]}"; do
     adb shell pm revoke com.google.android.gms "$perm" 2>/dev/null || true
 done
-echo "[+] Permissões invasivas do Google Play Services revogadas."
 
-# 6. Finalização de perfis fantasmas
+# Sandboxing de baixo nível via AppOps (contorna limitações de SYSTEM_FIXED)
+GMS_UID=$(adb shell pm dump com.google.android.gms 2>/dev/null | grep -m 1 'userId=' | grep -oE '[0-9]+' || true)
+if [ -n "$GMS_UID" ]; then
+    echo "[+] Neutralizando rastreamento SYSTEM_FIXED no UID $GMS_UID do Play Services via AppOps..."
+    adb shell cmd appops set --uid "$GMS_UID" FINE_LOCATION ignore 2>/dev/null || true
+    adb shell cmd appops set --uid "$GMS_UID" COARSE_LOCATION ignore 2>/dev/null || true
+    adb shell cmd appops set --uid "$GMS_UID" MONITOR_LOCATION ignore 2>/dev/null || true
+    adb shell cmd appops set --uid "$GMS_UID" MONITOR_HIGH_POWER_LOCATION ignore 2>/dev/null || true
+    adb shell cmd appops set --uid "$GMS_UID" ACTIVITY_RECOGNITION ignore 2>/dev/null || true
+    adb shell cmd appops set --uid "$GMS_UID" BODY_SENSORS ignore 2>/dev/null || true
+fi
+echo "[+] Google Play Services isolado e neutralizado com sucesso."
+
+# 6. Revogação de Permissões Abusivas em Apps de Sistema e de Usuário
 echo ""
-echo "=== [5/6] Limpeza de Perfis Fantasmas secundários ==="
+echo "=== [5/8] Revogando Permissões Abusivas (Sistema e Usuário) ==="
+
+# Apps do Sistema
+echo "[+] Revogando permissões invasivas em apps de sistema..."
+adb shell pm revoke --user 0 com.motorola.camera5 android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_CONTACTS 2>/dev/null || true
+adb shell pm revoke --user 0 com.google.android.ext.services android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 com.google.android.euicc android.permission.CAMERA 2>/dev/null || true
+adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_FINE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_BACKGROUND_LOCATION 2>/dev/null || true
+
+# Apps de Usuário (Terceiros)
+echo "[+] Revogando permissões invasivas em apps de terceiros..."
+adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO 2>/dev/null || true
+adb shell pm revoke --user 0 com.taxis99 android.permission.READ_CONTACTS 2>/dev/null || true
+adb shell pm revoke --user 0 com.taxis99 android.permission.CAMERA 2>/dev/null || true
+adb shell pm revoke --user 0 com.minhaunifique.unifique android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 com.brave.browser android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
+adb shell pm revoke --user 0 br.com.ajfans android.permission.ACCESS_COARSE_LOCATION 2>/dev/null || true
+adb shell cmd appops set br.com.ajfans RUN_IN_BACKGROUND ignore 2>/dev/null || true
+adb shell cmd appops set br.com.ajfans WAKE_LOCK ignore 2>/dev/null || true
+adb shell pm revoke --user 0 br.org.app.barilife android.permission.ACCESS_LOCAL_NETWORK 2>/dev/null || true
+
+# 7. Lockdown de Bloatwares Protegidos (Non-Disable)
+echo ""
+echo "=== [6/8] Paralisando Bloatwares com Proteção 'non-disable' via AppOps & Netpolicy ==="
+NON_DISABLE_PKGS=(
+    "com.payjoy.access"
+    "com.amazon.appmanager"
+    "com.motorola.ccc.devicemanagement"
+    "com.motorola.paks.notification"
+    "com.motorola.installer"
+    "com.google.android.sdksandbox"
+    "com.motorola.ccc.ota"
+)
+
+for pkg in "${NON_DISABLE_PKGS[@]}"; do
+    UID=$(adb shell dumpsys package "$pkg" 2>/dev/null | grep -m 1 'appId=' | grep -oE '[0-9]+' || true)
+    if [ -n "$UID" ]; then
+        echo "Paralisando UID $UID ($pkg)..."
+        adb shell cmd appops set --uid "$UID" RUN_IN_BACKGROUND ignore 2>/dev/null || true
+        adb shell cmd appops set --uid "$UID" RUN_ANY_IN_BACKGROUND ignore 2>/dev/null || true
+        adb shell cmd appops set --uid "$UID" WAKE_LOCK ignore 2>/dev/null || true
+        adb shell cmd appops set --uid "$UID" START_FOREGROUND ignore 2>/dev/null || true
+        adb shell cmd appops set --uid "$UID" COARSE_LOCATION ignore 2>/dev/null || true
+        adb shell cmd appops set --uid "$UID" FINE_LOCATION ignore 2>/dev/null || true
+        adb shell cmd netpolicy add restrict-background-blacklist "$UID" 2>/dev/null || true
+    fi
+done
+
+# 8. Finalização de perfis fantasmas
+echo ""
+echo "=== [7/8] Limpeza de Perfis Fantasmas secundários ==="
 adb shell am stop-user -f 11 2>/dev/null || true
 adb shell pm remove-user 10 2>/dev/null || true
 echo "[+] Perfis secundários limpos."
 
-# 7. Otimizações de Áudio (Wavelet) e Teclado
+# 9. Otimizações de Áudio (Wavelet) e Teclado
 echo ""
-echo "=== [6/6] Ajustes Finais ==="
+echo "=== [8/8] Ajustes Finais ==="
 # Permissão especial para o Wavelet
 if adb shell pm list packages | grep -q "com.pittvandewitt.wavelet"; then
     echo "[+] Concedendo permissão DUMP ao Wavelet..."

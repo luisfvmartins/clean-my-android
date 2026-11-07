@@ -270,25 +270,71 @@ adb shell pm remove-user 10
 
 ---
 
-### Etapa 8: Auditoria de Permissões Abusivas e Neutralização de Bloatwares "Non-Disable"
+### Etapa 8: Auditoria de Permissões Abusivas (Sistema e Usuário) e Bloatwares "Non-Disable"
 
-#### 1. Revogar permissões que não fazem sentido em apps de terceiros:
+Mesmo após o debloat tradicional, diversos aplicativos que continuam no aparelho possuem permissões desproporcionais que violam a privacidade ou gastam bateria. Dividimos a limpeza cirúrgica em duas categorias:
+
+#### 1. Permissões Abusivas em Aplicativos de Sistema (Motorola, Google e AOSP):
+Módulos nativos do sistema que vêm de fábrica com acessos invasivos pré-concedidos:
+
 ```bash
-# Uber: revogar microfone permanente (evita escuta 24/7)
-adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO
-
-# 99 Táxi: revogar leitura da agenda telefônica inteira
-adb shell pm revoke --user 0 com.taxis99 android.permission.READ_CONTACTS
-
-# Câmera Motorola: revogar geolocalização (impede gravar GPS nas fotos EXIF)
+# Câmera Motorola (com.motorola.camera5) - Geotagging
+# Por que revogar: Evita gravar coordenadas de GPS (latitude/longitude) nos metadados EXIF das fotos.
 adb shell pm revoke --user 0 com.motorola.camera5 android.permission.ACCESS_COARSE_LOCATION
 
-# Minha Unifique e Brave: revogar localização de operadora e navegador
-adb shell pm revoke --user 0 com.minhaunifique.unifique android.permission.ACCESS_COARSE_LOCATION
-adb shell pm revoke --user 0 com.brave.browser android.permission.ACCESS_COARSE_LOCATION
+# Gerenciador Multi-SIM Motorola (com.motorola.msimsettings) - Acesso à Agenda
+# Por que revogar: O alternador de chips da Motorola não precisa ler sua agenda inteira de contatos.
+adb shell pm revoke --user 0 com.motorola.msimsettings android.permission.READ_CONTACTS
+
+# Google Ext Services (com.google.android.ext.services) - Localização
+# Por que revogar: Serviço de sistema do Google com rastreamento contínuo de localização em segundo plano.
+adb shell pm revoke --user 0 com.google.android.ext.services android.permission.ACCESS_COARSE_LOCATION
+
+# Gerenciador de Dispositivos Companion (com.android.companiondevicemanager) - Localização e Bluetooth
+# Por que revogar: Varre Bluetooth e mantém rastreamento de GPS em tempo real e em segundo plano.
+adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_FINE_LOCATION
+adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_COARSE_LOCATION
+adb shell pm revoke --user 0 com.android.companiondevicemanager android.permission.ACCESS_BACKGROUND_LOCATION
+adb shell pm disable-user --user 0 com.android.companiondevicemanager
+
+# eSIM Activation Google (com.google.android.euicc) - Câmera
+# Por que revogar: Usada apenas uma vez para ler o QR Code da operadora, mas mantinha acesso perpétuo.
+adb shell pm revoke --user 0 com.google.android.euicc android.permission.CAMERA
 ```
 
-#### 2. Paralisar Bloatwares Protegidos como "Non-Disable":
+#### 2. Permissões Abusivas em Aplicativos de Usuário (Terceiros):
+Aplicativos instalados pelo usuário que solicitam acessos que não fazem sentido para seu funcionamento básico:
+
+```bash
+# Uber (com.ubercab) - Microfone Permanente
+# Por que revogar: Impede que o app de transporte tenha acesso contínuo ao seu microfone 24/7.
+adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO
+
+# 99 Táxi (com.taxis99) - Agenda de Contatos e Câmera
+# Por que revogar: A 99 não precisa ler todos os seus contatos nem acessar a câmera para chamar um carro.
+adb shell pm revoke --user 0 com.taxis99 android.permission.READ_CONTACTS
+adb shell pm revoke --user 0 com.taxis99 android.permission.CAMERA
+
+# Minha Unifique (com.minhaunifique.unifique) - Localização
+# Por que revogar: Aplicativo de consulta de fatura/banda larga não precisa das suas coordenadas GPS.
+adb shell pm revoke --user 0 com.minhaunifique.unifique android.permission.ACCESS_COARSE_LOCATION
+
+# Navegador Brave (com.brave.browser) - Localização do SO
+# Por que revogar: Evita vazamento global de GPS; o navegador deve solicitar apenas nos sites necessários.
+adb shell pm revoke --user 0 com.brave.browser android.permission.ACCESS_COARSE_LOCATION
+
+# AJ Fans (br.com.ajfans) - Localização e Wake Locks
+# Por que revogar: Contém o SDK Salesforce Marketing Cloud, que acordava a CPU para enviar telemetria.
+adb shell pm revoke --user 0 br.com.ajfans android.permission.ACCESS_COARSE_LOCATION
+adb shell cmd appops set br.com.ajfans RUN_IN_BACKGROUND ignore
+adb shell cmd appops set br.com.ajfans WAKE_LOCK ignore
+
+# BariLife (br.org.app.barilife) - Varredura de Rede Wi-Fi Local (Android 15)
+# Por que revogar: Impede o app de escanear outros computadores e TVs na mesma rede doméstica.
+adb shell pm revoke --user 0 br.org.app.barilife android.permission.ACCESS_LOCAL_NETWORK
+```
+
+#### 3. Paralisar Bloatwares Protegidos como "Non-Disable":
 Fabricantes e operadoras protegem certos rastreadores contra o comando `pm disable` (`Failure: package is non-disable`). Paralisamos esses apps impedindo que executem em segundo plano, acordem a CPU ou acessem a rede:
 
 ```bash
@@ -298,6 +344,8 @@ NON_DISABLE_PKGS=(
     "com.motorola.ccc.devicemanagement"  # Telemetria 3C com GPS
     "com.motorola.paks.notification"     # Notificações de operadora/crédito
     "com.motorola.installer"             # Instalador silencioso em segundo plano
+    "com.google.android.sdksandbox"      # Privacy Sandbox Google AdServices
+    "com.motorola.ccc.ota"               # Daemon de atualizações OTA da Motorola
 )
 
 for pkg in "${NON_DISABLE_PKGS[@]}"; do
