@@ -115,3 +115,14 @@ A abertura do PR não representa aprovação automática. Após a revisão e o m
 - [Catálogo de dispositivos](reports/README.md)
 - [Instruções para assistentes de IA](AI_INSTRUCTIONS.md)
 - [Repositório no GitHub](https://github.com/luisfvmartins/clean-my-android)
+
+## 7. Validação automática
+
+Pull Requests direcionados à `main` executam o workflow **Validação do repositório**. Ele verifica:
+
+- sintaxe de todos os arquivos JSON versionados;
+- estrutura básica dos arquivos `comparativo.json` (quando possuem o campo `metrics`);
+- sintaxe Bash dos scripts em `scripts/*.sh`, sem executá-los;
+- formato e duplicidade dos pacotes em `data/protected_essential_packages.txt`.
+
+A validação é somente estática: não conecta via ADB, não instala dependências no aparelho e não altera dispositivos. Um resultado aprovado não substitui revisão técnica, checagem de privacidade nem testes funcionais. Corrija as falhas indicadas no log do GitHub Actions e atualize o mesmo Pull Request.
