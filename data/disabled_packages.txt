@@ -1,3 +1,6 @@
+# LISTA HISTÓRICA DE CANDIDATOS — NÃO EXECUTAR EM LOTE.
+# Não é uma lista validada para todos os aparelhos. Os scripts atuais não consomem este arquivo.
+# Audite modelo, versão, dependências e funções antes de qualquer alteração.
 android.autoinstalls.config.motorola.layout
 com.android.appsearch.aiseal.config
 com.android.avatarpicker

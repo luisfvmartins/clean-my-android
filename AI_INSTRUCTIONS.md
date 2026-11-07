@@ -196,3 +196,15 @@ Se uma etapa não puder ser realizada, identifique-a como pendente, não executa
 ---
 
 **Comece verificando a conexão ADB e identificando o dispositivo. Não faça nenhuma modificação até concluir o diagnóstico inicial, apresentar o plano e receber autorização explícita.**
+
+
+### 13. Regras adicionais para o Motorola Moto G54 5G
+
+- O relatório `docs/AUDITORIA_MOTO_G54_5G.md` descreve uma coleta de leitura e um histórico anterior do aparelho. Não interprete o histórico como autorização para repetir comandos.
+- `data/moto_g54_disabled_packages.txt` é um retrato dos pacotes encontrados desativados, não uma lista aprovada para execução. `data/persistent_uninstall_packages.txt` registra observações históricas e nunca deve ser executado automaticamente.
+- A flag `FLAG_PERSISTENT` não demonstra, sozinha, telemetria, abuso ou segurança para desinstalação. Não remova `com.motorola.bach.modemstats`, `com.bluetooth.aptxmode` ou qualquer daemon persistente sem documentação específica do fabricante, dependências verificadas e autorização individual.
+- Não execute `pm clear`, `pm uninstall`, `pm remove-user`, `am stop-user`, `pm trim-caches` ou AppOps por UID em lote. `pm clear` apaga dados; remoção de perfil pode apagar dados; UID compartilhado pode afetar vários pacotes.
+- O script `scripts/debloat.sh` opera em modo somente leitura por padrão. A opção `--apply` aceita apenas um pacote por execução, exige confirmação digitada e bloqueia os componentes listados em `data/protected_essential_packages.txt`. Ele não substitui a auditoria de dependências nem a autorização explícita.
+- O script `scripts/restore.sh` reativa um pacote por vez, com confirmação. Não existe restauração em massa.
+- Antes de publicar, omita aplicativos instalados pelo usuário, IPs/portas locais e remotos, SSIDs, endereços MAC, IMEI, número de série, Android ID, UIDs/PIDs desnecessários, logs brutos, nomes de contas e quaisquer dados que revelem a rede ou a rotina do proprietário.
+- Não afirme que um pacote envia telemetria apenas por ter permissão `INTERNET`, SDK analítico ou flag persistente. Separe evidência de manifesto, conexão observada, tráfego inspecionado e inferência.
