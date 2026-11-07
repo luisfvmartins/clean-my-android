@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validação](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Começar](#começar) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Contribuir](CONTRIBUTING.md) · [Segurança](#segurança-em-primeiro-lugar)
+[Começar](#começar) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Contribuir](CONTRIBUTING.md) · [Segurança](#segurança-em-primeiro-lugar)
 
 </div>
 
