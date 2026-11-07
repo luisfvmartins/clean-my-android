@@ -8,7 +8,7 @@ Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporad
 
 | Fabricante / modelo | Identificação | Android / interface | Situação e escopo | Relatório |
 |---|---|---|---|---|
-| **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Inventário técnico publicado; consulte o relatório para distinguir observações, histórico e pendências | [Auditoria completa](../docs/AUDITORIA_MOTO_G54_5G.md) |
+| **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Inventário técnico publicado; relatório principal + sete arquivos de inventário por lote | [Resumo e índice](../docs/AUDITORIA_MOTO_G54_5G.md) · [Inventário por lote](../docs/auditorias/moto-g54/README.md) |
 | **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Hello UI · versão canônica pendente de confirmação | Relatório publicado; validação funcional e coleta complementar pendentes | [Abrir relatório](motorola-edge-60-pro/README.md) |
 
 ### Como interpretar os status
