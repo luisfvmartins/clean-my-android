@@ -70,7 +70,8 @@ def build_markdown(devices: list[dict]) -> str:
     for d in devices:
         version = d.get("android_version")
         android = f"Android {version}" if version else f"Não confirmado ({d['android_version_status']})"
-        report = f"[{d['audit_status']}]({d['report']})"
+        report_path = Path(__import__('os').path.relpath(ROOT / d['report'], OUTPUT.parent)).as_posix()
+        report = f"[{d['audit_status']}]({report_path})"
         count = f"{d['component_count']} — {d['component_count_label']}"
         lines.append(f"| {d['manufacturer']} {d['model']} | {d['model_code']} | {android} | {report} | {count} |")
     lines.extend([
