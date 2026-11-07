@@ -52,7 +52,7 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 ## 🗂️ Estrutura de Arquivos deste Relatório
 
 ```text
-reports/motorola-edge-60-pro/
+reports/motorola/edge-60-pro/
 ├── README.md                  # Este documento (visão geral e sumário executivo)
 ├── auditoria.md               # Relatório técnico completo, reproduzível e auditado
 ├── inventario-antes.json      # Inventário completo dos 501 componentes pré-debloat
