@@ -1,0 +1,1 @@
+# Nenhuma permissão em nível de AppOps/manifesto foi alterada individualmente além da desativação dos pacotes listados.

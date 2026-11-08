@@ -1,0 +1,1 @@
+# Nenhum AppOps individual alterado diretamente por UID (evitando efeitos colaterais em pacotes compartilhados).
