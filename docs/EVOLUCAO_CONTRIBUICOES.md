@@ -2,12 +2,12 @@
 
 Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requests fechadas com campo merged_at preenchido; PRs rejeitadas ou fechadas sem merge não entram.
 
-**Atualizado em:** 2026-11-07 (UTC)  
+**Atualizado em:** 2026-11-08 (UTC)  
 **Repositório:** [luisfvmartins/clean-my-android](https://github.com/luisfvmartins/clean-my-android)
 
 ## Indicadores
 
-- **Pull Requests incorporadas:** 7
+- **Pull Requests incorporadas:** 24
 - **Autores distintos com PR incorporada:** 1
 - **Dispositivos catalogados:** 2
 - **Fabricantes representados:** 1
@@ -16,7 +16,7 @@ Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requ
 
 | Ano de incorporação | Pull Requests |
 |---:|---:|
-| 2026 | 7 |
+| 2026 | 24 |
 
 ## Escopo e limitações
 
