@@ -136,7 +136,7 @@ Resultados sem evidência devem ser identificados como **não mensurados**, **n�
 
 ## Validação automatizada
 
-Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash e lista de componentes protegidos. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
+Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash, lista de componentes protegidos e consistência das estatísticas geradas. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
 
 Consulte o [workflow de validação](.github/workflows/validate.yml) e o [validador](scripts/validate_repository.py).
 
