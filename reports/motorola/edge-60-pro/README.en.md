@@ -58,3 +58,8 @@ The report includes historical operational details. Those details are **not an e
 - Consult the source report and evidence documentation before drawing technical conclusions.
 
 **A published report is not script homologation.** No procedure should be applied to another model or firmware based on this report.
+
+
+## English historical summary
+
+- [Historical report — English summary](historical-summary.en.md)
