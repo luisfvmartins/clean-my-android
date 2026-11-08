@@ -46,7 +46,7 @@ Confirme:
 
 Antes de qualquer alteração no aparelho, siga o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.pt-BR.md) e as [instruções para IA](AI_INSTRUCTIONS.pt-BR.md).
 
-Uma contribuição de dispositivo deve:
+Antes de redigir o relatório, utilize o [modelo de relatório de auditoria](reports/_templates/DEVICE_AUDIT_TEMPLATE.pt-BR.md) e atribua o status conforme os [níveis de auditoria e homologação](docs/AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md). Uma contribuição de dispositivo deve:
 - identificar exatamente fabricante, modelo, codinome, Android/ROM e compilação quando disponíveis;
 - registrar o estado inicial antes de alterar qualquer coisa;
 - separar evidência observada, inferência técnica e hipótese;
