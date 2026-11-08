@@ -6017,5 +6017,10 @@
       "function_description": "Componente de suporte do sistema operacional Android",
       "relevant_permissions_count": 20
     }
-  ]
+  ],
+  "privacy_redaction": {
+    "third_party_package_names": "redacted",
+    "third_party_components": 50,
+    "installation_specific_data_app_paths": "normalized"
+  }
 }
