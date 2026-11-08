@@ -7,7 +7,7 @@ Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requ
 
 ## Indicadores
 
-- **Pull Requests incorporadas:** 30
+- **Pull Requests incorporadas:** 31
 - **Autores distintos com PR incorporada:** 1
 - **Dispositivos catalogados:** 2
 - **Fabricantes representados:** 1
@@ -16,7 +16,7 @@ Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requ
 
 | Ano de incorporação | Pull Requests |
 |---:|---:|
-| 2026 | 30 |
+| 2026 | 31 |
 
 ## Escopo e limitações
 
