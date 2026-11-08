@@ -32,3 +32,8 @@ Confirmed: traffic/data directly observed and validly attributed, method describ
 6. Before/after report after authorized execution, distinguishing proposed from performed actions.
 
 If context/technical limits prevent complete coverage, state the limit, enumerate pending packages, and continue in batches. Never claim full coverage without reconciliation. Initial audit is read-only; wait for explicit authorization before any action. Approval for one package/group does not authorize others.
+
+## Manufacturer scope and cross-OEM contamination prevention
+
+The audit prompt and matrix are generic. Identify manufacturer/model/variant/Android/ROM/build from evidence before any OEM research. This device's ADB inventory is the primary source. Consult OEM-specific packages and documentation only for the identified manufacturer; Samsung references must not guide Motorola audits, nor Motorola guide Samsung, and so on. Never treat a reference package as installed or removable without confirming it in the inventory. Keep OEM lists in separate references labeled by model/build. Unknown packages remain pending/inconclusive. AOSP components must also be validated on the actual build.
+
