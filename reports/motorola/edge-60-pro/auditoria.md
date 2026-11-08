@@ -152,7 +152,7 @@ A desativação em nível de usuário foi aplicada a **244 pacotes**, colocando-
 
 #### C. De-Google (Substituição por Ferramentas FOSS):
 - `com.google.android.googlequicksearchbox` (Google App / Busca): Eliminou 873 MB de consumo contínuo em RAM.
-- `com.android.chrome`: Substituído pelo navegador Brave (`third_party_package_14`).
+- `com.android.chrome`: Substituído pelo navegador third-party browser (`third_party_package_14`).
 - `com.google.android.youtube` e `com.google.android.apps.youtube.music`: Desativados a pedido do usuário.
 - `com.google.android.dialer` e `com.google.android.apps.messaging`: Substituídos pela suite Fossify (`org.fossify.phone` e `org.fossify.messages`).
 - `com.google.android.contacts` e `com.google.android.calendar`: Desativados em favor de alternativas.
@@ -180,7 +180,7 @@ A desinstalação para o Usuário 0 totalizou **9 pacotes**, divididos em duas n
    - `third_party_package_09` (App pré-carregado dispensável).
    - `com.handmark.expressweather` (App de clima com publicidade).
    - `com.motorola.genie` (Módulo de telemetria e sugestões da Motorola).
-   - `third_party_package_20` (Gerenciador de assinaturas do YouTube Music).
+   - `third_party_package_20` (Gerenciador de assinaturas do third-party subscription service).
    *No caso de pacotes de sistema, o comando `pm uninstall -k --user 0` remove os dados do usuário e altera o estado do pacote para `installed=false` no perfil 0. O arquivo APK de fábrica permanece na partição somente-leitura do sistema (`/system` ou `/product`), não ocorrendo exclusão física da imagem de fábrica.*
 
 ### 4.3. Reversão de Atualizações em `/data/app` e Mensuração de Armazenamento
