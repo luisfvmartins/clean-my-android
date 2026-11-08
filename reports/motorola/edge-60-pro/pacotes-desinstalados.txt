@@ -10,20 +10,20 @@
 # 1. Aplicativos de terceiros desinstalados completamente (2 pacotes)
 # ==============================================================================
 # APKs e dados de usuário removidos integralmente do dispositivo:
-ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp # Toques para Celular Grátis - Adware instalado em background via DT Ignite / AMX.
-all.documentreader.filereader.office.viewer # Leitor de Documentos - Adware instalado via DT Ignite / AMX.
+third_party_package_49 # Componente de terceiros removido; identificação específica omitida por privacidade.
+third_party_package_01 # Componente de terceiros removido; identificação específica omitida por privacidade.
 
 # ==============================================================================
 # 2. Pacotes de sistema desinstalados para o Usuário 0 (7 pacotes — installed=false)
 # ==============================================================================
 # Pacotes pré-carregados cuja instalação foi removida para o perfil de usuário 0:
-wool.match.color.sort.jam.puzzle # Jogo patrocinado pré-carregado pela operadora.
-com.oakever.tiletrip # Jogo de puzzle pré-carregado via DT Ignite.
-com.puzzlegames.puzzlebrickslegend # Jogo patrocinado pré-carregado com serviços de anúncios.
-com.airbnb.android # Aplicativo pré-instalado de terceiros dispensável.
+third_party_package_50 # Componente de terceiros pré-carregado; identificação específica omitida por privacidade.
+third_party_package_32 # Componente de terceiros pré-carregado; identificação específica omitida por privacidade.
+third_party_package_36 # Componente de terceiros pré-carregado; identificação específica omitida por privacidade.
+third_party_package_09 # Aplicativo de terceiros pré-instalado; identificação específica omitida por privacidade.
 com.handmark.expressweather # Aplicativo redundante de clima com publicidade integrada.
 com.motorola.genie # Módulo de telemetria de sugestões e feedback da Motorola.
-com.google.android.apps.subscriptions.red # Serviço de gerenciamento de assinaturas do YouTube Music.
+third_party_package_20 # Componente de terceiros; identificação específica omitida por privacidade.
 
 # Total de pacotes desinstalados para o Usuário 0: 9 pacotes (2 de terceiros + 7 de sistema)
 

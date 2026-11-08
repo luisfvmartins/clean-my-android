@@ -6,10 +6,10 @@
   "total_packages": 501,
   "packages": [
     {
-      "package_name": "all.documentreader.filereader.office.viewer",
+      "package_name": "third_party_package_01",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~sJ7Cy3Wm4niCHixP_Y8bxg==/all.documentreader.filereader.office.viewer-RktA7U_UZwdZRJ7gPEh8wA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -38,7 +38,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -50,7 +50,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -62,14 +62,14 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
       "package_name": "android.autoinstalls.config.motorola.layout",
       "vendor": "AOSP",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~5KtS7TWXSt7w3sSKYXEZmQ==/android.autoinstalls.config.motorola.layout-0nDgewHSOfzrEoR5DltW0w==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10302,
       "version_name": "1",
       "version_code": "1",
@@ -78,10 +78,10 @@
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "br.com.ajfans",
+      "package_name": "third_party_package_02",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~bPxTPyHMy5K7OsnQWCiNaw==/br.com.ajfans-MoDdmSHz7CmcemAYB_87Pw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10452,
       "version_name": "2.21.0",
       "version_code": "253",
@@ -90,10 +90,10 @@
       "relevant_permissions_count": 22
     },
     {
-      "package_name": "br.gov.caixa.fgts.trabalhador",
+      "package_name": "third_party_package_03",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~DGq1WiwM_kzPVcCsWAb_Lw==/br.gov.caixa.fgts.trabalhador-nAoM8zFWV9P6uWbp7g9bZg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10447,
       "version_name": "5.11.0",
       "version_code": "1920322538",
@@ -102,10 +102,10 @@
       "relevant_permissions_count": 35
     },
     {
-      "package_name": "br.gov.dataprev.carteiradigital",
+      "package_name": "third_party_package_04",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~ZwFlkzEwvxIUzoIyhlUM0Q==/br.gov.dataprev.carteiradigital-XNFH4NBui4pABxQDAJiyfA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10428,
       "version_name": "8.11.0",
       "version_code": "1580",
@@ -114,10 +114,10 @@
       "relevant_permissions_count": 28
     },
     {
-      "package_name": "br.gov.meugovbr",
+      "package_name": "third_party_package_05",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~_bA9lM2kPRRTJ8vgB_g5-A==/br.gov.meugovbr-l7VhUVD8W_lyTFm9G01xew==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10435,
       "version_name": "3.9.0",
       "version_code": "235",
@@ -126,10 +126,10 @@
       "relevant_permissions_count": 23
     },
     {
-      "package_name": "br.gov.serpro.cnhe",
+      "package_name": "third_party_package_06",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~egiEXLQdmBdP6zTEZ2FM0A==/br.gov.serpro.cnhe-tIZa6t98qxLHH9gomc0oww==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10446,
       "version_name": "7.4.2",
       "version_code": "4225334",
@@ -138,10 +138,10 @@
       "relevant_permissions_count": 18
     },
     {
-      "package_name": "br.jus.tse.eleitoral.etitulo",
+      "package_name": "third_party_package_07",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~_VxmGdq6_tF93IjShmL2EQ==/br.jus.tse.eleitoral.etitulo-AkrbjB2moh6s8MSE9215bw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10431,
       "version_name": "2026.10.27",
       "version_code": "746817101",
@@ -150,10 +150,10 @@
       "relevant_permissions_count": 27
     },
     {
-      "package_name": "br.org.app.barilife",
+      "package_name": "third_party_package_08",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~pkj657eFAMWTfTRvdNA8Xg==/br.org.app.barilife-C_SbWMpQHely_wluz6YgnQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10427,
       "version_name": "9.2",
       "version_code": "90200",
@@ -162,10 +162,10 @@
       "relevant_permissions_count": 19
     },
     {
-      "package_name": "com.airbnb.android",
+      "package_name": "third_party_package_09",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~1Yz-DiSRRJGRU1IXj0Brhg==/com.airbnb.android-G1-w_UlPLLGhiW9KREjKiA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10470,
       "version_name": "26.44",
       "version_code": "28026924",
@@ -254,7 +254,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de comunica\u00e7\u00e3o Bluetooth",
+      "function_description": "Pilha de comunicação Bluetooth",
       "relevant_permissions_count": 0
     },
     {
@@ -266,7 +266,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de comunica\u00e7\u00e3o Bluetooth",
+      "function_description": "Pilha de comunicação Bluetooth",
       "relevant_permissions_count": 8
     },
     {
@@ -302,7 +302,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Aplicativo oficial de C\u00e2mera Motorola",
+      "function_description": "Aplicativo oficial de Câmera Motorola",
       "relevant_permissions_count": 0
     },
     {
@@ -314,7 +314,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 13
     },
     {
@@ -326,7 +326,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -350,7 +350,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -369,7 +369,7 @@
       "package_name": "com.android.chrome",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~gsNN99TbYnY_eYfwTs0-fw==/com.android.chrome-sjMga-YwRgimOx72zVT03Q==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10288,
       "version_name": "150.0.7871.186",
       "version_code": "787118633",
@@ -398,7 +398,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -506,7 +506,7 @@
       "version_name": "23.0",
       "version_code": "2900000",
       "original_state": "desabilitado",
-      "function_description": "Discador e gerenciador de chamadas telef\u00f4nicas",
+      "function_description": "Discador e gerenciador de chamadas telefônicas",
       "relevant_permissions_count": 73
     },
     {
@@ -518,7 +518,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -638,7 +638,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 10
     },
     {
@@ -674,7 +674,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -686,7 +686,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -698,7 +698,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -710,7 +710,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -722,7 +722,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -734,7 +734,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -746,7 +746,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -758,7 +758,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -770,7 +770,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -782,7 +782,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -878,7 +878,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -890,7 +890,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -902,7 +902,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -914,7 +914,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -926,7 +926,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Controlador de comunica\u00e7\u00e3o por aproxima\u00e7\u00e3o (NFC)",
+      "function_description": "Controlador de comunicação por aproximação (NFC)",
       "relevant_permissions_count": 0
     },
     {
@@ -938,7 +938,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -974,7 +974,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Discador e gerenciador de chamadas telef\u00f4nicas",
+      "function_description": "Discador e gerenciador de chamadas telefônicas",
       "relevant_permissions_count": 0
     },
     {
@@ -986,7 +986,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -998,7 +998,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1010,7 +1010,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1022,7 +1022,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1034,7 +1034,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1154,7 +1154,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 0
     },
     {
@@ -1166,7 +1166,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1178,7 +1178,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 0
     },
     {
@@ -1190,7 +1190,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1202,7 +1202,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1238,7 +1238,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1274,7 +1274,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 0
     },
     {
@@ -1286,7 +1286,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 12
     },
     {
@@ -1370,7 +1370,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Interface de usu\u00e1rio do sistema (barra de status, notifica\u00e7\u00f5es, navega\u00e7\u00e3o)",
+      "function_description": "Interface de usuário do sistema (barra de status, notificações, navegação)",
       "relevant_permissions_count": 0
     },
     {
@@ -1382,7 +1382,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Interface de usu\u00e1rio do sistema (barra de status, notifica\u00e7\u00f5es, navega\u00e7\u00e3o)",
+      "function_description": "Interface de usuário do sistema (barra de status, notificações, navegação)",
       "relevant_permissions_count": 3
     },
     {
@@ -1394,7 +1394,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1406,7 +1406,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1418,7 +1418,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1430,7 +1430,7 @@
       "version_name": "1.0.0.0",
       "version_code": "10000000",
       "original_state": "habilitado",
-      "function_description": "Detec\u00e7\u00e3o de gestos Moto Actions (agitar para lanterna, girar para c\u00e2mera)",
+      "function_description": "Detecção de gestos Moto Actions (agitar para lanterna, girar para câmera)",
       "relevant_permissions_count": 2
     },
     {
@@ -1442,7 +1442,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1454,7 +1454,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1466,7 +1466,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1478,7 +1478,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1490,7 +1490,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1502,7 +1502,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1514,7 +1514,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1526,7 +1526,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1538,7 +1538,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1550,7 +1550,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1569,7 +1569,7 @@
       "package_name": "com.android.vending",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~NoSa2mD2g5I8AsqqTTlR5w==/com.android.vending-2nS0k5qkwGo8JlWyfcnKWg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10263,
       "version_name": "52.2.25-31 [0] [PR] 945188457",
       "version_code": "85222530",
@@ -1670,7 +1670,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1682,7 +1682,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1694,7 +1694,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -1706,14 +1706,14 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "com.apple.atve.androidtv.appletv",
+      "package_name": "third_party_package_10",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~n6XNcf8YnAs6ERn9__4LEA==/com.apple.atve.androidtv.appletv-hD03dKwCvmvG57J6Fk6Esw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10449,
       "version_name": "3.0.0",
       "version_code": "3000070",
@@ -1722,10 +1722,10 @@
       "relevant_permissions_count": 29
     },
     {
-      "package_name": "com.arslan.shizuwall",
+      "package_name": "third_party_package_11",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~3n5uaNqYQRZPBVxww4nx9Q==/com.arslan.shizuwall-FUIhQ_mALvaXGae7DgklNQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10476,
       "version_name": "4.7",
       "version_code": "54",
@@ -1742,26 +1742,26 @@
       "version_name": "1.0.18.0",
       "version_code": "1001800",
       "original_state": "habilitado",
-      "function_description": "Instalador autom\u00e1tico e silencioso de aplicativos patrocinados (Adware OOBE)",
+      "function_description": "Instalador automático e silencioso de aplicativos patrocinados (Adware OOBE)",
       "relevant_permissions_count": 17
     },
     {
       "package_name": "com.aura.oobe.vodafone",
       "vendor": "Operadora",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Xa_RYAFAIv1_n2HjAJN6aw==/com.aura.oobe.vodafone-qwLgyX1hrZDXg43QMsWZdg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10275,
       "version_name": "20.13.0.0.48",
       "version_code": "200130048",
       "original_state": "desabilitado",
-      "function_description": "Instalador autom\u00e1tico e silencioso de aplicativos patrocinados (Adware OOBE)",
+      "function_description": "Instalador automático e silencioso de aplicativos patrocinados (Adware OOBE)",
       "relevant_permissions_count": 17
     },
     {
-      "package_name": "com.beemdevelopment.aegis",
+      "package_name": "third_party_package_12",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~3lPPSgR2OqFu4OkF4hyvEw==/com.beemdevelopment.aegis-BSDxwt95-APMC4nZLpEcgA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10466,
       "version_name": "3.4.3",
       "version_code": "82",
@@ -1778,14 +1778,14 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de comunica\u00e7\u00e3o Bluetooth",
+      "function_description": "Pilha de comunicação Bluetooth",
       "relevant_permissions_count": 19
     },
     {
-      "package_name": "com.booking",
+      "package_name": "third_party_package_13",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~djC9wwFWI-eZUHLB4svqgg==/com.booking-Ce32e7_4535v4gRtCTNtHA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -1794,10 +1794,10 @@
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "com.brave.browser",
+      "package_name": "third_party_package_14",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~8Y9Dh9hxRJOHRtwHwXPUTw==/com.brave.browser-6l6pT0KXUg0OtpQ7api6rg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10430,
       "version_name": "1.98.63",
       "version_code": "429806304",
@@ -1818,10 +1818,10 @@
       "relevant_permissions_count": 24
     },
     {
-      "package_name": "com.disney.disneyplus",
+      "package_name": "third_party_package_15",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~ayy8Tf3lMOwN4B3ckBdQyQ==/com.disney.disneyplus-gVbdYJloJMVoMb1yWW5UGg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10437,
       "version_name": "26.20.0+rc3-2026.11.02",
       "version_code": "179366219",
@@ -1842,10 +1842,10 @@
       "relevant_permissions_count": 16
     },
     {
-      "package_name": "com.doubleangels.nextdnsmanagement",
+      "package_name": "third_party_package_16",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~ZNDmaVT2o6d70h0ounONHw==/com.doubleangels.nextdnsmanagement-cIXD8xNmC2oyf3PmSb1qoA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10471,
       "version_name": "5.5.25",
       "version_code": "274",
@@ -1857,24 +1857,24 @@
       "package_name": "com.dti.amx",
       "vendor": "Operadora",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Lo9qkUOQ85J0tHuLpeXDwg==/com.dti.amx-TIoteb0Ean2TtxRwFzy2gw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10213,
       "version_name": "23.2.37-1491",
       "version_code": "230020370",
       "original_state": "desabilitado",
-      "function_description": "Instalador autom\u00e1tico e silencioso de aplicativos patrocinados (Adware OOBE)",
+      "function_description": "Instalador automático e silencioso de aplicativos patrocinados (Adware OOBE)",
       "relevant_permissions_count": 27
     },
     {
       "package_name": "com.dti.motorola",
       "vendor": "Adware / Parceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~8ozmx-hAP5bn7Ssfx35DNg==/com.dti.motorola--WIliDUvOW5NxLaXL6EVhQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10257,
       "version_name": "23.2.32-1487",
       "version_code": "230020320",
       "original_state": "habilitado",
-      "function_description": "Instalador autom\u00e1tico e silencioso de aplicativos patrocinados (Adware OOBE)",
+      "function_description": "Instalador automático e silencioso de aplicativos patrocinados (Adware OOBE)",
       "relevant_permissions_count": 28
     },
     {
@@ -1898,7 +1898,7 @@
       "version_name": "132.0.26",
       "version_code": "931008075",
       "original_state": "habilitado",
-      "function_description": "Servi\u00e7o de telemetria, an\u00e1lise e auto-atualiza\u00e7\u00e3o do ecossistema Meta",
+      "function_description": "Serviço de telemetria, análise e auto-atualização do ecossistema Meta",
       "relevant_permissions_count": 61
     },
     {
@@ -1910,7 +1910,7 @@
       "version_name": "163.0.36",
       "version_code": "951085227",
       "original_state": "habilitado",
-      "function_description": "Servi\u00e7o de telemetria, an\u00e1lise e auto-atualiza\u00e7\u00e3o do ecossistema Meta",
+      "function_description": "Serviço de telemetria, análise e auto-atualização do ecossistema Meta",
       "relevant_permissions_count": 30
     },
     {
@@ -1922,14 +1922,14 @@
       "version_name": "132.0.26",
       "version_code": "931008141",
       "original_state": "habilitado",
-      "function_description": "Servi\u00e7o de telemetria, an\u00e1lise e auto-atualiza\u00e7\u00e3o do ecossistema Meta",
+      "function_description": "Serviço de telemetria, análise e auto-atualização do ecossistema Meta",
       "relevant_permissions_count": 6
     },
     {
-      "package_name": "com.github.android",
+      "package_name": "third_party_package_17",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~nDHc4mWkL0KVzB0wUey-Lg==/com.github.android-f2ePO5ikiUH8CjFtyhwD9A==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10445,
       "version_name": "1.283.0",
       "version_code": "954",
@@ -1946,14 +1946,14 @@
       "version_name": "11.15.1-motorola",
       "version_code": "20260825",
       "original_state": "habilitado",
-      "function_description": "Feed de not\u00edcias patrocinadas e an\u00fancios din\u00e2micos na tela de bloqueio",
+      "function_description": "Feed de notícias patrocinadas e anúncios dinâmicos na tela de bloqueio",
       "relevant_permissions_count": 47
     },
     {
       "package_name": "com.google.ambient.streaming",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~1uSTWwhkuIOcm3zHi6rHHw==/com.google.ambient.streaming-_FMmupQW29G8x93c5XyNEg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10216,
       "version_name": "1.1.2",
       "version_code": "1000002",
@@ -1989,7 +1989,7 @@
       "package_name": "com.google.android.aicore",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~KbqRKeG3FpDA4xTFrufJvQ==/com.google.android.aicore-7sl8v0vmILuns9YEZsi8nA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10197,
       "version_name": "0.stub.oem.stub_aicore_20260302.01_RC00.877448964",
       "version_code": "395591",
@@ -1998,10 +1998,10 @@
       "relevant_permissions_count": 13
     },
     {
-      "package_name": "com.google.android.apps.adm",
+      "package_name": "third_party_package_18",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~xEmgeZI5zxqsQaPFzJ5StA==/com.google.android.apps.adm-8yBGFv9WdFworPwXRWy8SA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -2013,7 +2013,7 @@
       "package_name": "com.google.android.apps.bard",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~i4Hty8Euis0aieVMIpwRYg==/com.google.android.apps.bard-McNuapsfey_Z9kbJ0_KVVQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10292,
       "version_name": "1.0.946899233",
       "version_code": "317",
@@ -2025,19 +2025,19 @@
       "package_name": "com.google.android.apps.carrier.carrierwifi",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~COswcmQ1gTg00xx4uTzQ5A==/com.google.android.apps.carrier.carrierwifi-FTkMefoCSoylwBS3flNnLg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10225,
       "version_name": "1.7.0.929007131",
       "version_code": "188",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 21
     },
     {
       "package_name": "com.google.android.apps.docs",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~B-yPa4YBDbBUw_jtrTwadA==/com.google.android.apps.docs-ZZk4e3sAG0hLMUfR5dE3_Q==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10290,
       "version_name": "2.26.307.6.all.alldpi",
       "version_code": "214582289",
@@ -2046,10 +2046,10 @@
       "relevant_permissions_count": 34
     },
     {
-      "package_name": "com.google.android.apps.kids.familylink",
+      "package_name": "third_party_package_19",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~lL5PHOPGk6-MlKk7BqjOkg==/com.google.android.apps.kids.familylink-ynatc507fapWcsN8bHGngQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -2061,7 +2061,7 @@
       "package_name": "com.google.android.apps.maps",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~aT3WAC__TAzJCnEQmCWIkg==/com.google.android.apps.maps-Qo4G7F5geQFtObQYcBG0bw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10299,
       "version_name": "26.31.02.954292984",
       "version_code": "1068706869",
@@ -2073,7 +2073,7 @@
       "package_name": "com.google.android.apps.messaging",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~j9e_NzTvgDBBXnMJHG8XIA==/com.google.android.apps.messaging-mj6fZQ0awe8Bnx4GzW_N2Q==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10238,
       "version_name": "messages.android_20260720_05_RC00.phone_dynamic",
       "version_code": "317865063",
@@ -2085,7 +2085,7 @@
       "package_name": "com.google.android.apps.nbu.files",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~IWqUczv42PxwcdBiYyZ5CQ==/com.google.android.apps.nbu.files-IWtrW_NFuwLIkvcAuqBbAQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10224,
       "version_name": "1.12100.956597080.2-release",
       "version_code": "1943511",
@@ -2097,7 +2097,7 @@
       "package_name": "com.google.android.apps.photos",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~MtdUc3Z4OOBEbIiJajkBcg==/com.google.android.apps.photos-TdF1boRBQO0HbmfU1zdwvg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10301,
       "version_name": "7.86.0.956040398",
       "version_code": "52137100",
@@ -2109,7 +2109,7 @@
       "package_name": "com.google.android.apps.restore",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~K4kVwCU7bSZE2rYVMgo8OQ==/com.google.android.apps.restore-3qS7WV6Xtk1u_xZrWGzGtQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10232,
       "version_name": "1.0.971245708",
       "version_code": "1131228",
@@ -2121,7 +2121,7 @@
       "package_name": "com.google.android.apps.safetyhub",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~_njXRWQpmEUVW3ZZcWjfCw==/com.google.android.apps.safetyhub-M_rfYYz3VTu5TWa1wNXO8A==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10262,
       "version_name": "2026.06.25.937868381.0-release_gms",
       "version_code": "100860725",
@@ -2130,10 +2130,10 @@
       "relevant_permissions_count": 42
     },
     {
-      "package_name": "com.google.android.apps.subscriptions.red",
+      "package_name": "third_party_package_20",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~pP4MLl0gv1-liMptw1AKug==/com.google.android.apps.subscriptions.red-7adL4ie3VcDaQqFkGa4-Zw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10419,
       "version_name": null,
       "version_code": "677878",
@@ -2145,7 +2145,7 @@
       "package_name": "com.google.android.apps.tachyon",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~pSN1n4Nsu5AaNWw8oIE0VQ==/com.google.android.apps.tachyon-rLPtrE27jM1Hu5aUd56mqA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10300,
       "version_name": "370.0.954867028.duo.android_20260727.00_p2",
       "version_code": "7458849",
@@ -2166,15 +2166,15 @@
       "relevant_permissions_count": 31
     },
     {
-      "package_name": "com.google.android.apps.walletnfcrel",
+      "package_name": "third_party_package_21",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~GzOra6of05PGgZRBlPztPw==/com.google.android.apps.walletnfcrel-Lex9DtsFpYIR1G-VX6v2jg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
       "original_state": "habilitado",
-      "function_description": "Controlador de comunica\u00e7\u00e3o por aproxima\u00e7\u00e3o (NFC)",
+      "function_description": "Controlador de comunicação por aproximação (NFC)",
       "relevant_permissions_count": 0
     },
     {
@@ -2193,7 +2193,7 @@
       "package_name": "com.google.android.apps.wellbeing",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~WqLG6DYBtl7EG4s32hq3Mg==/com.google.android.apps.wellbeing-NhjS76GcpO04k_GC7gH7sQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10278,
       "version_name": "1.45.943090596 (856337)",
       "version_code": "856337",
@@ -2205,7 +2205,7 @@
       "package_name": "com.google.android.apps.work.clouddpc",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~OLjGl7hxUtQ2MyvbAumGmw==/com.google.android.apps.work.clouddpc-R_DOnLuteIEAYUFod9-Z8w==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10284,
       "version_name": "139.34.3 (10441060)",
       "version_code": "10441060",
@@ -2217,7 +2217,7 @@
       "package_name": "com.google.android.apps.youtube.music",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~00PvKmjKU_WL2-n4S7C6VA==/com.google.android.apps.youtube.music-BnV7Fo3j6bpE0f0v_u0FFA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10312,
       "version_name": "9.31.51",
       "version_code": "93151240",
@@ -2241,7 +2241,7 @@
       "package_name": "com.google.android.as",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~YCc6bel-m6CpMi_49x7zPQ==/com.google.android.as--1kQUhf4ppeLyJmdNFGnog==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10203,
       "version_name": "C.5.playstore.oemfull.948771517",
       "version_code": "16923242",
@@ -2253,7 +2253,7 @@
       "package_name": "com.google.android.as.oss",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~YhIzMDqvL8VrCgYwBT7Yuw==/com.google.android.as.oss-bYVsT_CzBlFFK7yhT7qqJg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10265,
       "version_name": "1.0.release.960885322",
       "version_code": "140795",
@@ -2265,7 +2265,7 @@
       "package_name": "com.google.android.calculator",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~v4yvENbH9xUGdXXTOWPzNQ==/com.google.android.calculator-er2gWB9NtqxIhtKSHC59hw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10286,
       "version_name": "9.2 (941607204)",
       "version_code": "85017527",
@@ -2277,7 +2277,7 @@
       "package_name": "com.google.android.calendar",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~RtoB5UGZ_1NXvBcEII5juA==/com.google.android.calendar-88SV5kt4mRZqj8ggFHdxAA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10287,
       "version_name": "2026.29.0-954273998-release",
       "version_code": "2018230644",
@@ -2306,7 +2306,7 @@
       "version_name": "60.1.881556095",
       "version_code": "60",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 19
     },
     {
@@ -2358,10 +2358,10 @@
       "relevant_permissions_count": 1
     },
     {
-      "package_name": "com.google.android.contactkeys",
+      "package_name": "third_party_package_22",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~lhuLFjm0AUgXY0zZkn7tJA==/com.google.android.contactkeys-_7dj70TpN0ZfZOLKGzQUpA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -2373,7 +2373,7 @@
       "package_name": "com.google.android.contacts",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~W7u6VH06_KvIh0rTxryfug==/com.google.android.contacts-T_T69-1mvCT6VHddFQ6qPA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10294,
       "version_name": "4.84.30.948689135",
       "version_code": "3286109",
@@ -2385,7 +2385,7 @@
       "package_name": "com.google.android.deskclock",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~EHLd_aKOXmngAcSS5PVzag==/com.google.android.deskclock-lEGun5vZqFCoT0n-rBCwwQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10289,
       "version_name": "9.0 (943154005)",
       "version_code": "76073630",
@@ -2397,12 +2397,12 @@
       "package_name": "com.google.android.dialer",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Q-OnfY2XlMVBUrc0T9suIQ==/com.google.android.dialer-_5mNWSJdudPDjC4pWlESnQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10229,
       "version_name": "231.0.952151464",
       "version_code": "19933378",
       "original_state": "habilitado",
-      "function_description": "Discador e gerenciador de chamadas telef\u00f4nicas",
+      "function_description": "Discador e gerenciador de chamadas telefônicas",
       "relevant_permissions_count": 91
     },
     {
@@ -2421,7 +2421,7 @@
       "package_name": "com.google.android.euicc",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~5jwXaA3Egix6x2_IivaeUg==/com.google.android.euicc-RfuvWf3MBZiSdOVf9678Xw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10221,
       "version_name": "D.2.1.944346941-gms",
       "version_code": "238140",
@@ -2481,7 +2481,7 @@
       "package_name": "com.google.android.gm",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~PmPdomceHgnmnwDZ_rymKQ==/com.google.android.gm-ylZfjAZ3v78tCAGpMYtznw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10293,
       "version_name": "2026.07.27.955297563.Release",
       "version_code": "65924837",
@@ -2493,12 +2493,12 @@
       "package_name": "com.google.android.gms",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~yC5dwIzBzDHqUqmGyDWkow==/com.google.android.gms-7Okg81WXWTspQbSGZNTUGQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10387,
       "version_name": "26.30.32 (260400-956658866)",
       "version_code": "263032035",
       "original_state": "habilitado",
-      "function_description": "Google Play Services (infraestrutura de APIs, push e atesta\u00e7\u00e3o)",
+      "function_description": "Google Play Services (infraestrutura de APIs, push e atestação)",
       "relevant_permissions_count": 725
     },
     {
@@ -2510,7 +2510,7 @@
       "version_name": "1.2",
       "version_code": "3",
       "original_state": "habilitado",
-      "function_description": "Google Play Services (infraestrutura de APIs, push e atesta\u00e7\u00e3o)",
+      "function_description": "Google Play Services (infraestrutura de APIs, push e atestação)",
       "relevant_permissions_count": 8
     },
     {
@@ -2522,26 +2522,26 @@
       "version_name": "251330800025.748366938.748366938",
       "version_code": "251330806",
       "original_state": "habilitado",
-      "function_description": "Google Play Services (infraestrutura de APIs, push e atesta\u00e7\u00e3o)",
+      "function_description": "Google Play Services (infraestrutura de APIs, push e atestação)",
       "relevant_permissions_count": 0
     },
     {
       "package_name": "com.google.android.gms.supervision",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~jOAV2rVhUpa-a4WoVHDjoA==/com.google.android.gms.supervision-5iROIte8Ic1hED-Ni7DF8g==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10223,
       "version_name": "1.0.881395152.phone",
       "version_code": "106630",
       "original_state": "habilitado",
-      "function_description": "Google Play Services (infraestrutura de APIs, push e atesta\u00e7\u00e3o)",
+      "function_description": "Google Play Services (infraestrutura de APIs, push e atestação)",
       "relevant_permissions_count": 111
     },
     {
       "package_name": "com.google.android.googlequicksearchbox",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~ibxaIaaYPmTVmncprr3GEg==/com.google.android.googlequicksearchbox-DkRdVr4rF2JDQd2abNDnvg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10274,
       "version_name": "17.46.15.ve.arm64",
       "version_code": "301786722",
@@ -2601,7 +2601,7 @@
       "package_name": "com.google.android.inputmethod.latin",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~CQGFWpFzqY5nZqPOKlkY4A==/com.google.android.inputmethod.latin-n4wkSx_1NJSky5KH0h4Ysg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10297,
       "version_name": "18.0.3.954559732-release-arm64-v8a",
       "version_code": "175940518",
@@ -2613,7 +2613,7 @@
       "package_name": "com.google.android.marvin.talkback",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~TDw3jozNw95wmbyDqZ8-lg==/com.google.android.marvin.talkback-sssHZwsYABsz5yQdeuA4zA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10320,
       "version_name": "17.0.1.926549743",
       "version_code": "60215178",
@@ -2654,7 +2654,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2678,14 +2678,14 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
       "package_name": "com.google.android.odad",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~P-vwQrGVz8R0BYFjuv_Ftw==/com.google.android.odad-eC5i0e1eaOcO59Zy810khg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10231,
       "version_name": "B.22.odad-stub.859159187",
       "version_code": "86531",
@@ -2714,7 +2714,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2726,7 +2726,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2738,7 +2738,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2750,7 +2750,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2762,7 +2762,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2774,7 +2774,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2786,7 +2786,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2798,7 +2798,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2810,7 +2810,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2822,7 +2822,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2834,7 +2834,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2846,7 +2846,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2858,7 +2858,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2870,7 +2870,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2882,7 +2882,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2894,7 +2894,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2906,7 +2906,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2918,7 +2918,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2930,7 +2930,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -2942,7 +2942,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3009,7 +3009,7 @@
       "package_name": "com.google.android.projection.gearhead",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~2w0ayVzD6cePf7RLwPto4Q==/com.google.android.projection.gearhead-Wivdy3f_9-ndsJJTWZ9W-A==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10201,
       "version_name": "1.2.566220-stub",
       "version_code": "12566220",
@@ -3054,10 +3054,10 @@
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "com.google.android.safetycore",
+      "package_name": "third_party_package_23",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~zd8XgI5x9uQJiRWMjsTfLA==/com.google.android.safetycore-3c_HIhdk-jm9oVZSuebTbQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -3129,7 +3129,7 @@
       "package_name": "com.google.android.tts",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~R4O7JI12ycMAeQK5-cyTVA==/com.google.android.tts-l64GK4Jawu_F3uVpeiCBOg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10304,
       "version_name": "googletts.google-speech-apk_20260618.00_p0.934173343",
       "version_code": "210654105",
@@ -3153,7 +3153,7 @@
       "package_name": "com.google.android.verifier",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~TjcvzT0EjsIrh661B-qUEQ==/com.google.android.verifier-TasknJQgOXGg5v2-Yphefw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10202,
       "version_name": "1.0.866414232",
       "version_code": "48099",
@@ -3170,14 +3170,14 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
       "package_name": "com.google.android.videos",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~wEXEzopx20VmfiRBDRnbCg==/com.google.android.videos-NjkQULPeNd_7v4p1Zpcl7w==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10309,
       "version_name": "4.39.4799.947482243.0-release",
       "version_code": "439775071",
@@ -3189,7 +3189,7 @@
       "package_name": "com.google.android.webview",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~4hxaKQu0e7LvmjNyBAEaKQ==/com.google.android.webview-3Yb-HicWaSkgnwLl9SVoNQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10311,
       "version_name": "150.0.7871.181",
       "version_code": "787118103",
@@ -3237,7 +3237,7 @@
       "package_name": "com.google.android.youtube",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~QJN55z_a3fqH37v7HdFbdA==/com.google.android.youtube-fWzVpCZZBTLHxJXODZXskQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10313,
       "version_name": "21.31.525",
       "version_code": "1561190189",
@@ -3249,7 +3249,7 @@
       "package_name": "com.google.ar.core",
       "vendor": "Google",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Ywg397z38Qf3DC4_keU3qg==/com.google.ar.core-2cfm4gmmVKpnmkb9Qjdarg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10283,
       "version_name": "0",
       "version_code": "0",
@@ -3290,7 +3290,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3321,19 +3321,19 @@
       "package_name": "com.inmobi.weather",
       "vendor": "Adware / Parceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Ab0Z4ljEWoDk4V_vAVU2KA==/com.inmobi.weather-W78lUyZS746bPTwOx764uw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10319,
       "version_name": "0.0.1.1",
       "version_code": "101",
       "original_state": "habilitado",
-      "function_description": "Rastreamento publicit\u00e1rio disfar\u00e7ado de widget meteorol\u00f3gico",
+      "function_description": "Rastreamento publicitário disfarçado de widget meteorológico",
       "relevant_permissions_count": 14
     },
     {
-      "package_name": "com.instagram.android",
+      "package_name": "third_party_package_24",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~C-yjl0tQZQBhm5TMBaurIg==/com.instagram.android-0oUV8rLa6lvQWug_gNNH3g==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -3350,7 +3350,7 @@
       "version_name": "20.26.0.1.45",
       "version_code": "200260145",
       "original_state": "desabilitado",
-      "function_description": "Instalador autom\u00e1tico e silencioso de aplicativos patrocinados (Adware OOBE)",
+      "function_description": "Instalador automático e silencioso de aplicativos patrocinados (Adware OOBE)",
       "relevant_permissions_count": 31
     },
     {
@@ -3362,7 +3362,7 @@
       "version_name": "QT-04.00.242",
       "version_code": "470400242",
       "original_state": "habilitado",
-      "function_description": "N\u00facleo de Intelig\u00eancia Artificial Lenovo Qira",
+      "function_description": "Núcleo de Inteligência Artificial Lenovo Qira",
       "relevant_permissions_count": 50
     },
     {
@@ -3374,14 +3374,14 @@
       "version_name": "1.4.25",
       "version_code": "10402500",
       "original_state": "habilitado",
-      "function_description": "N\u00facleo de Intelig\u00eancia Artificial Lenovo Qira",
+      "function_description": "Núcleo de Inteligência Artificial Lenovo Qira",
       "relevant_permissions_count": 19
     },
     {
-      "package_name": "com.linkedin.android",
+      "package_name": "third_party_package_25",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~kDQDY0oeTRaNVOIhD_eNhA==/com.linkedin.android-LAtV1m9PrDVBYIiC9H1QaA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10424,
       "version_name": "4.1.1270",
       "version_code": "217800",
@@ -3410,7 +3410,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3422,7 +3422,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3434,7 +3434,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3470,7 +3470,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 0
     },
     {
@@ -3482,7 +3482,7 @@
       "version_name": "14",
       "version_code": "34",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3494,7 +3494,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3518,7 +3518,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 0
     },
     {
@@ -3530,7 +3530,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 0
     },
     {
@@ -3554,7 +3554,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 4
     },
     {
@@ -3578,7 +3578,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3590,7 +3590,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 0
     },
     {
@@ -3602,14 +3602,14 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "com.mercadolibre",
+      "package_name": "third_party_package_26",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~I7ydLuM2GnpT7TqNb0XHmw==/com.mercadolibre-Cn77Z7lZSoob9Z7BZDzMAA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10464,
       "version_name": "10.586.2",
       "version_code": "1816182929",
@@ -3618,10 +3618,10 @@
       "relevant_permissions_count": 69
     },
     {
-      "package_name": "com.mercadopago.wallet",
+      "package_name": "third_party_package_27",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~h8IBufhs3fvMp2SKnXo5HQ==/com.mercadopago.wallet-VvwnkfZq20RgVm9s1SJy1w==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10440,
       "version_name": "2.460.2",
       "version_code": "1816181621",
@@ -3630,10 +3630,10 @@
       "relevant_permissions_count": 52
     },
     {
-      "package_name": "com.minhaunifique.unifique",
+      "package_name": "third_party_package_28",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Cbg5PAhnODte0DreYRz0uw==/com.minhaunifique.unifique-iiXIQuTivDGMxkFnw7Nh7g==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10450,
       "version_name": "6.6.8",
       "version_code": "785",
@@ -3642,10 +3642,10 @@
       "relevant_permissions_count": 28
     },
     {
-      "package_name": "com.mobileady.biblia",
+      "package_name": "third_party_package_29",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~sFjFi6-ysnmBF9Z4r35CEQ==/com.mobileady.biblia-QaSJIUqz4YCFWYXWkrzNPQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10432,
       "version_name": "2.0.0",
       "version_code": "141",
@@ -3654,10 +3654,10 @@
       "relevant_permissions_count": 21
     },
     {
-      "package_name": "com.mobilefootie.wc2010",
+      "package_name": "third_party_package_30",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~1_pIdqj9kdn2O0JkW9ovWQ==/com.mobilefootie.wc2010-__FjqjuIx3vLpzudLS2Fgg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10448,
       "version_name": "241.18134.20261030",
       "version_code": "18134",
@@ -3669,7 +3669,7 @@
       "package_name": "com.motorola.account",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~wHDfbDJBBjl4Pq494d0idw==/com.motorola.account-Z-FjQz6YJpRKGTP_UUrDWQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10241,
       "version_name": "v8.00.0043",
       "version_code": "8000043",
@@ -3681,12 +3681,12 @@
       "package_name": "com.motorola.actioncore",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~U4SNZFZuZ8HTx5bMxET_0g==/com.motorola.actioncore-okHXREXE-vX-_i3E9tHyLg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10324,
       "version_name": "3.02.1281",
       "version_code": "353021281",
       "original_state": "habilitado",
-      "function_description": "Detec\u00e7\u00e3o de gestos Moto Actions (agitar para lanterna, girar para c\u00e2mera)",
+      "function_description": "Detecção de gestos Moto Actions (agitar para lanterna, girar para câmera)",
       "relevant_permissions_count": 29
     },
     {
@@ -3698,7 +3698,7 @@
       "version_name": "08.90.09",
       "version_code": "301089009",
       "original_state": "habilitado",
-      "function_description": "Detec\u00e7\u00e3o de gestos Moto Actions (agitar para lanterna, girar para c\u00e2mera)",
+      "function_description": "Detecção de gestos Moto Actions (agitar para lanterna, girar para câmera)",
       "relevant_permissions_count": 72
     },
     {
@@ -3710,7 +3710,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3746,7 +3746,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3758,7 +3758,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3770,7 +3770,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3794,7 +3794,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3806,7 +3806,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3818,7 +3818,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3830,7 +3830,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3842,7 +3842,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3854,7 +3854,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3866,7 +3866,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3890,7 +3890,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3902,7 +3902,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3914,7 +3914,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3926,7 +3926,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3938,7 +3938,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3950,7 +3950,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3962,7 +3962,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3974,7 +3974,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3986,7 +3986,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -3998,7 +3998,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4010,7 +4010,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4022,7 +4022,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4034,7 +4034,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4058,7 +4058,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 0
     },
     {
@@ -4070,7 +4070,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4082,7 +4082,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4094,7 +4094,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4118,7 +4118,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4130,7 +4130,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4142,7 +4142,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4154,7 +4154,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4166,7 +4166,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4178,7 +4178,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4190,7 +4190,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4202,7 +4202,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4214,7 +4214,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4226,7 +4226,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4238,7 +4238,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4250,7 +4250,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4262,7 +4262,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4274,7 +4274,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4310,7 +4310,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Discador e gerenciador de chamadas telef\u00f4nicas",
+      "function_description": "Discador e gerenciador de chamadas telefônicas",
       "relevant_permissions_count": 3
     },
     {
@@ -4346,7 +4346,7 @@
       "version_name": "2.17.01",
       "version_code": "20170001",
       "original_state": "habilitado",
-      "function_description": "Telemetria de diagn\u00f3stico, estat\u00edsticas de modem e envio de relat\u00f3rios",
+      "function_description": "Telemetria de diagnóstico, estatísticas de modem e envio de relatórios",
       "relevant_permissions_count": 36
     },
     {
@@ -4370,7 +4370,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4382,7 +4382,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4406,7 +4406,7 @@
       "version_name": "17",
       "version_code": "0",
       "original_state": "habilitado",
-      "function_description": "Telemetria de diagn\u00f3stico, estat\u00edsticas de modem e envio de relat\u00f3rios",
+      "function_description": "Telemetria de diagnóstico, estatísticas de modem e envio de relatórios",
       "relevant_permissions_count": 0
     },
     {
@@ -4430,7 +4430,7 @@
       "version_name": "1.0.37",
       "version_code": "10003700",
       "original_state": "habilitado",
-      "function_description": "Aplicativo oficial de C\u00e2mera Motorola",
+      "function_description": "Aplicativo oficial de Câmera Motorola",
       "relevant_permissions_count": 21
     },
     {
@@ -4442,7 +4442,7 @@
       "version_name": "10.0.16.64",
       "version_code": "10001664",
       "original_state": "habilitado",
-      "function_description": "Aplicativo oficial de C\u00e2mera Motorola",
+      "function_description": "Aplicativo oficial de Câmera Motorola",
       "relevant_permissions_count": 53
     },
     {
@@ -4454,7 +4454,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Pilha de telecomunica\u00e7\u00f5es, VoLTE, VoWiFi e RIL de telefonia",
+      "function_description": "Pilha de telecomunicações, VoLTE, VoWiFi e RIL de telefonia",
       "relevant_permissions_count": 21
     },
     {
@@ -4466,7 +4466,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 65
     },
     {
@@ -4478,7 +4478,7 @@
       "version_name": "17.00.0004",
       "version_code": "17000004",
       "original_state": "habilitado",
-      "function_description": "Telemetria de ciclo de vida e diagn\u00f3stico Motorola (Customer Care Central)",
+      "function_description": "Telemetria de ciclo de vida e diagnóstico Motorola (Customer Care Central)",
       "relevant_permissions_count": 36
     },
     {
@@ -4490,7 +4490,7 @@
       "version_name": "18.5.019",
       "version_code": "185019",
       "original_state": "habilitado",
-      "function_description": "Telemetria de ciclo de vida e diagn\u00f3stico Motorola (Customer Care Central)",
+      "function_description": "Telemetria de ciclo de vida e diagnóstico Motorola (Customer Care Central)",
       "relevant_permissions_count": 43
     },
     {
@@ -4502,7 +4502,7 @@
       "version_name": "37.00.063",
       "version_code": "3700063",
       "original_state": "habilitado",
-      "function_description": "Telemetria de ciclo de vida e diagn\u00f3stico Motorola (Customer Care Central)",
+      "function_description": "Telemetria de ciclo de vida e diagnóstico Motorola (Customer Care Central)",
       "relevant_permissions_count": 50
     },
     {
@@ -4526,7 +4526,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4538,7 +4538,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 72
     },
     {
@@ -4761,7 +4761,7 @@
       "package_name": "com.motorola.installer",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~quTfW9LPyGFvNzx7JoT0_w==/com.motorola.installer-1hOJ35q2ebbHWyIy574aMw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10349,
       "version_name": "4.00.016",
       "version_code": "400016",
@@ -4814,7 +4814,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4838,7 +4838,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4850,7 +4850,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4862,7 +4862,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4874,7 +4874,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4886,7 +4886,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4898,7 +4898,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4910,7 +4910,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4922,7 +4922,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -4941,7 +4941,7 @@
       "package_name": "com.motorola.livewallpaper3",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~e_AeKT9068cyL6bUKeG6Hg==/com.motorola.livewallpaper3-uQ4cGomfNKt8PCAprWFucA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10350,
       "version_name": "1.0",
       "version_code": "1",
@@ -4965,12 +4965,12 @@
       "package_name": "com.motorola.mobiledesktop",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~j5AZP5cWaZyFLaSVmvJ0GA==/com.motorola.mobiledesktop-1UDQS3UNilPyYWrCEfehEA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10245,
       "version_name": "09.0.3.012.0",
       "version_code": "9030122",
       "original_state": "habilitado",
-      "function_description": "Smart Connect / Ready For (Conex\u00e3o com PC/Monitor)",
+      "function_description": "Smart Connect / Ready For (Conexão com PC/Monitor)",
       "relevant_permissions_count": 72
     },
     {
@@ -4982,7 +4982,7 @@
       "version_name": "03.17.0000.06",
       "version_code": "317000006",
       "original_state": "habilitado",
-      "function_description": "Smart Connect / Ready For (Conex\u00e3o com PC/Monitor)",
+      "function_description": "Smart Connect / Ready For (Conexão com PC/Monitor)",
       "relevant_permissions_count": 83
     },
     {
@@ -5006,7 +5006,7 @@
       "version_name": "4.17.02",
       "version_code": "40170002",
       "original_state": "habilitado",
-      "function_description": "Telemetria de diagn\u00f3stico, estat\u00edsticas de modem e envio de relat\u00f3rios",
+      "function_description": "Telemetria de diagnóstico, estatísticas de modem e envio de relatórios",
       "relevant_permissions_count": 35
     },
     {
@@ -5078,7 +5078,7 @@
       "version_name": "37.0.00.0000",
       "version_code": "370000000",
       "original_state": "habilitado",
-      "function_description": "Gerenciador e painel de Configura\u00e7\u00f5es do sistema Android",
+      "function_description": "Gerenciador e painel de Configurações do sistema Android",
       "relevant_permissions_count": 37
     },
     {
@@ -5090,7 +5090,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5162,7 +5162,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5289,7 +5289,7 @@
       "package_name": "com.motorola.securityhub",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~PTr4Th408fEg_C5ExD0PMA==/com.motorola.securityhub-fggmgT94AYwHDt5enpc2YA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10354,
       "version_name": "06.5.0.040",
       "version_code": "650040",
@@ -5318,7 +5318,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5342,7 +5342,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5354,7 +5354,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5366,7 +5366,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5378,7 +5378,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5390,7 +5390,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5421,12 +5421,12 @@
       "package_name": "com.motorola.smartfeed",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~BTTdkJ962_oPzgwnU2YMUA==/com.motorola.smartfeed-oXkflJmvLCYpIhMuWyzCTg==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10270,
       "version_name": "3.01.0033",
       "version_code": "373010033",
       "original_state": "habilitado",
-      "function_description": "Painel de not\u00edcias integrado \u00e0 esquerda da tela inicial (Moto SmartFeed)",
+      "function_description": "Painel de notícias integrado à esquerda da tela inicial (Moto SmartFeed)",
       "relevant_permissions_count": 43
     },
     {
@@ -5486,7 +5486,7 @@
       "version_name": "17",
       "version_code": "37",
       "original_state": "habilitado",
-      "function_description": "Interface de usu\u00e1rio do sistema (barra de status, notifica\u00e7\u00f5es, navega\u00e7\u00e3o)",
+      "function_description": "Interface de usuário do sistema (barra de status, notificações, navegação)",
       "relevant_permissions_count": 88
     },
     {
@@ -5498,7 +5498,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5510,7 +5510,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5541,7 +5541,7 @@
       "package_name": "com.motorola.touchshare",
       "vendor": "Motorola",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~_s1f-KoTvSa7xMJrZpvBdQ==/com.motorola.touchshare-9XkAwpJmNUL0MzMTLozkow==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10268,
       "version_name": "1.0.1",
       "version_code": "101",
@@ -5574,10 +5574,10 @@
       "relevant_permissions_count": 6
     },
     {
-      "package_name": "com.netflix.mediaclient",
+      "package_name": "third_party_package_31",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~ejvN8v98xZXQpDsY5cSHAQ==/com.netflix.mediaclient-SvFIr4Tsmk34KMW8kdk6Ng==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10436,
       "version_name": "9.90.1 build 12 74736",
       "version_code": "74736",
@@ -5586,10 +5586,10 @@
       "relevant_permissions_count": 37
     },
     {
-      "package_name": "com.oakever.tiletrip",
+      "package_name": "third_party_package_32",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~dzrkXblPMmt78GKl5AkHoA==/com.oakever.tiletrip-RdkPBjjbLTA0Hn0Lk0A2HQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10480,
       "version_name": null,
       "version_code": "260",
@@ -5618,7 +5618,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5630,7 +5630,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "habilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5642,7 +5642,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5654,7 +5654,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5666,7 +5666,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5678,7 +5678,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5690,7 +5690,7 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
@@ -5702,14 +5702,14 @@
       "version_name": "1.0",
       "version_code": "1",
       "original_state": "desabilitado",
-      "function_description": "Customiza\u00e7\u00e3o visual / tema de operadora ou sistema (Runtime Resource Overlay)",
+      "function_description": "Customização visual / tema de operadora ou sistema (Runtime Resource Overlay)",
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "com.onlyoffice.documents",
+      "package_name": "third_party_package_33",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~nEgsjMS-CsBJtLNBi9shTQ==/com.onlyoffice.documents-niniHTpDUaeno9oO91fVhw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10438,
       "version_name": "10.0.0",
       "version_code": "779",
@@ -5718,10 +5718,10 @@
       "relevant_permissions_count": 34
     },
     {
-      "package_name": "com.openai.chatgpt",
+      "package_name": "third_party_package_34",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~A7fCCasOigpjR0w_bfxdQg==/com.openai.chatgpt-JH8tic4ccgxsi3cO3GHI9g==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10441,
       "version_name": "1.2026.300",
       "version_code": "2630015",
@@ -5738,7 +5738,7 @@
       "version_name": "20.22.0.0.46",
       "version_code": "200220046",
       "original_state": "desabilitado",
-      "function_description": "Instalador autom\u00e1tico e silencioso de aplicativos patrocinados (Adware OOBE)",
+      "function_description": "Instalador automático e silencioso de aplicativos patrocinados (Adware OOBE)",
       "relevant_permissions_count": 30
     },
     {
@@ -5766,10 +5766,10 @@
       "relevant_permissions_count": 12
     },
     {
-      "package_name": "com.picpay",
+      "package_name": "third_party_package_35",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~pqa7EreQVS8B5aSyKRuILw==/com.picpay-stepMu_2hEHoaV4NuIRmIw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10433,
       "version_name": "11.177.1",
       "version_code": "2077",
@@ -5778,10 +5778,10 @@
       "relevant_permissions_count": 50
     },
     {
-      "package_name": "com.puzzlegames.puzzlebrickslegend",
+      "package_name": "third_party_package_36",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~vRyDmnj5XzhjVeJApgXiYg==/com.puzzlegames.puzzlebrickslegend-HWmErKbCHaGGulpKH3F4yQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10479,
       "version_name": null,
       "version_code": "584",
@@ -5790,10 +5790,10 @@
       "relevant_permissions_count": 18
     },
     {
-      "package_name": "com.sirma.mobile.bible.android",
+      "package_name": "third_party_package_37",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~HeUEbxI3HupmLiLGKkCg1A==/com.sirma.mobile.bible.android-HiuIbcvEVaUPrV2YjYVHPA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10426,
       "version_name": "11.35.1+7099318",
       "version_code": "7099318",
@@ -5810,14 +5810,14 @@
       "version_name": "1.9.1",
       "version_code": "10901",
       "original_state": "habilitado",
-      "function_description": "Rede de an\u00fancios clickbait embutida na interface",
+      "function_description": "Rede de anúncios clickbait embutida na interface",
       "relevant_permissions_count": 15
     },
     {
-      "package_name": "com.taxis99",
+      "package_name": "third_party_package_38",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~WdbbpcaxbuiB2AW7b-6ILg==/com.taxis99-uHoCiXKuuVOGQeGG-WiVXQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10451,
       "version_name": "6.65.4",
       "version_code": "1606650406",
@@ -5838,10 +5838,10 @@
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "com.ubercab",
+      "package_name": "third_party_package_39",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~koqI_fWsecc8sYBwQjiD5A==/com.ubercab-Z0-FVYR-Qpm4M-yfAHDEjw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10465,
       "version_name": "4.655.10001",
       "version_code": "323547",
@@ -5850,10 +5850,10 @@
       "relevant_permissions_count": 55
     },
     {
-      "package_name": "com.unifiquemovel",
+      "package_name": "third_party_package_40",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~Z9TSJ71sZ3tvx7ZqJeQGGA==/com.unifiquemovel-wUOe9Gu6yoz-1kaDr1TVOw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10439,
       "version_name": "3.2.1",
       "version_code": "112",
@@ -5862,10 +5862,10 @@
       "relevant_permissions_count": 21
     },
     {
-      "package_name": "com.waze",
+      "package_name": "third_party_package_41",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~njQqx77rWCyiomjtpGduzQ==/com.waze-p4QyRbPcycH4gpz-vhOvdw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10443,
       "version_name": "5.26.5.0",
       "version_code": "1030744",
@@ -5874,10 +5874,10 @@
       "relevant_permissions_count": 34
     },
     {
-      "package_name": "com.whatsapp.w4b",
+      "package_name": "third_party_package_42",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~DcjcVOb4wEeQ9_Ubqcv66Q==/com.whatsapp.w4b-KkFxd7B4JsRxa6qJoC2jWw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10473,
       "version_name": "2.26.43.72",
       "version_code": "264307214",
@@ -5886,10 +5886,10 @@
       "relevant_permissions_count": 85
     },
     {
-      "package_name": "com.x8bit.bitwarden",
+      "package_name": "third_party_package_43",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~aN_eaMnQOuljWkUdiPgoCw==/com.x8bit.bitwarden-t4xxqjQpbghAX5gF0j552A==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10429,
       "version_name": "2026.10.1",
       "version_code": "21986",
@@ -5898,10 +5898,10 @@
       "relevant_permissions_count": 17
     },
     {
-      "package_name": "com.zhiliaoapp.musically",
+      "package_name": "third_party_package_44",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~ZBu3XaxKmTWWD-VseGG3xA==/com.zhiliaoapp.musically-gW56HTQ3xVKgPeZcFCmVRQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -5946,10 +5946,10 @@
       "relevant_permissions_count": 29
     },
     {
-      "package_name": "in.hridayan.ashell",
+      "package_name": "third_party_package_45",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~4jX7HXqxrFLOvBdK6Y3I-A==/in.hridayan.ashell-W3bsb2tf7NmFgxZy2T6FTA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10478,
       "version_name": "v7.4.0",
       "version_code": "62",
@@ -5958,10 +5958,10 @@
       "relevant_permissions_count": 31
     },
     {
-      "package_name": "io.github.samolego.canta",
+      "package_name": "third_party_package_46",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~N8geSSgAH0gf7IQmBmaSrw==/io.github.samolego.canta-6j1g6cei6NbN4lsKehb6vw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10477,
       "version_name": "4.1.0",
       "version_code": "227",
@@ -5970,10 +5970,10 @@
       "relevant_permissions_count": 7
     },
     {
-      "package_name": "moe.shizuku.privileged.api",
+      "package_name": "third_party_package_47",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~RF9ScwYANKjMuziZy3WKew==/moe.shizuku.privileged.api-TKpfU2JWjX9WjqAf_I5JKA==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10475,
       "version_name": "13.6.0.r1086.2650830c",
       "version_code": "1086",
@@ -5982,10 +5982,10 @@
       "relevant_permissions_count": 9
     },
     {
-      "package_name": "org.fdroid.fdroid",
+      "package_name": "third_party_package_48",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~nKfHywTRSMBVY64w0xFFow==/org.fdroid.fdroid-SLWI3NnoYUJ3zxS031uTXw==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
@@ -5994,22 +5994,22 @@
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp",
+      "package_name": "third_party_package_49",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~nLy98WLQOgUSvbjMpYLOqg==/ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp-qX1pjYija9uPcjvTzByswQ==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": null,
       "version_name": null,
       "version_code": null,
       "original_state": "habilitado",
-      "function_description": "Discador e gerenciador de chamadas telef\u00f4nicas",
+      "function_description": "Discador e gerenciador de chamadas telefônicas",
       "relevant_permissions_count": 0
     },
     {
-      "package_name": "wool.match.color.sort.jam.puzzle",
+      "package_name": "third_party_package_50",
       "vendor": "Terceiro",
       "component_type": "App de Sistema",
-      "apk_path": "/data/app/~~CQs6c8E14jG4FubNM-xcmg==/wool.match.color.sort.jam.puzzle-UFPtXvOFPpsIdO-ir4PU-w==/base.apk",
+      "apk_path": "/data/app/[REDACTED]/base.apk",
       "app_id": 10482,
       "version_name": null,
       "version_code": "1530",
@@ -6017,5 +6017,10 @@
       "function_description": "Componente de suporte do sistema operacional Android",
       "relevant_permissions_count": 20
     }
-  ]
+  ],
+  "privacy_redaction": {
+    "third_party_package_names": "redacted",
+    "third_party_components": 50,
+    "installation_specific_data_app_paths": "normalized"
+  }
 }

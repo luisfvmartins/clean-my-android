@@ -1,5 +1,8 @@
 # Relatório Forense de Auditoria de Pacotes, Debloat, Segurança e Privacidade — Motorola Edge 60 Pro (`XT2507-1` / `cybert`)
 
+
+> **Nota de privacidade:** os identificadores dos 50 registros classificados como componentes de terceiros foram pseudonimizados. Os caminhos específicos de instalação em `/data/app` foram normalizados. As contagens agregadas e os estados registrados dos pacotes foram preservados. O inventário de origem não permite determinar se esses componentes foram instalados pelo usuário ou pré-carregados por um fornecedor.
+
 > [!WARNING]
 > **Classificação da Auditoria: PENDENTE DE VALIDAÇÃO**
 > Este documento consolida a auditoria técnica do processo de debloat, sandboxing e hardening realizado no smartphone **Motorola Edge 60 Pro (XT2507-1)**, codinome **`cybert`**, modelo de produto **`cybert_g_sys`**, com interface **Hello UI**.
@@ -149,7 +152,7 @@ A desativação em nível de usuário foi aplicada a **244 pacotes**, colocando-
 
 #### C. De-Google (Substituição por Ferramentas FOSS):
 - `com.google.android.googlequicksearchbox` (Google App / Busca): Eliminou 873 MB de consumo contínuo em RAM.
-- `com.android.chrome`: Substituído pelo navegador Brave (`com.brave.browser`).
+- `com.android.chrome`: Substituído pelo navegador de terceiros (`third_party_package_14`).
 - `com.google.android.youtube` e `com.google.android.apps.youtube.music`: Desativados a pedido do usuário.
 - `com.google.android.dialer` e `com.google.android.apps.messaging`: Substituídos pela suite Fossify (`org.fossify.phone` e `org.fossify.messages`).
 - `com.google.android.contacts` e `com.google.android.calendar`: Desativados em favor de alternativas.
@@ -166,22 +169,22 @@ A lista completa dos 244 pacotes desativados consta em [`pacotes-desativados.txt
 A desinstalação para o Usuário 0 totalizou **9 pacotes**, divididos em duas naturezas técnicas distintas:
 
 1. **Aplicativos de terceiros completamente removidos (2 pacotes):**
-   - `ringtonesforandroidphonefree.ringtones.ringtonessongs.ringtonesapp` (Adware instalado via DT Ignite).
-   - `all.documentreader.filereader.office.viewer` (Adware instalado via DT Ignite).
+   - `third_party_package_49` (Adware instalado via DT Ignite).
+   - `third_party_package_01` (Adware instalado via DT Ignite).
    *Esses pacotes residiam exclusivamente na partição de dados (`/data/app`) e foram eliminados por completo.*
 
 2. **Pacotes pré-instalados de sistema desinstalados para o Usuário 0 (7 pacotes):**
-   - `wool.match.color.sort.jam.puzzle` (Jogo patrocinado pré-instalado).
-   - `com.oakever.tiletrip` (Jogo patrocinado pré-instalado).
-   - `com.puzzlegames.puzzlebrickslegend` (Jogo patrocinado pré-instalado).
-   - `com.airbnb.android` (App pré-carregado dispensável).
+   - `third_party_package_50` (Jogo patrocinado pré-instalado).
+   - `third_party_package_32` (Jogo patrocinado pré-instalado).
+   - `third_party_package_36` (Jogo patrocinado pré-instalado).
+   - `third_party_package_09` (App pré-carregado dispensável).
    - `com.handmark.expressweather` (App de clima com publicidade).
    - `com.motorola.genie` (Módulo de telemetria e sugestões da Motorola).
-   - `com.google.android.apps.subscriptions.red` (Gerenciador de assinaturas do YouTube Music).
+   - `third_party_package_20` (gerenciador de assinaturas de terceiros).
    *No caso de pacotes de sistema, o comando `pm uninstall -k --user 0` remove os dados do usuário e altera o estado do pacote para `installed=false` no perfil 0. O arquivo APK de fábrica permanece na partição somente-leitura do sistema (`/system` ou `/product`), não ocorrendo exclusão física da imagem de fábrica.*
 
 ### 4.3. Reversão de Atualizações em `/data/app` e Mensuração de Armazenamento
-Quando um aplicativo pré-instalado na partição de sistema recebe atualizações via Google Play Store, o APK completo atualizado é gravado na partição gravável de dados (`/data/app/~~...`).
+Quando um aplicativo pré-instalado na partição de sistema recebe atualizações via Google Play Store, o APK completo atualizado é gravado na partição gravável de dados (`/data/app/[REDACTED]/`).
 
 Ao executar `pm uninstall <pacote>` em um aplicativo de sistema com atualizações pendentes, o Android remove a versão atualizada da pasta `/data/app` e reverte o aplicativo para a sua imagem base original da ROM. Essa operação foi executada nos 10 pacotes de sistema desativados a seguir:
 - `com.android.chrome`
@@ -241,16 +244,16 @@ Para preservar os canais de push notification (FCM) e a infraestrutura de segura
   5. `com.android.companiondevicemanager` (`android.permission.ACCESS_COARSE_LOCATION`)
   6. `com.android.companiondevicemanager` (`android.permission.ACCESS_BACKGROUND_LOCATION`)
   7. `com.google.android.euicc` (`android.permission.CAMERA`)
-  8. `com.ubercab` (`android.permission.RECORD_AUDIO`)
-  9. `com.taxis99` (`android.permission.READ_CONTACTS`)
-  10. `com.taxis99` (`android.permission.CAMERA`)
-  11. `com.minhaunifique.unifique` (`android.permission.ACCESS_COARSE_LOCATION`)
-  12. `com.brave.browser` (`android.permission.ACCESS_COARSE_LOCATION`)
-  13. `br.com.ajfans` (`android.permission.ACCESS_COARSE_LOCATION`)
+  8. `third_party_package_39` (`android.permission.RECORD_AUDIO`)
+  9. `third_party_package_38` (`android.permission.READ_CONTACTS`)
+  10. `third_party_package_38` (`android.permission.CAMERA`)
+  11. `third_party_package_28` (`android.permission.ACCESS_COARSE_LOCATION`)
+  12. `third_party_package_14` (`android.permission.ACCESS_COARSE_LOCATION`)
+  13. `third_party_package_02` (`android.permission.ACCESS_COARSE_LOCATION`)
 
 - **Tentativas de Revogação de Permissão Especial (Não Efetivadas via `pm revoke`):**
   - Permissão: `android.permission.ACCESS_LOCAL_NETWORK`
-  - Aplicativos testados: `br.org.app.barilife`, `com.sirma.mobile.bible.android`, `com.mobileady.biblia`, `br.com.ajfans`, `com.onlyoffice.documents`.
+  - Aplicativos testados: `third_party_package_08`, `third_party_package_37`, `third_party_package_29`, `third_party_package_02`, `third_party_package_33`.
   - Resultado: o comando `pm revoke` não retornou erro de sintaxe, porém a inspeção via `dumpsys package` no Passo 567 confirmou que o status permaneceu `granted=true`. Trata-se de uma permissão especial do framework que não responde ao `pm revoke` padrão de permissões runtime.
 
 O detalhamento estruturado de permissões e AppOps consta em [`permissoes-alteradas.json`](permissoes-alteradas.json).
