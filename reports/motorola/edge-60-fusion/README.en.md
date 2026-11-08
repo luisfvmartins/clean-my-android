@@ -70,3 +70,10 @@ The procedure was conducted entirely without root privileges, using the official
 - [Device Audits Catalog](../../README.md)
 - [Project Statistics](../../../docs/ESTATISTICAS.en.md)
 - [Individual Device Audit Guide](../../../docs/USER_DEVICE_AUDIT.md)
+
+
+## English companion documents
+
+- [Technical audit summary](audit.en.md)
+- [Before/after comparison summary](comparison-report.en.md)
+- [Change log summary](changes/change-log.en.md)
