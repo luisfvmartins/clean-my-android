@@ -7,7 +7,7 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 ## Indicators
 
-- **Merged Pull Requests:** 26
+- **Merged Pull Requests:** 27
 - **Distinct authors with merged PRs:** 1
 - **Cataloged devices:** 2
 - **Represented manufacturers:** 1
@@ -16,7 +16,7 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 | Merge year | Pull Requests |
 |---:|---:|
-| 2026 | 26 |
+| 2026 | 27 |
 
 ## Scope and limitations
 
