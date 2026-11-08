@@ -29,9 +29,9 @@
     {
       "indicator": "Pacotes de Aplicativos Habilitados",
       "before": "441 pacotes ativos",
-      "after": "257 pacotes ativos",
-      "variation": "-184 pacotes ativos em execução",
-      "evidence": "pm list packages -e --user 0"
+      "after": "248 pacotes preservados/ativos",
+      "variation": "-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)",
+      "evidence": "inventario-depois.json: 248 preservados/ativos, 244 desativados e 9 desinstalados para o Usuário 0"
     },
     {
       "indicator": "Pacotes Desativados (DISABLED_USER)",
