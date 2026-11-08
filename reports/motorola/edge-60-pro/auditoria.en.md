@@ -210,7 +210,80 @@ The detailed final state is recorded in [inventario-depois.json](inventario-depo
 | Secondary profile processes | User 0 + User 11 | User 0 only | -269 MB RSS | `am stop-user -f 11` |
 | Idle temperature | 37–40°C | 33.0°C | -4 to -7°C observed | `dumpsys battery`, step 384 |
 
+> **Reconciliation note:** an earlier operational summary recorded 257 enabled packages. This does not match the 248 packages classified as preserved/active in the final inventory. Because the raw command output is not publicly available for review, 257 is not treated as confirmed; the comparison uses the structured inventory classification.
+
 These are historical measurements from the source report, not independently replicated tests. Memory and temperature vary with workload, uptime, ambient conditions, and measurement timing. They do not establish sustained performance or battery-life gains.
+
+See [comparativo.json](comparativo.json) for the structured comparison.
+
+## 8. Functional validation status
+
+| Feature | Status | Evidence / limitation |
+|---|---|---|
+| Wi-Fi | Passed during session | Wireless ADB remained connected without recorded disconnects |
+| Audio / equalization | Passed during session | Wavelet received the special `DUMP` permission through `pm grant` |
+| DNS / NextDNS | Passed for the recorded checks | DNS resolution and a telemetry-domain ping test were recorded |
+| Camera | Passed during session | Motorola Camera opened; coarse location permission was revoked |
+| Navigation gestures | Passed during session | Moto Launcher / QuickStep was retained |
+| Voice calls | Pending | No call test logged |
+| SMS send/receive | Pending | No SMS test logged |
+| 4G/5G mobile data | Pending | Session used Wi-Fi; mobile data was not logged as tested |
+| VoLTE / VoWiFi | Pending | Not functionally tested |
+| Bluetooth | Pending | Peripheral pairing not tested |
+| GPS / navigation accuracy | Pending | No navigation-accuracy test logged |
+| Biometrics | Pending | No biometric unlock test logged |
+| Push notifications (FCM) | Pending | Practical delivery not audited |
+| Banking applications / Pix | Pending | No banking app was opened or tested |
+| Play Integrity / certification | Pending | No API attestation result collected |
+| System OTA updates | Intentionally paused | `com.motorola.ccc.ota` was paused in the recorded session |
+
+## 9. Security and privacy interpretation
+
+The source report describes disabling selected sponsored installers and ad-supported services, restricting background activity for firmware-protected packages, applying UID-level AppOps restrictions to Google Play Services, and revoking selected runtime permissions.
+
+These observations must be interpreted carefully:
+- A permission, SDK, persistent flag, or installed package does not by itself prove data exfiltration.
+- DNS blocking tests do not establish that every telemetry endpoint is blocked.
+- UID-level AppOps can affect unrelated packages sharing the same UID.
+- Disabling or restricting components can break functionality.
+- Historical actions are not recommendations for other devices or firmware.
+
+## 10. Limitations and follow-up collection
+
+The device owner should collect the following properties to confirm the Android version and build:
+
+```bash
+adb shell getprop ro.build.version.release
+adb shell getprop ro.build.version.sdk
+adb shell getprop ro.build.version.incremental
+adb shell getprop ro.build.fingerprint
+adb shell cat /proc/cpuinfo
+adb shell dumpsys SurfaceFlinger | grep -i "GLES"
+```
+
+Play Integrity should be checked separately with an appropriate checker and documented result. Voice calls, SMS, mobile data, VoLTE/VoWiFi, Bluetooth, GPS, biometrics, push notifications, banking apps, and Pix must be tested by the device owner before the audit status can be changed.
+
+The source report recommends rerunning debloating scripts after OTA updates. **Do not interpret that historical recommendation as blanket authorization to rerun a script.** Any post-update action requires a fresh inventory, compatibility review, a device-specific plan, and explicit authorization.
+
+## 11. Final status
+
+**Audit classification: PENDING VALIDATION.**
+
+The package reconciliation and action history are documented from ADB evidence. However, canonical Android build properties and functional logs for calls, biometrics, and banking apps were not collected during the session. The audit must remain pending until the device owner completes the missing in-person tests.
+
+## Source files
+
+- [Original full technical report (Portuguese)](auditoria.md)
+- [Evidence provenance and collection guide (English)](evidencias/README.en.md)
+- [Initial inventory](inventario-antes.json)
+- [Final inventory](inventario-depois.json)
+- [Disabled packages](pacotes-desativados.txt)
+- [Uninstalled packages](pacotes-desinstalados.txt)
+- [Permission and AppOps changes](permissoes-alteradas.json)
+- [Before/after comparison](comparativo.json)
+
+**This report is not a script approval or a universal debloating procedure.**
+ Memory and temperature vary with workload, uptime, ambient conditions, and measurement timing. They do not establish sustained performance or battery-life gains.
 
 See [comparativo.json](comparativo.json) for the structured comparison.
 
