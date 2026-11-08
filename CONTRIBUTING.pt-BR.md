@@ -132,6 +132,7 @@ Pull Requests direcionados à `main` executam o workflow **Validação do reposi
 - estrutura básica dos arquivos `comparativo.json` (quando possuem o campo `metrics`);
 - sintaxe Bash dos scripts em `scripts/*.sh`, sem executá-los;
 - formato e duplicidade dos pacotes em `data/protected_essential_packages.txt`;
-- correspondência de `docs/ESTATISTICAS.md` com o catálogo `data/device_catalog.json`.
+- correspondência de `docs/ESTATISTICAS.md` com o catálogo `data/device_catalog.json`;
+- existência dos destinos de links Markdown locais em todo o repositório.
 
 A validação é somente estática: não conecta via ADB, não instala dependências no aparelho e não altera dispositivos. Um resultado aprovado não substitui revisão técnica, checagem de privacidade nem testes funcionais. Corrija as falhas indicadas no log do GitHub Actions e atualize o mesmo Pull Request.
