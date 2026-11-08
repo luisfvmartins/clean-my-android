@@ -99,11 +99,10 @@ def validate_statistics() -> None:
 
 
 MARKDOWN_LINK_RE = re.compile(
-    r"!?\\[[^\\]]*\\]\\(\\s*(<[^>]+>|(?:\\\\.|[^)\\s])+)"
-    r"(?:\\s+(?:\"[^\"]*\"|'[^']*'|\\([^)]*\\)))?\\s*\\)"
+    r"!? \[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^)\s])+)"
+    r"(?:\s+(?:\"[^\"]*\"|'[^']*'|\([^)]*\)))?\s*\)"
 )
-REFERENCE_DEFINITION_RE = re.compile(r"^\\s{0,3}\\[[^\\]]+\\]:\\s*(<[^>]+>|\\S+)")
-
+REFERENCE_DEFINITION_RE = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*(<[^>]+>|\S+)")
 
 def markdown_destinations(content: str):
     """Yield inline-link and reference-definition destinations outside code blocks."""
@@ -112,7 +111,7 @@ def markdown_destinations(content: str):
     fence_length = 0
 
     for line in content.splitlines():
-        match = re.match(r"^\\s{0,3}(\\x60{3,}|~{3,})", line)
+        match = re.match(r"^\s{0,3}(\x60{3,}|~{3,})", line)
         if match:
             marker = match.group(1)
             if fence_char is None:
@@ -125,8 +124,8 @@ def markdown_destinations(content: str):
         if fence_char is None:
             visible_lines.append(line)
 
-    text = "\\n".join(visible_lines)
-    text = re.sub(r"\\x60+[^\\x60]*\\x60+", "", text)
+    text = "\n".join(visible_lines)
+    text = re.sub(r"\x60+[^\x60]*\x60+", "", text)
 
     for match in MARKDOWN_LINK_RE.finditer(text):
         destination = match.group(1)
