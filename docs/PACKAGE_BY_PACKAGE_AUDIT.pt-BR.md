@@ -32,3 +32,8 @@ Confirmada: tráfego/dado observado e atribuído validamente ao pacote, método 
 6. relatório before/after após execução autorizada, separando proposto de realizado.
 
 Se contexto/limite técnico impedir cobertura total, declare limite, enumere pendências e prossiga em lotes. Nunca declare cobertura integral sem reconciliação. Auditoria inicial somente leitura; aguarde autorização explícita antes de qualquer ação. Aprovação para um pacote/grupo não autoriza os demais.
+
+## Escopo por fabricante e prevenção de contaminação cruzada
+
+O prompt e a matriz de auditoria são genéricos. Identifique fabricante/modelo/variante/Android/ROM/build com evidência antes de qualquer pesquisa OEM. O inventário ADB deste dispositivo é a fonte primária. Consulte pacotes e documentação específicos somente do fabricante identificado; referências de Samsung não devem orientar Motorola, nem Motorola orientar Samsung, e assim por diante. Nunca trate pacote de referência como instalado ou removível sem constatação no inventário. Mantenha listas OEM em documentos separados, etiquetados por modelo/build e usados apenas como referência. Pacote desconhecido permanece pendente/inconclusivo. Componentes AOSP também precisam de validação no build real.
+
