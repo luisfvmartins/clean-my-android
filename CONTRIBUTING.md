@@ -1,32 +1,32 @@
-# Contribuindo com o Clean My Android
+# Contributing to Clean My Android
 
-Contribuições são bem-vindas, especialmente auditorias de novos modelos, correções de documentação e melhorias de segurança nos scripts.
+Contributions are welcome, especially audits of new device models, documentation corrections, and security improvements to scripts.
 
-O objetivo é construir uma base pública e cumulativa: **cada Pull Request aprovado acrescenta conhecimento ao repositório principal sem apagar o trabalho anterior.**
+The goal is to build a cumulative public knowledge base: **every approved Pull Request adds knowledge to the main repository without removing previous work.**
 
-## Forma recomendada de utilização
+## Recommended way to use the project
 
-Para realizar uma auditoria de dispositivo, recomendamos utilizar um assistente de IA de sua escolha, como ChatGPT, Claude, Gemini, Antigravity, Codex ou equivalente. Não há dependência de um fornecedor específico.
+For a device audit, we recommend using an AI assistant of your choice, such as ChatGPT, Claude, Gemini, Antigravity, Codex, or an equivalent tool. The project does not depend on a specific provider.
 
-O fluxo mais simples é clonar este repositório, abrir a pasta em um agente com acesso ao terminal/ADB e solicitar que leia [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) e o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md). Assim, o assistente pode conduzir as coletas, analisar os componentes, preparar um plano revisável, documentar o antes/depois e organizar a contribuição.
+The simplest workflow is to clone this repository, open the folder in an agent with terminal/ADB access, and ask it to read [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md) and the [individual device audit guide](docs/USER_DEVICE_AUDIT.en.md). The assistant can then guide data collection, analyze components, prepare a reviewable plan, document before/after states, and organize the contribution.
 
-**A execução manual continua permitida** para quem possui conhecimento técnico de Android e ADB. A recomendação de IA não elimina a responsabilidade do usuário: nenhuma alteração no aparelho pode ocorrer sem autorização explícita, e toda contribuição deve ser revisada e sanitizada antes do envio.
+**Manual execution is still allowed** for people with technical Android and ADB knowledge. The AI recommendation does not remove user responsibility: no device change may happen without explicit authorization, and every contribution must be reviewed and sanitized before submission.
 
-## Tipos de contribuição
+## Contribution types
 
-| Contribuição | Onde enviar |
+| Contribution | Where to submit |
 |---|---|
-| Auditoria de um novo aparelho | Nova pasta em `reports/` + atualização do índice |
-| Complemento de uma auditoria existente | Pasta do mesmo aparelho, com revisão e data identificadas |
-| Correção de documentação | Arquivo correspondente em `README.md`, `docs/` ou neste guia |
-| Correção ou melhoria de script | `scripts/`, acompanhada de justificativa e validação |
-| Nova lista de componentes protegidos | `data/`, com evidências e justificativa técnica |
+| Audit of a new device | New folder under `reports/` + catalog update |
+| Addition to an existing audit | Same device folder, with revision and date clearly identified |
+| Documentation correction | Corresponding file in `README.md`, `docs/`, or this guide |
+| Script correction or improvement | `scripts/`, with justification and validation |
+| New protected-components list | `data/`, with evidence and technical justification |
 
-## 1. Preparar fork e branch
+## 1. Prepare a fork and branch
 
-Colaboradores sem acesso de escrita devem criar um fork pelo GitHub e trabalhar em uma branch exclusiva.
+Contributors without write access must create a GitHub fork and work on a dedicated branch.
 
-Com GitHub CLI:
+With GitHub CLI:
 
 ```bash
 gh auth login
@@ -34,103 +34,104 @@ gh repo fork luisfvmartins/clean-my-android --clone
 cd clean-my-android
 git remote add upstream https://github.com/luisfvmartins/clean-my-android.git
 git remote -v
-git switch -c audit/fabricante-modelo-android
+git switch -c audit/manufacturer-model-android
 ```
 
-Confirme:
-- `origin` aponta para seu fork.
-- `upstream` aponta para `luisfvmartins/clean-my-android`.
-- A branch de trabalho não é `main`.
+Confirm:
+- `origin` points to your fork.
+- `upstream` points to `luisfvmartins/clean-my-android`.
+- Your working branch is not `main`.
 
-## 2. Preparar uma auditoria
+## 2. Prepare an audit
 
-Antes de qualquer alteração no aparelho, siga o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md) e as [instruções para IA](AI_INSTRUCTIONS.md).
+Before making any device changes, follow the [individual device audit guide](docs/USER_DEVICE_AUDIT.en.md) and the [AI instructions](AI_INSTRUCTIONS.en.md).
 
-Uma contribuição de dispositivo deve:
-- identificar exatamente fabricante, modelo, codinome, Android/ROM e compilação quando disponíveis;
-- registrar o estado inicial antes de alterar qualquer coisa;
-- separar evidência observada, inferência técnica e hipótese;
-- apresentar plano de alteração e riscos antes da execução;
-- registrar apenas ações realmente autorizadas e executadas;
-- repetir as medições depois, em condições comparáveis;
-- documentar testes funcionais, limitações e reversões.
+A device contribution must:
+- identify the exact manufacturer, model, codename, Android/ROM, and build when available;
+- record the initial state before making changes;
+- distinguish observed evidence, technical inference, and hypotheses;
+- present a change plan and risks before execution;
+- record only actions actually authorized and performed;
+- repeat measurements afterward under comparable conditions;
+- document functional tests, limitations, and rollback procedures.
 
-Não use inventário de outro aparelho como se fosse do seu. Não aplique listas de pacotes de outro modelo.
+Do not use another device's inventory as if it were yours. Do not apply package lists from another model.
 
-## 3. Organizar os arquivos
+## 3. Organize files
 
-Crie uma pasta exclusiva seguindo a hierarquia `reports/<fabricante>/<modelo>/`, por exemplo:
+Create a dedicated folder following `reports/<manufacturer>/<model>/`, for example:
 
 ```text
 reports/samsung/galaxy-model/
 ├── README.md
-├── auditoria.md
-├── inventario-antes.json
-├── inventario-depois.json
-├── comparativo.json
-└── evidencias/
+├── audit.md
+├── inventory-before.json
+├── inventory-after.json
+├── comparison.json
+└── evidence/
     └── README.md
 ```
 
-A estrutura é flexível. Inclua somente arquivos que existam e sejam úteis. Não crie arquivos vazios para aparentar uma coleta completa.
+The structure is flexible. Include only files that exist and are useful. Do not create empty files to imply complete data collection.
 
-Atualize `reports/README.md` com uma linha para o aparelho. Não edite ou reorganize entradas de outros dispositivos sem necessidade.
+Update `reports/README.md` and `reports/README.en.md` with an entry for the device. Do not edit or reorganize other devices' entries unnecessarily.
 
-## 4. Privacidade antes do envio
+## 4. Privacy before submission
 
-O repositório e os Pull Requests são públicos. Faça uma revisão completa dos arquivos e imagens.
+The repository and Pull Requests are public. Review all files and images carefully.
 
-Nunca publique:
-- IMEI, MEID, número de série, identificadores de conta ou tokens;
-- endereços MAC, IP público, hostname privado ou detalhes que exponham sua rede;
-- números de telefone, e-mails, nomes de contatos ou notificações;
-- dados de localização, contas sincronizadas ou informações pessoais;
-- chaves de API, senhas, códigos de pareamento ou credenciais ADB.
+Never publish:
+- IMEI, MEID, serial number, account identifiers, or tokens;
+- MAC addresses, public IP addresses, private hostnames, or details exposing your network;
+- phone numbers, email addresses, contact names, or notifications;
+- location data, synced accounts, or personal information;
+- API keys, passwords, pairing codes, or ADB credentials.
 
-Mantenha dumps brutos localmente. Compartilhe apenas os dados sanitizados necessários para sustentar as conclusões. A remoção posterior de um arquivo não garante que uma informação publicada deixe de estar acessível no histórico Git.
+Keep raw dumps locally. Share only sanitized data needed to support the conclusions. Deleting a file later does not guarantee that published information disappears from Git history.
 
-## 5. Revisar e enviar
+## 5. Review and submit
 
 ```bash
 git status --short
 git diff --check
 git diff
-git add reports/SEU-DISPOSITIVO reports/README.md
-git commit -m "docs(audit): add <fabricante-modelo> device report"
+git add reports/YOUR-DEVICE reports/README.md reports/README.en.md
+git commit -m "docs(audit): add <manufacturer-model> device report"
 git push -u origin HEAD
 gh pr create --repo luisfvmartins/clean-my-android --base main
 ```
 
-Adapte o caminho e a mensagem de commit aos arquivos realmente alterados. Para contribuições apenas documentais ou de scripts, adicione os arquivos correspondentes ao `git add`.
+Adapt paths and commit messages to the files actually changed. For documentation-only or script contributions, add the corresponding files to `git add`.
 
-## 6. Critérios de revisão
+## 6. Review criteria
 
-Um Pull Request pode ser solicitado para ajustes ou recusado quando:
-- não identifica claramente o aparelho e a versão do sistema;
-- mistura dados observados com suposições;
-- apresenta métricas sem método ou condições de coleta;
-- omite riscos, efeitos colaterais ou formas de recuperação;
-- recomenda alterações perigosas ou universais;
-- contém dados pessoais, credenciais ou identificadores;
-- sobrescreve ou remove a contribuição de outro dispositivo;
-- não atualiza o catálogo quando adiciona uma auditoria.
+A Pull Request may be sent back for changes or rejected when it:
+- does not clearly identify the device and system version;
+- mixes observed data with assumptions;
+- presents metrics without a method or collection conditions;
+- omits risks, side effects, or recovery methods;
+- recommends dangerous or universal changes;
+- contains personal data, credentials, or identifiers;
+- overwrites or removes another device's contribution;
+- fails to update the catalog when adding an audit.
 
-A abertura do PR não representa aprovação automática. Após a revisão e o merge, os arquivos passam a integrar a coleção oficial na branch `main`.
+Opening a PR does not mean automatic approval. After review and merge, files become part of the official collection on the `main` branch.
 
-## Links úteis
+## Useful links
 
-- [Guia de auditoria individual](docs/USER_DEVICE_AUDIT.md)
-- [Catálogo de dispositivos](reports/README.md)
-- [Instruções para assistentes de IA](AI_INSTRUCTIONS.md)
-- [Repositório no GitHub](https://github.com/luisfvmartins/clean-my-android)
+- [Individual device audit guide](docs/USER_DEVICE_AUDIT.en.md)
+- [Device catalog](reports/README.en.md)
+- [AI assistant instructions](AI_INSTRUCTIONS.en.md)
+- [GitHub repository](https://github.com/luisfvmartins/clean-my-android)
+- [Portuguese contribution guide](CONTRIBUTING.md)
 
-## 7. Validação automática
+## 7. Automated validation
 
-Pull Requests direcionados à `main` executam o workflow **Validação do repositório**. Ele verifica:
+Pull Requests targeting `main` run the **Repository validation** workflow. It checks:
 
-- sintaxe de todos os arquivos JSON versionados;
-- estrutura básica dos arquivos `comparativo.json` (quando possuem o campo `metrics`);
-- sintaxe Bash dos scripts em `scripts/*.sh`, sem executá-los;
-- formato e duplicidade dos pacotes em `data/protected_essential_packages.txt`.
+- syntax of all versioned JSON files;
+- basic structure of `comparison.json` files (when they contain a `metrics` field);
+- Bash syntax of scripts in `scripts/*.sh`, without executing them;
+- format and duplicates in `data/protected_essential_packages.txt`.
 
-A validação é somente estática: não conecta via ADB, não instala dependências no aparelho e não altera dispositivos. Um resultado aprovado não substitui revisão técnica, checagem de privacidade nem testes funcionais. Corrija as falhas indicadas no log do GitHub Actions e atualize o mesmo Pull Request.
+Validation is static only: it does not connect through ADB, install dependencies on the device, or modify devices. A passing result does not replace technical review, privacy checks, or functional testing. Fix issues shown in GitHub Actions logs and update the same Pull Request.
