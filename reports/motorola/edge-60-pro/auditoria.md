@@ -1,5 +1,8 @@
 # Relatório Forense de Auditoria de Pacotes, Debloat, Segurança e Privacidade — Motorola Edge 60 Pro (`XT2507-1` / `cybert`)
 
+
+> **Nota de privacidade:** os identificadores dos 50 registros classificados como componentes de terceiros foram pseudonimizados. Os caminhos específicos de instalação em `/data/app` foram normalizados. As contagens agregadas e os estados registrados dos pacotes foram preservados. O inventário de origem não permite determinar se esses componentes foram instalados pelo usuário ou pré-carregados por um fornecedor.
+
 > [!WARNING]
 > **Classificação da Auditoria: PENDENTE DE VALIDAÇÃO**
 > Este documento consolida a auditoria técnica do processo de debloat, sandboxing e hardening realizado no smartphone **Motorola Edge 60 Pro (XT2507-1)**, codinome **`cybert`**, modelo de produto **`cybert_g_sys`**, com interface **Hello UI**.
