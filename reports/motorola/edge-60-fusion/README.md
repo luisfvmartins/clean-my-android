@@ -72,3 +72,10 @@ A documentação deste dispositivo está organizada nos seguintes arquivos:
 - [Catálogo Geral de Auditorias](../../README.pt-BR.md)
 - [Estatísticas do Projeto](../../../docs/ESTATISTICAS.md)
 - [Guia de Auditoria Individual](../../../docs/USER_DEVICE_AUDIT.pt-BR.md)
+
+
+## Versões em inglês
+
+- [Technical audit — English summary](audit.en.md)
+- [Before/after comparison — English summary](comparison-report.en.md)
+- [Change log — English summary](changes/change-log.en.md)
