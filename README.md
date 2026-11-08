@@ -118,8 +118,8 @@ Audits are device-specific and have different validation levels. Consult the [de
 
 | Device | Documentation | Status |
 |---|---|---|
-| Motorola Moto G54 5G (XT2343-1) | [Technical audit](docs/AUDITORIA_MOTO_G54_5G.md) | Inventory published; see report for scope and limitations |
-| Motorola Edge 60 Pro (XT2507-1) | [Report and evidence](reports/motorola/edge-60-pro/README.md) | Functional validation and confirmation of some data pending |
+| Motorola Moto G54 5G (XT2343-1) | [Technical audit (English summary)](docs/AUDITORIA_MOTO_G54_5G.en.md) · [Full report (Portuguese)](docs/AUDITORIA_MOTO_G54_5G.md) | Inventory published; see report for scope and limitations |
+| Motorola Edge 60 Pro (XT2507-1) | [Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md) | Functional validation and confirmation of some data pending |
 
 **A device appearing in the catalog does not mean every procedure has been approved for it.** Script compatibility is indicated separately and must not be inferred from the existence of a report.
 
@@ -162,8 +162,8 @@ Also read [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md) and [AI_INSTRUC
 
 ```text
 .
-├── AI_INSTRUCTIONS.md    # AI-assisted audit instructions (English)
-├── AI_INSTRUCTIONS.md       # AI-assisted audit instructions (Portuguese)
+├── AI_INSTRUCTIONS.md       # AI-assisted audit instructions (English)
+├── AI_INSTRUCTIONS.pt-BR.md # AI-assisted audit instructions (Portuguese)
 ├── data/                    # Inventories and protection lists
 ├── docs/                    # Guides and technical audits
 ├── reports/                 # Device-specific reports
