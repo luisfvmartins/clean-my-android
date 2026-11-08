@@ -99,7 +99,7 @@ def validate_statistics() -> None:
 
 
 MARKDOWN_LINK_RE = re.compile(
-    r"!? \[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^)\s])+)"
+    r"!?\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^)\s])+)"
     r"(?:\s+(?:\"[^\"]*\"|'[^']*'|\([^)]*\)))?\s*\)"
 )
 REFERENCE_DEFINITION_RE = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*(<[^>]+>|\S+)")
