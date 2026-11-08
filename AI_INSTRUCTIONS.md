@@ -18,7 +18,7 @@ A chat without terminal access can explain commands and analyze user-provided da
 
 1. Clone the repository and open its folder in your chosen assistant/agent.
 2. Connect and authorize the Android device through ADB.
-3. Ask the agent: **“Read AI_INSTRUCTIONS.en.md and docs/USER_DEVICE_AUDIT.md in full. First identify the device and perform the initial audit only; do not modify the device.”**
+3. Ask the agent: **“Read AI_INSTRUCTIONS.md and docs/USER_DEVICE_AUDIT.md in full. First identify the device and perform the initial audit only; do not modify the device.”**
 4. Review the diagnosis and proposed change plan before authorizing any intervention.
 
 Manual execution by technically experienced users is also allowed. The same evidence, authorization, safety, reversibility, and documentation requirements apply.
