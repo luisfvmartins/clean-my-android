@@ -3,7 +3,7 @@
 **Model:** XT2507-1 · **Codename:** `cybert`  
 **Interface:** Hello UI  
 **Android version:** pending canonical confirmation  
-<badge>Pending validation</badge>
+**Status:** Pending validation
 
 This folder contains the technical report, before/after package inventories, performance metrics, and a detailed history of debloating, sandboxing, and privacy-related actions performed on the **Motorola Edge 60 Pro (XT2507-1)**.
 
