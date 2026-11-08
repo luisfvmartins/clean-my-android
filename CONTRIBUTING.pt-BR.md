@@ -74,7 +74,7 @@ reports/samsung/galaxy-model/
 
 A estrutura é flexível. Inclua somente arquivos que existam e sejam úteis. Não crie arquivos vazios para aparentar uma coleta completa.
 
-Atualize `reports/README.pt-BR.md` com uma linha para o aparelho. Não edite ou reorganize entradas de outros dispositivos sem necessidade.
+Atualize os dois índices, `reports/README.md` (inglês) e `reports/README.pt-BR.md` (português), com uma linha para o aparelho. Não edite ou reorganize entradas de outros dispositivos sem necessidade.
 
 ## 4. Privacidade antes do envio
 
@@ -95,7 +95,7 @@ Mantenha dumps brutos localmente. Compartilhe apenas os dados sanitizados necess
 git status --short
 git diff --check
 git diff
-git add reports/SEU-DISPOSITIVO reports/README.pt-BR.md
+git add reports/SEU-DISPOSITIVO reports/README.md reports/README.pt-BR.md
 git commit -m "docs(audit): add <fabricante-modelo> device report"
 git push -u origin HEAD
 gh pr create --repo luisfvmartins/clean-my-android --base main
