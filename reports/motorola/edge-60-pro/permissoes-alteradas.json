@@ -71,74 +71,74 @@
       "status": "Executado e confirmado no dumpsys"
     },
     {
-      "package_name": "com.ubercab",
+      "package_name": "third_party_package_39",
       "app_name": "Uber",
       "category": "Terceiro",
       "permission": "android.permission.RECORD_AUDIO",
-      "command": "adb shell pm revoke --user 0 com.ubercab android.permission.RECORD_AUDIO",
+      "command": "adb shell pm revoke --user 0 third_party_package_39 android.permission.RECORD_AUDIO",
       "justification": "Aplicativo de transporte retinha acesso permanente ao microfone.",
       "status": "Executado com sucesso"
     },
     {
-      "package_name": "com.taxis99",
+      "package_name": "third_party_package_38",
       "app_name": "99 Táxi",
       "category": "Terceiro",
       "permission": "android.permission.READ_CONTACTS",
-      "command": "adb shell pm revoke --user 0 com.taxis99 android.permission.READ_CONTACTS",
+      "command": "adb shell pm revoke --user 0 third_party_package_38 android.permission.READ_CONTACTS",
       "justification": "Aplicativo de corridas solicitava acesso integral à agenda telefônica.",
       "status": "Executado com sucesso"
     },
     {
-      "package_name": "com.taxis99",
+      "package_name": "third_party_package_38",
       "app_name": "99 Táxi",
       "category": "Terceiro",
       "permission": "android.permission.CAMERA",
-      "command": "adb shell pm revoke --user 0 com.taxis99 android.permission.CAMERA",
+      "command": "adb shell pm revoke --user 0 third_party_package_38 android.permission.CAMERA",
       "justification": "Acesso contínuo à câmera revogado.",
       "status": "Executado com sucesso"
     },
     {
-      "package_name": "com.minhaunifique.unifique",
+      "package_name": "third_party_package_28",
       "app_name": "Minha Unifique",
       "category": "Terceiro",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
-      "command": "adb shell pm revoke --user 0 com.minhaunifique.unifique android.permission.ACCESS_COARSE_LOCATION",
+      "command": "adb shell pm revoke --user 0 third_party_package_28 android.permission.ACCESS_COARSE_LOCATION",
       "justification": "Aplicativo de fatura/atendimento não necessita de localização geográfica do cliente.",
       "status": "Executado com sucesso"
     },
     {
-      "package_name": "com.brave.browser",
+      "package_name": "third_party_package_14",
       "app_name": "Brave Browser",
       "category": "Terceiro",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
-      "command": "adb shell pm revoke --user 0 com.brave.browser android.permission.ACCESS_COARSE_LOCATION",
+      "command": "adb shell pm revoke --user 0 third_party_package_14 android.permission.ACCESS_COARSE_LOCATION",
       "justification": "Navegador com foco em privacidade não deve acessar localização do sistema operacional.",
       "status": "Executado com sucesso"
     },
     {
-      "package_name": "br.com.ajfans",
+      "package_name": "third_party_package_02",
       "app_name": "AJ Fans",
       "category": "Terceiro",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
-      "command": "adb shell pm revoke --user 0 br.com.ajfans android.permission.ACCESS_COARSE_LOCATION",
+      "command": "adb shell pm revoke --user 0 third_party_package_02 android.permission.ACCESS_COARSE_LOCATION",
       "justification": "Aplicativo esportivo coletava geolocalização desnecessária via Salesforce SDK.",
       "status": "Executado com sucesso"
     }
   ],
   "special_permissions_attempted": [
     {
-      "package_name": "br.org.app.barilife",
+      "package_name": "third_party_package_08",
       "app_name": "BariLife",
       "permission": "android.permission.ACCESS_LOCAL_NETWORK",
-      "command": "adb shell pm revoke --user 0 br.org.app.barilife android.permission.ACCESS_LOCAL_NETWORK",
+      "command": "adb shell pm revoke --user 0 third_party_package_08 android.permission.ACCESS_LOCAL_NETWORK",
       "justification": "Tentativa de revogação de permissão especial de varredura de rede local.",
       "status": "Não efetivado via pm revoke (permissão permaneceu granted=true no dumpsys por não ser permissão runtime padrão)"
     },
     {
-      "package_name": "com.sirma.mobile.bible.android",
+      "package_name": "third_party_package_37",
       "app_name": "YouVersion Bible",
       "permission": "android.permission.ACCESS_LOCAL_NETWORK",
-      "command": "adb shell pm revoke --user 0 com.sirma.mobile.bible.android android.permission.ACCESS_LOCAL_NETWORK",
+      "command": "adb shell pm revoke --user 0 third_party_package_37 android.permission.ACCESS_LOCAL_NETWORK",
       "justification": "Tentativa de revogação de permissão especial de varredura de rede local.",
       "status": "Não efetivado via pm revoke (permissão permaneceu granted=true no dumpsys por não ser permissão runtime padrão)"
     }
