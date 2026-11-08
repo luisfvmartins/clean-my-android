@@ -28,6 +28,6 @@ Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requ
 
 ## Atualização
 
-O workflow [Atualizar painel de contribuições](../.github/workflows/contribution-dashboard.yml) executa diariamente e também pode ser iniciado manualmente pela aba Actions. Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token pessoal é armazenado no repositório.
+O workflow [Atualizar painel de contribuições](../.github/workflows/contribution-dashboard.yml) gera as versões em português e inglês a partir da mesma resposta da API do GitHub. Executa após atualizações na branch main, diariamente e também pode ser iniciado manualmente pela aba Actions. Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token pessoal é armazenado no repositório.
 
 Consulte também as [estatísticas do projeto](ESTATISTICAS.md) e o [catálogo de auditorias](../reports/README.md).
