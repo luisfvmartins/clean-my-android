@@ -39,7 +39,7 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 | **Memória RAM Livre** | ~4.5 GB | **~7.2 GB** | **+2.7 GB livres** (+58,7%) |
 | **Armazenamento Livre (`/data`)** | 193 GB livres | **~197 GB livres** | **~4 GB recuperados** (ganho agregado da partição; não mensurado por app) |
 | **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para o Usuário 0 |
-| **Aplicativos Habilitados** | 441 pacotes ativos | **257 pacotes ativos** | -184 pacotes ativos em execução |
+| **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | -193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes** | +184 pacotes desativados via ADB |
 | **Adwares Monitorados em RAM** | Glance, Taboola, InMobi ativos (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão |
 | **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB** | Processo eliminado da memória RAM |
