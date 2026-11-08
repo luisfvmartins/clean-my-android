@@ -116,23 +116,23 @@ reports/
         │   ├── network.txt
         │   └── screenshots/
         ├── changes/
-    │   ├── change-log.md
-    │   ├── disabled-packages.txt
-    │   ├── removed-packages.txt
-    │   ├── permission-changes.txt
-    │   └── appops-changes.txt
+        │   ├── change-log.md
+        │   ├── disabled-packages.txt
+        │   ├── removed-packages.txt
+        │   ├── permission-changes.txt
+        │   └── appops-changes.txt
         ├── after/
-    │   ├── device-info.txt
-    │   ├── packages.txt
-    │   ├── permissions.txt
-    │   ├── appops.txt
-    │   ├── users.txt
-    │   ├── memory.txt
-    │   ├── storage.txt
-    │   ├── battery.txt
-    │   ├── processes.txt
-    │   ├── network.txt
-    │   └── screenshots/
+        │   ├── device-info.txt
+        │   ├── packages.txt
+        │   ├── permissions.txt
+        │   ├── appops.txt
+        │   ├── users.txt
+        │   ├── memory.txt
+        │   ├── storage.txt
+        │   ├── battery.txt
+        │   ├── processes.txt
+        │   ├── network.txt
+        │   └── screenshots/
         └── comparison-report.md
 ```
 
