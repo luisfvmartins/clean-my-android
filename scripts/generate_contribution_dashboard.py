@@ -11,6 +11,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data/device_catalog.json"
 OUTPUT = ROOT / "docs/EVOLUCAO_CONTRIBUICOES.md"
+OUTPUT_EN = ROOT / "docs/EVOLUCAO_CONTRIBUICOES.en.md"
 REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "luisfvmartins/clean-my-android")
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 
@@ -40,7 +41,7 @@ def merged_pull_requests() -> list[dict]:
                     break
     return merged
 
-def generate(pulls: list[dict]) -> str:
+def dashboard_context(pulls: list[dict]):
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
     devices = catalog.get("devices", [])
     years = Counter()
@@ -52,6 +53,11 @@ def generate(pulls: list[dict]) -> str:
         if author:
             authors.add(author)
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return devices, years, authors, updated
+
+
+def generate(pulls: list[dict], context) -> str:
+    devices, years, authors, updated = context
     lines = [
         "# Evolução das contribuições", "",
         "Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requests "
@@ -79,21 +85,64 @@ def generate(pulls: list[dict]) -> str:
         "- O painel não mede qualidade, linhas úteis, testes em aparelho ou homologação.",
         "- Os dados refletem o repositório no momento da atualização.", "",
         "## Atualização", "",
-        "O workflow Atualizar painel de contribuições executa diariamente e também pode ser iniciado "
-        "manualmente pela aba Actions. Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token "
-        "pessoal é armazenado no repositório.", "",
+        "O workflow Atualizar painel de contribuições gera as versões em português e inglês a partir da mesma resposta da API do GitHub. "
+        "Executa após atualizações na branch main, diariamente e também pode ser iniciado manualmente pela aba Actions. "
+        "Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token pessoal é armazenado no repositório.", "",
         "Consulte também as [estatísticas do projeto](ESTATISTICAS.md) e o [catálogo de auditorias](../reports/README.md).", ""
     ])
     return "\n".join(lines)
 
+
+def generate_english(pulls: list[dict], context) -> str:
+    devices, years, authors, updated = context
+    lines = [
+        "# Contribution Progress", "",
+        "Dashboard calculated using the GitHub REST API. The count includes closed Pull Requests "
+        "with a populated merged_at field; rejected or closed PRs without a merge are excluded.", "",
+        f"**Updated:** {updated}  ",
+        f"**Repository:** [{REPOSITORY}](https://github.com/{REPOSITORY})", "",
+        "## Indicators", "",
+        f"- **Merged Pull Requests:** {len(pulls)}",
+        f"- **Distinct authors with merged PRs:** {len(authors)}",
+        f"- **Cataloged devices:** {len(devices)}",
+        f"- **Represented manufacturers:** {len({d.get('manufacturer') for d in devices if d.get('manufacturer')})}", "",
+        "## Merged Pull Requests by year", "",
+        "| Merge year | Pull Requests |", "|---:|---:|",
+    ]
+    for year in sorted(years):
+        lines.append(f"| {year} | {years[year]} |")
+    if not years:
+        lines.append("| No merges yet | 0 |")
+    lines.extend([
+        "", "## Scope and limitations", "",
+        "- Distinct authors are counted by the GitHub login associated with the author of a merged PR. "
+        "This does not represent verified individuals or current active members.",
+        "- A PR represents an integrated contribution but may contain multiple files or devices.",
+        "- Device and manufacturer counts come from data/device_catalog.json; PR activity comes from the GitHub API.",
+        "- The dashboard does not measure quality, useful lines, device testing, or script approval.",
+        "- Data reflects the repository at the time of the update.", "",
+        "## Updates", "",
+        "The contribution dashboard workflow generates both Portuguese and English pages from the same "
+        "GitHub API response. It runs after updates to the main branch, daily, and can also be started "
+        "manually from the Actions tab. It uses the GITHUB_TOKEN provided by GitHub Actions; no personal "
+        "token is stored in the repository.", "",
+        "Also see [project statistics](ESTATISTICAS.en.md) and the [audit catalog](../reports/README.md).", ""
+    ])
+    return "\n".join(lines)
+
+
 def main() -> int:
     try:
-        content = generate(merged_pull_requests())
+        pulls = merged_pull_requests()
+        context = dashboard_context(pulls)
+        content = generate(pulls, context)
+        content_en = generate_english(pulls, context)
     except (OSError, UnicodeError, json.JSONDecodeError, RuntimeError) as exc:
         print(f"ERRO: {exc}", file=sys.stderr)
         return 1
     OUTPUT.write_text(content, encoding="utf-8")
-    print(f"OK: painel gerado em {OUTPUT.relative_to(ROOT)}")
+    OUTPUT_EN.write_text(content_en, encoding="utf-8")
+    print(f"OK: painéis gerados em {OUTPUT.relative_to(ROOT)} e {OUTPUT_EN.relative_to(ROOT)}")
     return 0
 
 if __name__ == "__main__":

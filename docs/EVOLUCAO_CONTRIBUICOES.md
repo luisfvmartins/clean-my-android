@@ -2,12 +2,12 @@
 
 Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requests fechadas com campo merged_at preenchido; PRs rejeitadas ou fechadas sem merge não entram.
 
-**Atualizado em:** 2026-11-07 (UTC)  
+**Atualizado em:** 2026-11-08 (UTC)  
 **Repositório:** [luisfvmartins/clean-my-android](https://github.com/luisfvmartins/clean-my-android)
 
 ## Indicadores
 
-- **Pull Requests incorporadas:** 7
+- **Pull Requests incorporadas:** 25
 - **Autores distintos com PR incorporada:** 1
 - **Dispositivos catalogados:** 2
 - **Fabricantes representados:** 1
@@ -16,7 +16,7 @@ Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requ
 
 | Ano de incorporação | Pull Requests |
 |---:|---:|
-| 2026 | 7 |
+| 2026 | 25 |
 
 ## Escopo e limitações
 
@@ -28,6 +28,6 @@ Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requ
 
 ## Atualização
 
-O workflow [Atualizar painel de contribuições](../.github/workflows/contribution-dashboard.yml) executa diariamente e também pode ser iniciado manualmente pela aba Actions. Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token pessoal é armazenado no repositório.
+O workflow [Atualizar painel de contribuições](../.github/workflows/contribution-dashboard.yml) gera as versões em português e inglês a partir da mesma resposta da API do GitHub. Executa após atualizações na branch main, diariamente e também pode ser iniciado manualmente pela aba Actions. Usa GITHUB_TOKEN fornecido pelo GitHub Actions; nenhum token pessoal é armazenado no repositório.
 
 Consulte também as [estatísticas do projeto](ESTATISTICAS.md) e o [catálogo de auditorias](../reports/README.md).

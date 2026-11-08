@@ -7,7 +7,7 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 ## Indicators
 
-- **Merged Pull Requests:** 8
+- **Merged Pull Requests:** 25
 - **Distinct authors with merged PRs:** 1
 - **Cataloged devices:** 2
 - **Represented manufacturers:** 1
@@ -16,7 +16,7 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 | Merge year | Pull Requests |
 |---:|---:|
-| 2026 | 8 |
+| 2026 | 25 |
 
 ## Scope and limitations
 
@@ -28,6 +28,6 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 ## Updates
 
-The workflow updates `docs/EVOLUCAO_CONTRIBUICOES.md` (Portuguese) daily and can also be started manually from the Actions tab. This English page is a static translation and is not refreshed by that workflow; consult the Portuguese page for the latest counts and update date. The workflow uses the `GITHUB_TOKEN` provided by GitHub Actions; no personal token is stored in the repository.
+The workflow generates both the Portuguese and English pages from the same GitHub API response. It runs after updates to the main branch, daily, and can also be started manually from the Actions tab. Both pages share the same counts and update timestamp. The workflow uses the GITHUB_TOKEN provided by GitHub Actions; no personal token is stored in the repository.
 
 Also see [project statistics](ESTATISTICAS.en.md) and the [audit catalog](../reports/README.md).
