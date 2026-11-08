@@ -14,7 +14,7 @@ Os sete lotes detalhados permanecem em `docs/auditorias/moto-g54/` para preserva
 
 ## Privacidade e interpretação
 
-A versão pública omite 29 aplicativos instalados pelo usuário e publica os itens 30–462, totalizando 433 componentes. Dados identificáveis e dumps brutos devem permanecer privados. Consulte o relatório principal para escopo, método, limitações e notas de segurança.
+A versão pública omite 29 aplicativos instalados pelo usuário e publica 433 componentes: 394 pacotes de sistema/fabricante e 39 módulos APEX. Dados identificáveis e dumps brutos devem permanecer privados. Consulte o relatório principal para escopo, método, limitações e notas de segurança.
 
 A publicação do inventário não significa que todos os componentes foram testados individualmente nem que os procedimentos sejam aplicáveis a outros modelos, regiões ou versões de firmware.
 
