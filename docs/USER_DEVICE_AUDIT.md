@@ -92,7 +92,7 @@ reports/
 
 **Contribution rule:** each PR must add a new device folder, or update only that same device's folder when making an identified revision. Do not replace, delete, or modify other contributors' reports. Every approved PR should expand the collection of documented devices in the main branch.
 
-`reports/README.md` is the collection index. When adding an audit, include a link to the new report with manufacturer/model, Android/ROM version, and audit date. Do not add unverified details.
+`reports/README.md` (English) and `reports/README.pt-BR.md` (Portuguese) are the collection indexes. When adding an audit, update both with a link to the new report, manufacturer/model, Android/ROM version, and audit date. Do not add unverified details.
 
 ## 4. Device folder structure
 
@@ -301,7 +301,7 @@ Before submission:
 3. Remove personal identifiers, credentials, and raw dumps.
 4. Ensure the report describes only the identified device.
 5. Preserve existing reports.
-6. Update the device catalog.
+6. Update both device catalog indexes: `reports/README.md` (English) and `reports/README.pt-BR.md` (Portuguese).
 7. Run the repository validation workflow.
 8. Push the branch to your fork.
 9. Open a Pull Request against `main`.
