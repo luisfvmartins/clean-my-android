@@ -406,3 +406,8 @@ O Pull Request é uma proposta de contribuição. Após aprovação e merge, a n
 ## 13. Cobertura pacote por pacote
 
 Leia [Auditoria pacote por pacote](PACKAGE_BY_PACKAGE_AUDIT.pt-BR.md) integralmente e aplique a matriz a cada pacote detectado. Não agrupe package names nem omita pacotes. Reconcilie inventariados, analisados e pendentes. Documente função, evidências, permissões, AppOps/shared UID, componentes, dependências, risco, impacto, recomendação, reversão e confiança. Gere auditoria detalhada, resumo e plano de mudanças. Pacotes desconhecidos permanecem pendentes; nenhuma ação sem consentimento explícito.
+
+## Isolamento de fabricante — regra para a auditoria
+
+A identificação do dispositivo precede qualquer consulta de pacotes OEM. Trabalhe com inventário ADB do aparelho atual e documentação específica do fabricante confirmado. Não misture referências ou package names de Samsung, Motorola, Xiaomi, Pixel, TCL ou outros fabricantes. Uma lista de referência não comprova instalação/presença e não autoriza ação. Exemplos OEM ficam em arquivos separados e rotulados por modelo/build; desconhecidos ficam pendentes. Validar também componentes Android genéricos no build concreto.
+
