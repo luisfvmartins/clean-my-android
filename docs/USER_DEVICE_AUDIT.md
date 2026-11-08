@@ -330,3 +330,8 @@ The scripts in this repository are read-only by default. Their limited apply fun
 ## 13. Package-by-package coverage
 
 Read [Package-by-package audit](PACKAGE_BY_PACKAGE_AUDIT.md) in full and apply its matrix to every detected package. Do not combine package names or omit packages. Reconcile inventoried, analyzed, and pending counts. Document function, evidence, permissions, AppOps/shared UID, components, dependencies, risk, impact, recommendation, rollback, and confidence. Produce detailed audit, summary, and change plan. Unknown packages remain pending; no action without explicit consent.
+
+## Manufacturer isolation — audit rule
+
+Device identification must precede OEM package research. Use the current device's ADB inventory and documentation for the confirmed manufacturer only. Do not mix Samsung, Motorola, Xiaomi, Pixel, TCL, or other OEM package references. A reference list does not prove package presence or authorize action. Keep OEM examples in separate files labeled by model/build; unknowns remain pending. Validate generic Android components on the actual build as well.
+
