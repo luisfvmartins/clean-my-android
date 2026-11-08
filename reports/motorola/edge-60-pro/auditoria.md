@@ -8,6 +8,13 @@
 
 ---
 
+> [!CAUTION]
+> **Conflito com a lista de componentes protegidos:** uma revisão posterior encontrou 18 pacotes presentes tanto em `pacotes-desativados.txt` quanto em `data/protected_essential_packages.txt`. A interseção inclui componentes de discagem e SMS, emergência, SIM Toolkit, Bluetooth, contatos e serviços do sistema.
+>
+> Isso não confirma o estado atual do aparelho nem comprova falha funcional, mas conflita com as barreiras de segurança atuais do projeto. O registro é histórico, não uma recomendação. **Não reproduza essa lista em outros aparelhos.** O estado real deve ser verificado no dispositivo; qualquer restauração exige avaliação individual e validação presencial de chamadas, SMS, SIM, emergência, Bluetooth e contatos.
+
+---
+
 ## 1. Recuperação dos Dados e Cadeia de Custódia Forense
 
 ### 1.1. Proveniência e Contexto Histórico
