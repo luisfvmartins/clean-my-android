@@ -1,6 +1,9 @@
 name: Atualizar painel de contribuições
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "17 6 * * *"
   workflow_dispatch:
