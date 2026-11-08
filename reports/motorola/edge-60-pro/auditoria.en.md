@@ -162,7 +162,7 @@ Because these settings were applied at UID level, they may affect all processes/
 
 ### 5.6 Permission changes
 
-The source report records 13 runtime permission revocations, involving Motorola Camera, Motorola SIM settings, Google external services, Companion Device Manager, Google eUICC, third-party ride-hailing app, 99, third-party carrier app, third-party browser, and another user app.
+The source report records 13 runtime permission revocations, involving Motorola Camera, Motorola SIM settings, Google external services, Companion Device Manager, Google eUICC, third-party ride-hailing apps, a third-party carrier app, third-party browser, and another user app.
 
 It also records attempts to revoke `android.permission.ACCESS_LOCAL_NETWORK` from five applications. A later `dumpsys package` inspection still showed `granted=true`; the standard `pm revoke` command did not revoke this special permission.
 
