@@ -133,6 +133,7 @@ Pull Requests targeting `main` run the **Repository validation** workflow. It ch
 - basic structure of `comparison.json` files (when they contain a `metrics` field);
 - Bash syntax of scripts in `scripts/*.sh`, without executing them;
 - format and duplicates in `data/protected_essential_packages.txt`;
-- consistency of the generated `docs/ESTATISTICAS.md` with `data/device_catalog.json`.
+- consistency of the generated `docs/ESTATISTICAS.md` with `data/device_catalog.json`;
+- existence of local Markdown link destinations across the repository.
 
 Validation is static only: it does not connect through ADB, install dependencies on the device, or modify devices. A passing result does not replace technical review, privacy checks, or functional testing. Fix issues shown in GitHub Actions logs and update the same Pull Request.
