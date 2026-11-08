@@ -12,7 +12,7 @@ This folder contains the device's component inventory, split into batches for ea
 |---|---|---:|---|
 | 2 | Google, GMS, Mainline APKs, and proprietary services | 30–111 (82) | [English translation](lote-02-ecossistema-google.en.md) · [Portuguese source](lote-02-ecossistema-google.md) |
 | 3 | Motorola and Lenovo | 112–199 (88) | [English translation](lote-03-motorola-lenovo.en.md) · [Portuguese source](lote-03-motorola-lenovo.md) |
-| 4 | Commercial partners, carriers, and hardware | 200–224 (25) | [Batch 4](lote-04-parceiros-comerciais-e-hardware.md) |
+| 4 | Commercial partners, carriers, and hardware | 200–224 (25) | [English translation](lote-04-parceiros-comerciais-e-hardware.en.md) · [Portuguese source](lote-04-parceiros-comerciais-e-hardware.md) |
 | 5 | Android AOSP base system | 225–296 (72) | [English translation](lote-05-sistema-base-aosp.en.md) · [Portuguese source](lote-05-sistema-base-aosp.md) |
 | 6 | AOSP, Google Mainline, and MediaTek RRO overlays | 297–358 (62) | [English translation](lote-06-overlays-aosp-google-mediatek.en.md) · [Portuguese source](lote-06-overlays-aosp-google-mediatek.md) |
 | 7 | Motorola overlays, regional carriers, and eUICC/eSIM | 359–423 (65) | [English translation](lote-07-overlays-motorola-operadoras-esim.en.md) · [Portuguese source](lote-07-overlays-motorola-operadoras-esim.md) |
@@ -28,4 +28,4 @@ This folder contains the device's component inventory, split into batches for ea
 - See the main report for methodology, limitations, operational history, rollback, and recommendations.
 - A published inventory does not mean a debloating script has been approved for this device.
 
-Batches 2, 3, 5, 6, 7, and 8 now have complete English translations alongside their Portuguese sources. Batch 4 remains available in Portuguese and is still awaiting translation. The complete inventory contains 462 components, with the English translation covering items 424–462 in this final batch. Package names, identifiers, commands, and technical evidence are preserved in their original form.
+All inventory batches with published public records (Batches 2 through 8, covering items 30–462) now have complete English translations alongside their Portuguese sources. Batch 1 (items 1–29) remains intentionally omitted from the public catalog to protect the device owner's privacy. With Batch 4 completed, the Moto G54 inventory translation covers all 462/462 components documented in the device audit. Package names, identifiers, commands, and technical evidence are preserved in their original form.
