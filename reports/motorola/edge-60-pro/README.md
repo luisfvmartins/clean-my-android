@@ -101,4 +101,4 @@ reports/motorola/edge-60-pro/
 - ⚙️ [**Permissões e AppOps Alterados (`permissoes-alteradas.json`)**](permissoes-alteradas.json)
 - 📊 [**Comparativo de Desempenho (`comparativo.json`)**](comparativo.json)
 - 🔒 [**Evidências e Coleta Complementar (`evidencias/README.md`)**](evidencias/README.md)
-- 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../../README.md)
+- 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../../README.pt-BR.md)
