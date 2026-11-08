@@ -30,6 +30,21 @@
       "component_count_status": "mapeado",
       "report": "reports/motorola/edge-60-pro/README.md",
       "catalog": "reports/motorola/edge-60-pro/README.md"
+    },
+    {
+      "id": "motorola-edge-60-fusion",
+      "manufacturer": "Motorola",
+      "model": "Edge 60 Fusion",
+      "model_code": "scout_g_sysn",
+      "android_version": "16",
+      "android_version_status": "confirmada",
+      "audit_status": "Auditoria e debloat concluídos",
+      "component_count": 486,
+      "component_count_label": "pacotes mapeados no inventário inicial",
+      "component_count_note": "Inventário inicial com 486 pacotes; 155 pacotes neutralizados (67 pré-desativados + 88 neutralizados via ADB) e 343 ativos no Usuário 0 (incluindo 12 substitutos FOSS).",
+      "component_count_status": "auditado",
+      "report": "reports/motorola/edge-60-fusion/README.md",
+      "catalog": "reports/motorola/edge-60-fusion/README.md"
     }
   ]
 }

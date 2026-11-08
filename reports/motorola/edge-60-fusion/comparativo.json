@@ -1,0 +1,81 @@
+{
+  "device_model": "Motorola Edge 60 Fusion",
+  "model_code": "motorola_edge_60_fusion / scout_g_sysn",
+  "codename": "scout",
+  "platform": "mt6878 (MediaTek Dimensity 7300)",
+  "architecture": "aarch64 (arm64-v8a)",
+  "os_version": "Android 16 (API Level 36 - VanillaIceCream), Build W1VCS36H.14-20-19-9, Patch 2026-09-01",
+  "audit_period": "2026-11-07 a 2026-11-08",
+  "metrics": [
+    {
+      "indicator": "Memória RAM Livre",
+      "before": "~2.750 MB livres (aprox. 2.750.000 KB)",
+      "after": "~4.153 MB a 4.573 MB livres (aprox. 4.153.871 KB a 4.573.403 KB)",
+      "variation": "+1,40 GB a +1,82 GB de RAM disponível (+50.9% a +66.3% de ganho de espaço livre sustentado)",
+      "evidence": "dumpsys meminfo medido na linha de base e pós-Etapas 8, 12 e 14"
+    },
+    {
+      "indicator": "Memória RAM Usada (Used PSS)",
+      "before": "~3.800 MB PSS em execução residente",
+      "after": "~2.721 MB a 2.881 MB PSS",
+      "variation": "Queda sustentada de ~920 MB a 1.080 MB de processos em segundo plano",
+      "evidence": "dumpsys meminfo PSS aggregation"
+    },
+    {
+      "indicator": "Quantidade Total de Pacotes Catalogados",
+      "before": "486 pacotes catalogados no firmware original",
+      "after": "343 pacotes ativos no Usuário 0 (incluindo 12 substitutos FOSS instalados)",
+      "variation": "155 pacotes neutralizados (67 desativados de fábrica + 88 desativados/desinstalados/bloqueados via ADB)",
+      "evidence": "before/packages-initial.txt vs after/packages-final.txt e change-log.md"
+    },
+    {
+      "indicator": "Pacotes Desativados de Fábrica",
+      "before": "67 pacotes inativos no firmware stock retail",
+      "after": "67 pacotes mantidos inativos",
+      "variation": "Preservados inalterados",
+      "evidence": "pm list packages -d no inventário inicial"
+    },
+    {
+      "indicator": "Pacotes Neutralizados via ADB (Debloat & Sandboxing)",
+      "before": "0 pacotes modificados",
+      "after": "88 pacotes neutralizados (83 desativados/desinstalados para Usuário 0 + 5 bloqueados via AppOps/IME)",
+      "variation": "+88 pacotes neutralizados na sessão ADB",
+      "evidence": "Registros de execução Etapas 1 a 14 em changes/change-log.md"
+    },
+    {
+      "indicator": "Permissões Sensíveis e Rastreamento de Satélite",
+      "before": "Localização precisa ativa em mais de 20 aplicativos comerciais, redes sociais e birôs",
+      "after": "ACCESS_FINE_LOCATION revogada em 19 apps de terceiros; escuta contínua de microfone DSP e histórico 24/7 desativados",
+      "variation": "Eliminação do rastreamento de localização e acústico em background",
+      "evidence": "dumpsys package em cada app pós-revogação e disable-user nos componentes de escuta"
+    },
+    {
+      "indicator": "Armazenamento Livre (/data)",
+      "before": "Armazenamento inicial registrado em partição interna",
+      "after": "Ganho agregado observado pós-expurgo de caches e atualizações de pacotes desativados",
+      "variation": "Ganho agregado na partição /data; valor individual por pacote NÃO mensurado isoladamente",
+      "evidence": "df -h /data observado; ganho isolado por pacote registrado como não medido"
+    },
+    {
+      "indicator": "Consumo de Bateria e Comportamento Térmico",
+      "before": "Não medido sob protocolo padronizado de 24h",
+      "after": "Pendente de validação de longo prazo pelo usuário",
+      "variation": "Sem medição isolada em ciclo fechado; ganho térmico/bateria não inferido artificialmente",
+      "evidence": "Não medido em ciclo completo controlado"
+    },
+    {
+      "indicator": "Estabilidade e Integridade de Aplicativos Bancários",
+      "before": "Banco Inter e Nubank ativos",
+      "after": "Banco Inter e Nubank 100% operacionais com Play Integrity passando",
+      "variation": "Nenhuma quebra de integridade ou detecção de tampering",
+      "evidence": "Testes funcionais de autenticação biométrica e Pix confirmados sem alertas"
+    },
+    {
+      "indicator": "Testes Funcionais de Comunicação (Voz e SMS)",
+      "before": "Google Dialer e Google Messages padrões",
+      "after": "Fossify Phone (ROLE_DIALER) e Fossify Messages (ROLE_SMS) operacionais",
+      "variation": "Chamadas de voz e SMS operando via suíte de código aberto",
+      "evidence": "Verificação de funções telefônicas e papéis padrão via RoleManager"
+    }
+  ]
+}
