@@ -1,6 +1,6 @@
 # Relatório histórico — Motorola Edge 60 Pro (`XT2507-1`)
 
-> **Arquivo legado:** este resumo foi preservado da estrutura anterior à reorganização do repositório. Os arquivos de auditoria e evidências foram organizados no diretório canônico [`reports/motorola/edge-60-pro/`](). A classificação continua **pendente de validação**; este documento não é uma lista de execução nem uma homologação.
+> **Arquivo legado:** este resumo foi preservado da estrutura anterior à reorganização do repositório. Os arquivos de auditoria e evidências foram organizados no diretório canônico [`reports/motorola/edge-60-pro/`](README.md). A classificação continua **pendente de validação**; este documento não é uma lista de execução nem uma homologação.
 
 [![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](auditoria.md)
 [![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](auditoria.md)
