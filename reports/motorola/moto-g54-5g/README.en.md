@@ -20,6 +20,6 @@ Publishing the inventory does not mean every component was individually tested o
 
 ## Navigation
 
-- [Audit catalog (English)](../../README.en.md)
+- [Audit catalog (English)](../../README.md)
 - [Main report (Portuguese)](../../../docs/AUDITORIA_MOTO_G54_5G.md)
 - [Inventory batches index (English)](../../../docs/auditorias/moto-g54/README.en.md)
