@@ -183,7 +183,7 @@ Each device must have its own folder under `reports/`. A contribution must prese
 
 Every approved and merged Pull Request expands the public knowledge base. Do not alter or replace another device's audit to add your own.
 
-## Documentation and links
+## Language coverage\n\nThe main project guides, AI instructions, contribution guide, and device catalog are available in English. Some detailed historical audit reports and raw component inventories remain in Portuguese; their package identifiers and collected evidence are preserved unchanged. English summaries are provided where practical.\n\n## Documentation and links
 
 - [Audit catalog (English)](reports/README.en.md)
 - [Individual device audit guide (English)](docs/USER_DEVICE_AUDIT.en.md)
