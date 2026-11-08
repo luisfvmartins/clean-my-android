@@ -45,6 +45,21 @@
       "component_count_status": "auditado",
       "report": "reports/motorola/edge-60-fusion/README.md",
       "catalog": "reports/motorola/edge-60-fusion/README.md"
+    },
+    {
+      "id": "samsung-galaxy-a30s",
+      "manufacturer": "Samsung",
+      "model": "Galaxy A30s",
+      "model_code": "SM-A307GT",
+      "android_version": "11",
+      "android_version_status": "confirmada",
+      "audit_status": "Auditoria e otimização cirúrgica concluídas",
+      "component_count": 392,
+      "component_count_label": "pacotes catalogados no firmware de fábrica",
+      "component_count_note": "392 pacotes catalogados no firmware original; 48 pacotes neutralizados no Usuário 0 (46 desativados + 2 desinstalados) e 343 ativos.",
+      "component_count_status": "auditado",
+      "report": "reports/samsung/galaxy-a30s/README.md",
+      "catalog": "reports/samsung/galaxy-a30s/README.md"
     }
   ]
 }

@@ -8,7 +8,7 @@
 >
 > **Translation status:** Complete English translation of inventory items 30–111. Package identifiers, technical values, permissions, paths, and evidence are preserved from the Portuguese source. The translation does not independently validate the original audit findings.
 
-### 4.2 Batch 2 — Google ecosystem, GMS, Mainline APKs, and proprietary services
+### 4.2 Batch 2 — Google ecosystem, GMS, Mainline APKs, and proprietary services (82 packages: Items 30–111)
 
 | # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rationale | FOSS alternative | Link | Impact |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|

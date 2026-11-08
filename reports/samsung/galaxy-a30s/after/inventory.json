@@ -957,7 +957,7 @@
     "code_path": "/data/app/~~7lpHFxzbUI7-d8Yo3o80Sg==/com.samsung.shop-j-dpRn4lLyNGGuqHKwEp_Q==",
     "installer": "com.samsung.android.app.omcagent",
     "is_system": false,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Bloatware / Parceiros Comerciais",
     "risk_level": "Baixo",
     "recommendation": "Desinstalar (--user 0)",
@@ -5023,7 +5023,7 @@
     "code_path": "/system/priv-app/GameOptimizingService",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung Games / Throttling",
     "risk_level": "Baixo",
     "recommendation": "Desativar (--user 0)",
@@ -5032,7 +5032,7 @@
     "function_probable": "Controle de clock e telemetria de inicialização de jogos",
     "reversal_command": "adb shell pm enable com.samsung.android.game.gos",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.forest": {
     "package_name": "com.samsung.android.forest",
@@ -6068,7 +6068,7 @@
     "code_path": "/data/app/~~0ypDk28yUHwWabde2Mje6Q==/com.odete.samsung-QD5YYuyl8u_gr5xP7Ho9WA==",
     "installer": "com.samsung.android.app.omcagent",
     "is_system": false,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Bloatware / Parceiros Comerciais",
     "risk_level": "Baixo",
     "recommendation": "Desinstalar (--user 0)",

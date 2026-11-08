@@ -1,4 +1,4 @@
-# Total de pacotes: 392
+# Total de pacotes: 392 (343 habilitados, 47 desativados, 2 desinstalados para o Usuário 0)
 # Formato: package_name | status | tipo | caminho_apk
 
 com.google.android.ext.services | enabled | system | /apex/com.android.extservices/priv-app/GoogleExtServices/GoogleExtServices.apk
@@ -7,14 +7,14 @@ com.google.android.permissioncontroller | enabled | system | /apex/com.android.p
 com.android.networkstack.tethering.inprocess | enabled | system | /apex/com.android.tethering/priv-app/InProcessTethering/InProcessTethering.apk
 com.android.hotspot2.osulogin | enabled | system | /apex/com.android.wifi/app/OsuLogin/OsuLogin.apk
 com.android.wifi.resources | enabled | system | /apex/com.android.wifi/priv-app/ServiceWifiResources/ServiceWifiResources.apk
-=/com.google.android.apps.restore-__OfoqpZLniDV2OGOEsBag==/base.apk=com.google.android.apps.restore | enabled | system | /data/app/~~0IP4r2cJQ10Al6rGBJNicQ
-=/com.odete.samsung-QD5YYuyl8u_gr5xP7Ho9WA==/base.apk=com.odete.samsung | enabled | system | /data/app/~~0ypDk28yUHwWabde2Mje6Q
-=/android.autoinstalls.config.samsung-pOMDG0bJJseBC3Z750KPAQ==/base.apk=android.autoinstalls.config.samsung | enabled | system | /data/app/~~5pd2PZVp8UHnKCWXurJ-pw
-=/com.samsung.shop-j-dpRn4lLyNGGuqHKwEp_Q==/base.apk=com.samsung.shop | enabled | system | /data/app/~~7lpHFxzbUI7-d8Yo3o80Sg
-=/com.samsung.android.timezone.data_R-av7ywpqSbJYwdAshQKm_gA==/base.apk=com.samsung.android.timezone.data_R | enabled | system | /data/app/~~e99BRZ9prP3XRxK-5l5nYA
-=/com.sec.android.app.samsungapps-jrZYWRYq8TvHbHuONB10jw==/base.apk=com.sec.android.app.samsungapps | enabled | system | /data/app/~~kUQDexQuSuS4Bj5TmxJ3JA
-=/com.android.vending-LyFBdyviK9Fgwds9PC6bRA==/base.apk=com.android.vending | enabled | system | /data/app/~~lFHucU68Kdqgn8UI47SzOQ
-=/com.google.android.gms-kxC5KPOwxgK8LO4jgPojbg==/base.apk=com.google.android.gms | enabled | system | /data/app/~~wwMo13iyfGcwceAn83LFHg
+com.google.android.apps.restore | enabled | system | /data/app/~~0IP4r2cJQ10Al6rGBJNicQ==/com.google.android.apps.restore-__OfoqpZLniDV2OGOEsBag==/base.apk
+com.odete.samsung | uninstalled-user0 | 3rd-party | /data/app/~~0ypDk28yUHwWabde2Mje6Q==/com.odete.samsung-QD5YYuyl8u_gr5xP7Ho9WA==/base.apk
+android.autoinstalls.config.samsung | enabled | system | /data/app/~~5pd2PZVp8UHnKCWXurJ-pw==/android.autoinstalls.config.samsung-pOMDG0bJJseBC3Z750KPAQ==/base.apk
+com.samsung.shop | uninstalled-user0 | 3rd-party | /data/app/~~7lpHFxzbUI7-d8Yo3o80Sg==/com.samsung.shop-j-dpRn4lLyNGGuqHKwEp_Q==/base.apk
+com.samsung.android.timezone.data_R | enabled | system | /data/app/~~e99BRZ9prP3XRxK-5l5nYA==/com.samsung.android.timezone.data_R-av7ywpqSbJYwdAshQKm_gA==/base.apk
+com.sec.android.app.samsungapps | enabled | system | /data/app/~~kUQDexQuSuS4Bj5TmxJ3JA==/com.sec.android.app.samsungapps-jrZYWRYq8TvHbHuONB10jw==/base.apk
+com.android.vending | enabled | system | /data/app/~~lFHucU68Kdqgn8UI47SzOQ==/com.android.vending-LyFBdyviK9Fgwds9PC6bRA==/base.apk
+com.google.android.gms | enabled | system | /data/app/~~wwMo13iyfGcwceAn83LFHg==/com.google.android.gms-kxC5KPOwxgK8LO4jgPojbg==/base.apk
 com.opera.max.oem | enabled | system | /product/app/SamsungMax/SamsungMax.apk
 com.sec.android.usermanual | enabled | system | /product/app/UserManual/UserManual.apk
 com.dti.samsung | disabled | system | /product/priv-app/com.dti.samsung_Ignite/com.dti.samsung_Ignite.apk
@@ -199,7 +199,7 @@ com.wssyncmldm | enabled | system | /system/priv-app/FotaAgent/FotaAgent.apk
 com.android.location.fused | enabled | system | /system/priv-app/FusedLocation/FusedLocation.apk
 com.sec.android.widgetapp.samsungapps | disabled | system | /system/priv-app/GalaxyAppsWidget_Phone_Dream/GalaxyAppsWidget_Phone_Dream.apk
 com.samsung.android.game.gamehome | disabled | system | /system/priv-app/GameHome/GameHome.apk
-com.samsung.android.game.gos | enabled | system | /system/priv-app/GameOptimizingService/GameOptimizingService.apk
+com.samsung.android.game.gos | disabled | system | /system/priv-app/GameOptimizingService/GameOptimizingService.apk
 com.samsung.android.game.gametools | disabled | system | /system/priv-app/GameTools_Dream/GameTools_Dream.apk
 com.google.android.packageinstaller | enabled | system | /system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 com.google.android.partnersetup | disabled | system | /system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk

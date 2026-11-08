@@ -30,6 +30,6 @@ SELinux: Permissivo/Enforcing (Enforcing)
 
 ## Estado e Recursos no Momento da Medição
 Tempo de atividade (Uptime): 13:14:21 up 1 day,  2:49,  0 users,  load average: 18.15, 17.62, 17.95
-Bateria: Nível 72%, Temperatura ~25.5°C, Status Descarregando, Saúde Boa
+Bateria: Nível 67% (descarga durante a auditoria), Temperatura ~24.8°C (AP: 25.4°C), Status Descarregando, Saúde Boa
 Memória Total: ~3.8 GB (RAM nominal 4 GB)
 Armazenamento Interno Total (/data): 51 GB (Utilizado: 2.4 GB, Livre: 49 GB)

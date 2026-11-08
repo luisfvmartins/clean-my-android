@@ -6,6 +6,7 @@
 
 ## Device documentation
 
+- [English audit summary](../../../docs/AUDITORIA_MOTO_G54_5G.en.md)
 - [Main report — methodology, findings, and limitations (Portuguese)](../../../docs/AUDITORIA_MOTO_G54_5G.md)
 - [Detailed inventory by batch — 462 components (English index)](../../../docs/auditorias/moto-g54/README.en.md)
 - [Project statistics (English)](../../../docs/ESTATISTICAS.en.md)

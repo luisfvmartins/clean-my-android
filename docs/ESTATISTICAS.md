@@ -4,10 +4,10 @@ Indicadores calculados a partir do catálogo estruturado em [data/device_catalog
 
 ## Visão geral
 
-- **Dispositivos catalogados:** 3
-- **Fabricantes representados:** 1
-- **Versões Android confirmadas:** 2 (15, 16)
-- **Relatórios com contagem de componentes:** 3
+- **Dispositivos catalogados:** 4
+- **Fabricantes representados:** 2
+- **Versões Android confirmadas:** 3 (11, 15, 16)
+- **Relatórios com contagem de componentes:** 4
 
 ## Dispositivos
 
@@ -16,6 +16,7 @@ Indicadores calculados a partir do catálogo estruturado em [data/device_catalog
 | Motorola Moto G54 5G | XT2343-1 | Android 15 | [Inventário técnico publicado](../reports/motorola/moto-g54-5g/README.md) | 462 — componentes auditados no inventário local |
 | Motorola Edge 60 Pro | XT2507-1 | Não confirmado (pendente de confirmação) | [Relatório publicado; validação funcional pendente](../reports/motorola/edge-60-pro/README.md) | 501 — componentes mapeados no inventário inicial |
 | Motorola Edge 60 Fusion | scout_g_sysn | Android 16 | [Auditoria e debloat concluídos](../reports/motorola/edge-60-fusion/README.md) | 486 — pacotes mapeados no inventário inicial |
+| Samsung Galaxy A30s | SM-A307GT | Android 11 | [Auditoria e otimização cirúrgica concluídas](../reports/samsung/galaxy-a30s/README.md) | 392 — pacotes catalogados no firmware de fábrica |
 
 ## Como interpretar os números
 
