@@ -2,12 +2,12 @@
 
 Dashboard calculated using the GitHub REST API. The count includes closed Pull Requests with a populated `merged_at` field; rejected or closed PRs without a merge are excluded.
 
-**Updated:** 2026-11-07 (UTC)  
+**Updated:** 2026-11-08 (UTC)  
 **Repository:** [luisfvmartins/clean-my-android](https://github.com/luisfvmartins/clean-my-android)
 
 ## Indicators
 
-- **Merged Pull Requests:** 7
+- **Merged Pull Requests:** 8
 - **Distinct authors with merged PRs:** 1
 - **Cataloged devices:** 2
 - **Represented manufacturers:** 1
@@ -16,7 +16,7 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 | Merge year | Pull Requests |
 |---:|---:|
-| 2026 | 7 |
+| 2026 | 8 |
 
 ## Scope and limitations
 
