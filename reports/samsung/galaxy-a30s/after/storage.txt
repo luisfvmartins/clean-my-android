@@ -9,7 +9,7 @@ tmpfs                 1.8G     0  1.8G   0% /apex
 /dev/block/mmcblk0p29  45M   24K   45M   1% /omr
 tmpfs                 1.8G     0  1.8G   0% /mnt/sde
 /dev/block/mmcblk0p28 193M  8.1M  185M   5% /cache
-/dev/block/mmcblk0p32  51G  2.0G   49G   4% /data
+/dev/block/mmcblk0p32  51G  1.9G   49G   4% /data
 /dev/block/mmcblk0p4   16M  992K   15M   7% /efs
 /dev/fuse              51G  2.1G   49G   5% /storage/emulated
 
@@ -17,8 +17,8 @@ tmpfs                 1.8G     0  1.8G   0% /mnt/sde
 === dumpsys diskstats ===
 Latency: 1ms [512B Data Write]
 Recent Disk Write Speed (kB/s) = 4393
-Data-Free: 51530196K / 53786096K total = 95% free
-Cache-Free: 51530196K / 53786096K total = 95% free
+Data-Free: 51582000K / 53786096K total = 95% free
+Cache-Free: 51582000K / 53786096K total = 95% free
 System-Free: 192212K / 4761580K total = 4% free
 File-based Encryption: true
 App Size: 611287040
