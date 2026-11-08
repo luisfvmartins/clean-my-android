@@ -11,7 +11,7 @@
       "audit_status": "Inventário técnico publicado",
       "component_count": 462,
       "component_count_label": "componentes auditados no inventário local",
-      "component_count_note": "A versão pública omite 29 aplicativos instalados pelo usuário e apresenta 394 componentes de sistema/fabricante.",
+      "component_count_note": "A versão pública omite 29 aplicativos instalados pelo usuário e publica os itens 30–462, totalizando 433 componentes.",
       "component_count_status": "auditado",
       "report": "reports/motorola/moto-g54-5g/README.md",
       "catalog": "reports/motorola/moto-g54-5g/README.md"
