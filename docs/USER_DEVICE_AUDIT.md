@@ -75,17 +75,19 @@ O repositório original é público. Não presuma que o fork será privado. Inve
 
 ## 3. Estrutura cumulativa de relatórios no repositório principal
 
-O repositório original manterá uma coleção de auditorias em `reports/`. Cada dispositivo deve ter seu próprio diretório, com nome padronizado e exclusivo. Exemplo:
+O repositório original manterá uma coleção de auditorias em `reports/`. Cada dispositivo deve ter seu próprio diretório dentro da hierarquia `reports/<fabricante>/<modelo>/`, seguindo o padrão já adotado pelo catálogo. Exemplos:
 
 ```text
 reports/
 ├── README.md
-├── motorola-edge-60-pro-android-16/
-│   └── ... relatório e evidências sanitizadas ...
-├── samsung-galaxy-s20-fe-android-16/
-│   └── ... relatório e evidências sanitizadas ...
-└── outro-fabricante-modelo-versao/
-    └── ... relatório e evidências sanitizadas ...
+├── motorola/
+│   ├── edge-60-pro/
+│   │   └── ... relatório e evidências sanitizadas ...
+│   └── moto-g54-5g/
+│       └── ... relatório e evidências sanitizadas ...
+└── samsung/
+    └── galaxy-s20-fe/
+        └── ... relatório e evidências sanitizadas ...
 ```
 
 **Regra de contribuição:** cada PR deve adicionar uma nova pasta de dispositivo, ou atualizar somente a pasta daquele mesmo dispositivo quando for uma revisão identificada do relatório. Não substitua, apague ou altere relatórios de outros colaboradores. O objetivo é que cada PR aprovado aumente a coleção de dispositivos documentados na branch principal.
@@ -94,43 +96,44 @@ A pasta `reports/README.md` funciona como índice da coleção. Ao adicionar uma
 
 ## 4. Estrutura de arquivos por dispositivo
 
-Crie um diretório com nome descritivo, sem identificadores pessoais. Exemplo:
+Crie o diretório dentro da pasta do fabricante, usando um identificador de modelo descritivo e sem dados pessoais. Exemplo:
 
 ```text
 reports/
-└── motorola-edge-60-pro-android-16/
-    ├── README.md
-    ├── before/
-    │   ├── device-info.txt
-    │   ├── packages.txt
-    │   ├── permissions.txt
-    │   ├── appops.txt
-    │   ├── users.txt
-    │   ├── memory.txt
-    │   ├── storage.txt
-    │   ├── battery.txt
-    │   ├── processes.txt
-    │   ├── network.txt
-    │   └── screenshots/
-    ├── changes/
-    │   ├── change-log.md
-    │   ├── disabled-packages.txt
-    │   ├── removed-packages.txt
-    │   ├── permission-changes.txt
-    │   └── appops-changes.txt
-    ├── after/
-    │   ├── device-info.txt
-    │   ├── packages.txt
-    │   ├── permissions.txt
-    │   ├── appops.txt
-    │   ├── users.txt
-    │   ├── memory.txt
-    │   ├── storage.txt
-    │   ├── battery.txt
-    │   ├── processes.txt
-    │   ├── network.txt
-    │   └── screenshots/
-    └── comparison-report.md
+└── motorola/
+    └── edge-60-pro/
+        ├── README.md
+        ├── before/
+        │   ├── device-info.txt
+        │   ├── packages.txt
+        │   ├── permissions.txt
+        │   ├── appops.txt
+        │   ├── users.txt
+        │   ├── memory.txt
+        │   ├── storage.txt
+        │   ├── battery.txt
+        │   ├── processes.txt
+        │   ├── network.txt
+        │   └── screenshots/
+        ├── changes/
+        │   ├── change-log.md
+        │   ├── disabled-packages.txt
+        │   ├── removed-packages.txt
+        │   ├── permission-changes.txt
+        │   └── appops-changes.txt
+        ├── after/
+        │   ├── device-info.txt
+        │   ├── packages.txt
+        │   ├── permissions.txt
+        │   ├── appops.txt
+        │   ├── users.txt
+        │   ├── memory.txt
+        │   ├── storage.txt
+        │   ├── battery.txt
+        │   ├── processes.txt
+        │   ├── network.txt
+        │   └── screenshots/
+        └── comparison-report.md
 ```
 
 A estrutura é uma referência. Não crie arquivos vazios para aparentar que uma coleta foi realizada. Registre limitações quando uma informação não estiver disponível.
@@ -315,7 +318,7 @@ A conclusão deve responder: o que mudou, o que foi preservado, o que deixou de 
 
 ## 11. Instruções para a IA
 
-O uso de IA é o caminho recomendado, mas não obrigatório. O usuário pode executar o procedimento manualmente se tiver conhecimento técnico suficiente. A IA utilizada deverá:
+A utilização de um assistente de IA é o caminho recomendado, mas não obrigatório. Usuários com conhecimento técnico suficiente podem executar o procedimento manualmente. Quando utilizada, a IA deverá:
 
 1. Confirmar que o usuário está trabalhando em um fork próprio ou cópia local e identificar o repositório original como `upstream`.
 2. Identificar o dispositivo conectado e criar uma pasta individual para a auditoria.
@@ -359,7 +362,7 @@ A auditoria só estará concluída quando o estado inicial estiver registrado, o
 
 ## 12. Enviar sua contribuição por Pull Request
 
-O relatório individual deve ficar em uma pasta própria, por exemplo `reports/SEU_DISPOSITIVO/`. Para contribuir com o projeto original, siga este fluxo:
+O relatório individual deve ficar em uma pasta própria, seguindo `reports/<fabricante>/<modelo>/` (por exemplo, `reports/motorola/edge-60-pro/`). Para contribuir com o projeto original, siga este fluxo:
 
 1. Atualize a branch principal do fork com o repositório original.
 2. Crie uma branch exclusiva para a auditoria.
@@ -380,7 +383,7 @@ git fetch upstream
 git switch main
 git merge upstream/main
 git switch -c docs/auditoria-SEU-DISPOSITIVO
-git add reports/SEU_DISPOSITIVO/
+git add reports/SEU_FABRICANTE/SEU_MODELO/
 git diff --cached
 git commit -m "docs: add audit for SEU_DISPOSITIVO"
 git push -u origin docs/auditoria-SEU_DISPOSITIVO

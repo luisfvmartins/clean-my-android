@@ -59,10 +59,10 @@ Não use inventário de outro aparelho como se fosse do seu. Não aplique listas
 
 ## 3. Organizar os arquivos
 
-Crie uma pasta exclusiva em `reports/`, por exemplo:
+Crie uma pasta exclusiva seguindo a hierarquia `reports/<fabricante>/<modelo>/`, por exemplo:
 
 ```text
-reports/samsung-galaxy-model-android-16/
+reports/samsung/galaxy-model/
 ├── README.md
 ├── auditoria.md
 ├── inventario-antes.json
