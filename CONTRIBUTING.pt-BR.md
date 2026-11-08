@@ -74,7 +74,7 @@ reports/samsung/galaxy-model/
 
 A estrutura é flexível. Inclua somente arquivos que existam e sejam úteis. Não crie arquivos vazios para aparentar uma coleta completa.
 
-Atualize `reports/README.pt-BR.md` com uma linha para o aparelho. Não edite ou reorganize entradas de outros dispositivos sem necessidade.
+Atualize os dois índices, `reports/README.md` (inglês) e `reports/README.pt-BR.md` (português), com uma linha para o aparelho. Não edite ou reorganize entradas de outros dispositivos sem necessidade.
 
 ## 4. Privacidade antes do envio
 
@@ -95,7 +95,7 @@ Mantenha dumps brutos localmente. Compartilhe apenas os dados sanitizados necess
 git status --short
 git diff --check
 git diff
-git add reports/SEU-DISPOSITIVO reports/README.pt-BR.md
+git add reports/SEU-DISPOSITIVO reports/README.md reports/README.pt-BR.md
 git commit -m "docs(audit): add <fabricante-modelo> device report"
 git push -u origin HEAD
 gh pr create --repo luisfvmartins/clean-my-android --base main
@@ -131,6 +131,7 @@ Pull Requests direcionados à `main` executam o workflow **Validação do reposi
 - sintaxe de todos os arquivos JSON versionados;
 - estrutura básica dos arquivos `comparativo.json` (quando possuem o campo `metrics`);
 - sintaxe Bash dos scripts em `scripts/*.sh`, sem executá-los;
-- formato e duplicidade dos pacotes em `data/protected_essential_packages.txt`.
+- formato e duplicidade dos pacotes em `data/protected_essential_packages.txt`;
+- correspondência de `docs/ESTATISTICAS.md` com o catálogo `data/device_catalog.json`.
 
 A validação é somente estática: não conecta via ADB, não instala dependências no aparelho e não altera dispositivos. Um resultado aprovado não substitui revisão técnica, checagem de privacidade nem testes funcionais. Corrija as falhas indicadas no log do GitHub Actions e atualize o mesmo Pull Request.

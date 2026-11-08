@@ -138,7 +138,7 @@ Results without evidence must be marked **not measured**, **not collected**, or 
 
 ## Automated validation
 
-Pull Requests to `main` run automated integrity checks for JSON, Bash syntax, and the protected-components list. These checks are static: they do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
+Pull Requests to `main` run automated integrity checks for JSON, Bash syntax, the protected-components list, and generated project statistics. These checks are static: they do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
 
 See the [validation workflow](.github/workflows/validate.yml) and [validator](scripts/validate_repository.py).
 
@@ -178,12 +178,14 @@ Each device must have its own folder under `reports/`. A contribution must prese
 2. Fork the repository and create a dedicated branch for your contribution.
 3. Collect and sanitize data from your own device.
 4. Include the report, inventories, and required evidence.
-5. Update the device index in `reports/README.md` (and its English counterpart).
+5. Update both device catalog indexes: `reports/README.md` (English) and `reports/README.pt-BR.md` (Portuguese).
 6. Open a Pull Request against `main`.
 
 Every approved and merged Pull Request expands the public knowledge base. Do not alter or replace another device's audit to add your own.
 
-## Language coverage\n\nThe main project guides, AI instructions, contribution guide, and device catalog are available in English. Some detailed historical audit reports and raw component inventories remain in Portuguese; their package identifiers and collected evidence are preserved unchanged. English summaries are provided where practical.\n\n## Documentation and links
+## Language coverage
+
+The main project guides, AI instructions, contribution guide, and device catalog are available in English. Some detailed historical audit reports and raw component inventories remain in Portuguese; their package identifiers and collected evidence are preserved unchanged. English summaries are provided where practical.\n\n## Documentation and links
 
 - [Audit catalog (English)](reports/README.md)
 - [Individual device audit guide (English)](docs/USER_DEVICE_AUDIT.md)

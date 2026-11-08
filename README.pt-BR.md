@@ -136,7 +136,7 @@ Resultados sem evidência devem ser identificados como **não mensurados**, **n�
 
 ## Validação automatizada
 
-Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash e lista de componentes protegidos. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
+Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash, lista de componentes protegidos e consistência das estatísticas geradas. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
 
 Consulte o [workflow de validação](.github/workflows/validate.yml) e o [validador](scripts/validate_repository.py).
 
@@ -175,7 +175,7 @@ Cada dispositivo deve ter sua própria pasta em `reports/`. A contribuição dev
 2. Faça um fork e crie uma branch exclusiva para sua contribuição.
 3. Colete e sanitize os dados do seu próprio aparelho.
 4. Inclua o relatório, inventários e evidências necessários.
-5. Atualize o índice de dispositivos em `reports/README.pt-BR.md`.
+5. Atualize os dois índices de dispositivos: `reports/README.md` (inglês) e `reports/README.pt-BR.md` (português).
 6. Abra um Pull Request para a branch `main`.
 
 Cada Pull Request aprovado e integrado amplia a base pública de conhecimento. Não altere nem substitua a auditoria de outro dispositivo para incluir a sua.
