@@ -214,16 +214,20 @@ If a step cannot be performed, label it pending, not performed, or inconclusive.
 
 **Start by checking the ADB connection and identifying the device. Do not make any changes until the initial diagnosis is complete, the plan has been presented, and explicit authorization has been received.**
 
-### 13. Additional rules for the Motorola Moto G54 5G
+## 13. Manufacturer-isolated scope and generic Android prompt
 
-- The report `docs/AUDITORIA_MOTO_G54_5G.md` describes a read-only collection and a previous device history. Do not interpret that history as authorization to repeat commands.
-- `data/moto_g54_disabled_packages.txt` is a snapshot of packages found disabled, not an approved execution list. `data/persistent_uninstall_packages.txt` records historical observations and must never be executed automatically.
-- The `FLAG_PERSISTENT` flag alone does not prove telemetry, abuse, or that a package is safe to uninstall. Do not remove `com.motorola.bach.modemstats`, `com.bluetooth.aptxmode`, or any persistent daemon without manufacturer-specific documentation, verified dependencies, and individual authorization.
-- Do not run `pm clear`, `pm uninstall`, `pm remove-user`, `am stop-user`, `pm trim-caches`, or UID-based AppOps in batches. `pm clear` deletes data; profile removal may delete data; shared UIDs may affect multiple packages.
-- `scripts/debloat.sh` is read-only by default. The `--apply` option accepts one package per run, requires typed confirmation, and blocks components listed in `data/protected_essential_packages.txt`. It does not replace dependency auditing or explicit authorization.
-- `scripts/restore.sh` re-enables one package at a time, with confirmation. Bulk restoration is not available.
-- Before publication, omit user-installed apps, local and remote IPs/ports, SSIDs, MAC addresses, IMEI, serial number, Android ID, unnecessary UIDs/PIDs, raw logs, account names, and any data that reveals the owner's network or routine.
-- Do not claim a package sends telemetry solely because it has `INTERNET` permission, an analytics SDK, or a persistent flag. Distinguish manifest evidence, observed connections, inspected traffic, and inference.
+**The master prompt is manufacturer-agnostic.** Do not embed OEM-exclusive package-name lists (Samsung, Motorola, Xiaomi, Google Pixel, TCL, etc.) as universal targets.
+
+Before consulting package references:
+1. Identify manufacturer, model, codename, variant, Android version, ROM/build, and Android user/profile using device evidence.
+2. Build the actual ADB inventory; it is the primary source. Reference lists must not replace or expand the detected inventory.
+3. Consult OEM-specific material only for the identified manufacturer. If identity is uncertain, pause OEM classification and request confirmation or collect more evidence.
+4. Do not search for, recommend, classify as present, or issue commands for packages exclusive to another manufacturer. Other OEM references may only be used as explicitly labeled comparisons, never as targets.
+5. Do not infer package presence, function, telemetry, or removability from brand/name. Validate package name, version, build, dependencies, and function on this device.
+6. Unknown packages, packages from an unidentified OEM, or packages lacking evidence remain PENDING/INCONCLUSIVE, not removable.
+7. Keep package-name examples in separate reference documents labeled by manufacturer/model/build; never embed them as universal execution instructions.
+
+The generic baseline may cover common AOSP/Android concepts and components (framework, System UI, Package Manager, permissions, AppOps, connectivity APIs), but these must also be verified against the actual inventory/build. OEM analysis is conditional and isolated.
 
 
 ## REQUIRED ADDENDUM — package-by-package analysis
