@@ -124,7 +124,7 @@ A total of **244 packages** were disabled for User 0 using `pm disable-user --us
 The source report groups the disabled packages into:
 - Commercial adware, sponsored installers, and embedded advertising (Digital Turbine, IronSource Aura, Glance, Taboola, InMobi, Meta services, and partner stores).
 - Motorola/Lenovo diagnostics and telemetry (Customer Care Central notifications, MotoCare, external logs, Bug2Go, lifecycle/modem statistics, Smart Feed, Qira, Smart Connect/Ready For, and gesture services).
-- De-Googling changes requested by the device owner, including replacement of Chrome, Google Phone, and Google Messages with Brave and Fossify alternatives; other Google apps and services were disabled.
+- De-Googling changes requested by the device owner, including replacement of Chrome, Google Phone, and Google Messages with third-party browser and Fossify alternatives; other Google apps and services were disabled.
 
 The full list is in [pacotes-desativados.txt](pacotes-desativados.txt). These historical records are not a reusable package-removal recipe.
 
@@ -132,7 +132,7 @@ The full list is in [pacotes-desativados.txt](pacotes-desativados.txt). These hi
 
 The report records **9 packages uninstalled for User 0**:
 - Two third-party applications located under `/data/app`, reported as DT Ignite-installed adware.
-- Seven preinstalled packages, including sponsored games, Airbnb, ExpressWeather, Motorola Genie, and the YouTube Music subscription manager.
+- Seven preinstalled packages, including sponsored games, Airbnb, ExpressWeather, Motorola Genie, and the third-party subscription service subscription manager.
 
 For system packages, `pm uninstall -k --user 0` changes the package state for that user; it does not physically delete the factory APK from `/system` or `/product`.
 
@@ -162,7 +162,7 @@ Because these settings were applied at UID level, they may affect all processes/
 
 ### 5.6 Permission changes
 
-The source report records 13 runtime permission revocations, involving Motorola Camera, Motorola SIM settings, Google external services, Companion Device Manager, Google eUICC, Uber, 99, Minha Unifique, Brave, and another user app.
+The source report records 13 runtime permission revocations, involving Motorola Camera, Motorola SIM settings, Google external services, Companion Device Manager, Google eUICC, third-party ride-hailing app, 99, third-party carrier app, third-party browser, and another user app.
 
 It also records attempts to revoke `android.permission.ACCESS_LOCAL_NETWORK` from five applications. A later `dumpsys package` inspection still showed `granted=true`; the standard `pm revoke` command did not revoke this special permission.
 
