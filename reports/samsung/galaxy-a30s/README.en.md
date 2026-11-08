@@ -67,3 +67,9 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 - [`before/`](before/): Initial baseline diagnostics (package inventory, memory, battery, process, and permission logs).
 - [`changes/`](changes/): Execution log, commands used, and reversal procedures.
 - [`after/`](after/): Final confirmatory diagnostics post-optimization.
+
+
+## English companion documents
+
+- [Before/after comparison summary](comparison-report.en.md)
+- [Change log summary](changes/change-log.en.md)

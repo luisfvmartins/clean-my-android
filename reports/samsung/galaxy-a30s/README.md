@@ -67,3 +67,9 @@ O procedimento foi executado em modo não-root via **Android Debug Bridge (ADB)*
 - [`before/`](before/): Diagnóstico inicial de linha de base (inventário, logs de memória, bateria, processos e permissões).
 - [`changes/`](changes/): Registro de execução, comandos utilizados e métodos de reversão.
 - [`after/`](after/): Diagnóstico final confirmatório pós-otimização.
+
+
+## Documentos em inglês
+
+- [Before/after comparison — English summary](comparison-report.en.md)
+- [Change log — English summary](changes/change-log.en.md)
