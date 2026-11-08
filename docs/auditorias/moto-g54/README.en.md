@@ -10,7 +10,7 @@ This folder contains the device's component inventory, split into batches for ea
 
 | Batch | Scope | Items | File |
 |---|---|---:|---|
-| 2 | Google, GMS, Mainline APKs, and proprietary services | 30–111 (82) | [Batch 2](lote-02-ecossistema-google.md) |
+| 2 | Google, GMS, Mainline APKs, and proprietary services | 30–111 (82) | [English translation](lote-02-ecossistema-google.en.md) · [Portuguese source](lote-02-ecossistema-google.md) |
 | 3 | Motorola and Lenovo | 112–199 (88) | [Batch 3](lote-03-motorola-lenovo.md) |
 | 4 | Commercial partners, carriers, and hardware | 200–224 (25) | [Batch 4](lote-04-parceiros-comerciais-e-hardware.md) |
 | 5 | Android AOSP base system | 225–296 (72) | [Batch 5](lote-05-sistema-base-aosp.md) |
@@ -28,4 +28,4 @@ This folder contains the device's component inventory, split into batches for ea
 - See the main report for methodology, limitations, operational history, rollback, and recommendations.
 - A published inventory does not mean a debloating script has been approved for this device.
 
-The detailed batch files remain in Portuguese for now. The English audit summary links to all seven source batches. Package names, identifiers, commands, and technical evidence are preserved in their original form. Batch translations will be submitted separately to keep each review manageable.
+Batch 2 now has a complete English translation alongside its Portuguese source. Batches 3–8 remain available in Portuguese and will be translated in separate, reviewable contributions. Package names, identifiers, commands, and technical evidence are preserved in their original form.
