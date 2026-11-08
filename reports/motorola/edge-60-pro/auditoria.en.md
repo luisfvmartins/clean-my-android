@@ -204,7 +204,7 @@ The detailed final state is recorded in [inventario-depois.json](inventario-depo
 | RAM in use | ~7.5 GB | ~4.8 GB | -2.7 GB | Same measurements |
 | Free `/data` storage | 193 GB | ~197 GB | ~4 GB aggregate | `df -h /data`, step 398 |
 | Installed package count | 501 | 492 | -9 for User 0 | `pm list packages -f` |
-| Enabled packages | 441 | 257 | -184 | `pm list packages -e --user 0` |
+| Enabled / preserved packages | 441 | 248 | -193 (184 disabled + 9 uninstalled for user 0) | `inventario-depois.json` (248 preserved/active, 244 disabled, 9 uninstalled) |
 | Disabled packages | 60 factory-disabled | 244 | +184 | `pm list packages -d`, steps 89 and 701 |
 | Google QuickSearchBox RAM | 873 MB RSS | 0 MB reported | -873 MB | `dumpsys meminfo` |
 | Secondary profile processes | User 0 + User 11 | User 0 only | -269 MB RSS | `am stop-user -f 11` |
