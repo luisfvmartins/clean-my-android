@@ -30,4 +30,4 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 The [Update contribution dashboard](../.github/workflows/contribution-dashboard.yml) workflow runs daily and can also be started manually from the Actions tab. It uses the `GITHUB_TOKEN` provided by GitHub Actions; no personal token is stored in the repository.
 
-Also see [project statistics](ESTATISTICAS.en.md) and the [audit catalog](../reports/README.en.md).
+Also see [project statistics](ESTATISTICAS.en.md) and the [audit catalog](../reports/README.md).
