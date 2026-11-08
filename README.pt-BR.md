@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validação](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.pt-BR.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Contribuir](CONTRIBUTING.pt-BR.md) · [Segurança](#segurança-em-primeiro-lugar)
+[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.pt-BR.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Status da auditoria](docs/AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md) · [Modelo de relatório](reports/_templates/DEVICE_AUDIT_TEMPLATE.pt-BR.md) · [Contribuir](CONTRIBUTING.pt-BR.md) · [Segurança](#segurança-em-primeiro-lugar)
 
 </div>
 
