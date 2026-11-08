@@ -64,7 +64,7 @@
     "code_path": "/system/priv-app/GalaxyAppsWidget_Phone_Dream",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -73,7 +73,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.sec.android.widgetapp.samsungapps",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.smartswitchassistant": {
     "package_name": "com.samsung.android.smartswitchassistant",
@@ -159,7 +159,7 @@
     "code_path": "/system/priv-app/Finder",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -168,7 +168,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.app.galaxyfinder",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.sec.location.nsflp2": {
     "package_name": "com.sec.location.nsflp2",
@@ -577,7 +577,7 @@
     "code_path": "/system/priv-app/AREmoji",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -586,7 +586,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.aremoji",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.clipboardsaveservice": {
     "package_name": "com.samsung.clipboardsaveservice",
@@ -919,7 +919,7 @@
     "code_path": "/system/app/KidsHome_Installer",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -928,7 +928,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.kidsinstaller",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.sec.factory.camera": {
     "package_name": "com.sec.factory.camera",
@@ -1014,7 +1014,7 @@
     "code_path": "/system/priv-app/EasySetup",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -1023,7 +1023,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.easysetup",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.externalstorage": {
     "package_name": "com.android.externalstorage",
@@ -1584,7 +1584,7 @@
     "code_path": "/system/priv-app/SettingsBixby",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -1593,7 +1593,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.app.settings.bixby",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.sec.android.app.billing": {
     "package_name": "com.sec.android.app.billing",
@@ -1603,7 +1603,7 @@
     "code_path": "/system/priv-app/SamsungBilling",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -1612,7 +1612,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.sec.android.app.billing",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.sec.epdgtestapp": {
     "package_name": "com.sec.epdgtestapp",
@@ -1698,7 +1698,7 @@
     "code_path": "/system/app/ARCore",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Google Apps / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -1707,7 +1707,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.google.ar.core",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.sec.sve": {
     "package_name": "com.sec.sve",
@@ -2724,7 +2724,7 @@
     "code_path": "/system/app/DuoStub",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Google Apps / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -2733,7 +2733,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.google.android.apps.tachyon",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.google.android.overlay.gmsconfig.common": {
     "package_name": "com.google.android.overlay.gmsconfig.common",
@@ -3104,7 +3104,7 @@
     "code_path": "/system/priv-app/SamsungExperienceService",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -3113,7 +3113,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.mobileservice",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.printspooler": {
     "package_name": "com.android.printspooler",
@@ -3123,7 +3123,7 @@
     "code_path": "/system/app/PrintSpooler",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Sistema Android",
     "risk_level": "Médio",
     "recommendation": "Manter",
@@ -3132,7 +3132,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.android.printspooler",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.attribution": {
     "package_name": "com.samsung.attribution",
@@ -3199,7 +3199,7 @@
     "code_path": "/system/priv-app/StoryService",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -3208,7 +3208,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.storyservice",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.dreams.basic": {
     "package_name": "com.android.dreams.basic",
@@ -3427,7 +3427,7 @@
     "code_path": "/system/app/LinkSharing_v11",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -3436,7 +3436,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.app.simplesharing",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.app.contacts": {
     "package_name": "com.samsung.android.app.contacts",
@@ -3712,7 +3712,7 @@
     "code_path": "/system/priv-app/DynamicLockscreen",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -3721,7 +3721,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.dynamiclock",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.advp.imssettings": {
     "package_name": "com.samsung.advp.imssettings",
@@ -4016,7 +4016,7 @@
     "code_path": "/system/priv-app/ImsLogger",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Sistema Android",
     "risk_level": "Médio",
     "recommendation": "Manter",
@@ -4025,7 +4025,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.sec.imslogger",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.theme.icon_pack.rounded.themepicker": {
     "package_name": "com.android.theme.icon_pack.rounded.themepicker",
@@ -4339,7 +4339,7 @@
     "code_path": "/system/priv-app/DiagMonAgent71",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -4348,7 +4348,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.sec.android.diagmonagent",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.localtransport": {
     "package_name": "com.android.localtransport",
@@ -4567,7 +4567,7 @@
     "code_path": "/system/app/AllshareFileShare",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -4576,7 +4576,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.allshare.service.fileshare",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.netflix.mediaclient": {
     "package_name": "com.netflix.mediaclient",
@@ -4700,7 +4700,7 @@
     "code_path": "/system/app/GooglePrintRecommendationService",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Google Apps / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -4709,7 +4709,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.google.android.printservice.recommendation",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.adaptivebrightnessgo": {
     "package_name": "com.samsung.adaptivebrightnessgo",
@@ -5213,7 +5213,7 @@
     "code_path": "/system/app/StickerCenter",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -5222,7 +5222,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.stickercenter",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.facebook.system": {
     "package_name": "com.facebook.system",
@@ -5308,7 +5308,7 @@
     "code_path": "/system/priv-app/Fmm",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -5317,7 +5317,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.fmm",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.mdm": {
     "package_name": "com.samsung.android.mdm",
@@ -5574,7 +5574,7 @@
     "code_path": "/system/priv-app/SamsungCloudClient",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -5583,7 +5583,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.scloud",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.app.soundpicker": {
     "package_name": "com.samsung.android.app.soundpicker",
@@ -6144,7 +6144,7 @@
     "code_path": "/system/priv-app/LiveStickers",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -6153,7 +6153,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.livestickers",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.app.watchmanagerstub": {
     "package_name": "com.samsung.android.app.watchmanagerstub",
@@ -6258,7 +6258,7 @@
     "code_path": "/system/priv-app/NetworkDiagnostic",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -6267,7 +6267,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.networkdiagnostic",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.samsung.android.shortcutbackupservice": {
     "package_name": "com.samsung.android.shortcutbackupservice",
@@ -6486,7 +6486,7 @@
     "code_path": "/system/priv-app/OMCAgent5",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -6495,7 +6495,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.app.omcagent",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.hiya.star": {
     "package_name": "com.hiya.star",
@@ -6676,7 +6676,7 @@
     "code_path": "/system/app/GoogleLocationHistory",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Google Apps / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -6685,7 +6685,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.google.android.gms.location.history",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.internal.systemui.navbar.gestural": {
     "package_name": "com.android.internal.systemui.navbar.gestural",
@@ -6714,7 +6714,7 @@
     "code_path": "/product/priv-app/com.dti.samsung_Ignite",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -6723,7 +6723,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.dti.samsung",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.android.location.fused": {
     "package_name": "com.android.location.fused",
@@ -7037,7 +7037,7 @@
     "code_path": "/system/app/AllshareMediaShare",
     "installer": null,
     "is_system": true,
-    "is_enabled": true,
+    "is_enabled": false,
     "category": "Samsung One UI / Serviços",
     "risk_level": "Médio",
     "recommendation": "Informativo",
@@ -7046,7 +7046,7 @@
     "function_probable": "Operação interna do SO",
     "reversal_command": "adb shell pm enable com.samsung.android.allshare.service.mediashare",
     "is_installed_user0": true,
-    "current_state": "enabled"
+    "current_state": "disabled-user"
   },
   "com.sec.android.app.fm": {
     "package_name": "com.sec.android.app.fm",
