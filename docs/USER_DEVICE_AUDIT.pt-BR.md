@@ -11,7 +11,7 @@ O objetivo é construir uma base pública e cumulativa de auditorias técnicas, 
 O caminho recomendado é trabalhar com um assistente de IA de sua escolha. O Clean My Android não depende de ChatGPT, Claude, Gemini, Antigravity ou qualquer fornecedor específico. Escolha uma ferramenta capaz de ler o repositório e, se a intenção for coletar dados diretamente, acessar o terminal do computador onde o ADB está instalado.
 
 1. Clone o repositório e abra sua pasta no assistente/agente de IA.
-2. Peça que ele leia integralmente [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md) e este guia antes de começar.
+2. Peça que ele leia integralmente [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.pt-BR.md) e este guia antes de começar.
 3. Confirme que o ADB reconhece o aparelho correto e que o computador foi autorizado.
 4. Solicite a auditoria inicial em modo somente leitura.
 5. Revise as conclusões e o plano de alterações. A IA deve explicar evidências, incertezas, riscos e reversões.
@@ -92,7 +92,7 @@ reports/
 
 **Regra de contribuição:** cada PR deve adicionar uma nova pasta de dispositivo, ou atualizar somente a pasta daquele mesmo dispositivo quando for uma revisão identificada do relatório. Não substitua, apague ou altere relatórios de outros colaboradores. O objetivo é que cada PR aprovado aumente a coleção de dispositivos documentados na branch principal.
 
-A pasta `reports/README.md` funciona como índice da coleção. Ao adicionar uma auditoria, inclua nela um link para o novo relatório, com fabricante/modelo, versão Android/ROM e data da auditoria. Não crie entradas com dados não verificados.
+A pasta `reports/README.pt-BR.md` funciona como índice da coleção. Ao adicionar uma auditoria, inclua nela um link para o novo relatório, com fabricante/modelo, versão Android/ROM e data da auditoria. Não crie entradas com dados não verificados.
 
 ## 4. Estrutura de arquivos por dispositivo
 
@@ -369,7 +369,7 @@ O relatório individual deve ficar em uma pasta própria, seguindo `reports/<fab
 3. Adicione somente os arquivos sanitizados do relatório.
 4. Revise o diff completo e confirme que não há identificadores, credenciais, notificações ou dados pessoais.
 5. Envie a branch para o seu fork.
-6. Atualize `reports/README.md` com um link para a nova auditoria.
+6. Atualize `reports/README.pt-BR.md` com um link para a nova auditoria.
 7. Confira se a pasta do dispositivo ainda não existe. Se já existir, verifique se é uma atualização legítima do mesmo aparelho e preserve o histórico relevante.
 8. Abra um Pull Request do seu fork para `luisfvmartins/clean-my-android:main`.
 9. Descreva o modelo, versão Android/ROM, escopo da auditoria, principais resultados, testes realizados e limitações.
