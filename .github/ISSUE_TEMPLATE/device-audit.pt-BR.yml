@@ -1,0 +1,48 @@
+name: Solicitar auditoria de dispositivo
+description: Sugerir ou relatar uma auditoria para um aparelho Android
+title: "[AUDITORIA] Fabricante Modelo — Android"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este formulário para indicar um dispositivo ou discutir uma auditoria. Se você já possui os relatórios e evidências sanitizados, prefira enviar um Pull Request seguindo [CONTRIBUTING.md](https://github.com/luisfvmartins/clean-my-android/blob/main/CONTRIBUTING.md).
+  - type: input
+    id: device
+    attributes:
+      label: Fabricante e modelo
+      placeholder: Motorola Edge 60 Pro (XT2507-1)
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Versão do Android, ROM e interface
+      placeholder: Android 16, ROM stock / interface do fabricante
+    validations:
+      required: false
+  - type: input
+    id: codename
+    attributes:
+      label: Codinome do dispositivo (se conhecido)
+      placeholder: codename
+    validations:
+      required: false
+  - type: dropdown
+    id: goal
+    attributes:
+      label: Objetivo
+      options:
+        - Quero iniciar uma auditoria
+        - Tenho uma auditoria pronta para contribuir
+        - Preciso corrigir ou complementar um relatório existente
+        - Quero relatar um problema de segurança ou compatibilidade
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Detalhes
+      description: Informe o contexto, o que já foi coletado e quais dúvidas existem. Não inclua dados pessoais, dumps brutos, identificadores ou credenciais.
+      placeholder: Descreva o cenário e as evidências disponíveis.
+    validations:
+      required: true
