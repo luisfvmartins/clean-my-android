@@ -72,7 +72,7 @@
     },
     {
       "package_name": "third_party_package_39",
-      "app_name": "Uber",
+      "app_name": "third_party_package_39",
       "category": "Terceiro",
       "permission": "android.permission.RECORD_AUDIO",
       "command": "adb shell pm revoke --user 0 third_party_package_39 android.permission.RECORD_AUDIO",
@@ -81,7 +81,7 @@
     },
     {
       "package_name": "third_party_package_38",
-      "app_name": "99 Táxi",
+      "app_name": "third_party_package_38",
       "category": "Terceiro",
       "permission": "android.permission.READ_CONTACTS",
       "command": "adb shell pm revoke --user 0 third_party_package_38 android.permission.READ_CONTACTS",
@@ -90,7 +90,7 @@
     },
     {
       "package_name": "third_party_package_38",
-      "app_name": "99 Táxi",
+      "app_name": "third_party_package_38",
       "category": "Terceiro",
       "permission": "android.permission.CAMERA",
       "command": "adb shell pm revoke --user 0 third_party_package_38 android.permission.CAMERA",
@@ -99,7 +99,7 @@
     },
     {
       "package_name": "third_party_package_28",
-      "app_name": "Minha Unifique",
+      "app_name": "third_party_package_28",
       "category": "Terceiro",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
       "command": "adb shell pm revoke --user 0 third_party_package_28 android.permission.ACCESS_COARSE_LOCATION",
@@ -108,7 +108,7 @@
     },
     {
       "package_name": "third_party_package_14",
-      "app_name": "Brave Browser",
+      "app_name": "third_party_package_14",
       "category": "Terceiro",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
       "command": "adb shell pm revoke --user 0 third_party_package_14 android.permission.ACCESS_COARSE_LOCATION",
@@ -117,7 +117,7 @@
     },
     {
       "package_name": "third_party_package_02",
-      "app_name": "AJ Fans",
+      "app_name": "third_party_package_02",
       "category": "Terceiro",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
       "command": "adb shell pm revoke --user 0 third_party_package_02 android.permission.ACCESS_COARSE_LOCATION",
@@ -128,7 +128,7 @@
   "special_permissions_attempted": [
     {
       "package_name": "third_party_package_08",
-      "app_name": "BariLife",
+      "app_name": "third_party_package_08",
       "permission": "android.permission.ACCESS_LOCAL_NETWORK",
       "command": "adb shell pm revoke --user 0 third_party_package_08 android.permission.ACCESS_LOCAL_NETWORK",
       "justification": "Tentativa de revogação de permissão especial de varredura de rede local.",
@@ -136,7 +136,7 @@
     },
     {
       "package_name": "third_party_package_37",
-      "app_name": "YouVersion Bible",
+      "app_name": "third_party_package_37",
       "permission": "android.permission.ACCESS_LOCAL_NETWORK",
       "command": "adb shell pm revoke --user 0 third_party_package_37 android.permission.ACCESS_LOCAL_NETWORK",
       "justification": "Tentativa de revogação de permissão especial de varredura de rede local.",
