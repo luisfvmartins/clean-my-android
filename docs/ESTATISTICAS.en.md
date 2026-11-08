@@ -19,7 +19,7 @@ Metrics are calculated from the structured catalog in [data/device_catalog.json]
 ## How to interpret the numbers
 
 - **Component counts are not added together.** Reports use different scopes and states: Moto G54 records audited components; Edge 60 Pro records components mapped in the initial inventory.
-- The Moto G54 count is 462 components in the local collection; the public version omits 29 user-installed apps and publishes items 30–462, totaling 433 components.
+- The Moto G54 count is 462 components in the local collection; the public version omits 29 user-installed apps and publishes 433 components: 394 system/manufacturer package records and 39 APEX modules.
 - The Edge 60 Pro count (501) refers to the mapped initial inventory and does not mean every component has been functionally validated.
 - Pending Android versions are excluded from the confirmed-version count.
 - **Cataloged device**, **published audit**, **functional validation**, and **script approval** are different states. Listing a device here does not imply approval.
