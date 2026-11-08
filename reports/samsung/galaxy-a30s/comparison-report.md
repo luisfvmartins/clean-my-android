@@ -41,7 +41,7 @@ Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 
 
 ## 3. Ferramentas e Condições de Medição
 
-- **Protocolo de Conexão:** Android Debug Bridge (ADB) via Wi-Fi (`192.168.1.62:33498`) após pareamento TLS criptografado (`adb pair`).
+- **Protocolo de Conexão:** Android Debug Bridge (ADB) via Wi-Fi após pareamento TLS criptografado (`adb pair`); endereço local e porta foram omitidos por privacidade.
 - **Condições Físicas do Aparelho:** Nível de bateria em 72%, carregamento desconectado, temperatura de hardware a 25.6°C (AP) e 25.6°C (bateria).
 - **Estado de Carga do Sistema:** Standby em tela de configurações, sem contas pessoais sincronizadas ou aplicativos em primeiro plano além das ferramentas nativas de inspeção.
 - **Ferramentas de Coleta:** Scripts de extração direta de `dumpsys` (package, meminfo, diskstats, battery, thermalservice, user, connectivity), `getprop`, `cat /proc/meminfo`, `df -h` e `pm list packages`.
