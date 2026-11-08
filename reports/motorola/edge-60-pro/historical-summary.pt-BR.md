@@ -1,11 +1,11 @@
 # Relatório histórico — Motorola Edge 60 Pro (`XT2507-1`)
 
-> **Arquivo legado:** este resumo foi preservado da estrutura anterior à reorganização do repositório. Os arquivos de auditoria e evidências foram organizados no diretório canônico [`reports/motorola/edge-60-pro/`](../motorola/edge-60-pro/). A classificação continua **pendente de validação**; este documento não é uma lista de execução nem uma homologação.
+> **Arquivo legado:** este resumo foi preservado da estrutura anterior à reorganização do repositório. Os arquivos de auditoria e evidências foram organizados no diretório canônico [`reports/motorola/edge-60-pro/`](README.md). A classificação continua **pendente de validação**; este documento não é uma lista de execução nem uma homologação.
 
-[![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](../motorola/edge-60-pro/auditoria.md)
-[![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](../motorola/edge-60-pro/auditoria.md)
-[![Android: Pendente de Confirmação](https://img.shields.io/badge/Android-Pendente%20de%20Confirma%C3%A7%C3%A3o-yellow?logo=android&logoColor=white)](../motorola/edge-60-pro/auditoria.md)
-[![Status: Pendente de Validação](https://img.shields.io/badge/Auditoria-Pendente%20de%20Valida%C3%A7%C3%A3o-orange)](../motorola/edge-60-pro/auditoria.md)
+[![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](auditoria.md)
+[![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](auditoria.md)
+[![Android: Pendente de Confirmação](https://img.shields.io/badge/Android-Pendente%20de%20Confirma%C3%A7%C3%A3o-yellow?logo=android&logoColor=white)](auditoria.md)
+[![Status: Pendente de Validação](https://img.shields.io/badge/Auditoria-Pendente%20de%20Valida%C3%A7%C3%A3o-orange)](auditoria.md)
 [![Clean My Android](https://img.shields.io/badge/Projeto-Clean%20My%20Android-green)](https://github.com/luisfvmartins/clean-my-android)
 
 Este diretório contém a documentação técnica integral, inventários de pacotes (antes e depois), métricas de desempenho e histórico detalhado das ações de debloat, sandboxing e privacidade executadas no smartphone **Motorola Edge 60 Pro (`XT2507-1`)**, codinome **`cybert`**, rodando a interface **Hello UI** (versão canônica do Android pendente de confirmação via `getprop`).
@@ -54,7 +54,7 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 ## 🗂️ Estrutura de Arquivos deste Relatório
 
 ```text
-reports/motorola-edge-60-pro/
+reports/motorola/edge-60-pro/
 ├── README.md                  # Este documento (visão geral e sumário executivo)
 ├── auditoria.md               # Relatório técnico completo, reproduzível e auditado
 ├── inventario-antes.json      # Inventário completo dos 501 componentes pré-debloat
@@ -97,10 +97,10 @@ reports/motorola-edge-60-pro/
 
 ## 🔗 Navegação e Referências
 
-- 📖 [**Relatório Completo de Auditoria Forense (`auditoria.md`)**](../motorola/edge-60-pro/auditoria.md)
-- 📋 [**Inventário Antes (`inventario-antes.json`)**](../motorola/edge-60-pro/inventario-antes.json)
-- 📋 [**Inventário Depois (`inventario-depois.json`)**](../motorola/edge-60-pro/inventario-depois.json)
-- ⚙️ [**Permissões e AppOps Alterados (`permissoes-alteradas.json`)**](../motorola/edge-60-pro/permissoes-alteradas.json)
-- 📊 [**Comparativo de Desempenho (`comparativo.json`)**](../motorola/edge-60-pro/comparativo.json)
-- 🔒 [**Evidências e Coleta Complementar (`evidencias/README.md`)**](../motorola/edge-60-pro/evidencias/README.md)
-- 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../README.md)
+- 📖 [**Relatório Completo de Auditoria Forense (`auditoria.md`)**](auditoria.md)
+- 📋 [**Inventário Antes (`inventario-antes.json`)**](inventario-antes.json)
+- 📋 [**Inventário Depois (`inventario-depois.json`)**](inventario-depois.json)
+- ⚙️ [**Permissões e AppOps Alterados (`permissoes-alteradas.json`)**](permissoes-alteradas.json)
+- 📊 [**Comparativo de Desempenho (`comparativo.json`)**](comparativo.json)
+- 🔒 [**Evidências e Coleta Complementar (`evidencias/README.md`)**](evidencias/README.md)
+- 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../../README.pt-BR.md)
