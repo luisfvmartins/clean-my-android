@@ -6,6 +6,23 @@ O objetivo é construir uma base pública e cumulativa de auditorias técnicas, 
 
 > **Princípio central:** nenhum resultado pode ser inventado. Toda métrica deve indicar método, condição de coleta e evidência. Quando não for possível medir, registrar como "Não mensurado" ou "Inconclusivo".
 
+## Como utilizar este guia: IA recomendada, execução manual permitida
+
+O caminho recomendado é trabalhar com um assistente de IA de sua escolha. O Clean My Android não depende de ChatGPT, Claude, Gemini, Antigravity ou qualquer fornecedor específico. Escolha uma ferramenta capaz de ler o repositório e, se a intenção for coletar dados diretamente, acessar o terminal do computador onde o ADB está instalado.
+
+1. Clone o repositório e abra sua pasta no assistente/agente de IA.
+2. Peça que ele leia integralmente [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md) e este guia antes de começar.
+3. Confirme que o ADB reconhece o aparelho correto e que o computador foi autorizado.
+4. Solicite a auditoria inicial em modo somente leitura.
+5. Revise as conclusões e o plano de alterações. A IA deve explicar evidências, incertezas, riscos e reversões.
+6. Autorize explicitamente cada etapa de alteração. Não conceda autorização genérica para modificar tudo.
+7. Acompanhe os testes, a coleta final e a produção do relatório.
+8. Revise e sanitize os arquivos antes de qualquer publicação.
+
+**A IA auxilia na investigação e na documentação; a responsabilidade pela autorização permanece com o proprietário do aparelho.** Um assistente que não tenha acesso ao terminal/ADB pode orientar o processo, mas não deve alegar que inspecionou ou modificou o dispositivo.
+
+A execução manual também é permitida para quem domina Android e ADB. Nesse caso, siga as mesmas etapas, critérios de evidência, segurança, reversibilidade e documentação descritos neste guia.
+
 ## 1. Fluxo recomendado
 
 1. Criar um fork próprio do repositório (para colaboradores sem acesso de escrita) e preparar uma branch de contribuição.
@@ -298,7 +315,7 @@ A conclusão deve responder: o que mudou, o que foi preservado, o que deixou de 
 
 ## 11. Instruções para a IA
 
-A IA utilizada pelo usuário deverá:
+O uso de IA é o caminho recomendado, mas não obrigatório. O usuário pode executar o procedimento manualmente se tiver conhecimento técnico suficiente. A IA utilizada deverá:
 
 1. Confirmar que o usuário está trabalhando em um fork próprio ou cópia local e identificar o repositório original como `upstream`.
 2. Identificar o dispositivo conectado e criar uma pasta individual para a auditoria.

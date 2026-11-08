@@ -2,6 +2,29 @@
 
 Este arquivo orienta assistentes de IA (ChatGPT, Claude, Gemini, Antigravity e outros) a auditar, otimizar e documentar um dispositivo Android de forma individual, segura e verificável.
 
+## Como iniciar (qualquer assistente de IA)
+
+O Clean My Android foi projetado para ser utilizado preferencialmente com o auxílio de um assistente de IA escolhido pelo próprio usuário. Estas instruções são independentes de fornecedor: ChatGPT, Claude, Gemini, Antigravity, Codex ou outro agente podem ser utilizados, desde que tenham capacidade compatível com a tarefa.
+
+**Para uma auditoria direta do aparelho**, o agente precisa:
+- conseguir ler os arquivos deste repositório;
+- acessar um terminal no computador onde o ADB esteja instalado;
+- executar comandos de inspeção e ler suas saídas;
+- solicitar autorização antes de qualquer comando que altere o dispositivo.
+
+Um chat sem acesso ao terminal pode explicar comandos e analisar dados fornecidos pelo usuário, mas não pode afirmar que inspecionou o aparelho nem executar ações nele.
+
+### Início recomendado para o usuário
+
+1. Clone o repositório e abra a pasta no assistente/agente escolhido.
+2. Conecte e autorize o dispositivo Android por ADB.
+3. Solicite ao agente: **“Leia AI_INSTRUCTIONS.md e docs/USER_DEVICE_AUDIT.md integralmente. Faça primeiro somente a identificação e a auditoria inicial, sem alterar o aparelho.”**
+4. Revise o diagnóstico e o plano de alterações antes de autorizar qualquer intervenção.
+
+A execução manual por usuários tecnicamente experientes continua permitida. Os mesmos requisitos de evidência, autorização, segurança, reversibilidade e documentação se aplicam.
+
+---
+
 **Leia também:** [Auditoria individual do dispositivo](docs/USER_DEVICE_AUDIT.md). Esse documento contém o procedimento para preparar uma contribuição, organizar evidências, produzir o relatório antes/depois e enviá-lo por Pull Request.
 
 ---

@@ -4,6 +4,14 @@ Contribuições são bem-vindas, especialmente auditorias de novos modelos, corr
 
 O objetivo é construir uma base pública e cumulativa: **cada Pull Request aprovado acrescenta conhecimento ao repositório principal sem apagar o trabalho anterior.**
 
+## Forma recomendada de utilização
+
+Para realizar uma auditoria de dispositivo, recomendamos utilizar um assistente de IA de sua escolha, como ChatGPT, Claude, Gemini, Antigravity, Codex ou equivalente. Não há dependência de um fornecedor específico.
+
+O fluxo mais simples é clonar este repositório, abrir a pasta em um agente com acesso ao terminal/ADB e solicitar que leia [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) e o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md). Assim, o assistente pode conduzir as coletas, analisar os componentes, preparar um plano revisável, documentar o antes/depois e organizar a contribuição.
+
+**A execução manual continua permitida** para quem possui conhecimento técnico de Android e ADB. A recomendação de IA não elimina a responsabilidade do usuário: nenhuma alteração no aparelho pode ocorrer sem autorização explícita, e toda contribuição deve ser revisada e sanitizada antes do envio.
+
 ## Tipos de contribuição
 
 | Contribuição | Onde enviar |
