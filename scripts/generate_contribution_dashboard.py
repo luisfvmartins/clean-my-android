@@ -126,7 +126,7 @@ def generate_english(pulls: list[dict]) -> str:
         "GitHub API response. It runs after updates to the main branch, daily, and can also be started "
         "manually from the Actions tab. It uses the GITHUB_TOKEN provided by GitHub Actions; no personal "
         "token is stored in the repository.", "",
-        "Also see project statistics (ESTATISTICAS.en.md) and the audit catalog (reports/README.md).", ""
+        "Also see [project statistics](ESTATISTICAS.en.md) and the [audit catalog](../reports/README.md).", ""
     ])
     return "\n".join(lines)
 
