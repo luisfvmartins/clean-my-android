@@ -8,7 +8,7 @@ The goal is to build a cumulative public knowledge base: **every approved Pull R
 
 For a device audit, we recommend using an AI assistant of your choice, such as ChatGPT, Claude, Gemini, Antigravity, Codex, or an equivalent tool. The project does not depend on a specific provider.
 
-The simplest workflow is to clone this repository, open the folder in an agent with terminal/ADB access, and ask it to read [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md) and the [individual device audit guide](docs/USER_DEVICE_AUDIT.en.md). The assistant can then guide data collection, analyze components, prepare a reviewable plan, document before/after states, and organize the contribution.
+The simplest workflow is to clone this repository, open the folder in an agent with terminal/ADB access, and ask it to read [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) and the [individual device audit guide](docs/USER_DEVICE_AUDIT.md). The assistant can then guide data collection, analyze components, prepare a reviewable plan, document before/after states, and organize the contribution.
 
 **Manual execution is still allowed** for people with technical Android and ADB knowledge. The AI recommendation does not remove user responsibility: no device change may happen without explicit authorization, and every contribution must be reviewed and sanitized before submission.
 
@@ -44,7 +44,7 @@ Confirm:
 
 ## 2. Prepare an audit
 
-Before making any device changes, follow the [individual device audit guide](docs/USER_DEVICE_AUDIT.en.md) and the [AI instructions](AI_INSTRUCTIONS.en.md).
+Before making any device changes, follow the [individual device audit guide](docs/USER_DEVICE_AUDIT.md) and the [AI instructions](AI_INSTRUCTIONS.md).
 
 A device contribution must:
 - identify the exact manufacturer, model, codename, Android/ROM, and build when available;
@@ -74,7 +74,7 @@ reports/samsung/galaxy-model/
 
 The structure is flexible. Include only files that exist and are useful. Do not create empty files to imply complete data collection.
 
-Update `reports/README.md` and `reports/README.en.md` with an entry for the device. Do not edit or reorganize other devices' entries unnecessarily.
+Update `reports/README.md` and `reports/README.md` with an entry for the device. Do not edit or reorganize other devices' entries unnecessarily.
 
 ## 4. Privacy before submission
 
@@ -95,7 +95,7 @@ Keep raw dumps locally. Share only sanitized data needed to support the conclusi
 git status --short
 git diff --check
 git diff
-git add reports/YOUR-DEVICE reports/README.md reports/README.en.md
+git add reports/YOUR-DEVICE reports/README.md reports/README.md
 git commit -m "docs(audit): add <manufacturer-model> device report"
 git push -u origin HEAD
 gh pr create --repo luisfvmartins/clean-my-android --base main
@@ -119,9 +119,9 @@ Opening a PR does not mean automatic approval. After review and merge, files bec
 
 ## Useful links
 
-- [Individual device audit guide](docs/USER_DEVICE_AUDIT.en.md)
-- [Device catalog](reports/README.en.md)
-- [AI assistant instructions](AI_INSTRUCTIONS.en.md)
+- [Individual device audit guide](docs/USER_DEVICE_AUDIT.md)
+- [Device catalog](reports/README.md)
+- [AI assistant instructions](AI_INSTRUCTIONS.md)
 - [GitHub repository](https://github.com/luisfvmartins/clean-my-android)
 - [Portuguese contribution guide](CONTRIBUTING.md)
 
