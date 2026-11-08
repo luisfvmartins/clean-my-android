@@ -56,8 +56,8 @@ def dashboard_context(pulls: list[dict]):
     return devices, years, authors, updated
 
 
-def generate(pulls: list[dict]) -> str:
-    devices, years, authors, updated = dashboard_context(pulls)
+def generate(pulls: list[dict], context) -> str:
+    devices, years, authors, updated = context
     lines = [
         "# Evolução das contribuições", "",
         "Painel calculado com dados da API REST do GitHub. A contagem considera Pull Requests "
@@ -93,8 +93,8 @@ def generate(pulls: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def generate_english(pulls: list[dict]) -> str:
-    devices, years, authors, updated = dashboard_context(pulls)
+def generate_english(pulls: list[dict], context) -> str:
+    devices, years, authors, updated = context
     lines = [
         "# Contribution Progress", "",
         "Dashboard calculated using the GitHub REST API. The count includes closed Pull Requests "
@@ -134,8 +134,9 @@ def generate_english(pulls: list[dict]) -> str:
 def main() -> int:
     try:
         pulls = merged_pull_requests()
-        content = generate(pulls)
-        content_en = generate_english(pulls)
+        context = dashboard_context(pulls)
+        content = generate(pulls, context)
+        content_en = generate_english(pulls, context)
     except (OSError, UnicodeError, json.JSONDecodeError, RuntimeError) as exc:
         print(f"ERRO: {exc}", file=sys.stderr)
         return 1
