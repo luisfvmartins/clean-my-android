@@ -13,6 +13,9 @@ The debloating and sandboxing session was performed through **Android Debug Brid
 
 > **Validation status: Pending.** This report reflects evidence collected during the ADB session. Canonical Android version confirmation through `getprop ro.build.version.release` and functional tests for voice calls, SMS, biometrics, banking applications, and Play Integrity remain pending in-person validation by the device owner.
 
+> [!CAUTION]
+> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components. This does not confirm the device's current state or prove a functional failure, but it conflicts with the project's current safety guardrails. This is a historical record, not a recommendation. **Do not reuse this disable list on other devices.** The actual state must be checked on-device; any restoration requires individual assessment and in-person validation of calls, SMS, SIM, emergency, Bluetooth, and contacts.
+
 ### Reported actions and observations
 
 - **501 components** mapped in the initial firmware inventory.
