@@ -320,6 +320,8 @@ As medições comparativas foram realizadas com ferramentas de telemetria do And
 | **Temperatura em Espera** | 37.0°C a 40.0°C | **33.0°C** | **-4°C a -7°C (redução térmica observada)**| `dumpsys battery` Passo 384 |
 | **Play Integrity / Bancos** | Não coletado na sessão | **Pendente de validação** | Testes bancários e atestação não executados | Registros não contêm chamadas Play Integrity |
 
+> **Nota de reconciliação:** um resumo operacional anterior registrava 257 pacotes habilitados. Esse valor não coincide com os 248 pacotes classificados como preservados/ativos no inventário final. Como a saída bruta do comando não está publicada para conferência, 257 não é tratado como valor confirmado; o comparativo utiliza a classificação do inventário estruturado.
+
 O comparativo estruturado em formato JSON está catalogado em [`comparativo.json`](comparativo.json).
 
 ---
