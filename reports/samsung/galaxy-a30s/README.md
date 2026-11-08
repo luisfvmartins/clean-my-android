@@ -34,16 +34,17 @@ Este diretório contém a documentação técnica integral, inventários de paco
 
 ---
 
-## 🎯 Escopo da Otimização Cirúrgica
+## 🎯 Escopo da Otimização Cirúrgica (Lotes 1 e 2)
 
 O procedimento foi executado em modo não-root via **Android Debug Bridge (ADB)** com autorização explícita do proprietário:
 
 1. **Diagnóstico e Inventário Exaustivo:** Todos os 392 pacotes do firmware foram catalogados e analisados em `before/inventory.json`.
-2. **Remoção de Bloatware Comercial:** Desinstalação para o Usuário 0 de aplicativos parceiros não solicitados (`com.odete.samsung` e loja `com.samsung.shop`).
-3. **Erradicação do Ecossistema Meta / Facebook:** Desativação de 4 componentes em segundo plano (`katana`, `system`, `appmanager`, `services`).
-4. **Desbloqueio de Throttling Samsung (GOS):** Neutralização do *Game Optimizing Service* (`com.samsung.android.game.gos`) e satélites (`gamehome`, `gametools`), eliminando a limitação artificial de frequência de CPU/GPU do Exynos 7904.
-5. **Silenciamento de Falsos Alertas e Telemetria:** Desativação do *Security Log Agent* (`com.samsung.android.securitylogagent`), erradicando os avisos contínuos de integridade decorrentes do bootloader desbloqueado, além da contenção do *Samsung Rubin* e do *Knox Analytics Uploader*.
-6. **Preservação de Subsistemas Vitais:** O teclado ativo (Samsung HoneyBoard), launcher (One UI Home), subsistema telefônico/RIL/IMS e Google Play Services/Store foram 100% preservados, garantindo estabilidade e compatibilidade com aplicativos bancários.
+2. **Remoção de Bloatware Comercial & Adware Oculto:** Desinstalação de parceiros comerciais (`com.odete.samsung` e loja `com.samsung.shop`) e desativação do dropper comercial **Digital Turbine Ignite** (`com.dti.samsung`).
+3. **Erradicação da Telemetria Central:** Neutralização do **Samsung DiagMonAgent**, **IMS Logger**, **NetworkDiagnostic**, **Samsung Find My Mobile** e do **Google Location History 24/7**.
+4. **Erradicação do Ecossistema Meta / Facebook:** Desativação de 4 componentes em segundo plano (`katana`, `system`, `appmanager`, `services`).
+5. **Desbloqueio de Throttling Samsung (GOS):** Neutralização do *Game Optimizing Service* (`com.samsung.android.game.gos`) e satélites (`gamehome`, `gametools`), eliminando a limitação artificial de frequência de CPU/GPU do Exynos 7904.
+6. **Alívio de Daemons Ociosos e Multimídia:** Desativação do *Dynamic Lock Screen*, *Story Service*, módulos de AR/Stickers (*AR Emoji*, *Live Stickers*, *Google ARCore*) e daemons de varredura (*Easy Setup BLE/Wi-Fi*, *AllShare* e *Spooler de Impressão*).
+7. **Preservação de Subsistemas Vitais:** O teclado ativo (Samsung HoneyBoard), launcher (One UI Home), subsistema telefônico/RIL/IMS e Google Play Services/Store foram 100% preservados, garantindo estabilidade e compatibilidade bancária.
 
 ---
 
@@ -51,9 +52,10 @@ O procedimento foi executado em modo não-root via **Android Debug Bridge (ADB)*
 
 - **Pacotes Catalogados no Firmware:** 392 pacotes
 - **Pacotes Habilitados Antes:** 391 pacotes
-- **Pacotes Habilitados Depois:** 371 pacotes (**-20 pacotes ativos em segundo plano**)
-- **Pacotes Desativados:** 20 pacotes (1 de fábrica + 19 desativados cirurgicamente)
+- **Pacotes Habilitados Depois:** 344 pacotes (**-47 pacotes em segundo plano / -12,0%**)
+- **Pacotes Desativados:** 47 pacotes (1 de fábrica + 46 desativados cirurgicamente via disable-user)
 - **Pacotes Comerciais Desinstalados (User 0):** 2 pacotes (`com.odete.samsung` e `com.samsung.shop`)
+- **Total de Pacotes Neutralizados:** 48 pacotes
 - **Estabilidade e Conectividade:** 100% funcionais (Wi-Fi, Bluetooth, Telefonia, Biometria e Google Play Services).
 
 ---

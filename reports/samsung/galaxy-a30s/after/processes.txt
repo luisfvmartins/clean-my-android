@@ -1,6 +1,6 @@
 === ps -A ===
 USER            PID   PPID     VSZ    RSS WCHAN            ADDR S NAME                       
-root              1      0 2223728   3676 0                   0 S init
+root              1      0 2223728   3664 0                   0 S init
 root              2      0       0      0 0                   0 S [kthreadd]
 root              3      2       0      0 0                   0 S [ksoftirqd/0]
 root              5      2       0      0 0                   0 S [kworker/0:0H]
@@ -61,7 +61,6 @@ root            690      2       0      0 0                   0 S [bioset]
 root            692      2       0      0 0                   0 S [kblockd]
 root            709      2       0      0 0                   0 S [spi1]
 root            712      2       0      0 0                   0 S [spi3]
-root            751      2       0      0 0                   0 S [kworker/5:1]
 root            771      2       0      0 0                   0 S [irq/156-s2mpu08]
 root            814      2       0      0 0                   0 S [irq/132-s2mu106]
 root            843      2       0      0 0                   0 S [ion_noncontig_h]
@@ -214,17 +213,14 @@ root           2901      2       0      0 0                   0 S [bioset]
 root           2905      2       0      0 0                   0 S [ext4-rsv-conver]
 root           2907      1 2143332   1784 0                   0 S init
 root           2910      1 2151940   3260 0                   0 S ueventd
-root           3682      2       0      0 0                   0 S [kworker/3:2]
-root           3691      2       0      0 0                   0 S [kworker/2:2]
-root           3693      2       0      0 0                   0 S [kworker/1:2]
-logd           3697      1 2209816   5980 0                   0 S logd
+logd           3697      1 2209816   6384 0                   0 S logd
 lmkd           3698      1 2133084   2288 0                   0 S lmkd
 system         3699      1 2209740   2920 0                   0 S servicemanager
-system         3700      1 2141008   3204 0                   0 S hwservicemanager
+system         3700      1 2141008   3156 0                   0 S hwservicemanager
 system         3701      1 2135496   2048 0                   0 S vndservicemanager
 root           3706      1 2131816   1388 0                   0 S watchdogd
 root           3708      2       0      0 0                   0 S [mtp_read_send]
-root           3719      1 2282548   3208 0                   0 S vold
+root           3719      1 2282548   3284 0                   0 S vold
 root           3734      2       0      0 0                   0 S [jbd2/mmcblk0p29]
 root           3735      2       0      0 0                   0 S [ext4-rsv-conver]
 root           3738      2       0      0 0                   0 S [jbd2/mmcblk0p5-]
@@ -248,16 +244,16 @@ system         3863      1 2135876   2396 0                   0 S vaultkeeperd
 system         3866      1 2135716   2460 0                   0 S vendor.samsung.hardware.security.vaultkeeper@2.0-service
 system         3867      1 2132676   1580 0                   0 S storkd
 root           3878      2       0      0 0                   0 S [kworker/4:2]
-vendor_audit   3886      1 2132680   1584 0                   0 S auditd
+vendor_audit   3886      1 2132680   1636 0                   0 S auditd
 root           3887      2       0      0 0                   0 S [kauditd]
 tombstoned     3889      1 2132176   1220 0                   0 S tombstoned
 system         3890      1 2180448   1940 0                   0 S cass
 system         3891      1 2167340   2088 0                   0 S emservice
 root           3896      2       0      0 0                   0 S [kworker/3:1H]
 statsd         3899      1 2251032   3096 0                   0 S statsd
-root           3900      1 2466848   4600 0                   0 S netd
-root           3901      1 5997400 109432 0                   0 S zygote64
-root           3902      1 1918836  41444 0                   0 S zygote
+root           3900      1 2466848   4584 0                   0 S netd
+root           3901      1 5997400 110076 0                   0 S zygote64
+root           3902      1 1918836  41492 0                   0 S zygote
 system         3906      1 2134844   2100 0                   0 S android.hidl.allocator@1.0-service
 audioserver    3907      1   38192   1520 0                   0 S android.hardware.audio.service
 bluetooth      3911      1 2198788   2356 0                   0 S android.hardware.bluetooth@1.0-service
@@ -267,36 +263,36 @@ media          3914      1 2183980   2140 0                   0 S android.hardwa
 media          3915      1   19280    716 0                   0 S android.hardware.drm@1.3-service.widevine
 system         3916      1 2135976   2084 0                   0 S android.hardware.gatekeeper@1.0-service
 system         3917      1 2185956   3056 0                   0 S android.hardware.graphics.allocator@2.0-service
-system         3918      1 2505040   4304 0                   0 S android.hardware.graphics.composer@2.1-service
+system         3918      1 2505040   4300 0                   0 S android.hardware.graphics.composer@2.1-service
 system         3919      1 2136412   2568 0                   0 S android.hardware.health@2.1-service-samsung
 system         3920      1 2135952   2344 0                   0 S android.hardware.memtrack@1.0-service
 system         3922      1 2163888   2948 0                   0 S android.hardware.sensors@1.0-service
 system         3924      1 2163356   2088 0                   0 S android.hardware.usb@1.1-service.exynos7885
-wifi           3926      1 2166812   2980 0                   0 S android.hardware.wifi@1.0-service
-system         3928      1 2164116   2676 0                   0 S vendor.samsung.hardware.hyper-service
+wifi           3926      1 2166812   2976 0                   0 S android.hardware.wifi@1.0-service
+system         3928      1 2164116   2824 0                   0 S vendor.samsung.hardware.hyper-service
 system         3932      1 2135336   2324 0                   0 S vendor.samsung.hardware.light-service
 system         3937      1 2164664   2464 0                   0 S android.hardware.power.samsung-service
 cameraserver   3938      1   40580   1132 0                   0 S vendor.samsung.hardware.camera.provider@4.0-service
 system         3940      1 2135412   2276 0                   0 S vendor.samsung.hardware.miscpower@2.0-service
-system         3950      1 2165224   2256 0                   0 S vendor.samsung.hardware.security.drk@2.0-service
+system         3950      1 2165224   2564 0                   0 S vendor.samsung.hardware.security.drk@2.0-service
 system         3951      1 2168492   2308 0                   0 S vendor.samsung.hardware.snap@1.2-service
 system         3952      1 2135580   1992 0                   0 S vendor.samsung.hardware.sysinput@1.1-service
-system         3953      1 2200924   3072 0                   0 S vendor.samsung.hardware.thermal@1.0-service
-system         3954      1 2136136   2252 0                   0 S vendor.samsung.hardware.vibrator@2.2-service
+system         3953      1 2200924   3068 0                   0 S vendor.samsung.hardware.thermal@1.0-service
+system         3954      1 2136136   2256 0                   0 S vendor.samsung.hardware.vibrator@2.2-service
 wifi           3955      1 2138492   2208 0                   0 S vendor.samsung.hardware.wifi@2.0-service
 system         3956      1 2140572   2348 0                   0 S vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
 system         3963      1 2180756   2028 0                   0 S vendor.samsung_slsi.hardware.configstore@1.0-service
-audioserver    3964      1 2538688   8724 0                   0 S audioserver
+audioserver    3964      1 2556124   8764 0                   0 S audioserver
 credstore      3965      1 2160320   2172 0                   0 S credstore
 gpu_service    3966      1 2158892   2200 0                   0 S gpuservice
-system         3968      1 3097460  21816 0                   0 S surfaceflinger
+system         3968      1 3106284  21688 0                   0 S surfaceflinger
 dsms           3979      1 2135380   1712 0                   0 S dsms
 system         4008      1   13916    880 0                   0 S secure_storage_daemon
 root           4011      2       0      0 0                   0 S [kworker/2:1H]
 nobody         4014      1 2150600   1388 0                   0 S traced_probes
-nobody         4015      1 2151008   1880 0                   0 S traced
+nobody         4015      1 2151008   1888 0                   0 S traced
 system         4022      1 2133792   1628 0                   0 S sdp_cryptod
-cameraserver   4026      1   97824   1708 0                   0 S cameraserver
+cameraserver   4026      1   98872   1756 0                   0 S cameraserver
 drm            4027      1   28560   1716 0                   0 S drmserver
 system         4029      1 2161924   1524 0                   0 S imsd
 incidentd      4030      1 2181160   1720 0                   0 S incidentd
@@ -305,20 +301,20 @@ system         4032      1 2169956   1884 0                   0 S smdexe
 system         4033      1 2210120   1388 0                   0 S diagexe
 system         4034      1 2204516   1620 0                   0 S ddexe
 system         4037      1 2182428   2372 0                   0 S connfwexe
-root           4038      1 2200648   4064 0                   0 S installd
-keystore       4042      1 2168616   4000 0                   0 S keystore
-mediaex        4044      1 2342412   7964 0                   0 S media.extractor
+root           4038      1 2200648   4020 0                   0 S installd
+keystore       4042      1 2168616   3884 0                   0 S keystore
+mediaex        4044      1 2342412   7516 0                   0 S media.extractor
 media          4052      1 2229248   2968 0                   0 S media.metrics
-media          4053      1   80240   5668 0                   0 S mediaserver
+media          4053      1   80244   5668 0                   0 S mediaserver
 system         4054      1 2134204   1776 0                   0 S spqr_service
 root           4057      1 2200212   2948 0                   0 S storaged
-wifi           4059      1 2161792   2796 0                   0 S wificond
-mediacodec     4062      1   56332   3248 0                   0 S media.codec
+wifi           4059      1 2161792   2792 0                   0 S wificond
+mediacodec     4062      1   56336   3400 0                   0 S media.codec
 system         4065      1 2132800   1752 0                   0 S argosd
 radio          4066      1 2134796   1620 0                   0 S cbd
-gps            4067      1 2358364   2996 0                   0 S gpsd
-radio          4071      1 2415528   5948 0                   0 S rild
-radio          4072      1 2379448   4932 0                   0 S rild
+gps            4067      1 2358364   3000 0                   0 S gpsd
+radio          4071      1 2415528   5916 0                   0 S rild
+radio          4072      1 2379448   4936 0                   0 S rild
 system         4073      1 2325720   2272 0                   0 S vendor.samsung.hardware.gnss@2.0-service
 wifi           4076      1 2133020   1656 0                   0 S wlbtd
 mediacodec     4078      1 2307796   4688 0                   0 S media.swcodec
@@ -329,153 +325,158 @@ system         4086      1 2196960   2208 0                   0 S vendor.samsung
 root           4124      2       0      0 0                   0 S [kbase_event]
 radio          4333      1 2180932   2048 0                   0 S multiclientd
 radio          4348      1 2180932   1724 0                   0 S multiclientd
-system         4358   3901 11777764 323008 0                  0 S system_server
+system         4358   3901 12124972 413920 0                  0 S system_server
 root           4460      2       0      0 0                   0 S [kworker/1:1H]
 system         4486      1 2136116   2232 0                   0 S vendor.samsung.hardware.hqm@1.0-service
 root           4497      2       0      0 0                   0 S [kworker/5:1H]
-root           4523   3900 2132360   2020 0                   0 S iptables-restore
+root           4523   3900 2132360   2012 0                   0 S iptables-restore
 root           4524   3900 2132360   1960 0                   0 S ip6tables-restore
 root           4618      2       0      0 0                   0 S [mxmgmt_thread]
 root           4621      2       0      0 0                   0 S [mxlog_thread]
 root           4622      2       0      0 0                   0 S [hip4_work]
-radio          4645   3901 6032672 114252 0                   0 S com.android.phone
-bluetooth      4665   3901 6097852 103096 0                   0 S com.android.bluetooth
-u0_a70         4687   3901 8617428 250100 0                   0 S com.android.systemui
-wifi           4693      1 2145960   3644 0                   0 S wpa_supplicant
+radio          4645   3901 6032672 114664 0                   0 S com.android.phone
+bluetooth      4665   3901 6097852 104764 0                   0 S com.android.bluetooth
+u0_a70         4687   3901 8599936 248764 0                   0 S com.android.systemui
+wifi           4693      1 2145960   3536 0                   0 S wpa_supplicant
 webview_zygote 4824   3902 1862812   6680 0                   0 S webview_zygote
-network_stack  4895   3901 5377104  97136 0                   0 S com.android.networkstack.process
+network_stack  4895   3901 5377104  96112 0                   0 S com.android.networkstack.process
 radio          4926   3901 5230436  76736 0                   0 S com.android.cellbroadcastservice
 system         4982   3901 5277696  77452 0                   0 S com.sec.sve
-system         5002   3901 6872724  98100 0                   0 S com.sec.imsservice
+system         5002   3901 6872724  99192 0                   0 S com.sec.imsservice
 secure_element 5021   3901 5249212  75312 0                   0 S com.android.se
 system         5033   3901 5217152  79868 0                   0 S com.samsung.android.cmfa.framework
-u0_a247        5074   3901 5373768  95220 0                   0 S com.google.android.ext.services
-u0_a142        5202   3901 7163464 180000 0                   0 S com.sec.android.app.launcher
+u0_a247        5074   3901 5373768  93460 0                   0 S com.google.android.ext.services
+u0_a142        5202   3901 7163464 184260 0                   0 S com.sec.android.app.launcher
 root           5235      2       0      0 0                   0 S [kworker/4:1H]
-system         5313   3901 5267412  87024 0                   0 S com.samsung.android.mcfserver
+system         5313   3901 5302396  87708 0                   0 S com.samsung.android.mcfserver
 root           5373      2       0      0 0                   0 S [kbase_event]
 root           5391      2       0      0 0                   0 S [kworker/u16:2]
-system         5410   3901 7108680 198032 0                   0 S com.android.settings
-vendor_spass   5530   3901 5277148  89308 0                   0 S com.samsung.android.authfw
-u0_a123        5558   3901 5595644 102272 0                   0 S com.samsung.android.samsungpass
+system         5410   3901 7276632 222496 0                   0 S com.android.settings
+vendor_spass   5530   3901 5312164  91244 0                   0 S com.samsung.android.authfw
+u0_a123        5558   3901 5613412 104196 0                   0 S com.samsung.android.samsungpass
 root           5574      2       0      0 0                   0 S [kworker/5:2]
-oem_5013       5598   3901 5354812  89740 0                   0 S com.sec.location.nsflp2
-system         5609   3901 5308180  88224 0                   0 S com.samsung.android.tadownloader
-u0_a94         5666   3901 5467008  38704 0                   0 S com.google.process.gservices
+oem_5013       5598   3901 5354812  88196 0                   0 S com.sec.location.nsflp2
+system         5609   3901 5325624  92068 0                   0 S com.samsung.android.tadownloader
 system         5669      1 2179660   1788 0                   0 S perfsdkserver
-system         5675      1 2149392   2836 0                   0 S pageboostd
-shell          5696      1 2297344   3872 0                   0 S adbd
+system         5675      1 2149392   2812 0                   0 S pageboostd
+shell          5696      1 2297344   3984 0                   0 S adbd
 system         5700      1 2132784   1568 0                   0 S freecessmonitor
-system         5718   5700 2162096   1888 0                   0 S freecess_binder
-system         5719   5700 2162096   1880 0                   0 S freecess_signal
+system         5718   5700 2162096   1892 0                   0 S freecess_binder
+system         5719   5700 2162096   1884 0                   0 S freecess_signal
 system         5720   5700 2197160   1640 0                   0 S freecess_pkg
-system         5721   5700 2197160   1776 0                   0 S freecess_cfb
+system         5721   5700 2197160   1780 0                   0 S freecess_cfb
 adaptive_brightness 5862 3901 5320976 79308 0                 0 S com.samsung.adaptivebrightnessgo
-u0_a148        6026   3901 6460584 132448 0                   0 S com.google.android.googlequicksearchbox:interactor
-u0_a248        6064   3901 5469408  93700 0                   0 S com.android.providers.media.module
-system         6091   3901 5363336  99876 0                   0 S com.sec.android.diagmonagent
+u0_a148        6026   3901 6460584 132412 0                   0 S com.google.android.googlequicksearchbox:interactor
+u0_a248        6064   3901 5469408  93660 0                   0 S com.android.providers.media.module
+system         6091   3901 5363336  99064 0                   0 S com.sec.android.diagmonagent
 system         6111   3901 5265524  77828 0                   0 S com.samsung.sec.android.teegris.tui_service
-system         6142   3901 5711884 105760 0                   0 S com.sec.android.sdhms
-u0_a148        6261   3901 7030188 169620 0                   0 S com.google.android.googlequicksearchbox:search
+system         6142   3901 5717004 106740 0                   0 S com.sec.android.sdhms
+u0_a148        6261   3901 7030188 171516 0                   0 S com.google.android.googlequicksearchbox:search
 root           6315      2       0      0 0                   0 S [kbase_event]
-u0_a64         6414   3901 6100908  51968 0                   0 S android.process.acore
-u0_a210        6825   3901 7582568 188144 0                   0 S com.samsung.android.honeyboard
+u0_a64         6414   3901 6100908  53760 0                   0 S android.process.acore
+u0_a210        6825   3901 7582696 191836 0                   0 S com.samsung.android.honeyboard
 root           7058      2       0      0 0                   0 S [kbase_event]
-root           8609      2       0      0 0                   0 S [kworker/2:3]
-system         8841   3901 5541800  64168 0                   0 S com.samsung.android.lool
+system         8841   3901 5541928  69452 0                   0 S com.samsung.android.lool
 root           8890      2       0      0 0                   0 S [kbase_event]
-root           8909   3901 5844416  55264 0                   0 S usap64
-u0_a233        9278   3901 7610484 161268 0                   0 S com.google.android.youtube
-u0_a68         9370   3901 6472352 109696 0                   0 S com.samsung.android.app.cocktailbarservice
+root           8909   3901 5844416  55248 0                   0 S usap64
+u0_a233        9278   3901 7627928 161884 0                   0 S com.google.android.youtube
+u0_a68         9370   3901 6472352 109496 0                   0 S com.samsung.android.app.cocktailbarservice
 root           9396      2       0      0 0                   0 S [kbase_event]
 root           9605      2       0      0 0                   0 S [kbase_event]
 system        10223   3901 5252272  80808 0                   0 S com.samsung.android.svcagent
-u0_a112       10702   3901 6320232 128128 0                   0 S com.android.vending
-u0_a94        11365   3901 7002152 294480 0                   0 S com.google.android.gms
-mdnsr         11584      1   28636    780 0                   0 S mdnsd
-u0_a141       11591   3901 5311280  87644 0                   0 S com.google.android.apps.turbo
-u0_a240       11973   3901 5238632  84144 0                   0 S com.android.cellbroadcastreceiver
-vendor_ipsgeofence 11995 3901 5521552 87548 0                 0 S com.samsung.android.ipsgeofence
-u0_a76        12153   3901 5471084  43736 0                   0 S com.samsung.android.dynamiclock
-root          12164      2       0      0 0                   0 S [kworker/u17:2]
-u0_a120       12207   3901 5292560  40740 0                   0 S com.samsung.android.smartsuggestions
-u0_a241       12368   3901 5436476  40796 0                   0 S com.google.android.setupwizard
-root          12677      2       0      0 0                   0 S [kworker/u16:3]
+u0_a112       10702   3901 6355508 137644 0                   0 S com.android.vending
+u0_a94        11365   3901 7072768 294840 0                   0 S com.google.android.gms
+mdnsr         11584      1   28636   1028 0                   0 S mdnsd
 root          12813      2       0      0 0                   0 S [kworker/u17:4]
-u0_a70        12898   3901 5968720  75428 0                   0 S com.android.systemui:edgelighting
-u0_a190       12932   3901 5234036  29772 0                   0 S com.samsung.android.sm.policy
-root          12954      2       0      0 0                   0 S [kbase_event]
 u0_a71        13093   3901 5450836  48288 0                   0 S android.process.media
-vendor_cmhservice 13128 3901 6190456 86804 0                  0 S com.samsung.cmh:CMH
-root          13357      2       0      0 0                   0 S [kworker/3:0]
+vendor_cmhservice 13128 3901 6190456 87220 0                  0 S com.samsung.cmh:CMH
 root          13452      2       0      0 0                   0 S [kbase_event]
-root          13471   3901 5844416  56092 0                   0 S usap64
-root          13563      2       0      0 0                   0 S [kworker/1:0]
+root          13471   3901 5844416  56088 0                   0 S usap64
 system        13564   3901 5370860  91236 0                   0 S android:drmService
-root          13663      2       0      0 0                   0 S [kworker/0:1]
-root          13679      2       0      0 0                   0 S [kworker/u16:1]
-root          13683      2       0      0 0                   0 S [kworker/0:2]
-root          13698      2       0      0 0                   0 S [kworker/0:0]
-u0_a244       13779   3901 5424624  89528 0                   0 S com.google.android.permissioncontroller
-system        13802   3901 5299908  80956 0                   0 S com.android.keychain
-u0_a81        13828   3901 5218224  77736 0                   0 S com.sec.android.widgetapp.samsungapps
 root          13914      2       0      0 0                   0 S [kworker/2:0]
-vendor_smds   13929   3901 5270564  85956 0                   0 S com.samsung.android.sm.devicesecurity
-root          13975      2       0      0 0                   0 S [kworker/1:1]
-system        13998   3901 5252016  83304 0                   0 S com.samsung.android.bbc.bbcagent
-u0_a112       14064   3901 6167524 147940 0                   0 S com.android.vending:background
-u0_a143       14187   3901 5216628  76808 0                   0 S com.android.vpndialogs
-u0_a137       14222   3901 5927512  83592 0                   0 S com.samsung.android.app.taskedge
-system        14271   3901 5256204  82148 0                   0 S com.samsung.android.uds
-system        14355   3901 5251708  82188 0                   0 S com.samsung.android.provider.filterprovider
-root          14466      2       0      0 0                   0 S [kworker/3:1]
 root          14512      2       0      0 0                   0 S [kworker/u16:7]
-u0_a82        14533   3901 5347668  88856 0                   0 S com.samsung.android.game.gos
-shell         14648   5696 2134208   2636 0          7827574758 R ps
+root          14721      2       0      0 0                   0 S [kworker/u17:1]
+root          14907      2       0      0 0                   0 S [kworker/1:2]
 root          15059   3902 1847788   1308 0                   0 S usap32
 root          15065   3902 1847788   1304 0                   0 S usap32
-vendor_bcmgr  15213   3901 5318128  79840 0                   0 S com.samsung.android.beaconmanager
+root          15183      2       0      0 0                   0 S [kworker/u16:3]
+root          15187      2       0      0 0                   0 S [kworker/2:1]
+root          15201      2       0      0 0                   0 S [kworker/0:2]
+vendor_bcmgr  15213   3901 5318128  79832 0                   0 S com.samsung.android.beaconmanager
+u0_a126       15226   3901 5790336 159240 0                   0 S com.android.settings.intelligence
+u0_a113       15588   3901 6344416 139132 0                   0 S com.osp.app.signin
+u0_a115       15792   3901 6108408  95164 0                   0 S com.samsung.android.app.contacts
+radio         15854   3901 5318676  97980 0                   0 S com.samsung.android.app.telephonyui
+u0_a116       15943   3901 5386548 108420 0                   0 S com.samsung.android.scs
+system        16006   3901 5297904  90796 0                   0 S com.samsung.android.forest
+u0_a127       16109   3901 6149372 103088 0                   0 S com.samsung.android.messaging
+u0_a89        16255   3901 6399984 111268 0                   0 S com.sec.android.app.samsungapps
+u0_a135       16288   3901 5927892  80492 0                   0 S com.sec.android.app.soundalive:settingui
+u0_a122       16337   3901 6132872  92716 0                   0 S com.sec.android.gallery3d
+u0_a183       16415   3901 5275828  86560 0                   0 S com.sec.unifiedwfc
+root          16481      2       0      0 0                   0 S [kworker/1:0]
+root          16537      2       0      0 0                   0 S [kworker/5:0]
+root          16548      2       0      0 0                   0 S [kworker/3:1]
+u0_a240       16554   3901 5238632  83756 0                   0 S com.android.cellbroadcastreceiver
+vendor_ipsgeofence 16576 3901 5504108 87556 0                 0 S com.samsung.android.ipsgeofence
+root          16622      2       0      0 0                   0 S [kworker/u16:0]
+root          16624      2       0      0 0                   0 S [kworker/0:1]
+u0_a141       16634   3901 5311280  87484 0                   0 S com.google.android.apps.turbo
+u0_a94        16659   3901 5240236  84928 0                   0 S com.google.process.gservices
+root          16681      2       0      0 0                   0 S [kworker/3:0]
+root          16689      2       0      0 0                   0 S [kworker/0:0]
+root          16700      2       0      0 0                   0 S [kworker/u16:1]
+root          16761      2       0      0 0                   0 S [kworker/1:1]
+u0_a244       16784   3901 5424624  88876 0                   0 S com.google.android.permissioncontroller
+u0_a112       16830   3901 6194192 147736 0                   0 S com.android.vending:background
+u0_a143       16969   3901 5216628  76788 0                   0 S com.android.vpndialogs
+root          17018      2       0      0 0                   0 S [kworker/5:1]
+u0_a137       17038   3901 5927512  83540 0                   0 S com.samsung.android.app.taskedge
+u0_a82        17086   3901 5365112  91812 0                   0 S com.samsung.android.game.gos
+system        17151   3901 5256204  82012 0                   0 S com.samsung.android.uds
+root          17312      2       0      0 0                   0 S [kworker/2:2]
+shell         17389   5696 2134208   2636 0          7ad2aaa758 R ps
 root          22489      2       0      0 0                   0 S [intr_syncd]
 
 
 === top (summary) ===
-Tasks: 438 total,   1 running, 437 sleeping,   0 stopped,   0 zombie
-  Mem:  3813448K total,  3688984K used,   124464K free,  76828672 buffers
- Swap:  2097148K total,   676088K used,  1421060K free,  1759832K cached
+Tasks: 439 total,   1 running, 438 sleeping,   0 stopped,   0 zombie
+  Mem:  3813448K total,  3654008K used,   159440K free,  67522560 buffers
+ Swap:  2097148K total,   638876K used,  1458272K free,  1555696K cached
 800%cpu   6%user   0%nice  17%sys 777%idle   0%iow   0%irq   0%sirq   0%host
    PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS
- 14652 shell        20   0 2.0G 2.8M 1.9M R 20.0   0.0   0:00.13 top -b -n 1
- 14653 shell        20   0 2.0G 2.3M 1.6M S  0.0   0.0   0:00.02 head -n 40
- 14650 shell        20   0 2.0G 1.9M 1.3M S  0.0   0.0   0:00.02 sh -c top -b -n 1 | head -n 40
- 14533 u0_a82       20   0 5.1G  87M  33M S  0.0   2.3   0:00.42 com.samsung.android.game.gos
- 14466 root         20   0    0    0    0 S  0.0   0.0   0:00.01 [kworker/3:1]
- 14355 system       20   0 5.0G  80M  28M S  0.0   2.1   0:00.25 com.samsung.android.provider.filterprovider
- 14271 system       20   0 5.0G  80M  28M S  0.0   2.1   0:00.25 com.samsung.android.uds
- 14222 u0_a137      20   0 5.6G  82M  29M S  0.0   2.1   0:00.26 com.samsung.android.app.taskedge
- 14187 u0_a143      20   0 4.9G  75M  23M S  0.0   2.0   0:00.21 com.android.vpndialogs
- 14064 u0_a112      20   0 5.8G 144M  64M S  0.0   3.8   0:05.29 com.android.vending:background
- 13998 system       20   0 5.0G  81M  29M S  0.0   2.1   0:00.24 com.samsung.android.bbc.bbcagent
- 13975 root         20   0    0    0    0 S  0.0   0.0   0:00.04 [kworker/1:1]
- 13929 vendor_smds  20   0 5.0G  84M  30M S  0.0   2.2   0:00.43 com.samsung.android.sm.devicesecurity
- 13914 root         20   0    0    0    0 S  0.0   0.0   0:00.03 [kworker/2:0]
- 13828 u0_a81       20   0 4.9G  76M  24M S  0.0   2.0   0:00.19 com.sec.android.widgetapp.samsungapps
- 13802 system       20   0 5.0G  79M  27M S  0.0   2.1   0:00.20 com.android.keychain
- 13779 u0_a244      20   0 5.1G  87M  34M S  0.0   2.3   0:02.16 com.google.android.permissioncontroller
- 13698 root         20   0    0    0    0 S  0.0   0.0   0:00.07 [kworker/0:0]
- 13683 root         20   0    0    0    0 S  0.0   0.0   0:00.27 [kworker/0:2]
- 13679 root         20   0    0    0    0 S  0.0   0.0   0:00.82 [kworker/u16:1]
- 13663 root         20   0    0    0    0 S  0.0   0.0   0:00.32 [kworker/0:1]
- 13564 system       20   0 5.1G  89M  37M S  0.0   2.3   0:00.17 android:drmService
- 13563 root         20   0    0    0    0 S  0.0   0.0   0:00.06 [kworker/1:0]
- 13471 root          0 -20 5.5G  55M 732K S  0.0   1.4   0:00.00 usap64
- 13452 root          0 -20    0    0    0 S  0.0   0.0   0:00.00 [kbase_event]
- 13357 root         20   0    0    0    0 S  0.0   0.0   0:00.22 [kworker/3:0]
- 13128 vendor_cmhservice 20 0 5.9G 85M 29M S 0.0   2.2   0:00.66 com.samsung.cmh:CMH
- 13093 u0_a71       20   0 5.1G  47M  36M S  0.0   1.2   0:00.73 android.process.media
- 12954 root          0 -20    0    0    0 S  0.0   0.0   0:00.00 [kbase_event]
- 12932 u0_a190      20   0 4.9G  29M  26M S  0.0   0.7   0:00.25 com.samsung.android.sm.policy
- 12898 u0_a70       20   0 5.6G  74M  65M S  0.0   1.9   0:01.94 com.android.systemui:edgelighting
- 12813 root          0 -20    0    0    0 S  0.0   0.0   0:00.92 [kworker/u17:4]
- 12677 root         20   0    0    0    0 S  0.0   0.0   0:02.63 [kworker/u16:3]
- 12368 u0_a241      20   0 5.1G  40M  38M S  0.0   1.0   0:00.85 com.google.android.setupwizard
- 12207 u0_a120      20   0 5.0G  40M  31M S  0.0   1.0   0:00.55 com.samsung.android.smartsuggestions
+ 17393 shell        20   0 2.0G 2.7M 1.9M R 22.8   0.0   0:00.12 top -b -n 1
+  5700 system       20   0 2.0G 1.5M 1.5M S  2.8   0.0   0:00.86 freecessmonitor
+  4067 gps          20   0 2.2G 2.9M 2.4M S  2.8   0.0   0:03.17 gpsd -c /vendor/etc/gnss/gps.cfg
+   889 root         20   0    0    0    0 S  2.8   0.0   0:42.16 [cfinteractive]
+    49 root         RT   0    0    0    0 S  2.8   0.0   0:00.15 [watchdog/7]
+ 17394 shell        20   0 2.0G 2.4M 1.8M S  0.0   0.0   0:00.01 head -n 40
+ 17391 shell        20   0 2.0G 1.9M 1.3M S  0.0   0.0   0:00.02 sh -c top -b -n 1 | head -n 40
+ 17312 root         20   0    0    0    0 S  0.0   0.0   0:00.00 [kworker/2:2]
+ 17151 system       20   0 5.0G  80M  28M S  0.0   2.1   0:00.26 com.samsung.android.uds
+ 17086 u0_a82       20   0 5.1G  90M  35M S  0.0   2.4   0:03.37 com.samsung.android.game.gos
+ 17038 u0_a137      20   0 5.6G  82M  29M S  0.0   2.1   0:00.30 com.samsung.android.app.taskedge
+ 17018 root         20   0    0    0    0 S  0.0   0.0   0:00.00 [kworker/5:1]
+ 16969 u0_a143      20   0 4.9G  75M  23M S  0.0   2.0   0:00.22 com.android.vpndialogs
+ 16830 u0_a112      20   0 5.9G 144M  64M S  0.0   3.8   0:07.12 com.android.vending:background
+ 16784 u0_a244      20   0 5.1G  87M  34M S  0.0   2.3   0:02.22 com.google.android.permissioncontroller
+ 16761 root         20   0    0    0    0 S  0.0   0.0   0:00.02 [kworker/1:1]
+ 16700 root         20   0    0    0    0 S  0.0   0.0   0:00.47 [kworker/u16:1]
+ 16689 root         20   0    0    0    0 S  0.0   0.0   0:00.19 [kworker/0:0]
+ 16681 root         20   0    0    0    0 S  0.0   0.0   0:00.07 [kworker/3:0]
+ 16659 u0_a94       20   0 4.9G  83M  30M S  0.0   2.2   0:00.36 com.google.process.gservices
+ 16634 u0_a141      20   0 5.0G  85M  32M S  0.0   2.2   0:00.58 com.google.android.apps.turbo
+ 16624 root         20   0    0    0    0 S  0.0   0.0   0:00.24 [kworker/0:1]
+ 16622 root         20   0    0    0    0 S  0.0   0.0   0:01.23 [kworker/u16:0]
+ 16576 vendor_ipsgeofence 20 0 5.2G 86M 32M S 0.0  2.2   0:00.69 com.samsung.android.ipsgeofence
+ 16554 u0_a240      20   0 4.9G  82M  29M S  0.0   2.1   0:00.29 com.android.cellbroadcastreceiver
+ 16548 root         20   0    0    0    0 S  0.0   0.0   0:00.44 [kworker/3:1]
+ 16537 root         20   0    0    0    0 S  0.0   0.0   0:00.00 [kworker/5:0]
+ 16481 root         20   0    0    0    0 S  0.0   0.0   0:00.11 [kworker/1:0]
+ 16415 u0_a183      20   0 5.0G  85M  31M S  0.0   2.2   0:00.36 com.sec.unifiedwfc
+ 16337 u0_a122      20   0 5.8G  91M  34M S  0.0   2.4   0:00.51 com.sec.android.gallery3d
+ 16288 u0_a135      20   0 5.6G  79M  26M S  0.0   2.1   0:00.26 com.sec.android.app.soundalive:settingui
+ 16255 u0_a89       20   0 6.1G 109M  50M S  0.0   2.9   0:02.74 com.sec.android.app.samsungapps
+ 16109 u0_a127      20   0 5.8G 101M  43M S  0.0   2.7   0:01.09 com.samsung.android.messaging
+ 16006 system       20   0 5.0G  89M  35M S  0.0   2.3   0:00.42 com.samsung.android.forest
+ 15943 u0_a116      20   0 5.1G 106M  45M S  0.0   2.8   0:05.15 com.samsung.android.scs

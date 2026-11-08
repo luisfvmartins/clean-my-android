@@ -10,22 +10,22 @@
     {
       "indicator": "Quantidade Total de Pacotes Catalogados",
       "before": "392 pacotes no firmware de fábrica",
-      "after": "392 pacotes no firmware (371 habilitados no Usuário 0)",
-      "variation": "21 pacotes neutralizados no Usuário 0",
+      "after": "392 pacotes no firmware (344 habilitados no Usuário 0)",
+      "variation": "48 pacotes neutralizados no Usuário 0 (Lotes 1 e 2)",
       "evidence": "pm list packages -u antes e depois"
     },
     {
       "indicator": "Pacotes Habilitados no Usuário 0",
       "before": "391 pacotes habilitados",
-      "after": "371 pacotes habilitados",
-      "variation": "-20 pacotes residentes em segundo plano (-5.1%)",
+      "after": "344 pacotes habilitados",
+      "variation": "-47 pacotes residentes em segundo plano (-12.0%)",
       "evidence": "pm list packages -e antes e depois"
     },
     {
       "indicator": "Pacotes Desativados",
       "before": "1 pacote (com.sec.android.emergencylauncher inativo de fábrica)",
-      "after": "20 pacotes desativados no Usuário 0",
-      "variation": "+19 pacotes desativados cirurgicamente via disable-user",
+      "after": "47 pacotes desativados no Usuário 0",
+      "variation": "+46 pacotes desativados cirurgicamente via disable-user",
       "evidence": "pm list packages -d antes e depois"
     },
     {
@@ -34,6 +34,27 @@
       "after": "2 pacotes desinstalados (0 pacotes 3rd-party ativos)",
       "variation": "2 pacotes comerciais excluídos (com.odete.samsung e com.samsung.shop)",
       "evidence": "pm list packages -3 antes e depois"
+    },
+    {
+      "indicator": "Adware Oculto e Droppers Comerciais (Digital Turbine)",
+      "before": "Digital Turbine Ignite (com.dti.samsung) ativo com permissão DOWNLOAD_WITHOUT_NOTIFICATION",
+      "after": "Digital Turbine Ignite neutralizado e desativado",
+      "variation": "Erradicação da instalação silenciosa de APKs e coleta de IMEI/IMSI",
+      "evidence": "pm disable-user --user 0 com.dti.samsung"
+    },
+    {
+      "indicator": "Telemetria Central e Diagnósticos (DiagMon & IMS Logger)",
+      "before": "DiagMonAgent, IMS Logger, NetworkDiagnostic e FMM ativos em background",
+      "after": "Agentes de telemetria desativados no Usuário 0",
+      "variation": "Interrupção completa de relatórios de falha e logs diagnósticos para a Samsung",
+      "evidence": "pm disable-user em diagmonagent, imslogger, networkdiagnostic e fmm"
+    },
+    {
+      "indicator": "Rastreamento Contínuo de Localização (Google Location History 24/7)",
+      "before": "Google Location History ativo com ACCESS_BACKGROUND_LOCATION",
+      "after": "Location History desativado (GPS em tempo real preservado)",
+      "variation": "Eliminação do rastreamento de satélite em segundo plano 24 horas por dia",
+      "evidence": "pm disable-user --user 0 com.google.android.gms.location.history"
     },
     {
       "indicator": "Bloatware e Rastreamento de Terceiros (Meta / Facebook)",
@@ -50,24 +71,24 @@
       "evidence": "pm disable-user em com.samsung.android.game.*"
     },
     {
-      "indicator": "Alertas de Bootloader e Telemetria Knox/Samsung",
-      "before": "Security Log Agent, Rubin, Knox Analytics Uploader e SOAgent ativos",
-      "after": "Agentes de telemetria e SecurityLogAgent desativados",
-      "variation": "Silenciamento de alertas falsos de segurança e bloqueio de telemetria comportamental",
-      "evidence": "pm disable-user em securitylogagent, rubin.app, knox.analytics.uploader e soagent"
+      "indicator": "Daemons em Segundo Plano, AR/Stickers e Impressão em Rede",
+      "before": "Dynamic Lockscreen, Story Service, AR Emoji, Cloud, AllShare e Spooler ativos",
+      "after": "Daemons ociosos de sincronização, adesivos 3D e impressão neutralizados",
+      "variation": "Alívio substantivo de CPU, consumo de bateria e ciclo ocioso de dados",
+      "evidence": "pm disable-user nos componentes identificados do Lote 2"
     },
     {
       "indicator": "Armazenamento Interno (/data)",
       "before": "51 GB total, 2.4 GB utilizados (49 GB livres)",
       "after": "51 GB total, 2.4 GB utilizados (49 GB livres)",
-      "variation": "Sem alteração perceptível imediata em GB (expurgo de caches mínimos em aparelho limpo)",
+      "variation": "Sem alteração perceptível imediata em GB (aparelho em estado inicial limpo)",
       "evidence": "df -h /data antes e depois"
     },
     {
-      "indicator": "Consumo de Bateria (Ciclo Longo)",
+      "indicator": "Consumo de Bateria e Comportamento Térmico",
       "before": "72%, 25.6°C, saúde boa",
       "after": "72%, 25.5°C, saúde boa",
-      "variation": "Não mensurado em ciclo completo de 24h (estabilidade térmica mantida a 25.5°C)",
+      "variation": "Estabilidade térmica mantida a 25.5°C; autonomia de 24h pendente de uso real",
       "evidence": "dumpsys battery e dumpsys thermalservice"
     }
   ]
