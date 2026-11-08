@@ -224,3 +224,8 @@ If a step cannot be performed, label it pending, not performed, or inconclusive.
 - `scripts/restore.sh` re-enables one package at a time, with confirmation. Bulk restoration is not available.
 - Before publication, omit user-installed apps, local and remote IPs/ports, SSIDs, MAC addresses, IMEI, serial number, Android ID, unnecessary UIDs/PIDs, raw logs, account names, and any data that reveals the owner's network or routine.
 - Do not claim a package sends telemetry solely because it has `INTERNET` permission, an analytics SDK, or a persistent flag. Distinguish manifest evidence, observed connections, inspected traffic, and inference.
+
+
+## REQUIRED ADDENDUM — package-by-package analysis
+
+Before starting, read [docs/PACKAGE_BY_PACKAGE_AUDIT.md](docs/PACKAGE_BY_PACKAGE_AUDIT.md) in full. Analyze every detected package name individually, without combining rows or omitting packages. For each package document exact name/label, version/versionCode, UID/shared UID, per-user state, source, function and confidence, manifest/runtime/special permissions, AppOps and scope, components/services, dependencies, sensitive data, network/telemetry indicators and limitations, FOSS alternative, recommendation, rationale, risk, functional impact, preconditions, model/build-specific command, post-action validation, rollback, and evidence/sources. Produce `package-audit.csv` or TSV, `package-audit.md` with all packages alphabetically, `package-summary.md`, and `change-plan.md`. Reconcile total inventoried = analyzed + pending; unknown packages remain pending, never presumed removable. Work in batches if needed and enumerate all pending packages. Read-only first. Changes require explicit individual authorization.
