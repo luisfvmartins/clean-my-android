@@ -18,12 +18,12 @@ A chat without terminal access can explain commands and analyze user-provided da
 
 1. Clone the repository and open its folder in your chosen assistant/agent.
 2. Connect and authorize the Android device through ADB.
-3. Ask the agent: **“Read AI_INSTRUCTIONS.en.md and docs/USER_DEVICE_AUDIT.en.md in full. First identify the device and perform the initial audit only; do not modify the device.”**
+3. Ask the agent: **“Read AI_INSTRUCTIONS.en.md and docs/USER_DEVICE_AUDIT.md in full. First identify the device and perform the initial audit only; do not modify the device.”**
 4. Review the diagnosis and proposed change plan before authorizing any intervention.
 
 Manual execution by technically experienced users is also allowed. The same evidence, authorization, safety, reversibility, and documentation requirements apply.
 
-**Also read:** [Individual device audit guide](docs/USER_DEVICE_AUDIT.en.md), which explains how to prepare a contribution, organize evidence, create the before/after report, and submit it through a Pull Request.
+**Also read:** [Individual device audit guide](docs/USER_DEVICE_AUDIT.md), which explains how to prepare a contribution, organize evidence, create the before/after report, and submit it through a Pull Request.
 
 ---
 
@@ -49,7 +49,7 @@ The result must include:
 - Screenshots, when possible.
 - Technical report in Markdown.
 
-Follow the procedure and file structure in [docs/USER_DEVICE_AUDIT.en.md](docs/USER_DEVICE_AUDIT.en.md).
+Follow the procedure and file structure in [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
 
 ### 2. Fork, branch, and Pull Request
 
