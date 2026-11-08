@@ -2,197 +2,201 @@
 
 # Clean My Android
 
-**Auditoria técnica, debloat criterioso e documentação de privacidade para dispositivos Android.**
+**Technical Android audits, careful debloating, and privacy documentation for Android devices.**
 
-[![Android](https://img.shields.io/badge/Android-dispositivos%20auditados-3DDC84?logo=android&logoColor=white)](reports/README.md)
+[![Android](https://img.shields.io/badge/Android-audited%20devices-3DDC84?logo=android&logoColor=white)](reports/README.en.md)
 [![ADB](https://img.shields.io/badge/ADB-required-3C78A8)](https://developer.android.com/tools/adb)
-[![Root](https://img.shields.io/badge/Root-n%C3%A3o%20necess%C3%A1rio-2E8B57)](docs/USER_DEVICE_AUDIT.md)
+[![Root](https://img.shields.io/badge/Root-not%20required-2E8B57)](docs/USER_DEVICE_AUDIT.en.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Validação](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
+[![Validation](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Contribuir](CONTRIBUTING.md) · [Segurança](#segurança-em-primeiro-lugar)
+[Get started](#get-started-ai-assistant-recommended) · [How it works](#how-it-works) · [Audited devices](reports/README.en.md) · [Statistics](docs/ESTATISTICAS.en.md) · [Contribution progress](docs/EVOLUCAO_CONTRIBUICOES.en.md) · [Contributing](CONTRIBUTING.en.md) · [Security](#security-first)
+
+[Português (Brasil)](README.pt-BR.md)
 
 </div>
 
 ---
 
-## O projeto
+## The project
 
-O **Clean My Android** é um projeto de código aberto para investigar o que existe em um dispositivo Android, entender a função de seus componentes e documentar alterações de forma cuidadosa e verificável.
+**Clean My Android** is an open-source project to investigate what is present on an Android device, understand the purpose of its components, and document changes carefully and verifiably.
 
-A proposta vai além de desativar aplicativos pré-instalados. Cada auditoria procura registrar o estado do aparelho **antes e depois**, explicar o que foi alterado, apresentar evidências, medir resultados quando possível e deixar claras as limitações dos testes.
+The goal goes beyond disabling preinstalled apps. Each audit aims to record the device state **before and after**, explain what changed, provide supporting evidence, measure results when possible, and clearly state testing limitations.
 
-O projeto segue a inspiração colaborativa do [CleanYourTV](https://github.com/Gathin23/cleanyourtv): conhecimento específico por modelo, documentação reproduzível e contribuições incorporadas ao repositório principal por Pull Requests.
+The project follows the collaborative approach of [CleanYourTV](https://github.com/Gathin23/cleanyourtv): model-specific knowledge, reproducible documentation, and contributions incorporated into the main repository through Pull Requests.
 
-> **Importante:** Android não é igual em todos os aparelhos. Fabricante, modelo, região, firmware, versão do Android e configuração do usuário mudam o comportamento dos pacotes. Uma recomendação nunca deve ser tratada como universal.
+> **Important:** Android devices are not interchangeable. Manufacturer, model, region, firmware, Android version, and user configuration all affect package behavior. A recommendation must never be treated as universal.
 
-## Começar: use um assistente de IA (recomendado)
+## Get started: AI assistant recommended
 
-O **Clean My Android foi projetado para ser utilizado, preferencialmente, com o auxílio de um assistente de IA de sua escolha**. A IA conduz a investigação, interpreta os dados específicos do aparelho, explica riscos, organiza evidências e prepara o relatório. Você continua no controle: nenhuma alteração no dispositivo deve ser feita sem sua autorização explícita.
+**Clean My Android is designed to be used preferably with the help of an AI assistant of the user's choice.** The AI guides the investigation, interprets device-specific data, explains risks, organizes evidence, and prepares the report. You remain in control: no device changes may be made without your explicit authorization.
 
-Você não fica preso a um fornecedor. Pode utilizar ChatGPT, Claude, Gemini, Antigravity, Codex ou outro assistente capaz de trabalhar com os arquivos do projeto. Para executar comandos e coletar dados diretamente, escolha um agente com acesso ao terminal do computador e ao ADB. Um chat sem acesso ao dispositivo ainda pode orientar a análise, mas não consegue inspecioná-lo diretamente.
+You are not tied to a provider. You may use ChatGPT, Claude, Gemini, Antigravity, Codex, or another assistant capable of working with the project files. To run commands and collect data directly, choose an agent with access to your computer's terminal and ADB. A chat without device access can still guide the analysis, but it cannot inspect the device directly.
 
-### Fluxo recomendado
+### Recommended workflow
 
-1. **Prepare o ambiente:** instale ADB, habilite a depuração USB ou sem fio e autorize o computador no aparelho.
-2. **Abra o projeto no assistente:** clone o repositório e abra a pasta no seu agente de IA.
-3. **Carregue as instruções:** peça ao assistente para ler [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) e seguir [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
-4. **Inspecione primeiro:** a IA identifica o dispositivo e coleta o estado inicial sem realizar alterações.
-5. **Revise o plano:** examine a análise de pacotes, os riscos, os comandos propostos e as formas de reversão.
-6. **Autorize conscientemente:** mudanças só podem ocorrer após sua aprovação explícita, em etapas controladas.
-7. **Compare e documente:** a IA repete as coletas, registra testes e limitações e prepara o relatório antes/depois.
-8. **Contribua:** revise e sanitize os arquivos e, se desejar, envie a auditoria por Pull Request.
+1. **Prepare the environment:** install ADB, enable USB or wireless debugging, and authorize the computer on the device.
+2. **Open the project in your assistant:** clone the repository and open its folder in your AI agent.
+3. **Load the instructions:** ask the assistant to read [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md) and follow [the individual device audit guide](docs/USER_DEVICE_AUDIT.en.md).
+4. **Inspect first:** the AI identifies the device and collects the initial state without making changes.
+5. **Review the plan:** examine package analysis, risks, proposed commands, and rollback methods.
+6. **Authorize deliberately:** changes may only happen after your explicit approval, in controlled steps.
+7. **Compare and document:** the AI repeats data collection, records tests and limitations, and prepares the before/after report.
+8. **Contribute:** review and sanitize the files and, if you choose, submit the audit through a Pull Request.
 
-### Requisitos
+### Requirements
 
-- Linux, macOS ou Windows com Android Debug Bridge (ADB) instalado.
-- Depuração USB ou sem fio habilitada no aparelho.
-- Computador autorizado pelo Android.
-- Um dispositivo conectado e identificado como alvo.
-- Assistente com acesso à pasta do projeto e ao terminal/ADB para automação direta.
+- Linux, macOS, or Windows with Android Debug Bridge (ADB) installed.
+- USB or wireless debugging enabled on the device.
+- Computer authorized by Android.
+- A connected device identified as the target.
+- An assistant with access to the project folder and terminal/ADB for direct automation.
 
-### Qual assistente utilizar?
+### Which assistant should you use?
 
-Use o assistente de sua preferência. O projeto não exige assinatura, modelo ou serviço específico. O requisito prático é que, para executar a auditoria diretamente, o agente consiga ler os arquivos do repositório e acessar o terminal onde o ADB está disponível. Verifique as permissões concedidas ao agente e não habilite acesso desnecessário.
+Use the assistant you prefer. The project does not require a subscription, model, or specific service. To perform the audit directly, the agent must be able to read repository files and access the terminal where ADB is available. Review the permissions granted to the agent and do not enable unnecessary access.
 
-### Execução manual (alternativa avançada)
+### Manual execution (advanced alternative)
 
-Usuários com conhecimento de Android, ADB, permissões, serviços e gerenciamento de pacotes podem seguir o procedimento manualmente, sem IA. O fluxo de segurança e documentação é o mesmo; muda apenas quem executa a análise e organiza os resultados.
+Users experienced with Android, ADB, permissions, services, and package management may follow the procedure manually without AI. The same safety and documentation workflow applies; only the person performing the analysis and organizing the results changes.
 
-Clone o projeto:
+Clone the project:
 
 ~~~bash
 git clone https://github.com/luisfvmartins/clean-my-android.git
 cd clean-my-android
 ~~~
 
-Faça uma inspeção inicial:
+Run an initial inspection:
 
 ~~~bash
 adb devices -l
 ./scripts/debloat.sh
 ~~~
 
-O modo padrão identifica o aparelho e lista os pacotes desativados para o usuário principal. **Não realiza alterações.**
+The default mode identifies the device and lists packages disabled for the primary user. **It makes no changes.**
 
-### Alterações: somente quando houver suporte explícito
+### Changes: only when explicitly supported
 
-O modo de aplicação do script está restrito ao **Motorola Moto G54 5G com Android 15**, exige confirmação digitada e atua sobre um pacote por execução:
-
-~~~bash
-./scripts/debloat.sh --apply nome.do.pacote
-~~~
-
-Não use esse comando em outro modelo ou versão do Android. A lista de componentes protegidos é uma barreira adicional, não uma garantia de que todo pacote fora dela seja seguro para desativação.
-
-Para reativar individualmente um pacote que foi desativado:
+The script's apply mode is restricted to the **Motorola Moto G54 5G running Android 15**, requires typed confirmation, and acts on one package per execution:
 
 ~~~bash
-./scripts/restore.sh nome.do.pacote
+./scripts/debloat.sh --apply package.name
 ~~~
 
-Antes de qualquer alteração, leia o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md) e respeite as regras de segurança. A execução manual não reduz a necessidade de evidências, autorização, reversibilidade e testes.
+Do not use this command on another model or Android version. The protected-components list is an additional safeguard, not a guarantee that every package outside it is safe to disable.
 
-## Como funciona
+To re-enable an individually disabled package:
 
-O fluxo recomendado é dividido em etapas independentes. Diagnóstico e coleta vêm antes de qualquer mudança.
+~~~bash
+./scripts/restore.sh package.name
+~~~
 
-| Etapa | Objetivo | Resultado esperado |
+Before making any change, read the [individual device audit guide](docs/USER_DEVICE_AUDIT.en.md) and follow its safety rules. Manual execution does not remove the need for evidence, authorization, reversibility, and testing.
+
+## How it works
+
+The recommended workflow is divided into independent stages. Diagnosis and data collection come before any change.
+
+| Stage | Goal | Expected result |
 |---|---|---|
-| **1. Identificação** | Registrar modelo, codinome, Android, firmware e ambiente | Identificação verificável do dispositivo |
-| **2. Estado inicial** | Coletar pacotes, permissões, AppOps e métricas disponíveis | Inventário “antes” |
-| **3. Análise** | Investigar função, dependências, evidências e riscos | Classificação técnica por componente |
-| **4. Plano** | Apresentar alterações propostas e formas de reversão | Plano revisável pelo proprietário |
-| **5. Aplicação autorizada** | Executar somente ações aprovadas e compatíveis | Registro das alterações realizadas |
-| **6. Estado final** | Repetir as coletas em condições comparáveis | Inventário “depois” |
-| **7. Comparação** | Confrontar dados, testes e limitações | Relatório técnico antes/depois |
-| **8. Publicação** | Sanitizar e enviar a contribuição por Pull Request | Nova auditoria no catálogo público |
+| **1. Identification** | Record model, codename, Android, firmware, and environment | Verifiable device identification |
+| **2. Initial state** | Collect packages, permissions, AppOps, and available metrics | “Before” inventory |
+| **3. Analysis** | Investigate purpose, dependencies, evidence, and risks | Technical classification per component |
+| **4. Plan** | Present proposed changes and rollback methods | Reviewable plan for the device owner |
+| **5. Authorized changes** | Perform only approved and compatible actions | Record of changes actually made |
+| **6. Final state** | Repeat data collection under comparable conditions | “After” inventory |
+| **7. Comparison** | Compare data, tests, and limitations | Technical before/after report |
+| **8. Publication** | Sanitize and submit the contribution through a Pull Request | New audit in the public catalog |
 
-A IA é o meio de trabalho recomendado, não uma autoridade sobre o aparelho: ela deve analisar evidências, explicar riscos e aguardar autorização explícita antes de modificar o dispositivo. O [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) fornece o roteiro independente de fornecedor.
+AI is the recommended working method, not an authority over the device. It must analyze evidence, explain risks, and wait for explicit authorization before changing the device. [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md) provides provider-independent guidance.
 
-## Dispositivos auditados
+## Audited devices
 
-As auditorias são específicas por aparelho e possuem diferentes níveis de validação. Consulte o [catálogo de dispositivos](reports/README.md) para conhecer o escopo, os arquivos e as pendências de cada relatório.
+Audits are device-specific and have different validation levels. Consult the [device catalog](reports/README.en.md) for each report's scope, files, and outstanding items.
 
-| Dispositivo | Documentação | Situação |
+| Device | Documentation | Status |
 |---|---|---|
-| Motorola Moto G54 5G (XT2343-1) | [Auditoria técnica](docs/AUDITORIA_MOTO_G54_5G.md) | Inventário publicado; consulte o relatório para escopo e limitações |
-| Motorola Edge 60 Pro (XT2507-1) | [Relatório e evidências](reports/motorola/edge-60-pro/) | Validação funcional e confirmação de alguns dados pendentes |
+| Motorola Moto G54 5G (XT2343-1) | [Technical audit](docs/AUDITORIA_MOTO_G54_5G.md) | Inventory published; see report for scope and limitations |
+| Motorola Edge 60 Pro (XT2507-1) | [Report and evidence](reports/motorola/edge-60-pro/README.md) | Functional validation and confirmation of some data pending |
 
-**A presença de um aparelho no catálogo não significa que todos os procedimentos estejam homologados para ele.** A compatibilidade de scripts é indicada separadamente e não deve ser inferida a partir de um relatório.
+**A device appearing in the catalog does not mean every procedure has been approved for it.** Script compatibility is indicated separately and must not be inferred from the existence of a report.
 
-## O que cada auditoria deve documentar
+## What each audit should document
 
-- **Identificação:** fabricante, modelo, codinome, versão do Android/ROM e compilação.
-- **Inventário:** pacotes do sistema e do usuário, estado, versão e origem quando disponíveis.
-- **Permissões e AppOps:** o que está declarado, concedido ou efetivamente configurado.
-- **Análise de componentes:** função conhecida, evidência, dependências e risco de alteração.
-- **Alterações:** comandos executados, autorização, resultado e método de reversão.
-- **Comparativo:** métricas antes/depois coletadas em condições equivalentes.
-- **Testes funcionais:** telefonia, conectividade, câmera, biometria, notificações, bancos e outros recursos relevantes, quando aplicável.
-- **Limitações:** dados não coletados, testes não realizados e conclusões inconclusivas.
+- **Identification:** manufacturer, model, codename, Android/ROM version, and build.
+- **Inventory:** system and user packages, state, version, and origin when available.
+- **Permissions and AppOps:** what is declared, granted, or effectively configured.
+- **Component analysis:** known purpose, evidence, dependencies, and change risk.
+- **Changes:** commands executed, authorization, outcome, and rollback method.
+- **Comparison:** before/after metrics collected under equivalent conditions.
+- **Functional tests:** telephony, connectivity, camera, biometrics, notifications, banking apps, and other relevant features, when applicable.
+- **Limitations:** data not collected, tests not performed, and inconclusive findings.
 
-Resultados sem evidência devem ser identificados como **não mensurados**, **não coletados** ou **pendentes de validação**. Não transforme estimativas em resultados comprovados.
+Results without evidence must be marked **not measured**, **not collected**, or **pending validation**. Do not turn estimates into proven results.
 
-## Validação automatizada
+## Automated validation
 
-Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash e lista de componentes protegidos. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
+Pull Requests to `main` run automated integrity checks for JSON, Bash syntax, and the protected-components list. These checks are static: they do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
 
-Consulte o [workflow de validação](.github/workflows/validate.yml) e o [validador](scripts/validate_repository.py).
+See the [validation workflow](.github/workflows/validate.yml) and [validator](scripts/validate_repository.py).
 
-## Segurança em primeiro lugar
+## Security first
 
-Este projeto prioriza reversibilidade, transparência e controle do proprietário do aparelho.
+This project prioritizes reversibility, transparency, and device-owner control.
 
-- Inspecionar é diferente de alterar: o modo padrão dos scripts é somente leitura.
-- A aplicação disponível no script é individual, exige confirmação e possui restrição de dispositivo/versão.
-- Não há desinstalação em lote, limpeza de dados ou remoção automática de perfis nos scripts atuais.
-- Não desative componentes críticos de Android, telefonia, conectividade, criptografia, instalação de pacotes ou segurança.
-- Não conclua que um aplicativo é espião apenas por ter acesso à internet, pertencer ao fabricante ou possuir SDK analítico.
-- AppOps por UID pode afetar vários pacotes que compartilham o mesmo UID; não aplique regras sem mapear os vínculos e os efeitos.
-- Não publique inventários brutos, identificadores, tokens, contas, notificações ou dados pessoais.
+- Inspection is different from modification: the default script mode is read-only.
+- The available apply operation is individual, requires confirmation, and is device/version restricted.
+- Current scripts do not support batch uninstall, data wiping, or automatic profile removal.
+- Do not disable critical Android, telephony, connectivity, encryption, package installation, or security components.
+- Do not conclude that an app is spyware solely because it has internet access, belongs to the manufacturer, or includes an analytics SDK.
+- AppOps applied by UID may affect multiple packages sharing that UID; do not apply rules without mapping the relationships and effects.
+- Do not publish raw inventories, identifiers, tokens, accounts, notifications, or personal data.
 
-**Não existe garantia universal de ganho de bateria, RAM, armazenamento, privacidade ou compatibilidade bancária.** Esses efeitos dependem do aparelho e precisam ser medidos. Alterações podem causar perda de funções; mantenha uma forma de recuperação disponível.
+**There is no universal guarantee of better battery life, RAM use, storage, privacy, or banking compatibility.** These effects depend on the device and must be measured. Changes may cause feature loss; keep a recovery path available.
 
-Consulte também [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md) e [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md).
+Also read [docs/USER_DEVICE_AUDIT.en.md](docs/USER_DEVICE_AUDIT.en.md) and [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md).
 
-## Estrutura do repositório
+## Repository structure
 
 ```text
 .
-├── AI_INSTRUCTIONS.md       # Instruções para auditoria assistida por IA
-├── data/                    # Inventários e listas de proteção
-├── docs/                    # Guias e auditorias técnicas
-├── reports/                 # Relatórios por dispositivo
-└── scripts/                 # Inspeção, desativação e restauração
+├── AI_INSTRUCTIONS.en.md    # AI-assisted audit instructions (English)
+├── AI_INSTRUCTIONS.md       # AI-assisted audit instructions (Portuguese)
+├── data/                    # Inventories and protection lists
+├── docs/                    # Guides and technical audits
+├── reports/                 # Device-specific reports
+└── scripts/                 # Inspection, disabling, and restoration
 ```
 
-## Como contribuir
+## How to contribute
 
-Cada dispositivo deve ter sua própria pasta em `reports/`. A contribuição deve preservar os relatórios existentes e acrescentar documentação ao catálogo.
+Each device must have its own folder under `reports/`. A contribution must preserve existing reports and add its documentation to the catalog.
 
-1. Leia [CONTRIBUTING.md](CONTRIBUTING.md) e [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
-2. Faça um fork e crie uma branch exclusiva para sua contribuição.
-3. Colete e sanitize os dados do seu próprio aparelho.
-4. Inclua o relatório, inventários e evidências necessários.
-5. Atualize o índice de dispositivos em `reports/README.md`.
-6. Abra um Pull Request para a branch `main`.
+1. Read [CONTRIBUTING.en.md](CONTRIBUTING.en.md) and [docs/USER_DEVICE_AUDIT.en.md](docs/USER_DEVICE_AUDIT.en.md).
+2. Fork the repository and create a dedicated branch for your contribution.
+3. Collect and sanitize data from your own device.
+4. Include the report, inventories, and required evidence.
+5. Update the device index in `reports/README.md` (and its English counterpart).
+6. Open a Pull Request against `main`.
 
-Cada Pull Request aprovado e integrado amplia a base pública de conhecimento. Não altere nem substitua a auditoria de outro dispositivo para incluir a sua.
+Every approved and merged Pull Request expands the public knowledge base. Do not alter or replace another device's audit to add your own.
 
-## Documentação e links
+## Documentation and links
 
-- [Catálogo de auditorias](reports/README.md)
-- [Guia de auditoria individual](docs/USER_DEVICE_AUDIT.md)
-- [Instruções para IA](AI_INSTRUCTIONS.md)
-- [Contribuição e Pull Requests](CONTRIBUTING.md)
-- [Código-fonte](https://github.com/luisfvmartins/clean-my-android)
-- [Licença MIT](LICENSE)
+- [Audit catalog (English)](reports/README.en.md)
+- [Individual device audit guide (English)](docs/USER_DEVICE_AUDIT.en.md)
+- [AI instructions (English)](AI_INSTRUCTIONS.en.md)
+- [Contributing and Pull Requests (English)](CONTRIBUTING.en.md)
+- [README em português](README.pt-BR.md)
+- [Source code](https://github.com/luisfvmartins/clean-my-android)
+- [MIT License](LICENSE)
 
 ---
 
 <div align="center">
 
-**Auditorias reais. Evidências verificáveis. Alterações conscientes.**
+**Real audits. Verifiable evidence. Deliberate changes.**
 
 </div>
