@@ -4,13 +4,13 @@
 
 **Technical Android audits, careful debloating, and privacy documentation for Android devices.**
 
-[![Android](https://img.shields.io/badge/Android-audited%20devices-3DDC84?logo=android&logoColor=white)](reports/README.en.md)
+[![Android](https://img.shields.io/badge/Android-audited%20devices-3DDC84?logo=android&logoColor=white)](reports/README.md)
 [![ADB](https://img.shields.io/badge/ADB-required-3C78A8)](https://developer.android.com/tools/adb)
-[![Root](https://img.shields.io/badge/Root-not%20required-2E8B57)](docs/USER_DEVICE_AUDIT.en.md)
+[![Root](https://img.shields.io/badge/Root-not%20required-2E8B57)](docs/USER_DEVICE_AUDIT.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validation](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Get started](#get-started-ai-assistant-recommended) · [How it works](#how-it-works) · [Audited devices](reports/README.en.md) · [Statistics](docs/ESTATISTICAS.en.md) · [Contribution progress](docs/EVOLUCAO_CONTRIBUICOES.en.md) · [Contributing](CONTRIBUTING.en.md) · [Security](#security-first)
+[Get started](#get-started-ai-assistant-recommended) · [How it works](#how-it-works) · [Audited devices](reports/README.md) · [Statistics](docs/ESTATISTICAS.en.md) · [Contribution progress](docs/EVOLUCAO_CONTRIBUICOES.en.md) · [Contributing](CONTRIBUTING.md) · [Security](#security-first)
 
 [Português (Brasil)](README.pt-BR.md)
 
@@ -38,7 +38,7 @@ You are not tied to a provider. You may use ChatGPT, Claude, Gemini, Antigravity
 
 1. **Prepare the environment:** install ADB, enable USB or wireless debugging, and authorize the computer on the device.
 2. **Open the project in your assistant:** clone the repository and open its folder in your AI agent.
-3. **Load the instructions:** ask the assistant to read [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md) and follow [the individual device audit guide](docs/USER_DEVICE_AUDIT.en.md).
+3. **Load the instructions:** ask the assistant to read [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) and follow [the individual device audit guide](docs/USER_DEVICE_AUDIT.md).
 4. **Inspect first:** the AI identifies the device and collects the initial state without making changes.
 5. **Review the plan:** examine package analysis, risks, proposed commands, and rollback methods.
 6. **Authorize deliberately:** changes may only happen after your explicit approval, in controlled steps.
@@ -93,7 +93,7 @@ To re-enable an individually disabled package:
 ./scripts/restore.sh package.name
 ~~~
 
-Before making any change, read the [individual device audit guide](docs/USER_DEVICE_AUDIT.en.md) and follow its safety rules. Manual execution does not remove the need for evidence, authorization, reversibility, and testing.
+Before making any change, read the [individual device audit guide](docs/USER_DEVICE_AUDIT.md) and follow its safety rules. Manual execution does not remove the need for evidence, authorization, reversibility, and testing.
 
 ## How it works
 
@@ -110,11 +110,11 @@ The recommended workflow is divided into independent stages. Diagnosis and data 
 | **7. Comparison** | Compare data, tests, and limitations | Technical before/after report |
 | **8. Publication** | Sanitize and submit the contribution through a Pull Request | New audit in the public catalog |
 
-AI is the recommended working method, not an authority over the device. It must analyze evidence, explain risks, and wait for explicit authorization before changing the device. [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md) provides provider-independent guidance.
+AI is the recommended working method, not an authority over the device. It must analyze evidence, explain risks, and wait for explicit authorization before changing the device. [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) provides provider-independent guidance.
 
 ## Audited devices
 
-Audits are device-specific and have different validation levels. Consult the [device catalog](reports/README.en.md) for each report's scope, files, and outstanding items.
+Audits are device-specific and have different validation levels. Consult the [device catalog](reports/README.md) for each report's scope, files, and outstanding items.
 
 | Device | Documentation | Status |
 |---|---|---|
@@ -156,13 +156,13 @@ This project prioritizes reversibility, transparency, and device-owner control.
 
 **There is no universal guarantee of better battery life, RAM use, storage, privacy, or banking compatibility.** These effects depend on the device and must be measured. Changes may cause feature loss; keep a recovery path available.
 
-Also read [docs/USER_DEVICE_AUDIT.en.md](docs/USER_DEVICE_AUDIT.en.md) and [AI_INSTRUCTIONS.en.md](AI_INSTRUCTIONS.en.md).
+Also read [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md) and [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md).
 
 ## Repository structure
 
 ```text
 .
-├── AI_INSTRUCTIONS.en.md    # AI-assisted audit instructions (English)
+├── AI_INSTRUCTIONS.md    # AI-assisted audit instructions (English)
 ├── AI_INSTRUCTIONS.md       # AI-assisted audit instructions (Portuguese)
 ├── data/                    # Inventories and protection lists
 ├── docs/                    # Guides and technical audits
@@ -174,7 +174,7 @@ Also read [docs/USER_DEVICE_AUDIT.en.md](docs/USER_DEVICE_AUDIT.en.md) and [AI_I
 
 Each device must have its own folder under `reports/`. A contribution must preserve existing reports and add its documentation to the catalog.
 
-1. Read [CONTRIBUTING.en.md](CONTRIBUTING.en.md) and [docs/USER_DEVICE_AUDIT.en.md](docs/USER_DEVICE_AUDIT.en.md).
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
 2. Fork the repository and create a dedicated branch for your contribution.
 3. Collect and sanitize data from your own device.
 4. Include the report, inventories, and required evidence.
@@ -185,10 +185,10 @@ Every approved and merged Pull Request expands the public knowledge base. Do not
 
 ## Language coverage\n\nThe main project guides, AI instructions, contribution guide, and device catalog are available in English. Some detailed historical audit reports and raw component inventories remain in Portuguese; their package identifiers and collected evidence are preserved unchanged. English summaries are provided where practical.\n\n## Documentation and links
 
-- [Audit catalog (English)](reports/README.en.md)
-- [Individual device audit guide (English)](docs/USER_DEVICE_AUDIT.en.md)
-- [AI instructions (English)](AI_INSTRUCTIONS.en.md)
-- [Contributing and Pull Requests (English)](CONTRIBUTING.en.md)
+- [Audit catalog (English)](reports/README.md)
+- [Individual device audit guide (English)](docs/USER_DEVICE_AUDIT.md)
+- [AI instructions (English)](AI_INSTRUCTIONS.md)
+- [Contributing and Pull Requests (English)](CONTRIBUTING.md)
 - [README em português](README.pt-BR.md)
 - [Source code](https://github.com/luisfvmartins/clean-my-android)
 - [MIT License](LICENSE)
