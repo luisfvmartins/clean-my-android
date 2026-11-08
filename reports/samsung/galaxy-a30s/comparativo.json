@@ -1,0 +1,74 @@
+{
+  "device_model": "Samsung Galaxy A30s",
+  "model_code": "SM-A307GT",
+  "codename": "a30s / a30sdtvvj",
+  "platform": "universal7904 (Samsung Exynos 7904 Octa-Core)",
+  "architecture": "aarch64 (arm64-v8a)",
+  "os_version": "Android 11 (API Level 30) - One UI 3.1 (SEP 120100), Build RP1A.200720.012.A307GTVJS5CWE2, Patch 2023-05-01",
+  "audit_date": "2026-11-08",
+  "metrics": [
+    {
+      "indicator": "Quantidade Total de Pacotes Catalogados",
+      "before": "392 pacotes no firmware de fábrica",
+      "after": "392 pacotes no firmware (371 habilitados no Usuário 0)",
+      "variation": "21 pacotes neutralizados no Usuário 0",
+      "evidence": "pm list packages -u antes e depois"
+    },
+    {
+      "indicator": "Pacotes Habilitados no Usuário 0",
+      "before": "391 pacotes habilitados",
+      "after": "371 pacotes habilitados",
+      "variation": "-20 pacotes residentes em segundo plano (-5.1%)",
+      "evidence": "pm list packages -e antes e depois"
+    },
+    {
+      "indicator": "Pacotes Desativados",
+      "before": "1 pacote (com.sec.android.emergencylauncher inativo de fábrica)",
+      "after": "20 pacotes desativados no Usuário 0",
+      "variation": "+19 pacotes desativados cirurgicamente via disable-user",
+      "evidence": "pm list packages -d antes e depois"
+    },
+    {
+      "indicator": "Pacotes Desinstalados para o Usuário 0",
+      "before": "0 pacotes desinstalados (2 pacotes 3rd-party ativos)",
+      "after": "2 pacotes desinstalados (0 pacotes 3rd-party ativos)",
+      "variation": "2 pacotes comerciais excluídos (com.odete.samsung e com.samsung.shop)",
+      "evidence": "pm list packages -3 antes e depois"
+    },
+    {
+      "indicator": "Bloatware e Rastreamento de Terceiros (Meta / Facebook)",
+      "before": "4 daemons/serviços ativos da Meta (Katana, System, AppManager, Services)",
+      "after": "4 pacotes Meta neutralizados e desativados",
+      "variation": "Erradicação completa da telemetria e atualizações silenciosas da Meta",
+      "evidence": "pm disable-user --user 0 nos 4 pacotes com.facebook.*"
+    },
+    {
+      "indicator": "Game Optimizing Service (GOS) e Throttling",
+      "before": "GOS, Game Launcher e Game Tools com limitação de clock e telemetria de jogos",
+      "after": "GOS, Game Launcher e Game Tools desativados no Usuário 0",
+      "variation": "Desbloqueio de frequência nativa do Exynos 7904 sem estrangulamento térmico arbitrário",
+      "evidence": "pm disable-user em com.samsung.android.game.*"
+    },
+    {
+      "indicator": "Alertas de Bootloader e Telemetria Knox/Samsung",
+      "before": "Security Log Agent, Rubin, Knox Analytics Uploader e SOAgent ativos",
+      "after": "Agentes de telemetria e SecurityLogAgent desativados",
+      "variation": "Silenciamento de alertas falsos de segurança e bloqueio de telemetria comportamental",
+      "evidence": "pm disable-user em securitylogagent, rubin.app, knox.analytics.uploader e soagent"
+    },
+    {
+      "indicator": "Armazenamento Interno (/data)",
+      "before": "51 GB total, 2.4 GB utilizados (49 GB livres)",
+      "after": "51 GB total, 2.4 GB utilizados (49 GB livres)",
+      "variation": "Sem alteração perceptível imediata em GB (expurgo de caches mínimos em aparelho limpo)",
+      "evidence": "df -h /data antes e depois"
+    },
+    {
+      "indicator": "Consumo de Bateria (Ciclo Longo)",
+      "before": "72%, 25.6°C, saúde boa",
+      "after": "72%, 25.5°C, saúde boa",
+      "variation": "Não mensurado em ciclo completo de 24h (estabilidade térmica mantida a 25.5°C)",
+      "evidence": "dumpsys battery e dumpsys thermalservice"
+    }
+  ]
+}

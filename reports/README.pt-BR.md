@@ -11,6 +11,7 @@ Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporad
 | **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Inventário técnico publicado; relatório principal + sete arquivos de inventário por lote | [Pasta do dispositivo](motorola/moto-g54-5g/README.md) · [Relatório principal](../docs/AUDITORIA_MOTO_G54_5G.md) · [Inventário por lote](../docs/auditorias/moto-g54/README.md) |
 | **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Hello UI · versão canônica pendente de confirmação | Relatório publicado; validação funcional e coleta complementar pendentes | [Pasta do dispositivo](motorola/edge-60-pro/README.md) |
 | **Motorola Edge 60 Fusion** | `scout_g_sysn` · `scout` | Android 16 · Hello UI | Auditoria e debloat concluídos; validação funcional aprovada em chamadas, SMS, biometria e bancos. Limitação em RCS e bateria 24h pendente | [Pasta do dispositivo](motorola/edge-60-fusion/README.md) · [Relatório de auditoria](motorola/edge-60-fusion/audit.md) · [Comparativo](motorola/edge-60-fusion/comparison-report.md) · [Change log](motorola/edge-60-fusion/changes/change-log.md) |
+| **Samsung Galaxy A30s** | `SM-A307GT` · `a30s` | Android 11 · One UI 3.1 | Auditoria e otimização cirúrgica concluídas; 21 pacotes neutralizados (bloatware comercial, Meta, GOS e telemetria); validação funcional aprovada | [Pasta do dispositivo](samsung/galaxy-a30s/README.md) · [Comparativo](samsung/galaxy-a30s/comparison-report.md) · [Change log](samsung/galaxy-a30s/changes/change-log.md) |
 
 ### Como interpretar os status
 

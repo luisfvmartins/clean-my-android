@@ -1,0 +1,2 @@
+com.odete.samsung
+com.samsung.shop

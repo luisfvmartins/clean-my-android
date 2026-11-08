@@ -1,0 +1,35 @@
+# Informações do Dispositivo - Diagnóstico Final (Depois)
+Data da coleta: 2026-11-08 13:14:21 
+Método de conexão: ADB sobre Wi-Fi (sanitizado)
+Condição do aparelho: Tela ligada/standby, conectado à rede local, pós-otimização cirúrgica
+
+## Identificação do Hardware e Sistema
+Fabricante: samsung
+Modelo Comercial: SM-A307GT
+Nome de Mercado: Samsung Galaxy A30s
+Codinome do Dispositivo: a30s
+Produto: a30sdtvvj
+Plataforma / SoC: universal7904 (Exynos 7904 Octa-Core)
+Arquitetura / ABI: arm64-v8a (exynos7904)
+
+## Software e Firmware
+Versão do Android: 11 (API Level 30)
+Versão One UI (Samsung Experience Platform): One UI 3.1 (SEP 120100)
+Patch de Segurança: 2023-05-01
+Build ID: RP1A.200720.012
+Build Display: RP1A.200720.012.A307GTVJS5CWE2
+Tipo de Build: user
+Região CSC: ZTO (Brasil - Desbloqueado)
+Kernel: Linux localhost 4.4.177-22825772 #1 SMP PREEMPT Sat May 20 04:49:52 KST 2023 aarch64
+
+## Segurança, Bootloader e Privilégios
+Bootloader Desbloqueado (ro.boot.flash.locked): 0
+Estado de Boot Verificado (ro.boot.verifiedbootstate): orange
+Acesso Root: Não (execução padrão não-root uid=2000 shell)
+SELinux: Permissivo/Enforcing (Enforcing)
+
+## Estado e Recursos no Momento da Medição
+Tempo de atividade (Uptime): 13:14:21 up 1 day,  2:49,  0 users,  load average: 18.15, 17.62, 17.95
+Bateria: Nível 72%, Temperatura ~25.5°C, Status Descarregando, Saúde Boa
+Memória Total: ~3.8 GB (RAM nominal 4 GB)
+Armazenamento Interno Total (/data): 51 GB (Utilizado: 2.4 GB, Livre: 49 GB)
