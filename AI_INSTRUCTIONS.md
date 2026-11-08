@@ -83,7 +83,7 @@ Colete, quando disponíveis:
 - AppOps, serviços, processos e dependências relevantes.
 - Memória, armazenamento, bateria, temperatura e rede, quando mensuráveis.
 
-Salve os resultados em `reports/IDENTIFICADOR_DO_APARELHO/before/`. Não inclua IMEI, número de série, MAC, tokens, credenciais ou identificadores pessoais nos arquivos destinados à publicação.
+Salve os resultados na pasta específica do dispositivo, seguindo `reports/<fabricante>/<modelo>/before/` (por exemplo, `reports/motorola/edge-60-pro/before/`). Não inclua IMEI, número de série, MAC, tokens, credenciais ou identificadores pessoais nos arquivos destinados à publicação.
 
 Registre data, hora, condição de carga, tela, aplicativos abertos, tempo desde a reinicialização, rede e método de medição. Não execute comandos de alteração durante o diagnóstico inicial.
 
