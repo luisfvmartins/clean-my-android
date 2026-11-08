@@ -4,10 +4,10 @@ Metrics are calculated from the structured catalog in [data/device_catalog.json]
 
 ## Overview
 
-- **Cataloged devices:** 2
+- **Cataloged devices:** 3
 - **Represented manufacturers:** 1
-- **Confirmed Android versions:** 1 (15)
-- **Reports with component counts:** 2
+- **Confirmed Android versions:** 2 (15, 16)
+- **Reports with component counts:** 3
 
 ## Devices
 
@@ -15,6 +15,7 @@ Metrics are calculated from the structured catalog in [data/device_catalog.json]
 |---|---|---|---|---:|
 | Motorola Moto G54 5G | XT2343-1 | Android 15 | [Technical inventory published](../reports/motorola/moto-g54-5g/README.en.md) | 462 — components audited in the local inventory |
 | Motorola Edge 60 Pro | XT2507-1 | Not confirmed (pending confirmation) | [Report published; functional validation pending](../reports/motorola/edge-60-pro/README.en.md) | 501 — components mapped in the initial inventory |
+| Motorola Edge 60 Fusion | scout_g_sysn | Android 16 | [Audit and debloat completed](../reports/motorola/edge-60-fusion/README.en.md) | 486 — packages mapped in the initial inventory |
 
 ## How to interpret the numbers
 

@@ -1,0 +1,7053 @@
+[
+  {
+    "package_name": "android",
+    "path": "/system/framework/framework-res.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "PERSISTENT",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "android.auto_generated_rro_product__",
+    "path": "/product/overlay/framework-res__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10113",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "android.auto_generated_rro_vendor__",
+    "path": "/vendor/overlay/framework-res__auto_generated_rro_vendor.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10126",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "android.autoinstalls.config.motorola.layout",
+    "path": "/data/app/~~IFstNlaFnCilmXrBkQAWGA==/android.autoinstalls.config.motorola.layout-MebseDuY8E4c7yMVSRpLzg==/base.apk",
+    "version_name": "1",
+    "version_code": "1",
+    "uid": "10272",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "br.com.brainweb.ifood",
+    "path": "/data/app/~~XxnOYoB2qfr-E8NQF-JWGg==/br.com.brainweb.ifood-Gk5XdJM9W5pxAVFYb-C7bg==/base.apk",
+    "version_name": "10.147.0",
+    "version_code": "361014705",
+    "uid": "10407",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "br.com.celesc.app",
+    "path": "/data/app/~~6Z9Ef-0Vy1voQT4w64AYgQ==/br.com.celesc.app-yp6q1r3usmk-_m7S7Sj75w==/base.apk",
+    "version_name": "1.3.23",
+    "version_code": "42",
+    "uid": "10501",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "br.com.dimed.panvel",
+    "path": "/data/app/~~ITv-HO6U3Xc8OYS1acgetw==/br.com.dimed.panvel-FtA6xtoZeGeQlfopCyCPxA==/base.apk",
+    "version_name": "4.35.0",
+    "version_code": "1791405864",
+    "uid": "10309",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "br.com.foursys.boavistaconsumidor",
+    "path": "/data/app/~~Pq3jUw45BNfOgI0FMSooBw==/br.com.foursys.boavistaconsumidor-L2lcA_TmksgQJO61fbkuSw==/base.apk",
+    "version_name": "7.9.1",
+    "version_code": "7009001",
+    "uid": "10358",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "br.com.intermedium",
+    "path": "/data/app/~~HuFc0J_l0zQ0DqBrpwuJlw==/br.com.intermedium-JHhnDMlo_m20A-WnS2e2-w==/base.apk",
+    "version_name": "26.18",
+    "version_code": "52122977",
+    "uid": "10422",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "br.com.jeitto.meujeitto",
+    "path": "/data/app/~~8fuNr_YEVOZ6s863jZkCkA==/br.com.jeitto.meujeitto-WGQCEhS4XKfD8BSdkRRyaQ==/base.apk",
+    "version_name": "5.39.0",
+    "version_code": "608",
+    "uid": "10500",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "br.com.koin",
+    "path": "/data/app/~~FtY2PHMq5wqjf8OK2Q18eA==/br.com.koin-X_2lzYOhc4zLy9kvs7PqVg==/base.apk",
+    "version_name": "1.275.0",
+    "version_code": "1016000845",
+    "uid": "10442",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "br.com.planosantacatarina.gruposantacatarina",
+    "path": "/data/app/~~Wj4loxeCBHc3uGX8MFhjQw==/br.com.planosantacatarina.gruposantacatarina-Yj06C8pRftS6Zzf933klRA==/base.apk",
+    "version_name": "3.0.3",
+    "version_code": "33",
+    "uid": "10100",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "br.com.reclameaqui.app",
+    "path": "/data/app/~~7DbLrzwQfyNmPBr68ujSLQ==/br.com.reclameaqui.app-Z87yEFyOLU4H7Dmu7dBuFw==/base.apk",
+    "version_name": "1.32.2",
+    "version_code": "633",
+    "uid": "10467",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "br.com.serasaexperian.consumidor",
+    "path": "/data/app/~~rGZBdqWzA9WraFFzg4kLEg==/br.com.serasaexperian.consumidor-LSR-jdVIR6YNmo2Jr0LDrQ==/base.apk",
+    "version_name": "9.102.0",
+    "version_code": "91696",
+    "uid": "10423",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "br.com.supersim",
+    "path": "/data/app/~~dlW5rKInZKllielk5dm4Ug==/br.com.supersim-6CdIwtBq4l7XCNtfb5U2rQ==/base.apk",
+    "version_name": "1.1.2",
+    "version_code": "10",
+    "uid": "10278",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "br.com.surftelecom.uberchip",
+    "path": "/data/app/~~qPekMhtJAeKaYwjzy8YQXw==/br.com.surftelecom.uberchip-07N7QQcahz8uw3b9Q-34nw==/base.apk",
+    "version_name": "1.17.1",
+    "version_code": "1788196758",
+    "uid": "10454",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "br.gov.caixa.cartoes",
+    "path": "/data/app/~~ekjMxrLiJXHnfUy7qvq3WQ==/br.gov.caixa.cartoes-4B4-HhMZed1DCE8dOKXInA==/base.apk",
+    "version_name": "6.10.2",
+    "version_code": "1619514381",
+    "uid": "10431",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "br.gov.meugovbr",
+    "path": "/data/app/~~uw-LariP-76QpOtT_mugCA==/br.gov.meugovbr-Udo4V-qdVREjHhb9GYZ7Rg==/base.apk",
+    "version_name": "3.9.0",
+    "version_code": "235",
+    "uid": "10445",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "br.gov.serpro.cnhe",
+    "path": "/data/app/~~LwVyYoBfQtfboiotkeEx1w==/br.gov.serpro.cnhe-Bfi8EyH0cU3OnjUZu2jz9Q==/base.apk",
+    "version_name": "7.4.2",
+    "version_code": "4225334",
+    "uid": "10453",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "br.jus.tse.eleitoral.etitulo",
+    "path": "/data/app/~~QBtMn-ILhQffDEGhm6y53Q==/br.jus.tse.eleitoral.etitulo-YBF7uVvPstKs2rlKWwlu9g==/base.apk",
+    "version_name": "2026.10.27",
+    "version_code": "746817101",
+    "uid": "10476",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "br.org.app.barilife",
+    "path": "/data/app/~~flohaGiUql95jCuojG5C4g==/br.org.app.barilife-tbjztg8IqAa2CgQpTadDsg==/base.apk",
+    "version_name": "9.3",
+    "version_code": "90300",
+    "uid": "10380",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "burgerking.com.br.appandroid",
+    "path": "/data/app/~~a1t7CSqFJxAzLNomrPV9ew==/burgerking.com.br.appandroid-pZGjUErPYiDSqaq2HfPV3g==/base.apk",
+    "version_name": "5.22.5",
+    "version_code": "5444",
+    "uid": "10472",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.amazon.appmanager",
+    "path": "/product/priv-app/AmazonAppManager/AmazonAppManager.apk",
+    "version_name": "1.1.35.1",
+    "version_code": "140818",
+    "uid": "10177",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.DeviceAsWebcam",
+    "path": "/system/priv-app/DeviceAsWebcam/DeviceAsWebcam.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.avatarpicker",
+    "path": "/system_ext/priv-app/AvatarPicker/AvatarPicker.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10131",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.backupconfirm",
+    "path": "/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10127",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.android.bips",
+    "path": "/system/priv-app/BuiltInPrintService/BuiltInPrintService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10132",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.bluetooth",
+    "path": "/apex/com.android.bt/app/Bluetooth@W1VCS36M.14-20-19-9/Bluetooth.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1002",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.android.bluetoothmidiservice",
+    "path": "/system/app/BluetoothMidiService/BluetoothMidiService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10154",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.bookmarkprovider",
+    "path": "/system/app/BookmarkProvider/BookmarkProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10151",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.calllogbackup",
+    "path": "/system/priv-app/CallLogBackup/CallLogBackup.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10129",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.android.cameraextensions",
+    "path": "/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10153",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.carrierdefaultapp",
+    "path": "/system/app/CarrierDefaultApp/CarrierDefaultApp.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10155",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.cellbroadcast.overlay",
+    "path": "/product/overlay/MotoCellBroadcastReceiverOverlay.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10051",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.cellbroadcastreceiver",
+    "path": "/system/priv-app/CellBroadcastLegacyApp/CellBroadcastLegacyApp.apk",
+    "version_name": "R-initial",
+    "version_code": "300000000",
+    "uid": "10133",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.cellbroadcastservice.overlay",
+    "path": "/product/overlay/MotoCellBroadcastServiceOverlay.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10052",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.certinstaller",
+    "path": "/system/app/CertInstaller/CertInstaller.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10156",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.chrome",
+    "path": "/data/app/~~xxcn_j9jyjGitaQERLBk2A==/com.android.chrome-0Z4irvBVnsFJ9io4MULSQA==/base.apk",
+    "version_name": "140.0.7339.207",
+    "version_code": "733920733",
+    "uid": "10262",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.companiondevicemanager",
+    "path": "/system/app/CompanionDeviceManager/CompanionDeviceManager.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10157",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.credentialmanager",
+    "path": "/system/priv-app/CredentialManager/CredentialManager.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10134",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.cts.ctsshim",
+    "path": "/apex/com.android.apex.cts.shim/app/CtsShim@MAIN/CtsShim.apk",
+    "version_name": "15",
+    "version_code": "35",
+    "uid": "10368",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.cts.priv.ctsshim",
+    "path": "/apex/com.android.apex.cts.shim/priv-app/CtsShimPriv@MAIN/CtsShimPriv.apk",
+    "version_name": "15",
+    "version_code": "35",
+    "uid": "10367",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.devicediagnostics",
+    "path": "/system/priv-app/DeviceDiagnostics/DeviceDiagnostics.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10136",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.devicelockcontroller",
+    "path": "/apex/com.android.devicelock/priv-app/DeviceLockController@W1VCS36M.14-20-19-9/DeviceLockController.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10435",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.android.dialer.overlay.imei",
+    "path": "/product/overlay/DialerOverlayImei.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10002",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.dreams.basic",
+    "path": "/system/app/BasicDreams/BasicDreams.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10152",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.dynsystem",
+    "path": "/system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.egg",
+    "path": "/system/app/EasterEgg/EasterEgg.apk",
+    "version_name": "1.0",
+    "version_code": "12",
+    "uid": "10159",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.emergency",
+    "path": "/system_ext/priv-app/EmergencyInfoGms/EmergencyInfoGms.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10301",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.externalstorage",
+    "path": "/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10137",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.hotwordenrollment.okgoogle",
+    "path": "/product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10211",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.hotwordenrollment.xgoogle",
+    "path": "/product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10209",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.htmlviewer",
+    "path": "/system/app/HTMLViewer/HTMLViewer.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10161",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.imsserviceentitlement",
+    "path": "/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10213",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.inputdevices",
+    "path": "/system/priv-app/InputDevices/InputDevices.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.intentresolver",
+    "path": "/system/priv-app/IntentResolver/IntentResolver.apk",
+    "version_name": "2021-11",
+    "version_code": "0",
+    "uid": "10139",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.corner",
+    "path": "/product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10004",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.double",
+    "path": "/product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10006",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.hole",
+    "path": "/product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10005",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.noCutout",
+    "path": "/product/overlay/DisplayCutoutEmulationNoCutout/DisplayCutoutEmulationNoCutoutOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10007",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.tall",
+    "path": "/product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10008",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.waterfall",
+    "path": "/product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10010",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.gestural",
+    "path": "/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10092",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.hidegestural",
+    "path": "/product/overlay/NavigationBarModeHideGestural/NavigationBarModeHideGesturalOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10093",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.threebutton",
+    "path": "/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10091",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.transparent",
+    "path": "/product/overlay/TransparentNavigationBar/TransparentNavigationBarOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10109",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.keychain",
+    "path": "/system/app/KeyChain/KeyChain.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.localtransport",
+    "path": "/system/priv-app/LocalTransport/LocalTransport.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.location.fused",
+    "path": "/system/priv-app/FusedLocation/FusedLocation.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.managedprovisioning",
+    "path": "/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10145",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.mms.service",
+    "path": "/system/priv-app/MmsService/MmsService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.mtp",
+    "path": "/system/priv-app/MtpService/MtpService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10135",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.networkstack.inprocess.overlay",
+    "path": "/vendor/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10173",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.networkstack.overlay",
+    "path": "/vendor/app/NetworkStackResOverlay/NetworkStackResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10175",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.networkstack.tethering.inprocess.overlay",
+    "path": "/vendor/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10172",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.networkstack.tethering.overlay",
+    "path": "/vendor/app/TetheringResOverlay/TetheringResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10176",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.nfc",
+    "path": "/apex/com.android.nfcservices/priv-app/NfcNciApex@W1VCS36M.14-20-19-9/NfcNciApex.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1027",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.nfc.overlay",
+    "path": "/product/overlay/NfcOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10393",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.ons",
+    "path": "/system/priv-app/ONS/ONS.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.pacprocessor",
+    "path": "/system/app/PacProcessor/PacProcessor.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10164",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.phone",
+    "path": "/system/priv-app/TeleService/TeleService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.phone.overlay.carriersettings",
+    "path": "/product/overlay/TeleServiceCarrierSettingsRRO.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10102",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.phone.overlay.common",
+    "path": "/product/overlay/TelephonyResCommonMtk.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10105",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.phone.overlay.motcommon",
+    "path": "/product/overlay/TelephonyResMotCommon.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10106",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.phone.overlay.noHAC",
+    "path": "/product/overlay/Telephony-rro-noHAC.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10103",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.printspooler",
+    "path": "/system/app/PrintSpooler/PrintSpooler.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10167",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.blockednumber",
+    "path": "/system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10129",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.calendar",
+    "path": "/system/priv-app/CalendarProvider/CalendarProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10130",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.contactkeys",
+    "path": "/system/priv-app/E2eeContactKeysProvider/E2eeContactKeysProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10129",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.contacts",
+    "path": "/system/priv-app/ContactsProvider/ContactsProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10129",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.downloads",
+    "path": "/system/priv-app/DownloadProvider/DownloadProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10135",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.downloads.ui",
+    "path": "/system/priv-app/DownloadProviderUi/DownloadProviderUi.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10135",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.media",
+    "path": "/system/priv-app/MediaProviderLegacy/MediaProviderLegacy.apk",
+    "version_name": "16",
+    "version_code": "1024",
+    "uid": "10135",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.partnerbookmarks",
+    "path": "/system/priv-app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10146",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.settings",
+    "path": "/system/priv-app/SettingsProvider/SettingsProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.settings.auto_generated_rro_product__",
+    "path": "/product/overlay/SettingsProvider__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10098",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.telephony",
+    "path": "/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.telephony.overlay.carriersettings",
+    "path": "/product/overlay/TelephonyProviderCarrierSettingsRRO.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10104",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.providers.userdictionary",
+    "path": "/system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10129",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.proxyhandler",
+    "path": "/system/priv-app/ProxyHandler/ProxyHandler.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10147",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.role.notes.enabled",
+    "path": "/product/overlay/NotesRoleEnabled/NotesRoleEnabledOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10095",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.se",
+    "path": "/system/app/SecureElement/SecureElement.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1068",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.server.telecom",
+    "path": "/system/priv-app/Telecom/Telecom.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.settings",
+    "path": "/system_ext/priv-app/SettingsMoto/SettingsMoto.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.settings.intelligence",
+    "path": "/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10239",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.sharedstoragebackup",
+    "path": "/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10148",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.android.shell",
+    "path": "/system/priv-app/Shell/Shell.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "2000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.simappdialog",
+    "path": "/system/app/SimAppDialog/SimAppDialog.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10168",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.soundpicker",
+    "path": "/system/priv-app/SoundPicker/SoundPicker.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10135",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.stk",
+    "path": "/system/app/Stk/Stk.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.storagemanager",
+    "path": "/system_ext/priv-app/StorageManager/StorageManager.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10341",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.systemui",
+    "path": "/system_ext/priv-app/SystemUI/SystemUI.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10347",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.systemui.accessibility.accessibilitymenu",
+    "path": "/system_ext/app/AccessibilityMenu/AccessibilityMenu.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10351",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.systemui.accessibility.accessibilitymenu.auto_generated_rro_product__",
+    "path": "/product/overlay/AccessibilityMenu__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10003",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.systemui.auto_generated_rro_product__",
+    "path": "/product/overlay/SystemUI__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10101",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.systemui.auto_generated_rro_vendor__",
+    "path": "/vendor/overlay/SystemUI__auto_generated_rro_vendor.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10122",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.systemui.plugin.globalactions.wallet",
+    "path": "/system_ext/priv-app/QuickAccessWallet/QuickAccessWallet.apk",
+    "version_name": "1.0.0.0",
+    "version_code": "10000000",
+    "uid": "10336",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.font.Exo2Regular",
+    "path": "/product/overlay/FontExo2RegularSource/FontExo2RegularSourceOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10018",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.font.RobotoSlabRegular",
+    "path": "/product/overlay/FontRobotoSlabRegular/FontRobotoSlabRegularOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10020",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.font.RookeryRegular",
+    "path": "/product/overlay/FontRookeryRegular/FontRookeryRegularOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10021",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.font.SpaceGrotesk",
+    "path": "/product/overlay/FontSpaceGroteskSource/FontSpaceGroteskSourceOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10022",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.font.WorkSans",
+    "path": "/product/overlay/FontWorkSansSource/FontWorkSansSourceOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10026",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.icon.pebble",
+    "path": "/product/overlay/IconShapePebble/IconShapePebbleOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10036",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.icon.round",
+    "path": "/product/overlay/IconShapeRound/IconShapeRoundOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10040",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.icon.roundedrect",
+    "path": "/product/overlay/IconShapeRoundedRect/IconShapeRoundedRectOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10041",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.theme.icon.teardrop",
+    "path": "/product/overlay/IconShapeTeardrop/IconShapeTeardropOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10042",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.traceur",
+    "path": "/system/app/Traceur/Traceur.apk",
+    "version_name": "1.0",
+    "version_code": "2",
+    "uid": "10170",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.android.vending",
+    "path": "/data/app/~~tHjfFmfbjMyC_3eoO7YQvQ==/com.android.vending-IYw6F75V12n0mfyp8zRIBA==/base.apk",
+    "version_name": "48.1.28-31 [0] [PR] 811267161",
+    "version_code": "84812830",
+    "uid": "10250",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.virtualmachine.res",
+    "path": "/apex/com.android.virt/app/android.system.virtualmachine.res@W1VCS36M.14-20-19-9/android.system.virtualmachine.res.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10372",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.vpndialogs",
+    "path": "/system/priv-app/VpnDialogs/VpnDialogs.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10150",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.android.wallpaper.livepicker",
+    "path": "/system/priv-app/LiveWallpapersPicker/LiveWallpapersPicker.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10141",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.wallpaperbackup",
+    "path": "/system/app/WallpaperBackup/WallpaperBackup.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10169",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.android.wallpapercropper",
+    "path": "/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10342",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.android.wifi.mainline.resources.overlay",
+    "path": "/vendor/overlay/WifiResMainlineOverlay/WifiResMainlineOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10124",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.wifi.resources.overlay",
+    "path": "/vendor/overlay/WifiResOverlay/WifiResOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10125",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.wifi.resources.overlay.WifiVodafoneOverlay",
+    "path": "/product/overlay/WifiVodafoneOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10111",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.android.wifi.resources.overlay.motCommon",
+    "path": "/product/overlay/WifiResCommonOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10110",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.apple.atve.androidtv.appletv",
+    "path": "/data/app/~~VbDPbZAuolodicB2V_bKbQ==/com.apple.atve.androidtv.appletv-JGaOJ-w81z3tUOVtu-h-4A==/base.apk",
+    "version_name": "3.0.0",
+    "version_code": "3000070",
+    "uid": "10487",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.aura.oobe.motorola",
+    "path": "/product/priv-app/AppCloudOobeMotorolaStub/AppCloudOobeMotorolaStub.apk",
+    "version_name": "1.0.17.0",
+    "version_code": "1001700",
+    "uid": "10183",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.aura.oobe.vodafone",
+    "path": "/product/priv-app/VodafoneAppBox/VodafoneAppBox.apk",
+    "version_name": "8.4.2.0",
+    "version_code": "8040200",
+    "uid": "10244",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.bluetooth.aptxmode",
+    "path": "/system_ext/priv-app/MotoBtAptxMode/MotoBtAptxMode.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10315",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.booking",
+    "path": "/data/app/~~DnSj7uMpGrVaSikE9Pwg_g==/com.booking-lIj3DVAH5gVFqf6BBE5zJw==/base.apk",
+    "version_name": "70.7",
+    "version_code": "32159",
+    "uid": "10395",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.canva.editor",
+    "path": "/data/app/~~Rn_eNOfgOi3T4qa1b9eFLw==/com.canva.editor-U987h3eG_xHxp69EhnWj4A==/base.apk",
+    "version_name": "2.385.0",
+    "version_code": "29794486",
+    "uid": "10499",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.claroColombia.contenedor",
+    "path": "/product/priv-app/ClaroContenedorStub/ClaroContenedorStub.apk",
+    "version_name": "1.9",
+    "version_code": "10",
+    "uid": "10190",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.disney.disneyplus",
+    "path": "/data/app/~~iNhKj4IMXVVbcdgNF3m-Kw==/com.disney.disneyplus-J2Q87f-Bxj4npHiYaAIzpg==/base.apk",
+    "version_name": "26.20.0+rc3-2026.11.02",
+    "version_code": "179366219",
+    "uid": "10486",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.dolby.daxservice",
+    "path": "/system_ext/priv-app/daxService/daxService.apk",
+    "version_name": "06.04.00",
+    "version_code": "60400",
+    "uid": "10345",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.dti.amx",
+    "path": "/product/priv-app/ClaroIgnite/ClaroIgnite.apk",
+    "version_name": "11.1.022-6776",
+    "version_code": "110010220",
+    "uid": "10195",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.dti.motorola",
+    "path": "/data/app/~~pWB2i-TY3SB4p7Xyywkr6A==/com.dti.motorola-ZsFQXHn86do68LBNv_7I6w==/base.apk",
+    "version_name": "22.3.32-708",
+    "version_code": "220030320",
+    "uid": "10232",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.ertanto.kompas.official",
+    "path": "/product/app/KompasdotcomScout/KompasdotcomScout.apk",
+    "version_name": "9.2.7",
+    "version_code": "9002007",
+    "uid": "10266",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.facebook.appmanager",
+    "path": "/data/app/~~stcKdhb8Ez8MJwNoS9casw==/com.facebook.appmanager-Yc0WdyY7wlLUQWEkWCQCUw==/base.apk",
+    "version_name": "121.2.33",
+    "version_code": "762492142",
+    "uid": "10291",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.facebook.katana",
+    "path": "/data/app/~~kMYd7RkjW_yrOxYwZ9mRGQ==/com.facebook.katana-rNWhk8Wd89U8n_qdDWGnLA==/base.apk",
+    "version_name": "586.0.0.52.53",
+    "version_code": "476217160",
+    "uid": "10378",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.facebook.orca",
+    "path": "/data/app/~~csfUPG5_H2NGvGfGCByksA==/com.facebook.orca-Xo7tIqdP_DuV-US7GQHPWg==/base.apk",
+    "version_name": "586.0.0.55.92",
+    "version_code": "347215343",
+    "uid": "10419",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.facebook.services",
+    "path": "/data/app/~~xUMhDcqcrx1Dtj89hbRd7Q==/com.facebook.services-CCmHfiGScRLbjBynWbaEOw==/base.apk",
+    "version_name": "121.2.33",
+    "version_code": "762492006",
+    "uid": "10251",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.facebook.system",
+    "path": "/data/app/~~O6qXGVLbxqtpd1PRB3o_kA==/com.facebook.system-LsQTB6czcysxSmukswbGrg==/base.apk",
+    "version_name": "121.2.33",
+    "version_code": "762491975",
+    "uid": "10249",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.foodtosave.foodtosave",
+    "path": "/data/app/~~qEcf7cvWzx8V6tZUb5UsDw==/com.foodtosave.foodtosave-akXymvTffEQK-CTj7bRazA==/base.apk",
+    "version_name": "3.14.1",
+    "version_code": "417",
+    "uid": "10485",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.glance.lockscreenM",
+    "path": "/product/priv-app/GlanceSpacesMotorola/GlanceSpacesMotorola.apk",
+    "version_name": "11.4.9-motorola",
+    "version_code": "20250723",
+    "uid": "10205",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.ambient.streaming",
+    "path": "/data/app/~~4AyqLBvVnaeGD58w9RBqgg==/com.google.ambient.streaming-dqo1eVmjYZstohJdM9d4CQ==/base.apk",
+    "version_name": "1.0",
+    "version_code": "1000000",
+    "uid": "10193",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.accessibility.switchaccess",
+    "path": "/data/app/~~wsdAudDg9PmAAdq0DZjeFw==/com.google.android.accessibility.switchaccess-FnAIJmdsMq1odDdN68eolw==/base.apk",
+    "version_name": "1.16.1.798952610",
+    "version_code": "755",
+    "uid": "10279",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.adservices.api",
+    "path": "/apex/com.android.adservices/priv-app/AdServicesApkGoogle@370547070/AdServicesApkGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10355",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.adm",
+    "path": "/data/app/~~OmX38rhi2cwFhxFS1mxX2w==/com.google.android.apps.adm-6080fZMwxwkUBfttBG0s3Q==/base.apk",
+    "version_name": "3.1.787-06",
+    "version_code": "20015693",
+    "uid": "10391",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.bard",
+    "path": "/data/app/~~iHj1FC1eUz5VCXnDZGA9NQ==/com.google.android.apps.bard-pr2nWUdYU6DXk1B60mCEdA==/base.apk",
+    "version_name": "1.0.795460806",
+    "version_code": "272",
+    "uid": "10263",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.carrier.carrierwifi",
+    "path": "/data/app/~~igU4qB_5wIZpmqTRdz-ZjQ==/com.google.android.apps.carrier.carrierwifi-n68M7M3IKzTHBpdRjU5ySg==/base.apk",
+    "version_name": "1.6.726578950",
+    "version_code": "101",
+    "uid": "10200",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.chromecast.app",
+    "path": "/data/app/~~xr33kb7waw0I3dxg5QPLkA==/com.google.android.apps.chromecast.app-aFaY3LwXwBpSVRc2Orlyfw==/base.apk",
+    "version_name": "4.36.24.1",
+    "version_code": "30589415",
+    "uid": "10388",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.docs",
+    "path": "/data/app/~~B_ilbgyH5mk2wDD-W6Itzw==/com.google.android.apps.docs-dAKVAMUXB37ZNqk2zen5bg==/base.apk",
+    "version_name": "2.25.380.0.all.alldpi",
+    "version_code": "214173331",
+    "uid": "10265",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.docs.editors.docs",
+    "path": "/data/app/~~ehCgmyKKKq2OAnaMkmhlWA==/com.google.android.apps.docs.editors.docs-0cpxcYNTJkDr3HXlvdcqpQ==/base.apk",
+    "version_name": "1.26.441.05.90",
+    "version_code": "220712801",
+    "uid": "10414",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.docs.editors.sheets",
+    "path": "/data/app/~~seFlBsgfMhmPocu19qaaUA==/com.google.android.apps.docs.editors.sheets-vLYAMiXA-mkJThM8ufq6mQ==/base.apk",
+    "version_name": "1.26.451.00.90",
+    "version_code": "220714306",
+    "uid": "10413",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.docs.editors.slides",
+    "path": "/data/app/~~Nb_FCkX5r3e9DTxoYlpIog==/com.google.android.apps.docs.editors.slides-JM3SSbk51bDTeWA1nf4ZuA==/base.apk",
+    "version_name": "1.26.441.02.90",
+    "version_code": "220713055",
+    "uid": "10428",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.kids.familylink",
+    "path": "/data/app/~~txj7i6DzkcvBbqcY_FJk4A==/com.google.android.apps.kids.familylink-3JXzmisKkfWBMWQi6BWmqA==/base.apk",
+    "version_name": "2.107.0.2026w44.1005854179",
+    "version_code": "896472",
+    "uid": "10480",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.magazines",
+    "path": "/data/app/~~_YgOLJoxQk2xYE0EbiinCw==/com.google.android.apps.magazines-FFPgJycXbF21PyDTyyJOmg==/base.apk",
+    "version_name": "5.24.0.20072409",
+    "version_code": "2020072409",
+    "uid": "10429",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.maps",
+    "path": "/data/app/~~XxCpgN8jWV48mSqEFwX55Q==/com.google.android.apps.maps-w9raytjXuQTcFswXZm7LfA==/base.apk",
+    "version_name": "25.38.02.806933749",
+    "version_code": "1068243484",
+    "uid": "10275",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.messaging",
+    "path": "/data/app/~~-NNfyFqxOIQCYz1VdBvz1g==/com.google.android.apps.messaging-tnKqJS7CJxF3aMLET4aeiQ==/base.apk",
+    "version_name": "messages.android_20250907_01_RC00.phone_dynamic",
+    "version_code": "289151063",
+    "uid": "10219",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.nbu.files",
+    "path": "/data/app/~~7nRQFOqwEGNUmSIoGZopYg==/com.google.android.apps.nbu.files-2dahzpsVWi8OsTbLo_oQ5w==/base.apk",
+    "version_name": "1.8662.804056183.0-release",
+    "version_code": "1508395",
+    "uid": "10203",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.photos",
+    "path": "/data/app/~~hcjcv7KYVpNDhOGMIRpARw==/com.google.android.apps.photos-1AqQAYfT446YkLSFu12qgg==/base.apk",
+    "version_name": "7.47.0.810631069",
+    "version_code": "50765162",
+    "uid": "10283",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.restore",
+    "path": "/data/app/~~CU7N1xb893EJ4GiUvrregg==/com.google.android.apps.restore-fwGhvy9nViW1Gv0eZ1siqw==/base.apk",
+    "version_name": "1.0.802985534",
+    "version_code": "882368",
+    "uid": "10207",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.safetyhub",
+    "path": "/data/app/~~N27b4wWm9i-nkZ1l4KWu7g==/com.google.android.apps.safetyhub-TgaLk20v2MOQbH6eX3PBAw==/base.apk",
+    "version_name": "2025.08.06.791860033.0-release_gms",
+    "version_code": "100683875",
+    "uid": "10243",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.subscriptions.red",
+    "path": "/data/app/~~tk5KKFpXQTyy45LHHIvE9Q==/com.google.android.apps.subscriptions.red-z3UwpYdlRKsAkXPeMupPrw==/base.apk",
+    "version_name": "1.229.656062133",
+    "version_code": "525199",
+    "uid": "10387",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.tachyon",
+    "path": "/data/app/~~LMqlWFmJvevlQwDoCtTG8Q==/com.google.android.apps.tachyon-JDzk1hjCq-j0Ijg_RdbhtQ==/base.apk",
+    "version_name": "326.0.810633361.duo.android_20250922.02_p1",
+    "version_code": "6575099",
+    "uid": "10271",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.turbo",
+    "path": "/product/priv-app/Turbo/Turbo.apk",
+    "version_name": "1.27.0.800299854.android",
+    "version_code": "10271581",
+    "uid": "10242",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.walletnfcrel",
+    "path": "/data/app/~~PPgDBLSLgc3SYUnhhrjYEQ==/com.google.android.apps.walletnfcrel-2VeR8zYfC6Gk4kGBelxIlg==/base.apk",
+    "version_name": "26.43.1009867093",
+    "version_code": "934004749",
+    "uid": "10390",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.wallpaper",
+    "path": "/system_ext/priv-app/GoogleWallpapers/GoogleWallpapers.apk",
+    "version_name": "16",
+    "version_code": "200000300",
+    "uid": "10310",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.wellbeing",
+    "path": "/data/app/~~3nBbAjSVnsYb9Vr9kVd9vQ==/com.google.android.apps.wellbeing-_oYw3Z7X8LyoqMsCXl72mw==/base.apk",
+    "version_name": "1.32.800272665 (762847)",
+    "version_code": "762847",
+    "uid": "10253",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.apps.youtube.music",
+    "path": "/data/app/~~jsDaDAsrqZniC0g1wfgANA==/com.google.android.apps.youtube.music-TWeWLwAqwnaMARx7RCydMg==/base.apk",
+    "version_name": "8.38.52",
+    "version_code": "83852240",
+    "uid": "10288",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.appsearch.apk",
+    "path": "/apex/com.android.appsearch/priv-app/com.google.android.appsearch.apk@370549320/com.google.android.appsearch.apk.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10354",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.as",
+    "path": "/data/app/~~DsVJK98OqoyhoiKXVKDH5g==/com.google.android.as-3jraEyWEtRoXUkZueDxN9Q==/base.apk",
+    "version_name": "B.9.playstore.oemfull.791909054",
+    "version_code": "14805687",
+    "uid": "10182",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.as.oss",
+    "path": "/data/app/~~PgudhzQaTz8fnbWdj1t_wg==/com.google.android.as.oss-Sv_PDTdvGWezagW8dL1E_Q==/base.apk",
+    "version_name": "1.0.release.811839831",
+    "version_code": "114911",
+    "uid": "10240",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.calculator",
+    "path": "/data/app/~~lndy7Ci5L3d1tPV8FWOufg==/com.google.android.calculator-ZiYD3JzUFsYWQ9lR1y8b4w==/base.apk",
+    "version_name": "9.0 (799007469)",
+    "version_code": "85006687",
+    "uid": "10256",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.calendar",
+    "path": "/data/app/~~jph4h_ZfZSmkavt8oHBYsQ==/com.google.android.calendar-Bh3ILqqE9KJeosLcWLqrUg==/base.apk",
+    "version_name": "2025.38.0-809757839-release",
+    "version_code": "2017898158",
+    "uid": "10259",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.captiveportallogin",
+    "path": "/data/app/~~uvKZXey8FAeX6G0E1B2kkw==/com.google.android.captiveportallogin-ypi5E7NBOZmSsP14ECbf6g==/base.apk",
+    "version_name": "16",
+    "version_code": "360738140",
+    "uid": "10162",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.carrier",
+    "path": "/product/priv-app/CarrierSettings/CarrierSettings.apk",
+    "version_name": "52.1.712759188",
+    "version_code": "52",
+    "uid": "10189",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.cellbroadcastreceiver",
+    "path": "/apex/com.android.cellbroadcast/priv-app/GoogleCellBroadcastApp@371017160/GoogleCellBroadcastApp.apk",
+    "version_name": "R-initial",
+    "version_code": "300000000",
+    "uid": "10357",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.cellbroadcastservice",
+    "path": "/apex/com.android.cellbroadcast/priv-app/GoogleCellBroadcastServiceModule@371017160/GoogleCellBroadcastServiceModule.apk",
+    "version_name": "R-initial",
+    "version_code": "300000000",
+    "uid": "1073",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.configupdater",
+    "path": "/product/priv-app/ConfigUpdater/ConfigUpdater.apk",
+    "version_name": "16-13928101",
+    "version_code": "36",
+    "uid": "10192",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.connectivity.resources",
+    "path": "/apex/com.android.tethering/priv-app/ServiceConnectivityResourcesGoogle@371021120/ServiceConnectivityResourcesGoogle.apk",
+    "version_name": "S-initial",
+    "version_code": "1",
+    "uid": "10374",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.contactkeys",
+    "path": "/data/app/~~bcQLFBzueO8s-ugDQXjjxQ==/com.google.android.contactkeys-yk2-l8F-JDUX9fY594dJDA==/base.apk",
+    "version_name": "1.463.993399841",
+    "version_code": "22425",
+    "uid": "10384",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.contacts",
+    "path": "/data/app/~~2nkzdNE9Fiq-LRhp7QgDFA==/com.google.android.contacts-O4p9VG5phLSnUwQOINXiig==/base.apk",
+    "version_name": "4.64.27.807337001",
+    "version_code": "3243123",
+    "uid": "10268",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.deskclock",
+    "path": "/data/app/~~x66m1D_pQgMTpRLM-37cpA==/com.google.android.deskclock-_z41pOUVNDGVRTSojf0S_A==/base.apk",
+    "version_name": "8.2 (805685915)",
+    "version_code": "76008260",
+    "uid": "10258",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.dialer",
+    "path": "/data/app/~~PpCJklm7ntYxmFA6qHLYPg==/com.google.android.dialer-fBIgpD49MbuqLeNXxWmCPQ==/base.apk",
+    "version_name": "192.0.806919635",
+    "version_code": "19106378",
+    "uid": "10208",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.documentsui",
+    "path": "/data/app/~~rgCS1X0jlv5arK8NATRHpQ==/com.google.android.documentsui-eNShhnUOCVj1sKUhdUOdIg==/base.apk",
+    "version_name": "16",
+    "version_code": "360716080",
+    "uid": "10140",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.euicc",
+    "path": "/data/app/~~i1A1TQwPzcGsop0TBFtrMA==/com.google.android.euicc-Xc4YfGHHQhKMnVMW5emKWg==/base.apk",
+    "version_name": "D.2.1.784502882-gms",
+    "version_code": "228500",
+    "uid": "10201",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.ext.services",
+    "path": "/apex/com.android.extservices/priv-app/GoogleExtServices@370549340/GoogleExtServices.apk",
+    "version_name": "aml_370549340",
+    "version_code": "370549340",
+    "uid": "10373",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.ext.shared",
+    "path": "/system/app/GoogleExtShared/GoogleExtShared.apk",
+    "version_name": "1",
+    "version_code": "1",
+    "uid": "10158",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.federatedcompute",
+    "path": "/apex/com.android.ondevicepersonalization/app/FederatedComputeGoogle@370547070/FederatedComputeGoogle.apk",
+    "version_name": "17",
+    "version_code": "370399999",
+    "uid": "10370",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.feedback",
+    "path": "/system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk",
+    "version_name": "16-13928101",
+    "version_code": "36",
+    "uid": "10307",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.gm",
+    "path": "/data/app/~~3vntghR9Q1F0y1UqRdFpsg==/com.google.android.gm-RTOJfTxIL4ZjUsXcDZpt4g==/base.apk",
+    "version_name": "2025.09.22.811856720.Release",
+    "version_code": "65357932",
+    "uid": "10270",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.gms",
+    "path": "/data/app/~~dlQolY10QP_7G5T5cwbWcw==/com.google.android.gms-Clt2GAAi7vE_nMjOM_TLCw==/base.apk",
+    "version_name": "25.38.30 (260400-807569344)",
+    "version_code": "253830035",
+    "uid": "10221",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.gms.location.history",
+    "path": "/product/app/GoogleLocationHistory/GoogleLocationHistory.apk",
+    "version_name": "1.2",
+    "version_code": "3",
+    "uid": "10264",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.gms.supervision",
+    "path": "/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk",
+    "version_name": "1.0.800961816.phone",
+    "version_code": "80206",
+    "uid": "10199",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.googlequicksearchbox",
+    "path": "/data/app/~~bC0Gf-q7_6VACQCWb1--ow==/com.google.android.googlequicksearchbox-VxlrCkR3J1jHR4WF6ZzgpQ==/base.apk",
+    "version_name": "16.41.36.ve.arm64",
+    "version_code": "301615914",
+    "uid": "10254",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.gsf",
+    "path": "/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+    "version_name": "16-13928101",
+    "version_code": "36",
+    "uid": "10221",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.health.connect.backuprestore",
+    "path": "/apex/com.android.healthfitness/app/HealthConnectBackupRestoreGoogle@370547060/HealthConnectBackupRestoreGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10361",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.healthconnect.controller",
+    "path": "/apex/com.android.healthfitness/priv-app/HealthConnectControllerGoogle@370547060/HealthConnectControllerGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10360",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.hotspot2.osulogin",
+    "path": "/apex/com.android.wifi/app/OsuLoginGoogle@371020840/OsuLoginGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10363",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.ims",
+    "path": "/data/app/~~fxuZEEPEDYiWhsuaMl4syw==/com.google.android.ims-fxQCgESIh7MlkRTvR22exQ==/base.apk",
+    "version_name": "carrierservices.android_20250826_00_RC00.phone",
+    "version_code": "31153903",
+    "uid": "10432",
+    "is_third_party": true,
+    "is_disabled": true,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.inputmethod.latin",
+    "path": "/data/app/~~dxvrKWJfLueKaFRrX_6N-w==/com.google.android.inputmethod.latin-7IOwx8Dgq5qMEo5gkaBX1w==/base.apk",
+    "version_name": "16.0.5.804347959-release-arm64-v8a",
+    "version_code": "175401458",
+    "uid": "10269",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.keep",
+    "path": "/data/app/~~iEVmYZruh5Mla7ECJtjVBw==/com.google.android.keep-CqUKmxFNX44_ZNfq7qpkmA==/base.apk",
+    "version_name": "5.26.441.00.90",
+    "version_code": "220682588",
+    "uid": "10412",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_TASK_REPARENTING",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.marvin.talkback",
+    "path": "/data/app/~~MgubQnMBxNFMCgBJdUPYpQ==/com.google.android.marvin.talkback-lvF5sW_0ly4_67vxmgwKVQ==/base.apk",
+    "version_name": "16.1.0.808839780",
+    "version_code": "60171386",
+    "uid": "10293",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.modulemetadata",
+    "path": "/data/app/~~K28xHo0TJJU6K-jMeRi6Mw==/com.google.android.modulemetadata-UW_c9fqTZXLcMaZxZ-Zi9g==/base.apk",
+    "version_name": "2025-07-01S+",
+    "version_code": "360768004",
+    "uid": "10284",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.networkstack",
+    "path": "/data/app/~~nc3WnQ78NvwH_qhF4qhfMA==/com.google.android.networkstack-39raeHXsLX8VV07Uy0700A==/base.apk",
+    "version_name": "16",
+    "version_code": "360738140",
+    "uid": "1073",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.networkstack.overlay",
+    "path": "/vendor/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10171",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.networkstack.tethering",
+    "path": "/apex/com.android.tethering/priv-app/TetheringGoogle@371021120/TetheringGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "1073",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.networkstack.tethering.overlay",
+    "path": "/vendor/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10174",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.ondevicepersonalization.services",
+    "path": "/apex/com.android.ondevicepersonalization/priv-app/OnDevicePersonalizationGoogle@370547070/OnDevicePersonalizationGoogle.apk",
+    "version_name": "17",
+    "version_code": "370399999",
+    "uid": "10369",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.onetimeinitializer",
+    "path": "/product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk",
+    "version_name": "16-13928101",
+    "version_code": "36",
+    "uid": "10204",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.asi",
+    "path": "/product/overlay/GmsConfigOverlayASI.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10023",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.common",
+    "path": "/product/overlay/GmsConfigOverlayCommon.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10025",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.comms",
+    "path": "/product/overlay/GmsConfigOverlayComms.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10024",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.contextualsearch",
+    "path": "/product/overlay/GmsConfigOverlayContextualSearch.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10027",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.geotz",
+    "path": "/product/overlay/GmsConfigOverlayGeotz.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10029",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.gsa",
+    "path": "/product/overlay/GmsConfigOverlayGSA.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10028",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.personalsafety",
+    "path": "/product/overlay/GmsConfigOverlayPersonalSafety.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10030",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.photos",
+    "path": "/product/overlay/GmsConfigOverlayPhotos.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10031",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.searchselector",
+    "path": "/product/overlay/GmsConfigOverlaySearchSelector.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10032",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.captiveportallogin.forframework",
+    "path": "/product/overlay/CaptivePortalLoginFrameworkOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.documentsui",
+    "path": "/product/overlay/GoogleDocumentsUIOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10033",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.ext.services",
+    "path": "/product/overlay/GoogleExtServicesConfigOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10038",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.healthfitness.forframework",
+    "path": "/product/overlay/GoogleHealthFitnessFrameworkOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10035",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.modulemetadata.forframework",
+    "path": "/product/overlay/ModuleMetadataGoogleOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10050",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.permissioncontroller",
+    "path": "/product/overlay/GooglePermissionControllerOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10039",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.permissioncontroller.forframework",
+    "path": "/product/overlay/GooglePermissionControllerFrameworkOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10037",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.packageinstaller",
+    "path": "/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk",
+    "version_name": "16-13928101",
+    "version_code": "36",
+    "uid": "10138",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.partnersetup",
+    "path": "/data/app/~~UB1uQD2FVhBA8FYQQThOkg==/com.google.android.partnersetup-zt6an0-yujCN3brXtdr7xQ==/base.apk",
+    "version_name": "100.773392826",
+    "version_code": "7885",
+    "uid": "10206",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.permissioncontroller",
+    "path": "/apex/com.android.permission/priv-app/GooglePermissionController@371017160/GooglePermissionController.apk",
+    "version_name": "aml_371017160",
+    "version_code": "371017160",
+    "uid": "10377",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.photopicker",
+    "path": "/apex/com.android.mediaprovider/priv-app/PhotopickerGoogle@371513040/PhotopickerGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10365",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.printservice.recommendation",
+    "path": "/system/app/GooglePrintRecommendationService/GooglePrintRecommendationService.apk",
+    "version_name": "1.3.0",
+    "version_code": "4",
+    "uid": "10160",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.projection.gearhead",
+    "path": "/data/app/~~CJn07h_uVr7qEpbW0Z4XWw==/com.google.android.projection.gearhead-pWuED3Q3G5HVGp_EOz4QbQ==/base.apk",
+    "version_name": "1.2.551000-stub",
+    "version_code": "12551000",
+    "uid": "10178",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.providers.media.module",
+    "path": "/apex/com.android.mediaprovider/priv-app/MediaProviderGoogle@371513040/MediaProviderGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10366",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.rkpdapp",
+    "path": "/apex/com.android.rkpd/priv-app/rkpdapp.google@370549040/rkpdapp.google.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10436",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.safetycenter.resources",
+    "path": "/apex/com.android.permission/priv-app/GoogleSafetyCenterResources@371017160/GoogleSafetyCenterResources.apk",
+    "version_name": "33 system image",
+    "version_code": "339999900",
+    "uid": "10376",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.safetycore",
+    "path": "/data/app/~~elH1pboTqS8_Wb2eO4HE_w==/com.google.android.safetycore-luM-bUNSWCDkvgIsJG_03Q==/base.apk",
+    "version_name": "1.0.1007369049",
+    "version_code": "30070",
+    "uid": "10383",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.sdksandbox",
+    "path": "/apex/com.android.adservices/app/SdkSandboxGoogle@370547070/SdkSandboxGoogle.apk",
+    "version_name": "T-initial",
+    "version_code": "1",
+    "uid": "10356",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.setupwizard",
+    "path": "/system_ext/priv-app/SetupWizard/SetupWizard.apk",
+    "version_name": "236.808841380",
+    "version_code": "37849",
+    "uid": "10343",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.google.android.signature",
+    "path": "/apex/com.android.mediaprovider/priv-app/SignatureGoogle@371513040/SignatureGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10322",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.google.android.tag",
+    "path": "/system/priv-app/TagGoogle/TagGoogle.apk",
+    "version_name": "1.1",
+    "version_code": "101",
+    "uid": "10149",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.trichromelibrary_733920733",
+    "path": "Desconhecido",
+    "version_name": "140.0.7339.207",
+    "version_code": "733920733",
+    "uid": "10433",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.tts",
+    "path": "/data/app/~~qfN6Mx3CgpdR7WdVYkv9iA==/com.google.android.tts-74oOTqjtP2WGT9kZuwhxaw==/base.apk",
+    "version_name": "googletts.google-speech-apk_20250303.01_p1.734589102",
+    "version_code": "210547004",
+    "uid": "10274",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.uwb.resources",
+    "path": "/apex/com.android.uwb/priv-app/ServiceUwbResourcesGoogle@371020500/ServiceUwbResourcesGoogle.apk",
+    "version_name": "T-initial",
+    "version_code": "1",
+    "uid": "10438",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.verifier",
+    "path": "/data/app/~~ZJHNAN0TNGxC6nBdtdVewg==/com.google.android.verifier-FHF7N8p8Up6yJVR_wHRRgw==/base.apk",
+    "version_name": "1.0.804814953",
+    "version_code": "33679",
+    "uid": "10398",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.verifier.overlay",
+    "path": "/product/overlay/GmsConfigOverlayADVerifier.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10385",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.videos",
+    "path": "/data/app/~~YYl9EM5HSECuo_Qg2R_vCA==/com.google.android.videos-fjK_hxtVK4POQ0Vk4KtdlA==/base.apk",
+    "version_name": "4.39.3507.800854208.8-release",
+    "version_code": "439440351",
+    "uid": "10289",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.webview",
+    "path": "/data/app/~~8Cuoz2YhHKt-wxeV6ZCCyA==/com.google.android.webview-D2cJHjjnVvNvEpy7DEw0CA==/base.apk",
+    "version_name": "140.0.7339.207",
+    "version_code": "733920733",
+    "uid": "10282",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.wfcactivation",
+    "path": "/product/priv-app/WfcActivation/WfcActivation.apk",
+    "version_name": "104.1.748085657",
+    "version_code": "104",
+    "uid": "10248",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.google.android.wifi.dialog",
+    "path": "/apex/com.android.wifi/app/WifiDialogGoogle@371020840/WifiDialogGoogle.apk",
+    "version_name": "17",
+    "version_code": "37",
+    "uid": "10364",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.wifi.resources",
+    "path": "/apex/com.android.wifi/priv-app/ServiceWifiResourcesGoogle@371020840/ServiceWifiResourcesGoogle.apk",
+    "version_name": "R-initial",
+    "version_code": "1",
+    "uid": "10362",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.android.youtube",
+    "path": "/data/app/~~UTd0B78ObkJEo6oeX_x86g==/com.google.android.youtube-JIjZXUgXt917OOqn3dA3Tg==/base.apk",
+    "version_name": "20.38.37",
+    "version_code": "1556999616",
+    "uid": "10292",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.google.ar.core",
+    "path": "/data/app/~~fjoPBVhhSvZ4yBAfMzvZeg==/com.google.ar.core-J4w6SN8GknQ0B-dH0lpUEg==/base.apk",
+    "version_name": "0",
+    "version_code": "0",
+    "uid": "10255",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.mainline.adservices",
+    "path": "/data/app/~~o6olAYHEPQXANYWHTB6G9w==/com.google.mainline.adservices-q_sKISuj02oFYWxbPw6qig==/base.apk",
+    "version_name": "2025-07-01T+",
+    "version_code": "360709000",
+    "uid": "10285",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.google.mainline.telemetry",
+    "path": "/data/app/~~mcVuYmO3k365qvSrENUOEw==/com.google.mainline.telemetry-BoLfdbXBVulTJ071RyNYgg==/base.apk",
+    "version_name": "2025-07-01S+",
+    "version_code": "360702004",
+    "uid": "10286",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.handmark.expressweather",
+    "path": "/product/app/expressweatherStub/expressweatherStub.apk",
+    "version_name": "0.0.1",
+    "version_code": "1",
+    "uid": "10287",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.hitappsgames.wordsolitaire",
+    "path": "/data/app/~~nMmfCHtFT8CNWvha1AZ-cg==/com.hitappsgames.wordsolitaire-9AMsB9aMyO7s_tttep2s0A==/base.apk",
+    "version_name": "1.26.2",
+    "version_code": "3742",
+    "uid": "10014",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.indus.appstore",
+    "path": "/product/priv-app/IndusAppStore/IndusAppStore.apk",
+    "version_name": "25.11.12.0_MOTOROLA",
+    "version_code": "25111200",
+    "uid": "10399",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.inmobi.weather",
+    "path": "/data/app/~~FDVqoYinIEaac7Q5oQk2NA==/com.inmobi.weather-f6gyIyg9QnC7_MEVDhWKPg==/base.apk",
+    "version_name": "0.6.0.5",
+    "version_code": "6005",
+    "uid": "10290",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.instagram.android",
+    "path": "/data/app/~~pinMG3T48B8rxZkzSg7c2A==/com.instagram.android-jsWkgVqvrXxTaCIst53cnQ==/base.apk",
+    "version_name": "454.0.0.54.77",
+    "version_code": "386014758",
+    "uid": "10410",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_TASK_REPARENTING",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.instagram.barcelona",
+    "path": "/data/app/~~eRQCvFAjeBP4411ADOXnbw==/com.instagram.barcelona-ABeGZlRcTUqWwgu_25fa6g==/base.apk",
+    "version_name": "454.0.0.54.79",
+    "version_code": "512408625",
+    "uid": "10456",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_TASK_REPARENTING",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.ironsource.appcloud.oobe.hutchison",
+    "path": "/product/priv-app/AppCloudHutchison/AppCloudHutchison.apk",
+    "version_name": "9.1.2.0",
+    "version_code": "9010200",
+    "uid": "10187",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.kobe.jequiti",
+    "path": "/data/app/~~EDb9EgUq58n4dhkWAM8EoQ==/com.kobe.jequiti-EtGLdfoMx7i1nscxkAWznQ==/base.apk",
+    "version_name": "13.486.9",
+    "version_code": "876259",
+    "uid": "10463",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mcdo.mcdonalds",
+    "path": "/data/app/~~LAW5JORcC8OkePvFE2oIaA==/com.mcdo.mcdonalds--_a3QFb6AsVMBd9FyVQxgQ==/base.apk",
+    "version_name": "5.1.2",
+    "version_code": "53130",
+    "uid": "10304",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek",
+    "path": "/system_ext/app/mediatek-res/mediatek-res.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10353",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.FrameworkResOverlayExt",
+    "path": "/vendor/overlay/FrameworkResOverlayExt/FrameworkResOverlayExt.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10118",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.MtkSettingsResOverlay",
+    "path": "/vendor/overlay/MtkSettingsResOverlay/MtkSettingsResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10123",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.SettingsProviderResOverlay",
+    "path": "/vendor/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10121",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.apmonitor",
+    "path": "/system_ext/priv-app/ApmService/ApmService.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10296",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.capctrl.service",
+    "path": "/system_ext/priv-app/MtkCapCtrl/MtkCapCtrl.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.carrierexpress",
+    "path": "/system_ext/priv-app/CarrierExpress/CarrierExpress.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.frameworkresoverlay",
+    "path": "/vendor/overlay/FrameworkResOverlay/FrameworkResOverlay.apk",
+    "version_name": "14",
+    "version_code": "34",
+    "uid": "10117",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.gbaservice",
+    "path": "/system_ext/priv-app/MtkGbaService/MtkGbaService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.ims",
+    "path": "/system_ext/priv-app/ImsService/ImsService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.ims.rcsua.service",
+    "path": "/system_ext/priv-app/RcsUaService/RcsUaService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.location.lppe.main",
+    "path": "/system_ext/priv-app/LPPeService/LPPeService.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.op12.ims",
+    "path": "/system_ext/app/OP12Ims/OP12Ims.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10348",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.presence",
+    "path": "/system_ext/priv-app/Presence/Presence.apk",
+    "version_name": "22.4",
+    "version_code": "4",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mediatek.telephony",
+    "path": "/system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1001",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.melon.drop.fruit.merge.master",
+    "path": "/data/app/~~Rp2Sx_NTPU4-cO2eOOi3cg==/com.melon.drop.fruit.merge.master-pX907vGi5XaNZ9chQSqeBw==/base.apk",
+    "version_name": "2.85",
+    "version_code": "285",
+    "uid": "10186",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.mercadolibre",
+    "path": "/data/app/~~JJfhre7qGzcL06cNZhr2KQ==/com.mercadolibre-t00vKfH-yiocATtG13yr6A==/base.apk",
+    "version_name": "10.587.1",
+    "version_code": "1816182936",
+    "uid": "10409",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.mercadopago.wallet",
+    "path": "/data/app/~~pHvCu5-D5v0KcDYzrhXrOw==/com.mercadopago.wallet-6SXi2svs0EXSTB7BwBSjkQ==/base.apk",
+    "version_name": "2.461.0",
+    "version_code": "1816181629",
+    "uid": "10421",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.microsoft.office.outlook",
+    "path": "/data/app/~~C9jcnikGM9Bo_oNITqY8tA==/com.microsoft.office.outlook-zVEstjn52zGcbAW1x6KZVg==/base.apk",
+    "version_name": "5.2643.0",
+    "version_code": "72643124",
+    "uid": "10498",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.mobifull.radio1075fm",
+    "path": "/data/app/~~fYsMkjZU5iyUu47xNSkBWA==/com.mobifull.radio1075fm-fg0Ux-aLJCc6W8e4FJO9gg==/base.apk",
+    "version_name": "4.1.1",
+    "version_code": "30015",
+    "uid": "10420",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.account",
+    "path": "/data/app/~~LEbX9ZKuYIFQbPzY8enUBg==/com.motorola.account-B2r16P_hROi18on1Sa70PA==/base.apk",
+    "version_name": "v8.00.0016",
+    "version_code": "8000016",
+    "uid": "10215",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.actioncore",
+    "path": "/data/app/~~1oSWdIdIsYs-2lp-hBWjCw==/com.motorola.actioncore-5slLJ-HVi_1F_mlx_fQogg==/base.apk",
+    "version_name": "2.03.0775",
+    "version_code": "352030775",
+    "uid": "10294",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.actions",
+    "path": "/data/app/~~4w2vjb8OYUEDc_iZrT70Zg==/com.motorola.actions-9LxS6HWt-Y2x9JHgbM1snA==/base.apk",
+    "version_name": "08.17.14",
+    "version_code": "301081714",
+    "uid": "10218",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.motorola.actions.overlay",
+    "path": "/product/overlay/framework-rro-irservice.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10114",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.aicore",
+    "path": "/data/app/~~-3O04yzZymrT5CK_txURmA==/com.motorola.aicore-bJF23VR74BR08yxYCJ_Ayw==/base.apk",
+    "version_name": "1.1.79.15",
+    "version_code": "10107915",
+    "uid": "10179",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.aiservices",
+    "path": "/product/priv-app/AiServices/AiServices.apk",
+    "version_name": "1.1.229.3",
+    "version_code": "281122903",
+    "uid": "10180",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_TASK_REPARENTING",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.aitranslation",
+    "path": "/product/priv-app/LiveTranslationStub/LiveTranslationStub.apk",
+    "version_name": "0.0.001",
+    "version_code": "1",
+    "uid": "10212",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.connectivity.resources.overlay",
+    "path": "/product/overlay/MotoServiceConnectivityResOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10070",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.coresettingsext.overlay.doubletap",
+    "path": "/product/overlay/MotoCoreSettingsDoubleTapOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10053",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.coresettingsext.overlay.scout",
+    "path": "/product/overlay/MotoCoreSettingsExtScoutOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10054",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.fmradio",
+    "path": "/system_ext/app/FMRadioService/FMRadioService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10349",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.amx",
+    "path": "/product/overlay/MotoLauncherOverlayAMX.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10061",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.animation.scale",
+    "path": "/product/overlay/MotoLauncherOverlayLowTier.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10064",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.applabeltwolines",
+    "path": "/product/overlay/MotoLauncherOverlayAppLabelTwoLines.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10062",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.koodo",
+    "path": "/product/overlay/MotoLauncherOverlayKoodo.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10063",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.retail.global",
+    "path": "/product/overlay/MotoLauncherOverlayRetailGlobal.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10065",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.telus",
+    "path": "/product/overlay/MotoLauncherOverlayTelus.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10066",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.vivo",
+    "path": "/product/overlay/MotoLauncherOverlayVivo.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10067",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.nativedropboxagent",
+    "path": "/system_ext/priv-app/com.motorola.android.nativedropboxagent/com.motorola.android.nativedropboxagent.apk",
+    "version_name": "6.0",
+    "version_code": "6",
+    "uid": "1007",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.networkstack.overlay.mcc460",
+    "path": "/product/overlay/NetworkStackMcc460Overlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10094",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.networkstack.tethering.overlay.motCommon",
+    "path": "/product/overlay/TetheringOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10107",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.appclone",
+    "path": "/product/overlay/MotoFrameworkResAppcloneOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10055",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.common",
+    "path": "/product/overlay/MotoFrameworkResOverlayCommon.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10056",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.crystaltalkai",
+    "path": "/product/overlay/MotoFrameworkResOverlayCrystalTalkAI.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10057",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.deviceconfig.scout",
+    "path": "/vendor/overlay/MotoFrameworkResOverlayDeviceConfigScout.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10120",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.dualsim",
+    "path": "/product/overlay/MotoFrameworkResOverlayDualSim.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10392",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.hw_dualsim",
+    "path": "/vendor/overlay/MotoFrameworkResOverlayHWDualSim.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10396",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.lpptoga",
+    "path": "/product/overlay/MotoFrameworkResOverlayLPPtoGA.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10058",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.mtk.common",
+    "path": "/product/overlay/MotoFrameworkResOverlayMTKCommon.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10059",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.payjoy",
+    "path": "/product/overlay/MotoFrameworkResOverlayPayjoy.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10060",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.overlay.vendor.common",
+    "path": "/vendor/overlay/MotoFrameworkResOverlayVendorCommon.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10119",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.providers.chromehomepage",
+    "path": "/system_ext/priv-app/ChromeHomePageProvider/ChromeHomePageProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10300",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings",
+    "path": "/system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings.auto_generated_rro_product__",
+    "path": "/product/overlay/MotorolaSettingsProvider__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10090",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings.overlay.dppcamera",
+    "path": "/product/overlay/MotoSettingsProviderOverlayDPPCamera.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10076",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings.overlay.dppnone",
+    "path": "/product/overlay/MotoSettingsProviderOverlayDPPNone.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10077",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.provisioning",
+    "path": "/product/priv-app/OMAProvisioning/OMAProvisioning.apk",
+    "version_name": "1.0.0",
+    "version_code": "1",
+    "uid": "10233",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.server.telecom.overlay.jp",
+    "path": "/product/overlay/MotoTelecommOverlayJP.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10089",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.appclone",
+    "path": "/product/overlay/MotoSettingsAppCloneOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10068",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.fps.display",
+    "path": "/product/overlay/MotoSettingsFPSDisplayOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10072",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.global",
+    "path": "/product/overlay/MotoSettingsGlobalOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10073",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.lra",
+    "path": "/product/overlay/MotoSettingsLRAOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10074",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.power.bottom",
+    "path": "/product/overlay/MotoSettingsPowerBottomOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10075",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.settings.uxcore.overlay",
+    "path": "/product/overlay/SettingsUxcOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10099",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.systemui.overlay.att",
+    "path": "/product/overlay/MotoSystemUIOverlayATT/MotoSystemUIOverlayATT.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10081",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.systemui.overlay.sprint",
+    "path": "/product/overlay/MotoSystemUIOverlaySPRINT/MotoSystemUIOverlaySPRINT.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10084",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.systemui.overlay.tmo",
+    "path": "/product/overlay/MotoSystemUIOverlayTMO/MotoSystemUIOverlayTMO.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10086",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.systemui.overlay.usc",
+    "path": "/product/overlay/MotoSystemUIOverlayUSC/MotoSystemUIOverlayUSC.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10087",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.android.systemui.overlay.vzw",
+    "path": "/product/overlay/MotoSystemUIOverlayVZW/MotoSystemUIOverlayVZW.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10088",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.appdirectedsmsproxy",
+    "path": "/system/priv-app/AppDirectedSmsProxy/AppDirectedSmsProxy.apk",
+    "version_name": "1.00.00",
+    "version_code": "10000",
+    "uid": "10128",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.appforecast",
+    "path": "/product/priv-app/MotoAppForecast/MotoAppForecast.apk",
+    "version_name": "06.01.0487-release",
+    "version_code": "6010487",
+    "uid": "10217",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.att.phone.extensions",
+    "path": "/product/priv-app/AttPhoneExt/AttPhoneExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10184",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.attvowifi",
+    "path": "/product/priv-app/Vowifi/Vowifi.apk",
+    "version_name": "7.00.03",
+    "version_code": "70003",
+    "uid": "10246",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.audiorecorder",
+    "path": "/data/app/~~MVIZe2s6y_fWBa0S0_YkIA==/com.motorola.audiorecorder-leRiLrRH4JZta-FmfOeDfw==/base.apk",
+    "version_name": "03.04.056",
+    "version_code": "30405600",
+    "uid": "10257",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.bach.modemstats",
+    "path": "/system_ext/priv-app/ModemStatsService/ModemStatsService.apk",
+    "version_name": "2.16.01",
+    "version_code": "20160001",
+    "uid": "10312",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.batterycare",
+    "path": "/system_ext/priv-app/BatteryCare/BatteryCare.apk",
+    "version_name": "2.0.0.142",
+    "version_code": "200142",
+    "uid": "10298",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.batterycare.overlay",
+    "path": "/product/overlay/framework-rro-motobatterycare.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10116",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.batterycare.overlay.appside",
+    "path": "/product/overlay/batterycare-rro-motobatterycare.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10112",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.brapps",
+    "path": "/product/priv-app/BRApps2/BRApps2.apk",
+    "version_name": "04.03.89",
+    "version_code": "40389",
+    "uid": "10188",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.bug2go",
+    "path": "/system_ext/priv-app/Bug2GoStub/Bug2GoStub.apk",
+    "version_name": "16",
+    "version_code": "0",
+    "uid": "1007",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.callredirectionservice",
+    "path": "/product/priv-app/CallRedirectionService/CallRedirectionService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10185",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.camera.ai.colortone",
+    "path": "/product/priv-app/MotColorTone/MotColorTone.apk",
+    "version_name": "1.0.37",
+    "version_code": "10003700",
+    "uid": "10214",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.camera5",
+    "path": "/product/priv-app/MotCamera5/MotCamera5.apk",
+    "version_name": "10.0.15.58",
+    "version_code": "10001558",
+    "uid": "10216",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.carrierconfig",
+    "path": "/product/priv-app/TMOConfig/TMOConfig.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10241",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.carriersettingsext",
+    "path": "/product/priv-app/CarrierSettingsExt/CarrierSettingsExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10194",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.ccc.devicemanagement",
+    "path": "/system_ext/priv-app/3c_devicemanagement-binary/3c_devicemanagement-binary.apk",
+    "version_name": "16.00.0004",
+    "version_code": "16000004",
+    "uid": "10295",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.ccc.notification",
+    "path": "/data/app/~~FoMgyF9jPqhmHgZw4M5UFw==/com.motorola.ccc.notification-rPTIsuhK-VR3U6dierLlJA==/base.apk",
+    "version_name": "17.9.923",
+    "version_code": "179923",
+    "uid": "10299",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.ccc.ota",
+    "path": "/system_ext/priv-app/3c_ota/3c_ota.apk",
+    "version_name": "36.00.037",
+    "version_code": "3600037",
+    "uid": "10297",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.contacts.preloadcontacts",
+    "path": "/product/priv-app/PreloadContacts/PreloadContacts.apk",
+    "version_name": "3.0",
+    "version_code": "3",
+    "uid": "10238",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.contacts.preloadcontacts.overlay.vzw",
+    "path": "/product/overlay/MotoPreloadContactsOverlayVzw.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10071",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.coresettingsext",
+    "path": "/system_ext/priv-app/CoreSettingsExt/CoreSettingsExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10305",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.createwithai",
+    "path": "/data/app/~~2avhhNqHu0_PoHTf3ROvrQ==/com.motorola.createwithai-6_ZAhT7iL0cOgnt9eFtyPg==/base.apk",
+    "version_name": "1.0.47.24",
+    "version_code": "340104724",
+    "uid": "10191",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.demo",
+    "path": "/system_ext/priv-app/DemoMode/DemoMode.apk",
+    "version_name": "21.16.00",
+    "version_code": "320211600",
+    "uid": "10303",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.dimo",
+    "path": "/system_ext/priv-app/motoDigitalAccount/motoDigitalAccount.apk",
+    "version_name": "1.1.001",
+    "version_code": "11001",
+    "uid": "10344",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.dolby.dolbyui",
+    "path": "/system/app/MotoDolbyDax3/MotoDolbyDax3.apk",
+    "version_name": "07.02.199",
+    "version_code": "70219900",
+    "uid": "10166",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.dynamicvolume",
+    "path": "/product/priv-app/MotoMultiVolume/MotoMultiVolume.apk",
+    "version_name": "3.0.342",
+    "version_code": "313000342",
+    "uid": "10227",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.easyprefix",
+    "path": "/product/priv-app/EasyPrefix/EasyPrefix.apk",
+    "version_name": "01.04.192",
+    "version_code": "104192",
+    "uid": "10198",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.enterprise.adapter.service",
+    "path": "/system_ext/priv-app/EnterpriseAdapterService/EnterpriseAdapterService.apk",
+    "version_name": "16.01.0.018",
+    "version_code": "16010018",
+    "uid": "10306",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.enterprise.service",
+    "path": "/system_ext/priv-app/MotoThinkUEM/MotoThinkUEM.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10331",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.entitlement",
+    "path": "/product/priv-app/Entitlement/Entitlement.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10196",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.faceunlock",
+    "path": "/product/priv-app/MotoFaceUnlock/MotoFaceUnlock.apk",
+    "version_name": "02.01.643",
+    "version_code": "32010643",
+    "uid": "10223",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.freeform",
+    "path": "/system_ext/priv-app/MotoFreeForm/MotoFreeForm.apk",
+    "version_name": "3.0.0_20250801003932",
+    "version_code": "25080100",
+    "uid": "10321",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.gamemode",
+    "path": "/data/app/~~AZE8kPn_wWDT8P-XJ0pHwg==/com.motorola.gamemode-E7OOF0mtcgtWjTqT7EG5hw==/base.apk",
+    "version_name": "35.03.22.00-Release",
+    "version_code": "35032200",
+    "uid": "10202",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.genie",
+    "path": "/data/app/~~sNT9I8jcbUqeundRcFVOXQ==/com.motorola.genie-euiA9EMkRTCwq9i8U-ty2Q==/base.apk",
+    "version_name": "13.5.22",
+    "version_code": "1300522",
+    "uid": "10210",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.gesture",
+    "path": "/system_ext/priv-app/GestureNavigationTutorial/GestureNavigationTutorial.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10308",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.hce",
+    "path": "/system/priv-app/MotHceService/MotHceService.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10143",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.help",
+    "path": "/data/app/~~h2Xds8E8ALVBGm_QMRTfCg==/com.motorola.help-BuK16R_t701Wrq1we_46vQ==/base.apk",
+    "version_name": "6.00.0178",
+    "version_code": "1916000178",
+    "uid": "10226",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.help.extlog",
+    "path": "/product/priv-app/MotoFeedbackAssistant/MotoFeedbackAssistant.apk",
+    "version_name": "6.00.0000",
+    "version_code": "996000000",
+    "uid": "10222",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.hiddenmenuapp",
+    "path": "/system_ext/priv-app/HiddenMenu/HiddenMenu.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10311",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.installer",
+    "path": "/data/app/~~UyYIHledhDPLL2YH1R7UVg==/com.motorola.installer-5Wrn6TFwl6KsGRIg3rzgeA==/base.apk",
+    "version_name": "3.00.047",
+    "version_code": "300047",
+    "uid": "10323",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.iotservice",
+    "path": "/data/app/~~AFBY0g51SesPImjNOVYtZQ==/com.motorola.iotservice-KfJu7gms49_KuNeIm_Y2Xw==/base.apk",
+    "version_name": "01.00.015.00-Release",
+    "version_code": "10001500",
+    "uid": "10224",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.journal",
+    "path": "/data/app/~~fCRnkEI64Hb3vmjQH1Zdcg==/com.motorola.journal-ZOIArc_0fTqF5z1VIp-krQ==/base.apk",
+    "version_name": "35.00.50.01.1",
+    "version_code": "350050011",
+    "uid": "10228",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcher3",
+    "path": "/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10314",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcher3.auto_generated_rro_product__",
+    "path": "/product/overlay/Launcher3QuickStep__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10043",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig",
+    "path": "/product/app/LauncherConfig/LauncherConfig.apk",
+    "version_name": "1.0.0",
+    "version_code": "10000000",
+    "uid": "10267",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.amxcl",
+    "path": "/product/overlay/LauncherConfig-rro-amxcl.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10044",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.amxco",
+    "path": "/product/overlay/LauncherConfig-rro-amxco.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10045",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.amxla",
+    "path": "/product/overlay/LauncherConfig-rro-amxla.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10046",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.amxmx",
+    "path": "/product/overlay/LauncherConfig-rro-amxmx.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10047",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.amxpe",
+    "path": "/product/overlay/LauncherConfig-rro-amxpe.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10048",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.oraeu",
+    "path": "/product/overlay/LauncherConfig-rro-oraeu.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10049",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.launcherconfig.overlay.retin",
+    "path": "/product/overlay/LauncherConfig-rro-retin.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10386",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.lifetimedata",
+    "path": "/system_ext/priv-app/LifetimeData/LifetimeData.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10313",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.livewallpaper3",
+    "path": "/data/app/~~9QR1OSk8mUbgX4iUgXrYyQ==/com.motorola.livewallpaper3-KLn3N-DOC2dclva-w0lpWw==/base.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10319",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.mobiledesktop",
+    "path": "/data/app/~~aK3UGEKwU1Q3shj7H8cIgg==/com.motorola.mobiledesktop-x0Ngco07qJp3p6L7lnGhvA==/base.apk",
+    "version_name": "08.0.3.004.0",
+    "version_code": "8030042",
+    "uid": "10229",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.mobiledesktop.core",
+    "path": "/system_ext/priv-app/MotoDesktopCore/MotoDesktopCore.apk",
+    "version_name": "03.16.0000.03",
+    "version_code": "316000003",
+    "uid": "10320",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motcameradesktop",
+    "path": "/system_ext/priv-app/MotCameraDesktop/MotCameraDesktop.apk",
+    "version_name": "5.02.021.00",
+    "version_code": "50202100",
+    "uid": "10317",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.moto",
+    "path": "/data/app/~~PZD22bdEnkEA955Ntp1SQg==/com.motorola.moto-zj-CqDKnSkKooSkBg0p7nw==/base.apk",
+    "version_name": "9.0.719.5",
+    "version_code": "340971905",
+    "uid": "10220",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motocare",
+    "path": "/system_ext/priv-app/MotoCare/MotoCare.apk",
+    "version_name": "4.16.05",
+    "version_code": "40160005",
+    "uid": "10316",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motocit",
+    "path": "/system_ext/priv-app/CQATest/CQATest.apk",
+    "version_name": "15.1.0",
+    "version_code": "150100",
+    "uid": "10302",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motolights",
+    "path": "/product/priv-app/MotoLights/MotoLights.apk",
+    "version_name": "01.00.194",
+    "version_code": "100194",
+    "uid": "10225",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motosecurecore",
+    "path": "/system_ext/priv-app/MotoSecureCore/MotoSecureCore.apk",
+    "version_name": "1.0.000",
+    "version_code": "10000",
+    "uid": "10324",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motosignature.app",
+    "path": "/system/app/MotoSignatureApp/MotoSignatureApp.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10165",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.motosignature2.app",
+    "path": "/system/app/MotoSignature2App/MotoSignature2App.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10163",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.msimsettings",
+    "path": "/system_ext/priv-app/MSimSettings/MSimSettings.apk",
+    "version_name": "36.0.00.0000",
+    "version_code": "360000000",
+    "uid": "10318",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.msimsettings.overlay",
+    "path": "/system_ext/overlay/MSimSettingsOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10000",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.mykey",
+    "path": "/data/app/~~oVxd6Gw1NkiwuWr3W-DtUQ==/com.motorola.mykey-zUWO4etLO4_K_LMaDm8Ngw==/base.apk",
+    "version_name": "2.0.0.046",
+    "version_code": "200000046",
+    "uid": "10334",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.nfwlocationattribution",
+    "path": "/system_ext/app/NFWLocationAttribution/NFWLocationAttribution.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10352",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.om",
+    "path": "/data/app/~~bvZiULyADe53Fy7KsF6jjA==/com.motorola.om-BY-lmeL26EVU689s605jtg==/base.apk",
+    "version_name": "1.0.50",
+    "version_code": "310105000",
+    "uid": "10230",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.omadm.service",
+    "path": "/product/priv-app/DMService/DMService.apk",
+    "version_name": "1.0.0",
+    "version_code": "1",
+    "uid": "10197",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.omadm.vzw",
+    "path": "/product/priv-app/VzwDM/VzwDM.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10247",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.overlay.launcher3",
+    "path": "/product/overlay/framework-rro-launcher3.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10115",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.paks",
+    "path": "/system_ext/priv-app/PAKSFinance/PAKSFinance.apk",
+    "version_name": "05.01.022",
+    "version_code": "501022",
+    "uid": "10335",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.paks.notification",
+    "path": "/system_ext/priv-app/PaksFinanceNotification/PaksFinanceNotification.apk",
+    "version_name": "00.00.410",
+    "version_code": "410",
+    "uid": "10333",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.personalize",
+    "path": "/system_ext/priv-app/Personalize/Personalize.apk",
+    "version_name": "01.0.8.008",
+    "version_code": "108008",
+    "uid": "10338",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.motorola.playautoinstallext",
+    "path": "/product/app/PlayAutoInstallExt/PlayAutoInstallExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10273",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.rcsConfigService",
+    "path": "/system_ext/priv-app/rcsConfigService/rcsConfigService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10346",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.revoker.services",
+    "path": "/system_ext/priv-app/RevokerServices/RevokerServices.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10337",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.safetycenter.resources.overlay",
+    "path": "/product/overlay/MotoSafetyCenterResourceOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10069",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.sarcontrol",
+    "path": "/system/priv-app/MtkSarControlService/MtkSarControlService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10144",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.screenshoteditor",
+    "path": "/product/priv-app/MotoScreenshotEditor/MotoScreenshotEditor.apk",
+    "version_name": "5.00.000005",
+    "version_code": "500000005",
+    "uid": "10231",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_TASK_REPARENTING",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.securevault",
+    "path": "/data/app/~~7-uwj4t1XFz_4J8o0LJYkw==/com.motorola.securevault-tlG11_mqzaRKauXfsz_YQQ==/base.apk",
+    "version_name": "05.1.0.044",
+    "version_code": "510044",
+    "uid": "10329",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.securityhub",
+    "path": "/data/app/~~Il5lSqnrTbOX5D66mMpfQA==/com.motorola.securityhub-5NJfmuUvvf2Sd2XVDGlNIg==/base.apk",
+    "version_name": "06.0.0.012",
+    "version_code": "600012",
+    "uid": "10328",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.securityhubext",
+    "path": "/system_ext/priv-app/MotoSecurityHubExt/MotoSecurityHubExt.apk",
+    "version_name": "02.1.0.013",
+    "version_code": "210013",
+    "uid": "10325",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.settings.mep.overlay",
+    "path": "/product/overlay/SettingsMEPOverlay.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10096",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.setup",
+    "path": "/system_ext/priv-app/SetupWizardExt/SetupWizardExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10340",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE"
+    ]
+  },
+  {
+    "package_name": "com.motorola.setup.auto_generated_rro_product__",
+    "path": "/product/overlay/SetupWizardExt__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10097",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.setup.overlay.dlcdisclaimer",
+    "path": "/product/overlay/MotoSetupWizardExtOverlayDlcDisclaimer.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10078",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.setup.overlay.gemini",
+    "path": "/product/overlay/MotoSetupWizardExtOverlayGemini.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10079",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.setup.overlay.pai",
+    "path": "/product/overlay/MotoSetupWizardExtOverlayPai.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10080",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.slpc_sys",
+    "path": "/system_ext/app/SlpcSystem/SlpcSystem.apk",
+    "version_name": "2.00.02",
+    "version_code": "20002",
+    "uid": "10350",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.smart5g",
+    "path": "/system_ext/priv-app/MotoSmart5G/MotoSmart5G.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10326",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT"
+    ]
+  },
+  {
+    "package_name": "com.motorola.smartfeed",
+    "path": "/data/app/~~52-ao2x5Cjgwztrg5ZRgog==/com.motorola.smartfeed-AKx5-cuFh4n0o_gNKvrXqg==/base.apk",
+    "version_name": "1.02.0037",
+    "version_code": "361020037",
+    "uid": "10401",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.spaces",
+    "path": "/data/app/~~V4yRdaZWCiEuzpc_BUgJfA==/com.motorola.spaces-CRKadw8ao_Py2A3bS107UQ==/base.apk",
+    "version_name": "3.1.28.11",
+    "version_code": "310312811",
+    "uid": "10237",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.spectrum.setup.extensions",
+    "path": "/system_ext/priv-app/SpectrumSetupExt/SpectrumSetupExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10339",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.sstservice",
+    "path": "/system_ext/priv-app/MotoSstSoundService/MotoSstSoundService.apk",
+    "version_name": "01.01.0006",
+    "version_code": "1010006",
+    "uid": "10327",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.systemserver",
+    "path": "/system/priv-app/MotoSystemServer/MotoSystemServer.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10142",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.systemui.desk",
+    "path": "/system_ext/priv-app/MotoTaskBar/MotoTaskBar.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10332",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.systemui.overlay.dcm",
+    "path": "/product/overlay/MotoSystemUIOverlayDCM.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10082",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.systemui.overlay.jp",
+    "path": "/product/overlay/MotoSystemUIOverlayJP.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10083",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.systemui.overlay.moto.sysbar",
+    "path": "/product/overlay/MotoSystemUIOverlaySysbar.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10085",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.thermalservice",
+    "path": "/product/app/ThermalService/ThermalService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10276",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "PERSISTENT",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.thermalservice.overlay.scout.japan",
+    "path": "/product/overlay/ThermalServiceOverlayJapan.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10108",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.timeweatherwidget",
+    "path": "/data/app/~~9s95JeEpaXue5VNTaQP-gQ==/com.motorola.timeweatherwidget-mraHZr07nDJSuCsABTXqug==/base.apk",
+    "version_name": "4.13.98",
+    "version_code": "413098",
+    "uid": "10280",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.motorola.uxcore",
+    "path": "/data/app/~~2vlLN4Q0DGrNzbLdP7uR2g==/com.motorola.uxcore--1zBcI2ZCyNZMPUABlOKdA==/base.apk",
+    "version_name": "9.00.0306",
+    "version_code": "369000306",
+    "uid": "10245",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.vzw.pco.extensions.pcoreceiver",
+    "path": "/product/priv-app/vzwPcoExt/vzwPcoExt.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10252",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.motorola.wifi.motowifimetrics",
+    "path": "/system_ext/priv-app/MotoWifiMetrics/MotoWifiMetrics.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "10330",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.nu.production",
+    "path": "/data/app/~~QPTf5mthm7YrBD_6L-O-bw==/com.nu.production-fUxiH89DbHcnIKquYW1oYQ==/base.apk",
+    "version_name": "10.9.75-minApi28",
+    "version_code": "1000136867",
+    "uid": "10382",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp",
+    "path": "/product/app/EuiccPartnerApp/EuiccPartnerApp.apk",
+    "version_name": "1.1",
+    "version_code": "11",
+    "uid": "10260",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "TEST_ONLY",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.att",
+    "path": "/product/overlay/EuiccPartnerAppATTRRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10009",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.br",
+    "path": "/product/overlay/EuiccPartnerAppBRRRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10012",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.cc",
+    "path": "/product/overlay/EuiccPartnerAppCCRRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10011",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.na",
+    "path": "/product/overlay/EuiccPartnerAppNARRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10013",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.retca",
+    "path": "/product/overlay/EuiccPartnerAppRETCARRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10015",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.switchable.scout",
+    "path": "/product/overlay/EuiccPartnerAppSwitchableOverlayScout.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10019",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.tmo",
+    "path": "/product/overlay/EuiccPartnerAppTMORRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10016",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.vzw",
+    "path": "/product/overlay/EuiccPartnerAppVZWRRO.apk",
+    "version_name": "1.0",
+    "version_code": "1",
+    "uid": "10017",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.openai.chatgpt",
+    "path": "/data/app/~~fxK9mFdCroXeDLmap8HUqQ==/com.openai.chatgpt-8JvN1XplxXKQUCx_L6otUQ==/base.apk",
+    "version_name": "1.2026.300",
+    "version_code": "2630015",
+    "uid": "10457",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.orange.aura.oobe",
+    "path": "/product/priv-app/OrangeManualSelector/OrangeManualSelector.apk",
+    "version_name": "9.1.25.0",
+    "version_code": "9012500",
+    "uid": "10235",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.orange.update",
+    "path": "/product/priv-app/OrangeUpdates/OrangeUpdates.apk",
+    "version_name": "6.3.2",
+    "version_code": "7046",
+    "uid": "10236",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.payjoy.access",
+    "path": "/product/priv-app/PayJoyAccess/PayJoyAccess.apk",
+    "version_name": "5.1.4.0",
+    "version_code": "5010400",
+    "uid": "10234",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.popularapp.periodcalendar",
+    "path": "/data/app/~~rZV-oCu5Rxb_SO_esk9vrQ==/com.popularapp.periodcalendar-TljiJNvsjgcnJB2j2K7WTQ==/base.apk",
+    "version_name": "1.79.368.GP",
+    "version_code": "368",
+    "uid": "10408",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.primeiramesa2",
+    "path": "/data/app/~~YPXQZ1IH3vsKOM_bllxujw==/com.primeiramesa2-RooxJuZ363lM89ICf4kPIw==/base.apk",
+    "version_name": "4.3.2",
+    "version_code": "403",
+    "uid": "10473",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.samsclub.scanandgobr",
+    "path": "/data/app/~~XMikWy5PrYxIgRbohLbkbg==/com.samsclub.scanandgobr-EfZGsO6L7w8XdcTPCtZeAw==/base.apk",
+    "version_name": "8.11.0",
+    "version_code": "51274",
+    "uid": "10034",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.shopee.br",
+    "path": "/data/app/~~QE5rZczUM0OvshYqi3k1mg==/com.shopee.br-PbV2du3MJIp9mKx7ri_qiQ==/base.apk",
+    "version_name": "3.85.37",
+    "version_code": "38537",
+    "uid": "10379",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.sirma.mobile.bible.android",
+    "path": "/data/app/~~XVTRDIWbqCF78_w9q8owiw==/com.sirma.mobile.bible.android-PB5ZMtKU6O6AaUdExwGi5w==/base.apk",
+    "version_name": "11.35.1+7099318",
+    "version_code": "7099318",
+    "uid": "10406",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.taboola.mip",
+    "path": "/product/app/TaboolaMipEMEA2025/TaboolaMipEMEA2025.apk",
+    "version_name": "1.3.3",
+    "version_code": "10303",
+    "uid": "10277",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.taxis99",
+    "path": "/data/app/~~lC6cJn_2OxE89A9jCXOA6g==/com.taxis99-jTHhYwuG33un0pET4IuZVA==/base.apk",
+    "version_name": "6.65.4",
+    "version_code": "1606650406",
+    "uid": "10427",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.trustonic.teeservice",
+    "path": "/system_ext/app/TeeService/TeeService.apk",
+    "version_name": "16",
+    "version_code": "36",
+    "uid": "1000",
+    "is_third_party": false,
+    "is_disabled": false,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  },
+  {
+    "package_name": "com.ubercab",
+    "path": "/data/app/~~7nveQjh_SwgNAcb2k0p6Rw==/com.ubercab-Rx0xz9lltN1fUtpzXLVVpw==/base.apk",
+    "version_name": "4.655.10001",
+    "version_code": "323547",
+    "uid": "10415",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.unifiquemovel",
+    "path": "/data/app/~~Dei--_PmdCP86EiXK0eOew==/com.unifiquemovel--kdYUnHxXdKDGqGwIhCYQw==/base.apk",
+    "version_name": "3.2.1",
+    "version_code": "112",
+    "uid": "10418",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "com.valedesconto.clubebrasilatacadista",
+    "path": "/data/app/~~BDEz2DqzmEkAoIo9aX8BMg==/com.valedesconto.clubebrasilatacadista-m7pFGONJX8IPsw_YFxPV5A==/base.apk",
+    "version_name": "2.75.0000",
+    "version_code": "2075000000",
+    "uid": "10494",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.waze",
+    "path": "/data/app/~~kpIc2E7Clv1MqfbO_IQbOw==/com.waze-mb3aQ4WMy0Wa5RKKw3kaHQ==/base.apk",
+    "version_name": "5.26.5.0",
+    "version_code": "1030744",
+    "uid": "10434",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.wbd.stream",
+    "path": "/data/app/~~XGo1dWDh7o_1FfeT0OMPLQ==/com.wbd.stream-598RDuBgIVhAM3JIhQPaCQ==/base.apk",
+    "version_name": "22.0.0.321",
+    "version_code": "1800026515",
+    "uid": "10469",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.whatsapp",
+    "path": "/data/app/~~8S7F7miXaZCd9VrYNYOasg==/com.whatsapp-_S2pLMu_dVS5buNoaT-txA==/base.apk",
+    "version_name": "2.26.43.76",
+    "version_code": "264307627",
+    "uid": "10405",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION"
+    ]
+  },
+  {
+    "package_name": "com.whatsapp.w4b",
+    "path": "/data/app/~~ji8QbV2gPl5y8hqdNfib9g==/com.whatsapp.w4b-hWG7476dODYLClvYutm2ig==/base.apk",
+    "version_name": "2.26.43.72",
+    "version_code": "264307214",
+    "uid": "10424",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "RESTORE_ANY_VERSION",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.zhiliaoapp.musically",
+    "path": "/data/app/~~qG-S0WImBZmKKfkyZ8Ih1A==/com.zhiliaoapp.musically-o14mu3y6KmnCQzvhsJ9S7w==/base.apk",
+    "version_name": "47.6.3",
+    "version_code": "2024706030",
+    "uid": "10394",
+    "is_third_party": true,
+    "is_disabled": false,
+    "flags": [
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "KILL_AFTER_RESTORE",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "com.zte.iptvclient.android.idmnc",
+    "path": "/product/app/VisionPlusScout/VisionPlusScout.apk",
+    "version_name": "11.3.8 (1.2501031236) Vision+",
+    "version_code": "11030801",
+    "uid": "10281",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP",
+      "LARGE_HEAP"
+    ]
+  },
+  {
+    "package_name": "de.telekom.tsc",
+    "path": "/product/priv-app/AppAssistantEnabler/AppAssistantEnabler.apk",
+    "version_name": "A17.00.02",
+    "version_code": "170005279",
+    "uid": "10181",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA"
+    ]
+  },
+  {
+    "package_name": "id.mjs.etalaseapp",
+    "path": "/product/app/EtalaseAppsScout/EtalaseAppsScout.apk",
+    "version_name": "4.0.5",
+    "version_code": "4005",
+    "uid": "10261",
+    "is_third_party": false,
+    "is_disabled": true,
+    "flags": [
+      "SYSTEM",
+      "HAS_CODE",
+      "ALLOW_CLEAR_USER_DATA",
+      "ALLOW_BACKUP"
+    ]
+  }
+]

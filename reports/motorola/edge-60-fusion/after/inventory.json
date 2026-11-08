@@ -1,0 +1,3086 @@
+[
+  {
+    "package_name": "android",
+    "path": "/system/framework/framework-res.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "android.auto_generated_rro_product__",
+    "path": "/product/overlay/framework-res__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10113",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "android.auto_generated_rro_vendor__",
+    "path": "/vendor/overlay/framework-res__auto_generated_rro_vendor.apk",
+    "version_name": "1.0",
+    "uid": "10126",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.brainweb.ifood",
+    "path": "/data/app/~~XxnOYoB2qfr-E8NQF-JWGg==/br.com.brainweb.ifood-Gk5XdJM9W5pxAVFYb-C7bg==/base.apk",
+    "version_name": "10.147.0",
+    "uid": "10407",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.celesc.app",
+    "path": "/data/app/~~6Z9Ef-0Vy1voQT4w64AYgQ==/br.com.celesc.app-yp6q1r3usmk-_m7S7Sj75w==/base.apk",
+    "version_name": "1.3.23",
+    "uid": "10501",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.dimed.panvel",
+    "path": "/data/app/~~ITv-HO6U3Xc8OYS1acgetw==/br.com.dimed.panvel-FtA6xtoZeGeQlfopCyCPxA==/base.apk",
+    "version_name": "4.35.0",
+    "uid": "10309",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.foursys.boavistaconsumidor",
+    "path": "/data/app/~~Pq3jUw45BNfOgI0FMSooBw==/br.com.foursys.boavistaconsumidor-L2lcA_TmksgQJO61fbkuSw==/base.apk",
+    "version_name": "7.9.1",
+    "uid": "10358",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.intermedium",
+    "path": "/data/app/~~HuFc0J_l0zQ0DqBrpwuJlw==/br.com.intermedium-JHhnDMlo_m20A-WnS2e2-w==/base.apk",
+    "version_name": "26.18",
+    "uid": "10422",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.jeitto.meujeitto",
+    "path": "/data/app/~~8fuNr_YEVOZ6s863jZkCkA==/br.com.jeitto.meujeitto-WGQCEhS4XKfD8BSdkRRyaQ==/base.apk",
+    "version_name": "5.39.0",
+    "uid": "10500",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.koin",
+    "path": "/data/app/~~FtY2PHMq5wqjf8OK2Q18eA==/br.com.koin-X_2lzYOhc4zLy9kvs7PqVg==/base.apk",
+    "version_name": "1.275.0",
+    "uid": "10442",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.planosantacatarina.gruposantacatarina",
+    "path": "/data/app/~~Wj4loxeCBHc3uGX8MFhjQw==/br.com.planosantacatarina.gruposantacatarina-Yj06C8pRftS6Zzf933klRA==/base.apk",
+    "version_name": "3.0.3",
+    "uid": "10100",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.reclameaqui.app",
+    "path": "/data/app/~~7DbLrzwQfyNmPBr68ujSLQ==/br.com.reclameaqui.app-Z87yEFyOLU4H7Dmu7dBuFw==/base.apk",
+    "version_name": "1.32.2",
+    "uid": "10467",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.serasaexperian.consumidor",
+    "path": "/data/app/~~rGZBdqWzA9WraFFzg4kLEg==/br.com.serasaexperian.consumidor-LSR-jdVIR6YNmo2Jr0LDrQ==/base.apk",
+    "version_name": "9.102.0",
+    "uid": "10423",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.supersim",
+    "path": "/data/app/~~dlW5rKInZKllielk5dm4Ug==/br.com.supersim-6CdIwtBq4l7XCNtfb5U2rQ==/base.apk",
+    "version_name": "1.1.2",
+    "uid": "10278",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.com.surftelecom.uberchip",
+    "path": "/data/app/~~qPekMhtJAeKaYwjzy8YQXw==/br.com.surftelecom.uberchip-07N7QQcahz8uw3b9Q-34nw==/base.apk",
+    "version_name": "1.17.1",
+    "uid": "10454",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.gov.caixa.cartoes",
+    "path": "/data/app/~~ekjMxrLiJXHnfUy7qvq3WQ==/br.gov.caixa.cartoes-4B4-HhMZed1DCE8dOKXInA==/base.apk",
+    "version_name": "6.10.2",
+    "uid": "10431",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.gov.meugovbr",
+    "path": "/data/app/~~uw-LariP-76QpOtT_mugCA==/br.gov.meugovbr-Udo4V-qdVREjHhb9GYZ7Rg==/base.apk",
+    "version_name": "3.9.0",
+    "uid": "10445",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.gov.serpro.cnhe",
+    "path": "/data/app/~~LwVyYoBfQtfboiotkeEx1w==/br.gov.serpro.cnhe-Bfi8EyH0cU3OnjUZu2jz9Q==/base.apk",
+    "version_name": "7.4.2",
+    "uid": "10453",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.jus.tse.eleitoral.etitulo",
+    "path": "/data/app/~~QBtMn-ILhQffDEGhm6y53Q==/br.jus.tse.eleitoral.etitulo-YBF7uVvPstKs2rlKWwlu9g==/base.apk",
+    "version_name": "2026.10.27",
+    "uid": "10476",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "br.org.app.barilife",
+    "path": "/data/app/~~flohaGiUql95jCuojG5C4g==/br.org.app.barilife-tbjztg8IqAa2CgQpTadDsg==/base.apk",
+    "version_name": "9.3",
+    "uid": "10380",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "burgerking.com.br.appandroid",
+    "path": "/data/app/~~a1t7CSqFJxAzLNomrPV9ew==/burgerking.com.br.appandroid-pZGjUErPYiDSqaq2HfPV3g==/base.apk",
+    "version_name": "5.22.5",
+    "uid": "10472",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.DeviceAsWebcam",
+    "path": "/system/priv-app/DeviceAsWebcam/DeviceAsWebcam.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.avatarpicker",
+    "path": "/system_ext/priv-app/AvatarPicker/AvatarPicker.apk",
+    "version_name": "16",
+    "uid": "10131",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.backupconfirm",
+    "path": "/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk",
+    "version_name": "16",
+    "uid": "10127",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.bips",
+    "path": "/system/priv-app/BuiltInPrintService/BuiltInPrintService.apk",
+    "version_name": "16",
+    "uid": "10132",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.bluetooth",
+    "path": "/apex/com.android.bt/app/Bluetooth@W1VCS36M.14-20-19-9/Bluetooth.apk",
+    "version_name": "16",
+    "uid": "1002",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.bluetoothmidiservice",
+    "path": "/system/app/BluetoothMidiService/BluetoothMidiService.apk",
+    "version_name": "16",
+    "uid": "10154",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.bookmarkprovider",
+    "path": "/system/app/BookmarkProvider/BookmarkProvider.apk",
+    "version_name": "16",
+    "uid": "10151",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.calllogbackup",
+    "path": "/system/priv-app/CallLogBackup/CallLogBackup.apk",
+    "version_name": "16",
+    "uid": "10129",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.cameraextensions",
+    "path": "/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk",
+    "version_name": "16",
+    "uid": "10153",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.carrierdefaultapp",
+    "path": "/system/app/CarrierDefaultApp/CarrierDefaultApp.apk",
+    "version_name": "16",
+    "uid": "10155",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.cellbroadcast.overlay",
+    "path": "/product/overlay/MotoCellBroadcastReceiverOverlay.apk",
+    "version_name": "16",
+    "uid": "10051",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.cellbroadcastreceiver",
+    "path": "/system/priv-app/CellBroadcastLegacyApp/CellBroadcastLegacyApp.apk",
+    "version_name": "R-initial",
+    "uid": "10133",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.cellbroadcastservice.overlay",
+    "path": "/product/overlay/MotoCellBroadcastServiceOverlay.apk",
+    "version_name": "16",
+    "uid": "10052",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.certinstaller",
+    "path": "/system/app/CertInstaller/CertInstaller.apk",
+    "version_name": "16",
+    "uid": "10156",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.chrome",
+    "path": "/data/app/~~xxcn_j9jyjGitaQERLBk2A==/com.android.chrome-0Z4irvBVnsFJ9io4MULSQA==/base.apk",
+    "version_name": "140.0.7339.207",
+    "uid": "10262",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.companiondevicemanager",
+    "path": "/system/app/CompanionDeviceManager/CompanionDeviceManager.apk",
+    "version_name": "16",
+    "uid": "10157",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.credentialmanager",
+    "path": "/system/priv-app/CredentialManager/CredentialManager.apk",
+    "version_name": "16",
+    "uid": "10134",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.cts.ctsshim",
+    "path": "/apex/com.android.apex.cts.shim/app/CtsShim@MAIN/CtsShim.apk",
+    "version_name": "15",
+    "uid": "10368",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.cts.priv.ctsshim",
+    "path": "/apex/com.android.apex.cts.shim/priv-app/CtsShimPriv@MAIN/CtsShimPriv.apk",
+    "version_name": "15",
+    "uid": "10367",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.devicediagnostics",
+    "path": "/system/priv-app/DeviceDiagnostics/DeviceDiagnostics.apk",
+    "version_name": "16",
+    "uid": "10136",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.dreams.basic",
+    "path": "/system/app/BasicDreams/BasicDreams.apk",
+    "version_name": "16",
+    "uid": "10152",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.dynsystem",
+    "path": "/system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.egg",
+    "path": "/system/app/EasterEgg/EasterEgg.apk",
+    "version_name": "1.0",
+    "uid": "10159",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.emergency",
+    "path": "/system_ext/priv-app/EmergencyInfoGms/EmergencyInfoGms.apk",
+    "version_name": "16",
+    "uid": "10301",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.externalstorage",
+    "path": "/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+    "version_name": "16",
+    "uid": "10137",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.htmlviewer",
+    "path": "/system/app/HTMLViewer/HTMLViewer.apk",
+    "version_name": "16",
+    "uid": "10161",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.imsserviceentitlement",
+    "path": "/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk",
+    "version_name": "16",
+    "uid": "10213",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.inputdevices",
+    "path": "/system/priv-app/InputDevices/InputDevices.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.intentresolver",
+    "path": "/system/priv-app/IntentResolver/IntentResolver.apk",
+    "version_name": "2021-11",
+    "uid": "10139",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.corner",
+    "path": "/product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10004",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.double",
+    "path": "/product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10006",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.hole",
+    "path": "/product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10005",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.noCutout",
+    "path": "/product/overlay/DisplayCutoutEmulationNoCutout/DisplayCutoutEmulationNoCutoutOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10007",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.tall",
+    "path": "/product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10008",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.display.cutout.emulation.waterfall",
+    "path": "/product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10010",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.gestural",
+    "path": "/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10092",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.hidegestural",
+    "path": "/product/overlay/NavigationBarModeHideGestural/NavigationBarModeHideGesturalOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10093",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.threebutton",
+    "path": "/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10091",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.internal.systemui.navbar.transparent",
+    "path": "/product/overlay/TransparentNavigationBar/TransparentNavigationBarOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10109",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.keychain",
+    "path": "/system/app/KeyChain/KeyChain.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.localtransport",
+    "path": "/system/priv-app/LocalTransport/LocalTransport.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.location.fused",
+    "path": "/system/priv-app/FusedLocation/FusedLocation.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.managedprovisioning",
+    "path": "/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk",
+    "version_name": "16",
+    "uid": "10145",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.mms.service",
+    "path": "/system/priv-app/MmsService/MmsService.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.mtp",
+    "path": "/system/priv-app/MtpService/MtpService.apk",
+    "version_name": "16",
+    "uid": "10135",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.networkstack.inprocess.overlay",
+    "path": "/vendor/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk",
+    "version_name": "14",
+    "uid": "10173",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.networkstack.overlay",
+    "path": "/vendor/app/NetworkStackResOverlay/NetworkStackResOverlay.apk",
+    "version_name": "14",
+    "uid": "10175",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.networkstack.tethering.inprocess.overlay",
+    "path": "/vendor/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk",
+    "version_name": "14",
+    "uid": "10172",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.networkstack.tethering.overlay",
+    "path": "/vendor/app/TetheringResOverlay/TetheringResOverlay.apk",
+    "version_name": "14",
+    "uid": "10176",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.nfc",
+    "path": "/apex/com.android.nfcservices/priv-app/NfcNciApex@W1VCS36M.14-20-19-9/NfcNciApex.apk",
+    "version_name": "16",
+    "uid": "1027",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.nfc.overlay",
+    "path": "/product/overlay/NfcOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10393",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.ons",
+    "path": "/system/priv-app/ONS/ONS.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.pacprocessor",
+    "path": "/system/app/PacProcessor/PacProcessor.apk",
+    "version_name": "16",
+    "uid": "10164",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.phone",
+    "path": "/system/priv-app/TeleService/TeleService.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.phone.overlay.carriersettings",
+    "path": "/product/overlay/TeleServiceCarrierSettingsRRO.apk",
+    "version_name": "16",
+    "uid": "10102",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.phone.overlay.common",
+    "path": "/product/overlay/TelephonyResCommonMtk.apk",
+    "version_name": "16",
+    "uid": "10105",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.phone.overlay.motcommon",
+    "path": "/product/overlay/TelephonyResMotCommon.apk",
+    "version_name": "16",
+    "uid": "10106",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.phone.overlay.noHAC",
+    "path": "/product/overlay/Telephony-rro-noHAC.apk",
+    "version_name": "1.0",
+    "uid": "10103",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.printspooler",
+    "path": "/system/app/PrintSpooler/PrintSpooler.apk",
+    "version_name": "16",
+    "uid": "10167",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.blockednumber",
+    "path": "/system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk",
+    "version_name": "16",
+    "uid": "10129",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.calendar",
+    "path": "/system/priv-app/CalendarProvider/CalendarProvider.apk",
+    "version_name": "16",
+    "uid": "10130",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.contactkeys",
+    "path": "/system/priv-app/E2eeContactKeysProvider/E2eeContactKeysProvider.apk",
+    "version_name": "16",
+    "uid": "10129",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.contacts",
+    "path": "/system/priv-app/ContactsProvider/ContactsProvider.apk",
+    "version_name": "16",
+    "uid": "10129",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.downloads",
+    "path": "/system/priv-app/DownloadProvider/DownloadProvider.apk",
+    "version_name": "16",
+    "uid": "10135",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.downloads.ui",
+    "path": "/system/priv-app/DownloadProviderUi/DownloadProviderUi.apk",
+    "version_name": "16",
+    "uid": "10135",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.media",
+    "path": "/system/priv-app/MediaProviderLegacy/MediaProviderLegacy.apk",
+    "version_name": "16",
+    "uid": "10135",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.partnerbookmarks",
+    "path": "/system/priv-app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk",
+    "version_name": "16",
+    "uid": "10146",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.settings",
+    "path": "/system/priv-app/SettingsProvider/SettingsProvider.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.settings.auto_generated_rro_product__",
+    "path": "/product/overlay/SettingsProvider__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10098",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.telephony",
+    "path": "/system/priv-app/TelephonyProvider/TelephonyProvider.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.telephony.overlay.carriersettings",
+    "path": "/product/overlay/TelephonyProviderCarrierSettingsRRO.apk",
+    "version_name": "16",
+    "uid": "10104",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.providers.userdictionary",
+    "path": "/system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+    "version_name": "16",
+    "uid": "10129",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.proxyhandler",
+    "path": "/system/priv-app/ProxyHandler/ProxyHandler.apk",
+    "version_name": "16",
+    "uid": "10147",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.role.notes.enabled",
+    "path": "/product/overlay/NotesRoleEnabled/NotesRoleEnabledOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10095",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.se",
+    "path": "/system/app/SecureElement/SecureElement.apk",
+    "version_name": "16",
+    "uid": "1068",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.server.telecom",
+    "path": "/system/priv-app/Telecom/Telecom.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.settings",
+    "path": "/system_ext/priv-app/SettingsMoto/SettingsMoto.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.settings.intelligence",
+    "path": "/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk",
+    "version_name": "16",
+    "uid": "10239",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.sharedstoragebackup",
+    "path": "/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk",
+    "version_name": "16",
+    "uid": "10148",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.shell",
+    "path": "/system/priv-app/Shell/Shell.apk",
+    "version_name": "16",
+    "uid": "2000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.simappdialog",
+    "path": "/system/app/SimAppDialog/SimAppDialog.apk",
+    "version_name": "16",
+    "uid": "10168",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.soundpicker",
+    "path": "/system/priv-app/SoundPicker/SoundPicker.apk",
+    "version_name": "16",
+    "uid": "10135",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.stk",
+    "path": "/system/app/Stk/Stk.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.storagemanager",
+    "path": "/system_ext/priv-app/StorageManager/StorageManager.apk",
+    "version_name": "16",
+    "uid": "10341",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.systemui",
+    "path": "/system_ext/priv-app/SystemUI/SystemUI.apk",
+    "version_name": "16",
+    "uid": "10347",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.systemui.accessibility.accessibilitymenu",
+    "path": "/system_ext/app/AccessibilityMenu/AccessibilityMenu.apk",
+    "version_name": "16",
+    "uid": "10351",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.systemui.accessibility.accessibilitymenu.auto_generated_rro_product__",
+    "path": "/product/overlay/AccessibilityMenu__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10003",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.systemui.auto_generated_rro_product__",
+    "path": "/product/overlay/SystemUI__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10101",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.systemui.auto_generated_rro_vendor__",
+    "path": "/vendor/overlay/SystemUI__auto_generated_rro_vendor.apk",
+    "version_name": "1.0",
+    "uid": "10122",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.systemui.plugin.globalactions.wallet",
+    "path": "/system_ext/priv-app/QuickAccessWallet/QuickAccessWallet.apk",
+    "version_name": "1.0.0.0",
+    "uid": "10336",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.font.Exo2Regular",
+    "path": "/product/overlay/FontExo2RegularSource/FontExo2RegularSourceOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10018",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.font.RobotoSlabRegular",
+    "path": "/product/overlay/FontRobotoSlabRegular/FontRobotoSlabRegularOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10020",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.font.RookeryRegular",
+    "path": "/product/overlay/FontRookeryRegular/FontRookeryRegularOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10021",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.font.SpaceGrotesk",
+    "path": "/product/overlay/FontSpaceGroteskSource/FontSpaceGroteskSourceOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10022",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.font.WorkSans",
+    "path": "/product/overlay/FontWorkSansSource/FontWorkSansSourceOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10026",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.icon.pebble",
+    "path": "/product/overlay/IconShapePebble/IconShapePebbleOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10036",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.icon.round",
+    "path": "/product/overlay/IconShapeRound/IconShapeRoundOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10040",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.icon.roundedrect",
+    "path": "/product/overlay/IconShapeRoundedRect/IconShapeRoundedRectOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10041",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.theme.icon.teardrop",
+    "path": "/product/overlay/IconShapeTeardrop/IconShapeTeardropOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10042",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.traceur",
+    "path": "/system/app/Traceur/Traceur.apk",
+    "version_name": "1.0",
+    "uid": "10170",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.vending",
+    "path": "/data/app/~~tHjfFmfbjMyC_3eoO7YQvQ==/com.android.vending-IYw6F75V12n0mfyp8zRIBA==/base.apk",
+    "version_name": "48.1.28-31 [0] [PR] 811267161",
+    "uid": "10250",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.virtualmachine.res",
+    "path": "/apex/com.android.virt/app/android.system.virtualmachine.res@W1VCS36M.14-20-19-9/android.system.virtualmachine.res.apk",
+    "version_name": "16",
+    "uid": "10372",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.vpndialogs",
+    "path": "/system/priv-app/VpnDialogs/VpnDialogs.apk",
+    "version_name": "16",
+    "uid": "10150",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wallpaper.livepicker",
+    "path": "/system/priv-app/LiveWallpapersPicker/LiveWallpapersPicker.apk",
+    "version_name": "16",
+    "uid": "10141",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wallpaperbackup",
+    "path": "/system/app/WallpaperBackup/WallpaperBackup.apk",
+    "version_name": "16",
+    "uid": "10169",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wallpapercropper",
+    "path": "/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk",
+    "version_name": "16",
+    "uid": "10342",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wifi.mainline.resources.overlay",
+    "path": "/vendor/overlay/WifiResMainlineOverlay/WifiResMainlineOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10124",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wifi.resources.overlay",
+    "path": "/vendor/overlay/WifiResOverlay/WifiResOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10125",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wifi.resources.overlay.WifiVodafoneOverlay",
+    "path": "/product/overlay/WifiVodafoneOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10111",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.android.wifi.resources.overlay.motCommon",
+    "path": "/product/overlay/WifiResCommonOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10110",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.apple.atve.androidtv.appletv",
+    "path": "/data/app/~~VbDPbZAuolodicB2V_bKbQ==/com.apple.atve.androidtv.appletv-JGaOJ-w81z3tUOVtu-h-4A==/base.apk",
+    "version_name": "3.0.0",
+    "uid": "10487",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.bluetooth.aptxmode",
+    "path": "/system_ext/priv-app/MotoBtAptxMode/MotoBtAptxMode.apk",
+    "version_name": "16",
+    "uid": "10315",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.booking",
+    "path": "/data/app/~~DnSj7uMpGrVaSikE9Pwg_g==/com.booking-lIj3DVAH5gVFqf6BBE5zJw==/base.apk",
+    "version_name": "70.7",
+    "uid": "10395",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.canva.editor",
+    "path": "/data/app/~~Rn_eNOfgOi3T4qa1b9eFLw==/com.canva.editor-U987h3eG_xHxp69EhnWj4A==/base.apk",
+    "version_name": "2.385.0",
+    "uid": "10499",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.darkempire78.opencalculator",
+    "display_name": "OpenCalc",
+    "category": "FOSS Calculator",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "com.disney.disneyplus",
+    "path": "/data/app/~~iNhKj4IMXVVbcdgNF3m-Kw==/com.disney.disneyplus-J2Q87f-Bxj4npHiYaAIzpg==/base.apk",
+    "version_name": "26.20.0+rc3-2026.11.02",
+    "uid": "10486",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.dolby.daxservice",
+    "path": "/system_ext/priv-app/daxService/daxService.apk",
+    "version_name": "06.04.00",
+    "uid": "10345",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.facebook.katana",
+    "path": "/data/app/~~kMYd7RkjW_yrOxYwZ9mRGQ==/com.facebook.katana-rNWhk8Wd89U8n_qdDWGnLA==/base.apk",
+    "version_name": "586.0.0.52.53",
+    "uid": "10378",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.facebook.orca",
+    "path": "/data/app/~~csfUPG5_H2NGvGfGCByksA==/com.facebook.orca-Xo7tIqdP_DuV-US7GQHPWg==/base.apk",
+    "version_name": "586.0.0.55.92",
+    "uid": "10419",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.foodtosave.foodtosave",
+    "path": "/data/app/~~qEcf7cvWzx8V6tZUb5UsDw==/com.foodtosave.foodtosave-akXymvTffEQK-CTj7bRazA==/base.apk",
+    "version_name": "3.14.1",
+    "uid": "10485",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.accessibility.switchaccess",
+    "path": "/data/app/~~wsdAudDg9PmAAdq0DZjeFw==/com.google.android.accessibility.switchaccess-FnAIJmdsMq1odDdN68eolw==/base.apk",
+    "version_name": "1.16.1.798952610",
+    "uid": "10279",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.adservices.api",
+    "path": "/apex/com.android.adservices/priv-app/AdServicesApkGoogle@370547070/AdServicesApkGoogle.apk",
+    "version_name": "17",
+    "uid": "10355",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.adm",
+    "path": "/data/app/~~OmX38rhi2cwFhxFS1mxX2w==/com.google.android.apps.adm-6080fZMwxwkUBfttBG0s3Q==/base.apk",
+    "version_name": "3.1.787-06",
+    "uid": "10391",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.bard",
+    "path": "/data/app/~~iHj1FC1eUz5VCXnDZGA9NQ==/com.google.android.apps.bard-pr2nWUdYU6DXk1B60mCEdA==/base.apk",
+    "version_name": "1.0.795460806",
+    "uid": "10263",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.carrier.carrierwifi",
+    "path": "/data/app/~~igU4qB_5wIZpmqTRdz-ZjQ==/com.google.android.apps.carrier.carrierwifi-n68M7M3IKzTHBpdRjU5ySg==/base.apk",
+    "version_name": "1.6.726578950",
+    "uid": "10200",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.docs",
+    "path": "/data/app/~~B_ilbgyH5mk2wDD-W6Itzw==/com.google.android.apps.docs-dAKVAMUXB37ZNqk2zen5bg==/base.apk",
+    "version_name": "2.25.380.0.all.alldpi",
+    "uid": "10265",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.docs.editors.docs",
+    "path": "/data/app/~~ehCgmyKKKq2OAnaMkmhlWA==/com.google.android.apps.docs.editors.docs-0cpxcYNTJkDr3HXlvdcqpQ==/base.apk",
+    "version_name": "1.26.441.05.90",
+    "uid": "10414",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.docs.editors.sheets",
+    "path": "/data/app/~~seFlBsgfMhmPocu19qaaUA==/com.google.android.apps.docs.editors.sheets-vLYAMiXA-mkJThM8ufq6mQ==/base.apk",
+    "version_name": "1.26.451.00.90",
+    "uid": "10413",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.docs.editors.slides",
+    "path": "/data/app/~~Nb_FCkX5r3e9DTxoYlpIog==/com.google.android.apps.docs.editors.slides-JM3SSbk51bDTeWA1nf4ZuA==/base.apk",
+    "version_name": "1.26.441.02.90",
+    "uid": "10428",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.kids.familylink",
+    "path": "/data/app/~~txj7i6DzkcvBbqcY_FJk4A==/com.google.android.apps.kids.familylink-3JXzmisKkfWBMWQi6BWmqA==/base.apk",
+    "version_name": "2.107.0.2026w44.1005854179",
+    "uid": "10480",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.maps",
+    "path": "/data/app/~~XxCpgN8jWV48mSqEFwX55Q==/com.google.android.apps.maps-w9raytjXuQTcFswXZm7LfA==/base.apk",
+    "version_name": "25.38.02.806933749",
+    "uid": "10275",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.photos",
+    "path": "/data/app/~~hcjcv7KYVpNDhOGMIRpARw==/com.google.android.apps.photos-1AqQAYfT446YkLSFu12qgg==/base.apk",
+    "version_name": "7.47.0.810631069",
+    "uid": "10283",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.safetyhub",
+    "path": "/data/app/~~N27b4wWm9i-nkZ1l4KWu7g==/com.google.android.apps.safetyhub-TgaLk20v2MOQbH6eX3PBAw==/base.apk",
+    "version_name": "2025.08.06.791860033.0-release_gms",
+    "uid": "10243",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.walletnfcrel",
+    "path": "/data/app/~~PPgDBLSLgc3SYUnhhrjYEQ==/com.google.android.apps.walletnfcrel-2VeR8zYfC6Gk4kGBelxIlg==/base.apk",
+    "version_name": "26.43.1009867093",
+    "uid": "10390",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.apps.wallpaper",
+    "path": "/system_ext/priv-app/GoogleWallpapers/GoogleWallpapers.apk",
+    "version_name": "16",
+    "uid": "10310",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.appsearch.apk",
+    "path": "/apex/com.android.appsearch/priv-app/com.google.android.appsearch.apk@370549320/com.google.android.appsearch.apk.apk",
+    "version_name": "17",
+    "uid": "10354",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.as",
+    "path": "/data/app/~~DsVJK98OqoyhoiKXVKDH5g==/com.google.android.as-3jraEyWEtRoXUkZueDxN9Q==/base.apk",
+    "version_name": "B.9.playstore.oemfull.791909054",
+    "uid": "10182",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.as.oss",
+    "path": "/data/app/~~PgudhzQaTz8fnbWdj1t_wg==/com.google.android.as.oss-Sv_PDTdvGWezagW8dL1E_Q==/base.apk",
+    "version_name": "1.0.release.811839831",
+    "uid": "10240",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.captiveportallogin",
+    "path": "/data/app/~~uvKZXey8FAeX6G0E1B2kkw==/com.google.android.captiveportallogin-ypi5E7NBOZmSsP14ECbf6g==/base.apk",
+    "version_name": "16",
+    "uid": "10162",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.carrier",
+    "path": "/product/priv-app/CarrierSettings/CarrierSettings.apk",
+    "version_name": "52.1.712759188",
+    "uid": "10189",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.cellbroadcastreceiver",
+    "path": "/apex/com.android.cellbroadcast/priv-app/GoogleCellBroadcastApp@371017160/GoogleCellBroadcastApp.apk",
+    "version_name": "R-initial",
+    "uid": "10357",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.cellbroadcastservice",
+    "path": "/apex/com.android.cellbroadcast/priv-app/GoogleCellBroadcastServiceModule@371017160/GoogleCellBroadcastServiceModule.apk",
+    "version_name": "R-initial",
+    "uid": "1073",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.configupdater",
+    "path": "/product/priv-app/ConfigUpdater/ConfigUpdater.apk",
+    "version_name": "16-13928101",
+    "uid": "10192",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.connectivity.resources",
+    "path": "/apex/com.android.tethering/priv-app/ServiceConnectivityResourcesGoogle@371021120/ServiceConnectivityResourcesGoogle.apk",
+    "version_name": "S-initial",
+    "uid": "10374",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.contactkeys",
+    "path": "/data/app/~~bcQLFBzueO8s-ugDQXjjxQ==/com.google.android.contactkeys-yk2-l8F-JDUX9fY594dJDA==/base.apk",
+    "version_name": "1.463.993399841",
+    "uid": "10384",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.documentsui",
+    "path": "/data/app/~~rgCS1X0jlv5arK8NATRHpQ==/com.google.android.documentsui-eNShhnUOCVj1sKUhdUOdIg==/base.apk",
+    "version_name": "16",
+    "uid": "10140",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.euicc",
+    "path": "/data/app/~~i1A1TQwPzcGsop0TBFtrMA==/com.google.android.euicc-Xc4YfGHHQhKMnVMW5emKWg==/base.apk",
+    "version_name": "D.2.1.784502882-gms",
+    "uid": "10201",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.ext.services",
+    "path": "/apex/com.android.extservices/priv-app/GoogleExtServices@370549340/GoogleExtServices.apk",
+    "version_name": "aml_370549340",
+    "uid": "10373",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.ext.shared",
+    "path": "/system/app/GoogleExtShared/GoogleExtShared.apk",
+    "version_name": "1",
+    "uid": "10158",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.gm",
+    "path": "/data/app/~~3vntghR9Q1F0y1UqRdFpsg==/com.google.android.gm-RTOJfTxIL4ZjUsXcDZpt4g==/base.apk",
+    "version_name": "2025.09.22.811856720.Release",
+    "uid": "10270",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.gms",
+    "path": "/data/app/~~dlQolY10QP_7G5T5cwbWcw==/com.google.android.gms-Clt2GAAi7vE_nMjOM_TLCw==/base.apk",
+    "version_name": "25.38.30 (260400-807569344)",
+    "uid": "10221",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.googlequicksearchbox",
+    "path": "/data/app/~~bC0Gf-q7_6VACQCWb1--ow==/com.google.android.googlequicksearchbox-VxlrCkR3J1jHR4WF6ZzgpQ==/base.apk",
+    "version_name": "16.41.36.ve.arm64",
+    "uid": "10254",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.gsf",
+    "path": "/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+    "version_name": "16-13928101",
+    "uid": "10221",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.health.connect.backuprestore",
+    "path": "/apex/com.android.healthfitness/app/HealthConnectBackupRestoreGoogle@370547060/HealthConnectBackupRestoreGoogle.apk",
+    "version_name": "17",
+    "uid": "10361",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.healthconnect.controller",
+    "path": "/apex/com.android.healthfitness/priv-app/HealthConnectControllerGoogle@370547060/HealthConnectControllerGoogle.apk",
+    "version_name": "17",
+    "uid": "10360",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.hotspot2.osulogin",
+    "path": "/apex/com.android.wifi/app/OsuLoginGoogle@371020840/OsuLoginGoogle.apk",
+    "version_name": "17",
+    "uid": "10363",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.inputmethod.latin",
+    "path": "/data/app/~~dxvrKWJfLueKaFRrX_6N-w==/com.google.android.inputmethod.latin-7IOwx8Dgq5qMEo5gkaBX1w==/base.apk",
+    "version_name": "16.0.5.804347959-release-arm64-v8a",
+    "uid": "10269",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.keep",
+    "path": "/data/app/~~iEVmYZruh5Mla7ECJtjVBw==/com.google.android.keep-CqUKmxFNX44_ZNfq7qpkmA==/base.apk",
+    "version_name": "5.26.441.00.90",
+    "uid": "10412",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.marvin.talkback",
+    "path": "/data/app/~~MgubQnMBxNFMCgBJdUPYpQ==/com.google.android.marvin.talkback-lvF5sW_0ly4_67vxmgwKVQ==/base.apk",
+    "version_name": "16.1.0.808839780",
+    "uid": "10293",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.modulemetadata",
+    "path": "/data/app/~~K28xHo0TJJU6K-jMeRi6Mw==/com.google.android.modulemetadata-UW_c9fqTZXLcMaZxZ-Zi9g==/base.apk",
+    "version_name": "2025-07-01S+",
+    "uid": "10284",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.networkstack",
+    "path": "/data/app/~~nc3WnQ78NvwH_qhF4qhfMA==/com.google.android.networkstack-39raeHXsLX8VV07Uy0700A==/base.apk",
+    "version_name": "16",
+    "uid": "1073",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.networkstack.overlay",
+    "path": "/vendor/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk",
+    "version_name": "14",
+    "uid": "10171",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.networkstack.tethering",
+    "path": "/apex/com.android.tethering/priv-app/TetheringGoogle@371021120/TetheringGoogle.apk",
+    "version_name": "17",
+    "uid": "1073",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.networkstack.tethering.overlay",
+    "path": "/vendor/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk",
+    "version_name": "14",
+    "uid": "10174",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.asi",
+    "path": "/product/overlay/GmsConfigOverlayASI.apk",
+    "version_name": "1.0",
+    "uid": "10023",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.common",
+    "path": "/product/overlay/GmsConfigOverlayCommon.apk",
+    "version_name": "1.0",
+    "uid": "10025",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.comms",
+    "path": "/product/overlay/GmsConfigOverlayComms.apk",
+    "version_name": "1.0",
+    "uid": "10024",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.contextualsearch",
+    "path": "/product/overlay/GmsConfigOverlayContextualSearch.apk",
+    "version_name": "1.0",
+    "uid": "10027",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.geotz",
+    "path": "/product/overlay/GmsConfigOverlayGeotz.apk",
+    "version_name": "1.0",
+    "uid": "10029",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.gsa",
+    "path": "/product/overlay/GmsConfigOverlayGSA.apk",
+    "version_name": "1.0",
+    "uid": "10028",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.personalsafety",
+    "path": "/product/overlay/GmsConfigOverlayPersonalSafety.apk",
+    "version_name": "1.0",
+    "uid": "10030",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.photos",
+    "path": "/product/overlay/GmsConfigOverlayPhotos.apk",
+    "version_name": "1.0",
+    "uid": "10031",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.gmsconfig.searchselector",
+    "path": "/product/overlay/GmsConfigOverlaySearchSelector.apk",
+    "version_name": "1.0",
+    "uid": "10032",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.captiveportallogin.forframework",
+    "path": "/product/overlay/CaptivePortalLoginFrameworkOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.documentsui",
+    "path": "/product/overlay/GoogleDocumentsUIOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10033",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.ext.services",
+    "path": "/product/overlay/GoogleExtServicesConfigOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10038",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.healthfitness.forframework",
+    "path": "/product/overlay/GoogleHealthFitnessFrameworkOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10035",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.modulemetadata.forframework",
+    "path": "/product/overlay/ModuleMetadataGoogleOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10050",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.permissioncontroller",
+    "path": "/product/overlay/GooglePermissionControllerOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10039",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.overlay.modules.permissioncontroller.forframework",
+    "path": "/product/overlay/GooglePermissionControllerFrameworkOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10037",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.packageinstaller",
+    "path": "/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk",
+    "version_name": "16-13928101",
+    "uid": "10138",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.permissioncontroller",
+    "path": "/apex/com.android.permission/priv-app/GooglePermissionController@371017160/GooglePermissionController.apk",
+    "version_name": "aml_371017160",
+    "uid": "10377",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.photopicker",
+    "path": "/apex/com.android.mediaprovider/priv-app/PhotopickerGoogle@371513040/PhotopickerGoogle.apk",
+    "version_name": "17",
+    "uid": "10365",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.providers.media.module",
+    "path": "/apex/com.android.mediaprovider/priv-app/MediaProviderGoogle@371513040/MediaProviderGoogle.apk",
+    "version_name": "17",
+    "uid": "10366",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.rkpdapp",
+    "path": "/apex/com.android.rkpd/priv-app/rkpdapp.google@370549040/rkpdapp.google.apk",
+    "version_name": "17",
+    "uid": "10436",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.safetycenter.resources",
+    "path": "/apex/com.android.permission/priv-app/GoogleSafetyCenterResources@371017160/GoogleSafetyCenterResources.apk",
+    "version_name": "33 system image",
+    "uid": "10376",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.safetycore",
+    "path": "/data/app/~~elH1pboTqS8_Wb2eO4HE_w==/com.google.android.safetycore-luM-bUNSWCDkvgIsJG_03Q==/base.apk",
+    "version_name": "1.0.1007369049",
+    "uid": "10383",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.sdksandbox",
+    "path": "/apex/com.android.adservices/app/SdkSandboxGoogle@370547070/SdkSandboxGoogle.apk",
+    "version_name": "T-initial",
+    "uid": "10356",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.signature",
+    "path": "/apex/com.android.mediaprovider/priv-app/SignatureGoogle@371513040/SignatureGoogle.apk",
+    "version_name": "17",
+    "uid": "10322",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.tag",
+    "path": "/system/priv-app/TagGoogle/TagGoogle.apk",
+    "version_name": "1.1",
+    "uid": "10149",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.trichromelibrary_733920733",
+    "path": "Desconhecido",
+    "version_name": "140.0.7339.207",
+    "uid": "10433",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.tts",
+    "path": "/data/app/~~qfN6Mx3CgpdR7WdVYkv9iA==/com.google.android.tts-74oOTqjtP2WGT9kZuwhxaw==/base.apk",
+    "version_name": "googletts.google-speech-apk_20250303.01_p1.734589102",
+    "uid": "10274",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.uwb.resources",
+    "path": "/apex/com.android.uwb/priv-app/ServiceUwbResourcesGoogle@371020500/ServiceUwbResourcesGoogle.apk",
+    "version_name": "T-initial",
+    "uid": "10438",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.verifier",
+    "path": "/data/app/~~ZJHNAN0TNGxC6nBdtdVewg==/com.google.android.verifier-FHF7N8p8Up6yJVR_wHRRgw==/base.apk",
+    "version_name": "1.0.804814953",
+    "uid": "10398",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.verifier.overlay",
+    "path": "/product/overlay/GmsConfigOverlayADVerifier.apk",
+    "version_name": "16",
+    "uid": "10385",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.webview",
+    "path": "/data/app/~~8Cuoz2YhHKt-wxeV6ZCCyA==/com.google.android.webview-D2cJHjjnVvNvEpy7DEw0CA==/base.apk",
+    "version_name": "140.0.7339.207",
+    "uid": "10282",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.wfcactivation",
+    "path": "/product/priv-app/WfcActivation/WfcActivation.apk",
+    "version_name": "104.1.748085657",
+    "uid": "10248",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.wifi.dialog",
+    "path": "/apex/com.android.wifi/app/WifiDialogGoogle@371020840/WifiDialogGoogle.apk",
+    "version_name": "17",
+    "uid": "10364",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.wifi.resources",
+    "path": "/apex/com.android.wifi/priv-app/ServiceWifiResourcesGoogle@371020840/ServiceWifiResourcesGoogle.apk",
+    "version_name": "R-initial",
+    "uid": "10362",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.google.android.youtube",
+    "path": "/data/app/~~UTd0B78ObkJEo6oeX_x86g==/com.google.android.youtube-JIjZXUgXt917OOqn3dA3Tg==/base.apk",
+    "version_name": "20.38.37",
+    "uid": "10292",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.instagram.android",
+    "path": "/data/app/~~pinMG3T48B8rxZkzSg7c2A==/com.instagram.android-jsWkgVqvrXxTaCIst53cnQ==/base.apk",
+    "version_name": "454.0.0.54.77",
+    "uid": "10410",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.kobe.jequiti",
+    "path": "/data/app/~~EDb9EgUq58n4dhkWAM8EoQ==/com.kobe.jequiti-EtGLdfoMx7i1nscxkAWznQ==/base.apk",
+    "version_name": "13.486.9",
+    "uid": "10463",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.machiav3lli.fdroid",
+    "display_name": "Neo Store",
+    "category": "FOSS F-Droid Client",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "com.mcdo.mcdonalds",
+    "path": "/data/app/~~LAW5JORcC8OkePvFE2oIaA==/com.mcdo.mcdonalds--_a3QFb6AsVMBd9FyVQxgQ==/base.apk",
+    "version_name": "5.1.2",
+    "uid": "10304",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek",
+    "path": "/system_ext/app/mediatek-res/mediatek-res.apk",
+    "version_name": "16",
+    "uid": "10353",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.FrameworkResOverlayExt",
+    "path": "/vendor/overlay/FrameworkResOverlayExt/FrameworkResOverlayExt.apk",
+    "version_name": "14",
+    "uid": "10118",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.MtkSettingsResOverlay",
+    "path": "/vendor/overlay/MtkSettingsResOverlay/MtkSettingsResOverlay.apk",
+    "version_name": "14",
+    "uid": "10123",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.SettingsProviderResOverlay",
+    "path": "/vendor/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk",
+    "version_name": "14",
+    "uid": "10121",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.capctrl.service",
+    "path": "/system_ext/priv-app/MtkCapCtrl/MtkCapCtrl.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.carrierexpress",
+    "path": "/system_ext/priv-app/CarrierExpress/CarrierExpress.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.frameworkresoverlay",
+    "path": "/vendor/overlay/FrameworkResOverlay/FrameworkResOverlay.apk",
+    "version_name": "14",
+    "uid": "10117",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.gbaservice",
+    "path": "/system_ext/priv-app/MtkGbaService/MtkGbaService.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.ims",
+    "path": "/system_ext/priv-app/ImsService/ImsService.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.ims.rcsua.service",
+    "path": "/system_ext/priv-app/RcsUaService/RcsUaService.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.location.lppe.main",
+    "path": "/system_ext/priv-app/LPPeService/LPPeService.apk",
+    "version_name": "1.0",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.presence",
+    "path": "/system_ext/priv-app/Presence/Presence.apk",
+    "version_name": "22.4",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mediatek.telephony",
+    "path": "/system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk",
+    "version_name": "16",
+    "uid": "1001",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.melon.drop.fruit.merge.master",
+    "path": "/data/app/~~Rp2Sx_NTPU4-cO2eOOi3cg==/com.melon.drop.fruit.merge.master-pX907vGi5XaNZ9chQSqeBw==/base.apk",
+    "version_name": "2.85",
+    "uid": "10186",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mercadolibre",
+    "path": "/data/app/~~JJfhre7qGzcL06cNZhr2KQ==/com.mercadolibre-t00vKfH-yiocATtG13yr6A==/base.apk",
+    "version_name": "10.587.1",
+    "uid": "10409",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mercadopago.wallet",
+    "path": "/data/app/~~pHvCu5-D5v0KcDYzrhXrOw==/com.mercadopago.wallet-6SXi2svs0EXSTB7BwBSjkQ==/base.apk",
+    "version_name": "2.461.0",
+    "uid": "10421",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.microsoft.office.outlook",
+    "path": "/data/app/~~C9jcnikGM9Bo_oNITqY8tA==/com.microsoft.office.outlook-zVEstjn52zGcbAW1x6KZVg==/base.apk",
+    "version_name": "5.2643.0",
+    "uid": "10498",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.mobifull.radio1075fm",
+    "path": "/data/app/~~fYsMkjZU5iyUu47xNSkBWA==/com.mobifull.radio1075fm-fg0Ux-aLJCc6W8e4FJO9gg==/base.apk",
+    "version_name": "4.1.1",
+    "uid": "10420",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.actioncore",
+    "path": "/data/app/~~1oSWdIdIsYs-2lp-hBWjCw==/com.motorola.actioncore-5slLJ-HVi_1F_mlx_fQogg==/base.apk",
+    "version_name": "2.03.0775",
+    "uid": "10294",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.actions",
+    "path": "/data/app/~~4w2vjb8OYUEDc_iZrT70Zg==/com.motorola.actions-9LxS6HWt-Y2x9JHgbM1snA==/base.apk",
+    "version_name": "08.17.14",
+    "uid": "10218",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.actions.overlay",
+    "path": "/product/overlay/framework-rro-irservice.apk",
+    "version_name": "1.0",
+    "uid": "10114",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.connectivity.resources.overlay",
+    "path": "/product/overlay/MotoServiceConnectivityResOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10070",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.coresettingsext.overlay.doubletap",
+    "path": "/product/overlay/MotoCoreSettingsDoubleTapOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10053",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.coresettingsext.overlay.scout",
+    "path": "/product/overlay/MotoCoreSettingsExtScoutOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10054",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.fmradio",
+    "path": "/system_ext/app/FMRadioService/FMRadioService.apk",
+    "version_name": "16",
+    "uid": "10349",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.launcher.overlay.animation.scale",
+    "path": "/product/overlay/MotoLauncherOverlayLowTier.apk",
+    "version_name": "1.0",
+    "uid": "10064",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.networkstack.tethering.overlay.motCommon",
+    "path": "/product/overlay/TetheringOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10107",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.appclone",
+    "path": "/product/overlay/MotoFrameworkResAppcloneOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10055",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.common",
+    "path": "/product/overlay/MotoFrameworkResOverlayCommon.apk",
+    "version_name": "1.0",
+    "uid": "10056",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.crystaltalkai",
+    "path": "/product/overlay/MotoFrameworkResOverlayCrystalTalkAI.apk",
+    "version_name": "1.0",
+    "uid": "10057",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.deviceconfig.scout",
+    "path": "/vendor/overlay/MotoFrameworkResOverlayDeviceConfigScout.apk",
+    "version_name": "1.0",
+    "uid": "10120",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.dualsim",
+    "path": "/product/overlay/MotoFrameworkResOverlayDualSim.apk",
+    "version_name": "1.0",
+    "uid": "10392",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.hw_dualsim",
+    "path": "/vendor/overlay/MotoFrameworkResOverlayHWDualSim.apk",
+    "version_name": "1.0",
+    "uid": "10396",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.lpptoga",
+    "path": "/product/overlay/MotoFrameworkResOverlayLPPtoGA.apk",
+    "version_name": "1.0",
+    "uid": "10058",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.mtk.common",
+    "path": "/product/overlay/MotoFrameworkResOverlayMTKCommon.apk",
+    "version_name": "1.0",
+    "uid": "10059",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.overlay.vendor.common",
+    "path": "/vendor/overlay/MotoFrameworkResOverlayVendorCommon.apk",
+    "version_name": "1.0",
+    "uid": "10119",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings",
+    "path": "/system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings.auto_generated_rro_product__",
+    "path": "/product/overlay/MotorolaSettingsProvider__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10090",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings.overlay.dppcamera",
+    "path": "/product/overlay/MotoSettingsProviderOverlayDPPCamera.apk",
+    "version_name": "1.0",
+    "uid": "10076",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.providers.settings.overlay.dppnone",
+    "path": "/product/overlay/MotoSettingsProviderOverlayDPPNone.apk",
+    "version_name": "1.0",
+    "uid": "10077",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.appclone",
+    "path": "/product/overlay/MotoSettingsAppCloneOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10068",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.fps.display",
+    "path": "/product/overlay/MotoSettingsFPSDisplayOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10072",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.global",
+    "path": "/product/overlay/MotoSettingsGlobalOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10073",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.lra",
+    "path": "/product/overlay/MotoSettingsLRAOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10074",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.settings.overlay.power.bottom",
+    "path": "/product/overlay/MotoSettingsPowerBottomOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10075",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.android.settings.uxcore.overlay",
+    "path": "/product/overlay/SettingsUxcOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10099",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.batterycare",
+    "path": "/system_ext/priv-app/BatteryCare/BatteryCare.apk",
+    "version_name": "2.0.0.142",
+    "uid": "10298",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.batterycare.overlay",
+    "path": "/product/overlay/framework-rro-motobatterycare.apk",
+    "version_name": "1.0",
+    "uid": "10116",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.batterycare.overlay.appside",
+    "path": "/product/overlay/batterycare-rro-motobatterycare.apk",
+    "version_name": "1.0",
+    "uid": "10112",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.callredirectionservice",
+    "path": "/product/priv-app/CallRedirectionService/CallRedirectionService.apk",
+    "version_name": "16",
+    "uid": "10185",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.camera.ai.colortone",
+    "path": "/product/priv-app/MotColorTone/MotColorTone.apk",
+    "version_name": "1.0.37",
+    "uid": "10214",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.camera5",
+    "path": "/product/priv-app/MotCamera5/MotCamera5.apk",
+    "version_name": "10.0.15.58",
+    "uid": "10216",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.carriersettingsext",
+    "path": "/product/priv-app/CarrierSettingsExt/CarrierSettingsExt.apk",
+    "version_name": "16",
+    "uid": "10194",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.ccc.devicemanagement",
+    "path": "/system_ext/priv-app/3c_devicemanagement-binary/3c_devicemanagement-binary.apk",
+    "version_name": "16.00.0004",
+    "uid": "10295",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.ccc.ota",
+    "path": "/system_ext/priv-app/3c_ota/3c_ota.apk",
+    "version_name": "36.00.037",
+    "uid": "10297",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.coresettingsext",
+    "path": "/system_ext/priv-app/CoreSettingsExt/CoreSettingsExt.apk",
+    "version_name": "16",
+    "uid": "10305",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.dolby.dolbyui",
+    "path": "/system/app/MotoDolbyDax3/MotoDolbyDax3.apk",
+    "version_name": "07.02.199",
+    "uid": "10166",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.dynamicvolume",
+    "path": "/product/priv-app/MotoMultiVolume/MotoMultiVolume.apk",
+    "version_name": "3.0.342",
+    "uid": "10227",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.entitlement",
+    "path": "/product/priv-app/Entitlement/Entitlement.apk",
+    "version_name": "1.0",
+    "uid": "10196",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.faceunlock",
+    "path": "/product/priv-app/MotoFaceUnlock/MotoFaceUnlock.apk",
+    "version_name": "02.01.643",
+    "uid": "10223",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.freeform",
+    "path": "/system_ext/priv-app/MotoFreeForm/MotoFreeForm.apk",
+    "version_name": "3.0.0_20250801003932",
+    "uid": "10321",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.hce",
+    "path": "/system/priv-app/MotHceService/MotHceService.apk",
+    "version_name": "1.0",
+    "uid": "10143",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.hiddenmenuapp",
+    "path": "/system_ext/priv-app/HiddenMenu/HiddenMenu.apk",
+    "version_name": "1.0",
+    "uid": "10311",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.installer",
+    "path": "/data/app/~~UyYIHledhDPLL2YH1R7UVg==/com.motorola.installer-5Wrn6TFwl6KsGRIg3rzgeA==/base.apk",
+    "version_name": "3.00.047",
+    "uid": "10323",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.launcher3",
+    "path": "/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk",
+    "version_name": "16",
+    "uid": "10314",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.launcher3.auto_generated_rro_product__",
+    "path": "/product/overlay/Launcher3QuickStep__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10043",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.launcherconfig",
+    "path": "/product/app/LauncherConfig/LauncherConfig.apk",
+    "version_name": "1.0.0",
+    "uid": "10267",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.motolights",
+    "path": "/product/priv-app/MotoLights/MotoLights.apk",
+    "version_name": "01.00.194",
+    "uid": "10225",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.motosecurecore",
+    "path": "/system_ext/priv-app/MotoSecureCore/MotoSecureCore.apk",
+    "version_name": "1.0.000",
+    "uid": "10324",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.msimsettings",
+    "path": "/system_ext/priv-app/MSimSettings/MSimSettings.apk",
+    "version_name": "36.0.00.0000",
+    "uid": "10318",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.nfwlocationattribution",
+    "path": "/system_ext/app/NFWLocationAttribution/NFWLocationAttribution.apk",
+    "version_name": "16",
+    "uid": "10352",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.overlay.launcher3",
+    "path": "/product/overlay/framework-rro-launcher3.apk",
+    "version_name": "16",
+    "uid": "10115",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.paks.notification",
+    "path": "/system_ext/priv-app/PaksFinanceNotification/PaksFinanceNotification.apk",
+    "version_name": "00.00.410",
+    "uid": "10333",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.personalize",
+    "path": "/system_ext/priv-app/Personalize/Personalize.apk",
+    "version_name": "01.0.8.008",
+    "uid": "10338",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.revoker.services",
+    "path": "/system_ext/priv-app/RevokerServices/RevokerServices.apk",
+    "version_name": "16",
+    "uid": "10337",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.safetycenter.resources.overlay",
+    "path": "/product/overlay/MotoSafetyCenterResourceOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10069",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.sarcontrol",
+    "path": "/system/priv-app/MtkSarControlService/MtkSarControlService.apk",
+    "version_name": "16",
+    "uid": "10144",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.screenshoteditor",
+    "path": "/product/priv-app/MotoScreenshotEditor/MotoScreenshotEditor.apk",
+    "version_name": "5.00.000005",
+    "uid": "10231",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.securevault",
+    "path": "/data/app/~~7-uwj4t1XFz_4J8o0LJYkw==/com.motorola.securevault-tlG11_mqzaRKauXfsz_YQQ==/base.apk",
+    "version_name": "05.1.0.044",
+    "uid": "10329",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.securityhub",
+    "path": "/data/app/~~Il5lSqnrTbOX5D66mMpfQA==/com.motorola.securityhub-5NJfmuUvvf2Sd2XVDGlNIg==/base.apk",
+    "version_name": "06.0.0.012",
+    "uid": "10328",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.securityhubext",
+    "path": "/system_ext/priv-app/MotoSecurityHubExt/MotoSecurityHubExt.apk",
+    "version_name": "02.1.0.013",
+    "uid": "10325",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.settings.mep.overlay",
+    "path": "/product/overlay/SettingsMEPOverlay.apk",
+    "version_name": "1.0",
+    "uid": "10096",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.setup.auto_generated_rro_product__",
+    "path": "/product/overlay/SetupWizardExt__scout_g_sys__auto_generated_rro_product.apk",
+    "version_name": "1.0",
+    "uid": "10097",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.setup.overlay.gemini",
+    "path": "/product/overlay/MotoSetupWizardExtOverlayGemini.apk",
+    "version_name": "1.0",
+    "uid": "10079",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.slpc_sys",
+    "path": "/system_ext/app/SlpcSystem/SlpcSystem.apk",
+    "version_name": "2.00.02",
+    "uid": "10350",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.smart5g",
+    "path": "/system_ext/priv-app/MotoSmart5G/MotoSmart5G.apk",
+    "version_name": "1.0",
+    "uid": "10326",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.systemserver",
+    "path": "/system/priv-app/MotoSystemServer/MotoSystemServer.apk",
+    "version_name": "16",
+    "uid": "10142",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.systemui.overlay.moto.sysbar",
+    "path": "/product/overlay/MotoSystemUIOverlaySysbar.apk",
+    "version_name": "1.0",
+    "uid": "10085",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.thermalservice",
+    "path": "/product/app/ThermalService/ThermalService.apk",
+    "version_name": "16",
+    "uid": "10276",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.motorola.uxcore",
+    "path": "/data/app/~~2vlLN4Q0DGrNzbLdP7uR2g==/com.motorola.uxcore--1zBcI2ZCyNZMPUABlOKdA==/base.apk",
+    "version_name": "9.00.0306",
+    "uid": "10245",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.nu.production",
+    "path": "/data/app/~~QPTf5mthm7YrBD_6L-O-bw==/com.nu.production-fUxiH89DbHcnIKquYW1oYQ==/base.apk",
+    "version_name": "10.9.75-minApi28",
+    "uid": "10382",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp",
+    "path": "/product/app/EuiccPartnerApp/EuiccPartnerApp.apk",
+    "version_name": "1.1",
+    "uid": "10260",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.oem.euiccpartnerapp.overlay.br",
+    "path": "/product/overlay/EuiccPartnerAppBRRRO.apk",
+    "version_name": "1.0",
+    "uid": "10012",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.openai.chatgpt",
+    "path": "/data/app/~~fxK9mFdCroXeDLmap8HUqQ==/com.openai.chatgpt-8JvN1XplxXKQUCx_L6otUQ==/base.apk",
+    "version_name": "1.2026.300",
+    "uid": "10457",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.popularapp.periodcalendar",
+    "path": "/data/app/~~rZV-oCu5Rxb_SO_esk9vrQ==/com.popularapp.periodcalendar-TljiJNvsjgcnJB2j2K7WTQ==/base.apk",
+    "version_name": "1.79.368.GP",
+    "uid": "10408",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.primeiramesa2",
+    "path": "/data/app/~~YPXQZ1IH3vsKOM_bllxujw==/com.primeiramesa2-RooxJuZ363lM89ICf4kPIw==/base.apk",
+    "version_name": "4.3.2",
+    "uid": "10473",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.samsclub.scanandgobr",
+    "path": "/data/app/~~XMikWy5PrYxIgRbohLbkbg==/com.samsclub.scanandgobr-EfZGsO6L7w8XdcTPCtZeAw==/base.apk",
+    "version_name": "8.11.0",
+    "uid": "10034",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.shopee.br",
+    "path": "/data/app/~~QE5rZczUM0OvshYqi3k1mg==/com.shopee.br-PbV2du3MJIp9mKx7ri_qiQ==/base.apk",
+    "version_name": "3.85.37",
+    "uid": "10379",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.sirma.mobile.bible.android",
+    "path": "/data/app/~~XVTRDIWbqCF78_w9q8owiw==/com.sirma.mobile.bible.android-PB5ZMtKU6O6AaUdExwGi5w==/base.apk",
+    "version_name": "11.35.1+7099318",
+    "uid": "10406",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.taxis99",
+    "path": "/data/app/~~lC6cJn_2OxE89A9jCXOA6g==/com.taxis99-jTHhYwuG33un0pET4IuZVA==/base.apk",
+    "version_name": "6.65.4",
+    "uid": "10427",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.trustonic.teeservice",
+    "path": "/system_ext/app/TeeService/TeeService.apk",
+    "version_name": "16",
+    "uid": "1000",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": false,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.ubercab",
+    "path": "/data/app/~~7nveQjh_SwgNAcb2k0p6Rw==/com.ubercab-Rx0xz9lltN1fUtpzXLVVpw==/base.apk",
+    "version_name": "4.655.10001",
+    "uid": "10415",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.unifiquemovel",
+    "path": "/data/app/~~Dei--_PmdCP86EiXK0eOew==/com.unifiquemovel--kdYUnHxXdKDGqGwIhCYQw==/base.apk",
+    "version_name": "3.2.1",
+    "uid": "10418",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.valedesconto.clubebrasilatacadista",
+    "path": "/data/app/~~BDEz2DqzmEkAoIo9aX8BMg==/com.valedesconto.clubebrasilatacadista-m7pFGONJX8IPsw_YFxPV5A==/base.apk",
+    "version_name": "2.75.0000",
+    "uid": "10494",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.waze",
+    "path": "/data/app/~~kpIc2E7Clv1MqfbO_IQbOw==/com.waze-mb3aQ4WMy0Wa5RKKw3kaHQ==/base.apk",
+    "version_name": "5.26.5.0",
+    "uid": "10434",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.wbd.stream",
+    "path": "/data/app/~~XGo1dWDh7o_1FfeT0OMPLQ==/com.wbd.stream-598RDuBgIVhAM3JIhQPaCQ==/base.apk",
+    "version_name": "22.0.0.321",
+    "uid": "10469",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.whatsapp",
+    "path": "/data/app/~~8S7F7miXaZCd9VrYNYOasg==/com.whatsapp-_S2pLMu_dVS5buNoaT-txA==/base.apk",
+    "version_name": "2.26.43.76",
+    "uid": "10405",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.whatsapp.w4b",
+    "path": "/data/app/~~ji8QbV2gPl5y8hqdNfib9g==/com.whatsapp.w4b-hWG7476dODYLClvYutm2ig==/base.apk",
+    "version_name": "2.26.43.72",
+    "uid": "10424",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "com.zhiliaoapp.musically",
+    "path": "/data/app/~~qG-S0WImBZmKKfkyZ8Ih1A==/com.zhiliaoapp.musically-o14mu3y6KmnCQzvhsJ9S7w==/base.apk",
+    "version_name": "47.6.3",
+    "uid": "10394",
+    "source": "Stock ROM (Preserved)",
+    "is_third_party": true,
+    "status": "enabled"
+  },
+  {
+    "package_name": "de.arnowelzel.android.periodical",
+    "display_name": "Periodical",
+    "category": "FOSS Cycle Tracker",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.calendar",
+    "display_name": "Fossify Calendar",
+    "category": "FOSS Calendar",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.clock",
+    "display_name": "Fossify Clock",
+    "category": "FOSS Clock & Alarm",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.contacts",
+    "display_name": "Fossify Contacts",
+    "category": "FOSS Contacts",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.filemanager",
+    "display_name": "Fossify File Manager",
+    "category": "FOSS File Manager",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.gallery",
+    "display_name": "Fossify Gallery",
+    "category": "FOSS Gallery",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.messages",
+    "display_name": "Fossify Messages",
+    "category": "FOSS SMS (ROLE_SMS)",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.phone",
+    "display_name": "Fossify Phone",
+    "category": "FOSS Dialer (ROLE_DIALER)",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.fossify.voicerecorder",
+    "display_name": "Fossify Voice Recorder",
+    "category": "FOSS Audio Recorder",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  },
+  {
+    "package_name": "org.futo.inputmethod.latin.playstore",
+    "display_name": "FUTO Keyboard",
+    "category": "FOSS Keyboard (IME)",
+    "source": "FOSS (Neo Store / F-Droid)",
+    "status": "enabled",
+    "is_user_installed": true
+  }
+]

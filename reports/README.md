@@ -10,6 +10,7 @@ This catalog lists technical audits submitted by the community and incorporated 
 |---|---|---|---|---|
 | **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | Android 15 · Hello UI | Technical inventory published; main report and seven inventory batch files | [Device folder](motorola/moto-g54-5g/README.en.md) · [English audit summary](../docs/AUDITORIA_MOTO_G54_5G.en.md) · [Full report (Portuguese)](../docs/AUDITORIA_MOTO_G54_5G.md) · [Batch inventory index (English)](../docs/auditorias/moto-g54/README.en.md) |
 | **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Hello UI · canonical version pending confirmation | Report published; functional validation and supplemental data collection pending | [English summary](motorola/edge-60-pro/README.en.md) · [English technical summary](motorola/edge-60-pro/auditoria.en.md) · [Full report (Portuguese)](motorola/edge-60-pro/auditoria.md) |
+| **Motorola Edge 60 Fusion** | `scout_g_sysn` · `scout` | Android 16 · Hello UI | Audit and debloat complete; verified functional testing on voice calls, SMS, biometrics, and banking apps. RCS and 24h battery benchmark pending | [Device folder](motorola/edge-60-fusion/README.en.md) · [Full technical audit](motorola/edge-60-fusion/audit.md) · [Comparison report](motorola/edge-60-fusion/comparison-report.md) · [Portuguese README](motorola/edge-60-fusion/README.md) |
 
 ### Understanding audit statuses
 
