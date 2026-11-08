@@ -2,7 +2,7 @@
 
 **Device:** Motorola Moto G54 5G · XT2343-1 · `cancunf`  
 **System:** Android 15 · Hello UI  
-**Main report:** [Summary, methodology, findings, and limitations (Portuguese)](../../AUDITORIA_MOTO_G54_5G.md)
+**Main report:** [English audit summary](../../AUDITORIA_MOTO_G54_5G.en.md) · [Full report (Portuguese)](../../AUDITORIA_MOTO_G54_5G.md)
 
 This folder contains the device's component inventory, split into batches for easier reading and review. The content was extracted from the original report without reclassifying packages or changing recommendations.
 
@@ -28,4 +28,4 @@ This folder contains the device's component inventory, split into batches for ea
 - See the main report for methodology, limitations, operational history, rollback, and recommendations.
 - A published inventory does not mean a debloating script has been approved for this device.
 
-The detailed batch files remain in Portuguese. Package names, identifiers, and technical evidence are preserved in their original form.
+The detailed batch files remain in Portuguese for now. The English audit summary links to all seven source batches. Package names, identifiers, commands, and technical evidence are preserved in their original form. Batch translations will be submitted separately to keep each review manageable.
