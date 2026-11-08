@@ -19,7 +19,7 @@ Este catálogo reúne auditorias técnicas enviadas pela comunidade e incorporad
 
 ## Como adicionar um dispositivo
 
-1. Leia o [guia de auditoria individual](../docs/USER_DEVICE_AUDIT.md).
+1. Leia o [guia de auditoria individual](../docs/USER_DEVICE_AUDIT.pt-BR.md).
 2. Crie uma pasta exclusiva em `reports/`, usando fabricante, modelo e versão Android quando necessário para diferenciar variantes.
 3. Registre identificação, inventário inicial, alterações autorizadas, inventário final, comparativo e limitações.
 4. Inclua somente arquivos sanitizados e necessários para verificar as conclusões.
@@ -74,4 +74,4 @@ Merge: auditoria incorporada ao catálogo
 
 A abertura de um Pull Request não garante aprovação ou merge. Contribuições podem receber pedidos de correção quando faltarem evidências, houver exposição de dados pessoais ou recomendações inseguras.
 
-Consulte [CONTRIBUTING.md](../CONTRIBUTING.md) para o fluxo de envio e o [guia de auditoria](../docs/USER_DEVICE_AUDIT.md) para os detalhes técnicos.
+Consulte [CONTRIBUTING.md](../CONTRIBUTING.pt-BR.md) para o fluxo de envio e o [guia de auditoria](../docs/USER_DEVICE_AUDIT.pt-BR.md) para os detalhes técnicos.
