@@ -132,7 +132,7 @@ The full list is in [pacotes-desativados.txt](pacotes-desativados.txt). These hi
 
 The report records **9 packages uninstalled for User 0**:
 - Two third-party applications located under `/data/app`, reported as DT Ignite-installed adware.
-- Seven preinstalled packages, including sponsored games, Airbnb, ExpressWeather, Motorola Genie, and the third-party subscription service subscription manager.
+- Seven preinstalled packages, including sponsored games, a third-party preloaded app, ExpressWeather, Motorola Genie, and a third-party subscription manager.
 
 For system packages, `pm uninstall -k --user 0` changes the package state for that user; it does not physically delete the factory APK from `/system` or `/product`.
 
