@@ -1,57 +1,57 @@
-# Auditoria individual do dispositivo Android
+# Individual Android Device Audit
 
-Este documento orienta cada colaborador do **Clean My Android** a preparar uma contribuição por Pull Request (PR), registrar o estado do aparelho antes das alterações, documentar cada intervenção e produzir um relatório comparativo depois da otimização.
+This guide helps every **Clean My Android** contributor prepare a Pull Request (PR), record the device state before changes, document each intervention, and produce a comparative report after optimization.
 
-O objetivo é construir uma base pública e cumulativa de auditorias técnicas, verificáveis e reproduzíveis. Cada Pull Request aprovado acrescenta uma nova auditoria ao repositório principal, sem substituir os relatórios já existentes.
+The goal is to build a cumulative public collection of technical audits that are verifiable and reproducible. Every approved Pull Request adds a new audit to the main repository without replacing existing reports.
 
-> **Princípio central:** nenhum resultado pode ser inventado. Toda métrica deve indicar método, condição de coleta e evidência. Quando não for possível medir, registrar como "Não mensurado" ou "Inconclusivo".
+> **Core principle:** never invent results. Every metric must state its method, collection conditions, and supporting evidence. If it cannot be measured, mark it as “Not measured” or “Inconclusive”.
 
-## Como utilizar este guia: IA recomendada, execução manual permitida
+## How to use this guide: AI recommended, manual execution allowed
 
-O caminho recomendado é trabalhar com um assistente de IA de sua escolha. O Clean My Android não depende de ChatGPT, Claude, Gemini, Antigravity ou qualquer fornecedor específico. Escolha uma ferramenta capaz de ler o repositório e, se a intenção for coletar dados diretamente, acessar o terminal do computador onde o ADB está instalado.
+The recommended approach is to work with an AI assistant of your choice. Clean My Android does not depend on ChatGPT, Claude, Gemini, Antigravity, or any specific provider. Choose a tool that can read the repository and, if you want direct data collection, access the computer terminal where ADB is installed.
 
-1. Clone o repositório e abra sua pasta no assistente/agente de IA.
-2. Peça que ele leia integralmente [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md) e este guia antes de começar.
-3. Confirme que o ADB reconhece o aparelho correto e que o computador foi autorizado.
-4. Solicite a auditoria inicial em modo somente leitura.
-5. Revise as conclusões e o plano de alterações. A IA deve explicar evidências, incertezas, riscos e reversões.
-6. Autorize explicitamente cada etapa de alteração. Não conceda autorização genérica para modificar tudo.
-7. Acompanhe os testes, a coleta final e a produção do relatório.
-8. Revise e sanitize os arquivos antes de qualquer publicação.
+1. Clone the repository and open its folder in your AI assistant/agent.
+2. Ask it to read [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md) and this guide in full before starting.
+3. Confirm ADB recognizes the correct device and the computer is authorized.
+4. Request the initial audit in read-only mode.
+5. Review findings and the change plan. The AI must explain evidence, uncertainty, risks, and rollback options.
+6. Explicitly authorize each change stage. Do not give blanket permission to modify everything.
+7. Follow testing, final data collection, and report preparation.
+8. Review and sanitize files before publication.
 
-**A IA auxilia na investigação e na documentação; a responsabilidade pela autorização permanece com o proprietário do aparelho.** Um assistente que não tenha acesso ao terminal/ADB pode orientar o processo, mas não deve alegar que inspecionou ou modificou o dispositivo.
+**AI assists with investigation and documentation; the device owner remains responsible for authorization.** An assistant without terminal/ADB access may guide the process, but must not claim to have inspected or modified the device.
 
-A execução manual também é permitida para quem domina Android e ADB. Nesse caso, siga as mesmas etapas, critérios de evidência, segurança, reversibilidade e documentação descritos neste guia.
+Manual execution is also allowed for users experienced with Android and ADB. Follow the same stages, evidence standards, safety rules, reversibility requirements, and documentation practices.
 
-## 1. Fluxo recomendado
+## 1. Recommended workflow
 
-1. Criar um fork próprio do repositório (para colaboradores sem acesso de escrita) e preparar uma branch de contribuição.
-2. Preparar uma pasta individual para o dispositivo.
-3. Fazer o diagnóstico inicial, sem modificar o aparelho.
-4. Salvar inventários, métricas, logs e capturas de tela.
-5. Analisar os pacotes e apresentar um plano de alterações.
-6. Obter autorização explícita antes de cada grupo de alterações.
-7. Executar as mudanças de forma controlada e registrar os resultados.
-8. Repetir as coletas iniciais nas mesmas condições.
-9. Gerar o relatório comparativo.
-10. Revisar e sanitizar os arquivos, enviar a branch ao fork e abrir um Pull Request para o repositório original.
+1. Create your own repository fork (for contributors without write access) and prepare a contribution branch.
+2. Prepare a dedicated folder for the device.
+3. Run the initial diagnosis without modifying the device.
+4. Save inventories, metrics, logs, and screenshots.
+5. Analyze packages and present a change plan.
+6. Obtain explicit authorization before each group of changes.
+7. Apply changes in a controlled manner and record the results.
+8. Repeat initial data collection under the same conditions.
+9. Generate the comparison report.
+10. Review and sanitize files, push the branch to your fork, and open a Pull Request to the original repository.
 
-## 2. Preparar seu fork e a contribuição
+## 2. Prepare your fork and contribution
 
-### Pelo GitHub
+### Using GitHub
 
-1. Acesse https://github.com/luisfvmartins/clean-my-android.
-2. Entre na sua conta GitHub.
-3. Clique em **Fork**.
-4. Selecione sua conta como destino.
-5. Mantenha o nome do repositório ou escolha outro.
-6. Confirme a criação.
+1. Visit https://github.com/luisfvmartins/clean-my-android.
+2. Sign in to your GitHub account.
+3. Click **Fork**.
+4. Select your account as the destination.
+5. Keep the repository name or choose another.
+6. Confirm creation.
 
-Seu fork ficará disponível em `https://github.com/SEU_USUARIO/clean-my-android`.
+Your fork will be available at `https://github.com/YOUR_USERNAME/clean-my-android`.
 
-### Pelo GitHub CLI
+### Using GitHub CLI
 
-Com o GitHub CLI instalado e autenticado:
+With GitHub CLI installed and authenticated:
 
 ```bash
 gh auth login
@@ -61,42 +61,42 @@ git remote add upstream https://github.com/luisfvmartins/clean-my-android.git
 git remote -v
 ```
 
-Confirme que `origin` aponta para seu fork e que `upstream` aponta para o repositório original:
+Confirm that `origin` points to your fork and `upstream` points to the original repository.
 
-### Privacidade
+### Privacy
 
-O repositório original é público. Não presuma que o fork será privado. Inventários e capturas podem revelar modelo, aplicativos pessoais, operadora, identificadores, notificações e hábitos de uso.
+The original repository is public. Do not assume your fork is private. Inventories and screenshots may reveal the model, personal apps, carrier, identifiers, notifications, and usage habits.
 
-- Não publique IMEI, número de série, endereços MAC, tokens, credenciais, contas ou dados pessoais.
-- Revise capturas de tela e logs antes de enviar.
-- Mantenha os dados brutos localmente ou em repositório privado.
-- Inclua no Pull Request somente relatórios e evidências sanitizados e necessários à revisão.
-- O PR será enviado ao repositório original para análise; isso não significa que será aceito ou incorporado.
+- Never publish IMEI, serial number, MAC addresses, tokens, credentials, accounts, or personal data.
+- Review screenshots and logs before submission.
+- Keep raw data locally or in a private repository.
+- Include only sanitized reports and evidence necessary for review in the Pull Request.
+- The PR will be submitted to the original repository for review; this does not mean it will automatically be accepted or merged.
 
-## 3. Estrutura cumulativa de relatórios no repositório principal
+## 3. Cumulative report structure in the main repository
 
-O repositório original manterá uma coleção de auditorias em `reports/`. Cada dispositivo deve ter seu próprio diretório dentro da hierarquia `reports/<fabricante>/<modelo>/`, seguindo o padrão já adotado pelo catálogo. Exemplos:
+The original repository maintains a collection of audits under `reports/`. Each device must have its own directory using `reports/<manufacturer>/<model>/`, following the catalog convention. Examples:
 
 ```text
 reports/
 ├── README.md
 ├── motorola/
 │   ├── edge-60-pro/
-│   │   └── ... relatório e evidências sanitizadas ...
+│   │   └── ... sanitized report and evidence ...
 │   └── moto-g54-5g/
-│       └── ... relatório e evidências sanitizadas ...
+│       └── ... sanitized report and evidence ...
 └── samsung/
     └── galaxy-s20-fe/
-        └── ... relatório e evidências sanitizadas ...
+        └── ... sanitized report and evidence ...
 ```
 
-**Regra de contribuição:** cada PR deve adicionar uma nova pasta de dispositivo, ou atualizar somente a pasta daquele mesmo dispositivo quando for uma revisão identificada do relatório. Não substitua, apague ou altere relatórios de outros colaboradores. O objetivo é que cada PR aprovado aumente a coleção de dispositivos documentados na branch principal.
+**Contribution rule:** each PR must add a new device folder, or update only that same device's folder when making an identified revision. Do not replace, delete, or modify other contributors' reports. Every approved PR should expand the collection of documented devices in the main branch.
 
-A pasta `reports/README.md` funciona como índice da coleção. Ao adicionar uma auditoria, inclua nela um link para o novo relatório, com fabricante/modelo, versão Android/ROM e data da auditoria. Não crie entradas com dados não verificados.
+`reports/README.md` is the collection index. When adding an audit, include a link to the new report with manufacturer/model, Android/ROM version, and audit date. Do not add unverified details.
 
-## 4. Estrutura de arquivos por dispositivo
+## 4. Device folder structure
 
-Crie o diretório dentro da pasta do fabricante, usando um identificador de modelo descritivo e sem dados pessoais. Exemplo:
+Create the directory under the manufacturer's folder, using a descriptive model identifier without personal data. Example:
 
 ```text
 reports/
@@ -136,268 +136,192 @@ reports/
         └── comparison-report.md
 ```
 
-A estrutura é uma referência. Não crie arquivos vazios para aparentar que uma coleta foi realizada. Registre limitações quando uma informação não estiver disponível.
+This structure is a reference. Do not create empty files to imply that data collection occurred. Document limitations when information is unavailable.
 
-## 5. Diagnóstico inicial — ANTES
+## 5. Initial diagnosis — BEFORE
 
-Antes de qualquer alteração, identifique o dispositivo e registre o estado original.
+Before making any changes, identify the device and record its original state.
 
-### 4.1 Identificação
+### 5.1 Identification
 
-Coletar, quando disponível:
+Collect, when available:
 
-- Fabricante, modelo e codinome.
-- Versão do Android, ROM/interface e compilação.
-- Patch de segurança e versão do kernel.
-- Arquitetura, processador e núcleos.
-- RAM total e armazenamento total.
-- Estado do bootloader e presença de root.
-- Disponibilidade de ADB, Shizuku e Magisk.
-- Usuários e perfis Android existentes.
+- Manufacturer, model, and codename.
+- Android version, ROM/interface, and build.
+- Security patch and kernel version.
+- Architecture, processor, and cores.
+- Total RAM and storage.
+- Bootloader state and root status.
+- Availability of ADB, Shizuku, and Magisk.
+- Existing Android users and profiles.
 
-Não incluir IMEI, número de série ou identificadores persistentes no relatório público.
+Do not include IMEI, serial number, or persistent identifiers in the public report.
 
-### 4.2 Inventário de aplicativos e pacotes
+### 5.2 Application and package inventory
 
-Registrar:
+Record:
 
-- Pacotes de sistema e de usuário.
-- Pacotes habilitados e desabilitados.
-- Nome do pacote, nome legível e versão.
-- UID quando necessário à análise.
-- Caminho/origem de instalação, quando disponível.
-- Permissões declaradas e concedidas, separadamente.
-- AppOps relevantes.
-- Serviços e componentes importantes.
-- Execução em segundo plano e dependências conhecidas.
+- System and user packages.
+- Enabled and disabled packages.
+- Package name, display name, and version.
+- UID when relevant to the analysis.
+- Installation path/origin, when available.
+- Declared and granted permissions, separately.
+- Relevant AppOps.
+- Important services and components.
+- Background execution and known dependencies.
 
-### 4.3 Recursos e desempenho
+### 5.3 Resources and performance
 
-| Categoria | Dados a coletar |
+| Category | Data to collect |
 |---|---|
-| Hardware | Processador, núcleos, RAM e armazenamento |
-| Sistema | Android, ROM, kernel e patch de segurança |
-| Memória | RAM total, usada, disponível e pressão de memória, se disponível |
-| Armazenamento | Total, ocupado e livre |
-| Bateria | Nível, temperatura, estado e estatísticas disponíveis |
-| Processos | Processos e serviços relevantes |
-| Aplicativos | Quantidade por categoria e estado |
-| Rede | DNS, conectividade e restrições configuradas |
-| Privacidade | Permissões, AppOps e componentes com acesso sensível |
-| Segurança | Root, bootloader e verificações de integridade disponíveis |
+| Hardware | Processor, cores, RAM, and storage |
+| System | Android, ROM, kernel, and security patch |
+| Memory | Total, used, available RAM, and memory pressure, if available |
+| Storage | Total, used, and free space |
+| Battery | Level, temperature, state, and available statistics |
+| Processes | Relevant processes and services |
+| Applications | Count by category and state |
+| Network | DNS, connectivity, and configured restrictions |
+| Privacy | Permissions, AppOps, and components with sensitive access |
+| Security | Root, bootloader, and available integrity checks |
 
-### 4.4 Condições de medição
+### 5.4 Measurement conditions
 
-Para permitir uma comparação justa, anote:
+For a fair comparison, record:
 
-- Data e hora.
-- Nível da bateria.
-- Se estava carregando.
-- Tela ligada ou desligada.
-- Aplicativos abertos.
-- Tempo desde a última reinicialização.
-- Tipo de conexão de rede.
-- Temperatura ambiente, se conhecida.
-- Comando ou método usado para obter cada métrica.
+- Date and time.
+- Battery level.
+- Whether the device was charging.
+- Screen on/off state.
+- Open applications.
+- Time since last reboot.
+- Network connection type.
+- Ambient temperature, if known.
+- Command or method used for each metric.
 
-RAM livre, temperatura e consumo de bateria variam com o uso. Uma única leitura não comprova melhoria sustentada.
+Free RAM, temperature, and battery consumption vary with usage. A single reading does not prove sustained improvement.
 
-## 6. Capturas de tela
+## 6. Screenshots
 
-Quando possível, registrar imagens equivalentes antes e depois:
+When possible, capture equivalent before/after images of:
 
-- Informações do telefone e versão Android.
-- Armazenamento.
-- Memória.
-- Bateria.
-- Aplicativos instalados.
-- Permissões e privacidade.
-- Configurações de rede/DNS.
-- Funcionalidades importantes do aparelho.
+- Phone information and Android version.
+- Storage.
+- Memory.
+- Battery.
+- Installed applications.
+- Permissions and privacy.
+- Network/DNS settings.
+- Important device features.
 
-Salvar em `before/screenshots/` e `after/screenshots/`, mantendo nomes equivalentes para facilitar a comparação.
+Save them under `before/screenshots/` and `after/screenshots/`, using equivalent names to make comparison easier.
 
-As capturas devem ser legíveis, mostrar contexto e não ser manipuladas para sugerir resultados. Oculte notificações, mensagens, contas, números, localização e qualquer dado pessoal antes de publicar.
+Screenshots must be legible, show context, and must not be manipulated to suggest results. Hide notifications, messages, accounts, phone numbers, location, and any personal data before publication.
 
-Se a captura não puder ser obtida, registre a limitação.
+If a screenshot cannot be captured, document the limitation.
 
-## 7. Registro das alterações
+## 7. Change log
 
-Toda alteração deve ser documentada em `changes/change-log.md`, incluindo:
+Every change must be documented in `changes/change-log.md`, including:
 
-| Campo | O que registrar |
+| Field | What to record |
 |---|---|
-| Data/hora | Momento da alteração |
-| Pacote | Nome exato |
-| Aplicativo | Nome identificado |
-| Estado anterior | Ativo, desativado ou indisponível |
-| Ação | Desativação, remoção para usuário, permissão, AppOps etc. |
-| Justificativa | Evidência e motivo técnico |
-| Risco | Crítico, alto, médio, baixo ou informativo |
-| Dependências | Componentes possivelmente afetados |
-| Comando | Comando efetivamente executado |
-| Resultado | Saída real do comando e validação |
-| Reversão | Como restaurar |
-| Evidência | Log ou captura relacionada |
+| Date/time | When the change occurred |
+| Package | Exact package name |
+| Application | Identified application |
+| Previous state | Enabled, disabled, or unavailable |
+| Action | Disable, uninstall for user, permission, AppOps, etc. |
+| Reason | Evidence and technical justification |
+| Risk | Critical, high, medium, low, or informational |
+| Dependencies | Components that may be affected |
+| Command | Command actually executed |
+| Result | Actual command output and validation |
+| Rollback | How to restore |
+| Evidence | Related log or screenshot |
 
-Não classifique um pacote como dispensável apenas pelo nome ou fabricante.
+Do not classify a package as unnecessary based only on its name or manufacturer.
 
-## 8. Diagnóstico final — DEPOIS
+## 8. Final diagnosis — AFTER
 
-Após as alterações, repita as coletas do diagnóstico inicial com os mesmos métodos e, tanto quanto possível, nas mesmas condições.
+After changes, repeat the initial data collection using the same methods and, as far as possible, the same conditions.
 
-Verifique:
+Check:
 
-- Inicialização e estabilidade do Android.
-- Chamadas, SMS e dados móveis.
-- Wi-Fi, Bluetooth e GPS.
-- Câmeras, microfone e áudio.
-- Notificações push e sincronização.
-- Aplicativos bancários e de autenticação usados pelo proprietário.
-- Teclado e launcher.
-- Atualizações do sistema.
-- Aplicativos substitutos.
-- Memória, armazenamento, bateria e temperatura.
+- Android boot and stability.
+- Calls, SMS, and mobile data.
+- Wi-Fi, Bluetooth, and GPS.
+- Cameras, microphone, and audio.
+- Push notifications and synchronization.
+- Banking and authentication apps used by the owner.
+- Keyboard and launcher.
+- System updates.
+- Replacement applications.
+- Memory, storage, battery, and temperature.
 
-Um aplicativo continuar instalado não prova que sua função está operacional. Teste o recurso real.
+Record untested features as pending.
 
-## 9. Comparativo antes e depois
+## 9. Before/after comparison
 
-O relatório deve comparar os dados coletados, sem preencher lacunas com estimativas.
+Create `comparison-report.md` with:
 
-| Indicador | Antes | Depois | Diferença |
-|---|---:|---:|---:|
-| Pacotes habilitados | Medir | Medir | Calcular |
-| Pacotes desabilitados | Medir | Medir | Calcular |
-| Aplicativos de usuário | Medir | Medir | Calcular |
-| RAM disponível | Medir | Medir | Calcular |
-| Armazenamento livre | Medir | Medir | Calcular |
-| Temperatura em repouso | Medir | Medir | Calcular |
-| Permissões concedidas | Medir | Medir | Calcular |
-| Serviços em segundo plano | Medir | Medir | Calcular |
+1. Executive summary.
+2. Device identification.
+3. Audit scope.
+4. Collection methods and conditions.
+5. Initial state.
+6. Changes performed.
+7. Final state.
+8. Metrics comparison.
+9. Feature comparison.
+10. Stability and compatibility tests.
+11. Problems and rollback actions.
+12. Limitations and pending items.
+13. Conclusion.
 
-Além das métricas, comparar:
+Use a table such as:
 
-- Pacotes removidos ou desativados.
-- Aplicativos substituídos por alternativas FOSS.
-- Permissões revogadas.
-- AppOps modificados.
-- Serviços neutralizados.
-- Recursos preservados.
-- Funcionalidades prejudicadas ou indisponíveis.
-- Problemas encontrados e corrigidos.
-- Melhorias comprovadas e resultados inconclusivos.
+| Metric | Before | After | Difference | Method / notes |
+|---|---:|---:|---:|---|
+| Free storage | | | | |
+| RAM available | | | | |
+| Battery temperature | | | | |
+| Enabled packages | | | | |
+| Disabled packages | | | | |
+| Boot time | | | | |
 
-Não confundir remoção de pacote para o usuário atual com remoção física da partição do sistema. Diferencie desativação, desinstalação para usuário, remoção de atualização e remoção com root.
+Only compare measurements collected with equivalent methods and conditions. Mark unavailable data as “Not measured” or “Inconclusive”. Never invent improvements.
 
-## 10. Modelo de relatório final
+## 10. Review and Pull Request
 
-O arquivo `comparison-report.md` deverá conter:
+Before submission:
 
-1. Resumo executivo.
-2. Identificação técnica do aparelho.
-3. Objetivo e escopo.
-4. Ferramentas utilizadas.
-5. Condições de medição.
-6. Estado inicial.
-7. Inventário de aplicativos.
-8. Análise de permissões e AppOps.
-9. Análise de telemetria e limitações de evidência.
-10. Alterações realizadas.
-11. Aplicativos substituídos.
-12. Estado final.
-13. Tabela comparativa de métricas.
-14. Comparação de funcionalidades.
-15. Testes de compatibilidade e estabilidade.
-16. Capturas de tela.
-17. Problemas encontrados e reversões.
-18. Limitações e itens não mensurados.
-19. Conclusão técnica e recomendações.
+1. Review the full diff.
+2. Check JSON syntax and file paths.
+3. Remove personal identifiers, credentials, and raw dumps.
+4. Ensure the report describes only the identified device.
+5. Preserve existing reports.
+6. Update the device catalog.
+7. Run the repository validation workflow.
+8. Push the branch to your fork.
+9. Open a Pull Request against `main`.
 
-A conclusão deve responder: o que mudou, o que foi preservado, o que deixou de funcionar, quais melhorias foram medidas, quais resultados são inconclusivos e como reverter alterações.
+A Pull Request is a proposal, not an automatic approval. The maintainers may request corrections or reject unsupported, unsafe, or privacy-sensitive content.
 
-## 11. Instruções para a IA
+## 11. Safety and interpretation
 
-A utilização de um assistente de IA é o caminho recomendado, mas não obrigatório. Usuários com conhecimento técnico suficiente podem executar o procedimento manualmente. Quando utilizada, a IA deverá:
+- Do not execute package lists copied from another device.
+- Do not treat an inventory as an approved removal list.
+- Do not infer telemetry solely from internet permission, analytics SDKs, or package ownership.
+- Do not apply AppOps by UID without checking shared UID relationships.
+- Do not use `pm clear` as a routine optimization step; it deletes app data.
+- Do not perform bulk changes without individual analysis and authorization.
+- Keep a recovery path available.
+- Separate observed evidence, technical inference, and hypotheses.
+- Clearly label unperformed tests and unresolved questions.
 
-1. Confirmar que o usuário está trabalhando em um fork próprio ou cópia local e identificar o repositório original como `upstream`.
-2. Identificar o dispositivo conectado e criar uma pasta individual para a auditoria.
-3. Fazer todas as coletas iniciais antes de modificar qualquer coisa.
-4. Analisar cada pacote individualmente, incluindo função, origem, permissões, AppOps, dependências e risco.
-5. Distinguir telemetria confirmada, provável, suspeita e inconclusiva. A presença de uma permissão ou SDK, isoladamente, não comprova envio de dados.
-6. Apresentar um plano com pacote, justificativa, comando, risco, efeitos colaterais e reversão.
-7. Aguardar autorização explícita antes de executar cada grupo de alterações.
-8. Executar em pequenos grupos, registrar comandos e saídas e validar os resultados.
-9. Repetir as coletas iniciais depois das alterações.
-10. Produzir o relatório comparativo e organizar evidências.
-11. Sanitizar os arquivos, criar uma branch própria, enviar a branch ao fork e preparar um Pull Request direcionado ao repositório original.
-12. Nunca abrir PR nem publicar arquivos sem autorização explícita; nunca afirmar que criou um fork, capturou uma tela, mediu uma métrica ou publicou um arquivo sem confirmação real.
+The scripts in this repository are read-only by default. Their limited apply functionality is not universal and must not be assumed compatible with other models or Android versions.
 
-### Classificação de risco
-
-- **Crítico:** necessário à inicialização, telefonia, conectividade ou segurança.
-- **Alto:** pode comprometer funções importantes ou aplicativos essenciais.
-- **Médio:** dispensável em algumas configurações, mas com efeitos colaterais possíveis.
-- **Baixo:** opcional ou redundante, com impacto limitado.
-- **Informativo:** sem recomendação de alteração.
-
-### Segurança obrigatória
-
-- Não modificar o aparelho sem autorização.
-- Não apagar dados sem autorização específica.
-- Preservar IMS/VoLTE/VoWiFi, modem/RIL, telefonia, Wi-Fi, Bluetooth, KeyStore, KeyChain, Package Installer e componentes essenciais.
-- Não desativar o teclado ativo antes de instalar e testar outro.
-- Não desativar discador/SMS antes de testar substitutos.
-- Não remover o launcher original antes de testar outro e considerar dependências de gestos/QuickStep.
-- Não remover Google Play Services indiscriminadamente, especialmente quando o usuário depende de bancos brasileiros e notificações push.
-- Não aplicar AppOps por UID sem verificar se outros pacotes compartilham o UID.
-- Não usar `pm clear` como etapa automática: ele apaga dados do aplicativo. Exigir justificativa e autorização específica.
-- Não executar comandos de outro modelo sem validar pacote, ROM e dependências.
-- Preferir ações reversíveis e documentar o rollback.
-- Não prometer compatibilidade sem testes reais.
-
-### Critério de conclusão
-
-A auditoria só estará concluída quando o estado inicial estiver registrado, os pacotes estiverem analisados ou marcados como pendentes, as alterações estiverem documentadas, o estado final tiver sido coletado, as funções essenciais tiverem sido testadas e o relatório comparativo estiver produzido.
-
-## 12. Enviar sua contribuição por Pull Request
-
-O relatório individual deve ficar em uma pasta própria, seguindo `reports/<fabricante>/<modelo>/` (por exemplo, `reports/motorola/edge-60-pro/`). Para contribuir com o projeto original, siga este fluxo:
-
-1. Atualize a branch principal do fork com o repositório original.
-2. Crie uma branch exclusiva para a auditoria.
-3. Adicione somente os arquivos sanitizados do relatório.
-4. Revise o diff completo e confirme que não há identificadores, credenciais, notificações ou dados pessoais.
-5. Envie a branch para o seu fork.
-6. Atualize `reports/README.md` com um link para a nova auditoria.
-7. Confira se a pasta do dispositivo ainda não existe. Se já existir, verifique se é uma atualização legítima do mesmo aparelho e preserve o histórico relevante.
-8. Abra um Pull Request do seu fork para `luisfvmartins/clean-my-android:main`.
-9. Descreva o modelo, versão Android/ROM, escopo da auditoria, principais resultados, testes realizados e limitações.
-8. Aguarde a revisão. Atenda aos pedidos de alteração, se houver.
-
-Exemplo de comandos Git:
-
-```bash
-git remote -v
-git fetch upstream
-git switch main
-git merge upstream/main
-git switch -c docs/auditoria-SEU-DISPOSITIVO
-git add reports/SEU_FABRICANTE/SEU_MODELO/
-git diff --cached
-git commit -m "docs: add audit for SEU_DISPOSITIVO"
-git push -u origin docs/auditoria-SEU_DISPOSITIVO
-```
-
-Depois, no GitHub, use **Compare & pull request** e confirme:
-- **Base repository:** `luisfvmartins/clean-my-android`
-- **Base:** `main`
-- **Head repository:** seu fork
-- **Compare:** sua branch de auditoria
-
-Se não tiver Git configurado, abra o PR pela interface do GitHub após enviar os arquivos pela interface web. Não faça commit diretamente na branch principal do repositório original.
-
-O Pull Request é uma proposta de contribuição. Após aprovação e merge, a nova pasta e sua entrada no índice passam a integrar o repositório principal e ficam disponíveis para todos. Assim, as auditorias aprovadas formam uma coleção cumulativa, semelhante ao catálogo colaborativo do CleanYourTV. O mantenedor revisará o conteúdo e poderá aceitar, solicitar ajustes ou rejeitar a contribuição.
 ---
 
-**O objetivo não é produzir os maiores números de otimização. É construir um histórico técnico confiável, verificável e reproduzível de cada dispositivo.**
+**A device report documents one specific configuration. It is not a universal debloating recipe.**

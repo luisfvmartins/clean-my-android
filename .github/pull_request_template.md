@@ -1,46 +1,46 @@
-## Resumo
+## Summary
 
-<!-- Explique em poucas linhas o que esta contribuição acrescenta. -->
+<!-- Briefly explain what this contribution adds. -->
 
-## Tipo de contribuição
+## Contribution type
 
-- [ ] Nova auditoria de dispositivo
-- [ ] Atualização de auditoria existente
-- [ ] Documentação
-- [ ] Script ou proteção de segurança
-- [ ] Outro
+- [ ] New device audit
+- [ ] Update to an existing audit
+- [ ] Documentation
+- [ ] Script or security safeguard
+- [ ] Other
 
-## Dispositivo (quando aplicável)
+## Device (if applicable)
 
-- **Fabricante / modelo:**
-- **Codinome:**
+- **Manufacturer / model:**
+- **Codename:**
 - **Android / ROM / interface:**
-- **Build / patch de segurança:**
-- **Data da coleta:**
+- **Build / security patch:**
+- **Collection date:**
 
-## Evidências e validação
+## Evidence and validation
 
-- [ ] Os dados foram coletados no dispositivo identificado neste PR.
-- [ ] O estado anterior foi registrado antes das alterações.
-- [ ] Alterações executadas têm autorização e registro.
-- [ ] O estado posterior foi coletado em condições comparáveis.
-- [ ] Métricas sem evidência estão marcadas como não mensuradas ou pendentes.
-- [ ] Limitações e testes não realizados estão documentados.
-- [ ] Não tratei inventários históricos como listas para execução.
+- [ ] Data was collected from the device identified in this PR.
+- [ ] The previous state was recorded before changes.
+- [ ] Executed changes have authorization and a record.
+- [ ] The final state was collected under comparable conditions.
+- [ ] Metrics without evidence are marked as not measured or pending.
+- [ ] Limitations and tests not performed are documented.
+- [ ] Historical inventories were not treated as execution lists.
 
-## Privacidade e segurança
+## Privacy and security
 
-- [ ] Removi IMEI, serial, MAC, IPs identificáveis e dados pessoais.
-- [ ] Removi tokens, senhas, chaves e credenciais.
-- [ ] Revisei logs, JSONs e capturas de tela.
-- [ ] Mantive dados brutos privados.
-- [ ] Não incluí recomendações universais para outros modelos.
-- [ ] Não removi nem sobrescrevi auditorias de outros dispositivos.
+- [ ] Removed IMEI, serial number, MAC addresses, identifying IPs, and personal data.
+- [ ] Removed tokens, passwords, keys, and credentials.
+- [ ] Reviewed logs, JSON files, and screenshots.
+- [ ] Kept raw data private.
+- [ ] Did not make universal recommendations for other models.
+- [ ] Did not remove or overwrite other devices' audits.
 
-## Arquivos alterados
+## Changed files
 
-<!-- Liste as pastas e arquivos incluídos. -->
+<!-- List the folders and files included. -->
 
-## Testes realizados
+## Tests performed
 
-<!-- Informe comandos, ambiente, resultados e o que não foi testado. -->
+<!-- Report commands, environment, results, and what was not tested. -->

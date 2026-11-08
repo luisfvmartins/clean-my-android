@@ -20,6 +20,6 @@ A publicação do inventário não significa que todos os componentes foram test
 
 ## Navegação
 
-- [Catálogo de auditorias](../../README.md)
+- [Catálogo de auditorias](../../README.pt-BR.md)
 - [Relatório principal](../../../docs/AUDITORIA_MOTO_G54_5G.md)
 - [Inventário por lotes](../../../docs/auditorias/moto-g54/README.md)
