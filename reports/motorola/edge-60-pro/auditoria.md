@@ -312,7 +312,7 @@ As medições comparativas foram realizadas com ferramentas de telemetria do And
 | **Memória RAM Ocupada** | ~7.5 GB ocupados | **~4.8 GB ocupados** | **-2.7 GB de consumo de RAM** | `dumpsys meminfo` Passo 110 vs Passo 384 |
 | **Armazenamento Livre (`/data`)** | 193 GB livres | **~197 GB livres** | **~4 GB recuperados** (ganho agregado da partição; não mensurado por app) | `df -h /data` Passo 398 |
 | **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para Usuário 0 | `pm list packages -f` |
-| **Aplicativos Habilitados** | 441 pacotes ativos | **257 pacotes ativos** | **-184 pacotes ativos** | `pm list packages -e --user 0` |
+| **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | **-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)** | `inventario-depois.json` (248 preservados/ativos, 244 desativados, 9 desinstalados) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes desativados** | +184 pacotes congelados | `pm list packages -d` Passo 89 vs Passo 701 |
 | **Adwares Monitorados em RAM** | 5 daemons (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão | `dumpsys meminfo` (Glance, Taboola, InMobi) |
 | **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB (eliminado da RAM)** | **-873 MB de carga contínua** | `dumpsys meminfo` (Search + GoogleApp) |
