@@ -46,7 +46,7 @@ Confirm:
 
 Before making any device changes, follow the [individual device audit guide](docs/USER_DEVICE_AUDIT.md) and the [AI instructions](AI_INSTRUCTIONS.md).
 
-A device contribution must:
+Before drafting the report, use the [device audit report template](reports/_templates/DEVICE_AUDIT_TEMPLATE.md) and assign the status according to the [audit status and homologation standard](docs/AUDIT_STATUS_AND_HOMOLOGATION.md). A device contribution must:
 - identify the exact manufacturer, model, codename, Android/ROM, and build when available;
 - record the initial state before making changes;
 - distinguish observed evidence, technical inference, and hypotheses;
