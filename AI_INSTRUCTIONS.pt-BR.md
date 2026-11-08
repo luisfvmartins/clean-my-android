@@ -221,16 +221,20 @@ Se uma etapa não puder ser realizada, identifique-a como pendente, não executa
 **Comece verificando a conexão ADB e identificando o dispositivo. Não faça nenhuma modificação até concluir o diagnóstico inicial, apresentar o plano e receber autorização explícita.**
 
 
-### 13. Regras adicionais para o Motorola Moto G54 5G
+## 13. Escopo genérico Android e isolamento por fabricante
 
-- O relatório `docs/AUDITORIA_MOTO_G54_5G.md` descreve uma coleta de leitura e um histórico anterior do aparelho. Não interprete o histórico como autorização para repetir comandos.
-- `data/moto_g54_disabled_packages.txt` é um retrato dos pacotes encontrados desativados, não uma lista aprovada para execução. `data/persistent_uninstall_packages.txt` registra observações históricas e nunca deve ser executado automaticamente.
-- A flag `FLAG_PERSISTENT` não demonstra, sozinha, telemetria, abuso ou segurança para desinstalação. Não remova `com.motorola.bach.modemstats`, `com.bluetooth.aptxmode` ou qualquer daemon persistente sem documentação específica do fabricante, dependências verificadas e autorização individual.
-- Não execute `pm clear`, `pm uninstall`, `pm remove-user`, `am stop-user`, `pm trim-caches` ou AppOps por UID em lote. `pm clear` apaga dados; remoção de perfil pode apagar dados; UID compartilhado pode afetar vários pacotes.
-- O script `scripts/debloat.sh` opera em modo somente leitura por padrão. A opção `--apply` aceita apenas um pacote por execução, exige confirmação digitada e bloqueia os componentes listados em `data/protected_essential_packages.txt`. Ele não substitui a auditoria de dependências nem a autorização explícita.
-- O script `scripts/restore.sh` reativa um pacote por vez, com confirmação. Não existe restauração em massa.
-- Antes de publicar, omita aplicativos instalados pelo usuário, IPs/portas locais e remotos, SSIDs, endereços MAC, IMEI, número de série, Android ID, UIDs/PIDs desnecessários, logs brutos, nomes de contas e quaisquer dados que revelem a rede ou a rotina do proprietário.
-- Não afirme que um pacote envia telemetria apenas por ter permissão `INTERNET`, SDK analítico ou flag persistente. Separe evidência de manifesto, conexão observada, tráfego inspecionado e inferência.
+**O prompt mestre é agnóstico de fabricante.** Não mantenha listas de package names exclusivos de OEM (Samsung, Motorola, Xiaomi, Google Pixel, TCL etc.) como alvos universais.
+
+Antes de consultar referências de pacotes:
+1. Identifique fabricante, modelo, codinome, variante, Android, ROM/build e usuário/perfil por evidência do aparelho.
+2. Gere o inventário real via ADB; ele é a fonte primária. Listas de referência não substituem nem ampliam o inventário detectado.
+3. Consulte material OEM apenas para o fabricante identificado. Se a identidade estiver incerta, interrompa classificação OEM e solicite confirmação/colete mais evidências.
+4. Não procurar, recomendar, classificar como presente ou aplicar comandos para pacotes exclusivos de outro fabricante. Referências de outros OEMs só podem ser usadas como comparação explicitamente rotulada, nunca como alvo.
+5. Não inferir pacote, função, telemetria ou segurança pela marca/nome. Validar package name, versão, build, dependências e função neste aparelho.
+6. Pacotes desconhecidos, de OEM não identificado ou sem evidência suficiente ficam como PENDENTES/INCONCLUSIVOS, não como removíveis.
+7. Mantenha exemplos de nomes de pacotes em documentos de referência separados, etiquetados por fabricante/modelo/build e nunca incorporados como instruções de execução universais.
+
+A base genérica pode incluir conceitos e componentes AOSP/Android comuns (framework, System UI, Package Manager, permissões, AppOps, APIs de conectividade), mas mesmo estes devem ser verificados no inventário/build real. A auditoria de fabricante é condicional e isolada.
 
 
 ## ADENDO OBRIGATÓRIO — análise pacote por pacote
