@@ -11,7 +11,7 @@ The goal is to build a cumulative public collection of technical audits that are
 The recommended approach is to work with an AI assistant of your choice. Clean My Android does not depend on ChatGPT, Claude, Gemini, Antigravity, or any specific provider. Choose a tool that can read the repository and, if you want direct data collection, access the computer terminal where ADB is installed.
 
 1. Clone the repository and open its folder in your AI assistant/agent.
-2. Ask it to read [AI_INSTRUCTIONS.en.md](../AI_INSTRUCTIONS.en.md) and this guide in full before starting.
+2. Ask it to read [AI_INSTRUCTIONS.md](../AI_INSTRUCTIONS.md) and this guide in full before starting.
 3. Confirm ADB recognizes the correct device and the computer is authorized.
 4. Request the initial audit in read-only mode.
 5. Review findings and the change plan. The AI must explain evidence, uncertainty, risks, and rollback options.
