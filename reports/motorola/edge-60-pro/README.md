@@ -112,3 +112,8 @@ reports/motorola/edge-60-pro/
 - 📊 [**Comparativo de Desempenho (`comparativo.json`)**](comparativo.json)
 - 🔒 [**Evidências e Coleta Complementar (`evidencias/README.md`)**](evidencias/README.md)
 - 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../../README.pt-BR.md)
+
+
+## Resumo histórico em inglês
+
+- [Historical report — English summary](historical-summary.en.md)
