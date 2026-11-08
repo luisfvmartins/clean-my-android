@@ -44,13 +44,15 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 | **Memória RAM Livre** | ~4.5 GB | **~7.2 GB** | **+2.7 GB livres** (+58,7%) |
 | **Armazenamento Livre (`/data`)** | 193 GB livres | **~197 GB livres** | **~4 GB recuperados** (ganho agregado da partição; não mensurado por app) |
 | **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para o Usuário 0 |
-| **Aplicativos Habilitados** | 441 pacotes ativos | **257 pacotes ativos** | -184 pacotes ativos em execução |
+| **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | -193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes** | +184 pacotes desativados via ADB |
 | **Adwares Monitorados em RAM** | Glance, Taboola, InMobi ativos (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão |
 | **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB** | Processo eliminado da memória RAM |
 | **Perfis Ativos em Background** | User 0 + User 11 | **Apenas User 0 ativo** | -269 MB RSS de instâncias duplicadas |
 | **Temperatura em Repouso** | 37°C a 40°C | **33.0°C** | Dispositivo frio e estável |
 | **Play Integrity / Apps de Banco** | Não coletado na sessão | **Pendente de validação** | Requer teste presencial pelo proprietário |
+
+> **Nota de reconciliação:** um resumo operacional anterior registrava 257 pacotes habilitados. Esse valor não coincide com os 248 pacotes classificados como preservados/ativos no inventário final. Como a saída bruta do comando não está publicada para conferência, 257 não é tratado como valor confirmado; o comparativo utiliza a classificação do inventário estruturado.
 
 ---
 

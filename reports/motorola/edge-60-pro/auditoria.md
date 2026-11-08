@@ -319,13 +319,15 @@ As medições comparativas foram realizadas com ferramentas de telemetria do And
 | **Memória RAM Ocupada** | ~7.5 GB ocupados | **~4.8 GB ocupados** | **-2.7 GB de consumo de RAM** | `dumpsys meminfo` Passo 110 vs Passo 384 |
 | **Armazenamento Livre (`/data`)** | 193 GB livres | **~197 GB livres** | **~4 GB recuperados** (ganho agregado da partição; não mensurado por app) | `df -h /data` Passo 398 |
 | **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para Usuário 0 | `pm list packages -f` |
-| **Aplicativos Habilitados** | 441 pacotes ativos | **257 pacotes ativos** | **-184 pacotes ativos** | `pm list packages -e --user 0` |
+| **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | **-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)** | `inventario-depois.json` (248 preservados/ativos, 244 desativados, 9 desinstalados) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes desativados** | +184 pacotes congelados | `pm list packages -d` Passo 89 vs Passo 701 |
 | **Adwares Monitorados em RAM** | 5 daemons (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão | `dumpsys meminfo` (Glance, Taboola, InMobi) |
 | **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB (eliminado da RAM)** | **-873 MB de carga contínua** | `dumpsys meminfo` (Search + GoogleApp) |
 | **Perfis Secundários em Execução**| User 0 + User 11 ativos | **Apenas User 0 ativo** | **-269 MB RSS de instâncias duplicadas** | `am stop-user -f 11` |
 | **Temperatura em Espera** | 37.0°C a 40.0°C | **33.0°C** | **-4°C a -7°C (redução térmica observada)**| `dumpsys battery` Passo 384 |
 | **Play Integrity / Bancos** | Não coletado na sessão | **Pendente de validação** | Testes bancários e atestação não executados | Registros não contêm chamadas Play Integrity |
+
+> **Nota de reconciliação:** um resumo operacional anterior registrava 257 pacotes habilitados. Esse valor não coincide com os 248 pacotes classificados como preservados/ativos no inventário final. Como a saída bruta do comando não está publicada para conferência, 257 não é tratado como valor confirmado; o comparativo utiliza a classificação do inventário estruturado.
 
 O comparativo estruturado em formato JSON está catalogado em [`comparativo.json`](comparativo.json).
 
