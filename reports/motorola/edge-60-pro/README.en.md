@@ -1,5 +1,8 @@
 # Motorola Edge 60 Pro — Audit Summary
 
+
+> **Privacy note:** the 50 entries classified as third-party components have pseudonymized package identifiers. Installation-specific `/data/app` paths have been normalized. Aggregate inventory counts and recorded package states are preserved. The source inventory does not establish whether these components were user-installed or preloaded by a vendor.
+
 **Model:** XT2507-1 · **Codename:** `cybert`  
 **Interface:** Hello UI  
 **Android version:** pending canonical confirmation  
