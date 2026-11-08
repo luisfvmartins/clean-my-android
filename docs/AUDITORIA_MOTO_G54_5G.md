@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 > **Versão pública sanitizada:** detalhes dos 29 aplicativos instalados pelo usuário, IPs e portas de rede foram omitidos. A cópia integral local deve permanecer privada.
-> **Escopo da coleta:** a auditoria local registrou 462 componentes: 423 pacotes APK/static-library/overlays RRO e 39 módulos APEX. Para preservar a privacidade, a versão pública omite os 29 aplicativos instalados pelo usuário e publica somente os 394 componentes de sistema/fabricante do inventário JSON.
+> **Escopo da coleta:** a auditoria local registrou 462 componentes: 423 pacotes APK/static-library/overlays RRO e 39 módulos APEX. Para preservar a privacidade, a versão pública omite os 29 aplicativos instalados pelo usuário e publica 433 componentes: 394 pacotes de sistema/fabricante no inventário JSON e 39 módulos APEX.
 >
 > **Escopo de execução:** a coleta descrita como auditoria foi somente leitura. As operações anteriores citadas no histórico são registros retrospectivos, não instruções nem autorização para repeti-las.
 
