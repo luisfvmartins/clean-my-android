@@ -47,6 +47,8 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 | **Temperatura em Repouso** | 37°C a 40°C | **33.0°C** | Dispositivo frio e estável |
 | **Play Integrity / Apps de Banco** | Não coletado na sessão | **Pendente de validação** | Requer teste presencial pelo proprietário |
 
+> **Nota de reconciliação:** um resumo operacional anterior registrava 257 pacotes habilitados. Esse valor não coincide com os 248 pacotes classificados como preservados/ativos no inventário final. Como a saída bruta do comando não está publicada para conferência, 257 não é tratado como valor confirmado; o comparativo utiliza a classificação do inventário estruturado.
+
 ---
 
 ## 🗂️ Estrutura de Arquivos deste Relatório
