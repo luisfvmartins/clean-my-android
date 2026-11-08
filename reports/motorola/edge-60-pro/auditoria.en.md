@@ -8,6 +8,13 @@
 > [!WARNING]
 > This English document is a structured summary of the Portuguese technical audit, not a line-by-line translation of every operational detail. The Portuguese source remains authoritative for the complete historical record. All figures below are reproduced from that source and have not been independently re-measured by this translation.
 
+> [!CAUTION]
+> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components.
+>
+> This does not confirm the device's current state or prove a functional failure, but it conflicts with the project's current safety guardrails. This is a historical record, not a recommendation. **Do not reuse this disable list on other devices.** The actual state must be checked on-device; any restoration requires individual assessment and in-person validation of calls, SMS, SIM, emergency, Bluetooth, and contacts.
+
+---
+
 ## 1. Evidence and provenance
 
 The audit consolidates operational records from November 6–7, 2026. Internal session identifiers and collection-environment details were omitted from the public report.
