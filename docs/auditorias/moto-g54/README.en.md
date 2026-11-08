@@ -15,7 +15,7 @@ This folder contains the device's component inventory, split into batches for ea
 | 4 | Commercial partners, carriers, and hardware | 200–224 (25) | [Batch 4](lote-04-parceiros-comerciais-e-hardware.md) |
 | 5 | Android AOSP base system | 225–296 (72) | [English translation](lote-05-sistema-base-aosp.en.md) · [Portuguese source](lote-05-sistema-base-aosp.md) |
 | 6 | AOSP, Google Mainline, and MediaTek RRO overlays | 297–358 (62) | [English translation](lote-06-overlays-aosp-google-mediatek.en.md) · [Portuguese source](lote-06-overlays-aosp-google-mediatek.md) |
-| 7 | Motorola overlays, regional carriers, and eUICC/eSIM | 359–423 (65) | [Batch 7](lote-07-overlays-motorola-operadoras-esim.md) |
+| 7 | Motorola overlays, regional carriers, and eUICC/eSIM | 359–423 (65) | [English translation](lote-07-overlays-motorola-operadoras-esim.en.md) · [Portuguese source](lote-07-overlays-motorola-operadoras-esim.md) |
 | 8 | Project Mainline modules and APEX system modules | 424–462 (39) | [Batch 8](lote-08-modulos-project-mainline-apex.md) |
 
 **Batch 1:** the 29 user-installed applications were intentionally omitted from the public version to protect the device owner's privacy.
@@ -28,4 +28,4 @@ This folder contains the device's component inventory, split into batches for ea
 - See the main report for methodology, limitations, operational history, rollback, and recommendations.
 - A published inventory does not mean a debloating script has been approved for this device.
 
-Batches 2, 3, 5, and 6 now have complete English translations alongside their Portuguese sources. Batches 4, 7, and 8 remain available in Portuguese and will be translated in separate, reviewable contributions. Package names, identifiers, commands, and technical evidence are preserved in their original form.
+Batches 2, 3, 5, 6, and 7 now have complete English translations alongside their Portuguese sources. Batches 4 and 8 remain available in Portuguese and will be translated in separate, reviewable contributions. Package names, identifiers, commands, and technical evidence are preserved in their original form.
