@@ -32,15 +32,15 @@ The report includes historical operational details. Those details are **not an e
 
 ## Files
 
-- [Full technical audit (Portuguese)](README.md)
-- [Technical audit details](auditoria.md)
+- [Full technical audit (English summary)](auditoria.en.md) · [Original full report (Portuguese)](README.md)
+- [Technical audit details (English summary)](auditoria.en.md) · [Original detailed audit (Portuguese)](auditoria.md)
 - [Initial package inventory](inventario-antes.json)
 - [Final package inventory](inventario-depois.json)
 - [Disabled packages](pacotes-desativados.txt)
 - [Packages uninstalled for user 0](pacotes-desinstalados.txt)
 - [Permission and AppOps changes](permissoes-alteradas.json)
 - [Metrics and test status](comparativo.json)
-- [Evidence provenance and pending collection (Portuguese)](evidencias/README.md)
+- [Evidence provenance and pending collection (English)](evidencias/README.en.md) · [Portuguese source](evidencias/README.md)
 
 ## Safety and limitations
 

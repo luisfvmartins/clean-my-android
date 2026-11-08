@@ -32,6 +32,6 @@ Data is maintained in `data/device_catalog.json`. When adding or updating an aud
     python scripts/generate_statistics.py
     python scripts/generate_statistics.py --check
 
-Automated validation checks whether this page matches the catalog. Generation does not query the GitHub API, count Pull Requests, or access or modify devices.
+The current generator writes and validates `docs/ESTATISTICAS.md` (Portuguese). This English companion is maintained as a manual translation and is not currently checked by `--check`; update it when the catalog or Portuguese statistics change. Generation does not query the GitHub API, count Pull Requests, or access or modify devices.
 
 See the [complete audit catalog](../reports/README.md).

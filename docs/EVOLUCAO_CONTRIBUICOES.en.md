@@ -2,12 +2,12 @@
 
 Dashboard calculated using the GitHub REST API. The count includes closed Pull Requests with a populated `merged_at` field; rejected or closed PRs without a merge are excluded.
 
-**Updated:** 2026-11-07 (UTC)  
+**Updated:** 2026-11-08 (UTC)  
 **Repository:** [luisfvmartins/clean-my-android](https://github.com/luisfvmartins/clean-my-android)
 
 ## Indicators
 
-- **Merged Pull Requests:** 7
+- **Merged Pull Requests:** 8
 - **Distinct authors with merged PRs:** 1
 - **Cataloged devices:** 2
 - **Represented manufacturers:** 1
@@ -16,7 +16,7 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 | Merge year | Pull Requests |
 |---:|---:|
-| 2026 | 7 |
+| 2026 | 8 |
 
 ## Scope and limitations
 
@@ -28,6 +28,6 @@ Dashboard calculated using the GitHub REST API. The count includes closed Pull R
 
 ## Updates
 
-The [Update contribution dashboard](../.github/workflows/contribution-dashboard.yml) workflow runs daily and can also be started manually from the Actions tab. It uses the `GITHUB_TOKEN` provided by GitHub Actions; no personal token is stored in the repository.
+The workflow updates `docs/EVOLUCAO_CONTRIBUICOES.md` (Portuguese) daily and can also be started manually from the Actions tab. This English page is a static translation and is not refreshed by that workflow; consult the Portuguese page for the latest counts and update date. The workflow uses the `GITHUB_TOKEN` provided by GitHub Actions; no personal token is stored in the repository.
 
 Also see [project statistics](ESTATISTICAS.en.md) and the [audit catalog](../reports/README.md).
