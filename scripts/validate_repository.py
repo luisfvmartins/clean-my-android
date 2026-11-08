@@ -98,22 +98,25 @@ def validate_statistics() -> None:
 
 
 
-MARKDOWN_LINK_RE = re.compile(
-    r"!?\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^)\s])+)"
-    r"(?:\s+(?:\"[^\"]*\"|'[^']*'|\([^)]*\)))?\s*\)"
-)
-REFERENCE_DEFINITION_RE = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*(<[^>]+>|\S+)")
+REFERENCE_DEFINITION_RE = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*(<[^>]+>|(?:\\.|[^\s])+)")
+
+def unescape_markdown_destination(destination: str) -> str:
+    """Unescape Markdown punctuation in a link destination."""
+    return re.sub(r"\\([\\() ])", r"\1", destination)
+
 
 def markdown_destinations(content: str):
     """Yield inline-link and reference-definition destinations outside code blocks."""
     visible_lines: list[str] = []
     fence_char: str | None = None
     fence_length = 0
+    in_indented_code = False
+    previous_blank = True
 
     for line in content.splitlines():
-        match = re.match(r"^\s{0,3}(\x60{3,}|~{3,})", line)
-        if match:
-            marker = match.group(1)
+        fence = re.match(r"^ {0,3}(\x60{3,}|~{3,})", line)
+        if fence:
+            marker = fence.group(1)
             if fence_char is None:
                 fence_char = marker[0]
                 fence_length = len(marker)
@@ -121,21 +124,85 @@ def markdown_destinations(content: str):
                 fence_char = None
                 fence_length = 0
             continue
-        if fence_char is None:
-            visible_lines.append(line)
+        if fence_char is not None:
+            continue
+
+        if not line.strip():
+            visible_lines.append("")
+            previous_blank = True
+            if in_indented_code:
+                continue
+            continue
+
+        indented = line.startswith("    ") or line.startswith("\t")
+        if indented and (previous_blank or in_indented_code):
+            in_indented_code = True
+            previous_blank = False
+            continue
+
+        in_indented_code = False
+        previous_blank = False
+        visible_lines.append(line)
 
     text = "\n".join(visible_lines)
-    text = re.sub(r"\x60+[^\x60]*\x60+", "", text)
+    text = re.sub(r"(?<!\\)\x60+[^\\n]*?(?<!\\)\x60+", "", text)
 
-    for match in MARKDOWN_LINK_RE.finditer(text):
-        destination = match.group(1)
-        yield destination[1:-1] if destination.startswith("<") and destination.endswith(">") else destination
+    # Parse inline links while respecting balanced and escaped parentheses.
+    for match in re.finditer(r"\]\(\s*", text):
+        index = match.end()
+        if index >= len(text):
+            continue
 
+        if text[index] == "<":
+            start = index + 1
+            index = start
+            escaped = False
+            while index < len(text):
+                char = text[index]
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == ">":
+                    break
+                index += 1
+            if index < len(text) and text[index] == ">":
+                destination = text[start:index]
+                if destination:
+                    yield unescape_markdown_destination(destination)
+            continue
+
+        start = index
+        depth = 0
+        escaped = False
+        while index < len(text):
+            char = text[index]
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == "(":
+                depth += 1
+            elif char == ")":
+                if depth == 0:
+                    break
+                depth -= 1
+            elif char.isspace() and depth == 0:
+                break
+            index += 1
+
+        destination = text[start:index]
+        if destination:
+            yield unescape_markdown_destination(destination)
+
+    # Reference-style link definitions.
     for line in visible_lines:
         match = REFERENCE_DEFINITION_RE.match(line)
         if match:
             destination = match.group(1)
-            yield destination[1:-1] if destination.startswith("<") and destination.endswith(">") else destination
+            if destination.startswith("<") and destination.endswith(">"):
+                destination = destination[1:-1]
+            yield unescape_markdown_destination(destination)
 
 
 def validate_markdown_links() -> None:
