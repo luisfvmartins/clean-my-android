@@ -81,7 +81,7 @@ def build_markdown(devices: list[dict]) -> str:
         "- **Contagens de componentes não são somadas.** Os relatórios usam escopos e estados diferentes: "
         "o Moto G54 registra componentes auditados; o Edge 60 Pro registra componentes mapeados no inventário inicial.",
         "- A contagem do Moto G54 é de 462 componentes na coleta local; a versão pública omite 29 aplicativos "
-        "instalados pelo usuário e documenta 394 componentes de sistema/fabricante.",
+        "instalados pelo usuário e publica os itens 30–462, totalizando 433 componentes.",
         "- A contagem do Edge 60 Pro (501) refere-se ao inventário inicial mapeado e não significa que todos "
         "os componentes tenham sido validados funcionalmente.",
         "- Versões Android pendentes não entram na contagem de versões confirmadas.",
