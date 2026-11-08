@@ -34,4 +34,4 @@ Data is maintained in `data/device_catalog.json`. When adding or updating an aud
 
 Automated validation checks whether this page matches the catalog. Generation does not query the GitHub API, count Pull Requests, or access or modify devices.
 
-See the [complete audit catalog](../reports/README.en.md).
+See the [complete audit catalog](../reports/README.md).
