@@ -401,3 +401,8 @@ O Pull Request é uma proposta de contribuição. Após aprovação e merge, a n
 ---
 
 **O objetivo não é produzir os maiores números de otimização. É construir um histórico técnico confiável, verificável e reproduzível de cada dispositivo.**
+
+
+## 13. Cobertura pacote por pacote
+
+Leia [Auditoria pacote por pacote](PACKAGE_BY_PACKAGE_AUDIT.pt-BR.md) integralmente e aplique a matriz a cada pacote detectado. Não agrupe package names nem omita pacotes. Reconcilie inventariados, analisados e pendentes. Documente função, evidências, permissões, AppOps/shared UID, componentes, dependências, risco, impacto, recomendação, reversão e confiança. Gere auditoria detalhada, resumo e plano de mudanças. Pacotes desconhecidos permanecem pendentes; nenhuma ação sem consentimento explícito.
