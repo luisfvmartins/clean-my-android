@@ -1,5 +1,8 @@
 # 📱 Relatório Consolidado de Auditoria e Debloat — Motorola Edge 60 Pro (`XT2507-1`)
 
+
+> **Nota de privacidade:** os identificadores dos 50 registros classificados como componentes de terceiros foram pseudonimizados. Os caminhos específicos de instalação em `/data/app` foram normalizados. As contagens agregadas e os estados registrados dos pacotes foram preservados. O inventário de origem não permite determinar se esses componentes foram instalados pelo usuário ou pré-carregados por um fornecedor.
+
 [![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](auditoria.md)
 [![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](auditoria.md)
 [![Android: Pendente de Confirmação](https://img.shields.io/badge/Android-Pendente%20de%20Confirma%C3%A7%C3%A3o-yellow?logo=android&logoColor=white)](auditoria.md)
