@@ -39,7 +39,7 @@ The procedure was conducted entirely without root privileges, using the official
 3. **Adware and Dropper Elimination:** Uninstalled for User 0 commercial bloatware modules with privileged package installer capabilities (`Digital Turbine Ignite`, `ironSource AppCloud`, `Meta Preloads`).
 4. **Permission Sandboxing:** Revoked precise satellite location (`ACCESS_FINE_LOCATION`) on 19 commercial, shopping, and credit score applications.
 5. **FOSS Ecosystem Migration:** Replaced proprietary keyboard (Gboard), dialer, SMS, contacts, calendar, clock, and calculator with private open-source alternatives.
-6. **Critical Preservations:** Guaranteed full stability of System UI, Motorola Launcher3 (QuickStep navigation gestures), camera hardware drivers, banking applications (Banco Inter and Nubank with intact Play Integrity), and user-preserved apps (**Gemini**, **Fruit Merge**, **Period Calendar**).
+6. **Critical Components Preserved and Tested:** System UI, Motorola Launcher3 (QuickStep navigation gestures), camera hardware drivers, banking applications (Banco Inter and Nubank), and user-preserved apps (**Gemini**, **Fruit Merge**, **Period Calendar**) were preserved and included in the reported functional checks. No Play Integrity issue was reported during the documented session; this is not a guarantee of future behavior.
 
 ---
 
@@ -50,7 +50,7 @@ The procedure was conducted entirely without root privileges, using the official
 - **Active Packages for User 0:** 343 packages (including 12 user-installed FOSS alternatives)
 - **Free Available RAM:** Increased from ~2,750 MB to **~4,153 MB to 4,573 MB free** (**+1.40 GB to +1.82 GB free RAM**, a **+50.9% to +66.3%** improvement)
 - **Active Background Processes:** Reduced from 66 to 39 running daemons (-27 daemons terminated from RAM)
-- **Functional Validation:** Verified and passing for phone calls, SMS, biometrics, Wi-Fi, 4G/5G, camera, and Brazilian banking apps.
+- **Functional Validation:** The source report records successful checks for phone calls, SMS, biometrics, Wi-Fi, 4G/5G, camera, and Brazilian banking apps during the documented session; results are not a guarantee for other firmware versions or future updates.
 
 ---
 
