@@ -4,13 +4,13 @@
 
 **Auditoria técnica, debloat criterioso e documentação de privacidade para dispositivos Android.**
 
-[![Android](https://img.shields.io/badge/Android-dispositivos%20auditados-3DDC84?logo=android&logoColor=white)](reports/README.md)
+[![Android](https://img.shields.io/badge/Android-dispositivos%20auditados-3DDC84?logo=android&logoColor=white)](reports/README.pt-BR.md)
 [![ADB](https://img.shields.io/badge/ADB-required-3C78A8)](https://developer.android.com/tools/adb)
-[![Root](https://img.shields.io/badge/Root-n%C3%A3o%20necess%C3%A1rio-2E8B57)](docs/USER_DEVICE_AUDIT.md)
+[![Root](https://img.shields.io/badge/Root-n%C3%A3o%20necess%C3%A1rio-2E8B57)](docs/USER_DEVICE_AUDIT.pt-BR.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validação](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Contribuir](CONTRIBUTING.md) · [Segurança](#segurança-em-primeiro-lugar)
+[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.pt-BR.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Contribuir](CONTRIBUTING.pt-BR.md) · [Segurança](#segurança-em-primeiro-lugar)
 
 </div>
 
@@ -36,7 +36,7 @@ Você não fica preso a um fornecedor. Pode utilizar ChatGPT, Claude, Gemini, An
 
 1. **Prepare o ambiente:** instale ADB, habilite a depuração USB ou sem fio e autorize o computador no aparelho.
 2. **Abra o projeto no assistente:** clone o repositório e abra a pasta no seu agente de IA.
-3. **Carregue as instruções:** peça ao assistente para ler [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) e seguir [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
+3. **Carregue as instruções:** peça ao assistente para ler [AI_INSTRUCTIONS.pt-BR.md](AI_INSTRUCTIONS.pt-BR.md) e seguir [docs/USER_DEVICE_AUDIT.pt-BR.md](docs/USER_DEVICE_AUDIT.pt-BR.md).
 4. **Inspecione primeiro:** a IA identifica o dispositivo e coleta o estado inicial sem realizar alterações.
 5. **Revise o plano:** examine a análise de pacotes, os riscos, os comandos propostos e as formas de reversão.
 6. **Autorize conscientemente:** mudanças só podem ocorrer após sua aprovação explícita, em etapas controladas.
@@ -91,7 +91,7 @@ Para reativar individualmente um pacote que foi desativado:
 ./scripts/restore.sh nome.do.pacote
 ~~~
 
-Antes de qualquer alteração, leia o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.md) e respeite as regras de segurança. A execução manual não reduz a necessidade de evidências, autorização, reversibilidade e testes.
+Antes de qualquer alteração, leia o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.pt-BR.md) e respeite as regras de segurança. A execução manual não reduz a necessidade de evidências, autorização, reversibilidade e testes.
 
 ## Como funciona
 
@@ -108,11 +108,11 @@ O fluxo recomendado é dividido em etapas independentes. Diagnóstico e coleta v
 | **7. Comparação** | Confrontar dados, testes e limitações | Relatório técnico antes/depois |
 | **8. Publicação** | Sanitizar e enviar a contribuição por Pull Request | Nova auditoria no catálogo público |
 
-A IA é o meio de trabalho recomendado, não uma autoridade sobre o aparelho: ela deve analisar evidências, explicar riscos e aguardar autorização explícita antes de modificar o dispositivo. O [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) fornece o roteiro independente de fornecedor.
+A IA é o meio de trabalho recomendado, não uma autoridade sobre o aparelho: ela deve analisar evidências, explicar riscos e aguardar autorização explícita antes de modificar o dispositivo. O [AI_INSTRUCTIONS.pt-BR.md](AI_INSTRUCTIONS.pt-BR.md) fornece o roteiro independente de fornecedor.
 
 ## Dispositivos auditados
 
-As auditorias são específicas por aparelho e possuem diferentes níveis de validação. Consulte o [catálogo de dispositivos](reports/README.md) para conhecer o escopo, os arquivos e as pendências de cada relatório.
+As auditorias são específicas por aparelho e possuem diferentes níveis de validação. Consulte o [catálogo de dispositivos](reports/README.pt-BR.md) para conhecer o escopo, os arquivos e as pendências de cada relatório.
 
 | Dispositivo | Documentação | Situação |
 |---|---|---|
@@ -154,13 +154,13 @@ Este projeto prioriza reversibilidade, transparência e controle do proprietári
 
 **Não existe garantia universal de ganho de bateria, RAM, armazenamento, privacidade ou compatibilidade bancária.** Esses efeitos dependem do aparelho e precisam ser medidos. Alterações podem causar perda de funções; mantenha uma forma de recuperação disponível.
 
-Consulte também [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md) e [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md).
+Consulte também [docs/USER_DEVICE_AUDIT.pt-BR.md](docs/USER_DEVICE_AUDIT.pt-BR.md) e [AI_INSTRUCTIONS.pt-BR.md](AI_INSTRUCTIONS.pt-BR.md).
 
 ## Estrutura do repositório
 
 ```text
 .
-├── AI_INSTRUCTIONS.md       # Instruções para auditoria assistida por IA
+├── AI_INSTRUCTIONS.pt-BR.md       # Instruções para auditoria assistida por IA
 ├── data/                    # Inventários e listas de proteção
 ├── docs/                    # Guias e auditorias técnicas
 ├── reports/                 # Relatórios por dispositivo
@@ -171,21 +171,21 @@ Consulte também [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md) e [AI_IN
 
 Cada dispositivo deve ter sua própria pasta em `reports/`. A contribuição deve preservar os relatórios existentes e acrescentar documentação ao catálogo.
 
-1. Leia [CONTRIBUTING.md](CONTRIBUTING.md) e [docs/USER_DEVICE_AUDIT.md](docs/USER_DEVICE_AUDIT.md).
+1. Leia [CONTRIBUTING.pt-BR.md](CONTRIBUTING.pt-BR.md) e [docs/USER_DEVICE_AUDIT.pt-BR.md](docs/USER_DEVICE_AUDIT.pt-BR.md).
 2. Faça um fork e crie uma branch exclusiva para sua contribuição.
 3. Colete e sanitize os dados do seu próprio aparelho.
 4. Inclua o relatório, inventários e evidências necessários.
-5. Atualize o índice de dispositivos em `reports/README.md`.
+5. Atualize o índice de dispositivos em `reports/README.pt-BR.md`.
 6. Abra um Pull Request para a branch `main`.
 
 Cada Pull Request aprovado e integrado amplia a base pública de conhecimento. Não altere nem substitua a auditoria de outro dispositivo para incluir a sua.
 
 ## Documentação e links
 
-- [Catálogo de auditorias](reports/README.md)
-- [Guia de auditoria individual](docs/USER_DEVICE_AUDIT.md)
-- [Instruções para IA](AI_INSTRUCTIONS.md)
-- [Contribuição e Pull Requests](CONTRIBUTING.md)
+- [Catálogo de auditorias](reports/README.pt-BR.md)
+- [Guia de auditoria individual](docs/USER_DEVICE_AUDIT.pt-BR.md)
+- [Instruções para IA](AI_INSTRUCTIONS.pt-BR.md)
+- [Contribuição e Pull Requests](CONTRIBUTING.pt-BR.md)
 - [Código-fonte](https://github.com/luisfvmartins/clean-my-android)
 - [Licença MIT](LICENSE)
 
