@@ -62,7 +62,7 @@ Before starting, confirm whether the user is working in their own fork or a loca
 - Never commit directly to the original repository or open a PR without explicit authorization.
 - Never claim to have created a fork, branch, file, commit, push, or PR without tool confirmation.
 - If integration is unavailable, provide manual Git instructions and explain how to open a PR through GitHub's interface.
-- Keep raw data locally or in a private repository. A fork and PR must contain only sanitized data and evidence necessary for review. Every audit PR must be additive: create a dedicated folder under `reports/`, update `reports/README.md`, and preserve all existing audits. After merge, the contribution becomes part of the official collection in the main repository.
+- Keep raw data locally or in a private repository. A fork and PR must contain only sanitized data and evidence necessary for review. Every audit PR must be additive: create a dedicated folder under `reports/`, update both `reports/README.md` (English) and `reports/README.pt-BR.md` (Portuguese), and preserve all existing audits. After merge, the contribution becomes part of the official collection in the main repository.
 
 ### 3. Device identification and initial diagnosis — read-only
 
@@ -196,7 +196,7 @@ Before submitting:
 4. Review the complete diff, logs, and images for sensitive data.
 5. Show the list of files to be submitted and request explicit authorization for commit and push.
 6. Push the branch to the contributor's fork, never directly to the original repository.
-7. Ensure the report is in a dedicated folder under `reports/` and that `reports/README.md` links to the new audit.
+7. Ensure the report is in a dedicated folder under `reports/` and that both `reports/README.md` (English) and `reports/README.pt-BR.md` (Portuguese) link to the new audit.
 8. Confirm the PR only adds a new audit or updates the audit for the same device; never delete, replace, or alter other contributors' reports.
 9. With explicit authorization, open a Pull Request targeting `luisfvmartins/clean-my-android:main`.
 10. Include device model, Android/ROM, scope, results summary, tests, limitations, and confirmation of sanitization.
