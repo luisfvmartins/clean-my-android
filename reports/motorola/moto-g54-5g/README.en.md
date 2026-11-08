@@ -14,7 +14,7 @@ The seven detailed inventory batches remain in `docs/auditorias/moto-g54/` to pr
 
 ## Privacy and interpretation
 
-The public version omits 29 user-installed applications and documents 394 system/manufacturer components. Identifiable data and raw dumps must remain private. See the main report for scope, method, limitations, and safety notes.
+The public version omits 29 user-installed applications and publishes 433 components: 394 system/manufacturer package records and 39 APEX modules. Identifiable data and raw dumps must remain private. See the main report for scope, method, limitations, and safety notes.
 
 Publishing the inventory does not mean every component was individually tested or that procedures apply to other models, regions, or firmware versions.
 

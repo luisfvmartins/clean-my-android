@@ -2,7 +2,7 @@
 
 **Device:** XT2343-1 · cancunf · Android 15 · Hello UI  
 **Collection scope:** 462 components recorded locally (423 APK/static-library/RRO overlay packages and 39 APEX modules).  
-**Public inventory:** 394 system/manufacturer components. The 29 user-installed applications and their details are intentionally omitted.  
+**Public inventory:** 433 components: 394 system/manufacturer package records plus 39 APEX modules. The 29 user-installed applications and their details are intentionally omitted.  
 **Collection mode:** The audit collection described here was read-only. Earlier operations are retrospective history, not instructions or authorization to repeat them.
 
 > [!IMPORTANT]
