@@ -138,7 +138,7 @@ Results without evidence must be marked **not measured**, **not collected**, or 
 
 ## Automated validation
 
-Pull Requests to `main` run automated integrity checks for JSON, Bash syntax, and the protected-components list. These checks are static: they do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
+Pull Requests to `main` run automated integrity checks for JSON, Bash syntax, the protected-components list, and generated project statistics. These checks are static: they do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
 
 See the [validation workflow](.github/workflows/validate.yml) and [validator](scripts/validate_repository.py).
 
