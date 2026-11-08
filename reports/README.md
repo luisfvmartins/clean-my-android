@@ -19,7 +19,7 @@ This catalog lists technical audits submitted by the community and incorporated 
 
 ## How to add a device
 
-1. Read the [individual device audit guide](../docs/USER_DEVICE_AUDIT.en.md).
+1. Read the [individual device audit guide](../docs/USER_DEVICE_AUDIT.md).
 2. Create a dedicated folder under `reports/`, using manufacturer and model; include Android version when needed to distinguish variants.
 3. Record identification, initial inventory, authorized changes, final inventory, comparison, and limitations.
 4. Include only sanitized files needed to verify the conclusions.
@@ -74,4 +74,4 @@ Merge: audit added to the catalog
 
 Opening a Pull Request does not guarantee approval or merge. Contributions may receive revision requests when evidence is missing, personal data is exposed, or recommendations are unsafe.
 
-See [CONTRIBUTING.en.md](../CONTRIBUTING.en.md) for submission instructions and the [audit guide](../docs/USER_DEVICE_AUDIT.en.md) for technical details.
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for submission instructions and the [audit guide](../docs/USER_DEVICE_AUDIT.md) for technical details.
