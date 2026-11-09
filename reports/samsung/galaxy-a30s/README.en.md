@@ -40,11 +40,11 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 
 1. **Exhaustive Package Inventory:** All 392 firmware packages were audited and categorized in `before/inventory.json`.
 2. **Commercial Bloatware & Hidden Adware Removal:** Uninstalled preloaded commercial partner apps (`com.odete.samsung` and `com.samsung.shop`) and disabled the hidden commercial dropper **Digital Turbine Ignite** (`com.dti.samsung`).
-3. **Core Telemetry Eradication:** Neutralized **Samsung DiagMonAgent**, **IMS Logger**, **NetworkDiagnostic**, **Samsung Find My Mobile**, and **Google Location History 24/7**.
+3. **Diagnostic and location components:** Disabled or neutralized the listed components (**DiagMonAgent**, **IMS Logger**, **NetworkDiagnostic**, **Samsung Find My Mobile**, and the location-history service). This affects the identified components; it does not prove that all Samsung, Google, or carrier telemetry was eliminated.
 4. **Meta / Facebook Background Eradication:** Disabled 4 persistent background components (`katana`, `system`, `appmanager`, `services`).
-5. **Game Optimizing Service (GOS) Throttling Removal:** Disabled *Game Optimizing Service* (`com.samsung.android.game.gos`) and satellites (`gamehome`, `gametools`), eliminating artificial CPU/GPU thermal and clock throttling on the Exynos 7904.
+5. **Game Optimizing Service (GOS):** Disabled the `com.samsung.android.game.gos` package and related components (`gamehome`, `gametools`). Without controlled frequency, temperature, and performance benchmarks, this does not establish that CPU/GPU limits were removed.
 6. **Idle Daemon & Multimedia Relief:** Disabled *Dynamic Lock Screen*, *Story Service*, AR/Stickers modules (*AR Emoji*, *Live Stickers*, *Google ARCore*), and scanning daemons (*Easy Setup BLE/Wi-Fi*, *AllShare*, and *Print Spooler*).
-7. **Preservation of Critical Subsystems:** Active keyboard (Samsung HoneyBoard), launcher (One UI Home), telephony/RIL/IMS stacks, and Google Play Services/Store were preserved without modification, maintaining observed everyday usability and banking compatibility.
+7. **Preservation of subsystems:** Samsung HoneyBoard, One UI Home, telephony/RIL/IMS, and Google Play Services/Store were retained according to the inventory. The documented tests observed specific subsystems during the session; they do not guarantee continuous stability or universal banking compatibility.
 
 ---
 
@@ -53,9 +53,9 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 - **Firmware Cataloged Packages:** 392 packages (393 in `inventory.json` including the static Trichrome library)
 - **Enabled Packages Before:** 391 packages
 - **Enabled Packages After:** 343 packages (**-48 packages for User 0 / -12.3%**)
-- **Disabled Packages:** 47 packages (1 factory default + 46 surgically disabled via disable-user)
+- **Packages in disabled state:** 47 in the snapshot (1 already factory-disabled + 46 disabled via `disable-user`).
 - **Uninstalled Commercial Apps (User 0):** 2 packages (`com.odete.samsung` and `com.samsung.shop`)
-- **Total Packages Neutralized:** 48 packages
+- **Total package changes counted:** 48 (46 disabled by the user + 2 uninstalled for User 0). One package already disabled by the factory is counted separately in the state snapshot.
 - **System Stability & Connectivity:** Essential subsystems verified during session (Wi-Fi, Bluetooth, Telephony, Biometrics, and Google Play Services).
 
 ---

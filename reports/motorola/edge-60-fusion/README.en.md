@@ -35,11 +35,11 @@ This folder contains the complete technical audit, before/after package inventor
 The procedure was conducted entirely without root privileges, using the official **Android Debug Bridge (ADB)** interface with explicit device owner authorization:
 
 1. **Complete Inventory:** All 486 packages in stock ROM were mapped and technically classified.
-2. **Telemetry & Tracking Removal:** Disabled Motorola OEM diagnostic daemons, MediaTek SoC telemetry, Google 24/7 location history, and hardware DSP acoustic listeners ("Ok Google" / "Hey Google").
-3. **Adware and Dropper Elimination:** Uninstalled for User 0 commercial bloatware modules with privileged package installer capabilities (`Digital Turbine Ignite`, `ironSource AppCloud`, `Meta Preloads`).
+2. **Diagnostic and location components:** Disabled packages identified in the inventory as related to OEM diagnostics and location services. No network capture was provided to prove complete telemetry interruption, and no independent evidence supports claims about controlling hardware DSP listening.
+3. **Preloaded commercial agents:** Uninstalled the packages identified as `Digital Turbine Ignite`, `ironSource AppCloud`, and `Meta Preloads` for User 0. The documented effect is limited to the package state for that Android user.
 4. **Permission Sandboxing:** Revoked precise satellite location (`ACCESS_FINE_LOCATION`) on 19 commercial, shopping, and credit score applications.
-5. **FOSS Ecosystem Migration:** Replaced proprietary keyboard (Gboard), dialer, SMS, contacts, calendar, clock, and calculator with private open-source alternatives.
-6. **Critical Components Preserved and Tested:** System UI, Motorola Launcher3 (QuickStep navigation gestures), camera hardware drivers, banking applications (Banco Inter and Nubank), and user-preserved apps (**Gemini**, **Fruit Merge**, **Period Calendar**) were preserved and included in the reported functional checks. No Play Integrity issue was reported during the documented session; this is not a guarantee of future behavior.
+5. **FOSS alternatives:** Replaced the applications listed in the report with open-source alternatives. FOSS status does not, by itself, imply an absence of network communication; permissions and connections must be assessed individually.
+6. **Critical components and user choices:** System UI, Motorola Launcher3 (QuickStep gestures), camera components, and requested applications were retained according to the recorded inventory and tests. Banco Inter and Nubank were checked during the documented session; this does not guarantee future compatibility or constitute general device homologation.
 
 ---
 
@@ -48,9 +48,9 @@ The procedure was conducted entirely without root privileges, using the official
 - **Total Cataloged Packages:** 486 packages
 - **Neutralized Packages:** 155 packages (67 stock-disabled + 88 debloated/isolated via ADB)
 - **Active Packages for User 0:** 343 packages (including 12 user-installed FOSS alternatives)
-- **Free Available RAM:** Increased from ~2,750 MB to **~4,153 MB to 4,573 MB free** (**+1.40 GB to +1.82 GB free RAM**, a **+50.9% to +66.3%** improvement)
-- **Active Background Processes:** Reduced from 66 to 39 running daemons (-27 daemons terminated from RAM)
-- **Functional Validation:** The source report records successful checks for phone calls, SMS, biometrics, Wi-Fi, 4G/5G, camera, and Brazilian banking apps during the documented session; results are not a guarantee for other firmware versions or future updates.
+- **Available RAM:** The documented snapshots recorded approximately 2,750 MB before and 4,153 MB to 4,573 MB afterward. The observed difference depends on collection conditions and does not establish a permanent gain or exclusive causation by debloating.
+- **Running processes:** The recorded count decreased from 66 to 39 between the compared snapshots. This describes the observed states and does not prove that 27 services were permanently removed.
+- **Recorded functional checks:** Phone calls, SMS, biometrics, Wi-Fi, 4G/5G, camera, Pix, and banking apps were checked during the documented session. Results are limited to the device, build, configuration, and test time.
 
 ---
 

@@ -35,11 +35,11 @@ Este diretório contém a documentação técnica integral, inventários de paco
 O procedimento foi realizado sem privilégios de root, utilizando estritamente a interface **Android Debug Bridge (ADB)** com autorização expressa do proprietário:
 
 1. **Mapeamento Exaustivo:** Todos os 486 pacotes presentes na ROM de fábrica foram catalogados e classificados tecnicamente.
-2. **Neutralização de Rastreamento e Telemetria:** Desativação de daemons diagnósticos OEM da Motorola, telemetria SoC da MediaTek, histórico contínuo de localização 24/7 do Google e escuta passiva de microfone em hardware DSP RISCV ("Ok Google" / "Hey Google").
-3. **Eliminação de Adware e Droppers Comerciais:** Desinstalação para o Usuário 0 de módulos com permissões abusivas de instalação de apps em background (`Digital Turbine Ignite`, `ironSource AppCloud`, `Meta Preloads`).
+2. **Componentes de diagnóstico e localização:** Desativação de pacotes identificados no inventário como relacionados a diagnóstico OEM e serviços de localização. Não foi apresentada captura de tráfego que comprove interrupção integral de telemetria, nem evidência independente que permita afirmar controle sobre escuta em hardware DSP.
+3. **Agentes comerciais pré-instalados:** Desinstalação para o Usuário 0 dos pacotes identificados como `Digital Turbine Ignite`, `ironSource AppCloud` e `Meta Preloads`. O efeito documentado limita-se ao estado desses pacotes no Usuário 0.
 4. **Sandboxing de Permissões Críticas:** Revogação de permissão de satélite (`ACCESS_FINE_LOCATION`) em 19 aplicativos comerciais, delivery e birôs de crédito.
-5. **Migração para Alternativas FOSS:** Substituição transparente do teclado proprietário (Gboard), discador, SMS, contatos, agenda, calculadora e gerenciador de arquivos por aplicativos livres sem conexão à internet.
-6. **Preservação de Componentes Críticos e Escolhas do Usuário:** Proteção total do System UI, Motorola Launcher3 (gestos QuickStep), drivers de câmera, e aplicativos expressamente solicitados: **Gemini** (com preservação do app Google hospedeiro), **Fruit Merge**, **Calendário Menstrual** e **bancos** (Banco Inter e Nubank com Play Integrity mantido e operacionais na sessão).
+5. **Migração para alternativas FOSS:** Substituição dos aplicativos listados no relatório por alternativas de código aberto. A classificação como FOSS não implica, por si só, ausência de comunicação de rede; permissões e conexões devem ser avaliadas individualmente.
+6. **Componentes críticos e escolhas do usuário:** System UI, Motorola Launcher3 (gestos QuickStep), componentes de câmera e aplicativos solicitados foram mantidos conforme o inventário e os testes registrados. Banco Inter e Nubank foram verificados durante a sessão; isso não garante compatibilidade futura nem equivale a uma homologação geral do aparelho.
 
 ---
 
@@ -48,9 +48,9 @@ O procedimento foi realizado sem privilégios de root, utilizando estritamente a
 - **Pacotes Catalogados no Firmware:** 486 pacotes
 - **Pacotes Neutralizados:** 155 pacotes (67 desativados de fábrica + 88 neutralizados via ADB)
 - **Pacotes Ativos no Usuário 0:** 343 pacotes (incluindo 12 novos aplicativos FOSS)
-- **Memória RAM Livre:** Aumento de ~2.750 MB para **~4.153 MB a 4.573 MB livres** (**+1,40 GB a +1,82 GB de RAM disponível**, ganho de **+50.9% a +66.3%**)
-- **Processos Residentes em Background:** Redução de 66 para 39 processos ativos (-27 daemons eliminados da RAM)
-- **Status Funcional:** Testado e aprovado em chamadas, SMS, biometria, Wi-Fi, 4G/5G, câmera, Pix e bancos.
+- **Memória RAM disponível:** Os snapshots documentados registraram aproximadamente 2.750 MB antes e 4.153 MB a 4.573 MB depois. A diferença observada depende das condições de coleta e não demonstra ganho permanente nem causalidade exclusiva do debloat.
+- **Processos em execução:** A contagem registrada caiu de 66 para 39 entre os snapshots comparados. Isso descreve os estados observados, não comprova eliminação permanente de 27 serviços.
+- **Testes funcionais registrados:** chamadas, SMS, biometria, Wi-Fi, 4G/5G, câmera, Pix e aplicativos bancários foram verificados na sessão documentada. Os resultados são limitados ao aparelho, build, configuração e momento dos testes.
 
 ---
 
