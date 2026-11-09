@@ -3,7 +3,7 @@
 
 Verifica:
 1. Termos absolutistas ou causais sem qualificação (não medido/pendente/hipótese/evidência).
-2. Conformidade de exceções com data/claims_allowlist.json (com categoria A/B e justificativa).
+2. Conformidade de exceções com data/claims_allowlist.json (com categoria A/B e justificativa obrigatória).
 3. Esquema canônico de métricas em comparativo.json e metrics.json.
 """
 
@@ -18,10 +18,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 DEFAULT_TERMS = [
-    r"erradica",
-    r"elimina",
+    r"erradic\w*",
+    r"elimin\w*",
     r"interrupção completa",
-    r"neutraliz",
+    r"neutraliz\w*",
     r"bloqueio total",
     r"24 horas",
     r"24/7",
@@ -30,8 +30,7 @@ DEFAULT_TERMS = [
     r"espionagem",
     r"spyware",
     r"adware",
-    r"eradicat",
-    r"eliminat",
+    r"eradicat\w*",
     r"completely",
     r"stops tracking",
 ]
@@ -54,14 +53,43 @@ FORBIDDEN_COUNT_EFFECTS = [
 COUNT_EFFECTS_PATTERN = re.compile(r"(?i)(?:" + "|".join(FORBIDDEN_COUNT_EFFECTS) + r")")
 
 
-def load_allowlist(allowlist_path: Path) -> list[dict]:
+def load_allowlist(allowlist_path: Path) -> tuple[list[dict], list[str]]:
+    """Carrega e valida entradas da allowlist. Retorna (entradas_validas, erros)."""
     if not allowlist_path.is_file():
-        return []
+        return [], []
     try:
         data = json.loads(allowlist_path.read_text(encoding="utf-8"))
-        return data.get("entries", [])
-    except Exception:
-        return []
+        entries = data.get("entries", [])
+    except Exception as exc:
+        return [], [f"{allowlist_path}: erro ao decodificar JSON ({exc})"]
+
+    valid_entries: list[dict] = []
+    errors: list[str] = []
+    for idx, entry in enumerate(entries):
+        path = entry.get("path")
+        term = entry.get("term")
+        cat = entry.get("category")
+        rat = entry.get("rationale")
+
+        if not path or not term:
+            errors.append(f"{allowlist_path}: entry[{idx}] ausente de 'path' ou 'term'")
+            continue
+
+        if cat not in ("A", "B"):
+            errors.append(
+                f"{allowlist_path}: entry[{idx}] ('{term}' em {path}) categoria inválida: {cat!r} (esperado 'A' ou 'B')"
+            )
+            continue
+
+        if not isinstance(rat, str) or not rat.strip():
+            errors.append(
+                f"{allowlist_path}: entry[{idx}] ('{term}' em {path}) justificativa/rationale ausente ou vazia"
+            )
+            continue
+
+        valid_entries.append(entry)
+
+    return valid_entries, errors
 
 
 def is_allowlisted(
@@ -69,6 +97,9 @@ def is_allowlisted(
 ) -> bool:
     for entry in allowlist_entries:
         if entry.get("path") != rel_path:
+            continue
+        # Categoria A ou B e justificativa preenchida são obrigatórias para honrar a exceção
+        if entry.get("category") not in ("A", "B") or not str(entry.get("rationale", "")).strip():
             continue
         entry_term = entry.get("term", "")
         if entry_term.lower() not in term.lower() and term.lower() not in entry_term.lower():
@@ -87,7 +118,8 @@ def validate_claims(
 ) -> tuple[int, list[str]]:
     errors: list[str] = []
     checks = 0
-    allowlist = load_allowlist(allowlist_path)
+    allowlist, allowlist_errors = load_allowlist(allowlist_path)
+    errors.extend(allowlist_errors)
 
     target_extensions = (".md", ".json", ".txt")
     for path in sorted(base_dir.rglob("*")):
@@ -196,10 +228,20 @@ def validate_metrics_json(
                             errors.append(f"{rel}: metric[{idx}] '{ind}' arquivo de evidência inexistente: {ev_rel}")
 
             if kind == "count":
-                desc = (str(ind) + " " + str(m.get("description", "")) + " " + str(m.get("variation", ""))).lower()
+                fields_to_check = [
+                    str(ind),
+                    str(m.get("description", "")),
+                    str(m.get("variation", "")),
+                    str(m.get("before", "")),
+                    str(m.get("after", "")),
+                    str(m.get("limitations", "")),
+                ]
+                desc = " ".join(fields_to_check).lower()
                 m_effect = COUNT_EFFECTS_PATTERN.search(desc)
                 if m_effect:
-                    errors.append(f"{rel}: metric[{idx}] '{ind}' métrica do tipo 'count' não pode alegar efeito: {m_effect.group(0)}")
+                    errors.append(
+                        f"{rel}: metric[{idx}] '{ind}' métrica do tipo 'count' não pode alegar efeito em nenhum campo: {m_effect.group(0)}"
+                    )
 
     return checks, errors
 

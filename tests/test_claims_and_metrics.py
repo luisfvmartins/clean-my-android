@@ -151,6 +151,64 @@ class TestClaimsAndMetricsValidator(unittest.TestCase):
         self.assertGreater(len(errors), 0)
         self.assertTrue(any("com status=measured exige lista 'evidence' não vazia" in err for err in errors))
 
+    def test_allowlist_missing_category_or_rationale_fails_closed(self) -> None:
+        doc = self.root / "docs/audit.md"
+        doc.write_text("O procedimento elimina o rastreamento de dados.\n", encoding="utf-8")
+        allowlist = self.root / "data/claims_allowlist.json"
+        # Entrada sem category válida e sem rationale
+        allowlist.write_text(json.dumps({
+            "entries": [{
+                "path": "docs/audit.md",
+                "line": 1,
+                "term": "elimina",
+                "category": "INVALID",
+                "rationale": ""
+            }]
+        }), encoding="utf-8")
+
+        checks, errors = validate_claims(self.root, allowlist)
+        self.assertGreater(len(errors), 0)
+        # Deve acusar erro na allowlist E não suppresses o erro do termo
+        self.assertTrue(any("categoria inválida" in err for err in errors))
+        self.assertTrue(any("termo não qualificado" in err for err in errors))
+
+    def test_inflected_forms_detected(self) -> None:
+        doc = self.root / "docs/audit.md"
+        doc.write_text("A telemetria foi neutralizada e os rastreadores foram eliminados.\n", encoding="utf-8")
+        allowlist = self.root / "data/claims_allowlist.json"
+        allowlist.write_text(json.dumps({"entries": []}), encoding="utf-8")
+
+        checks, errors = validate_claims(self.root, allowlist)
+        self.assertGreater(len(errors), 0)
+        self.assertTrue(any("neutralizada" in err for err in errors))
+        self.assertTrue(any("eliminados" in err for err in errors))
+
+    def test_count_metric_claiming_effect_in_before_or_after_fails(self) -> None:
+        evidence_file = self.root / "reports/motorola/test-device/packages.txt"
+        evidence_file.write_text("package:com.example.app\n", encoding="utf-8")
+
+        comp = self.root / "reports/motorola/test-device/comparativo.json"
+        comp.write_text(json.dumps({
+            "device": "Test Device",
+            "metrics": [
+                {
+                    "indicator": "Pacotes Removidos",
+                    "kind": "count",
+                    "status": "measured",
+                    "method": "pm list packages",
+                    "before": "46 pacotes antes da economia de bateria",
+                    "after": "0 pacotes após otimização",
+                    "variation": "46 pacotes desativados",
+                    "evidence": ["reports/motorola/test-device/packages.txt"],
+                    "limitations": "Contagem direta via ADB."
+                }
+            ]
+        }), encoding="utf-8")
+
+        checks, errors = validate_metrics_json(self.root)
+        self.assertGreater(len(errors), 0)
+        self.assertTrue(any("métrica do tipo 'count' não pode alegar efeito" in err for err in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

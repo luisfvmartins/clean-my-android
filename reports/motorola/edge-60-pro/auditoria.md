@@ -151,7 +151,7 @@ A desativação em nível de usuário foi aplicada a **244 pacotes**, colocando-
 - `com.motorola.actioncore`: Daemon de gestos da Motorola (159 MB de RAM).
 
 #### C. De-Google (Substituição por Ferramentas FOSS):
-- `com.google.android.googlequicksearchbox` (Google App / Busca): Eliminou 873 MB de consumo contínuo em RAM.
+- `com.google.android.googlequicksearchbox` (Google App / Busca): Desativação liberou 873 MB de consumo contínuo em RAM (observado no inventário inicial).
 - `com.android.chrome`: Substituído pelo navegador de terceiros (`third_party_package_14`).
 - `com.google.android.youtube` e `com.google.android.apps.youtube.music`: Desativados a pedido do usuário.
 - `com.google.android.dialer` e `com.google.android.apps.messaging`: Substituídos pela suite Fossify (`org.fossify.phone` e `org.fossify.messages`).

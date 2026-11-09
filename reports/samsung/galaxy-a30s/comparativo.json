@@ -158,6 +158,7 @@
       "variation": "-0.8°C de estabilidade térmica observada em repouso pós-sessão ADB",
       "method": "dumpsys thermalservice e dumpsys battery",
       "evidence": [
+        "reports/samsung/galaxy-a30s/before/battery.txt",
         "reports/samsung/galaxy-a30s/after/battery.txt"
       ],
       "limitations": "Medição pontual em repouso conectado ao ADB; ciclo completo de estresse térmico não foi medido."
