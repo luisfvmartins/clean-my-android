@@ -90,7 +90,7 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
 - **Serviços Bancários e Governamentais (Críticos - Preservação Obrigatória):**
   - Banco Inter (`br.com.intermedium`), Nubank (`com.nu.production`), Cartões CAIXA (`br.gov.caixa.cartoes`), Mercado Pago (`com.mercadopago.wallet`).
   - Gov.br (`br.gov.meugovbr`), e-Título (`br.jus.tse.eleitoral.etitulo`), CDT Trânsito (`br.gov.serpro.cnhe`).
-  - *Decisão Técnica:* Preservados 100% funcionais, sem desativação, garantindo conformidade com autenticação bancária, biometria facial e regulamentações do BACEN e DETRAN.
+  - *Decisão Técnica:* Preservados operacionais sem modificação, mantendo a conformidade observada com autenticação bancária, biometria facial e diretrizes regulatórias.
 - **Redes Sociais e Mensageiros (Alto Risco de Privacidade):**
   - Facebook (`com.facebook.katana`), Instagram (`com.instagram.android`), TikTok (`com.zhiliaoapp.musically`), Threads (`com.instagram.barcelona`), WhatsApp (`com.whatsapp`).
   - *Decisão Técnica:* Threads desinstalado (encerra daemon persistente `InappFbnsService`). Facebook, Instagram, TikTok e WhatsApp mantidos funcionais, porém com revogação estrita de `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`, `READ_CONTACTS` e `READ_PHONE_STATE`.
@@ -134,8 +134,8 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
   - `com.android.hotwordenrollment.okgoogle` e `xgoogle`: Escuta passiva acústica de microfone desativada.
   - `com.google.android.adservices.api` e `ondevicepersonalization.services`: Privacy Sandbox desativada/bloqueada.
 - **Preservação Estratégica do Gemini e do Google App:**
-  - `com.google.android.apps.bard` (Gemini): **100% Preservado**.
-  - `com.google.android.googlequicksearchbox` (Google App): **100% Preservado**, pois a análise arquitetural de dependências do APK do Gemini comprovou que a interface e o motor do Bard/Gemini residem internamente no pacote hospedeiro da Google.
+  - `com.google.android.apps.bard` (Gemini): **Preservado sem alteração**.
+  - `com.google.android.googlequicksearchbox` (Google App): **Preservado sem alteração**, pois a análise arquitetural de dependências do APK do Gemini comprovou que a interface e o motor do Bard/Gemini residem internamente no pacote hospedeiro da Google.
 - **Preservação do GMS Core e Play Store:**
   - `com.google.android.gms` e `com.android.vending`: Mantidos ativos e íntegros, assegurando validação de licenças, push notifications via FCM e integridade do Play Protect.
 
@@ -185,7 +185,7 @@ A execução ocorreu em 14 etapas progressivas com verificação de estabilidade
 | **Memória RAM Usada (Used PSS)** | ~2.721 MB a 2.881 MB PSS | Queda sustentada de ~1 GB de processos residentes |
 | **Processos em Segundo Plano** | 39 processos ativos | -27 daemons eliminados da memória |
 | **Segurança e Privacidade Acústica** | Escuta passiva DSP e histórico 24/7 desativados | Eliminação de escuta acústica permanente |
-| **Digitação de Textos** | Teclado FUTO Keyboard 100% offline | Zero dados de digitação enviados para a nuvem |
+| **Digitação de Textos** | Teclado FUTO Keyboard com operação local offline | Zero dados de digitação enviados para a nuvem |
 
 ---
 

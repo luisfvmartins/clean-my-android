@@ -44,7 +44,7 @@ O procedimento foi executado em modo não-root via **Android Debug Bridge (ADB)*
 4. **Erradicação do Ecossistema Meta / Facebook:** Desativação de 4 componentes em segundo plano (`katana`, `system`, `appmanager`, `services`).
 5. **Desbloqueio de Throttling Samsung (GOS):** Neutralização do *Game Optimizing Service* (`com.samsung.android.game.gos`) e satélites (`gamehome`, `gametools`), eliminando a limitação artificial de frequência de CPU/GPU do Exynos 7904.
 6. **Alívio de Daemons Ociosos e Multimídia:** Desativação do *Dynamic Lock Screen*, *Story Service*, módulos de AR/Stickers (*AR Emoji*, *Live Stickers*, *Google ARCore*) e daemons de varredura (*Easy Setup BLE/Wi-Fi*, *AllShare* e *Spooler de Impressão*).
-7. **Preservação de Subsistemas Vitais:** O teclado ativo (Samsung HoneyBoard), launcher (One UI Home), subsistema telefônico/RIL/IMS e Google Play Services/Store foram 100% preservados, garantindo estabilidade e compatibilidade bancária.
+7. **Preservação de Subsistemas Vitais:** O teclado ativo (Samsung HoneyBoard), launcher (One UI Home), subsistema telefônico/RIL/IMS e Google Play Services/Store foram preservados sem modificação, mantendo a estabilidade operacional e compatibilidade bancária observadas nos testes.
 
 ---
 

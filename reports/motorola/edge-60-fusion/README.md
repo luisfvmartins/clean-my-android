@@ -39,7 +39,7 @@ O procedimento foi realizado sem privilégios de root, utilizando estritamente a
 3. **Eliminação de Adware e Droppers Comerciais:** Desinstalação para o Usuário 0 de módulos com permissões abusivas de instalação de apps em background (`Digital Turbine Ignite`, `ironSource AppCloud`, `Meta Preloads`).
 4. **Sandboxing de Permissões Críticas:** Revogação de permissão de satélite (`ACCESS_FINE_LOCATION`) em 19 aplicativos comerciais, delivery e birôs de crédito.
 5. **Migração para Alternativas FOSS:** Substituição transparente do teclado proprietário (Gboard), discador, SMS, contatos, agenda, calculadora e gerenciador de arquivos por aplicativos livres sem conexão à internet.
-6. **Preservação de Componentes Críticos e Escolhas do Usuário:** Proteção total do System UI, Motorola Launcher3 (gestos QuickStep), drivers de câmera, e aplicativos expressamente solicitados: **Gemini** (com preservação do app Google hospedeiro), **Fruit Merge**, **Calendário Menstrual** e **bancos** (Banco Inter e Nubank com Play Integrity 100% operacional).
+6. **Preservação de Componentes Críticos e Escolhas do Usuário:** Proteção total do System UI, Motorola Launcher3 (gestos QuickStep), drivers de câmera, e aplicativos expressamente solicitados: **Gemini** (com preservação do app Google hospedeiro), **Fruit Merge**, **Calendário Menstrual** e **bancos** (Banco Inter e Nubank com Play Integrity mantido e operacionais na sessão).
 
 ---
 

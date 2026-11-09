@@ -108,11 +108,11 @@ Todas as alterações foram autorizadas pelo usuário e executadas em lotes cont
 | **Pacotes Habilitados (Usuário 0)** | 391 pacotes | 343 pacotes | **-48 pacotes no Usuário 0 (-12,3%)** | `pm list packages -e` |
 | **Pacotes Desativados** | 1 pacote (de fábrica) | 47 pacotes | **+46 pacotes desativados cirurgicamente** | `pm list packages -d` |
 | **Pacotes Desinstalados (User 0)** | 0 pacotes | 2 pacotes | **2 pacotes comerciais eliminados** | `pm list packages -3` |
-| **Adware Oculto (Digital Turbine)** | Ativo com permissão de download silencioso | Neutralizado e desativado | **Eliminação de downloads não autorizados** | `pm disable-user` em `com.dti.samsung` |
+| **Adware Oculto (Digital Turbine)** | Ativo com permissão de download silencioso | Neutralizado e desativado | **Desativação do instalador silencioso** | `pm disable-user` em `com.dti.samsung` |
 | **Telemetria Central (DiagMon & IMS)**| Ativos e coletando logs | Neutralizados | **Interrupção de relatórios analíticos** | `pm disable-user` em diagmon e imslogger |
 | **Rastreamento Contínuo (Location 24/7)**| Ativo com background location | Desativado (GPS em tempo real preservado)| **Fim do rastreamento passivo contínuo** | `pm disable-user` em location.history |
-| **Serviços em Background da Meta** | 4 daemons e listeners ativos | 0 daemons ativos | **100% neutralizados** | Verificação de processo pós-disable |
-| **Throttling e GOS de Jogos** | GOS ativo e monitorando apps | GOS neutralizado | **Desbloqueio de clock nativo Exynos** | Estado `disabled-user` em GOS |
+| **Serviços em Background da Meta** | 4 daemons e listeners ativos | 0 daemons ativos | **Neutralizados no Usuário 0** | Verificação de processo pós-disable |
+| **Throttling e GOS de Jogos** | GOS ativo e monitorando apps | GOS neutralizado | **Remoção da limitação imposta pelo GOS** | Estado `disabled-user` em GOS |
 | **Alertas de Segurança Falsos** | Ativos pelo SecurityLogAgent | Silenciados com sucesso | **Eliminação de pop-ups intrusivos** | `disabled-user` em securitylogagent |
 | **Armazenamento Livre (`/data`)** | 49 GB livres (2.4 GB usados) | 49 GB livres (2.4 GB usados) | Sem variação perceptível em escala de GB | `df -h /data` |
 | **Estabilidade Térmica (AP / Bat)** | 26.0°C / 25.3°C | 25.4°C / 24.8°C | Estabilidade mantida em repouso | `dumpsys battery` e `dumpsys thermalservice` |

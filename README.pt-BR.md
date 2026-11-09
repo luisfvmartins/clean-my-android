@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validação](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.pt-BR.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Status da auditoria](docs/AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md) · [Modelo de relatório](reports/_templates/DEVICE_AUDIT_TEMPLATE.pt-BR.md) · [Contribuir](CONTRIBUTING.pt-BR.md) · [Segurança](#segurança-em-primeiro-lugar)
+[Começar](#começar-use-um-assistente-de-ia-recomendado) · [Como funciona](#como-funciona) · [Dispositivos auditados](reports/README.pt-BR.md) · [Apresentação do método e resultados](docs/APRESENTACAO_METODO_E_RESULTADOS.md) · [Estatísticas](docs/ESTATISTICAS.md) · [Evolução das contribuições](docs/EVOLUCAO_CONTRIBUICOES.md) · [Status da auditoria](docs/AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md) · [Modelo de relatório](reports/_templates/DEVICE_AUDIT_TEMPLATE.pt-BR.md) · [Contribuir](CONTRIBUTING.pt-BR.md) · [Segurança](#segurança-em-primeiro-lugar)
 
 </div>
 
@@ -114,10 +114,14 @@ A IA é o meio de trabalho recomendado, não uma autoridade sobre o aparelho: el
 
 As auditorias são específicas por aparelho e possuem diferentes níveis de validação. Consulte o [catálogo de dispositivos](reports/README.pt-BR.md) para conhecer o escopo, os arquivos e as pendências de cada relatório.
 
+<!-- BEGIN_AUDITED_DEVICES -->
 | Dispositivo | Documentação | Situação |
 |---|---|---|
 | Motorola Moto G54 5G (XT2343-1) | [Auditoria técnica](docs/AUDITORIA_MOTO_G54_5G.md) | Inventário publicado; consulte o relatório para escopo e limitações |
-| Motorola Edge 60 Pro (XT2507-1) | [Relatório e evidências](reports/motorola/edge-60-pro/) | Validação funcional e confirmação de alguns dados pendentes |
+| Motorola Edge 60 Pro (XT2507-1) | [Relatório e evidências](reports/motorola/edge-60-pro/README.md) | Validação funcional e confirmação de alguns dados pendentes |
+| Motorola Edge 60 Fusion (scout_g_sysn) | [Relatório e evidências](reports/motorola/edge-60-fusion/README.md) | Auditoria e debloat concluídos; validação funcional aprovada em chamadas, SMS, biometria e bancos. Limitação em RCS e bateria 24h pendente |
+| Samsung Galaxy A30s (SM-A307GT) | [Relatório e evidências](reports/samsung/galaxy-a30s/README.md) | Auditoria e otimização cirúrgica concluídas; 48 pacotes neutralizados em dois lotes; validação funcional aprovada (ressalva em impressão PDF) |
+<!-- END_AUDITED_DEVICES -->
 
 **A presença de um aparelho no catálogo não significa que todos os procedimentos estejam homologados para ele.** A compatibilidade de scripts é indicada separadamente e não deve ser inferida a partir de um relatório.
 
@@ -183,6 +187,7 @@ Cada Pull Request aprovado e integrado amplia a base pública de conhecimento. N
 ## Documentação e links
 
 - [Catálogo de auditorias](reports/README.pt-BR.md)
+- [Apresentação do método e resultados](docs/APRESENTACAO_METODO_E_RESULTADOS.md) · [English](docs/APRESENTACAO_METODO_E_RESULTADOS.en.md)
 - [Guia de auditoria individual](docs/USER_DEVICE_AUDIT.pt-BR.md)
 - [Instruções para IA](AI_INSTRUCTIONS.pt-BR.md)
 - [Contribuição e Pull Requests](CONTRIBUTING.pt-BR.md)
