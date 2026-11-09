@@ -27,7 +27,7 @@ flowchart LR
 
 ## 2. Status Levels and Technical Homologation
 
-To prevent reports from being misinterpreted as blanket approvals for other devices, the project implements a 5-level homologation taxonomy (detailed in [docs/AUDIT_STATUS_AND_HOMOLOGATION.md](file:///home/luisfvmartins/clean-my-android/docs/AUDIT_STATUS_AND_HOMOLOGATION.md)):
+To prevent reports from being misinterpreted as blanket approvals for other devices, the project implements a 5-level homologation taxonomy (detailed in [audit status and homologation standard](AUDIT_STATUS_AND_HOMOLOGATION.md)):
 
 | Level | Classification | Minimum Evidence | Permitted Claim |
 | :---: | :--- | :--- | :--- |
