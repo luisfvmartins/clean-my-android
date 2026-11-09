@@ -21,41 +21,115 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Exceção histórica auditada: desativação do printspooler no A30s causou a perda de 'Salvar como PDF',
-# documentada como limitação honesta e justificativa para inclusão na lista de protegidos futuros.
-HISTORICAL_EXCEPTIONS = {
-    # Exceção histórica auditada: desativação do printspooler no A30s causou a perda de 'Salvar como PDF',
-    # documentada como limitação honesta e justificativa para inclusão na lista de protegidos futuros.
-    ("reports/samsung/galaxy-a30s/changes/disabled-packages.txt", "com.android.printspooler"),
+def load_audited_exceptions(root_dir: Path) -> tuple[dict[tuple[str, str], dict], list[str]]:
+    """Carrega e valida as exceções documentadas em data/audited_exceptions.json."""
+    path = root_dir / "data/audited_exceptions.json"
+    if not path.is_file():
+        return {}, [f"{path.relative_to(root_dir)}: arquivo não encontrado"]
 
-    # Exceções históricas do Edge 60 Pro: debloat agressivo retrospectivo documentado como Nível 2
-    # ("validação funcional pendente", sem suporte a --apply). Os 18 pacotes foram catalogados com advertência
-    # crítica explícita em audit.md, comparison-report.md e README.md.
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.bluetoothmidiservice"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.carrierdefaultapp"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.companiondevicemanager"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.contacts"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.dialer"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.emergency"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.printspooler"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.providers.contactkeys"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.providers.userdictionary"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.settings.intelligence"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.simappdialog"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.stk"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.vending"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.dolby.daxservice"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.google.android.apps.messaging"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.google.android.dialer"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.motorola.dolby.dolbyui"),
-    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.motorola.nfwlocationattribution"),
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {}, [f"{path.relative_to(root_dir)}: JSON inválido ({exc})"]
 
-    # Exceções funcionais auditadas do Edge 60 Fusion (Nível 3): substituição deliberada e testada
-    # dos apps padrão de discador e mensagens por suíte FOSS (Fossify Phone e Fossify Messages),
-    # com permissões de RoleManager e testes funcionais de voz e SMS operacionais confirmados na sessão.
-    ("reports/motorola/edge-60-fusion/changes/disabled-packages.txt", "com.google.android.dialer"),
-    ("reports/motorola/edge-60-fusion/changes/disabled-packages.txt", "com.google.android.apps.messaging"),
-}
+    exceptions_map: dict[tuple[str, str], dict] = {}
+    errors: list[str] = []
+    seen: set[tuple[str, str]] = set()
+
+    for idx, item in enumerate(data.get("exceptions", [])):
+        device = item.get("device")
+        pkg = item.get("package")
+        reason = item.get("reason")
+        status = item.get("status")
+        decided_by = item.get("decided_by")
+        decision_date = item.get("decision_date")
+        functional_risk = item.get("functional_risk")
+
+        if not device or not pkg:
+            errors.append(f"audited_exceptions[{idx}]: 'device' e 'package' são obrigatórios")
+            continue
+
+        pair = (device, pkg)
+        if pair in seen:
+            errors.append(f"audited_exceptions: exceção duplicada para {pair}")
+            continue
+        seen.add(pair)
+
+        if not reason:
+            errors.append(f"audited_exceptions[{idx}]: 'reason' é obrigatório para {pair}")
+        if status not in {"open", "mitigated", "accepted"}:
+            errors.append(
+                f"audited_exceptions[{idx}]: 'status' inválido ({status}) para {pair} (esperado: open, mitigated, accepted)"
+            )
+        if not decided_by:
+            errors.append(f"audited_exceptions[{idx}]: 'decided_by' é obrigatório para {pair}")
+        if not decision_date:
+            errors.append(f"audited_exceptions[{idx}]: 'decision_date' é obrigatório para {pair}")
+        if not functional_risk:
+            errors.append(f"audited_exceptions[{idx}]: 'functional_risk' é obrigatório para {pair}")
+
+        exceptions_map[pair] = item
+
+    return exceptions_map, errors
+
+
+def report_open_exceptions(exceptions_map: dict[tuple[str, str], dict]) -> None:
+    """Imprime aviso visível das exceções abertas por dispositivo."""
+    open_by_device: dict[str, list[str]] = {}
+    for (dev, pkg), item in exceptions_map.items():
+        if item.get("status") == "open":
+            parts = dev.split("/")
+            dev_name = parts[2] if len(parts) > 2 else dev
+            open_by_device.setdefault(dev_name, []).append(pkg)
+
+    total_open = sum(len(pkgs) for pkgs in open_by_device.values())
+    if total_open > 0:
+        print(f"AVISO: {total_open} exceções abertas catalogadas em data/audited_exceptions.json:")
+        for dname, pkgs in sorted(open_by_device.items()):
+            print(
+                f"  - {dname} ({len(pkgs)} abertas): {', '.join(sorted(pkgs)[:5])}{'...' if len(pkgs) > 5 else ''}"
+            )
+
+
+def validate_role_holders_for_risky_exceptions(
+    root_dir: Path, exceptions_map: dict[tuple[str, str], dict]
+) -> tuple[int, list[str]]:
+    """Valida que exceções críticas (dialer, sms, contacts) possuem titular de papel em functional-tests.json."""
+    checks = 0
+    errors: list[str] = []
+    CRITICAL_RISKS = {"dialer", "sms", "contacts"}
+
+    for (device_rel_file, pkg), item in exceptions_map.items():
+        risk = item.get("functional_risk")
+        if risk in CRITICAL_RISKS:
+            checks += 1
+            dev_path = (root_dir / device_rel_file).parent.parent
+            func_json_path = dev_path / "functional-tests.json"
+            if not func_json_path.is_file():
+                errors.append(
+                    f"{func_json_path.relative_to(root_dir)}: arquivo ausente para validar titular de papel em exceção {pkg} (risco: {risk})"
+                )
+                continue
+
+            try:
+                func_data = json.loads(func_json_path.read_text(encoding="utf-8"))
+            except Exception as exc:
+                errors.append(f"{func_json_path.relative_to(root_dir)}: JSON inválido ({exc})")
+                continue
+
+            role_holders = func_data.get("role_holders", {})
+            has_in_role_holders = risk in role_holders
+            has_in_tests = any(
+                risk in str(t.get("test_name", "")).lower() or risk in str(t.get("role", "")).lower()
+                for t in func_data.get("tests", [])
+            )
+
+            if not (has_in_role_holders or has_in_tests):
+                errors.append(
+                    f"{func_json_path.relative_to(root_dir)}: entrada de titular de papel ('{risk}') ausente para exceção auditada {pkg}"
+                )
+
+    return checks, errors
 
 
 def load_protected_packages(root_dir: Path) -> set[str]:
@@ -129,7 +203,9 @@ def load_before_inventory_packages(device_dir: Path) -> set[str]:
     return packages
 
 
-def validate_device_changes(root_dir: Path, protected: set[str]) -> tuple[int, list[str]]:
+def validate_device_changes(
+    root_dir: Path, protected: set[str], exceptions_map: dict[tuple[str, str], dict]
+) -> tuple[int, list[str]]:
     checks = 0
     errors: list[str] = []
 
@@ -182,7 +258,7 @@ def validate_device_changes(root_dir: Path, protected: set[str]) -> tuple[int, l
             for p in parse_packages_from_file(change_file):
                 checks += 1
                 if p in protected:
-                    if (rel_file, p) in HISTORICAL_EXCEPTIONS:
+                    if (rel_file, p) in exceptions_map:
                         continue
                     errors.append(f"{rel_file}: pacote protegido '{p}' consta na lista de alterações!")
 
@@ -400,7 +476,17 @@ def main() -> int:
     total_checks = 0
     all_errors: list[str] = []
 
-    c1, errs1 = validate_device_changes(root_dir, protected)
+    exceptions_map, exc_errs = load_audited_exceptions(root_dir)
+    all_errors.extend(exc_errs)
+    total_checks += len(exceptions_map)
+
+    report_open_exceptions(exceptions_map)
+
+    c_roles, role_errs = validate_role_holders_for_risky_exceptions(root_dir, exceptions_map)
+    total_checks += c_roles
+    all_errors.extend(role_errs)
+
+    c1, errs1 = validate_device_changes(root_dir, protected, exceptions_map)
     total_checks += c1
     all_errors.extend(errs1)
 

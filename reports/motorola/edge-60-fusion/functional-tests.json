@@ -2,6 +2,10 @@
   "device": "Motorola Edge 60 Fusion (scout_g_sysn)",
   "homologation_level": 3,
   "audit_date": "2026-11-06",
+  "role_holders": {
+    "dialer": "org.fossify.phone",
+    "sms": "org.fossify.messages"
+  },
   "tests": [
     {
       "test_name": "Telefonia Celular e Chamadas de Voz",

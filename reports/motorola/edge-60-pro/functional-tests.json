@@ -2,6 +2,11 @@
   "device": "Motorola Edge 60 Pro (XT2507-1)",
   "homologation_level": 2,
   "audit_date": "2026-11-06",
+  "role_holders": {
+    "dialer": "not_tested",
+    "sms": "not_tested",
+    "contacts": "not_tested"
+  },
   "tests": [
     {
       "test_name": "Telefonia Celular e Chamadas de Voz",

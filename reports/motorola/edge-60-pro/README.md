@@ -1,5 +1,24 @@
 # 📱 Relatório Consolidado de Auditoria e Debloat — Motorola Edge 60 Pro (`XT2507-1`)
 
+> [!CAUTION]
+> **AVISO CRÍTICO — COMPONENTES ESSENCIAIS DESATIVADOS E VALIDAÇÃO PENDENTE**
+>
+> Este aparelho possui **18 pacotes essenciais desativados** em `changes/disabled-packages.txt` que conflitam com as regras de segurança do projeto (`data/protected_essential_packages.txt`), incluindo:
+> - **Discador e Telefonia:** `com.android.dialer`, `com.google.android.dialer`
+> - **Mensagens / SMS:** `com.google.android.apps.messaging`
+> - **Contatos:** `com.android.contacts`, `com.android.providers.contactkeys`
+> - **Google Play Store:** `com.android.vending`
+> - **Serviços de Emergência:** `com.android.emergency`, `com.motorola.nfwlocationattribution`
+> - **SIM Card e Operadora:** `com.android.stk`, `com.android.simappdialog`, `com.android.carrierdefaultapp`
+>
+> A validação funcional do dispositivo está **pendente** (Nível 2 de homologação).
+> Para conferir os titulares atuais de cada papel sem alterar o estado do dispositivo, execute os comandos **somente de leitura**:
+> ```bash
+> adb shell cmd role get-role-holders android.app.role.DIALER
+> adb shell cmd role get-role-holders android.app.role.SMS
+> adb shell pm list packages -d --user 0
+> ```
+> A reativação individual de qualquer componente deve ser feita via `./scripts/restore.sh <pacote>`, sob critério e decisão do proprietário.
 
 > **Nota de privacidade:** os identificadores dos 50 registros classificados como componentes de terceiros foram pseudonimizados. Os caminhos específicos de instalação em `/data/app` foram normalizados. As contagens agregadas e os estados registrados dos pacotes foram preservados. O inventário de origem não permite determinar se esses componentes foram instalados pelo usuário ou pré-carregados por um fornecedor.
 

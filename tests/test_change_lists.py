@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Testes de conformidade de listas de mudanças e registros de dados (C-1)."""
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,6 +9,7 @@ from pathlib import Path
 from scripts.check_change_lists import (
     check_snapshot_not_consumed_by_scripts,
     is_snapshot_or_candidate_file,
+    load_audited_exceptions,
     load_notes_protected_packages,
     validate_data_disabled_lists,
 )
@@ -81,6 +83,90 @@ class TestChangeListsAndDataSnapshots(unittest.TestCase):
 
         errors = check_snapshot_not_consumed_by_scripts(self.root, "test_disabled_packages.txt")
         self.assertTrue(any("faz referência indevida" in err for err in errors))
+
+    # --- C-5 Audited Exceptions Tests ---
+
+    def test_exception_missing_decided_by_fails(self):
+        """Exceção sem 'decided_by' falha."""
+        exc_file = self.root / "data/audited_exceptions.json"
+        exc_file.write_text(json.dumps({
+            "exceptions": [{
+                "device": "reports/motorola/mock/disabled.txt",
+                "package": "com.android.dialer",
+                "status": "open",
+                "reason": "motivo de teste",
+                "decision_date": "2026-11-09",
+                "functional_risk": "dialer"
+            }]
+        }), encoding="utf-8")
+
+        exceptions_map, errors = load_audited_exceptions(self.root)
+        self.assertTrue(any("decided_by" in err for err in errors))
+
+    def test_exception_missing_functional_risk_fails(self):
+        """Exceção sem 'functional_risk' falha."""
+        exc_file = self.root / "data/audited_exceptions.json"
+        exc_file.write_text(json.dumps({
+            "exceptions": [{
+                "device": "reports/motorola/mock/disabled.txt",
+                "package": "com.android.dialer",
+                "status": "open",
+                "reason": "motivo de teste",
+                "decided_by": "owner",
+                "decision_date": "2026-11-09"
+            }]
+        }), encoding="utf-8")
+
+        exceptions_map, errors = load_audited_exceptions(self.root)
+        self.assertTrue(any("functional_risk" in err for err in errors))
+
+    def test_exception_duplicate_fails(self):
+        """Exceção duplicada falha."""
+        exc_file = self.root / "data/audited_exceptions.json"
+        exc_file.write_text(json.dumps({
+            "exceptions": [
+                {
+                    "device": "reports/motorola/mock/disabled.txt",
+                    "package": "com.android.dialer",
+                    "status": "open",
+                    "reason": "motivo 1",
+                    "decided_by": "owner",
+                    "decision_date": "2026-11-09",
+                    "functional_risk": "dialer"
+                },
+                {
+                    "device": "reports/motorola/mock/disabled.txt",
+                    "package": "com.android.dialer",
+                    "status": "open",
+                    "reason": "motivo 2",
+                    "decided_by": "owner",
+                    "decision_date": "2026-11-09",
+                    "functional_risk": "dialer"
+                }
+            ]
+        }), encoding="utf-8")
+
+        exceptions_map, errors = load_audited_exceptions(self.root)
+        self.assertTrue(any("duplicada" in err for err in errors))
+
+    def test_exception_valid_passes(self):
+        """Exceção válida com todos os campos passa."""
+        exc_file = self.root / "data/audited_exceptions.json"
+        exc_file.write_text(json.dumps({
+            "exceptions": [{
+                "device": "reports/motorola/mock/disabled.txt",
+                "package": "com.android.dialer",
+                "status": "open",
+                "reason": "motivo valido",
+                "decided_by": "owner",
+                "decision_date": "2026-11-09",
+                "functional_risk": "dialer"
+            }]
+        }), encoding="utf-8")
+
+        exceptions_map, errors = load_audited_exceptions(self.root)
+        self.assertEqual(errors, [])
+        self.assertIn(("reports/motorola/mock/disabled.txt", "com.android.dialer"), exceptions_map)
 
 
 if __name__ == "__main__":

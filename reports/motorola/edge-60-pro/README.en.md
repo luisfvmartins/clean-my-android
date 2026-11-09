@@ -1,5 +1,24 @@
 # Motorola Edge 60 Pro — Audit Summary
 
+> [!CAUTION]
+> **CRITICAL WARNING — DISABLED ESSENTIAL COMPONENTS AND PENDING VALIDATION**
+>
+> This device has **18 essential packages disabled** in `changes/disabled-packages.txt` that conflict with current project safety rules (`data/protected_essential_packages.txt`), including:
+> - **Dialer & Telephony:** `com.android.dialer`, `com.google.android.dialer`
+> - **Messaging / SMS:** `com.google.android.apps.messaging`
+> - **Contacts:** `com.android.contacts`, `com.android.providers.contactkeys`
+> - **Google Play Store:** `com.android.vending`
+> - **Emergency Services:** `com.android.emergency`, `com.motorola.nfwlocationattribution`
+> - **SIM Card & Carrier:** `com.android.stk`, `com.android.simappdialog`, `com.android.carrierdefaultapp`
+>
+> Functional validation of the device is currently **pending** (Homologation Level 2).
+> To check current role holders without altering device state, run these **read-only** commands:
+> ```bash
+> adb shell cmd role get-role-holders android.app.role.DIALER
+> adb shell cmd role get-role-holders android.app.role.SMS
+> adb shell pm list packages -d --user 0
+> ```
+> Individual re-enablement of any component is performed via `./scripts/restore.sh <package>`, at the sole discretion of the device owner.
 
 > **Privacy note:** the 50 entries classified as third-party components have pseudonymized package identifiers. Installation-specific `/data/app` paths have been normalized. Aggregate inventory counts and recorded package states are preserved. The source inventory does not establish whether these components were user-installed or preloaded by a vendor.
 

@@ -1,0 +1,195 @@
+{
+  "version": "1.0",
+  "description": "Exceções auditadas para pacotes protegidos essenciais desativados em aparelhos específicos.",
+  "exceptions": [
+    {
+      "device": "reports/samsung/galaxy-a30s/changes/disabled-packages.txt",
+      "package": "com.android.printspooler",
+      "status": "mitigated",
+      "reason": "Desativação histórica no A30s causou perda da função de exportação 'Salvar como PDF', documentada como limitação honesta e justificativa para inclusão na lista de protegidos.",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-08",
+      "functional_risk": "print-spooler"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.bluetoothmidiservice",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "bluetooth-midi"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.carrierdefaultapp",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "carrier-default"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.companiondevicemanager",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "wearable-companion"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.contacts",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "contacts"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.dialer",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "dialer"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.emergency",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "emergency-info"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.printspooler",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "print-spooler"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.providers.contactkeys",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "contacts"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.providers.userdictionary",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "keyboard-dictionary"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.settings.intelligence",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "settings-search"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.simappdialog",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "sim-toolkit"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.stk",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "sim-toolkit"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.android.vending",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "play-store"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.dolby.daxservice",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "audio-effects"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.google.android.apps.messaging",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "sms"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.google.android.dialer",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "dialer"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.motorola.dolby.dolbyui",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "audio-effects"
+    },
+    {
+      "device": "reports/motorola/edge-60-pro/changes/disabled-packages.txt",
+      "package": "com.motorola.nfwlocationattribution",
+      "status": "open",
+      "reason": "Debloat retrospectivo agressivo sem validação funcional no Edge 60 Pro (Nível 2).",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "emergency-location"
+    },
+    {
+      "device": "reports/motorola/edge-60-fusion/changes/disabled-packages.txt",
+      "package": "com.google.android.dialer",
+      "status": "mitigated",
+      "reason": "Substituição deliberada e testada do discador padrão por Fossify Phone (FOSS), validada em chamadas de voz.",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "dialer"
+    },
+    {
+      "device": "reports/motorola/edge-60-fusion/changes/disabled-packages.txt",
+      "package": "com.google.android.apps.messaging",
+      "status": "mitigated",
+      "reason": "Substituição deliberada e testada do app de mensagens por Fossify Messages (FOSS), validada em envio e recepção de SMS.",
+      "decided_by": "owner (relatado pelo agente; aguardando confirmação do Luís)",
+      "decision_date": "2026-11-06",
+      "functional_risk": "sms"
+    }
+  ]
+}
