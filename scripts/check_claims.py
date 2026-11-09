@@ -392,31 +392,42 @@ def validate_self_audit_rigor(root_dir: Path) -> tuple[int, list[str]]:
             cells = [c.strip() for c in line.split("|")]
             if len(cells) >= 6:
                 source_cell = ""
-                for c in cells[3:]:
-                    if any(
-                        kw in c.lower()
-                        for kw in [
-                            "http://",
-                            "https://",
-                            "reports/",
-                            "docs/",
-                            "data/",
-                            "firmware",
-                            "dumpsys",
-                            "gapps",
-                            "play",
-                            "aosp",
-                        ]
-                    ):
-                        source_cell = c
-                        break
+                if len(cells) >= 8:
+                    source_cell = cells[5]
+                else:
+                    for c in cells[3:]:
+                        if any(
+                            kw in c.lower()
+                            for kw in [
+                                "http://",
+                                "https://",
+                                "reports/",
+                                "docs/",
+                                "data/",
+                                "firmware",
+                                "dumpsys",
+                                "gapps",
+                                "play",
+                                "aosp",
+                            ]
+                        ):
+                            source_cell = c
+                            break
                 if source_cell:
-                    has_link = bool(
-                        re.search(r"\[.*?\]\((https?://[^)]+|[a-zA-Z0-9_\-\./]+)\)", source_cell)
-                    )
                     has_url = bool(re.search(r"https?://", source_cell))
-                    has_repo_path = any(
-                        (root_dir / part.strip("`(),[] ")).exists()
+                    has_link = bool(
+                        re.search(r"\[.*?\]\((https?://[^)]+|[a-zA-Z0-9_\-\./#]+)\)", source_cell)
+                    )
+                    link_match = re.search(r"\[.*?\]\(([^)]+)\)", source_cell)
+                    target = link_match.group(1).split("#")[0] if link_match else ""
+                    if target.startswith("../"):
+                        target_path = (p.parent / target).resolve()
+                    elif target:
+                        target_path = (root_dir / target).resolve()
+                    else:
+                        target_path = None
+                    has_repo_path = bool(target_path and target_path.is_file()) or any(
+                        (root_dir / part.strip("`(),[] ").split("#")[0]).exists()
                         for part in source_cell.split()
                         if "/" in part
                     )
@@ -450,6 +461,10 @@ def main() -> int:
     c3, errs3 = validate_ci_platform_claims(base_dir)
     total_checks += c3
     all_errors.extend(errs3)
+
+    c4, errs4 = validate_self_audit_rigor(base_dir)
+    total_checks += c4
+    all_errors.extend(errs4)
 
     if all_errors:
         print(f"FALHA: {len(all_errors)} violação(ões) de alegações/métricas:")

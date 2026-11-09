@@ -8,6 +8,7 @@ Regras verificadas:
 4. SELF_AUDIT rejeita 'Agree' e fontes genéricas sem caminho no repositório ou URL.
 """
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -118,6 +119,52 @@ class TestValidatorHardening(unittest.TestCase):
         )
         checks, errors = validate_self_audit_rigor(self.root)
         self.assertEqual(errors, [])
+
+    def test_sample_self_audit_missing_evidence_raises(self):
+        """sample_self_audit falha se veredito supported-* ou contradicted não contiver evidence."""
+        from scripts.sample_self_audit import load_and_validate_verdicts
+
+        sample = [("Moto G54", "reports/moto-g54/changes.txt", "com.example.pkg")]
+        verdicts_file = self.root / "docs/test_verdicts.json"
+        verdicts_file.parent.mkdir(parents=True, exist_ok=True)
+        verdicts_file.write_text(
+            json.dumps({
+                "items": [
+                    {
+                        "device": "Moto G54",
+                        "package": "com.example.pkg",
+                        "verdict": "supported-by-repo-data",
+                        "evidence": "",
+                    }
+                ]
+            }),
+            encoding="utf-8",
+        )
+        with self.assertRaises(ValueError):
+            load_and_validate_verdicts(verdicts_file, sample, self.root)
+
+    def test_sample_self_audit_invalid_verdict_raises(self):
+        """sample_self_audit falha se veredito for inválido (e.g. 'Agree')."""
+        from scripts.sample_self_audit import load_and_validate_verdicts
+
+        sample = [("Moto G54", "reports/moto-g54/changes.txt", "com.example.pkg")]
+        verdicts_file = self.root / "docs/test_verdicts.json"
+        verdicts_file.parent.mkdir(parents=True, exist_ok=True)
+        verdicts_file.write_text(
+            json.dumps({
+                "items": [
+                    {
+                        "device": "Moto G54",
+                        "package": "com.example.pkg",
+                        "verdict": "Agree",
+                        "evidence": "docs/evidence.txt",
+                    }
+                ]
+            }),
+            encoding="utf-8",
+        )
+        with self.assertRaises(ValueError):
+            load_and_validate_verdicts(verdicts_file, sample, self.root)
 
 
 if __name__ == "__main__":
