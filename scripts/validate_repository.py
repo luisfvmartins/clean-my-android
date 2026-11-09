@@ -250,7 +250,7 @@ def validate_markdown_links() -> None:
 
 
 
-def validate_bilingual_parity() -> None:
+def validate_bilingual_structure() -> None:
     global checks
     checks += 1
     result = subprocess.run(
@@ -262,7 +262,7 @@ def validate_bilingual_parity() -> None:
     )
     if result.returncode:
         detail = (result.stderr or result.stdout).strip()
-        fail(f"paridade bilíngue violada: {detail}")
+        fail(f"validação estrutural bilíngue falhou: {detail}")
 
 
 def validate_homologation_levels_and_evidence() -> None:
@@ -359,7 +359,7 @@ def main() -> int:
     validate_protected_packages()
     validate_statistics()
     validate_markdown_links()
-    validate_bilingual_parity()
+    validate_bilingual_structure()
     validate_homologation_levels_and_evidence()
 
     if errors:
