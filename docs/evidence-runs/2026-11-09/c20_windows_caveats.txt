@@ -1,0 +1,17 @@
+# Check ID: c20_windows_caveats
+# Description: Windows/WSL2 and line ending caveats documented / Ressalvas de Windows/WSL2 e CRLF documentadas
+# Timestamp: 2026-11-09T04:15:23.873157+00:00
+# Environment: Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+# Bash: GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)
+# Bash 3.2: GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
+# Python: Python 3.12.3
+# ShellCheck: version: 0.10.0
+# Command: python3 -c 'from pathlib import Path; p=(Path("docs/PLATFORMS.md")).read_text(); assert "WSL2" in p and "CRLF" in p; print("OK: ressalvas Windows/WSL2 verificadas")'
+# Exit code: 0
+
+--- STDOUT ---
+OK: ressalvas Windows/WSL2 verificadas
+
+
+--- STDERR ---
+(vazio)

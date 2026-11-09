@@ -466,6 +466,10 @@ def main() -> int:
     total_checks += c4
     all_errors.extend(errs4)
 
+    c5, errs5 = validate_scorecard_evidence_references(base_dir)
+    total_checks += c5
+    all_errors.extend(errs5)
+
     if all_errors:
         print(f"FALHA: {len(all_errors)} violação(ões) de alegações/métricas:")
         for err in all_errors:
