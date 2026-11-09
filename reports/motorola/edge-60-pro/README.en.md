@@ -60,6 +60,6 @@ The report includes historical operational details. Those details are **not an e
 **A published report is not script homologation.** No procedure should be applied to another model or firmware based on this report.
 
 
-## English historical summary
+## Historical summary
 
-- [Historical report — English summary](historical-summary.en.md)
+- [Historical report — English summary](historical-summary.en.md) · [Historical summary (Portuguese)](historical-summary.pt-BR.md)

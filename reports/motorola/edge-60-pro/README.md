@@ -114,6 +114,7 @@ reports/motorola/edge-60-pro/
 - 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../../README.pt-BR.md)
 
 
-## Resumo histórico em inglês
+## Resumo histórico
 
+- [Resumo histórico (Português)](historical-summary.pt-BR.md)
 - [Historical report — English summary](historical-summary.en.md)

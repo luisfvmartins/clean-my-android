@@ -25,17 +25,17 @@ Critical components—including Samsung keyboard and launcher, telephony/RIL/IMS
 | Metric | Before | After |
 |---|---:|---:|
 | Firmware packages | 392 | 392 |
-| Enabled packages for User 0 | 391 | 344 |
+| Enabled packages for User 0 | 391 | 343 |
 | Disabled packages | 1 factory-disabled | 47 |
 | Uninstalled for User 0 | 0 | 2 |
 | Free storage in `/data` | ~49 GB | ~49 GB |
-| AP / battery temperature at rest | 25.6°C / 25.6°C | 25.5°C / 25.5°C |
+| AP / battery temperature at rest | 26.0°C / 25.3°C | 25.4°C / 24.8°C |
 
-The report states that 48 packages were addressed (46 disabled plus 2 uninstalled), while the enabled-package count decreased by 47 because the baseline included one factory-disabled package. These categories should not be conflated.
+The report reconciles 48 neutralized packages for User 0 (46 reversibly disabled plus 2 uninstalled for the user), reducing active enabled packages from 391 to 343 (-12.3%). The total count of disabled packages after the audit is 47 (1 factory-disabled plus 46 disabled during the audit). Full reconciliation: 343 enabled + 47 disabled + 2 uninstalled = 392 packages in the stock firmware. The raw `inventory.json` file records 393 keys because it includes the static shared library `com.google.android.trichromelibrary_428014133`, which is omitted from standard `pm list packages` output.
 
 ## Functional validation and limitations
 
-The Portuguese report records no command failures, observed system force-closes, or immediate need for rollback during the session. It also states that a standardized 24–48-hour battery observation remains pending. These are session-specific observations, not a guarantee of long-term stability or battery improvement.
+The Portuguese report records no command failures, observed system force-closes, or immediate need for rollback during the session. It also states that a standardized 24–48-hour battery observation remains pending. Disabling `com.android.printspooler` in Batch 2 suspends native printing and "Save as PDF" functionality; users who require it can restore the service via `adb shell pm enable com.android.printspooler`. These are session-specific observations, not a guarantee of long-term stability or battery improvement.
 
 The original report contains operational detail and a historical private-network endpoint. That endpoint has been removed from the public Portuguese source in this update; network addresses are intentionally omitted from this English summary as well.
 

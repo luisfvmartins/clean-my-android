@@ -17,7 +17,7 @@ O procedimento foi estruturado em duas etapas de intervenção:
 1. **Lote 1 (Otimização Primária):** Remoção de aplicativos pré-carregados comerciais (`com.odete.samsung` e loja `com.samsung.shop`), erradicação de 4 daemons residentes da Meta/Facebook, desativação do mecanismo de estrangulamento térmico e de clock **Game Optimizing Service (GOS)** e silenciamento de agentes de diagnóstico inicial como o **Security Log Agent**.
 2. **Lote 2 (Varredura Pacote por Pacote & Erradicação Profunda):** Identificação e neutralização do dropper comercial oculto **Digital Turbine Ignite** (`com.dti.samsung`), erradicação da telemetria central da Samsung (**DiagMonAgent** e **IMS Logger**), desativação do rastreamento de localização contínuo 24/7 do Google (**Google Location History**), desativação de daemons ociosos de escaneamento contínuo em segundo plano (Dynamic Lockscreen, Story Service, Easy Setup BLE/Wi-Fi, Samsung Cloud/AllShare) e desativação de módulos redundantes de realidade aumentada e adesivos (AR Emoji, Live Stickers, Sticker Center, Google ARCore).
 
-Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 desativados reversivelmente), reduzindo a quantidade de pacotes residentes ativos de **391 para 344** (-12,0%). Todos os subsistemas vitais (teclado Samsung HoneyBoard, launcher One UI Home, subsistema telefônico RIL/IMS e o ecossistema Google Play Services para compatibilidade bancária e push) foram rigorosamente preservados.
+Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 desativados reversivelmente), reduzindo a quantidade de pacotes residentes ativos de **391 para 343** (-12,3%). Todos os subsistemas vitais (teclado Samsung HoneyBoard, launcher One UI Home, subsistema telefônico RIL/IMS e o ecossistema Google Play Services para compatibilidade bancária e push) foram rigorosamente preservados.
 
 ---
 
@@ -42,7 +42,7 @@ Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 
 ## 3. Ferramentas e Condições de Medição
 
 - **Protocolo de Conexão:** Android Debug Bridge (ADB) via Wi-Fi após pareamento TLS criptografado (`adb pair`); endereço local e porta foram omitidos por privacidade.
-- **Condições Físicas do Aparelho:** Nível de bateria em 72%, carregamento desconectado, temperatura de hardware a 25.6°C (AP) e 25.6°C (bateria).
+- **Condições Físicas do Aparelho:** Nível de bateria em 72%, carregamento desconectado, temperatura de hardware a 26.0°C (AP) e 25.3°C (bateria), com média global em repouso de ~25.6°C.
 - **Estado de Carga do Sistema:** Standby em tela de configurações, sem contas pessoais sincronizadas ou aplicativos em primeiro plano além das ferramentas nativas de inspeção.
 - **Ferramentas de Coleta:** Scripts de extração direta de `dumpsys` (package, meminfo, diskstats, battery, thermalservice, user, connectivity), `getprop`, `cat /proc/meminfo`, `df -h` e `pm list packages`.
 - **Sanitização de Dados:** Endereços MAC de rede, números de série e identificadores de telemetria foram higienizados conforme as normas de publicação pública do projeto.
@@ -105,7 +105,7 @@ Todas as alterações foram autorizadas pelo usuário e executadas em lotes cont
 | Indicador Técnico | Antes da Otimização (Linha de Base) | Depois da Otimização (Estado Final) | Variação Comprovada | Método / Evidência |
 | :--- | :--- | :--- | :--- | :--- |
 | **Total de Pacotes no Firmware** | 392 pacotes | 392 pacotes | Inalterado no nível de partição | `pm list packages -u` |
-| **Pacotes Habilitados (Usuário 0)** | 391 pacotes | 344 pacotes | **-47 pacotes ativos em segundo plano (-12,0%)** | `pm list packages -e` |
+| **Pacotes Habilitados (Usuário 0)** | 391 pacotes | 343 pacotes | **-48 pacotes no Usuário 0 (-12,3%)** | `pm list packages -e` |
 | **Pacotes Desativados** | 1 pacote (de fábrica) | 47 pacotes | **+46 pacotes desativados cirurgicamente** | `pm list packages -d` |
 | **Pacotes Desinstalados (User 0)** | 0 pacotes | 2 pacotes | **2 pacotes comerciais eliminados** | `pm list packages -3` |
 | **Adware Oculto (Digital Turbine)** | Ativo com permissão de download silencioso | Neutralizado e desativado | **Eliminação de downloads não autorizados** | `pm disable-user` em `com.dti.samsung` |
@@ -115,8 +115,12 @@ Todas as alterações foram autorizadas pelo usuário e executadas em lotes cont
 | **Throttling e GOS de Jogos** | GOS ativo e monitorando apps | GOS neutralizado | **Desbloqueio de clock nativo Exynos** | Estado `disabled-user` em GOS |
 | **Alertas de Segurança Falsos** | Ativos pelo SecurityLogAgent | Silenciados com sucesso | **Eliminação de pop-ups intrusivos** | `disabled-user` em securitylogagent |
 | **Armazenamento Livre (`/data`)** | 49 GB livres (2.4 GB usados) | 49 GB livres (2.4 GB usados) | Sem variação perceptível em escala de GB | `df -h /data` |
-| **Estabilidade Térmica (AP / Bat)** | 25.6°C / 25.6°C | 25.5°C / 25.5°C | Estabilidade mantida em repouso | `dumpsys thermalservice` |
+| **Estabilidade Térmica (AP / Bat)** | 26.0°C / 25.3°C | 25.4°C / 24.8°C | Estabilidade mantida em repouso | `dumpsys battery` e `dumpsys thermalservice` |
 | **Consumo de Bateria (24h)** | Não medido | Não medido | **Pendente de validação de longo prazo** | Ausência de ciclo fechado |
+
+> **Nota de Reconciliação do Inventário:**  
+> - Dos 392 pacotes do firmware stock, 1 já vinha desativado de fábrica (`com.sec.android.emergencylauncher`) e 391 estavam habilitados. Com 46 pacotes desativados reversivelmente e 2 desinstalados para o Usuário 0 (`com.odete.samsung` e `com.samsung.shop`), restaram exatamente 343 pacotes habilitados no Usuário 0 (343 habilitados + 47 desativados + 2 desinstalados = 392 pacotes no firmware).  
+> - O arquivo bruto `inventory.json` lista 393 chaves pois inclui a biblioteca estática compartilhada `com.google.android.trichromelibrary_428014133`, omitida na listagem padrão do `pm list packages`.
 
 ---
 
@@ -153,9 +157,10 @@ adb shell cmd package install-existing <nome.do.pacote>
 
 ## 9. Limitações e Itens Pendentes
 
-1. **Autonomia de Bateria em Ciclo Real:** A economia de energia decorrente da erradicação dos 47 daemons de segundo plano só poderá ser quantificada com precisão após 24 a 48 horas de uso cotidiano do proprietário.
+1. **Autonomia de Bateria em Ciclo Real:** A economia de energia decorrente da neutralização dos 48 pacotes em segundo plano só poderá ser quantificada com precisão após 24 a 48 horas de uso cotidiano do proprietário.
 2. **Aplicativos FOSS Substitutos:** Não foram instaladas alternativas de código aberto (FOSS) nesta sessão, já que o aparelho opera com o conjunto nativo do Android/One UI.
 3. **Capturas de Tela em Sessão Desbloqueada:** As capturas da linha de base e estado final foram registradas nas telas administrativas do sistema Android, salvaguardando integralmente a privacidade de notificações e contas do usuário.
+4. **Módulo de Impressão e PDF (`com.android.printspooler`):** A desativação do spooler de impressão no Lote 2 suspende a função nativa de 'Salvar como PDF' e envio de documentos a impressoras locais. Caso o proprietário necessite de impressão ou exportação em PDF nativa, o serviço pode ser reativado via `adb shell pm enable com.android.printspooler`.
 
 ---
 

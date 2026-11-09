@@ -1,9 +1,9 @@
 # 📱 Samsung Galaxy A30s — Technical Audit and Surgical Optimization
 
-[![Device: Samsung Galaxy A30s](https://img.shields.io/badge/Device-Samsung%20Galaxy%20A30s-002f6c?logo=samsung&logoColor=white)](comparison-report.md)
-[![Codename: a30s](https://img.shields.io/badge/Codename-a30s-blue)](comparison-report.md)
-[![Android: 11 (One UI 3.1)](https://img.shields.io/badge/Android-11%20(One%20UI%203.1)-green?logo=android&logoColor=white)](comparison-report.md)
-[![Status: Completed Audit](https://img.shields.io/badge/Audit-Completed-brightgreen)](comparison-report.md)
+[![Device: Samsung Galaxy A30s](https://img.shields.io/badge/Device-Samsung%20Galaxy%20A30s-002f6c?logo=samsung&logoColor=white)](comparison-report.en.md)
+[![Codename: a30s](https://img.shields.io/badge/Codename-a30s-blue)](comparison-report.en.md)
+[![Android: 11 (One UI 3.1)](https://img.shields.io/badge/Android-11%20(One%20UI%203.1)-green?logo=android&logoColor=white)](comparison-report.en.md)
+[![Status: Completed Audit](https://img.shields.io/badge/Audit-Completed-brightgreen)](comparison-report.en.md)
 [![Clean My Android](https://img.shields.io/badge/Project-Clean%20My%20Android-green)](https://github.com/luisfvmartins/clean-my-android)
 
 This directory contains the complete technical documentation, baseline and post-optimization package inventories, resource comparison report, and detailed change log for the **Samsung Galaxy A30s (SM-A307GT)**.
@@ -50,13 +50,13 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 
 ## 📊 Summary of Results
 
-- **Firmware Cataloged Packages:** 392 packages
+- **Firmware Cataloged Packages:** 392 packages (393 in `inventory.json` including the static Trichrome library)
 - **Enabled Packages Before:** 391 packages
-- **Enabled Packages After:** 344 packages (**-47 active background packages / -12.0%**)
+- **Enabled Packages After:** 343 packages (**-48 packages for User 0 / -12.3%**)
 - **Disabled Packages:** 47 packages (1 factory default + 46 surgically disabled via disable-user)
 - **Uninstalled Commercial Apps (User 0):** 2 packages (`com.odete.samsung` and `com.samsung.shop`)
 - **Total Packages Neutralized:** 48 packages
-- **System Stability & Connectivity:** 100% operational (Wi-Fi, Bluetooth, Telephony, Biometrics, and Google Play Services).
+- **System Stability & Connectivity:** Essential subsystems verified during session (Wi-Fi, Bluetooth, Telephony, Biometrics, and Google Play Services).
 
 ---
 
@@ -68,8 +68,11 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 - [`changes/`](changes/): Execution log, commands used, and reversal procedures.
 - [`after/`](after/): Final confirmatory diagnostics post-optimization.
 
-
 ## English companion documents
 
 - [Before/after comparison summary](comparison-report.en.md)
 - [Change log summary](changes/change-log.en.md)
+
+## Navigation
+
+- [Back to main report catalog](../../README.md)

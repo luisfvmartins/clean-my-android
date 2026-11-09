@@ -10,15 +10,15 @@
     {
       "indicator": "Quantidade Total de Pacotes Catalogados",
       "before": "392 pacotes no firmware de fábrica",
-      "after": "392 pacotes no firmware (344 habilitados no Usuário 0)",
+      "after": "392 pacotes no firmware (343 habilitados no Usuário 0)",
       "variation": "48 pacotes neutralizados no Usuário 0 (Lotes 1 e 2)",
       "evidence": "pm list packages -u antes e depois"
     },
     {
       "indicator": "Pacotes Habilitados no Usuário 0",
       "before": "391 pacotes habilitados",
-      "after": "344 pacotes habilitados",
-      "variation": "-47 pacotes residentes em segundo plano (-12.0%)",
+      "after": "343 pacotes habilitados",
+      "variation": "-48 pacotes residentes em segundo plano (-12.3%)",
       "evidence": "pm list packages -e antes e depois"
     },
     {
@@ -86,9 +86,9 @@
     },
     {
       "indicator": "Consumo de Bateria e Comportamento Térmico",
-      "before": "72%, 25.6°C, saúde boa",
-      "after": "72%, 25.5°C, saúde boa",
-      "variation": "Estabilidade térmica mantida a 25.5°C; autonomia de 24h pendente de uso real",
+      "before": "72%, ~25.6°C (AP: 26.0°C / Bat: 25.3°C), saúde boa",
+      "after": "67%, ~24.8°C (AP: 25.4°C / Bat: 24.8°C), saúde boa",
+      "variation": "Estabilidade térmica mantida a ~25°C (nível 67% reflete descarga natural na sessão); autonomia de 24h pendente de uso real",
       "evidence": "dumpsys battery e dumpsys thermalservice"
     }
   ]

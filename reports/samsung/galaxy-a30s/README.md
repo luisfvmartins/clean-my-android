@@ -50,13 +50,13 @@ O procedimento foi executado em modo não-root via **Android Debug Bridge (ADB)*
 
 ## 📊 Síntese dos Resultados
 
-- **Pacotes Catalogados no Firmware:** 392 pacotes
+- **Pacotes Catalogados no Firmware:** 392 pacotes (393 no `inventory.json` incluindo a biblioteca estática Trichrome)
 - **Pacotes Habilitados Antes:** 391 pacotes
-- **Pacotes Habilitados Depois:** 344 pacotes (**-47 pacotes em segundo plano / -12,0%**)
+- **Pacotes Habilitados Depois:** 343 pacotes (**-48 pacotes no Usuário 0 / -12,3%**)
 - **Pacotes Desativados:** 47 pacotes (1 de fábrica + 46 desativados cirurgicamente via disable-user)
 - **Pacotes Comerciais Desinstalados (User 0):** 2 pacotes (`com.odete.samsung` e `com.samsung.shop`)
 - **Total de Pacotes Neutralizados:** 48 pacotes
-- **Estabilidade e Conectividade:** 100% funcionais (Wi-Fi, Bluetooth, Telefonia, Biometria e Google Play Services).
+- **Estabilidade e Conectividade:** Subsistemas essenciais validados em sessão (Wi-Fi, Bluetooth, Telefonia, Biometria e Google Play Services).
 
 ---
 
@@ -68,8 +68,11 @@ O procedimento foi executado em modo não-root via **Android Debug Bridge (ADB)*
 - [`changes/`](changes/): Registro de execução, comandos utilizados e métodos de reversão.
 - [`after/`](after/): Diagnóstico final confirmatório pós-otimização.
 
-
 ## Documentos em inglês
 
 - [Before/after comparison — English summary](comparison-report.en.md)
 - [Change log — English summary](changes/change-log.en.md)
+
+## Navegação
+
+- [Voltar ao Catálogo Geral de Relatórios](../../README.pt-BR.md)
