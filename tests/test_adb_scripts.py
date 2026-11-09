@@ -165,6 +165,25 @@ class AdbScripts(unittest.TestCase):
     def calls(self):
         return [json.loads(x) for x in self.log.read_text().splitlines()] if self.log.exists() else []
 
+    def get_no_adb_path(self) -> str:
+        no_adb_dir = Path(self.tmp.name) / "no_adb_bin"
+        if not no_adb_dir.exists():
+            no_adb_dir.mkdir(parents=True, exist_ok=True)
+            for sys_dir in ["/usr/bin", "/bin"]:
+                p = Path(sys_dir)
+                if not p.is_dir():
+                    continue
+                for item in p.iterdir():
+                    if item.name == "adb":
+                        continue
+                    link = no_adb_dir / item.name
+                    if not link.exists():
+                        try:
+                            link.symlink_to(item)
+                        except OSError:
+                            pass
+        return str(no_adb_dir)
+
     # --- debloat.sh exit codes tests ---
 
     def test_debloat_code_0_read_only(self):
@@ -191,9 +210,7 @@ class AdbScripts(unittest.TestCase):
         self.assertIn("já está desativado", r.stdout)
 
     def test_debloat_code_1_no_adb(self):
-        # Preserva utilitários de sistema (dirname, cat, etc.) mas remove caminhos com adb
-        clean_dirs = [p for p in os.environ.get("PATH", "").split(os.pathsep) if p and not (Path(p) / "adb").exists()]
-        self.env["PATH"] = os.pathsep.join(clean_dirs)
+        self.env["PATH"] = self.get_no_adb_path()
         r = self.run_script(DEBLOAT)
         self.assertEqual(r.returncode, 1)
         self.assertIn("ADB", r.stderr)
@@ -310,8 +327,7 @@ class AdbScripts(unittest.TestCase):
         self.assertEqual(self.state()["disabled"], [PKG])
 
     def test_restore_code_1_no_adb(self):
-        clean_dirs = [p for p in os.environ.get("PATH", "").split(os.pathsep) if p and not (Path(p) / "adb").exists()]
-        self.env["PATH"] = os.pathsep.join(clean_dirs)
+        self.env["PATH"] = self.get_no_adb_path()
         r = self.run_script(RESTORE, PKG)
         self.assertEqual(r.returncode, 1)
         self.assertIn("ADB", r.stderr)

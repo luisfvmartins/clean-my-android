@@ -50,7 +50,7 @@ jobs:
             shell_name: "bash"
           - os: macos-latest
             python-version: "3.12"
-            shell_name: "/bin/bash"
+            shell_name: "/bin/bash {0}"
     defaults:
       run:
         shell: ${{ matrix.shell_name }}

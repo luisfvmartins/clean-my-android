@@ -9,7 +9,7 @@ This document details operating system compatibility and runtime requirements fo
 | Operating System | Shell / Runtime | Testing Status | Official Support | Portability Notes |
 |---|---|:---:|:---:|---|
 | **Linux (Ubuntu, Debian, Fedora, Arch, etc.)** | GNU Bash 4.x / 5.x | Tested in CI and locally | **Supported** | Standard execution with native POSIX and pipeline support. |
-| **macOS (Sonoma, Sequoia, etc.)** | Apple `/bin/bash` 3.2.57 | Tested in CI (`macos-latest`) | **Supported** | Full Bash 3.2 compatibility. No dependencies on `mapfile`, `declare -A`, or GNU-only flags. |
+| **macOS (Sonoma, Sequoia, etc.)** | Apple `/bin/bash` 3.2.57 | Untested in active CI (matrix proposed) | Declared compatible (Bash 3.2) | Syntax adapted for Bash 3.2. No dependencies on `mapfile`, `declare -A`, or GNU-only flags. CI validation pending active matrix. |
 | **Windows 10 / 11 (WSL2)** | Bash in Ubuntu/Debian via WSL2 | Community tested | **Recommended for Windows** | Requires forwarding ADB device from Windows host to WSL2 (`usbipd-win` or shared ADB server). |
 | **Windows 10 / 11 (Git Bash / MSYS2)** | Emulated Bash on Windows | **Not tested on physical hardware** | Experimental / Community | Watch out for path mangling and CRLF line terminator conversions. |
 | **Windows (Native PowerShell / CMD)** | N/A | **Unsupported** | Unsupported | Scripts rely on Bash syntax and POSIX primitives. No `.bat` or `.ps1` scripts provided. |
