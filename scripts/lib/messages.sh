@@ -96,6 +96,9 @@ cma_msg() {
       snapshot_success)
         printf "Snapshot '%s' gerado e verificado com sucesso em: %s\n" "$@"
         ;;
+      err_adb_communication)
+        printf "Erro: falha de comunicação com o ADB durante a coleta de evidências.\n"
+        ;;
       err_snapshot_sanitization)
         printf "Erro: falha na validação de sanitização do snapshot em: %s\n" "$@"
         ;;
@@ -182,6 +185,9 @@ cma_msg() {
         ;;
       snapshot_success)
         printf "Snapshot '%s' successfully generated and verified in: %s\n" "$@"
+        ;;
+      err_adb_communication)
+        printf "Error: ADB communication failure during evidence collection.\n"
         ;;
       err_snapshot_sanitization)
         printf "Error: snapshot sanitization check failed in: %s\n" "$@"

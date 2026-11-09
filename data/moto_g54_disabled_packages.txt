@@ -5,8 +5,10 @@ com.amazon.appmanager
 com.android.avatarpicker
 com.android.backupconfirm
 com.android.bips
+com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.calllogbackup
+com.android.carrierdefaultapp
 com.android.cts.ctsshim
 com.android.cts.priv.ctsshim
 com.android.DeviceAsWebcam
@@ -27,6 +29,8 @@ com.android.managedprovisioning
 com.android.providers.partnerbookmarks
 com.android.role.notes.enabled
 com.android.sharedstoragebackup
+com.android.simappdialog
+com.android.stk
 com.android.systemui.accessibility.accessibilitymenu
 com.android.systemui.plugin.globalactions.wallet
 com.android.theme.font.Exo2Regular

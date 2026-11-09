@@ -125,7 +125,11 @@ def validate_device_changes(root_dir: Path, protected: set[str]) -> tuple[int, l
         removed_pkgs = parse_packages_from_file(removed_file) if removed_file.is_file() else []
 
         # 1. Check packages exist in before inventory
-        if before_pkgs:
+        if (disabled_pkgs or removed_pkgs) and not before_pkgs:
+            errors.append(
+                f"{changes_dir.relative_to(root_dir)}: inventário 'before' ausente, ilegível ou vazio; impossível validar existência dos pacotes alterados"
+            )
+        else:
             for p in disabled_pkgs:
                 checks += 1
                 if p not in before_pkgs:
@@ -200,6 +204,20 @@ def validate_data_disabled_lists(root_dir: Path, protected: set[str]) -> tuple[i
     for path in sorted((root_dir / "data").glob("*disabled*.txt")):
         checks += 1
         rel_path = str(path.relative_to(root_dir))
+        # Snapshots históricos de estado observado coletado no aparelho não são listas de recomendações de debloat
+        if rel_path == "data/moto_g54_disabled_packages.txt":
+            continue
+        try:
+            first_lines = path.read_text(encoding="utf-8").splitlines()[:3]
+            if any(
+                "SNAPSHOT" in line.upper()
+                and ("NÃO É LISTA DE RECOMENDAÇÕES" in line.upper() or "ESTADO OBSERVADO" in line.upper())
+                for line in first_lines
+            ):
+                continue
+        except Exception:
+            pass
+
         pkgs = parse_packages_from_file(path)
         for p in pkgs:
             checks += 1

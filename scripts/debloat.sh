@@ -149,13 +149,39 @@ if [[ ! -f "$APPLY_SUPPORT_FILE" ]]; then
   exit 4
 fi
 
+DEVICE_CATALOG_FILE="${CMA_DEVICE_CATALOG_FILE:-$SCRIPT_DIR/../data/device_catalog.json}"
+
+DEV_LEVEL=0
+if [[ -f "$DEVICE_CATALOG_FILE" ]]; then
+  if command -v python3 >/dev/null 2>&1; then
+    DEV_LEVEL=$(python3 -c '
+import json, sys
+try:
+    with open(sys.argv[1], encoding="utf-8") as f:
+        data = json.load(f)
+    dev = sys.argv[2]
+    prod = sys.argv[3]
+    for d in data.get("devices", []):
+        if d.get("codename") in (dev, prod) or d.get("model_code") in (dev, prod):
+            print(d.get("homologation_level", 0))
+            sys.exit(0)
+except Exception:
+    pass
+print(0)
+' "$DEVICE_CATALOG_FILE" "$DEVICE" "$PRODUCT" 2>/dev/null || echo 0)
+  fi
+fi
+
 GATE_MATCH=0
-while IFS=$'\t' read -r tsv_coden tsv_and _tsv_lvl || [[ -n "$tsv_coden" ]]; do
+while IFS=$'\t' read -r tsv_coden tsv_and tsv_lvl || [[ -n "$tsv_coden" ]]; do
   # Ignore empty lines and comments
   [[ -z "$tsv_coden" || "$tsv_coden" =~ ^# ]] && continue
   if [[ ("$DEVICE" == "$tsv_coden" || "$PRODUCT" == "$tsv_coden") && "$ANDROID_VER" == "$tsv_and" ]]; then
-    GATE_MATCH=1
-    break
+    tsv_lvl_clean="${tsv_lvl:-1}"
+    if [[ "$DEV_LEVEL" -ge "$tsv_lvl_clean" ]]; then
+      GATE_MATCH=1
+      break
+    fi
   fi
 done < "$APPLY_SUPPORT_FILE"
 
@@ -193,6 +219,16 @@ EXPECTED_CONFIRM_EN="DISABLE $PACKAGE"
 if [[ "$CONFIRM" != "$EXPECTED_CONFIRM" && "$CONFIRM" != "$EXPECTED_CONFIRM_EN" ]]; then
   cma_msg action_cancelled
   exit 0
+fi
+
+# Pré-validação do armazenamento e permissões de log antes de alterar o dispositivo
+if ! mkdir -p "$LOG_DIR" 2>/dev/null; then
+  echo "Erro: falha ao criar ou acessar diretório de log: $LOG_DIR" >&2
+  exit 4
+fi
+if ! touch "$LOG_DIR/actions.jsonl" 2>/dev/null; then
+  echo "Erro: sem permissão de escrita no arquivo de log: $LOG_DIR/actions.jsonl" >&2
+  exit 4
 fi
 
 CMD_OUT="$("${ADB[@]}" shell pm disable-user --user 0 "$PACKAGE" 2>&1 | tr -d '\r')"

@@ -23,6 +23,9 @@ a = sys.argv[1:]
 with Path(os.environ["FAKE_LOG"]).open("a") as f:
     f.write(json.dumps(a) + "\n")
 
+if os.environ.get("FAKE_FAIL_ADB_CAPTURE") == "1" and len(a) >= 3 and a[0] == "-s" and a[2] == "shell":
+    sys.exit(1)
+
 if a == ["devices"] or a == ["devices", "-l"]:
     print("List of devices attached")
     print(os.environ.get("FAKE_DEVICES", "MOCK\tdevice"))
@@ -104,6 +107,21 @@ class AdbScripts(unittest.TestCase):
         self.state_file, self.log = d / "state.json", d / "calls.log"
         self.set_state([PKG], [])
         self.env = os.environ.copy()
+        mock_catalog = d / "mock_catalog.json"
+        mock_catalog.write_text(json.dumps({
+            "schema_version": 1,
+            "devices": [
+                {
+                    "id": "motorola-moto-g54-5g",
+                    "codename": "cancunf",
+                    "model_code": "XT2343-1",
+                    "homologation_level": 4,
+                    "apply_supported": True
+                }
+            ]
+        }))
+        self.mock_catalog = mock_catalog
+
         self.env.update(
             PATH=str(b) + os.pathsep + self.env.get("PATH", ""),
             FAKE_STATE=str(self.state_file),
@@ -113,6 +131,7 @@ class AdbScripts(unittest.TestCase):
             FAKE_DEVICE="cancunf",
             FAKE_PRODUCT="cancunf",
             CMA_LANG="pt",
+            CMA_DEVICE_CATALOG_FILE=str(self.mock_catalog),
         )
 
     def set_state(self, installed, disabled):
@@ -170,13 +189,23 @@ class AdbScripts(unittest.TestCase):
         self.assertEqual(r.returncode, 0)
         self.assertEqual(self.state()["disabled"], [])
 
+    def test_debloat_rejects_insufficient_homologation_level(self):
+        # Remove override de catálogo para usar o catálogo padrão do repositório (nível 1 < 4)
+        del self.env["CMA_DEVICE_CATALOG_FILE"]
+        r = self.run_script(DEBLOAT, "--apply", PKG, answer=f"DESATIVAR {PKG}\n")
+        self.assertEqual(r.returncode, 3)
+        self.assertIn("gate de aplicação", r.stderr)
+        self.assertEqual(self.state()["disabled"], [])
+
     def test_debloat_requires_exact_confirmation(self):
+        self.env["CMA_DEVICE_CATALOG_FILE"] = str(self.mock_catalog)
         r = self.run_script(DEBLOAT, "--apply", PKG, answer=f"DESATIVAR {PKG}\n")
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertEqual(self.state()["disabled"], [PKG])
         self.assertTrue(any("disable-user" in x for x in self.calls()))
 
     def test_debloat_writes_jsonl_log(self):
+        self.env["CMA_DEVICE_CATALOG_FILE"] = str(self.mock_catalog)
         log_dir = Path(self.tmp.name) / "custom_logs"
         r = self.run_script(DEBLOAT, "--log-dir", str(log_dir), "--apply", PKG, answer=f"DESATIVAR {PKG}\n")
         self.assertEqual(r.returncode, 0, r.stderr)
@@ -189,6 +218,13 @@ class AdbScripts(unittest.TestCase):
         self.assertEqual(entry["package"], PKG)
         self.assertEqual(entry["verified_state"], "disabled")
         self.assertEqual(entry["rollback_command"], f"pm enable --user 0 {PKG}")
+
+    def test_debloat_preflights_unwritable_log_dir(self):
+        self.env["CMA_DEVICE_CATALOG_FILE"] = str(self.mock_catalog)
+        unwritable_log = "/sys/kernel/debug/invalid_log_dir"
+        r = self.run_script(DEBLOAT, "--log-dir", unwritable_log, "--apply", PKG, answer=f"DESATIVAR {PKG}\n")
+        self.assertEqual(r.returncode, 4)
+        self.assertEqual(self.state()["disabled"], [])
 
     def test_restore_rejects_no_device(self):
         self.env["FAKE_DEVICES"] = ""
@@ -262,6 +298,20 @@ class AdbScripts(unittest.TestCase):
         self.assertTrue((out_dir / "packages-all.txt").exists())
         self.assertTrue((out_dir / "battery-summary.txt").exists())
         self.assertTrue((out_dir / "disk-usage.txt").exists())
+
+    def test_snapshot_with_appops_collects_package_ops(self):
+        out_dir = Path(self.tmp.name) / "snapshot_appops_out"
+        r = self.run_script(SNAPSHOT, "--label", "before", "--out", str(out_dir), "--with-appops")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        appops_file = out_dir / "appops.txt"
+        self.assertTrue(appops_file.exists())
+        self.assertIn("COARSE_LOCATION", appops_file.read_text())
+
+    def test_snapshot_fails_on_adb_communication_error(self):
+        self.env["FAKE_FAIL_ADB_CAPTURE"] = "1"
+        out_dir = Path(self.tmp.name) / "snapshot_fail_out"
+        r = self.run_script(SNAPSHOT, "--label", "before", "--out", str(out_dir))
+        self.assertEqual(r.returncode, 3)
 
     def test_snapshot_script_invalid_args(self):
         r = self.run_script(SNAPSHOT)

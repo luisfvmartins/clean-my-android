@@ -151,39 +151,102 @@ PROPS=(
   "ro.build.type"
 )
 for prop in "${PROPS[@]}"; do
-  val="$("${ADB[@]}" shell getprop "$prop" 2>/dev/null | tr -d '\r')"
+  if ! val="$("${ADB[@]}" shell getprop "$prop" 2>/dev/null | tr -d '\r')"; then
+    cma_msg err_adb_communication >&2
+    exit 3
+  fi
   printf "%s=%s\n" "$prop" "$val" >> "$PROP_FILE"
 done
 
 # 2. Listagens de Pacotes (User 0)
-"${ADB[@]}" shell pm list packages -u --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-all.txt" || true
-"${ADB[@]}" shell pm list packages -e --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-enabled.txt" || true
-"${ADB[@]}" shell pm list packages -d --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-disabled.txt" || true
-"${ADB[@]}" shell pm list packages -3 --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-third-party.txt" || true
-"${ADB[@]}" shell pm list packages -s --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-system.txt" || true
+if ! "${ADB[@]}" shell pm list packages -u --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-all.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if [[ ! -s "$TMP_DIR/packages-all.txt" ]]; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+
+if ! "${ADB[@]}" shell pm list packages -e --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-enabled.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if ! "${ADB[@]}" shell pm list packages -d --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-disabled.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if ! "${ADB[@]}" shell pm list packages -3 --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-third-party.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if ! "${ADB[@]}" shell pm list packages -s --user 0 2>/dev/null | tr -d '\r' | sort > "$TMP_DIR/packages-system.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
 
 # 3. Resumos de Bateria, Memória e Armazenamento
-"${ADB[@]}" shell dumpsys battery 2>/dev/null | tr -d '\r' > "$TMP_DIR/battery-summary.txt" || true
-"${ADB[@]}" shell dumpsys meminfo 2>/dev/null | tr -d '\r' > "$TMP_DIR/meminfo-summary.txt" || true
-"${ADB[@]}" shell df /data 2>/dev/null | tr -d '\r' > "$TMP_DIR/disk-usage.txt" || true
+if ! "${ADB[@]}" shell dumpsys battery 2>/dev/null | tr -d '\r' > "$TMP_DIR/battery-summary.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if [[ ! -s "$TMP_DIR/battery-summary.txt" ]]; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+
+if ! "${ADB[@]}" shell dumpsys meminfo 2>/dev/null | tr -d '\r' > "$TMP_DIR/meminfo-summary.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if [[ ! -s "$TMP_DIR/meminfo-summary.txt" ]]; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+
+if ! "${ADB[@]}" shell df /data 2>/dev/null | tr -d '\r' > "$TMP_DIR/disk-usage.txt"; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
+if [[ ! -s "$TMP_DIR/disk-usage.txt" ]]; then
+  cma_msg err_adb_communication >&2
+  exit 3
+fi
 
 # 4. Opcionais
 if [[ $WITH_PERMS -eq 1 ]]; then
-  "${ADB[@]}" shell dumpsys package 2>/dev/null | tr -d '\r' > "$TMP_DIR/permissions.txt" || true
+  if ! "${ADB[@]}" shell dumpsys package 2>/dev/null | tr -d '\r' > "$TMP_DIR/permissions.txt"; then
+    cma_msg err_adb_communication >&2
+    exit 3
+  fi
 fi
 
 if [[ $WITH_APPOPS -eq 1 ]]; then
-  "${ADB[@]}" shell cmd appops get 2>/dev/null | tr -d '\r' > "$TMP_DIR/appops.txt" || true
+  : > "$TMP_DIR/appops.txt"
+  while IFS= read -r pkg_line; do
+    pkg="${pkg_line#package:}"
+    [[ -z "$pkg" ]] && continue
+    if ! ops="$("${ADB[@]}" shell cmd appops get --user 0 "$pkg" 2>/dev/null | tr -d '\r')"; then
+      cma_msg err_adb_communication >&2
+      exit 3
+    fi
+    if [[ -n "$ops" ]]; then
+      printf "Package: %s\n%s\n\n" "$pkg" "$ops" >> "$TMP_DIR/appops.txt"
+    fi
+  done < "$TMP_DIR/packages-all.txt"
 fi
 
-# 5. Sanitização pré-gravação
+# 5. Sanitização pré-gravação (falha segura obrigatória)
 cma_msg snapshot_sanitizing
 
-if command -v python3 >/dev/null 2>&1 && [[ -f "$CHECK_SANITIZATION" ]]; then
-  if ! python3 "$CHECK_SANITIZATION" "$TMP_DIR" >/dev/null 2>&1; then
-    cma_msg err_snapshot_sanitization "$TMP_DIR" >&2
-    exit 5
-  fi
+if ! command -v python3 >/dev/null 2>&1 || [[ ! -f "$CHECK_SANITIZATION" ]]; then
+  cma_msg err_snapshot_sanitization "$TMP_DIR" >&2
+  exit 5
+fi
+
+if ! python3 "$CHECK_SANITIZATION" "$TMP_DIR" >/dev/null 2>&1; then
+  cma_msg err_snapshot_sanitization "$TMP_DIR" >&2
+  exit 5
 fi
 
 # 6. Gravação Final
