@@ -140,7 +140,7 @@ Resultados sem evidência devem ser identificados como **não mensurados**, **n�
 
 ## Validação automatizada
 
-Pull Requests para `main` passam por verificações automáticas de integridade: JSON, sintaxe Bash, lista de componentes protegidos, consistência das estatísticas geradas e destinos de links Markdown locais. Essas verificações são estáticas e não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
+Pull Requests para `main` passam por verificações estáticas de JSON, sintaxe Bash, lista de componentes protegidos, estatísticas geradas, links Markdown locais, caminhos de evidências por dispositivo e indicadores estruturais bilíngues selecionados. O validador bilíngue verifica a existência dos pares de arquivos, a presença dos códigos dos aparelhos, os identificadores de pacotes em tabelas selecionadas do Moto G54 e a presença de marcadores numéricos selecionados do Galaxy A30s. Ele **não** avalia a qualidade da tradução, a equivalência semântica nem se todos os rótulos de métricas estão associados aos mesmos valores nos dois idiomas; a revisão humana continua necessária. Essas verificações não acessam nem modificam aparelhos. A aprovação do workflow não substitui revisão técnica, análise de privacidade ou testes funcionais.
 
 Consulte o [workflow de validação](.github/workflows/validate.yml) e o [validador](scripts/validate_repository.py).
 

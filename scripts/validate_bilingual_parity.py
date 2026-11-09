@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Validador automatizado de consistência e paridade bilíngue (PT-BR e EN).
+"""Valida a estrutura bilíngue e a presença de indicadores selecionados.
 
-Garante que documentos técnicos possuam equivalentes traduzidos, que catálogos
-mantenham os mesmos dispositivos e que métricas numéricas e identificadores de
-pacotes coincidam entre as versões em português e inglês.
+Verifica pares de arquivos, presença de códigos de dispositivos, igualdade dos
+identificadores de pacotes extraídos de tabelas específicas e presença de
+marcadores numéricos selecionados. Não avalia equivalência semântica, tradução
+integral nem correspondência entre rótulos e valores de todas as métricas.
 """
 from __future__ import annotations
 
@@ -72,7 +73,7 @@ def check_bilingual_pairs(errors: list[str]) -> int:
     return checks
 
 
-def check_catalog_parity(errors: list[str]) -> int:
+def check_catalog_presence(errors: list[str]) -> int:
     checks = 0
     if not CATALOG.is_file():
         errors.append("data/device_catalog.json inexistente")
@@ -145,7 +146,7 @@ def check_batch_package_parity(errors: list[str]) -> int:
     return checks
 
 
-def check_galaxy_a30s_metric_parity(errors: list[str]) -> int:
+def check_galaxy_a30s_metric_presence(errors: list[str]) -> int:
     checks = 0
     pt_path = ROOT / "reports/samsung/galaxy-a30s/comparison-report.md"
     en_path = ROOT / "reports/samsung/galaxy-a30s/comparison-report.en.md"
@@ -155,7 +156,7 @@ def check_galaxy_a30s_metric_parity(errors: list[str]) -> int:
     pt_text = pt_path.read_text(encoding="utf-8")
     en_text = en_path.read_text(encoding="utf-8")
 
-    # Verificar que as métricas cruciais de contagem e temperatura coincidem
+    # Verificar apenas a presença dos marcadores numéricos em ambos os arquivos; não compara seus rótulos ou contexto.
     for num in ("392", "391", "343", "47", "26.0°C", "25.3°C", "25.4°C", "24.8°C"):
         checks += 2
         if num not in pt_text:
@@ -171,17 +172,17 @@ def main() -> int:
     total_checks = 0
 
     total_checks += check_bilingual_pairs(errors)
-    total_checks += check_catalog_parity(errors)
+    total_checks += check_catalog_presence(errors)
     total_checks += check_batch_package_parity(errors)
-    total_checks += check_galaxy_a30s_metric_parity(errors)
+    total_checks += check_galaxy_a30s_metric_presence(errors)
 
     if errors:
-        print(f"FALHA: {len(errors)} erro(s) de paridade bilíngue encontrados em {total_checks} verificações:", file=sys.stderr)
+        print(f"FALHA: {len(errors)} erro(s) de validação estrutural bilíngue encontrados em {total_checks} verificações:", file=sys.stderr)
         for err in errors:
             print(f" - {err}", file=sys.stderr)
         return 1
 
-    print(f"OK: {total_checks} verificações de paridade bilíngue aprovadas sem erros.")
+    print(f"OK: {total_checks} verificações estruturais, de identificadores e de presença de indicadores aprovadas sem erros.")
     return 0
 
 

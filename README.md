@@ -142,7 +142,7 @@ Results without evidence must be marked **not measured**, **not collected**, or 
 
 ## Automated validation
 
-Pull Requests to `main` run automated integrity checks for JSON, Bash syntax, the protected-components list, generated project statistics, and local Markdown links. These checks are static: they do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
+Pull Requests to `main` run static checks for JSON, Bash syntax, the protected-components list, generated project statistics, local Markdown links, per-device evidence paths, and selected bilingual structure indicators. The bilingual validator checks required file pairs, device-code presence, package identifiers in selected Moto G54 tables, and the presence of selected Galaxy A30s numeric markers. It does **not** assess translation quality, semantic equivalence, or whether every metric label is paired with the same value in both languages; human review remains necessary. These checks do not access or modify devices. A passing workflow does not replace technical review, privacy review, or functional testing.
 
 See the [validation workflow](.github/workflows/validate.yml) and [validator](scripts/validate_repository.py).
 
