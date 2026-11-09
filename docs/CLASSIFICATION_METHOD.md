@@ -43,13 +43,13 @@ To guarantee reproducibility and prevent speculative claims, package purpose det
 - Establishes mathematical certainty for:
   - **Shared User ID (`sharedUserId`):** packages sharing a UID run under identical system security contexts and cannot be isolated carelessly.
   - **System permissions (`protectionLevel: signature|privileged`):** reveals genuine runtime and signature privilege scope.
-  - **Bound services (`Services/Providers`):** identifies client components consuming services via IPC (Binder).
+  - **Bound services (`Services/Providers`):** identifies declared service and provider components. To verify whether other packages actually bind to or consume these services via IPC (Binder), auditors must inspect cross-package runtime bindings (`dumpsys activity services` / `dumpsys activity broadcasts`) or query dependent packages holding corresponding permissions/intent filters, rather than assuming absence of consumers solely from the target manifest.
   - **Installation flags:** `FLAG_SYSTEM`, `FLAG_UPDATED_SYSTEM_APP`, `FLAG_STOPPED`.
 
 ### Level 4: Operational Behavior Observed on Device
 - Verification tests under controlled execution environments:
   - Memory footprint telemetry (`dumpsys meminfo <package>`).
-  - Active network connections and sockets (`dumpsys netstats` / `netpolicy`).
+  - Active network connections and sockets inspected at the socket level (`ss -tlpn`, `netstat`, or `/proc/net/tcp`), retaining `dumpsys netstats` for aggregate historical transfer volume and `dumpsys netpolicy` for UID network policy rules.
   - System response to termination commands (`pm disable-user`, `am force-stop`).
   - Functional stress tests covering voice calls, SMS sending/receipt, biometric authentication, and banking applications.
 

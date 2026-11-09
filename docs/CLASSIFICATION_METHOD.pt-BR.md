@@ -43,13 +43,13 @@ Para garantir reprodutibilidade e afastar inferências sem base técnica, a dete
 - Permite verificar com certeza matemática:
   - **Identificador de Usuário Compartilhado (`sharedUserId`):** pacotes que rodam sob o mesmo UID compartilham permissões de sistema e podem quebrar se desativados em conjunto.
   - **Permissões de sistema (`protectionLevel: signature|privileged`):** revelam o escopo real de privilégios.
-  - **Serviços vinculados (`Services/Providers`):** identifica clientes que consomem o componente via IPC (Binder).
+  - **Serviços vinculados (`Services/Providers`):** identifica componentes de serviço e provedores declarados. Para verificar se outros pacotes efetivamente se conectam ou consomem esses serviços via IPC (Binder), auditores devem inspecionar vinculações em tempo de execução (`dumpsys activity services` / `dumpsys activity broadcasts`) ou consultar pacotes clientes com permissões/filtros correspondentes, não presumindo ausência de consumidores apenas pelo manifesto do pacote analisado.
   - **Flags de instalação:** `FLAG_SYSTEM`, `FLAG_UPDATED_SYSTEM_APP`, `FLAG_STOPPED`.
 
 ### Nível 4: Comportamento operacional observado no dispositivo
 - Testes de execução sob condições controladas:
   - Telemetria de memória (`dumpsys meminfo <pacote>`).
-  - Verificação de conexões ativas de rede (`dumpsys netstats` / `netpolicy`).
+  - Verificação de conexões ativas e sockets abertos no nível de socket (`ss -tlpn`, `netstat` ou `/proc/net/tcp`), utilizando `dumpsys netstats` para totais históricos acumulados de tráfego e `dumpsys netpolicy` para regras e políticas de rede por UID.
   - Resposta a tentativas de encerramento (`pm disable-user`, `am force-stop`).
   - Testes funcionais de estresse em chamadas de voz, envio/recebimento de SMS, autenticação biométrica e aplicativos bancários.
 
