@@ -219,7 +219,14 @@ def validate_markdown_links() -> None:
 
         for destination in markdown_destinations(content):
             parsed = urlsplit(destination)
-            if parsed.scheme or destination.startswith("//") or not parsed.path:
+            if parsed.scheme:
+                if parsed.scheme.lower() == "file":
+                    fail(
+                        f"{markdown.relative_to(ROOT)}: link file:// não é portátil "
+                        f"e não deve ser publicado: {destination}"
+                    )
+                continue
+            if destination.startswith("//") or not parsed.path:
                 continue
 
             target = unquote(parsed.path)
@@ -259,6 +266,7 @@ def validate_bilingual_parity() -> None:
 
 
 def validate_homologation_levels_and_evidence() -> None:
+    """Valida evidências declaradas individualmente para cada dispositivo."""
     global checks
     catalog_path = ROOT / "data/device_catalog.json"
     if not catalog_path.exists():
@@ -268,53 +276,81 @@ def validate_homologation_levels_and_evidence() -> None:
     data = json.loads(catalog_path.read_text(encoding="utf-8"))
     devices = data.get("devices", [])
 
-    for d in devices:
+    def check_evidence_paths(device_id: str, evidence: dict, key: str) -> bool:
+        nonlocal checks
+        raw_paths = evidence.get(key)
+        if isinstance(raw_paths, str):
+            paths = [raw_paths]
+        elif isinstance(raw_paths, list):
+            paths = raw_paths
+        else:
+            paths = []
+
         checks += 1
-        dev_id = d.get("id", "sem-id")
-        level = d.get("homologation_level")
-        if level is None or not isinstance(level, int) or level < 0 or level > 4:
-            fail(f"{dev_id}: nível de homologação inválido ({level}). Deve ser 0 a 4.")
+        if not paths:
+            fail(f"{device_id}: evidência obrigatória ausente no catálogo: evidence.{key}")
+            return False
+
+        valid = True
+        for relative in paths:
+            checks += 1
+            if not isinstance(relative, str) or not relative.strip():
+                fail(f"{device_id}: caminho inválido em evidence.{key}")
+                valid = False
+                continue
+            candidate = (ROOT / relative).resolve()
+            try:
+                candidate.relative_to(ROOT.resolve())
+            except ValueError:
+                fail(f"{device_id}: evidência fora do repositório: {relative}")
+                valid = False
+                continue
+            if not candidate.is_file() or candidate.stat().st_size == 0:
+                fail(f"{device_id}: arquivo de evidência inexistente ou vazio: {relative}")
+                valid = False
+        return valid
+
+    for device in devices:
+        checks += 1
+        device_id = device.get("id", "sem-id")
+        level = device.get("homologation_level")
+        if not isinstance(level, int) or isinstance(level, bool) or not 0 <= level <= 4:
+            fail(f"{device_id}: nível de homologação inválido ({level}); esperado de 0 a 4.")
             continue
 
-        report_dir = (ROOT / d["report"]).parent
+        evidence = device.get("evidence")
+        if not isinstance(evidence, dict):
+            evidence = {}
 
-        # Nível 1: Exige inventário documentado
         if level >= 1:
-            checks += 1
-            has_inventory = (
-                (report_dir / "before/packages.txt").exists()
-                or (report_dir / "packages.txt").exists()
-                or (report_dir / "before/inventory.json").exists()
-                or (ROOT / "docs/auditorias/moto-g54/lote-02-ecossistema-google.md").exists()
-            )
-            if not has_inventory:
-                fail(f"{dev_id}: Nível {level} exige inventário documentado (packages.txt/inventory.json)")
+            check_evidence_paths(device_id, evidence, "inventory")
 
-        # Nível 2: Exige justificativa e registro de auditoria/modificações
         if level >= 2:
-            checks += 1
-            has_audit = (
-                (report_dir / "audit.md").exists()
-                or (report_dir / "auditoria.md").exists()
-                or (report_dir / "comparison-report.md").exists()
-                or (report_dir / "README.md").exists()
-            )
-            if not has_audit:
-                fail(f"{dev_id}: Nível {level} exige documento de auditoria/análise")
+            check_evidence_paths(device_id, evidence, "audit")
 
-        # Nível 3: Exige matriz de testes funcionais ou comparativo estruturado
         if level >= 3:
-            checks += 1
-            has_validation = (
-                (report_dir / "comparativo.json").exists()
-                or (report_dir / "comparison-report.md").exists()
-            )
-            if not has_validation:
-                fail(f"{dev_id}: Nível {level} exige comparativo.json ou comparison-report.md com testes funcionais")
+            check_evidence_paths(device_id, evidence, "functional_tests")
 
-        # Nível 4: Script homologado - atualmente nenhum dispositivo reivindica
         if level == 4:
-            fail(f"{dev_id}: Nível 4 (Script homologado) requer teste comunitário multi-dispositivo formal")
+            check_evidence_paths(device_id, evidence, "script")
+            check_evidence_paths(device_id, evidence, "rollback")
+            script_version = device.get("script_version")
+            script_sha256 = device.get("script_sha256")
+            approved_scope = device.get("approved_scope")
+            reviewer = device.get("reviewer")
+            reviewed_at = device.get("reviewed_at")
+
+            checks += 5
+            if not isinstance(script_version, str) or not script_version.strip():
+                fail(f"{device_id}: Nível 4 exige script_version.")
+            if not isinstance(script_sha256, str) or not re.fullmatch(r"[a-fA-F0-9]{64}", script_sha256):
+                fail(f"{device_id}: Nível 4 exige script_sha256 SHA-256 válido.")
+            if not isinstance(approved_scope, list) or not approved_scope:
+                fail(f"{device_id}: Nível 4 exige approved_scope explícito.")
+            if not isinstance(reviewer, str) or not reviewer.strip():
+                fail(f"{device_id}: Nível 4 exige reviewer identificado.")
+            if not isinstance(reviewed_at, str) or not reviewed_at.strip():
+                fail(f"{device_id}: Nível 4 exige reviewed_at.")
 
 
 def main() -> int:
