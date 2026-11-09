@@ -52,7 +52,7 @@ This occurred despite `com.android.vending` already being cataloged in `data/pro
 
 ## 3. Restoration and Remediation Procedure (ADB)
 
-The connection with the device was re-established via **Wireless ADB** using dynamic TLS pairing and connection on the local service port (`192.168.1.61:42169`).
+The connection with the device was re-established via **Wireless ADB** using dynamic TLS pairing and connection on the local network (`192.168.1.X:PORTA_LOCAL`).
 
 The following commands were executed to restore the packages and integrity subsystems:
 
@@ -113,6 +113,7 @@ Following component reactivation:
    ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=br.gov.serpro.cnhe/.MainActivity} from uid 10499 (app.lawnchair.play)
    ```
    The main authentication view loaded fully, allowing access to digital driver documents.
+4. **GOV.BR Application Status (`br.gov.meugovbr`):** With the Play Store and verification modules re-enabled (`enabled=1`) and previously failed sessions terminated via `am force-stop`, the underlying cause of the Play Integrity failure was eliminated at the operating system level. Foreground end-to-end execution was directly verified on CNH Digital (`br.gov.serpro.cnhe`), while GOV.BR had its subsystem dependencies restored, pending subsequent in-person user login validation.
 
 ---
 
@@ -137,4 +138,4 @@ During the active ADB session, canonical system properties previously flagged as
 2. **Reversible without factory reset:** Restoring the packages via `pm enable --user 0` restored full functionality without requiring app reinstallation, factory wiping, or bootloader unlocking.
 3. **Reinforced Protection Policies:**
    - Package `com.android.vending` is confirmed as non-negotiable in `data/protected_essential_packages.txt`.
-   - `com.google.android.verifier` and `com.google.android.configupdater` are cataloged as essential dependencies for Play Integrity attestation environments.
+   - Preservation is recommended to be extended to packages `com.google.android.verifier` and `com.google.android.configupdater` in environments utilizing Play Integrity attestation.

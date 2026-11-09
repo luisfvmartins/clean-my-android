@@ -18,7 +18,7 @@ Este diretório contém a documentação técnica integral, inventários de paco
 > [!CAUTION]
 > **Conflito com a lista de componentes protegidos e resolução empírica:** uma revisão posterior encontrou 18 pacotes presentes tanto em `pacotes-desativados.txt` quanto em `data/protected_essential_packages.txt`. A interseção incluía `com.android.vending` (Google Play Store).
 >
-> **Resolução em 09/11/2026:** Em validação funcional de uso real, a desativação de `com.android.vending` causou a falha de inicialização dos aplicativos governamentais **CNH Digital** e **GOV.BR** (Play Integrity API). O pacote foi reativado via ADB juntamente com os módulos de integridade associados, restabelecendo a operação plena de ambos os serviços. O histórico detalhado e evidências constam no [Estudo de Caso de Play Integrity](case-study-play-integrity.md).
+> **Resolução em 09/11/2026:** Em validação funcional de uso real, a desativação de `com.android.vending` causou a falha de inicialização dos aplicativos governamentais **CNH Digital** e **GOV.BR** (Play Integrity API). O pacote foi reativado via ADB juntamente com os módulos de integridade associados, revertendo a causa raiz do bloqueio de integridade; a operação plena foi confirmada diretamente na CNH Digital em primeiro plano, com os subsistemas do GOV.BR desbloqueados no sistema. O histórico detalhado e evidências constam no [Estudo de Caso de Play Integrity](case-study-play-integrity.md).
 
 O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge (ADB)** sem root. Foram mapeados todos os pacotes de fábrica, desativados daemons de rastreamento e telemetria, neutralizados instaladores patrocinados e isolados serviços protegidos por firmware.
 

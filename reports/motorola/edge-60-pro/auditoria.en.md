@@ -70,7 +70,7 @@ Raw dumps and operational history remain private.
 | Device codename | `cybert` | Observed through ADB |
 | Product | `cybert_g_sys` | Observed through ADB |
 | CPU architecture | 64-bit (`arm64-v8a`) | Observed in dumpsys |
-| SoC / GPU | MediaTek Dimensity 8300 (`MT6897`) / integrated GPU | Observed via `getprop ro.soc.model` |
+| SoC / GPU | MediaTek Dimensity 8300 (`MT6897`) / integrated GPU | SoC observed via `getprop ro.soc.model`; GPU not collected via ADB during session (requires SurfaceFlinger dump) |
 | Physical RAM | 12 GB | Reported; approximately 4.5 GB free before / 7.2 GB after |
 | Internal storage | 256 GB | Reported; 193 GB free before / approximately 197 GB after |
 | Android version | Android 17 | Observed via `getprop ro.build.version.release` |
@@ -245,7 +245,7 @@ See [comparativo.json](comparativo.json) for the structured comparison.
 | Biometrics | Pending | No biometric unlock test logged |
 | Push notifications (FCM) | Pending | Practical delivery not audited |
 | Banking applications / Pix | Pending | No banking app was opened or tested |
-| Play Integrity / certification | Validated after remediation (11/09/2026) | Government app failure (CNH & GOV.BR) caused by disabling `com.android.vending`. Reverted via ADB, successfully restoring full app functionality. See the [Play Integrity Case Study](case-study-play-integrity.en.md). |
+| Play Integrity / certification | Validated in government app post-remediation (11/09/2026) | Government app failure (CNH & GOV.BR) caused by disabling `com.android.vending`. Reverted via ADB, successfully restoring operation on CNH Digital. See the [Play Integrity Case Study](case-study-play-integrity.en.md). |
 | System OTA updates | Intentionally paused | `com.motorola.ccc.ota` was paused in the recorded session |
 
 ## 9. Security and privacy interpretation
@@ -261,15 +261,16 @@ These observations must be interpreted carefully:
 
 ## 10. Limitations and follow-up collection
 
-The device owner should collect the following properties to confirm the Android version and build:
+With the canonical Android version (Android 17 / SDK 37) and Play Integrity attestation confirmed on 2026-11-09, the following collection items remain pending for future in-person execution:
 
 ```bash
-adb shell getprop ro.build.version.release
-adb shell getprop ro.build.version.sdk
-adb shell getprop ro.build.version.incremental
-adb shell getprop ro.build.fingerprint
+# 1. Detailed GPU and CPU hardware identification:
 adb shell cat /proc/cpuinfo
 adb shell dumpsys SurfaceFlinger | grep -i "GLES"
+
+# 2. Critical functional validation on live hardware:
+# Validate voice cellular calls, SMS transmission, biometric recognition,
+# and banking applications with Pix transactions to satisfy Section 7 pending checks.
 ```
 
 Play Integrity should be checked separately with an appropriate checker and documented result. Voice calls, SMS, mobile data, VoLTE/VoWiFi, Bluetooth, GPS, biometrics, push notifications, banking apps, and Pix must be tested by the device owner before the audit status can be changed.
@@ -316,7 +317,7 @@ See [comparativo.json](comparativo.json) for the structured comparison.
 | Biometrics | Pending | No biometric unlock test logged |
 | Push notifications (FCM) | Pending | Practical delivery not audited |
 | Banking applications / Pix | Pending | No banking app was opened or tested |
-| Play Integrity / certification | Validated after remediation (11/09/2026) | Government app failure (CNH & GOV.BR) caused by disabling `com.android.vending`. Reverted via ADB, successfully restoring full app functionality. See the [Play Integrity Case Study](case-study-play-integrity.en.md). |
+| Play Integrity / certification | Validated in government app post-remediation (11/09/2026) | Government app failure (CNH & GOV.BR) caused by disabling `com.android.vending`. Reverted via ADB, successfully restoring operation on CNH Digital. See the [Play Integrity Case Study](case-study-play-integrity.en.md). |
 | System OTA updates | Intentionally paused | `com.motorola.ccc.ota` was paused in the recorded session |
 
 ## 9. Security and privacy interpretation
@@ -332,15 +333,16 @@ These observations must be interpreted carefully:
 
 ## 10. Limitations and follow-up collection
 
-The device owner should collect the following properties to confirm the Android version and build:
+With the canonical Android version (Android 17 / SDK 37) and Play Integrity attestation confirmed on 2026-11-09, the following collection items remain pending for future in-person execution:
 
 ```bash
-adb shell getprop ro.build.version.release
-adb shell getprop ro.build.version.sdk
-adb shell getprop ro.build.version.incremental
-adb shell getprop ro.build.fingerprint
+# 1. Detailed GPU and CPU hardware identification:
 adb shell cat /proc/cpuinfo
 adb shell dumpsys SurfaceFlinger | grep -i "GLES"
+
+# 2. Critical functional validation on live hardware:
+# Validate voice cellular calls, SMS transmission, biometric recognition,
+# and banking applications with Pix transactions to satisfy Section 7 pending checks.
 ```
 
 Play Integrity should be checked separately with an appropriate checker and documented result. Voice calls, SMS, mobile data, VoLTE/VoWiFi, Bluetooth, GPS, biometrics, push notifications, banking apps, and Pix must be tested by the device owner before the audit status can be changed.

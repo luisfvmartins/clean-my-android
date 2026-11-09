@@ -52,7 +52,7 @@ A desativação ocorreu apesar de `com.android.vending` já constar na lista de 
 
 ## 3. Procedimento de Reversão e Remediação (ADB)
 
-A conexão com o smartphone foi restabelecida via **Depuração Sem Fio (Wireless ADB)** emparelhado por TLS na porta dinâmica e conectada na porta de serviço local (`192.168.1.61:42169`).
+A conexão com o smartphone foi restabelecida via **Depuração Sem Fio (Wireless ADB)** emparelhada por TLS na porta dinâmica e conectada na rede local (`192.168.1.X:PORTA_LOCAL`).
 
 Foram executados os seguintes comandos para reverter a desativação e restabelecer o subsistema de integridade:
 
@@ -113,6 +113,7 @@ Após a reativação dos componentes:
    ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=br.gov.serpro.cnhe/.MainActivity} from uid 10499 (app.lawnchair.play)
    ```
    A tela principal de autenticação carregou integralmente, permitindo acesso aos documentos digitais.
+4. **Situação do Aplicativo GOV.BR (`br.gov.meugovbr`):** Com a Play Store e os módulos de verificação reativados (`enabled=1`) e os processos em falha encerrados via `am force-stop`, a causa raiz do bloqueio de integridade foi eliminada a nível de sistema operacional. A validação ponta-a-ponta em primeiro plano foi confirmada diretamente na CNH Digital (`br.gov.serpro.cnhe`), enquanto o GOV.BR teve sua dependência reabilitada no ambiente, com validação de login interativo pendente de acompanhamento pelo usuário.
 
 ---
 

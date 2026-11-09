@@ -19,7 +19,7 @@ The debloating and sandboxing session was performed through **Android Debug Brid
 > [!CAUTION]
 > **Conflict with the protected-components list and empirical resolution:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap included `com.android.vending` (Google Play Store).
 >
-> **November 09, 2026 Resolution:** During real-world testing, disabling `com.android.vending` caused initialization failures in critical Brazilian government apps (**CNH Digital** and **GOV.BR**) due to Play Integrity API rejection. The package and associated verification modules were restored via ADB, successfully restoring both services. See the full [Play Integrity Case Study](case-study-play-integrity.en.md).
+> **November 09, 2026 Resolution:** During real-world testing, disabling `com.android.vending` caused initialization failures in critical Brazilian government apps (**CNH Digital** and **GOV.BR**) due to Play Integrity API rejection. The package and associated verification modules were restored via ADB, reversing the root cause of the integrity lock; full runtime operation was directly verified on CNH Digital in the foreground, with GOV.BR integrity subsystems restored at the OS level. See the full [Play Integrity Case Study](case-study-play-integrity.en.md).
 
 ### Reported actions and observations
 

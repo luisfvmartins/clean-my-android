@@ -70,7 +70,7 @@ Foram recuperados e analisados os seguintes artefatos de dados brutos:
 | **Nome do Produto (Product)** | `cybert_g_sys` | Observado via ADB (`product:cybert_g_sys`) |
 | **Arquitetura da CPU** | 64-bit (`arm64-v8a`) | Observado em dumpsys (`primaryCpuAbi=arm64-v8a`) |
 | **Processador (SoC)** | MediaTek Dimensity 8300 (`MT6897`) | Observado via `getprop ro.soc.model` |
-| **Unidade Gráfica (GPU)** | GPU integrada da plataforma Dimensity | Observado via plataforma MT6897 |
+| **Unidade Gráfica (GPU)** | GPU integrada da plataforma Dimensity / equivalente | **Não coletado via ADB na sessão** (requer dump do SurfaceFlinger) |
 | **Memória RAM Física** | 12 GB físicos | Registrado (~4.5 GB livres pré / ~7.2 GB pós) |
 | **Armazenamento Interno** | 256 GB totais | Registrado (193 GB livres pré / ~197 GB pós) |
 | **Versão do Android** | Android **17** | Observado via `getprop ro.build.version.release` |
@@ -358,7 +358,7 @@ Para garantir total conformidade com a transparência técnica, cada teste é cl
 | **Notificações Push (FCM)** | **Pendente de validação** | Conexão TCP do GMS mantida em background; entrega prática de notificações não auditada. |
 | **Aplicativos Bancários** | **Pendente de validação** | Nenhum aplicativo de instituição financeira foi aberto ou auditado durante a sessão ADB. |
 | **Transações Pix** | **Pendente de validação** | Dependente de validação presencial nos aplicativos bancários do usuário. |
-| **Play Integrity e Certificação** | **Validado após remediação (09/11/2026)** | Incidente com apps governamentais (CNH e GOV.BR) gerado pela desativação de `com.android.vending`. Revertido com sucesso via ADB, restabelecendo a operação plena dos aplicativos. Consulte o [Estudo de Caso de Play Integrity](case-study-play-integrity.md). |
+| **Play Integrity e Certificação** | **Validado em app governamental após remediação (09/11/2026)** | Incidente com apps governamentais (CNH e GOV.BR) gerado pela desativação de `com.android.vending`. Revertido com sucesso via ADB, restabelecendo a operação da CNH Digital em primeiro plano. Consulte o [Estudo de Caso de Play Integrity](case-study-play-integrity.md). |
 | **Atualizações OTA de Sistema** | **Pausado intencionalmente** | `com.motorola.ccc.ota` foi paralisado para evitar sobrescrita automática das desativações. |
 
 ---
@@ -381,22 +381,16 @@ Para garantir total conformidade com a transparência técnica, cada teste é cl
 Em cumprimento às diretrizes de integridade documental, registram-se as limitações técnicas desta auditoria e as ações recomendadas:
 
 ### 9.1. Comandos de Coleta Complementar (Para Execução Futura pelo Proprietário)
-Os seguintes comandos devem ser executados pelo proprietário para suprir as lacunas canônicas identificadas:
+Com a versão canônica do sistema (Android 17 / SDK 37) e atestação do Play Integrity já confirmadas em 09/11/2026, restam as seguintes coletas pendentes para execução presencial:
 
 ```bash
-# 1. Confirmação canônica da versão do Android e compilação:
-adb shell getprop ro.build.version.release
-adb shell getprop ro.build.version.sdk
-adb shell getprop ro.build.version.incremental
-adb shell getprop ro.build.fingerprint
-
-# 2. Identificação de hardware (processador e placa gráfica):
+# 1. Identificação detalhada da GPU e arquitetura de CPU:
 adb shell cat /proc/cpuinfo
 adb shell dumpsys SurfaceFlinger | grep -i "GLES"
 
-# 3. Verificação da certificação Play Integrity:
-# Executar aplicativo Play Integrity API Checker (Play Store) e registrar
-# se o dispositivo atinge MEETS_BASIC_INTEGRITY e MEETS_DEVICE_INTEGRITY.
+# 2. Homologação funcional de funções críticas em uso real:
+# Executar chamadas de voz, envio/recebimento de SMS, autenticação biométrica
+# e login em aplicativos bancários com transação Pix para fechamento de pendências da Seção 7.
 ```
 
 ### 9.2. Atualizações de Sistema (OTA)
