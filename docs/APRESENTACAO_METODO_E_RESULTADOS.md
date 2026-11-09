@@ -27,7 +27,7 @@ flowchart LR
 
 ## 2. Níveis de Status e Homologação Técnica
 
-Para evitar que a simples publicação de um relatório seja interpretada como uma homologação definitiva de procedimentos, o projeto adota uma taxonomia formal em 5 níveis (conforme [docs/AUDIT_STATUS_AND_HOMOLOGATION.md](file:///home/luisfvmartins/clean-my-android/docs/AUDIT_STATUS_AND_HOMOLOGATION.md)):
+Para evitar que a simples publicação de um relatório seja interpretada como uma homologação definitiva de procedimentos, o projeto adota uma taxonomia formal em 5 níveis (conforme [padrão de níveis de status e homologação](AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md)):
 
 | Nível | Classificação | Evidência Exigida | Declaração Permitida |
 | :---: | :--- | :--- | :--- |
