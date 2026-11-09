@@ -2,41 +2,42 @@
   "device": "Samsung Galaxy A30s (SM-A307GT)",
   "homologation_level": 3,
   "audit_date": "2026-11-04",
+  "temporal_traceability_limitation": "Limitação de rastreabilidade temporal: os registros de testes constam com data de 2026-11-04, que antecede a execução das alterações no change-log (2026-11-08). Em cumprimento às diretrizes do Clean My Android de não inventar medições e preservar a integridade histórica, registra-se que estes testes documentam o ensaio de bancada inicial e a validação formal pós-alteração requer reexecução com logs contemporâneos.",
   "tests": [
     {
       "test_name": "Telefonia Celular e Chamadas de Voz",
       "status": "pass",
       "date": "2026-11-04",
       "tester": "Luís Martins",
-      "observation": "Chamadas de voz ativas e receptivas funcionando normalmente."
+      "observation": "Chamadas de voz ativas e receptivas funcionando normalmente (ensaio inicial de bancada; validação pós-alteração de 2026-11-08 requer reexecução formal)."
     },
     {
       "test_name": "Envio e Recebimento de SMS",
       "status": "pass",
       "date": "2026-11-04",
       "tester": "Luís Martins",
-      "observation": "Mensagens SMS recebidas e enviadas sem falhas."
+      "observation": "Mensagens SMS recebidas e enviadas sem falhas (ensaio inicial de bancada; validação pós-alteração de 2026-11-08 requer reexecução formal)."
     },
     {
       "test_name": "Conectividade de Dados Móveis e Wi-Fi",
       "status": "pass",
       "date": "2026-11-04",
       "tester": "Luís Martins",
-      "observation": "Alternância entre redes 4G LTE e Wi-Fi estável sem interrupções."
+      "observation": "Alternância entre redes 4G LTE e Wi-Fi estável sem interrupções (ensaio inicial de bancada; validação pós-alteração de 2026-11-08 requer reexecução formal)."
     },
     {
       "test_name": "Autenticação Biométrica e Sensores",
       "status": "pass",
       "date": "2026-11-04",
       "tester": "Luís Martins",
-      "observation": "Sensor de impressão digital sob o display operando normalmente."
+      "observation": "Sensor de impressão digital sob o display operando normalmente (ensaio inicial de bancada; validação pós-alteração de 2026-11-08 requer reexecução formal)."
     },
     {
       "test_name": "Aplicativos Bancários e Transações Pix",
       "status": "pass",
       "date": "2026-11-04",
       "tester": "Luís Martins",
-      "observation": "Apps bancários validados sem detecção de anomalias ou alertas de integridade."
+      "observation": "Apps bancários validados sem detecção de anomalias ou alertas de integridade (ensaio inicial de bancada; validação pós-alteração de 2026-11-08 requer reexecução formal)."
     },
     {
       "test_name": "Serviço de Impressão / Salvar como PDF",

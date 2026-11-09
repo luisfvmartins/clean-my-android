@@ -12,7 +12,7 @@
 
 Esta auditoria técnica documenta a análise e otimização cirúrgica do smartphone **Samsung Galaxy A30s**. A inspeção inicial via Android Debug Bridge (ADB) identificou **392 pacotes catalogados** na partição de sistema de fábrica (`/system`, `/product`, `/apex` e stubs em `/data`).
 
-O objetivo foi neutralizar pacotes de publicidade invasiva (Digital Turbine Ignite), agentes de diagnóstico em segundo plano e componentes desnecessários, preservando integralmente o subsistema telefônico RIL, biometria e a usabilidade do One UI.
+O objetivo foi desativar pacotes de publicidade invasiva (Digital Turbine Ignite), agentes de diagnóstico em segundo plano e componentes desnecessários, preservando integralmente o subsistema telefônico RIL, biometria e a usabilidade do One UI.
 
 ---
 
@@ -41,7 +41,7 @@ Conforme documentado em [`changes/appops-changes.txt`](changes/appops-changes.tx
 ## 4. Limitações e Regressão Identificada
 
 * **Impressão / Salvar como PDF:** A desativação de `com.android.printspooler` causou a perda da funcionalidade nativa de salvar páginas como PDF. A limitação foi aceita pelo usuário e motivou a blindagem permanente desse pacote no arquivo de proteção global do projeto (`data/protected_essential_packages.txt`).
-* **Telemetria residual:** A suspensão de daemons específicos limita o tráfego gerado por eles, mas não assegura a eliminação completa de telemetria do ecossistema Google ou Samsung em nível de kernel ou serviços vitais.
+* **Telemetria residual:** A suspensão de daemons específicos limita o tráfego gerado por eles, mas não assegura a cessação de telemetria geral do ecossistema Google ou Samsung em nível de kernel ou serviços vitais (efeito geral: [não medido](comparison-report.md)).
 
 ---
 

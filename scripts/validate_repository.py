@@ -378,8 +378,34 @@ def validate_homologation_levels_and_evidence() -> None:
                 dev_dir / "before/packages.txt",
                 dev_dir / "before/packages-initial.txt",
             ]
-            if not any(c.is_file() for c in inv_candidates):
-                fail(f"{device_id}: inventário canônico de Nível 1 ausente em before/")
+            valid_before_inv = False
+            for c in inv_candidates:
+                if c.is_file() and c.stat().st_size > 0:
+                    if c.suffix == ".txt":
+                        valid_before_inv = True
+                        break
+                    elif c.suffix == ".json":
+                        try:
+                            c_data = json.loads(c.read_text(encoding="utf-8"))
+                            if isinstance(c_data, list) and len(c_data) > 0:
+                                valid_before_inv = True
+                                break
+                            elif isinstance(c_data, dict):
+                                has_pkgs = any(k.startswith(("com.", "android", "org.", "net.")) for k in c_data.keys())
+                                if has_pkgs:
+                                    valid_before_inv = True
+                                    break
+                                for k in ("packages", "components", "pacotes"):
+                                    val = c_data.get(k)
+                                    if isinstance(val, (list, dict)) and len(val) > 0:
+                                        valid_before_inv = True
+                                        break
+                                if valid_before_inv:
+                                    break
+                        except Exception:
+                            pass
+            if not valid_before_inv:
+                fail(f"{device_id}: inventário canônico de Nível 1 ausente ou sem registros de componentes em before/")
 
             # Nível 2+: comparison-report(.en).md, changes/change-log(.en).md, after/
             if level >= 2:
@@ -401,8 +427,34 @@ def validate_homologation_levels_and_evidence() -> None:
                     dev_dir / "after/packages.txt",
                     dev_dir / "after/packages-final.txt",
                 ]
-                if not any(c.is_file() for c in after_candidates):
-                    fail(f"{device_id}: inventário canônico de Nível 2 ausente em after/")
+                valid_after_inv = False
+                for c in after_candidates:
+                    if c.is_file() and c.stat().st_size > 0:
+                        if c.suffix == ".txt":
+                            valid_after_inv = True
+                            break
+                        elif c.suffix == ".json":
+                            try:
+                                c_data = json.loads(c.read_text(encoding="utf-8"))
+                                if isinstance(c_data, list) and len(c_data) > 0:
+                                    valid_after_inv = True
+                                    break
+                                elif isinstance(c_data, dict):
+                                    has_pkgs = any(k.startswith(("com.", "android", "org.", "net.")) for k in c_data.keys())
+                                    if has_pkgs:
+                                        valid_after_inv = True
+                                        break
+                                    for k in ("packages", "components", "pacotes"):
+                                        val = c_data.get(k)
+                                        if isinstance(val, (list, dict)) and len(val) > 0:
+                                            valid_after_inv = True
+                                            break
+                                    if valid_after_inv:
+                                        break
+                            except Exception:
+                                pass
+                if not valid_after_inv:
+                    fail(f"{device_id}: inventário canônico de Nível 2 ausente ou sem registros de componentes em after/")
 
                 if (dev_dir / "changes").is_dir():
                     for f_name in [
