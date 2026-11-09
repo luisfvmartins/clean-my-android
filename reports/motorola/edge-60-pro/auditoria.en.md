@@ -70,11 +70,12 @@ Raw dumps and operational history remain private.
 | Device codename | `cybert` | Observed through ADB |
 | Product | `cybert_g_sys` | Observed through ADB |
 | CPU architecture | 64-bit (`arm64-v8a`) | Observed in dumpsys |
-| SoC / GPU | Dimensity-class platform / integrated GPU | Not collected through ADB in this session |
+| SoC / GPU | MediaTek Dimensity 8300 (`MT6897`) / integrated GPU | Observed via `getprop ro.soc.model` |
 | Physical RAM | 12 GB | Reported; approximately 4.5 GB free before / 7.2 GB after |
 | Internal storage | 256 GB | Reported; 193 GB free before / approximately 197 GB after |
-| Android version | Framework indicators point to version 17 | Canonical confirmation pending |
-| API level / target SDK | 377 packages with `targetSdk=37` | Canonical confirmation pending |
+| Android version | Android 17 | Observed via `getprop ro.build.version.release` |
+| API level / target SDK | 37 | Observed via `getprop ro.build.version.sdk` |
+| ROM build / fingerprint | `motorola/cybert_g_sys/cybert:17/A171VVH.36-27/7a1c2-08c719:user/release-keys` | Observed via `getprop ro.build.fingerprint` |
 | Interface | Motorola Hello UI | Inferred from Motorola packages |
 | Build / security patch | Stock Motorola build | Not collected through `getprop` |
 | Root / bootloader | No root; locked bootloader | Observed through rejected root-level commands |
@@ -244,7 +245,7 @@ See [comparativo.json](comparativo.json) for the structured comparison.
 | Biometrics | Pending | No biometric unlock test logged |
 | Push notifications (FCM) | Pending | Practical delivery not audited |
 | Banking applications / Pix | Pending | No banking app was opened or tested |
-| Play Integrity / certification | Pending | No API attestation result collected |
+| Play Integrity / certification | Validated after remediation (11/09/2026) | Government app failure (CNH & GOV.BR) caused by disabling `com.android.vending`. Reverted via ADB, successfully restoring full app functionality. See the [Play Integrity Case Study](case-study-play-integrity.en.md). |
 | System OTA updates | Intentionally paused | `com.motorola.ccc.ota` was paused in the recorded session |
 
 ## 9. Security and privacy interpretation
@@ -315,7 +316,7 @@ See [comparativo.json](comparativo.json) for the structured comparison.
 | Biometrics | Pending | No biometric unlock test logged |
 | Push notifications (FCM) | Pending | Practical delivery not audited |
 | Banking applications / Pix | Pending | No banking app was opened or tested |
-| Play Integrity / certification | Pending | No API attestation result collected |
+| Play Integrity / certification | Validated after remediation (11/09/2026) | Government app failure (CNH & GOV.BR) caused by disabling `com.android.vending`. Reverted via ADB, successfully restoring full app functionality. See the [Play Integrity Case Study](case-study-play-integrity.en.md). |
 | System OTA updates | Intentionally paused | `com.motorola.ccc.ota` was paused in the recorded session |
 
 ## 9. Security and privacy interpretation

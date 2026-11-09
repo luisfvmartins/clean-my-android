@@ -120,7 +120,7 @@ Audits are device-specific and have different validation levels. Consult the [de
 | Device | Documentation | Status |
 |---|---|---|
 | Motorola Moto G54 5G (XT2343-1) | [Technical audit (English summary)](docs/AUDITORIA_MOTO_G54_5G.en.md) · [Full report (Portuguese)](docs/AUDITORIA_MOTO_G54_5G.md) | Inventory published; see report for scope and limitations |
-| Motorola Edge 60 Pro (XT2507-1) | [Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md) | Functional validation and confirmation of some data pending |
+| Motorola Edge 60 Pro (XT2507-1) | [Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md) | Integrity validation passed (CNH/GOV.BR); voice and SMS subsystems pending |
 | Motorola Edge 60 Fusion (scout_g_sysn) | [Device overview (English)](reports/motorola/edge-60-fusion/README.en.md) · [Full audit (Portuguese)](reports/motorola/edge-60-fusion/audit.md) | Audit and debloat completed; functional validation passed for calls, SMS, biometrics, and banking apps. RCS and 24h battery pending |
 | Samsung Galaxy A30s (SM-A307GT) | [Device overview (English)](reports/samsung/galaxy-a30s/README.en.md) · [Comparison report (English summary)](reports/samsung/galaxy-a30s/comparison-report.en.md) | Surgical debloat completed; 48 packages neutralized across two batches; functional validation passed (PDF printing limitation noted) |
 <!-- END_AUDITED_DEVICES -->

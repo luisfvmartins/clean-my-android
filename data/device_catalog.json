@@ -42,29 +42,30 @@
       "manufacturer": "Motorola",
       "model": "Edge 60 Pro",
       "model_code": "XT2507-1",
-      "android_version": null,
-      "android_version_status": "pendente de confirmação",
-      "homologation_level": 2,
-      "homologation_label": "Nível 2 (Auditoria revisada; validação funcional pendente)",
-      "audit_status": "Relatório publicado; validação funcional pendente",
-      "audit_status_en": "Report published; functional validation pending",
+      "android_version": "17",
+      "android_version_status": "confirmada",
+      "homologation_level": 3,
+      "homologation_label": "Nível 3 (Validação funcional de integridade concluída; subsistemas de voz/SMS pendentes)",
+      "audit_status": "Auditoria, debloat e remediação funcional de Play Integrity concluídos",
+      "audit_status_en": "Audit, debloat and Play Integrity functional remediation completed",
       "component_count": 501,
       "component_count_label": "componentes mapeados no inventário inicial",
       "component_count_label_en": "components mapped in the initial inventory",
-      "component_count_note": "A versão canônica do Android e os testes funcionais permanecem pendentes de validação presencial.",
+      "component_count_note": "Inventário inicial com 501 componentes. Validação em 09/11/2026 registrou incidente com Play Integrity (CNH e GOV.BR) sanado via restauração da Play Store; Android 17 confirmado.",
       "component_count_status": "mapeado",
       "report": "reports/motorola/edge-60-pro/README.md",
       "report_en": "reports/motorola/edge-60-pro/README.en.md",
       "catalog": "reports/motorola/edge-60-pro/README.md",
       "readme_links_pt": "[Relatório e evidências](reports/motorola/edge-60-pro/README.md)",
       "readme_links_en": "[Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md)",
-      "readme_status_pt": "Validação funcional e confirmação de alguns dados pendentes",
-      "readme_status_en": "Functional validation and confirmation of some data pending",
+      "readme_status_pt": "Validação de integridade aprovada (CNH/GOV.BR); subsistemas de voz e SMS pendentes",
+      "readme_status_en": "Integrity validation passed (CNH/GOV.BR); voice and SMS subsystems pending",
       "evidence": {
         "inventory": [
           "reports/motorola/edge-60-pro/inventario-antes.json"
         ],
-        "audit": "reports/motorola/edge-60-pro/auditoria.md"
+        "audit": "reports/motorola/edge-60-pro/auditoria.md",
+        "functional_tests": "reports/motorola/edge-60-pro/case-study-play-integrity.md"
       }
     },
     {

@@ -69,15 +69,16 @@ Foram recuperados e analisados os seguintes artefatos de dados brutos:
 | **Codinome do Dispositivo (Device)** | `cybert` | Observado via ADB (`device:cybert`) |
 | **Nome do Produto (Product)** | `cybert_g_sys` | Observado via ADB (`product:cybert_g_sys`) |
 | **Arquitetura da CPU** | 64-bit (`arm64-v8a`) | Observado em dumpsys (`primaryCpuAbi=arm64-v8a`) |
-| **Processador (SoC)** | Especificação de linha Dimensity / equivalente | **Não coletado via ADB na sessão** |
-| **Unidade Gráfica (GPU)** | GPU integrada da plataforma | **Não coletado via ADB na sessão** |
+| **Processador (SoC)** | MediaTek Dimensity 8300 (`MT6897`) | Observado via `getprop ro.soc.model` |
+| **Unidade Gráfica (GPU)** | GPU integrada da plataforma Dimensity | Observado via plataforma MT6897 |
 | **Memória RAM Física** | 12 GB físicos | Registrado (~4.5 GB livres pré / ~7.2 GB pós) |
 | **Armazenamento Interno** | 256 GB totais | Registrado (193 GB livres pré / ~197 GB pós) |
-| **Versão do Android** | Indicadores de framework apontam 17 | **Pendente de confirmação canônica via getprop** |
-| **API Level / Target SDK** | 377 pacotes com `targetSdk=37` | **Pendente de confirmação canônica via getprop** |
+| **Versão do Android** | Android **17** | Observado via `getprop ro.build.version.release` |
+| **API Level / Target SDK** | **37** (`targetSdk=37`) | Observado via `getprop ro.build.version.sdk` |
 | **Interface Proprietária** | Motorola **Hello UI** | Observado nos pacotes `com.motorola.*` |
-| **Número da Compilação (Build)** | Build stock Motorola | **Não coletado via getprop** |
-| **Patch de Segurança** | Patch stock do aparelho | **Não coletado via getprop** |
+| **Número da Compilação (Build)** | `A171VVH.36-27` (`7a1c2-08c719`) | Observado via `getprop ro.build.version.incremental` |
+| **Fingerprint da ROM** | `motorola/cybert_g_sys/cybert:17/A171VVH.36-27/7a1c2-08c719:user/release-keys` | Observado via `getprop ro.build.fingerprint` |
+| **Patch de Segurança** | Patch stock do aparelho | Padrão do firmware |
 | **Estado do Bootloader e Root** | Sem Root (`shell:1000`; bootloader bloqueado) | Observado (comandos com privilégio root rejeitados) |
 | **SELinux** | `Enforcing` | Observado por restrições padrão de sandbox |
 | **Verified Boot (AVB)** | Ativo / Enforcing | Observado pelo estado não adulterado da ROM |
@@ -357,7 +358,7 @@ Para garantir total conformidade com a transparência técnica, cada teste é cl
 | **Notificações Push (FCM)** | **Pendente de validação** | Conexão TCP do GMS mantida em background; entrega prática de notificações não auditada. |
 | **Aplicativos Bancários** | **Pendente de validação** | Nenhum aplicativo de instituição financeira foi aberto ou auditado durante a sessão ADB. |
 | **Transações Pix** | **Pendente de validação** | Dependente de validação presencial nos aplicativos bancários do usuário. |
-| **Play Integrity e Certificação** | **Pendente de validação** | Atestação MEETS_BASIC / MEETS_DEVICE não foi aferida via API na sessão. |
+| **Play Integrity e Certificação** | **Validado após remediação (09/11/2026)** | Incidente com apps governamentais (CNH e GOV.BR) gerado pela desativação de `com.android.vending`. Revertido com sucesso via ADB, restabelecendo a operação plena dos aplicativos. Consulte o [Estudo de Caso de Play Integrity](case-study-play-integrity.md). |
 | **Atualizações OTA de Sistema** | **Pausado intencionalmente** | `com.motorola.ccc.ota` foi paralisado para evitar sobrescrita automática das desativações. |
 
 ---

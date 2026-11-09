@@ -118,7 +118,7 @@ As auditorias são específicas por aparelho e possuem diferentes níveis de val
 | Dispositivo | Documentação | Situação |
 |---|---|---|
 | Motorola Moto G54 5G (XT2343-1) | [Auditoria técnica](docs/AUDITORIA_MOTO_G54_5G.md) | Inventário publicado; consulte o relatório para escopo e limitações |
-| Motorola Edge 60 Pro (XT2507-1) | [Relatório e evidências](reports/motorola/edge-60-pro/README.md) | Validação funcional e confirmação de alguns dados pendentes |
+| Motorola Edge 60 Pro (XT2507-1) | [Relatório e evidências](reports/motorola/edge-60-pro/README.md) | Validação de integridade aprovada (CNH/GOV.BR); subsistemas de voz e SMS pendentes |
 | Motorola Edge 60 Fusion (scout_g_sysn) | [Relatório e evidências](reports/motorola/edge-60-fusion/README.md) | Auditoria e debloat concluídos; validação funcional aprovada em chamadas, SMS, biometria e bancos. Limitação em RCS e bateria 24h pendente |
 | Samsung Galaxy A30s (SM-A307GT) | [Relatório e evidências](reports/samsung/galaxy-a30s/README.md) | Auditoria e otimização cirúrgica concluídas; 48 pacotes neutralizados em dois lotes; validação funcional aprovada (ressalva em impressão PDF) |
 <!-- END_AUDITED_DEVICES -->

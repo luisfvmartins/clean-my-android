@@ -40,6 +40,7 @@ MANDATORY_PAIRS: list[tuple[str, str]] = [
     ("reports/samsung/galaxy-a30s/README.md", "reports/samsung/galaxy-a30s/README.en.md"),
     # Dispositivos - Relatórios e resumos
     ("reports/motorola/edge-60-pro/auditoria.md", "reports/motorola/edge-60-pro/auditoria.en.md"),
+    ("reports/motorola/edge-60-pro/case-study-play-integrity.md", "reports/motorola/edge-60-pro/case-study-play-integrity.en.md"),
     ("reports/motorola/edge-60-pro/historical-summary.pt-BR.md", "reports/motorola/edge-60-pro/historical-summary.en.md"),
     ("reports/samsung/galaxy-a30s/comparison-report.md", "reports/samsung/galaxy-a30s/comparison-report.en.md"),
     ("reports/samsung/galaxy-a30s/changes/change-log.md", "reports/samsung/galaxy-a30s/changes/change-log.en.md"),

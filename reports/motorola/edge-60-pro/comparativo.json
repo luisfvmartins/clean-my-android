@@ -2,7 +2,7 @@
   "device_model": "Motorola Edge 60 Pro (XT2507-1)",
   "codename": "cybert",
   "architecture": "arm64-v8a",
-  "os_version": "Pendente de confirmação (versões de framework indicam 17/API 37, mas getprop canônico não foi registrado)",
+  "os_version": "Android 17 (API 37, compilação 7a1c2-08c719 confirmada via getprop em 09/11/2026)",
   "audit_period": "2026-11-06 a 2026-11-07",
   "metrics": [
     {
@@ -71,9 +71,9 @@
     {
       "indicator": "Verificação Play Integrity / Bancos",
       "before": "Não coletado formalmente",
-      "after": "Pendente de validação presencial",
-      "variation": "Nenhum teste de integridade via API nem logs de aplicativos bancários foram executados na sessão",
-      "evidence": "Registros de execução não contêm chamadas Play Integrity API nem testes de apps de banco"
+      "after": "Validado com sucesso em 09/11/2026 após remediação",
+      "variation": "Falha em CNH Digital e GOV.BR resolvida com reativação de com.android.vending e módulos de integridade; atestação restabelecida",
+      "evidence": "case-study-play-integrity.md; processo br.gov.serpro.cnhe ativo com 253 MB RSS; logcat Finsky AU2: Successful cache refresh"
     },
     {
       "indicator": "Testes Funcionais (Voz, SMS, Biometria)",

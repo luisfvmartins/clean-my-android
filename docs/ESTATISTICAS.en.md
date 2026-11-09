@@ -6,7 +6,7 @@ Metrics are calculated from the structured catalog in [data/device_catalog.json]
 
 - **Cataloged devices:** 4
 - **Represented manufacturers:** 2
-- **Confirmed Android versions:** 3 (11, 15, 16)
+- **Confirmed Android versions:** 4 (11, 15, 16, 17)
 - **Reports with component counts:** 4
 
 ## Devices
@@ -14,7 +14,7 @@ Metrics are calculated from the structured catalog in [data/device_catalog.json]
 | Manufacturer / model | Code | Android | Audit status | Recorded components |
 |---|---|---|---|---:|
 | Motorola Moto G54 5G | XT2343-1 | Android 15 | [Technical inventory published](../reports/motorola/moto-g54-5g/README.en.md) | 462 — components audited in the local inventory |
-| Motorola Edge 60 Pro | XT2507-1 | Not confirmed (pendente de confirmação) | [Report published; functional validation pending](../reports/motorola/edge-60-pro/README.en.md) | 501 — components mapped in the initial inventory |
+| Motorola Edge 60 Pro | XT2507-1 | Android 17 | [Audit, debloat and Play Integrity functional remediation completed](../reports/motorola/edge-60-pro/README.en.md) | 501 — components mapped in the initial inventory |
 | Motorola Edge 60 Fusion | scout_g_sysn | Android 16 | [Audit and debloat completed](../reports/motorola/edge-60-fusion/README.en.md) | 486 — packages mapped in the initial inventory |
 | Samsung Galaxy A30s | SM-A307GT | Android 11 | [Audit and surgical debloat completed](../reports/samsung/galaxy-a30s/README.en.md) | 392 — packages cataloged in factory firmware |
 

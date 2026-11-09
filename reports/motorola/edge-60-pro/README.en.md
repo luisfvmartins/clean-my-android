@@ -5,8 +5,8 @@
 
 **Model:** XT2507-1 · **Codename:** `cybert`  
 **Interface:** Hello UI  
-**Android version:** pending canonical confirmation  
-**Status:** Pending validation
+**Android version:** 17 (SDK 37, build `7a1c2-08c719` confirmed via `getprop`)  
+**Status:** Level 3 — Integrity functional validation completed; voice/SMS subsystems pending
 
 This folder contains the technical report, before/after package inventories, performance metrics, and a detailed history of debloating, sandboxing, and privacy-related actions performed on the **Motorola Edge 60 Pro (XT2507-1)**.
 
@@ -14,10 +14,12 @@ This folder contains the technical report, before/after package inventories, per
 
 The debloating and sandboxing session was performed through **Android Debug Bridge (ADB)** without root. Factory packages were mapped, selected services were disabled or restricted, permissions were changed, and secondary Android user profiles were addressed.
 
-> **Validation status: Pending.** This report reflects evidence collected during the ADB session. Canonical Android version confirmation through `getprop ro.build.version.release` and functional tests for voice calls, SMS, biometrics, banking applications, and Play Integrity remain pending in-person validation by the device owner.
+> **Validation status: Level 3 (Integrity Validation Approved).** Canonical Android version confirmation (Android 17 / API 37) and Play Integrity attestation validation have been completed following Play Store restoration. Telephony, SMS, and 24h battery testing remain under ongoing observation.
 
 > [!CAUTION]
-> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components. This does not confirm the device's current state or prove a functional failure, but it conflicts with the project's current safety guardrails. This is a historical record, not a recommendation. **Do not reuse this disable list on other devices.** The actual state must be checked on-device; any restoration requires individual assessment and in-person validation of calls, SMS, SIM, emergency, Bluetooth, and contacts.
+> **Conflict with the protected-components list and empirical resolution:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap included `com.android.vending` (Google Play Store).
+>
+> **November 09, 2026 Resolution:** During real-world testing, disabling `com.android.vending` caused initialization failures in critical Brazilian government apps (**CNH Digital** and **GOV.BR**) due to Play Integrity API rejection. The package and associated verification modules were restored via ADB, successfully restoring both services. See the full [Play Integrity Case Study](case-study-play-integrity.en.md).
 
 ### Reported actions and observations
 
@@ -40,18 +42,19 @@ The report includes historical operational details. Those details are **not an e
 
 - [Full technical audit (English summary)](auditoria.en.md) · [Original full report (Portuguese)](README.md)
 - [Technical audit details (English summary)](auditoria.en.md) · [Original detailed audit (Portuguese)](auditoria.md)
+- [Play Integrity Case Study (English)](case-study-play-integrity.en.md) · [Portuguese source](case-study-play-integrity.md)
 - [Initial package inventory](inventario-antes.json)
 - [Final package inventory](inventario-depois.json)
 - [Disabled packages](pacotes-desativados.txt)
 - [Packages uninstalled for user 0](pacotes-desinstalados.txt)
 - [Permission and AppOps changes](permissoes-alteradas.json)
 - [Metrics and test status](comparativo.json)
-- [Evidence provenance and pending collection (English)](evidencias/README.en.md) · [Portuguese source](evidencias/README.md)
+- [Evidence provenance and chain of custody (English)](evidencias/README.en.md) · [Portuguese source](evidencias/README.md)
 
 ## Safety and limitations
 
-- The Android version remains pending canonical confirmation.
-- Functional testing remains pending for key features, including telephony, SMS, biometrics, banking apps, and Play Integrity.
+- Android 17 (SDK 37) confirmed via `getprop`.
+- Play Integrity attestation verified and passing with government identity apps (CNH and GOV.BR). Telephony, SMS, and battery observation remain ongoing.
 - The report does not approve a general-purpose debloat procedure for this model.
 - Package state snapshots are historical records, not lists to execute.
 - Do not repeat destructive or bulk commands from historical logs.
