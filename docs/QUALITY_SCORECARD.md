@@ -42,9 +42,9 @@
 |---|---|---|---|:---:|
 | Ubuntu + macOS CI matrix with native Bash 3.2 | Inspection of `docs/PROPOSED_VALIDATE_WORKFLOW.yml` | Matrix workflow ready and SHA-pinned | 2026-11-09 | **Blocked by human action (Item 1)** |
 | ShellCheck integrated into CI | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | Integrated into proposed validation workflow | 2026-11-09 | **Met** |
-| Full exit-code test coverage for `debloat.sh` and `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 29 tests ... OK` (codes 0, 1, 2, 3, 4, 5, 6, 7 covered) | 2026-11-09 | **Met** |
+| Full exit-code test coverage for `debloat.sh` and `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (codes 0, 1, 2, 3, 4, 5, 6, 7 covered) | 2026-11-09 | **Met** |
 | All 44 protected essential packages tested individually | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5` | `Ran 1 test (44 iterated subtests) ... OK` | 2026-11-09 | **Met** |
-| Unit tests for validator and sanitization engine | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 17 tests in 0.48s ... OK` | 2026-11-09 | **Met** |
+| Unit tests for validator and sanitization engine | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 26 tests in 0.52s ... OK` | 2026-11-09 | **Met** |
 
 ---
 
@@ -52,7 +52,7 @@
 
 | Criterion | Verification Command | Output Summary | Date | Status |
 |---|---|---|---|:---:|
-| Zero absolute or causal claims without evidence | `python3 scripts/check_claims.py` | `OK: 109653 checks completed successfully` | 2026-11-09 | **Met** |
+| Zero absolute or causal claims without evidence | `python3 scripts/check_claims.py` | `OK: 152019 checks completed successfully` | 2026-11-09 | **Met** |
 | Metrics schema validation (`kind`, `status`, `method`, `evidence`) | `python3 scripts/check_claims.py` | All `metrics.json` approved under strict canonical schema | 2026-11-09 | **Met** |
 
 ---
@@ -61,7 +61,7 @@
 
 | Criterion | Verification Command | Output Summary | Date | Status |
 |---|---|---|---|:---:|
-| Canonical layout enforced per homologation level across all devices | `python3 scripts/validate_repository.py` | `OK: 592 checks completed without errors` | 2026-11-09 | **Met** |
+| Canonical layout enforced per homologation level across all devices | `python3 scripts/validate_repository.py` | `OK: 651 checks completed without errors` | 2026-11-09 | **Met** |
 
 ---
 
@@ -105,4 +105,27 @@
 | Criterion | Verification Command | Output Summary | Date | Status |
 |---|---|---|---|:---:|
 | Classification methodology and evidence hierarchy | Inspection of `docs/CLASSIFICATION_METHOD.md` | 5-tier hierarchy and confidence levels formalized | 2026-11-09 | **Met** |
-| Probabilistic sampling self-audit | `python3 scripts/sample_self_audit.py` and inspection of `docs/SELF_AUDIT_2026-11-09.md` | 30 packages audited with seed 20261109 (100% consistent) | 2026-11-09 | **Met** |
+| Probabilistic sampling self-audit | `python3 scripts/sample_self_audit.py` and inspection of `docs/SELF_AUDIT_2026-11-09.md` | 30 packages audited with seed 20261109 against 388-component population | 2026-11-09 | **Met** |
+
+---
+
+## 6. Numbered List of Mandatory Human Actions
+
+The following 8 operational and governance actions depend strictly on human intervention or physical access and cannot be automated in CI:
+
+1. **Item 1 — Branch Protection and CI Matrix Workflow Application:**
+   Configure GitHub branch protection rulesets on `main` and apply the proposed multi-platform workflow (`docs/PROPOSED_VALIDATE_WORKFLOW.yml`) with active repository workflow permissions.
+2. **Item 2 — External Peer Reviewer:**
+   Formally invite an independent external peer reviewer to audit the repository, verify evidence, and submit an authoritative review receipt.
+3. **Item 3 — Physical Hardware Resource Measurement:**
+   Physically connect the actual smartphones under test to execute the 24-hour standby battery drain, thermal monitoring, and cold boot benchmarks defined in `docs/MEASUREMENT_PROTOCOL.md`.
+4. **Item 4 — Native macOS Physical ADB Validation:**
+   Execute scripts interactively on a physical macOS workstation with a real Android device connected via USB to confirm native BSD/Zsh/Bash behavior.
+5. **Item 5 — On-Device Functional Homologation:**
+   Perform physical on-device functional validation across all user-facing functions (cellular voice calls, SMS, biometrics, mobile banking applications, and Play Integrity checks).
+6. **Item 6 — GPG Commit Signing Key Setup:**
+   Configure project maintainer GPG keys and enforce cryptographic signature verification on all incoming pull requests and git tags.
+7. **Item 7 — OEM and Carrier Trademark Compliance Review:**
+   Review device documentation for compliance with manufacturer (Motorola, Samsung) and carrier trademark policies before commercial publication.
+8. **Item 8 — Formal Tag and Release Publication (`v0.1.0`):**
+   Tag and publish the official semantic release `v0.1.0` on GitHub after all physical hardware validations and branch protection gates are satisfied.

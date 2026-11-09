@@ -3,13 +3,13 @@
 Este protocolo estabelece o método científico, rigoroso e reproduzível para coleta, mensuração e documentação de indicadores de desempenho de hardware e consumo de recursos (`kind: resource`) no projeto **Clean My Android**.
 
 > [!IMPORTANT]
-> **Regra de integridade:** Nenhuma métrica quantitativa de RAM, bateria, temperatura ou tempo de boot pode ser inferida ou preenchida em `metrics.json` sem a captura e arquivamento prévio da respectiva saída bruta (`raw dump`) no repositório. Métricas pendentes devem ser mantidas como `not_measured`.
+> **Regra de integridade:** Nenhuma métrica quantitativa de RAM, bateria, temperatura ou tempo de boot pode ser inferida ou preenchida em `metrics.json` sem a captura e arquivamento prévio da respectiva saída bruta (`raw dump`) em armazenamento privado, mantendo evidências sanitizadas arquivadas no repositório. Dumps brutos integrais contendo seriais ou logs de sistema devem permanecer arquivados de modo privado, enquanto saídas sanitizadas são publicadas. Métricas pendentes devem ser mantidas como `not_measured`.
 
 ---
 
 ## 1. Condições de Controle Experimental
 
-Para garantir que a variação observada decorra estritamente das ações de debloat e não de variáveis espúrias do ambiente, todos os testes comparativos ("antes" e "depois") devem obedecer às mesmas condições de contorno:
+Para reduzir de forma expressiva o ruído experimental e fatores de confusão entre execuções (reconhecendo que rotinas em segundo plano do sistema operacional impedem alegações de causalidade absoluta), todos os testes comparativos ("antes" e "depois") devem obedecer às mesmas condições de contorno:
 
 | Parâmetro | Condição Controlada Obrigatória | Justificativa Técnica |
 | :--- | :--- | :--- |
@@ -65,10 +65,12 @@ Para garantir que a variação observada decorra estritamente das ações de deb
    ```
 2. Executar 3 ciclos completos de reinicialização a frio cronometrados a partir do evento de reinício até o sinalizador `sys.boot_completed=1`:
    ```bash
-   date +%s%N
-   adb reboot && adb wait-for-device shell 'while [ "$(getprop sys.boot_completed)" != "1" ]; do sleep 0.5; done'; date +%s%N
+   START_MS=$(python3 -c 'import time; print(int(time.time() * 1000))')
+   adb reboot && adb wait-for-device shell 'while [ "$(getprop sys.boot_completed)" != "1" ]; do sleep 0.5; done'
+   END_MS=$(python3 -c 'import time; print(int(time.time() * 1000))')
+   python3 -c "print(f'Tempo de boot: {($END_MS - $START_MS) / 1000.0:.2f} s')"
    ```
-3. Salvar os registros e calcular a média aritmética do tempo total de boot em segundos.
+3. Salvar os registros e calcular a média aritmética do tempo total de boot em segundos ao longo das 3 coletas.
 
 ---
 
@@ -76,7 +78,10 @@ Para garantir que a variação observada decorra estritamente das ações de deb
 
 1. Coletar a utilização em blocos e espaço disponível:
    ```bash
-   adb shell df -k /data > evidence/raw-df-data.txt
+   # Antes da intervenção
+   adb shell df -k /data > evidence/raw-df-before.txt
+   # Depois da intervenção
+   adb shell df -k /data > evidence/raw-df-after.txt
    ```
 2. Converter a variação para gigabytes (GB):
    $$\Delta \text{Livre} = \frac{\text{Available}_{\text{after}} - \text{Available}_{\text{before}}}{1024 \times 1024} \text{ GB}$$
@@ -95,15 +100,19 @@ Para garantir que a variação observada decorra estritamente das ações de deb
    ```bash
    adb shell dumpsys battery > evidence/raw-battery-initial.txt
    ```
-4. Manter o dispositivo em repouso com tela apagada durante **24 horas contínuas** [sob condições controladas](MEASUREMENT_PROTOCOL.pt-BR.md) controladas da Seção 1.
-5. Decorridas exatamente 24 horas [conforme roteiro](MEASUREMENT_PROTOCOL.pt-BR.md), conectar via ADB e extrair a telemetria consolidada:
+   > [!NOTE]
+   > O serviço `BatteryService` do AOSP reporta a temperatura da bateria em décimos de grau Celsius ($0.1^\circ\text{C}$). Por exemplo, a leitura bruta `temperature: 310` corresponde a $31.0^\circ\text{C}$ ($310 / 10 = 31.0$). Ao preencher documentos e métricas JSON, divida por 10 para registrar o valor em graus Celsius.
+
+4. Manter o dispositivo em repouso com tela apagada durante **[24 horas](MEASUREMENT_PROTOCOL.pt-BR.md) contínuas** sob as condições controladas da Seção 1.
+5. Repetir o teste de [24 horas](MEASUREMENT_PROTOCOL.pt-BR.md) por **pelo menos 3 intervalos distintos** ($N \ge 3$) por estado para calcular média aritmética e desvio padrão.
+6. Decorridas [24 horas](MEASUREMENT_PROTOCOL.pt-BR.md) a cada execução, conectar via ADB e extrair a telemetria:
    ```bash
-   adb shell dumpsys battery > evidence/raw-battery-final.txt
-   adb shell dumpsys batterystats > evidence/raw-batterystats-24h.txt
+   adb shell dumpsys battery > evidence/raw-battery-final-run1.txt
+   adb shell dumpsys batterystats > evidence/raw-batterystats-24h-run1.txt
    ```
-6. Calcular a taxa horária de descarga em repouso:
+7. Calcular a taxa horária de descarga em repouso:
    $$\text{Descarga Ociosa} = \frac{\text{Level}_{\text{initial}} - \text{Level}_{\text{final}}}{24} \text{ \%/hora}$$
-7. Inspecionar o tempo em *Deep Sleep* e *Partial Wake Locks* para comprovar se daemons de telemetria desativados impediam o repouso profundo do processador.
+8. Inspecionar o tempo em *Deep Sleep* e *Partial Wake Locks* para comprovar se daemons de telemetria desativados impediam o repouso profundo do processador.
 
 ---
 
@@ -113,18 +122,22 @@ Após a conclusão dos testes com evidências salvas em `evidence/`, preencher o
 
 ```json
 {
-  "indicator": "Consumo de Bateria e Comportamento Térmico Contínuo",
-  "kind": "resource",
-  "status": "measured",
-  "before": "Descarga de X%/h em repouso de 24h a 35°C",
-  "after": "Descarga de Y%/h em repouso de 24h a 31°C",
-  "variation": "Redução observada de Z%/h no consumo ocioso",
-  "method": "dumpsys batterystats e dumpsys battery em repouso controlado de 24h",
-  "evidence": [
-    "reports/<fabricante>/<modelo>/evidence/raw-battery-initial.txt",
-    "reports/<fabricante>/<modelo>/evidence/raw-battery-final.txt",
-    "reports/<fabricante>/<modelo>/evidence/raw-batterystats-24h.txt"
-  ],
-  "limitations": "Medição em repouso de 24h em ambiente a 23°C; não reflete uso sob tela ativa contínua."
+  "metrics": [
+    {
+      "indicator": "Consumo de Bateria e Comportamento Térmico Contínuo",
+      "kind": "resource",
+      "status": "measured",
+      "before": "Descarga de X%/h em repouso de 24h a 35°C",
+      "after": "Descarga de Y%/h em repouso de 24h a 31°C",
+      "variation": "Redução observada de Z%/h no consumo ocioso",
+      "method": "dumpsys batterystats e dumpsys battery em repouso controlado de 24h",
+      "evidence": [
+        "reports/<fabricante>/<modelo>/evidence/raw-battery-initial.txt",
+        "reports/<fabricante>/<modelo>/evidence/raw-battery-final.txt",
+        "reports/<fabricante>/<modelo>/evidence/raw-batterystats-24h.txt"
+      ],
+      "limitations": "Medição em repouso de 24h em ambiente a 23°C em 3 coletas; não reflete uso sob tela ativa contínua."
+    }
+  ]
 }
 ```

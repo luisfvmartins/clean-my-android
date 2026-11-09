@@ -42,9 +42,9 @@
 |---|---|---|---|:---:|
 | Matriz Ubuntu + macOS no CI com Bash 3.2 nativo | Inspeção de `docs/PROPOSED_VALIDATE_WORKFLOW.yml` | Workflow de matriz pronto e fixado por SHA | 2026-11-09 | **Bloqueado por humano (Item 1)** |
 | ShellCheck automatizado no CI | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | Integrado ao workflow de validação proposto | 2026-11-09 | **Atendido** |
-| Cobertura de todos os códigos de saída de `debloat.sh` e `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 29 tests ... OK` (códigos 0, 1, 2, 3, 4, 5, 6, 7 cobertos) | 2026-11-09 | **Atendido** |
+| Cobertura de todos os códigos de saída de `debloat.sh` e `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (códigos 0, 1, 2, 3, 4, 5, 6, 7 cobertos) | 2026-11-09 | **Atendido** |
 | Todos os 44 pacotes protegidos testados individualmente | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5` | `Ran 1 test (44 sub-testes iterados) ... OK` | 2026-11-09 | **Atendido** |
-| Testes unitários do próprio validador e sanitização | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 17 tests in 0.48s ... OK` | 2026-11-09 | **Atendido** |
+| Testes unitários do próprio validador e sanitização | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 26 tests in 0.52s ... OK` | 2026-11-09 | **Atendido** |
 
 ---
 
@@ -52,7 +52,7 @@
 
 | Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
 |---|---|---|---|:---:|
-| Zero alegação absolutista sem evidência | `python3 scripts/check_claims.py` | `OK: 109653 verificações de alegações e métricas concluídas com sucesso` | 2026-11-09 | **Atendido** |
+| Zero alegação absolutista sem evidência | `python3 scripts/check_claims.py` | `OK: 152019 verificações de alegações e métricas concluídas com sucesso` | 2026-11-09 | **Atendido** |
 | Métricas com esquema canônico (`kind`, `status`, `method`, `evidence`) | `python3 scripts/check_claims.py` | Todos os `metrics.json` aprovados no esquema estrito | 2026-11-09 | **Atendido** |
 
 ---
@@ -61,7 +61,7 @@
 
 | Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
 |---|---|---|---|:---:|
-| Layout canônico imposto por nível de homologação em todos os aparelhos | `python3 scripts/validate_repository.py` | `OK: 592 verificações concluídas sem erros` | 2026-11-09 | **Atendido** |
+| Layout canônico imposto por nível de homologação em todos os aparelhos | `python3 scripts/validate_repository.py` | `OK: 651 verificações concluídas sem erros` | 2026-11-09 | **Atendido** |
 
 ---
 
@@ -105,4 +105,27 @@
 | Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
 |---|---|---|---|:---:|
 | Metodologia de classificação e hierarquia de fontes | Inspeção de `docs/CLASSIFICATION_METHOD.pt-BR.md` | Hierarquia de 5 níveis e confiança formalizados | 2026-11-09 | **Atendido** |
-| Autoauditoria por amostragem probabilística | `python3 scripts/sample_self_audit.py` e inspeção de `docs/SELF_AUDIT_2026-11-09.pt-BR.md` | 30 pacotes auditados com semente 20261109 (100% de consistência) | 2026-11-09 | **Atendido** |
+| Autoauditoria por amostragem probabilística | `python3 scripts/sample_self_audit.py` e inspeção de `docs/SELF_AUDIT_2026-11-09.pt-BR.md` | 30 pacotes auditados com semente 20261109 contra população de 388 componentes | 2026-11-09 | **Atendido** |
+
+---
+
+## 6. Lista Numerada de Ações Humanas Obrigatórias
+
+As 8 ações operacionais e de governança a seguir dependem estritamente de intervenção humana ou acesso a hardware físico e não podem ser automatizadas em CI:
+
+1. **Item 1 — Proteção de Branch e Aplicação do Workflow de Matriz CI:**
+   Configurar ruleset de proteção de branch na `main` do GitHub e aplicar o workflow multiplataforma proposto (`docs/PROPOSED_VALIDATE_WORKFLOW.yml`) com permissões ativas de token de workflow no repositório.
+2. **Item 2 — Revisor Externo Independente:**
+   Convidar formalmente um revisor técnico externo independente para auditar o repositório, verificar evidências e emitir parecer formal.
+3. **Item 3 — Medição Física de Recursos em Hardware:**
+   Conectar fisicamente os smartphones reais para executar as medições de [24 horas](MEASUREMENT_PROTOCOL.pt-BR.md) de repouso de bateria, telemetria térmica e ciclos de boot a frio conforme o protocolo em `docs/MEASUREMENT_PROTOCOL.pt-BR.md`.
+4. **Item 4 — Validação Física com ADB Nativo em macOS:**
+   Executar os scripts interativamente em uma estação física com macOS e aparelho conectado via USB para confirmar comportamento nativo com ADB físico.
+5. **Item 5 — Homologação Funcional no Aparelho:**
+   Executar testes manuais de estresse e validação em hardware físico (chamadas de voz, SMS, biometria, aplicativos bancários e integridade Play Integrity).
+6. **Item 6 — Configuração de Assinatura de Commits com Chaves GPG:**
+   Configurar chaves criptográficas GPG dos mantenedores e exigir commits assinados para integração na branch `main`.
+7. **Item 7 — Revisão de Conformidade de Marcas Comerciais OEM/Operadoras:**
+   Avaliar conformidade de marcas de fabricantes (Motorola, Samsung) e operadoras de telefonia nos relatórios públicos antes de publicações externas.
+8. **Item 8 — Publicação Formal de Tag e Release (`v0.1.0`):**
+   Criar a tag semântica formal `v0.1.0` no GitHub após a conclusão de todas as homologações em hardware físico e atendimento dos gates.
