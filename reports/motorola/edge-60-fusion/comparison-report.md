@@ -44,7 +44,7 @@ Todas as métricas aqui consolidadas derivam estritamente de dados coletados via
 Antes do procedimento, **mais de 20 aplicativos de comércio, delivery, redes sociais e crédito** possuíam autorização irrestrita para consultar as coordenadas métricas de satélite do usuário (`ACCESS_FINE_LOCATION`) e o estado da rede celular:
 
 - **Redes Sociais:** Facebook (`com.facebook.katana`), Instagram (`com.instagram.android`), TikTok (`com.zhiliaoapp.musically`) e WhatsApp (`com.whatsapp`) tiveram `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`, `READ_CONTACTS` e `READ_PHONE_STATE` revogadas cirurgicamente.
-- **E-Commerce e Delivery:** iFood, Burger King, McDonald's, Primeira Mesa, Food To Save, Booking, Jequiti, Mercado Livre e Sam's Club tiveram `ACCESS_FINE_LOCATION` revogada. O endereço de entrega é digitado manualmente, garantindo 100% de privacidade sem impedir os pedidos.
+- **E-Commerce e Delivery:** iFood, Burger King, McDonald's, Primeira Mesa, Food To Save, Booking, Jequiti, Mercado Livre e Sam's Club tiveram `ACCESS_FINE_LOCATION` revogada. O endereço de entrega é digitado manualmente, preservando a privacidade de geolocalização por coordenadas sem impedir os pedidos.
 - **Serviços Financeiros e Birôs:** Serasa Consumidor, Jeitto Crédito, Boa Vista Consumidor, Koin, Cartões CAIXA e Mercado Pago tiveram `ACCESS_FINE_LOCATION` revogada, impedindo profiling de deslocamento e geolocalização antifraude abusiva em tarefas meramente consultivas.
 
 ### 3.2 Sandboxing via AppOps em Componentes com Bloqueio de Firmware (`non-disable`)

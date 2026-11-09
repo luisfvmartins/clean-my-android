@@ -14,9 +14,9 @@ Metrics are calculated from the structured catalog in [data/device_catalog.json]
 | Manufacturer / model | Code | Android | Audit status | Recorded components |
 |---|---|---|---|---:|
 | Motorola Moto G54 5G | XT2343-1 | Android 15 | [Technical inventory published](../reports/motorola/moto-g54-5g/README.en.md) | 462 — components audited in the local inventory |
-| Motorola Edge 60 Pro | XT2507-1 | Not confirmed (pending confirmation) | [Report published; functional validation pending](../reports/motorola/edge-60-pro/README.en.md) | 501 — components mapped in the initial inventory |
+| Motorola Edge 60 Pro | XT2507-1 | Not confirmed (pendente de confirmação) | [Report published; functional validation pending](../reports/motorola/edge-60-pro/README.en.md) | 501 — components mapped in the initial inventory |
 | Motorola Edge 60 Fusion | scout_g_sysn | Android 16 | [Audit and debloat completed](../reports/motorola/edge-60-fusion/README.en.md) | 486 — packages mapped in the initial inventory |
-| Samsung Galaxy A30s | SM-A307GT | Android 11 | [Audit and surgical optimization completed](../reports/samsung/galaxy-a30s/README.en.md) | 392 — packages cataloged in factory firmware |
+| Samsung Galaxy A30s | SM-A307GT | Android 11 | [Audit and surgical debloat completed](../reports/samsung/galaxy-a30s/README.en.md) | 392 — packages cataloged in factory firmware |
 
 ## How to interpret the numbers
 
@@ -34,6 +34,6 @@ Data is maintained in `data/device_catalog.json`. When adding or updating an aud
     python scripts/generate_statistics.py
     python scripts/generate_statistics.py --check
 
-The current generator writes and validates `docs/ESTATISTICAS.md` (Portuguese). This English companion is maintained as a manual translation and is not currently checked by `--check`; update it when the catalog or Portuguese statistics change. Generation does not query the GitHub API, count Pull Requests, or access or modify devices.
+The automated validation verifies that this page, the Portuguese statistics, and root READMEs correspond to the structured catalog. Generation does not query the GitHub API, count Pull Requests, or access or modify devices.
 
 See the [complete audit catalog](../reports/README.md).

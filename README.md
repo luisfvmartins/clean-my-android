@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validation](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/luisfvmartins/clean-my-android/actions/workflows/validate.yml)
 
-[Get started](#get-started-ai-assistant-recommended) · [How it works](#how-it-works) · [Audited devices](reports/README.md) · [Statistics](docs/ESTATISTICAS.en.md) · [Contribution progress](docs/EVOLUCAO_CONTRIBUICOES.en.md) · [Audit status](docs/AUDIT_STATUS_AND_HOMOLOGATION.md) · [Report template](reports/_templates/DEVICE_AUDIT_TEMPLATE.md) · [Contributing](CONTRIBUTING.md) · [Security](#security-first)
+[Get started](#get-started-ai-assistant-recommended) · [How it works](#how-it-works) · [Audited devices](reports/README.md) · [Method & results presentation](docs/APRESENTACAO_METODO_E_RESULTADOS.en.md) · [Statistics](docs/ESTATISTICAS.en.md) · [Contribution progress](docs/EVOLUCAO_CONTRIBUICOES.en.md) · [Audit status](docs/AUDIT_STATUS_AND_HOMOLOGATION.md) · [Report template](reports/_templates/DEVICE_AUDIT_TEMPLATE.md) · [Contributing](CONTRIBUTING.md) · [Security](#security-first)
 
 [Português (Brasil)](README.pt-BR.md)
 
@@ -116,10 +116,14 @@ AI is the recommended working method, not an authority over the device. It must 
 
 Audits are device-specific and have different validation levels. Consult the [device catalog](reports/README.md) for each report's scope, files, and outstanding items.
 
+<!-- BEGIN_AUDITED_DEVICES -->
 | Device | Documentation | Status |
 |---|---|---|
 | Motorola Moto G54 5G (XT2343-1) | [Technical audit (English summary)](docs/AUDITORIA_MOTO_G54_5G.en.md) · [Full report (Portuguese)](docs/AUDITORIA_MOTO_G54_5G.md) | Inventory published; see report for scope and limitations |
 | Motorola Edge 60 Pro (XT2507-1) | [Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md) | Functional validation and confirmation of some data pending |
+| Motorola Edge 60 Fusion (scout_g_sysn) | [Device overview (English)](reports/motorola/edge-60-fusion/README.en.md) · [Full audit (Portuguese)](reports/motorola/edge-60-fusion/audit.md) | Audit and debloat completed; functional validation passed for calls, SMS, biometrics, and banking apps. RCS and 24h battery pending |
+| Samsung Galaxy A30s (SM-A307GT) | [Device overview (English)](reports/samsung/galaxy-a30s/README.en.md) · [Comparison report (English summary)](reports/samsung/galaxy-a30s/comparison-report.en.md) | Surgical debloat completed; 48 packages neutralized across two batches; functional validation passed (PDF printing limitation noted) |
+<!-- END_AUDITED_DEVICES -->
 
 **A device appearing in the catalog does not mean every procedure has been approved for it.** Script compatibility is indicated separately and must not be inferred from the existence of a report.
 
@@ -190,6 +194,7 @@ The main project guides, AI instructions, contribution guide, and device catalog
 ## Documentation and links
 
 - [Audit catalog (English)](reports/README.md)
+- [Method and results presentation (English)](docs/APRESENTACAO_METODO_E_RESULTADOS.en.md) · [Portuguese](docs/APRESENTACAO_METODO_E_RESULTADOS.md)
 - [Individual device audit guide (English)](docs/USER_DEVICE_AUDIT.md)
 - [AI instructions (English)](AI_INSTRUCTIONS.md)
 - [Contributing and Pull Requests (English)](CONTRIBUTING.md)
