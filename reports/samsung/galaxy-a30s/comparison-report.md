@@ -42,7 +42,7 @@ Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 
 ## 3. Ferramentas e Condições de Medição
 
 - **Protocolo de Conexão:** Android Debug Bridge (ADB) via Wi-Fi após pareamento TLS criptografado (`adb pair`); endereço local e porta foram omitidos por privacidade.
-- **Condições Físicas do Aparelho:** Nível de bateria em 72%, carregamento desconectado, temperatura de hardware a 25.6°C (AP) e 25.6°C (bateria).
+- **Condições Físicas do Aparelho:** Nível de bateria em 72%, carregamento desconectado, temperatura de hardware a 26.0°C (AP) e 25.3°C (bateria), com média global em repouso de ~25.6°C.
 - **Estado de Carga do Sistema:** Standby em tela de configurações, sem contas pessoais sincronizadas ou aplicativos em primeiro plano além das ferramentas nativas de inspeção.
 - **Ferramentas de Coleta:** Scripts de extração direta de `dumpsys` (package, meminfo, diskstats, battery, thermalservice, user, connectivity), `getprop`, `cat /proc/meminfo`, `df -h` e `pm list packages`.
 - **Sanitização de Dados:** Endereços MAC de rede, números de série e identificadores de telemetria foram higienizados conforme as normas de publicação pública do projeto.
@@ -115,7 +115,7 @@ Todas as alterações foram autorizadas pelo usuário e executadas em lotes cont
 | **Throttling e GOS de Jogos** | GOS ativo e monitorando apps | GOS neutralizado | **Desbloqueio de clock nativo Exynos** | Estado `disabled-user` em GOS |
 | **Alertas de Segurança Falsos** | Ativos pelo SecurityLogAgent | Silenciados com sucesso | **Eliminação de pop-ups intrusivos** | `disabled-user` em securitylogagent |
 | **Armazenamento Livre (`/data`)** | 49 GB livres (2.4 GB usados) | 49 GB livres (2.4 GB usados) | Sem variação perceptível em escala de GB | `df -h /data` |
-| **Estabilidade Térmica (AP / Bat)** | 25.6°C / 25.6°C | 25.5°C / 25.5°C | Estabilidade mantida em repouso | `dumpsys thermalservice` |
+| **Estabilidade Térmica (AP / Bat)** | 26.0°C / 25.3°C | 25.4°C / 24.8°C | Estabilidade mantida em repouso | `dumpsys battery` e `dumpsys thermalservice` |
 | **Consumo de Bateria (24h)** | Não medido | Não medido | **Pendente de validação de longo prazo** | Ausência de ciclo fechado |
 
 > **Nota de Reconciliação do Inventário:**  

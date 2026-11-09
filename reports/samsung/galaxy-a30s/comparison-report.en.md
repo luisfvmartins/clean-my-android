@@ -29,7 +29,7 @@ Critical components—including Samsung keyboard and launcher, telephony/RIL/IMS
 | Disabled packages | 1 factory-disabled | 47 |
 | Uninstalled for User 0 | 0 | 2 |
 | Free storage in `/data` | ~49 GB | ~49 GB |
-| AP / battery temperature at rest | ~25.6°C / 25.3°C | ~25.4°C / 24.8°C |
+| AP / battery temperature at rest | 26.0°C / 25.3°C | 25.4°C / 24.8°C |
 
 The report reconciles 48 neutralized packages for User 0 (46 reversibly disabled plus 2 uninstalled for the user), reducing active enabled packages from 391 to 343 (-12.3%). The total count of disabled packages after the audit is 47 (1 factory-disabled plus 46 disabled during the audit). Full reconciliation: 343 enabled + 47 disabled + 2 uninstalled = 392 packages in the stock firmware. The raw `inventory.json` file records 393 keys because it includes the static shared library `com.google.android.trichromelibrary_428014133`, which is omitted from standard `pm list packages` output.
 
