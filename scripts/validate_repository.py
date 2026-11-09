@@ -353,6 +353,27 @@ def validate_homologation_levels_and_evidence() -> None:
                 fail(f"{device_id}: Nível 4 exige reviewed_at.")
 
 
+
+def validate_adb_script_tests() -> None:
+    """Run mocked ADB tests; these tests never connect to a physical device."""
+    global checks
+    checks += 1
+    tests_dir = ROOT / "tests"
+    if not tests_dir.is_dir():
+        fail("diretório tests/ não encontrado")
+        return
+    result = subprocess.run(
+        [sys.executable, "-m", "unittest", "discover", "-s", str(tests_dir), "-v"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        fail(f"testes automatizados dos scripts ADB falharam: {detail}")
+
+
 def main() -> int:
     validate_json_files()
     validate_shell_scripts()
@@ -361,6 +382,7 @@ def main() -> int:
     validate_markdown_links()
     validate_bilingual_structure()
     validate_homologation_levels_and_evidence()
+    validate_adb_script_tests()
 
     if errors:
         print(f"FALHA: {len(errors)} problema(s) encontrado(s) em {checks} verificações.")
