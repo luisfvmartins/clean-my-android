@@ -20,7 +20,7 @@ Este diretório contém a documentação técnica integral, inventários de paco
 >
 > Isso não confirma o estado atual do aparelho nem comprova falha funcional, mas conflita com as barreiras de segurança atuais do projeto. O registro é histórico, não uma recomendação. **Não reproduza essa lista em outros aparelhos.** O estado real deve ser verificado no dispositivo; qualquer restauração exige avaliação individual e validação presencial de chamadas, SMS, SIM, emergência, Bluetooth e contatos.
 
-O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge (ADB)** sem root. Foram mapeados todos os pacotes de fábrica, desativados daemons de rastreamento e telemetria, neutralizados instaladores patrocinados e isolados serviços protegidos por firmware.
+O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge (ADB)** sem root. Foram mapeados todos os pacotes de fábrica, desativados daemons de telemetria, desativados instaladores patrocinados e isolados serviços protegidos por firmware.
 
 > [!WARNING]
 > **Status da Auditoria: Pendente de Validação**
@@ -34,7 +34,7 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 - **7 bloatwares com proteção de firmware (`non-disable`)** paralisados cirurgicamente via **AppOps por UID** e incluídos na blacklist de rede em segundo plano do kernel (`netpolicy`).
 - **Sandboxing do Google Play Services (`com.google.android.gms` / UID 10387)**: 6 operações protegidas (Localização Precisa/Aproximada, Monitoramento Contínuo, Sensores Corporais e Reconhecimento de Atividade) configuradas para retorno nulo via AppOps (`ignore`), afetando os processos vinculados ao UID 10387.
 - **13 permissões runtime revogadas** via `pm revoke --user 0` e 2 tentativas de revogação de permissão especial documentadas.
-- **Perfis secundários encerrados**: Perfil fantasma `User 11` parado (`am stop-user -f 11`) e `User 10` removido, eliminando a duplicação de processos do GMS na memória RAM (-269 MB RSS).
+- **Perfis secundários encerrados**: Perfil secundário `User 11` parado (`am stop-user -f 11`) e `User 10` removido, encerrando a duplicação de processos do GMS na memória RAM (-269 MB RSS).
 - **Memória RAM Livre:** De ~4.5 GB livres para **~7.2 GB livres** (**+2.7 GB de RAM disponível**, aumento de **58,7%** registrado no Passo 384).
 - **Comportamento Térmico em Repouso:** Redução de **37°C–40°C** para **33.0°C**.
 
@@ -49,8 +49,8 @@ O procedimento de debloat e sandboxing foi conduzido via **Android Debug Bridge 
 | **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para o Usuário 0 |
 | **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | -193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes** | +184 pacotes desativados via ADB |
-| **Adwares Monitorados em RAM** | Glance, Taboola, InMobi ativos (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão |
-| **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB** | Processo eliminado da memória RAM |
+| **Daemons Monitorados em RAM** | Glance, Taboola, InMobi ativos (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão |
+| **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB** | Processo não mais residente em RAM |
 | **Perfis Ativos em Background** | User 0 + User 11 | **Apenas User 0 ativo** | -269 MB RSS de instâncias duplicadas |
 | **Temperatura em Repouso** | 37°C a 40°C | **33.0°C** | Dispositivo frio e estável |
 | **Play Integrity / Apps de Banco** | Não coletado na sessão | **Pendente de validação** | Requer teste presencial pelo proprietário |

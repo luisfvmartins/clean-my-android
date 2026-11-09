@@ -46,10 +46,10 @@ O procedimento foi realizado sem privilégios de root, utilizando estritamente a
 ## 📊 Síntese dos Resultados
 
 - **Pacotes Catalogados no Firmware:** 486 pacotes
-- **Pacotes Neutralizados:** 155 pacotes (67 desativados de fábrica + 88 neutralizados via ADB)
+- **Pacotes Alterados:** 155 pacotes (67 desativados de fábrica + 88 via ADB)
 - **Pacotes Ativos no Usuário 0:** 343 pacotes (incluindo 12 novos aplicativos FOSS)
 - **Memória RAM disponível:** Os snapshots documentados registraram aproximadamente 2.750 MB antes e 4.153 MB a 4.573 MB depois. A diferença observada depende das condições de coleta e não demonstra ganho permanente nem causalidade exclusiva do debloat.
-- **Processos em execução:** A contagem registrada caiu de 66 para 39 entre os snapshots comparados. Isso descreve os estados observados, não comprova eliminação permanente de 27 serviços.
+- **Processos em execução:** A contagem registrada caiu de 66 para 39 entre os snapshots comparados. Isso descreve os estados observados, não comprova encerramento permanente de 27 serviços.
 - **Testes funcionais registrados:** chamadas, SMS, biometria, Wi-Fi, 4G/5G, câmera, Pix e aplicativos bancários foram verificados na sessão documentada. Os resultados são limitados ao aparelho, build, configuração e momento dos testes.
 
 ---

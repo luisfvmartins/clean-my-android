@@ -155,7 +155,7 @@ A auditoria classificou os pacotes de bloatware e telemetria em quatro categoria
 | `com.dti.amx` | **Claro / América Móvil (DTI)** | Desativado (`enabled=2`) | Instalador de bloatware de operadora. |
 | `com.aura.oobe.motorola` | **ironSource Aura (Unity)** | Desativado (`enabled=3`) | Recomendador comercial pós-boot/OTA (`INSTALL_PACKAGES`). |
 | `com.glance.lockscreenM` | **InMobi Glance** | Desativado (`enabled=3`) | Carrossel de anúncios e notícias patrocinadas na tela de bloqueio. |
-| `com.taboola.mip` | **Taboola News/Ads** | Desativado (`enabled=3`) | Motor de anúncios nativos e rastreamento comportamental na tela inicial. |
+| `com.taboola.mip` | **Taboola News/Ads** | Desativado (`enabled=3`) | Motor de anúncios nativos e entrega de notícias patrocinadas na tela inicial. |
 | `com.payjoy.access` | **PayJoy Inc.** | Desativado (`enabled=3`) | Bloqueador remoto (Kiosk Lock) para celulares comprados a prazo. |
 | `com.amazon.appmanager` | **Amazon** | Desativado (`enabled=3`) | Instalador secundário da Amazon. |
 | `com.claroColombia.contenedor`, `com.orange.aura.oobe`, `com.orange.update`, `de.telekom.tsc` | **Operadoras Estrangeiras (Claro CO, Orange EU, Telekom DE)** | Desativados (`enabled=2`) | Stubs regionais de operadoras estrangeiras presentes na imagem global da ROM. |
@@ -170,7 +170,7 @@ A auditoria classificou os pacotes de bloatware e telemetria em quatro categoria
 | `com.motorola.bach.modemstats` | Desativado (`enabled=3`), **MAS COM 4 SERVIÇOS REGISTRADOS!** | **ALTO:** Possui `FLAG_PERSISTENT`; requer `remoção de pacote para o usuário (não recomendada sem validação)` para cessar registro no `ActivityManager`. |
 | `com.motorola.paks.notification` | **HABILITADO (`enabled=0`)!** | **MÉDIO:** Gatilho FCM Direct Boot para o sistema de bloqueio financeiro `PAKS`. **Deve ser desativado!** |
 | `com.motorola.IncrementalUpdater` | **HABILITADO (`enabled=0`)!** | **MÉDIO:** Serviço `3c_ota` redundante com `READ_LOGS` e `READ_PRIVILEGED_PHONE_STATE`. **Pode ser desativado.** |
-| `com.motorola.analytics.logger`, `com.motorola.motocare`, `com.motorola.bug2go`, `com.motorola.ccc.mainplm`, `com.motorola.ccc.notification`, `com.motorola.brapps`, `com.motorola.genie`, `com.motorola.help`, `com.motorola.livewallpaper3`, `com.motorola.gamemode`, `com.motorola.spaces`, `com.motorola.motofpstouch`, `com.lenovo.lsf.user` | Já Desativados (`enabled=3`) | Permanecem corretamente neutralizados. |
+| `com.motorola.analytics.logger`, `com.motorola.motocare`, `com.motorola.bug2go`, `com.motorola.ccc.mainplm`, `com.motorola.ccc.notification`, `com.motorola.brapps`, `com.motorola.genie`, `com.motorola.help`, `com.motorola.livewallpaper3`, `com.motorola.gamemode`, `com.motorola.spaces`, `com.motorola.motofpstouch`, `com.lenovo.lsf.user` | Já Desativados (`enabled=3`) | Permanecem desativados no perfil. |
 
 ---
 

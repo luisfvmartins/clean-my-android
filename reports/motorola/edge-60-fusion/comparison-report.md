@@ -19,11 +19,11 @@ Todas as métricas aqui consolidadas derivam estritamente de dados coletados via
 
 | Indicador Técnico | Antes do Debloat (Linha de Base) | Depois do Debloat (Estado Final) | Variação Comprovada | Método / Evidência |
 | :--- | :--- | :--- | :--- | :--- |
-| **Total de Pacotes Catalogados** | 486 pacotes | 343 pacotes ativos no Usuário 0 | -143 pacotes líquidos (155 neutralizados, +12 FOSS instalados) | `pm list packages` inicial vs final |
+| **Total de Pacotes Catalogados** | 486 pacotes | 343 pacotes ativos no Usuário 0 | -143 pacotes líquidos (155 alterados, +12 FOSS instalados) | `pm list packages` inicial vs final |
 | **Pacotes de Sistema Ativos** | 424 pacotes | 291 pacotes | -133 pacotes de sistema desativados/bloqueados | `pm list packages -s` |
-| **Pacotes de Terceiros / Usuário** | 62 pacotes | 52 pacotes comerciais + 12 apps FOSS (64 apps) | Eliminação de adwares e jogos invasivos; integração de suíte FOSS | `pm list packages -3` |
+| **Pacotes de Terceiros / Usuário** | 62 pacotes | 52 pacotes comerciais + 12 apps FOSS (64 apps) | Desativação de pacotes comerciais; integração de suíte FOSS | `pm list packages -3` |
 | **Pacotes Desativados de Fábrica** | 67 pacotes | 67 pacotes | Inalterados (preservados inativos) | `pm list packages -d` |
-| **Pacotes Neutralizados via ADB** | 0 pacotes | 88 pacotes (83 via disable-user/uninstall + 5 via AppOps/IME) | +88 pacotes contidos cirurgicamente | Logs de execução em `changes/change-log.md` |
+| **Pacotes Modificados via ADB** | 0 pacotes | 88 pacotes (83 via disable-user/uninstall + 5 via AppOps/IME) | +88 pacotes alterados cirurgicamente | Logs de execução em `changes/change-log.md` |
 | **Memória RAM Livre** | ~2.750 MB (aprox. 2.750.000 KB) | ~4.153 MB a 4.573 MB livres | **+1,40 GB a +1,82 GB livres** (+50.9% a +66.3% de margem) | `dumpsys meminfo` (linha de base vs Etapas 8, 12 e 14) |
 | **Memória RAM Usada (Used PSS)** | ~3.800 MB PSS | ~2.721 MB a 2.881 MB PSS | **-920 MB a -1.080 MB de processos residentes** | `dumpsys meminfo` agregado |
 | **Processos Ativos em Background** | 66 daemons/processos ativos | 39 processos em repouso | **-27 processos em execução contínua** | `ps -A` e `dumpsys activity processes` |
@@ -32,8 +32,8 @@ Todas as métricas aqui consolidadas derivam estritamente de dados coletados via
 | **Comportamento Térmico** | Linha de base de temperatura | Dispositivo estável e frio em repouso | **Redução térmica percebida**; medição em laboratório pendente | `dumpsys battery` em repouso |
 
 > **Nota de Reconciliação de Contagem:**  
-> - Dos 486 pacotes originais, 67 já vinham desativados de fábrica e 88 foram neutralizados nas Etapas 1 a 14, totalizando **155 pacotes neutralizados**.  
-> - Restaram 331 pacotes originais ativos (ou 332 se contabilizado o registro de sistema do Gboard, cujo serviço IME foi desativado via `ime disable` e AppOps neutralizados).  
+> - Dos 486 pacotes originais, 67 já vinham desativados de fábrica e 88 foram modificados nas Etapas 1 a 14, totalizando **155 pacotes alterados**.  
+> - Restaram 331 pacotes originais ativos (ou 332 se contabilizado o registro de sistema do Gboard, cujo serviço IME foi desativado via `ime disable` e AppOps restritos).  
 > - Com a adição dos 12 novos aplicativos FOSS instalados pelo usuário, o total de pacotes habilitados no Usuário 0 é de **343 pacotes** (ou 344 com o registro do Gboard).
 
 ---
@@ -55,9 +55,9 @@ Em pacotes protegidos contra `pm disable-user`, foram revogadas as permissões o
 - `com.motorola.installer`: `RUN_IN_BACKGROUND=ignore`, `WAKE_LOCK=ignore`, `GET_USAGE_STATS=ignore`.
 - `com.google.android.inputmethod.latin` (Gboard): Serviço de entrada desativado via `ime disable`, microfone (`RECORD_AUDIO`) revogado e `RUN_IN_BACKGROUND=ignore`.
 
-### 3.3 Neutralização de Escuta Passiva Acústica e Histórico 24/7
-- **Histórico de Localização da Google:** `com.google.android.gms.location.history` desativado. Rastreamento passivo de linha do tempo erradicado; navegação GPS em tempo real preservada nos mapas.
-- **Escuta Acústica Contínua em Hardware DSP:** `com.android.hotwordenrollment.okgoogle` e `com.android.hotwordenrollment.xgoogle` desativados. Os microfones no DSP RISCV foram desativados para escuta contínua de "Ok Google", sem prejudicar o uso por toque do **Gemini** ou **Google Assistente**.
+### 3.3 Suspensão de Escuta Passiva Acústica e Histórico de Localização
+- **Histórico de Localização da Google:** `com.google.android.gms.location.history` desativado no Usuário 0. Serviço de histórico de localização da conta suspenso no perfil; navegação GPS em tempo real preservada nos mapas.
+- **Escuta Acústica em Hardware DSP:** `com.android.hotwordenrollment.okgoogle` e `com.android.hotwordenrollment.xgoogle` desativados no Usuário 0. Os módulos no DSP RISCV foram suspensos para escuta contínua de "Ok Google", sem prejudicar o acionamento por toque do **Gemini** ou **Google Assistente**.
 
 ---
 
@@ -89,5 +89,5 @@ Após o ciclo de intervenções e reboot do aparelho, foram executados testes fu
 1. **Mensagens RCS (Rich Communication Services):** Ao migrar do Google Mensagens para o Fossify Messages, o protocolo de chat RCS não está disponível (o padrão RCS é uma implementação proprietária da nuvem Google vinculada ao app Google Mensagens). O envio de mensagens opera via SMS e MMS tradicionais. Caso o usuário exija RCS, o Google Mensagens pode ser restaurado via `pm enable com.google.android.apps.messaging`.
 2. **Acionamento do Assistente por Voz ("Ok Google"):** Com a desativação dos módulos de hotword no DSP (`com.android.hotwordenrollment.okgoogle` e `xgoogle`), o assistente não desperta por comando de voz à distância. O Gemini e o Google Assistente continuam respondendo perfeitamente ao toque no ícone ou gesto.
 3. **Backup em Nuvem Google Drive / Google One:** Com a desativação do Google One e serviços de backup associados, backups automáticos de sistema na nuvem Google estão pausados. Recomenda-se o uso de sincronização local/P2P via Syncthing ou exportação manual de dados.
-4. **Bateria em Ciclo Longo de 24h:** Embora a redução de 27 processos em segundo plano e a eliminação do polling de GPS gerem economia inequívoca de ciclos de CPU, um teste padronizado de autonomia de bateria (ex: PCMark Battery Test de 100% a 20%) não foi realizado na sessão ADB. Marcado como **pendente de validação de longo prazo pelo usuário**.
+4. **Bateria em Ciclo Longo de 24h:** Embora a redução de 27 processos em segundo plano reduza a atividade de CPU em repouso, um teste padronizado de autonomia de bateria (ex: teste contínuo de descarga) não foi realizado na sessão ADB. Permanece como **não medido** e pendente de avaliação em uso diário pelo usuário.
 5. **Gboard Residente no Firmware:** O pacote `com.google.android.inputmethod.latin` permanece fisicamente na partição do sistema por ser bloqueado para `disable-user`, embora esteja completamente inerte (`ime disabled`, microfone revogado e sem permissão de execução em background).

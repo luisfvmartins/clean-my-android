@@ -35,7 +35,7 @@ Nenhum arquivo publicado no repositório pode conter dados que permitam identifi
 
 ### 2.2 Inspeção Visual e Metadados das Capturas de Tela (*Screenshots*)
 * **Total de Imagens:** 7 arquivos PNG em `reports/samsung/galaxy-a30s/`.
-* **Inspeção de Metadados EXIF:** Todas as 7 imagens foram processadas sem perda de qualidade visual para garantir a eliminação de quaisquer chunks ancilares ou metadados de geolocalização e data original da câmera.
+* **Inspeção de Metadados EXIF:** Todas as 7 imagens foram processadas sem perda de qualidade visual para assegurar a ausência de quaisquer chunks ancilares ou metadados de geolocalização e data original da câmera.
 * **Inspeção de Conteúdo Visual:**
   1. `before/screenshots/01_device_about.png`: Tela de bloqueio padrão (12:58, 8 de novembro, bateria 72%, "Chamadas de emergência", 3 ícones genéricos de sistema). **Sem dados pessoais, contas ou números expostos.**
   2. `before/screenshots/02_storage.png`: Captura preta/vazia (buffer em repouso durante a captura ADB). **Livre de dados sensíveis.**

@@ -394,6 +394,26 @@ def validate_sanitization() -> None:
         fail(f"violação de sanitização de dados sensíveis: {detail}")
 
 
+def validate_claims_and_metrics() -> None:
+    """Run claims and metrics validation (PT-1)."""
+    global checks
+    checks += 1
+    script = ROOT / "scripts/check_claims.py"
+    if not script.is_file():
+        fail("scripts/check_claims.py não encontrado")
+        return
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        fail(f"violação de alegações ou esquema de métricas: {detail}")
+
+
 def main() -> int:
     validate_json_files()
     validate_shell_scripts()
@@ -404,6 +424,7 @@ def main() -> int:
     validate_homologation_levels_and_evidence()
     validate_adb_script_tests()
     validate_sanitization()
+    validate_claims_and_metrics()
 
     if errors:
         print(f"FALHA: {len(errors)} problema(s) encontrado(s) em {checks} verificações.")

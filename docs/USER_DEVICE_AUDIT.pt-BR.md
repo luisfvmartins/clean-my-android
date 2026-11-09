@@ -282,7 +282,7 @@ Além das métricas, comparar:
 - Aplicativos substituídos por alternativas FOSS.
 - Permissões revogadas.
 - AppOps modificados.
-- Serviços neutralizados.
+- Serviços suspensos ou restritos.
 - Recursos preservados.
 - Funcionalidades prejudicadas ou indisponíveis.
 - Problemas encontrados e corrigidos.

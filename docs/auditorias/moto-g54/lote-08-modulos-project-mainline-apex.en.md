@@ -54,6 +54,6 @@
 > **Batch 8 progress (Final):**
 > - **Modules analyzed in this batch:** 39 APEX modules (cumulative: **462 / 462** components — **100% COMPLETED**)
 > - **Components remaining:** 0 components
-> - **APEX modules with internal telemetry containers (already neutralized at APK level):** `com.google.android.adservices`, `com.google.android.ondevicepersonalization`, `com.google.android.devicelock`, `com.google.android.os.statsd`
+> - **APEX modules with internal telemetry containers (already deactivated at APK level):** `com.google.android.adservices`, `com.google.android.ondevicepersonalization`, `com.google.android.devicelock`, `com.google.android.os.statsd`
 
 ---

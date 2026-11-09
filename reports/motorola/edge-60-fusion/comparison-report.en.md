@@ -19,7 +19,7 @@ Motorola Edge 60 Fusion · `scout_g_sysn` / `scout` · MediaTek MT6878 (Dimensit
 | Used PSS | ~3,800 MB | ~2,721–2,881 MB |
 | Background processes | 66 | 39 |
 
-The report reconciles 155 neutralized packages as 67 factory-disabled plus 88 addressed during the audit. The final User 0 count also includes 12 installed FOSS alternatives. Package totals refer to different states and categories; they should not be interpreted as a simple one-to-one uninstall count.
+The report reconciles 155 altered packages as 67 factory-disabled plus 88 addressed during the audit. The final User 0 count also includes 12 installed FOSS alternatives. Package totals refer to different states and categories; they should not be interpreted as a simple one-to-one uninstall count.
 
 ## Permissions and privacy surface
 

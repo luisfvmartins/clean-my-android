@@ -43,12 +43,12 @@ To prevent reports from being misinterpreted as blanket approvals for other devi
 
 The project currently documents **4 devices** across **2 OEMs**, covering **3 chipset architectures** and **3 major Android versions**:
 
-| Device | Code / Codename | Chipset Platform | Android / UI | Homologation Level | Firmware Packages | Neutralized Packages | Enabled Post-Debloat |
+| Device | Code / Codename | Chipset Platform | Android / UI | Homologation Level | Firmware Packages | Addressed / Disabled | Enabled Post-Debloat |
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | MediaTek Dimensity 7020 | Android 15 · Hello UI | **Level 1** (Structured inventory) | 462 local | 433 published publicly | 394 system + 39 APEX |
-| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Qualcomm Snapdragon (exact model pending confirmation) | Android unconfirmed · Hello UI | **Level 2** (Audit reviewed) | 501 mapped | 253 neutralized (60 factory-disabled + 184 via ADB + 9 uninstalled) | 248 preserved |
-| **Motorola Edge 60 Fusion** | `scout_g_sysn` · `scout` | MediaTek Dimensity 7300 | Android 16 · Hello UI | **Level 3** (Subsystem validation) | 486 cataloged | 155 neutralized (67 pre-disabled + 88 via ADB) | 343 active for User 0 (includes 12 FOSS apps) |
-| **Samsung Galaxy A30s** | `SM-A307GT` · `a30s` | Exynos 7904 | Android 11 · One UI 3.1 | **Level 3** (Validated subsystems) | 392 cataloged | 48 neutralized (46 ADB + 2 uninstalled) | 343 enabled (-12.3%) |
+| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Qualcomm Snapdragon (exact model pending confirmation) | Android unconfirmed · Hello UI | **Level 2** (Audit reviewed) | 501 mapped | 253 altered (60 factory-disabled + 184 via ADB + 9 uninstalled) | 248 preserved |
+| **Motorola Edge 60 Fusion** | `scout_g_sysn` · `scout` | MediaTek Dimensity 7300 | Android 16 · Hello UI | **Level 3** (Subsystem validation) | 486 cataloged | 155 altered (67 pre-disabled + 88 via ADB) | 343 active for User 0 (includes 12 FOSS apps) |
+| **Samsung Galaxy A30s** | `SM-A307GT` · `a30s` | Exynos 7904 | Android 11 · One UI 3.1 | **Level 3** (Validated subsystems) | 392 cataloged | 48 altered (46 ADB + 2 uninstalled) | 343 enabled (-12.3%) |
 
 ---
 

@@ -31,7 +31,7 @@ Todos os registros e inventários apresentados nesta auditoria foram obtidos a p
 | **Inspeção de Pacotes** | `adb shell dumpsys package packages` | Extração de UIDs, flags de sistema, versões declaradas de pacotes, permissões concedidas e status de usuários (User 0 / User 11). |
 | **Telemetria de Memória** | `adb shell dumpsys meminfo` | Coleta de RSS/PSS por processo em múltiplas fases (inicial, pós-debloat básico, pós-degoogle e final). |
 | **Armazenamento** | `adb shell df -h /data` | Verificação do espaço livre global em `/data` antes e depois das operações de desinstalação e limpeza de cache. |
-| **AppOps Sandboxing** | `adb shell cmd appops set --uid <UID> <OP> ignore` | Neutralização de GPS, Activity Recognition e Body Sensors no Google Play Services (`UID 10387`) e serviços protegidos contra disable. |
+| **AppOps Sandboxing** | `adb shell cmd appops set --uid <UID> <OP> ignore` | Restrição de GPS, Activity Recognition e Body Sensors no Google Play Services (`UID 10387`) e serviços protegidos contra disable. |
 | **Bloqueio no Kernel** | `adb shell cmd netpolicy add restrict-background-blacklist <UID>` | Bloqueio de tráfego de dados em segundo plano no firewall/netpolicy do Android para bloatwares persistentes. |
 | **Validação de Rede** | `adb shell ping -c 1 <host>` | Teste de resolução DNS e verificação de bloqueio de domínios de telemetria via NextDNS. |
 

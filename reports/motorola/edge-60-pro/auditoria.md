@@ -168,10 +168,10 @@ A lista completa dos 244 pacotes desativados consta em [`pacotes-desativados.txt
 ### 4.2. Desinstalação para o Usuário 0 (`pm uninstall --user 0`)
 A desinstalação para o Usuário 0 totalizou **9 pacotes**, divididos em duas naturezas técnicas distintas:
 
-1. **Aplicativos de terceiros completamente removidos (2 pacotes):**
-   - `third_party_package_49` (Adware instalado via DT Ignite).
-   - `third_party_package_01` (Adware instalado via DT Ignite).
-   *Esses pacotes residiam exclusivamente na partição de dados (`/data/app`) e foram eliminados por completo.*
+1. **Aplicativos de terceiros desinstalados para o Usuário 0 (2 pacotes):**
+   - `third_party_package_49` (Aplicativo patrocinado instalado via DT Ignite).
+   - `third_party_package_01` (Aplicativo patrocinado instalado via DT Ignite).
+   *Esses pacotes residiam na partição de dados (`/data/app`) e foram desinstalados para o Usuário 0.*
 
 2. **Pacotes pré-instalados de sistema desinstalados para o Usuário 0 (7 pacotes):**
    - `third_party_package_50` (Jogo patrocinado pré-instalado).
@@ -213,10 +213,10 @@ Para esses componentes, aplicou-se a técnica de **paralisação cirúrgica por 
 |---|---|---|---|---|
 | `com.payjoy.access` | 10261 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10261` | Agente pré-instalado de bloqueio por financiamento. Paralisação de background e rede. |
 | `com.amazon.appmanager` | 10200 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10200` | Instalador fantasma da Amazon travado pelo firmware. Impedido de acordar e baixar pacotes. |
-| `com.motorola.ccc.devicemanagement` | 10321 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10321` | Módulo de telemetria 3C com solicitação ativa de GPS neutralizado. |
+| `com.motorola.ccc.devicemanagement` | 10321 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10321` | Módulo de telemetria 3C com solicitação ativa de GPS restrito via AppOps. |
 | `com.motorola.paks.notification` | 10362 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10362` | Notificações promocionais e de operadora bloqueadas. |
 | `com.motorola.installer` | 10349 | `RUN_IN_BACKGROUND`, `RUN_ANY_IN_BACKGROUND`, `WAKE_LOCK`, `START_FOREGROUND`, `COARSE_LOCATION`, `FINE_LOCATION` | `cmd netpolicy add restrict-background-blacklist 10349` | Instalador silencioso em background paralisado. |
-| `com.google.android.sdksandbox` | 10403 | `RUN_IN_BACKGROUND`, `WAKE_LOCK` | `cmd netpolicy add restrict-background-blacklist 10403` | Sandbox do Google Privacy Sandbox neutralizado. |
+| `com.google.android.sdksandbox` | 10403 | `RUN_IN_BACKGROUND`, `WAKE_LOCK` | `cmd netpolicy add restrict-background-blacklist 10403` | Sandbox do Google Privacy Sandbox restrito via AppOps. |
 | `com.motorola.ccc.ota` | 10323 | `RUN_IN_BACKGROUND`, `WAKE_LOCK` | Mantido em monitoramento | Daemon de checagem contínua de atualizações restringido em segundo plano. |
 
 ### 4.5. Sandboxing do Google Play Services (`com.google.android.gms` / UID 10387)
@@ -265,14 +265,14 @@ Executou-se:
 - `adb shell am stop-user -f 11` (encerramento dos processos do perfil 11).
 - `adb shell pm remove-user 10` (remoção de perfil residual 10).
 
-Resultado observado: Liberação de **269 MB de RAM** e eliminação de processos duplicados em segundo plano.
+Resultado observado: Liberação de **269 MB de RAM** e encerramento de processos duplicados em segundo plano.
 
 ### 4.8. Bloqueio de Telemetria no Nível de DNS (NextDNS)
 Para complementar a blindagem em nível de sistema operacional:
 1. **Configuração de DNS Privado:**
    - Modo configurado para `hostname`.
    - Endpoint definido como `SEU_ID.dns.nextdns.io`.
-2. **Denylist de Telemetria:** Adicionados domínios de rastreamento à lista de bloqueio (`telemetry.motorola.com`, `checkin.motorola.com`, `blur.motorola.com`, `payjoy.com`, `digitalturbine.com`, `inmobi.com`, `glance.in`, `taboola.com`).
+2. **Denylist de Telemetria:** Adicionados domínios de telemetria e anúncios à lista de bloqueio (`telemetry.motorola.com`, `checkin.motorola.com`, `blur.motorola.com`, `payjoy.com`, `digitalturbine.com`, `inmobi.com`, `glance.in`, `taboola.com`).
 3. **Validação via ADB:**
    - `ping -c 1 telemetry.motorola.com` $\rightarrow$ Bloqueado (0.0.0.0 / inacessível).
    - `ping -c 1 1.1.1.1` $\rightarrow$ Operacional e responsivo.
@@ -291,7 +291,7 @@ A comparação estrutural entre o estado original e o consolidado pós-interven�
       +-----------------------------+-----------------------------+
       |                                                           |
       v                                                           v
-[PACOTES ATIVOS / PRESERVADOS]                     [PACOTES NEUTRALIZADOS / REMOVIDOS]
+[PACOTES ATIVOS / PRESERVADOS]                     [PACOTES DESATIVADOS / REMOVIDOS]
 - 248 pacotes preservados                          - 244 pacotes desativados (disabled-user)
 - Pilha de telecomunicações e RIL                  - 9 pacotes desinstalados para usuário 0
 - Framework AOSP e SystemUI                        - 10 pacotes com atualizações revertidas
@@ -325,7 +325,7 @@ As medições comparativas foram realizadas com ferramentas de telemetria do And
 | **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | **-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)** | `inventario-depois.json` (248 preservados/ativos, 244 desativados, 9 desinstalados) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes desativados** | +184 pacotes congelados | `pm list packages -d` Passo 89 vs Passo 701 |
 | **Adwares Monitorados em RAM** | 5 daemons (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão | `dumpsys meminfo` (Glance, Taboola, InMobi) |
-| **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB (eliminado da RAM)** | **-873 MB de carga contínua** | `dumpsys meminfo` (Search + GoogleApp) |
+| **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB (processo encerrado)** | **-873 MB de carga contínua** | `dumpsys meminfo` (Search + GoogleApp) |
 | **Perfis Secundários em Execução**| User 0 + User 11 ativos | **Apenas User 0 ativo** | **-269 MB RSS de instâncias duplicadas** | `am stop-user -f 11` |
 | **Temperatura em Espera** | 37.0°C a 40.0°C | **33.0°C** | **-4°C a -7°C (redução térmica observada)**| `dumpsys battery` Passo 384 |
 | **Play Integrity / Bancos** | Não coletado na sessão | **Pendente de validação** | Testes bancários e atestação não executados | Registros não contêm chamadas Play Integrity |
@@ -364,13 +364,13 @@ Para garantir total conformidade com a transparência técnica, cada teste é cl
 
 ## 8. Segurança e Privacidade
 
-### 8.1. Vetores de Ameaça e Adwares Neutralizados
-- **Instaladores Silenciosos de Fábrica:** Instaladores terceirizados como **Digital Turbine** (`com.dti.motorola`, `com.dti.amx`) e **IronSource Aura** possuíam permissões privilegiadas capazes de baixar APKs patrocinados sem interação do usuário. A neutralização desses serviços extingue esse vetor de risco.
+### 8.1. Vetores de Risco e Pacotes Comerciais Desativados
+- **Instaladores Silenciosos de Fábrica:** Instaladores parceiros como **Digital Turbine** (`com.dti.motorola`, `com.dti.amx`) e **IronSource Aura** possuíam permissões para download de pacotes. A desativação desses serviços suspende esse vetor no perfil.
 - **Telemetria de Fabricante:** Desativação de serviços de coleta de estatísticas de modem, métricas de ciclo de vida e upload de logs de falha para servidores externos.
 - **Bloatwares Não-Desativáveis:** Pacotes como `com.payjoy.access` e `com.amazon.appmanager` foram isolados no firewall do kernel (`netpolicy`) e impedidos de executar em segundo plano via AppOps.
 
 ### 8.2. Sandboxing de Permissões
-- **Isolamento do Google Play Services:** A configuração de retorno nulo (`ignore`) para localização e sensores no UID 10387 impede o rastreamento passivo da conta Google, mantendo apenas a conectividade básica de rede.
+- **Isolamento do Google Play Services:** A configuração de retorno nulo (`ignore`) para localização e sensores no UID 10387 suspende o envio de localização pela conta Google no perfil, mantendo apenas a conectividade básica de rede.
 - **Proteção de Metadados de Fotos:** A revogação de `ACCESS_COARSE_LOCATION` da Câmera Motorola impede a inclusão involuntária de coordenadas de GPS nos metadados EXIF das fotografias.
 
 ---

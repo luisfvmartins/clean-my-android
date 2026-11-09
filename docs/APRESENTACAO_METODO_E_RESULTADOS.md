@@ -43,12 +43,12 @@ Para evitar que a simples publicação de um relatório seja interpretada como u
 
 O repositório documenta atualmente **4 dispositivos** de **2 fabricantes**, abrangendo **3 plataformas de processamento** e **3 versões principais do Android**:
 
-| Dispositivo | Código / Codinome | Plataforma (SoC) | Android / UI | Nível de Homologação | Pacotes Firmware | Neutralizados | Habilitados Pós-Debloat |
+| Dispositivo | Código / Codinome | Plataforma (SoC) | Android / UI | Nível de Homologação | Pacotes Firmware | Alterados / Desativados | Habilitados Pós-Debloat |
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Motorola Moto G54 5G** | `XT2343-1` · `cancunf` | MediaTek Dimensity 7020 | Android 15 · Hello UI | **Nível 1** (Inventário estruturado) | 462 locais | Inventário público: 433 | 394 sistema + 39 APEX |
-| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Qualcomm Snapdragon (modelo exato pendente) | Android não confirmado · Hello UI | **Nível 2** (Auditoria revisada) | 501 mapeados | 253 neutralizados (60 fábrica + 184 ADB + 9 desinstalados) | 248 preservados |
-| **Motorola Edge 60 Fusion** | `scout_g_sysn` · `scout` | MediaTek Dimensity 7300 | Android 16 · Hello UI | **Nível 3** (Validação funcional de subsistemas) | 486 catalogados | 155 neutralizados (67 pré-desativados + 88 via ADB) | 343 ativos no Usuário 0 (inclui 12 FOSS) |
-| **Samsung Galaxy A30s** | `SM-A307GT` · `a30s` | Exynos 7904 | Android 11 · One UI 3.1 | **Nível 3** (Validação funcional) | 392 catalogados | 48 neutralizados (46 ADB + 2 desinstalados) | 343 habilitados (-12,3%) |
+| **Motorola Edge 60 Pro** | `XT2507-1` · `cybert` | Qualcomm Snapdragon (modelo exato pendente) | Android não confirmado · Hello UI | **Nível 2** (Auditoria revisada) | 501 mapeados | 253 alterados (60 fábrica + 184 ADB + 9 desinstalados) | 248 preservados |
+| **Motorola Edge 60 Fusion** | `scout_g_sysn` · `scout` | MediaTek Dimensity 7300 | Android 16 · Hello UI | **Nível 3** (Validação funcional de subsistemas) | 486 catalogados | 155 alterados (67 pré-desativados + 88 via ADB) | 343 ativos no Usuário 0 (inclui 12 FOSS) |
+| **Samsung Galaxy A30s** | `SM-A307GT` · `a30s` | Exynos 7904 | Android 11 · One UI 3.1 | **Nível 3** (Validação funcional) | 392 catalogados | 48 alterados (46 ADB + 2 desinstalados) | 343 habilitados (-12,3%) |
 
 ---
 
@@ -61,7 +61,7 @@ O repositório documenta atualmente **4 dispositivos** de **2 fabricantes**, abr
 * **Estabilidade e Limitações Honestas:** Subsistemas vitais de telefonia, biometria e interface One UI preservados; ressalva documentada sobre a perda da função "Salvar como PDF" decorrente da desativação do spooler de impressão nativo.
 
 ### 4.2 Motorola Edge 60 Fusion (Qualcomm Snapdragon · Hello UI)
-* **Substituição Consciente por Alternativas FOSS:** 12 aplicativos proprietários da Google/Motorola (Discador, Mensagens, Calendário, Calculadora, Contatos) foram substituídos por versões de código aberto sem rastreadores da suíte Fossify, FUTO e OpenCalc.
+* **Substituição Consciente por Alternativas FOSS:** 12 aplicativos proprietários da Google/Motorola (Discador, Mensagens, Calendário, Calculadora, Contatos) foram substituídos por versões de código aberto da suíte Fossify, FUTO e OpenCalc.
 * **Preservação de Dependências Críticas:** Descoberta arquitetural de que o aplicativo Gemini (`com.google.android.apps.bard`) depende internamente do motor hospedeiro no Google App (`com.google.android.googlequicksearchbox`), levando à sua preservação deliberada para evitar quebras.
 * **Validação bancária:** O relatório registra testes do Banco Inter e Nubank durante a sessão documentada. O resultado é pontual e não constitui garantia de funcionamento futuro nem certificação geral da Google Play Integrity API.
 

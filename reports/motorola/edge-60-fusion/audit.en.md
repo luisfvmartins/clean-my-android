@@ -33,7 +33,7 @@ The investigation identified commercial app installers and advertising modules, 
 According to the Portuguese source report:
 
 - **486** packages were cataloged in the initial firmware inventory.
-- **155** packages were classified as neutralized: 67 already disabled by the factory and 88 addressed through the documented ADB / AppOps / input-method actions.
+- **155** packages were classified as altered: 67 already disabled by the factory and 88 addressed through the documented ADB / AppOps / input-method actions.
 - **343** packages were active for User 0 after the work, including 12 FOSS applications installed as alternatives.
 - Available RAM was reported to increase from approximately **2,750 MB** to a range of **4,153–4,573 MB**.
 - Background processes were reported to decrease from **66** to **39**.

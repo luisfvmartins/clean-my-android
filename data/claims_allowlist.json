@@ -1,0 +1,814 @@
+{
+  "version": "1.0",
+  "description": "Exceções autorizadas para termos absolutistas ou sensíveis após auditoria de alegações (PT-1). Cada entrada foi classificada como A (evidência/disclaimer/título oficial) ou B (capacidade declarada em manifesto/dumpsys) com justificativa técnica obrigatória.",
+  "entries": [
+    {
+      "path": "README.md",
+      "line": 157,
+      "term": "spyware",
+      "category": "A",
+      "rationale": "Instrução explícita de conduta aos contribuidores advertindo contra rotular apps levianamente.",
+      "snippet": "- Do not conclude that an app is spyware solely because it has internet access, "
+    },
+    {
+      "path": "docs/APRESENTACAO_METODO_E_RESULTADOS.en.md",
+      "line": 9,
+      "term": "elimina",
+      "category": "A",
+      "rationale": "Ressalva explícita de limitação técnica afirmando que o método não elimina todos os riscos ou telemetria.",
+      "snippet": "**Clean My Android** documents a methodology for analyzing and carefully debloat"
+    },
+    {
+      "path": "docs/APRESENTACAO_METODO_E_RESULTADOS.en.md",
+      "line": 60,
+      "term": "elimina",
+      "category": "A",
+      "rationale": "Ressalva explícita de limitação técnica afirmando que o método não elimina todos os riscos ou telemetria.",
+      "snippet": "* **Diagnostic components:** Deactivated *DiagMonAgent* (`com.sec.android.diagmo"
+    },
+    {
+      "path": "docs/APRESENTACAO_METODO_E_RESULTADOS.md",
+      "line": 9,
+      "term": "elimina",
+      "category": "A",
+      "rationale": "Ressalva explícita de limitação técnica afirmando que o método não elimina todos os riscos ou telemetria.",
+      "snippet": "O **Clean My Android** documenta uma metodologia para análise e debloat criterio"
+    },
+    {
+      "path": "docs/APRESENTACAO_METODO_E_RESULTADOS.md",
+      "line": 60,
+      "term": "elimina",
+      "category": "A",
+      "rationale": "Ressalva explícita de limitação técnica afirmando que o método não elimina todos os riscos ou telemetria.",
+      "snippet": "* **Componentes de diagnóstico:** Foram suspensos *DiagMonAgent* (`com.sec.andro"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 82,
+      "term": "completely",
+      "category": "A",
+      "rationale": "Alerta técnico fundamentado na arquitetura AOSP sobre falha crítica do sistema caso pacote essencial seja desativado.",
+      "snippet": "| 85 | **NetworkStack (Core Network Stack)** | `com.google.android.networkstack`"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 110,
+      "term": "completely",
+      "category": "A",
+      "rationale": "Alerta técnico fundamentado na arquitetura AOSP sobre falha crítica do sistema caso pacote essencial seja desativado.",
+      "snippet": "| 107 | **Service Wi-Fi Resources (Mainline Wi-Fi APEX)** | `com.google.android."
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 14,
+      "term": "rastreamento",
+      "category": "B",
+      "rationale": "Capacidade técnica declarada no manifesto ou permissões de telemetria/background scanning comprovadas no dumpsys.",
+      "snippet": "| 31 | **OK Google Hotword Enrollment** | `com.android.hotwordenrollment.okgoogl"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 15,
+      "term": "rastreamento",
+      "category": "B",
+      "rationale": "Capacidade técnica declarada no manifesto ou permissões de telemetria/background scanning comprovadas no dumpsys.",
+      "snippet": "| 32 | **Hey Google Hotword Enrollment** | `com.android.hotwordenrollment.xgoogl"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 20,
+      "term": "rastreamento",
+      "category": "B",
+      "rationale": "Capacidade técnica declarada no manifesto ou permissões de telemetria/background scanning comprovadas no dumpsys.",
+      "snippet": "| 37 | **Carrier Wi-Fi (GWP)** | `com.google.android.apps.carrier.carrierwifi` |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 36,
+      "term": "rastreamento",
+      "category": "B",
+      "rationale": "Capacidade técnica declarada no manifesto ou permissões de telemetria/background scanning comprovadas no dumpsys.",
+      "snippet": "| 53 | **Android System Intelligence (Device Personalization Services)** | `com."
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 58,
+      "term": "Rastreamento",
+      "category": "B",
+      "rationale": "Capacidade técnica declarada no manifesto ou permissões de telemetria/background scanning comprovadas no dumpsys.",
+      "snippet": "| 75 | **Google Location History (Linha do Tempo do Google)** | `com.google.andr"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 80,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 97 | **SDK Sandbox (AdServices Runtime Sandbox)** | `com.google.android.sdksan"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 91,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 108 | **YouTube** | `com.google.android.youtube` | Google (App Pré-instalado /"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 93,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 110 | **Mainline AdServices Package** | `com.google.mainline.adservices` | Goo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 37,
+      "term": "Completely",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 134 | **MotCamera3 AI Content** | `com.motorola.camera3.content.ai` | Manufact"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 42,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "| 139 | **Motorola Notifications (3c_notification / Hello You Marketing)** | `co"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+      "line": 21,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 120 | **Chrome Homepage Provider (Motorola)** | `com.motorola.android.provider"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+      "line": 40,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "| 139 | **Notificações da Motorola (3c_notification / Hello You Marketing)** | `"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+      "line": 51,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 150 | **Motorola Entitlement Service** | `com.motorola.entitlement` | Fabrican"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+      "line": 97,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 196 | **Widget de Tempo e Clima da Motorola (TimeWeather)** | `com.motorola.ti"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 14,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 201 | **AppCloud OOBE Motorola (ironSource Aura)** | `com.aura.oobe.motorola` "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 17,
+      "term": "completely",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 204 | **Claro Ignite (Digital Turbine)** | `com.dti.amx` | Carrier / Commercia"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 18,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 205 | **Motorola Ignite / Mobile Services (Digital Turbine)** | `com.dti.motor"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 35,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 222 | **Taboola MIP (Magazine Lockscreen / News Feed Ads)** | `com.taboola.mip"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
+      "line": 13,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Termo descritivo técnico fundamentado no contexto documental do dispositivo.",
+      "snippet": "| 200 | **Amazon App Manager** | `com.amazon.appmanager` | Operadora / Parceiro "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
+      "line": 14,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 201 | **AppCloud OOBE Motorola (ironSource Aura)** | `com.aura.oobe.motorola` "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
+      "line": 18,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 205 | **Motorola Ignite / Mobile Services (Digital Turbine)** | `com.dti.motor"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
+      "line": 35,
+      "term": "rastreamento",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| 222 | **Taboola MIP (Magazine Lockscreen / News Feed Ads)** | `com.taboola.mip"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 18,
+      "term": "completely",
+      "category": "A",
+      "rationale": "Alerta técnico fundamentado na arquitetura AOSP sobre falha crítica do sistema caso pacote essencial seja desativado.",
+      "snippet": "| 230 | **Bluetooth Service (Mainline APEX)** | `com.android.bluetooth` | System"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 75,
+      "term": "completely",
+      "category": "A",
+      "rationale": "Alerta técnico fundamentado na arquitetura AOSP sobre falha crítica do sistema caso pacote essencial seja desativado.",
+      "snippet": "| 287 | **System UI** | `com.android.systemui` | System (AOSP / Motorola) | **De"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.md",
+      "line": 73,
+      "term": "rastreamento",
+      "category": "B",
+      "rationale": "Capacidade técnica declarada no manifesto ou permissões de telemetria/background scanning comprovadas no dumpsys.",
+      "snippet": "| 285 | **Kit de Ferramentas do SIM (SIM Toolkit / STK)** | `com.android.stk` | "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.md",
+      "line": 78,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Nome oficial da ferramenta de sistema AOSP (System Tracing / Perfetto UI / com.android.traceur).",
+      "snippet": "| 290 | **Rastreamento do Sistema (System Tracing / Perfetto UI)** | `com.androi"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "line": 104,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "| Adware, bloatware, and OOBE partners | 11 | Digital Turbine, Aura, Glance, Tab"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "line": 125,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "- Commercial adware, sponsored installers, and embedded advertising (Digital Tur"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "line": 134,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "- Two third-party applications located under `/data/app`, reported as DT Ignite-"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "line": 141,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "Updates stored under `/data/app` were reverted for ten selected system packages."
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "line": 111,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Identificação técnica fundamentada de parceiros de publicidade/OOBE documentados nas evidências e manifestos.",
+      "snippet": "| **Adwares, Bloatwares e Parceiros OOBE** | **11** | `com.dti.motorola`, `com.a"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "line": 134,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "#### A. Adwares, Instaladores Fantasmas e Publicidade Embutida:"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "line": 203,
+      "term": "adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "> Durante a sessão, o espaço livre na partição `/data` aumentou de 193 GB para a"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "line": 327,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Classificação técnica descritiva de componentes comerciais de monetização e stubs OOBE.",
+      "snippet": "| **Adwares Monitorados em RAM** | 5 daemons (~750 MB RSS) | **Processos finaliz"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1738,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1745,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1757,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1865,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1870,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1877,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1894,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1906,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1918,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 1942,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 3310,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 3322,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 3329,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Rastreamento publicitário disfarçado de widget meteorol"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 3346,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 3353,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 5741,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 5758,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "line": 5806,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1165,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1168,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1176,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1248,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1253,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1256,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1269,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1277,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1285,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 1301,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 2213,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 2221,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 2224,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Rastreamento publicitário disfarçado de widget meteorol"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 2237,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 2240,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 3832,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 3845,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "line": 3877,
+      "term": "Adware",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"vendor\": \"Adware / Parceiro\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 1170,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 2044,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 3094,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 4419,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 4975,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 5241,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 5274,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 5825,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 5863,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 6224,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 6623,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "line": 6951,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 1048,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 1830,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 2770,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 3955,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 4453,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 4691,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 4720,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 5213,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 5247,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 5570,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 5927,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"category\": \"Samsung Telemetria / Rastreamento\","
+    },
+    {
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "line": 6221,
+      "term": "Rastreamento",
+      "category": "A",
+      "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
+      "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    }
+  ]
+}

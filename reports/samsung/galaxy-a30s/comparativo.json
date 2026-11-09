@@ -9,87 +9,169 @@
   "metrics": [
     {
       "indicator": "Quantidade Total de Pacotes Catalogados",
+      "kind": "count",
+      "status": "measured",
       "before": "392 pacotes no firmware de fábrica",
       "after": "392 pacotes no firmware (343 habilitados no Usuário 0)",
-      "variation": "48 pacotes neutralizados no Usuário 0 (Lotes 1 e 2)",
-      "evidence": "pm list packages -u antes e depois"
+      "variation": "48 pacotes alterados no Usuário 0 (46 desativados + 2 desinstalados)",
+      "method": "pm list packages -u antes e depois",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/before/packages.txt",
+        "reports/samsung/galaxy-a30s/after/packages.txt"
+      ],
+      "limitations": "Reflete o estado do Usuário 0; pacotes de sistema permanecem no firmware em /system e /product."
     },
     {
       "indicator": "Pacotes Habilitados no Usuário 0",
+      "kind": "count",
+      "status": "measured",
       "before": "391 pacotes habilitados",
       "after": "343 pacotes habilitados",
-      "variation": "-48 pacotes residentes em segundo plano (-12.3%)",
-      "evidence": "pm list packages -e antes e depois"
+      "variation": "-48 pacotes habilitados (-12,3%)",
+      "method": "pm list packages -e antes e depois",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/before/packages.txt",
+        "reports/samsung/galaxy-a30s/after/packages.txt"
+      ],
+      "limitations": "Contagem obtida via ADB para o Usuário 0 em repouso pós-boot."
     },
     {
-      "indicator": "Pacotes Desativados",
+      "indicator": "Pacotes Desativados no Usuário 0",
+      "kind": "count",
+      "status": "measured",
       "before": "1 pacote (com.sec.android.emergencylauncher inativo de fábrica)",
       "after": "47 pacotes desativados no Usuário 0",
       "variation": "+46 pacotes desativados cirurgicamente via disable-user",
-      "evidence": "pm list packages -d antes e depois"
+      "method": "pm list packages -d antes e depois",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/before/packages.txt",
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/disabled-packages.txt"
+      ],
+      "limitations": "Desativação restrita ao Usuário 0. Pacotes podem ser reativados a qualquer momento via pm enable."
     },
     {
       "indicator": "Pacotes Desinstalados para o Usuário 0",
-      "before": "0 pacotes desinstalados (2 pacotes 3rd-party ativos)",
-      "after": "2 pacotes desinstalados (0 pacotes 3rd-party ativos)",
-      "variation": "2 pacotes comerciais excluídos (com.odete.samsung e com.samsung.shop)",
-      "evidence": "pm list packages -3 antes e depois"
+      "kind": "count",
+      "status": "measured",
+      "before": "0 pacotes desinstalados (2 pacotes de terceiros ativos)",
+      "after": "2 pacotes desinstalados para o Usuário 0",
+      "variation": "-2 pacotes comerciais (com.odete.samsung e com.samsung.shop)",
+      "method": "pm list packages -3 antes e depois",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/before/packages.txt",
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/removed-packages.txt"
+      ],
+      "limitations": "Desinstalação executada com pm uninstall --user 0. Os APKs base permanecem na partição de sistema read-only."
     },
     {
-      "indicator": "Adware Oculto e Droppers Comerciais (Digital Turbine)",
+      "indicator": "Componentes Comerciais e Droppers (Digital Turbine)",
+      "kind": "behavior",
+      "status": "measured",
       "before": "Digital Turbine Ignite (com.dti.samsung) ativo com permissão DOWNLOAD_WITHOUT_NOTIFICATION",
-      "after": "Digital Turbine Ignite neutralizado e desativado",
-      "variation": "Erradicação da instalação silenciosa de APKs e coleta de IMEI/IMSI",
-      "evidence": "pm disable-user --user 0 com.dti.samsung"
+      "after": "Digital Turbine Ignite desativado para o Usuário 0",
+      "variation": "Serviço de download em segundo plano do pacote suspenso no Usuário 0",
+      "method": "pm disable-user --user 0 com.dti.samsung",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/disabled-packages.txt"
+      ],
+      "limitations": "Confirmação da desativação do pacote via pm. Não foi monitorado tráfego de rede em longo prazo com o pacote ativo."
     },
     {
       "indicator": "Telemetria Central e Diagnósticos (DiagMon & IMS Logger)",
+      "kind": "behavior",
+      "status": "measured",
       "before": "DiagMonAgent, IMS Logger, NetworkDiagnostic e FMM ativos em background",
-      "after": "Agentes de telemetria desativados no Usuário 0",
-      "variation": "Interrupção completa de relatórios de falha e logs diagnósticos para a Samsung",
-      "evidence": "pm disable-user em diagmonagent, imslogger, networkdiagnostic e fmm"
+      "after": "DiagMonAgent, IMS Logger, NetworkDiagnostic e FMM desativados no Usuário 0",
+      "variation": "Agentes de telemetria desativados no Usuário 0; outros canais de log de sistema não foram mensurados",
+      "method": "pm disable-user --user 0",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/disabled-packages.txt"
+      ],
+      "limitations": "Desativação confirmada via dumpsys package; canais em nível de modem/rádio não foram monitorados."
     },
     {
-      "indicator": "Rastreamento Contínuo de Localização (Google Location History 24/7)",
+      "indicator": "Histórico de Localização (Google Location History)",
+      "kind": "behavior",
+      "status": "measured",
       "before": "Google Location History ativo com ACCESS_BACKGROUND_LOCATION",
-      "after": "Location History desativado (GPS em tempo real preservado)",
-      "variation": "Eliminação do rastreamento de satélite em segundo plano 24 horas por dia",
-      "evidence": "pm disable-user --user 0 com.google.android.gms.location.history"
+      "after": "Location History desativado no Usuário 0; GPS em tempo real operacional",
+      "variation": "Serviço de histórico de localização da conta suspenso no perfil",
+      "method": "pm disable-user --user 0 com.google.android.gms.location.history",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/disabled-packages.txt"
+      ],
+      "limitations": "GPS e serviços de localização para navegação em tempo real permanecem operacionais."
     },
     {
-      "indicator": "Bloatware e Rastreamento de Terceiros (Meta / Facebook)",
+      "indicator": "Pacotes em Segundo Plano da Meta / Facebook",
+      "kind": "behavior",
+      "status": "measured",
       "before": "4 daemons/serviços ativos da Meta (Katana, System, AppManager, Services)",
-      "after": "4 pacotes Meta neutralizados e desativados",
-      "variation": "Erradicação completa da telemetria e atualizações silenciosas da Meta",
-      "evidence": "pm disable-user --user 0 nos 4 pacotes com.facebook.*"
+      "after": "4 pacotes Meta desativados no Usuário 0",
+      "variation": "Serviços e receptores dos pacotes da Meta suspensos no perfil",
+      "method": "pm disable-user --user 0",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/disabled-packages.txt"
+      ],
+      "limitations": "Desativação restrita ao Usuário 0. Não avalia tráfego se o usuário instalar manualmente o app do Facebook da Play Store."
     },
     {
-      "indicator": "Game Optimizing Service (GOS) e Throttling",
-      "before": "GOS, Game Launcher e Game Tools com limitação de clock e telemetria de jogos",
+      "indicator": "Game Optimizing Service (GOS)",
+      "kind": "behavior",
+      "status": "measured",
+      "before": "GOS, Game Launcher e Game Tools com serviços em background",
       "after": "GOS, Game Launcher e Game Tools desativados no Usuário 0",
-      "variation": "Desbloqueio de frequência nativa do Exynos 7904 sem estrangulamento térmico arbitrário",
-      "evidence": "pm disable-user em com.samsung.android.game.*"
-    },
-    {
-      "indicator": "Daemons em Segundo Plano, AR/Stickers e Impressão em Rede",
-      "before": "Dynamic Lockscreen, Story Service, AR Emoji, Cloud, AllShare e Spooler ativos",
-      "after": "Daemons ociosos de sincronização, adesivos 3D e impressão neutralizados",
-      "variation": "Alívio substantivo de CPU, consumo de bateria e ciclo ocioso de dados",
-      "evidence": "pm disable-user nos componentes identificados do Lote 2"
+      "variation": "Serviços em segundo plano dos pacotes do Game Optimizing Service suspensos",
+      "method": "pm disable-user --user 0",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/after/packages.txt",
+        "reports/samsung/galaxy-a30s/changes/disabled-packages.txt"
+      ],
+      "limitations": "Suspensão verificada por status do pacote; impacto em benchmark térmico/FPS sob carga prolongada não foi medido."
     },
     {
       "indicator": "Armazenamento Interno (/data)",
+      "kind": "resource",
+      "status": "measured",
       "before": "51 GB total, 2.4 GB utilizados (49 GB livres)",
       "after": "51 GB total, 2.4 GB utilizados (49 GB livres)",
-      "variation": "Sem alteração perceptível imediata em GB (aparelho em estado inicial limpo)",
-      "evidence": "df -h /data antes e depois"
+      "variation": "Sem alteração perceptível em GB (dispositivo em estado inicial limpo)",
+      "method": "df -h /data antes e depois",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/before/storage.txt",
+        "reports/samsung/galaxy-a30s/after/storage.txt"
+      ],
+      "limitations": "df -h exibe granularidade de GB; variações em KB ou MB isolados não são perceptíveis."
     },
     {
-      "indicator": "Consumo de Bateria e Comportamento Térmico",
-      "before": "72%, ~25.6°C (AP: 26.0°C / Bat: 25.3°C), saúde boa",
-      "after": "67%, ~24.8°C (AP: 25.4°C / Bat: 24.8°C), saúde boa",
-      "variation": "Estabilidade térmica mantida a ~25°C (nível 67% reflete descarga natural na sessão); autonomia de 24h pendente de uso real",
-      "evidence": "dumpsys battery e dumpsys thermalservice"
+      "indicator": "Comportamento Térmico em Repouso",
+      "kind": "resource",
+      "status": "measured",
+      "before": "25.6°C (AP: 26.0°C / Bat: 25.3°C), saúde boa",
+      "after": "24.8°C (AP: 25.4°C / Bat: 24.8°C), saúde boa",
+      "variation": "-0.8°C de estabilidade térmica observada em repouso pós-sessão ADB",
+      "method": "dumpsys thermalservice e dumpsys battery",
+      "evidence": [
+        "reports/samsung/galaxy-a30s/after/battery.txt"
+      ],
+      "limitations": "Medição pontual em repouso conectado ao ADB; ciclo completo de estresse térmico não foi medido."
+    },
+    {
+      "indicator": "Autonomia de Bateria sob Uso Contínuo",
+      "kind": "resource",
+      "status": "not_measured",
+      "before": null,
+      "after": null,
+      "variation": "Não mensurado em teste padronizado de drenagem de bateria",
+      "method": "Pendente de teste com protocolo padronizado de bateria",
+      "evidence": [],
+      "limitations": "Requer ciclo de uso real sem conexão USB para medição válida de consumo de energia."
     }
   ]
 }

@@ -7,80 +7,145 @@
   "metrics": [
     {
       "indicator": "Memória RAM Livre",
+      "kind": "resource",
+      "status": "measured",
       "before": "4.5 GB (aprox. 4.608.000 KB)",
       "after": "7.2 GB (aprox. 7.372.800 KB)",
       "variation": "+2.7 GB (+58.7% de RAM disponível)",
-      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
+      "method": "dumpsys meminfo",
+      "evidence": [
+        "reports/motorola/edge-60-pro/auditoria.md"
+      ],
+      "limitations": "Medido via dumpsys meminfo no log de auditoria (Passo 110 vs Passo 384); variação sujeita ao gerenciamento de memória do kernel."
     },
     {
       "indicator": "Armazenamento Livre (/data)",
+      "kind": "resource",
+      "status": "measured",
       "before": "193 GB livres",
       "after": "~197 GB livres",
-      "variation": "~4 GB de aumento no espaço livre de /data (ganho agregado decorrente da remoção de atualizações em /data/app e limpeza de dados/caches; ganho por aplicativo NÃO mensurado individualmente)",
-      "evidence": "df -h /data observado no Passo 398; ganho individual por pacote não medido"
+      "variation": "~4 GB de aumento no espaço livre de /data (ganho agregado decorrente da remoção de atualizações em /data/app e limpeza de caches; ganho individual por app não medido)",
+      "method": "df -h /data",
+      "evidence": [
+        "reports/motorola/edge-60-pro/auditoria.md"
+      ],
+      "limitations": "df -h /data observado no Passo 398; ganho individual por pacote não foi medido isoladamente."
     },
     {
       "indicator": "Quantidade Total de Pacotes",
+      "kind": "count",
+      "status": "measured",
       "before": "501 pacotes catalogados",
       "after": "492 pacotes no espaço do usuário 0 (9 pacotes desinstalados para o usuário 0)",
       "variation": "-9 pacotes desinstalados para o usuário 0 (7 de sistema com installed=false + 2 de terceiros purgados)",
-      "evidence": "pm list packages -f Passo 73 vs Passo 451/620"
+      "method": "pm list packages -f",
+      "evidence": [
+        "reports/motorola/edge-60-pro/inventario-antes.json",
+        "reports/motorola/edge-60-pro/inventario-depois.json",
+        "reports/motorola/edge-60-pro/pacotes-desinstalados.txt"
+      ],
+      "limitations": "Contagem obtida via pm list packages; APKs de sistema desinstalados para o Usuário 0 permanecem no firmware."
     },
     {
       "indicator": "Pacotes de Aplicativos Habilitados",
+      "kind": "count",
+      "status": "measured",
       "before": "441 pacotes ativos",
       "after": "248 pacotes preservados/ativos",
       "variation": "-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)",
-      "evidence": "inventario-depois.json: 248 preservados/ativos, 244 desativados e 9 desinstalados para o Usuário 0"
+      "method": "pm list packages -e",
+      "evidence": [
+        "reports/motorola/edge-60-pro/inventario-depois.json"
+      ],
+      "limitations": "Contagem de pacotes habilitados no Usuário 0 pós-procedimento."
     },
     {
       "indicator": "Pacotes Desativados (DISABLED_USER)",
+      "kind": "count",
+      "status": "measured",
       "before": "60 pacotes desativados de fábrica",
       "after": "244 pacotes desativados",
-      "variation": "+184 pacotes congelados via ADB",
-      "evidence": "pm list packages -d Passo 89 vs Passo 701"
+      "variation": "+184 pacotes suspensos via ADB",
+      "method": "pm list packages -d",
+      "evidence": [
+        "reports/motorola/edge-60-pro/pacotes-desativados.txt"
+      ],
+      "limitations": "Desativação reversível via pm disable-user para o Usuário 0."
     },
     {
-      "indicator": "Daemons de Adware Ativos em RAM",
+      "indicator": "Processos Comerciais e Parceiros em RAM",
+      "kind": "behavior",
+      "status": "measured",
       "before": "Glance, Taboola, InMobi, DT Ignite ativos (~750 MB RSS)",
-      "after": "Processos de adware identificados finalizados na sessão",
-      "variation": "Eliminação dos processos de adware monitorados",
-      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
+      "after": "Processos finalizados e pacotes correspondentes desativados na sessão",
+      "variation": "Suspensão dos daemons comerciais monitorados",
+      "method": "dumpsys meminfo e pm disable-user",
+      "evidence": [
+        "reports/motorola/edge-60-pro/auditoria.md",
+        "reports/motorola/edge-60-pro/pacotes-desativados.txt"
+      ],
+      "limitations": "Monitoramento baseado em RSS via dumpsys meminfo antes e após desativação dos pacotes."
     },
     {
       "indicator": "Google QuickSearchBox em RAM",
+      "kind": "resource",
+      "status": "measured",
       "before": "873 MB RSS (Search: 480 MB + GoogleApp: 393 MB)",
-      "after": "0 MB (Processo eliminado da RAM)",
+      "after": "0 MB (Processo não mais residente em RAM)",
       "variation": "-873 MB de carga contínua",
-      "evidence": "dumpsys meminfo Passo 110 vs Passo 384"
+      "method": "dumpsys meminfo",
+      "evidence": [
+        "reports/motorola/edge-60-pro/auditoria.md"
+      ],
+      "limitations": "dumpsys meminfo Passo 110 vs Passo 384."
     },
     {
       "indicator": "Perfis Ativos em Background",
+      "kind": "behavior",
+      "status": "measured",
       "before": "User 0 + User 11 (duplicação de GMS consumindo 269 MB RSS)",
-      "after": "Apenas User 0 ativo (User 11 stopped, User 10 removed)",
+      "after": "Apenas User 0 ativo (User 11 parado, User 10 removido)",
       "variation": "-269 MB de processos duplicados",
-      "evidence": "am stop-user -f 11 / dumpsys meminfo Passo 384"
+      "method": "am stop-user -f 11 e dumpsys meminfo",
+      "evidence": [
+        "reports/motorola/edge-60-pro/auditoria.md"
+      ],
+      "limitations": "Comportamento de persistência de perfis secundários após reinicialização requer verificação adicional."
     },
     {
       "indicator": "Temperatura Térmica em Espera",
+      "kind": "resource",
+      "status": "measured",
       "before": "37°C a 40°C",
       "after": "33.0°C",
       "variation": "-4°C a -7°C (redução térmica observada)",
-      "evidence": "dumpsys battery Passo 384"
+      "method": "dumpsys battery",
+      "evidence": [
+        "reports/motorola/edge-60-pro/auditoria.md"
+      ],
+      "limitations": "Leitura instantânea de sensor térmico via dumpsys battery; não reflete teste sob ciclo contínuo de estresse."
     },
     {
       "indicator": "Verificação Play Integrity / Bancos",
-      "before": "Não coletado formalmente",
-      "after": "Pendente de validação presencial",
-      "variation": "Nenhum teste de integridade via API nem logs de aplicativos bancários foram executados na sessão",
-      "evidence": "Registros de execução não contêm chamadas Play Integrity API nem testes de apps de banco"
+      "kind": "behavior",
+      "status": "pending",
+      "before": null,
+      "after": null,
+      "variation": "Pendente de validação presencial pelo usuário",
+      "method": "Pendente de teste formal de integridade e apps bancários",
+      "evidence": [],
+      "limitations": "Nenhum teste de integridade via API nem logs de aplicativos bancários foram executados na sessão."
     },
     {
       "indicator": "Testes Funcionais (Voz, SMS, Biometria)",
-      "before": "Não coletado em log",
-      "after": "Pendente de validação presencial pelo usuário",
-      "variation": "Pilha RIL mantida intacta; dependente de validação em uso real",
-      "evidence": "Ausência de logs de testes de áudio/biometria na sessão ADB"
+      "kind": "behavior",
+      "status": "pending",
+      "before": null,
+      "after": null,
+      "variation": "Pendente de validação presencial pelo usuário",
+      "method": "Pendente de validação funcional presencial pelo usuário",
+      "evidence": [],
+      "limitations": "Pilha RIL mantida intacta; dependente de validação em uso real diário."
     }
   ]
 }

@@ -46,7 +46,7 @@ The procedure was conducted entirely without root privileges, using the official
 ## 📊 Summary of Verified Results
 
 - **Total Cataloged Packages:** 486 packages
-- **Neutralized Packages:** 155 packages (67 stock-disabled + 88 debloated/isolated via ADB)
+- **Altered Packages:** 155 packages (67 stock-disabled + 88 debloated/isolated via ADB)
 - **Active Packages for User 0:** 343 packages (including 12 user-installed FOSS alternatives)
 - **Available RAM:** The documented snapshots recorded approximately 2,750 MB before and 4,153 MB to 4,573 MB afterward. The observed difference depends on collection conditions and does not establish a permanent gain or exclusive causation by debloating.
 - **Running processes:** The recorded count decreased from 66 to 39 between the compared snapshots. This describes the observed states and does not prove that 27 services were permanently removed.

@@ -16,11 +16,11 @@ O **Motorola Edge 60 Fusion** é um smartphone intermediário premium lançado c
 
 ### 1.1 Motivação da Auditoria
 Embora a interface Hello UI apresente um design visual próximo ao Android Open Source Project (AOSP), o exame forense da imagem stock revelou uma densa malha de serviços em segundo plano:
-1. **Adware e Droppers Comerciais Pré-carregados:** Inclusão de componentes de monetização de terceiros como Digital Turbine Ignite (`com.dti.motorola`) e ironSource AppCloud (`com.aura.oobe.motorola`), dotados de permissões privilegiadas para instalação silenciosa de aplicativos (`INSTALL_PACKAGES`).
-2. **Frameworks de Publicidade e Telemetria da Meta:** Módulos pré-instalados em partições do sistema (`com.facebook.appmanager`, `com.facebook.services`, `com.facebook.system`) que burlam as políticas de economia de energia (modo Doze) e mantêm sincronização constante.
-3. **Serviços Ociosos e Telemetria Diagnóstica OEM/SoC:** Módulos da Motorola e MediaTek (`motocare`, `bach.modemstats`, `motowifimetrics`, `apmonitor`, `appforecast`) executando diagnósticos ininterruptos e consumindo ciclos de CPU e RAM.
-4. **Coleta Geográfica e Acústica Passiva Big Tech:** Serviços de linha do tempo contínua do Google Play Services (`gms.location.history`) e escuta acústica permanente em DSP RISCV (`hotwordenrollment.okgoogle` e `xgoogle`).
-5. **Permissões Abusivas em Aplicativos de Comércio e Birôs:** Mais de 20 aplicativos de usuário possuíam permissão de rastreamento por satélite (`ACCESS_FINE_LOCATION`) concedida sem necessidade técnica real para suas tarefas essenciais.
+1. **Componentes Comerciais Pré-carregados:** Inclusão de componentes de monetização de parceiros como Digital Turbine Ignite (`com.dti.motorola`) e ironSource AppCloud (`com.aura.oobe.motorola`), dotados de permissões privilegiadas para instalação silenciosa de aplicativos (`INSTALL_PACKAGES`).
+2. **Frameworks de Publicidade e Telemetria da Meta:** Módulos pré-instalados em partições do sistema (`com.facebook.appmanager`, `com.facebook.services`, `com.facebook.system`) que executam em segundo plano e mantêm sincronização constante.
+3. **Serviços Ociosos e Telemetria Diagnóstica OEM/SoC:** Módulos da Motorola e MediaTek (`motocare`, `bach.modemstats`, `motowifimetrics`, `apmonitor`, `appforecast`) executando diagnósticos e consumindo ciclos de CPU e RAM.
+4. **Coleta Geográfica e Acústica Passiva:** Serviços de histórico de localização do Google Play Services (`gms.location.history`) e escuta acústica passiva em DSP RISCV (`hotwordenrollment.okgoogle` e `xgoogle`).
+5. **Permissões de Localização em Aplicativos de Usuário:** Mais de 20 aplicativos de usuário possuíam permissão de localização precisa por satélite (`ACCESS_FINE_LOCATION`) concedida sem necessidade técnica para suas tarefas essenciais.
 
 ### 1.2 Princípios e Limites Metodológicos
 Esta auditoria foi executada sob autorização e acompanhamento do proprietário do dispositivo, adotando critérios rigorosos:
@@ -59,7 +59,7 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
    - Verificação de daemons em execução no kernel: `adb shell ps -A`
 4. **Classificação em 6 Lotes Temáticos:**
    - **Lote 1:** Aplicativos de Usuário e Terceiros (62 pacotes)
-   - **Lote 2:** Bloatware de Parceiros, Operadoras, Adware e Financiamento (49 pacotes)
+   - **Lote 2:** Módulos de Parceiros, Operadoras e Financiamento (49 pacotes)
    - **Lote 3:** Ecossistema Motorola / Lenovo OEM (130 pacotes)
    - **Lote 4:** Ecossistema Google / GMS & Framework (104 pacotes)
    - **Lote 5:** MediaTek SoC, RIL, Telefonia, IMS e Hardware HALs (18 pacotes)
@@ -79,7 +79,7 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
 | **Memória RAM Usada (Used PSS)** | ~3.800 MB PSS |
 | **Memória RAM Livre** | ~2.750 MB livres (2.750.000 KB) de 7.594.168 KB totais |
 | **Perfil de Usuário Ativo** | `User 0` (Usuário Primário) |
-| **Segurança & Permissões** | Mais de 20 apps comerciais com rastreamento GPS contínuo ativo |
+| **Segurança & Permissões** | Mais de 20 apps comerciais com permissão de localização precisa ativa |
 | **Teclado / Discador / SMS Padrão** | Gboard (`latin`), Google Dialer e Google Messages proprietários |
 
 ---
@@ -97,14 +97,14 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
 - **Comércio e Delivery:**
   - iFood, Burger King, McDonald's, Mercado Livre, Booking, Primeira Mesa, Food To Save, Jequiti.
   - *Decisão Técnica:* Revogada a permissão de GPS por satélite (`ACCESS_FINE_LOCATION`). Os aplicativos continuam funcionando perfeitamente utilizando o endereço cadastrado pelo usuário.
-- **Jogos Comerciais e Adware:**
-  - Word Solitaire (`com.hitappsgames.wordsolitaire`): Identificados 5 SDKs de publicidade integrados (LevelPlay, AppMetrica, AppLovin, Vungle, Facebook Ads). Neutralizado.
+- **Jogos Comerciais e Publicidade:**
+  - Word Solitaire (`com.hitappsgames.wordsolitaire`): Identificados 5 SDKs de publicidade integrados (LevelPlay, AppMetrica, AppLovin, Vungle, Facebook Ads). Desativado no Usuário 0.
   - Fruit Merge (`com.melon.drop.fruit.merge.master`): Expressamente preservado por solicitação direta do usuário.
   - Calendário Menstrual (`com.popularapp.periodcalendar`): Expressamente preservado por solicitação direta do usuário.
 
-### 4.2 Lote 2 — Bloatware de Parceiros, Operadoras e Financiamento (49 Pacotes)
-- **Droppers Comerciais e Adware OEM:**
-  - Digital Turbine Ignite (`com.dti.motorola`): Dropper ativo em RAM (PID 12589) com permissão `INSTALL_PACKAGES`. Desinstalado no Usuário 0.
+### 4.2 Lote 2 — Componentes de Parceiros, Operadoras e Financiamento (49 Pacotes)
+- **Instaladores Comerciais e Módulos OEM:**
+  - Digital Turbine Ignite (`com.dti.motorola`): Instalador ativo em RAM (PID 12589) com permissão `INSTALL_PACKAGES`. Desinstalado no Usuário 0.
   - ironSource AppCloud (`com.aura.oobe.motorola`): Dropper de primeiro boot. Desinstalado no Usuário 0.
   - Meta Preloads (`com.facebook.appmanager`, `com.facebook.services`, `com.facebook.system`): Sincronizadores e instaladores da Meta na partição `/system`. Desinstalados no Usuário 0.
 - **Stubs de Financiamento e Cobrança:**
@@ -116,7 +116,7 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
 
 ### 4.3 Lote 3 — Ecossistema Motorola / Lenovo OEM (130 Pacotes)
 - **Telemetria Diagnóstica:**
-  - `motocare`, `bach.modemstats`, `motowifimetrics`, `bug2go`, `help.extlog`, `appforecast`: Desativados no Usuário 0. Elimina envio contínuo de logs para servidores da fabricante.
+  - `motocare`, `bach.modemstats`, `motowifimetrics`, `bug2go`, `help.extlog`, `appforecast`: Desativados no Usuário 0. Com os pacotes desativados, o envio contínuo de logs para servidores da fabricante é suspenso no perfil.
 - **Inteligência Artificial Proprietária da Motorola:**
   - `com.motorola.aicore`, `com.motorola.aiservices`, `com.motorola.createwithai`: Serviços com conexões ativas para a nuvem Vertex AI e MS Speech. Desativados no Usuário 0.
 - **Serviços Ociosos:**
@@ -129,8 +129,8 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
 ### 4.4 Lote 4 — Ecossistema Google / GMS & Framework (104 Pacotes)
 - **Serviços Secundários e Bloatware Google:**
   - `com.google.android.apps.chromecast.app` (Google Home), `projection.gearhead` (Android Auto), `apps.magazines` (Google Notícias), `apps.tachyon` (Google Meet), `apps.subscriptions.red` (Google One), `apps.turbo` (Device Health Services), `feedback`, `partnersetup`, `setupwizard`, `apps.wellbeing`: Desativados.
-- **Rastreamento Passivo:**
-  - `com.google.android.gms.location.history`: Histórico de localização 24/7 desativado.
+- **Telemetria e Histórico:**
+  - `com.google.android.gms.location.history`: Histórico de localização da conta desativado no Usuário 0.
   - `com.android.hotwordenrollment.okgoogle` e `xgoogle`: Escuta passiva acústica de microfone desativada.
   - `com.google.android.adservices.api` e `ondevicepersonalization.services`: Privacy Sandbox desativada/bloqueada.
 - **Preservação Estratégica do Gemini e do Google App:**
@@ -154,23 +154,23 @@ A auditoria utilizou a ponte de comunicação oficial **Android Debug Bridge (AD
 
 A execução ocorreu em 14 etapas progressivas com verificação de estabilidade e memória entre cada bloco:
 
-1. **Etapa 1:** Neutralização de adwares críticos (`dti.motorola`, `aura.oobe.motorola`, `paks.notification`).
+1. **Etapa 1:** Desativação de módulos comerciais de parceiros (`dti.motorola`, `aura.oobe.motorola`, `paks.notification`).
 2. **Etapa 2:** Desativação da infraestrutura pré-carregada da Meta (`facebook.appmanager`, `services`, `system`).
 3. **Etapa 3:** Desativação de telemetria diagnóstica da Motorola (`smartfeed`, `appforecast`, `motocare`, `nativedropboxagent`, `dimo`, `enterprise.adapter.service`).
-4. **Etapa 4:** Revogação de permissões abusivas de localização, contatos e identificação em redes sociais (Facebook, Instagram, TikTok, WhatsApp).
+4. **Etapa 4:** Revogação de permissões amplas de localização, contatos e identificação em redes sociais (Facebook, Instagram, TikTok, WhatsApp).
 5. **Etapa 5:** Hardening inicial da Google (`setupwizard`, `feedback`, `partnersetup`, `wellbeing`, AppOps em `adservices.api`).
-6. **Etapa 6:** Telemetria de baixo nível da Motorola, MediaTek e operadoras (17 pacotes, incluindo `motowifimetrics`, `modemstats`, `aicore`, `aiservices`, `apmonitor`).
+6. **Etapa 6:** Telemetria da Motorola, MediaTek e operadoras (17 pacotes, incluindo `motowifimetrics`, `modemstats`, `aicore`, `aiservices`, `apmonitor`).
 7. **Etapa 7:** Desativação de serviços ociosos da Google (9 pacotes, incluindo Google Home, Android Auto, Google One, Google Meet), com preservação expressa do Gemini e do Google App hospedeiro.
 8. **Etapa 8:** Remoção de jogos comerciais de publicidade (Word Solitaire) e threads da Meta, preservando Fruit Merge e Calendário Menstrual.
 9. **Etapa 9:** Revogação de permissão de satélite (`ACCESS_FINE_LOCATION`) em 8 aplicativos de compras e delivery (iFood, Burger King, McDonald's, Booking, etc.).
 10. **Etapa 10:** Otimização avançada de daemons da Motorola (Ready For / Desktop Core, widget de clima com polling AccuWeather, IoT service, etc.).
-11. **Etapa 11:** Desativação de bloatwares da Google com permissões amplas (`ambient.streaming`, Google TV, YouTube Music, ARCore).
+11. **Etapa 11:** Desativação de componentes da Google com permissões amplas (`ambient.streaming`, Google TV, YouTube Music, ARCore).
 12. **Etapa 12:** Revogação de satélite (`ACCESS_FINE_LOCATION`) em aplicativos financeiros e birôs de crédito (Serasa, Jeitto, Boa Vista, Koin, Cartões CAIXA, Mercado Livre e Mercado Pago).
-13. **Etapa 13:** Migração e neutralização de duplicidades proprietárias substituídas por suíte FOSS:
+13. **Etapa 13:** Migração e desativação de duplicidades proprietárias substituídas por suíte FOSS:
     - Gboard substituído por FUTO Keyboard (`ime disable` + AppOps).
     - Google Dialer e Mensagens substituídos por Fossify Phone (`ROLE_DIALER`) e Fossify Messages (`ROLE_SMS`).
     - Files, Agenda, Relógio, Calculadora, Contatos e Gravador de Voz substituídos por equivalentes FOSS.
-14. **Etapa 14:** Expurgo final de resíduos de subsistema (Histórico de Localização da Google 24/7, módulos de escuta em hardware DSP RISCV "Ok Google" / "Hey Google", personalização federada da Privacy Sandbox e 5 overlays de operadoras norte-americanas).
+14. **Etapa 14:** Desativação final de componentes de subsistema (Histórico de Localização da Google, módulos de escuta em hardware DSP RISCV "Ok Google" / "Hey Google", personalização federada da Privacy Sandbox e 5 overlays de operadoras norte-americanas).
 
 ---
 
@@ -178,14 +178,14 @@ A execução ocorreu em 14 etapas progressivas com verificação de estabilidade
 
 | Indicador de Estado | Estado Final Verificado | Variação Líquida |
 | :--- | :--- | :--- |
-| **Total de Pacotes Ativos no Usuário 0** | **343 pacotes** | -143 pacotes líquidos (155 neutralizados, +12 FOSS) |
+| **Total de Pacotes Ativos no Usuário 0** | **343 pacotes** | -143 pacotes líquidos (155 alterados, +12 FOSS) |
 | **Pacotes de Sistema Ativos** | 291 pacotes | -133 pacotes de sistema desativados/bloqueados |
-| **Pacotes de Usuário / Terceiros Ativos** | 52 comerciais + 12 FOSS (64 pacotes) | Eliminação de adwares e substituição por FOSS |
+| **Pacotes de Usuário / Terceiros Ativos** | 52 comerciais + 12 FOSS (64 pacotes) | Desativação de apps comerciais e substituição por FOSS |
 | **Memória RAM Livre em Repouso** | **~4.153 MB a 4.573 MB livres** | **+1,40 GB a +1,82 GB de RAM disponível (+50.9% a +66.3%)** |
 | **Memória RAM Usada (Used PSS)** | ~2.721 MB a 2.881 MB PSS | Queda sustentada de ~1 GB de processos residentes |
-| **Processos em Segundo Plano** | 39 processos ativos | -27 daemons eliminados da memória |
-| **Segurança e Privacidade Acústica** | Escuta passiva DSP e histórico 24/7 desativados | Eliminação de escuta acústica permanente |
-| **Digitação de Textos** | Teclado FUTO Keyboard com operação local offline | Zero dados de digitação enviados para a nuvem |
+| **Processos em Segundo Plano** | 39 processos ativos | -27 daemons encerrados na sessão |
+| **Segurança e Privacidade Acústica** | Escuta passiva DSP e histórico desativados | Suspensão de módulos de escuta contínua |
+| **Digitação de Textos** | Teclado FUTO Keyboard com operação local offline | Operação local offline sem transmissão de digitação |
 
 ---
 
@@ -219,7 +219,7 @@ Após a conclusão das intervenções, foram executadas validações empíricas 
 A auditoria e o debloat realizados no **Motorola Edge 60 Fusion** demonstraram que é viável converter um smartphone comercial recente (Android 16 / Hello UI) em uma estação de trabalho móvel com alto grau de privacidade, performance e segurança, sem necessidade de root e sem comprometer a estabilidade do sistema operacional.
 
 Os principais resultados técnicos consolidados incluem:
-- **Redução substancial da superfície de ataque e vigilância:** Eliminação de 155 componentes desnecessários e revogação de permissões invasivas em 21 aplicativos.
+- **Redução da superfície de execução em segundo plano:** Desativação de 155 componentes no perfil e revogação de permissões de localização em 21 aplicativos.
 - **Aumento sustentado de memória RAM disponível:** Liberação de até **1,82 GB de RAM física**, garantindo que aplicativos pesados permaneçam em cache sem engasgos.
 - **Migração bem-sucedida para o ecossistema FOSS:** Substituição transparente de teclado, discador, SMS, contatos, agenda, relógio e galeria por alternativas de código aberto auditáveis e sem acesso à internet.
 - **Preservação rigorosa de utilidade diária:** Aplicativos bancários, Pix, documentos oficiais e aplicativos pessoais do proprietário continuam funcionando com total integridade.

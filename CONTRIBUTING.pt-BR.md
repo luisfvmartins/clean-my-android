@@ -10,7 +10,7 @@ Para realizar uma auditoria de dispositivo, recomendamos utilizar um assistente 
 
 O fluxo mais simples é clonar este repositório, abrir a pasta em um agente com acesso ao terminal/ADB e solicitar que leia [AI_INSTRUCTIONS.pt-BR.md](AI_INSTRUCTIONS.pt-BR.md) e o [guia de auditoria individual](docs/USER_DEVICE_AUDIT.pt-BR.md). Assim, o assistente pode conduzir as coletas, analisar os componentes, preparar um plano revisável, documentar o antes/depois e organizar a contribuição.
 
-**A execução manual continua permitida** para quem possui conhecimento técnico de Android e ADB. A recomendação de IA não elimina a responsabilidade do usuário: nenhuma alteração no aparelho pode ocorrer sem autorização explícita, e toda contribuição deve ser revisada e sanitizada antes do envio.
+**A execução manual continua permitida** para quem possui conhecimento técnico de Android e ADB. A recomendação de IA não isenta o usuário de sua responsabilidade: nenhuma alteração no aparelho pode ocorrer sem autorização explícita, e toda contribuição deve ser revisada e sanitizada antes do envio.
 
 ## Tipos de contribuição
 

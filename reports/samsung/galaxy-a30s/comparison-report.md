@@ -11,13 +11,13 @@
 
 ## 1. Resumo Executivo
 
-Este relatório documenta a auditoria cirúrgica exaustiva e o comparativo empírico de antes e depois realizado no smartphone **Samsung Galaxy A30s (SM-A307GT)**, seguindo as diretrizes técnicas do [USER_DEVICE_AUDIT.pt-BR.md](../../../docs/USER_DEVICE_AUDIT.pt-BR.md) do projeto **Clean My Android**.
+Este relatório documenta a auditoria técnica e o comparativo empírico de antes e depois realizado no smartphone **Samsung Galaxy A30s (SM-A307GT)**, seguindo as diretrizes técnicas do [USER_DEVICE_AUDIT.pt-BR.md](../../../docs/USER_DEVICE_AUDIT.pt-BR.md) do projeto **Clean My Android**.
 
 O procedimento foi estruturado em duas etapas de intervenção:
-1. **Lote 1 (Otimização Primária):** Remoção de aplicativos pré-carregados comerciais (`com.odete.samsung` e loja `com.samsung.shop`), erradicação de 4 daemons residentes da Meta/Facebook, desativação do mecanismo de estrangulamento térmico e de clock **Game Optimizing Service (GOS)** e silenciamento de agentes de diagnóstico inicial como o **Security Log Agent**.
-2. **Lote 2 (Varredura Pacote por Pacote & Erradicação Profunda):** Identificação e neutralização do dropper comercial oculto **Digital Turbine Ignite** (`com.dti.samsung`), erradicação da telemetria central da Samsung (**DiagMonAgent** e **IMS Logger**), desativação do rastreamento de localização contínuo 24/7 do Google (**Google Location History**), desativação de daemons ociosos de escaneamento contínuo em segundo plano (Dynamic Lockscreen, Story Service, Easy Setup BLE/Wi-Fi, Samsung Cloud/AllShare) e desativação de módulos redundantes de realidade aumentada e adesivos (AR Emoji, Live Stickers, Sticker Center, Google ARCore).
+1. **Lote 1 (Otimização Primária):** Remoção de aplicativos pré-carregados comerciais (`com.odete.samsung` e loja `com.samsung.shop`), desativação de 4 daemons residentes da Meta/Facebook, desativação do serviço de segundo plano **Game Optimizing Service (GOS)** e silenciamento de agentes de diagnóstico inicial como o **Security Log Agent**.
+2. **Lote 2 (Varredura Pacote por Pacote & Otimização Complementar):** Identificação e desativação do instalador comercial **Digital Turbine Ignite** (`com.dti.samsung`), suspensão de agentes de diagnóstico da Samsung (**DiagMonAgent** e **IMS Logger**), desativação do serviço de histórico de localização da conta (**Google Location History**), desativação de daemons ociosos de sincronização em segundo plano (Dynamic Lockscreen, Story Service, Easy Setup BLE/Wi-Fi, Samsung Cloud/AllShare) e desativação de módulos redundantes de realidade aumentada e adesivos (AR Emoji, Live Stickers, Sticker Center, Google ARCore).
 
-Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 desativados reversivelmente), reduzindo a quantidade de pacotes residentes ativos de **391 para 343** (-12,3%). Todos os subsistemas vitais (teclado Samsung HoneyBoard, launcher One UI Home, subsistema telefônico RIL/IMS e o ecossistema Google Play Services para compatibilidade bancária e push) foram rigorosamente preservados.
+Ao todo, **48 pacotes foram alterados no Usuário 0** (2 desinstalados e 46 desativados reversivelmente), reduzindo a quantidade de pacotes habilitados de **391 para 343** (-12,3%). Todos os subsistemas vitais (teclado Samsung HoneyBoard, launcher One UI Home, subsistema telefônico RIL/IMS e o ecossistema Google Play Services para compatibilidade bancária e push) foram rigorosamente preservados.
 
 ---
 
@@ -41,11 +41,11 @@ Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 
 
 ## 3. Ferramentas e Condições de Medição
 
-- **Protocolo de Conexão:** Android Debug Bridge (ADB) via Wi-Fi após pareamento TLS criptografado (`adb pair`); endereço local e porta foram omitidos por privacidade.
+- **Protocolo de Conexão:** Android Debug Bridge (ADB) via Wi-Fi após pareamento TLS criptografado (`adb pair`); identificadores de rede locais foram omitidos por privacidade.
 - **Condições Físicas do Aparelho:** Nível de bateria em 72%, carregamento desconectado, temperatura de hardware a 26.0°C (AP) e 25.3°C (bateria), com média global em repouso de ~25.6°C.
 - **Estado de Carga do Sistema:** Standby em tela de configurações, sem contas pessoais sincronizadas ou aplicativos em primeiro plano além das ferramentas nativas de inspeção.
 - **Ferramentas de Coleta:** Scripts de extração direta de `dumpsys` (package, meminfo, diskstats, battery, thermalservice, user, connectivity), `getprop`, `cat /proc/meminfo`, `df -h` e `pm list packages`.
-- **Sanitização de Dados:** Endereços MAC de rede, números de série e identificadores de telemetria foram higienizados conforme as normas de publicação pública do projeto.
+- **Sanitização de Dados:** Endereços de rede, números de série e identificadores de hardware foram higienizados conforme registrado em [docs/SANITIZATION_LOG.md](../../../docs/SANITIZATION_LOG.md).
 
 ---
 
@@ -53,7 +53,7 @@ Ao todo, **48 pacotes foram neutralizados** no Usuário 0 (2 desinstalados e 46 
 
 No diagnóstico de linha de base (`before/`), o firmware original de fábrica da Samsung apresentava:
 - **392 pacotes catalogados:**
-  - **391 pacotes habilitados:** rodando ou aptos a iniciar em segundo plano.
+  - **391 pacotes habilitados:** ativos ou aptos a iniciar em segundo plano.
   - **1 pacote desativado de fábrica:** `com.sec.android.emergencylauncher` (launcher de emergência acionado apenas em modo de ultraeconomia).
   - **390 pacotes de sistema:** instalados em `/system`, `/vendor` e `/product`.
   - **2 pacotes de terceiros / pré-instalados comerciais:** `com.samsung.shop` e `com.odete.samsung` (instalados na partição de dados via OMC Agent na primeira inicialização).
@@ -65,7 +65,7 @@ No diagnóstico de linha de base (`before/`), o firmware original de fábrica da
 Todas as alterações foram autorizadas pelo usuário e executadas em lotes controlados com checagem pós-comando documentada em [changes/change-log.md](changes/change-log.md).
 
 ### 5.1 Lote 1 — Otimização Primária (21 pacotes)
-- **Bloatware de Terceiros e Preloads:**
+- **Pacotes de Terceiros e Preloads:**
   - `com.odete.samsung`: Desinstalado via `pm uninstall -k --user 0`.
   - `com.samsung.shop`: Desinstalado via `pm uninstall -k --user 0`.
   - `com.facebook.katana`, `com.facebook.system`, `com.facebook.appmanager`, `com.facebook.services`: Desativados via `pm disable-user --user 0`.
@@ -78,11 +78,11 @@ Todas as alterações foram autorizadas pelo usuário e executadas em lotes cont
 - **Google Não Essencial:**
   - `com.google.mainline.telemetry`, `com.google.android.feedback`, `com.google.android.partnersetup`: Desativados via `pm disable-user --user 0`.
 
-### 5.2 Lote 2 — Varredura Pacote por Pacote & Otimização Profunda (27 pacotes)
-- **Adware Comercial e Telemetria Crítica:**
+### 5.2 Lote 2 — Varredura Pacote por Pacote & Otimização Complementar (27 pacotes)
+- **Componentes Comerciais e Diagnósticos:**
   - `com.dti.samsung` (**Digital Turbine Ignite**): Desativado via `pm disable-user --user 0`.
   - `com.sec.android.diagmonagent` (**Samsung DiagMonAgent**): Desativado via `pm disable-user --user 0`.
-  - `com.google.android.gms.location.history` (**Rastreamento 24/7**): Desativado via `pm disable-user --user 0`.
+  - `com.google.android.gms.location.history` (**Histórico de Localização**): Desativado via `pm disable-user --user 0`.
   - `com.sec.imslogger` (**IMS Logger**): Desativado via `pm disable-user --user 0`.
   - `com.samsung.android.networkdiagnostic`: Desativado via `pm disable-user --user 0`.
   - `com.samsung.android.fmm` (**Find My Mobile**): Desativado via `pm disable-user --user 0`.
@@ -106,14 +106,14 @@ Todas as alterações foram autorizadas pelo usuário e executadas em lotes cont
 | :--- | :--- | :--- | :--- | :--- |
 | **Total de Pacotes no Firmware** | 392 pacotes | 392 pacotes | Inalterado no nível de partição | `pm list packages -u` |
 | **Pacotes Habilitados (Usuário 0)** | 391 pacotes | 343 pacotes | **-48 pacotes no Usuário 0 (-12,3%)** | `pm list packages -e` |
-| **Pacotes Desativados** | 1 pacote (de fábrica) | 47 pacotes | **+46 pacotes desativados cirurgicamente** | `pm list packages -d` |
-| **Pacotes Desinstalados (User 0)** | 0 pacotes | 2 pacotes | **2 pacotes comerciais eliminados** | `pm list packages -3` |
-| **Adware Oculto (Digital Turbine)** | Ativo com permissão de download silencioso | Neutralizado e desativado | **Desativação do instalador silencioso** | `pm disable-user` em `com.dti.samsung` |
-| **Telemetria Central (DiagMon & IMS)**| Ativos e coletando logs | Neutralizados | **Interrupção de relatórios analíticos** | `pm disable-user` em diagmon e imslogger |
-| **Rastreamento Contínuo (Location 24/7)**| Ativo com background location | Desativado (GPS em tempo real preservado)| **Fim do rastreamento passivo contínuo** | `pm disable-user` em location.history |
-| **Serviços em Background da Meta** | 4 daemons e listeners ativos | 0 daemons ativos | **Neutralizados no Usuário 0** | Verificação de processo pós-disable |
-| **Throttling e GOS de Jogos** | GOS ativo e monitorando apps | GOS neutralizado | **Remoção da limitação imposta pelo GOS** | Estado `disabled-user` em GOS |
-| **Alertas de Segurança Falsos** | Ativos pelo SecurityLogAgent | Silenciados com sucesso | **Eliminação de pop-ups intrusivos** | `disabled-user` em securitylogagent |
+| **Pacotes Desativados** | 1 pacote (de fábrica) | 47 pacotes | **+46 pacotes desativados no Usuário 0** | `pm list packages -d` |
+| **Pacotes Desinstalados (User 0)** | 0 pacotes | 2 pacotes | **2 pacotes comerciais desinstalados** | `pm list packages -3` |
+| **Instalador Comercial (Digital Turbine)** | Ativo com permissão de download sem notificação | Desativado para o Usuário 0 | **Serviço de download em segundo plano suspenso** | `pm disable-user` em `com.dti.samsung` |
+| **Diagnósticos e Telemetria (DiagMon & IMS)**| Ativos e coletando logs | Desativados no Usuário 0 | **Agentes de telemetria desativados** | `pm disable-user` em diagmon e imslogger |
+| **Histórico de Localização (Google Location History)**| Ativo com background location | Desativado no Usuário 0 (GPS operacional)| **Serviço de histórico da conta suspenso** | `pm disable-user` em location.history |
+| **Serviços em Background da Meta** | 4 daemons e listeners ativos | 0 daemons ativos | **Desativados no Usuário 0** | Verificação de processo pós-disable |
+| **Game Optimizing Service (GOS)** | GOS ativo e monitorando apps | GOS desativado no Usuário 0 | **Serviço em segundo plano suspenso** | Estado `disabled-user` em GOS |
+| **Alertas de Segurança Falsos** | Ativos pelo SecurityLogAgent | Desativados no Usuário 0 | **Supressão de notificações persistentes de log** | `disabled-user` em securitylogagent |
 | **Armazenamento Livre (`/data`)** | 49 GB livres (2.4 GB usados) | 49 GB livres (2.4 GB usados) | Sem variação perceptível em escala de GB | `df -h /data` |
 | **Estabilidade Térmica (AP / Bat)** | 26.0°C / 25.3°C | 25.4°C / 24.8°C | Estabilidade mantida em repouso | `dumpsys battery` e `dumpsys thermalservice` |
 | **Consumo de Bateria (24h)** | Não medido | Não medido | **Pendente de validação de longo prazo** | Ausência de ciclo fechado |
@@ -144,7 +144,7 @@ Durante a execução controlada dos 48 pacotes:
 - **Comportamentos anômalos:** Nenhum encerramento forçado (*Force Close*) de sistema foi observado.
 - **Necessidade de reversão imediata:** Nenhuma.
 
-Caso o usuário queira restaurar qualquer um dos componentes desativados, a reversão é instantânea via ADB:
+Caso o usuário queira restaurar qualquer um dos componentes desativados, a reversão é direta via ADB:
 ```bash
 # Reativar pacote desativado:
 adb shell pm enable <nome.do.pacote>
@@ -157,13 +157,13 @@ adb shell cmd package install-existing <nome.do.pacote>
 
 ## 9. Limitações e Itens Pendentes
 
-1. **Autonomia de Bateria em Ciclo Real:** A economia de energia decorrente da neutralização dos 48 pacotes em segundo plano só poderá ser quantificada com precisão após 24 a 48 horas de uso cotidiano do proprietário.
+1. **Autonomia de Bateria em Ciclo Real:** A economia de energia decorrente da desativação dos 48 pacotes em segundo plano só poderá ser quantificada com precisão após 24 a 48 horas de uso cotidiano do proprietário sem conexão USB.
 2. **Aplicativos FOSS Substitutos:** Não foram instaladas alternativas de código aberto (FOSS) nesta sessão, já que o aparelho opera com o conjunto nativo do Android/One UI.
-3. **Capturas de Tela em Sessão Desbloqueada:** As capturas da linha de base e estado final foram registradas nas telas administrativas do sistema Android, salvaguardando integralmente a privacidade de notificações e contas do usuário.
+3. **Capturas de Tela em Sessão Desbloqueada:** As capturas da linha de base e estado final foram registradas nas telas administrativas do sistema Android, salvaguardando a privacidade de notificações e contas do usuário.
 4. **Módulo de Impressão e PDF (`com.android.printspooler`):** A desativação do spooler de impressão no Lote 2 suspende a função nativa de 'Salvar como PDF' e envio de documentos a impressoras locais. Caso o proprietário necessite de impressão ou exportação em PDF nativa, o serviço pode ser reativado via `adb shell pm enable com.android.printspooler`.
 
 ---
 
 ## 10. Conclusão e Recomendações
 
-A auditoria e otimização cirúrgica em dois lotes no **Samsung Galaxy A30s** reduziu de forma marcante a pegada de bloatware, adware e telemetria da One UI 3.1. A eliminação do **Digital Turbine Ignite**, do **DiagMonAgent**, do rastreamento **Google Location History 24/7** e do **Game Optimizing Service (GOS)** devolve ao usuário controle sobre a privacidade de hardware e libera o SoC Samsung Exynos 7904 de gargalos desnecessários.
+A auditoria técnica e otimização em dois lotes no **Samsung Galaxy A30s** reduziu a presença de componentes comerciais, pré-carregados e telemetria na One UI 3.1. A desativação do **Digital Turbine Ignite**, do **DiagMonAgent**, do **Google Location History** e do **Game Optimizing Service (GOS)** no Usuário 0 suspende daemons em segundo plano desses componentes, preservando os recursos do SoC Samsung Exynos 7904 e mantendo a estabilidade funcional do sistema.

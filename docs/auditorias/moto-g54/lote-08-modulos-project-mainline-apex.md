@@ -54,6 +54,6 @@
 > **Controle de Progresso do Lote 8 (Final):**
 > - **Quantidade analisada neste lote:** 39 módulos APEX (Acumulado: **462 / 462** componentes — **100% CONCLUÍDO**)
 > - **Quantidade restante:** 0 componentes
-> - **Módulos APEX com contêineres de telemetria internos (já neutralizados no nível de APK):** `com.google.android.adservices`, `com.google.android.ondevicepersonalization`, `com.google.android.devicelock`, `com.google.android.os.statsd`
+> - **Módulos APEX com contêineres de telemetria internos (já desativados no nível de APK):** `com.google.android.adservices`, `com.google.android.ondevicepersonalization`, `com.google.android.devicelock`, `com.google.android.os.statsd`
 
 ---

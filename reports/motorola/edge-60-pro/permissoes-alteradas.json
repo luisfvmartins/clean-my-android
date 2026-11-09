@@ -31,7 +31,7 @@
       "category": "Sistema (Google)",
       "permission": "android.permission.ACCESS_COARSE_LOCATION",
       "command": "adb shell pm revoke --user 0 com.google.android.ext.services android.permission.ACCESS_COARSE_LOCATION",
-      "justification": "Impede rastreamento de localização por bibliotecas de serviços estendidos do Google.",
+      "justification": "Suspende envio de localização por bibliotecas de serviços estendidos do Google.",
       "status": "Executado e confirmado no dumpsys para User 0"
     },
     {
@@ -176,7 +176,7 @@
         "op": "ACTIVITY_RECOGNITION",
         "mode": "ignore",
         "command": "adb shell cmd appops set --uid 10387 ACTIVITY_RECOGNITION ignore",
-        "justification": "Neutraliza detecção de passos e reconhecimento de atividade física (caminhada, veículo)."
+        "justification": "Suspende detecção de passos e reconhecimento de atividade física (caminhada, veículo)."
       },
       {
         "op": "BODY_SENSORS",
@@ -265,7 +265,7 @@
         "WAKE_LOCK"
       ],
       "netpolicy_blacklisted": true,
-      "reason": "Sandbox do Google Privacy Sandbox para anúncios direcionados neutralizado."
+      "reason": "Sandbox do Google Privacy Sandbox para anúncios direcionados restrito via AppOps."
     },
     {
       "package_name": "com.motorola.ccc.ota",
