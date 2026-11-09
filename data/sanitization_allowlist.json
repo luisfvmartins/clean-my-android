@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "description": "Lista de exceções justificadas para o verificador de sanitização (check_sanitization.py). Toda entrada requer justificativa técnica comprovada no repositório.",
+  "allowlist": [
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.0.15.58",
+      "path": "reports/motorola/edge-60-fusion/before/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do pacote Motorola Camera (MotCamera5), não é endereço IP de rede."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.0.15.58",
+      "path": "reports/motorola/edge-60-fusion/after/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do pacote Motorola Camera (MotCamera5), não é endereço IP de rede."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.0.16.64",
+      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "context": "version_name",
+      "justification": "Número de versão do aplicativo de câmera Motorola no inventário inicial."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.3.06.4",
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão de aplicativo Samsung (Camera/Galeria) no inventário de fábrica."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.3.06.4",
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão de aplicativo Samsung (Camera/Galeria) no inventário pós-otimização."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.1.00.1",
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do Samsung Calendar no inventário de fábrica."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.1.00.1",
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do Samsung Calendar no inventário pós-otimização."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.2.00.7",
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do Samsung Weather no inventário de fábrica."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.2.00.7",
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do Samsung Weather no inventário pós-otimização."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.0.11.17",
+      "path": "reports/samsung/galaxy-a30s/before/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do Samsung Voice Recorder no inventário de fábrica."
+    },
+    {
+      "pattern_type": "ipv4_version_string",
+      "value": "10.0.11.17",
+      "path": "reports/samsung/galaxy-a30s/after/inventory.json",
+      "context": "version_name",
+      "justification": "Número de versão do Samsung Voice Recorder no inventário pós-otimização."
+    }
+  ]
+}

@@ -31,6 +31,7 @@ MANDATORY_PAIRS: list[tuple[str, str]] = [
     ("docs/USER_DEVICE_AUDIT.pt-BR.md", "docs/USER_DEVICE_AUDIT.md"),
     ("docs/AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md", "docs/AUDIT_STATUS_AND_HOMOLOGATION.md"),
     ("docs/APRESENTACAO_METODO_E_RESULTADOS.md", "docs/APRESENTACAO_METODO_E_RESULTADOS.en.md"),
+    ("docs/SANITIZATION_LOG.md", "docs/SANITIZATION_LOG.en.md"),
     ("docs/ESTATISTICAS.md", "docs/ESTATISTICAS.en.md"),
     ("docs/EVOLUCAO_CONTRIBUICOES.md", "docs/EVOLUCAO_CONTRIBUICOES.en.md"),
     # Dispositivos - READMEs de pasta

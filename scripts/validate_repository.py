@@ -374,6 +374,26 @@ def validate_adb_script_tests() -> None:
         fail(f"testes automatizados dos scripts ADB falharam: {detail}")
 
 
+def validate_sanitization() -> None:
+    """Run automated sanitization checks over repository documents."""
+    global checks
+    checks += 1
+    script = ROOT / "scripts/check_sanitization.py"
+    if not script.is_file():
+        fail("scripts/check_sanitization.py não encontrado")
+        return
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        fail(f"violação de sanitização de dados sensíveis: {detail}")
+
+
 def main() -> int:
     validate_json_files()
     validate_shell_scripts()
@@ -383,6 +403,7 @@ def main() -> int:
     validate_bilingual_structure()
     validate_homologation_levels_and_evidence()
     validate_adb_script_tests()
+    validate_sanitization()
 
     if errors:
         print(f"FALHA: {len(errors)} problema(s) encontrado(s) em {checks} verificações.")
