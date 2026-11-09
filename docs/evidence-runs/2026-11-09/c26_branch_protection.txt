@@ -1,6 +1,6 @@
 # Check ID: c26_branch_protection
 # Description: Branch protection / ruleset on main branch / Branch protection / ruleset na branch main
-# Timestamp: 2026-11-09T04:15:26.578187+00:00
+# Timestamp: 2026-11-09T17:00:55.394150+00:00
 # Status: Blocked by human action (Item 1)
 
 Rationale (EN): gh commands and dashboard conflict analysis documented in docs/BRANCH_PROTECTION_NOTES.md. Requires admin privileges.

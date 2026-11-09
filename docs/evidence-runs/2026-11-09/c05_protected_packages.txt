@@ -1,6 +1,6 @@
 # Check ID: c05_protected_packages
 # Description: No protected package present in general execution lists / Nenhum pacote protegido em listas de execução geral
-# Timestamp: 2026-11-09T04:13:10.031775+00:00
+# Timestamp: 2026-11-09T16:57:14.951200+00:00
 # Environment: Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 # Bash: GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)
 # Bash 3.2: GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
@@ -12,7 +12,7 @@
 --- STDOUT ---
 AVISO: 18 exceções abertas catalogadas em data/audited_exceptions.json:
   - edge-60-pro (18 abertas): com.android.bluetoothmidiservice, com.android.carrierdefaultapp, com.android.companiondevicemanager, com.android.contacts, com.android.dialer...
-OK: 1278 verificações de listas de mudanças e gate de aplicação concluídas com sucesso.
+OK: 1068 verificações de listas de mudanças e gate de aplicação concluídas com sucesso.
 
 
 --- STDERR ---

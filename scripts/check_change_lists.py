@@ -94,7 +94,7 @@ def report_open_exceptions(exceptions_map: dict[tuple[str, str], dict]) -> None:
 def validate_role_holders_for_risky_exceptions(
     root_dir: Path, exceptions_map: dict[tuple[str, str], dict]
 ) -> tuple[int, list[str]]:
-    """Valida que exceções críticas (dialer, sms, contacts) possuem titular de papel em functional-tests.json."""
+    """Valida que exceções críticas (dialer, sms, contacts) possuem titular de papel real e testado quando mitigadas."""
     checks = 0
     errors: list[str] = []
     CRITICAL_RISKS = {"dialer", "sms", "contacts"}
@@ -103,6 +103,7 @@ def validate_role_holders_for_risky_exceptions(
         risk = item.get("functional_risk")
         if risk in CRITICAL_RISKS:
             checks += 1
+            status = item.get("status")
             dev_path = (root_dir / device_rel_file).parent.parent
             func_json_path = dev_path / "functional-tests.json"
             if not func_json_path.is_file():
@@ -118,16 +119,46 @@ def validate_role_holders_for_risky_exceptions(
                 continue
 
             role_holders = func_data.get("role_holders", {})
-            has_in_role_holders = risk in role_holders
-            has_in_tests = any(
-                risk in str(t.get("test_name", "")).lower() or risk in str(t.get("role", "")).lower()
+            raw_holder = str(role_holders.get(risk, "")).strip()
+
+            # Rejeita explicitamente placeholders como 'not_tested', 'none', vazio
+            is_valid_holder = bool(
+                raw_holder
+                and raw_holder.lower() not in ("not_tested", "none", "null", "undefined")
+                and "." in raw_holder
+            )
+
+            RISK_KEYWORDS = {
+                "dialer": ("dialer", "discador", "chamada", "chamadas", "voz", "telefone", "phone"),
+                "sms": ("sms", "mensagem", "mensagens", "message", "messaging"),
+                "contacts": ("contato", "contatos", "contacts"),
+            }
+            keywords = RISK_KEYWORDS.get(risk, (risk,))
+
+            has_passing_test = any(
+                (
+                    any(kw in str(t.get("test_name", "")).lower() for kw in keywords)
+                    or any(kw in str(t.get("observation", "")).lower() for kw in keywords)
+                    or (raw_holder and raw_holder.lower() in str(t).lower())
+                    or risk in str(t.get("role", "")).lower()
+                )
+                and str(t.get("status", "")).lower() in ("pass", "passed", "ok")
                 for t in func_data.get("tests", [])
             )
 
-            if not (has_in_role_holders or has_in_tests):
-                errors.append(
-                    f"{func_json_path.relative_to(root_dir)}: entrada de titular de papel ('{risk}') ausente para exceção auditada {pkg}"
-                )
+            if status == "mitigated":
+                if not is_valid_holder:
+                    errors.append(
+                        f"{func_json_path.relative_to(root_dir)}: exceção mitigada {pkg} (risco: {risk}) rejeitada: titular '{raw_holder}' é placeholder ou inválido (exige pacote real)"
+                    )
+                elif not has_passing_test:
+                    errors.append(
+                        f"{func_json_path.relative_to(root_dir)}: exceção mitigada {pkg} (risco: {risk}) exige teste funcional com status aprovado (pass/passed)"
+                    )
+            elif status == "open":
+                # Exceção aberta documenta ausência de titular e testes pendentes;
+                # garante que não seja tratada como coberta ou mitigada
+                pass
 
     return checks, errors
 

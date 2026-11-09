@@ -9,8 +9,8 @@
   },
   "summary": {
     "total_checks": 29,
-    "met": 24,
-    "blocked_by_human": 5,
+    "met": 23,
+    "blocked_by_human": 6,
     "not_met": 0
   },
   "checks": [
@@ -25,7 +25,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c01_help_exit_codes.txt",
       "artifact_filename": "c01_help_exit_codes.txt",
-      "timestamp": "2026-11-09T04:13:06.836498+00:00",
+      "timestamp": "2026-11-09T16:57:11.415746+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -39,7 +39,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c02_jsonl_log.txt",
       "artifact_filename": "c02_jsonl_log.txt",
-      "timestamp": "2026-11-09T04:13:07.036181+00:00",
+      "timestamp": "2026-11-09T16:57:11.659668+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -53,8 +53,8 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c03_apply_gate.txt",
       "artifact_filename": "c03_apply_gate.txt",
-      "timestamp": "2026-11-09T04:13:08.085257+00:00",
-      "stdout_snippet": "OK: 1278 verificações de listas de mudanças e gate de aplicação concluídas com sucesso."
+      "timestamp": "2026-11-09T16:57:12.822194+00:00",
+      "stdout_snippet": "OK: 1068 verificações de listas de mudanças e gate de aplicação concluídas com sucesso."
     },
     {
       "id": "c04_shellcheck",
@@ -67,7 +67,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c04_shellcheck.txt",
       "artifact_filename": "c04_shellcheck.txt",
-      "timestamp": "2026-11-09T04:13:08.206213+00:00",
+      "timestamp": "2026-11-09T16:57:12.952816+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -81,8 +81,8 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c05_protected_packages.txt",
       "artifact_filename": "c05_protected_packages.txt",
-      "timestamp": "2026-11-09T04:13:10.031775+00:00",
-      "stdout_snippet": "OK: 1278 verificações de listas de mudanças e gate de aplicação concluídas com sucesso."
+      "timestamp": "2026-11-09T16:57:14.951200+00:00",
+      "stdout_snippet": "OK: 1068 verificações de listas de mudanças e gate de aplicação concluídas com sucesso."
     },
     {
       "id": "c06_ci_matrix",
@@ -94,21 +94,19 @@
       "human_item": 1,
       "artifact": "docs/evidence-runs/2026-11-09/c06_ci_matrix.txt",
       "artifact_filename": "c06_ci_matrix.txt",
-      "timestamp": "2026-11-09T04:13:10.179026+00:00"
+      "timestamp": "2026-11-09T16:57:15.072001+00:00"
     },
     {
       "id": "c07_shellcheck_ci",
       "category_id": 2,
       "name_pt": "ShellCheck integrado ao CI",
       "name_en": "ShellCheck integrated into CI",
-      "type": "command",
-      "command": "grep -n 'shellcheck' docs/PROPOSED_VALIDATE_WORKFLOW.yml",
-      "exit_code": 0,
-      "status": "met",
+      "type": "blocked_by_human",
+      "status": "blocked_by_human",
+      "human_item": 1,
       "artifact": "docs/evidence-runs/2026-11-09/c07_shellcheck_ci.txt",
       "artifact_filename": "c07_shellcheck_ci.txt",
-      "timestamp": "2026-11-09T04:13:10.179590+00:00",
-      "stdout_snippet": "32:        run: shellcheck -x scripts/*.sh scripts/lib/*.sh"
+      "timestamp": "2026-11-09T16:57:15.072513+00:00"
     },
     {
       "id": "c08_script_tests",
@@ -121,7 +119,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c08_script_tests.txt",
       "artifact_filename": "c08_script_tests.txt",
-      "timestamp": "2026-11-09T04:13:10.185136+00:00",
+      "timestamp": "2026-11-09T16:57:15.072904+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -135,7 +133,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c09_protected_packages_tests.txt",
       "artifact_filename": "c09_protected_packages_tests.txt",
-      "timestamp": "2026-11-09T04:13:44.154936+00:00",
+      "timestamp": "2026-11-09T16:58:32.030195+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -149,7 +147,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c10_validator_tests.txt",
       "artifact_filename": "c10_validator_tests.txt",
-      "timestamp": "2026-11-09T04:14:13.494502+00:00",
+      "timestamp": "2026-11-09T16:59:10.685033+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -163,8 +161,8 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c11_check_claims.txt",
       "artifact_filename": "c11_check_claims.txt",
-      "timestamp": "2026-11-09T04:14:13.942766+00:00",
-      "stdout_snippet": "OK: 16667 verificações de alegações e métricas concluídas com sucesso."
+      "timestamp": "2026-11-09T16:59:11.450288+00:00",
+      "stdout_snippet": "OK: 160905 verificações de alegações e métricas concluídas com sucesso."
     },
     {
       "id": "c12_metrics_schema",
@@ -177,8 +175,8 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c12_metrics_schema.txt",
       "artifact_filename": "c12_metrics_schema.txt",
-      "timestamp": "2026-11-09T04:14:15.213171+00:00",
-      "stdout_snippet": "OK: 16667 verificações de alegações e métricas concluídas com sucesso."
+      "timestamp": "2026-11-09T16:59:14.798535+00:00",
+      "stdout_snippet": "OK: 160905 verificações de alegações e métricas concluídas com sucesso."
     },
     {
       "id": "c13_canonical_layout",
@@ -191,7 +189,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c13_canonical_layout.txt",
       "artifact_filename": "c13_canonical_layout.txt",
-      "timestamp": "2026-11-09T04:14:16.293473+00:00",
+      "timestamp": "2026-11-09T16:59:19.030034+00:00",
       "stdout_snippet": "Nenhum dispositivo Android foi acessado ou modificado."
     },
     {
@@ -205,7 +203,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c14_snapshot_utility.txt",
       "artifact_filename": "c14_snapshot_utility.txt",
-      "timestamp": "2026-11-09T04:15:17.825218+00:00",
+      "timestamp": "2026-11-09T17:00:45.655425+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -219,8 +217,8 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c15_check_change_lists.txt",
       "artifact_filename": "c15_check_change_lists.txt",
-      "timestamp": "2026-11-09T04:15:23.469867+00:00",
-      "stdout_snippet": "OK: 1278 verificações de listas de mudanças e gate de aplicação concluídas com sucesso."
+      "timestamp": "2026-11-09T17:00:52.245025+00:00",
+      "stdout_snippet": "OK: 1068 verificações de listas de mudanças e gate de aplicação concluídas com sucesso."
     },
     {
       "id": "c16_manual_changes",
@@ -233,7 +231,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c16_manual_changes.txt",
       "artifact_filename": "c16_manual_changes.txt",
-      "timestamp": "2026-11-09T04:15:23.716167+00:00",
+      "timestamp": "2026-11-09T17:00:52.467868+00:00",
       "stdout_snippet": "OK: MANUAL_CHANGES verificado"
     },
     {
@@ -246,7 +244,7 @@
       "human_item": 3,
       "artifact": "docs/evidence-runs/2026-11-09/c17_physical_measurements.txt",
       "artifact_filename": "c17_physical_measurements.txt",
-      "timestamp": "2026-11-09T04:15:23.853118+00:00"
+      "timestamp": "2026-11-09T17:00:52.590002+00:00"
     },
     {
       "id": "c18_no_mapfile",
@@ -254,12 +252,12 @@
       "name_pt": "Ausência de mapfile e flags específicas do GNU Bash 4+",
       "name_en": "Absence of mapfile and GNU-specific flags",
       "type": "command",
-      "command": "! git grep -n 'mapfile' scripts/",
+      "command": "! git grep -n 'mapfile' scripts/*.sh scripts/lib/*.sh",
       "exit_code": 0,
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c18_no_mapfile.txt",
       "artifact_filename": "c18_no_mapfile.txt",
-      "timestamp": "2026-11-09T04:15:23.853875+00:00",
+      "timestamp": "2026-11-09T17:00:52.590403+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -272,7 +270,7 @@
       "human_item": 1,
       "artifact": "docs/evidence-runs/2026-11-09/c19_linux_macos_support.txt",
       "artifact_filename": "c19_linux_macos_support.txt",
-      "timestamp": "2026-11-09T04:15:23.872145+00:00"
+      "timestamp": "2026-11-09T17:00:52.607141+00:00"
     },
     {
       "id": "c20_windows_caveats",
@@ -285,7 +283,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c20_windows_caveats.txt",
       "artifact_filename": "c20_windows_caveats.txt",
-      "timestamp": "2026-11-09T04:15:23.873157+00:00",
+      "timestamp": "2026-11-09T17:00:52.608098+00:00",
       "stdout_snippet": "OK: ressalvas Windows/WSL2 verificadas"
     },
     {
@@ -299,7 +297,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c21_bilingual_messages.txt",
       "artifact_filename": "c21_bilingual_messages.txt",
-      "timestamp": "2026-11-09T04:15:24.003259+00:00",
+      "timestamp": "2026-11-09T17:00:52.728680+00:00",
       "stdout_snippet": "OK"
     },
     {
@@ -313,7 +311,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c22_conventional_commits.txt",
       "artifact_filename": "c22_conventional_commits.txt",
-      "timestamp": "2026-11-09T04:15:26.037030+00:00",
+      "timestamp": "2026-11-09T17:00:54.826561+00:00",
       "stdout_snippet": "OK: padrões de contribuição verificados"
     },
     {
@@ -327,7 +325,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c23_codeowners.txt",
       "artifact_filename": "c23_codeowners.txt",
-      "timestamp": "2026-11-09T04:15:26.158797+00:00",
+      "timestamp": "2026-11-09T17:00:54.947898+00:00",
       "stdout_snippet": "OK: CODEOWNERS verificado"
     },
     {
@@ -341,7 +339,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c24_security_policy.txt",
       "artifact_filename": "c24_security_policy.txt",
-      "timestamp": "2026-11-09T04:15:26.305095+00:00",
+      "timestamp": "2026-11-09T17:00:55.088338+00:00",
       "stdout_snippet": "OK: políticas de segurança verificadas"
     },
     {
@@ -355,7 +353,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c25_changelog.txt",
       "artifact_filename": "c25_changelog.txt",
-      "timestamp": "2026-11-09T04:15:26.433539+00:00",
+      "timestamp": "2026-11-09T17:00:55.230210+00:00",
       "stdout_snippet": "OK: changelogs verificados"
     },
     {
@@ -368,7 +366,7 @@
       "human_item": 1,
       "artifact": "docs/evidence-runs/2026-11-09/c26_branch_protection.txt",
       "artifact_filename": "c26_branch_protection.txt",
-      "timestamp": "2026-11-09T04:15:26.578187+00:00"
+      "timestamp": "2026-11-09T17:00:55.394150+00:00"
     },
     {
       "id": "c27_external_reviewer",
@@ -380,7 +378,7 @@
       "human_item": 2,
       "artifact": "docs/evidence-runs/2026-11-09/c27_external_reviewer.txt",
       "artifact_filename": "c27_external_reviewer.txt",
-      "timestamp": "2026-11-09T04:15:26.578701+00:00"
+      "timestamp": "2026-11-09T17:00:55.396276+00:00"
     },
     {
       "id": "c28_sampling_self_audit",
@@ -393,7 +391,7 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c28_sampling_self_audit.txt",
       "artifact_filename": "c28_sampling_self_audit.txt",
-      "timestamp": "2026-11-09T04:15:26.579644+00:00",
+      "timestamp": "2026-11-09T17:00:55.396800+00:00",
       "stdout_snippet": "Arquivos gerados: docs/SELF_AUDIT_2026-11-09.pt-BR.md e docs/SELF_AUDIT_2026-11-09.md"
     },
     {
@@ -407,8 +405,8 @@
       "status": "met",
       "artifact": "docs/evidence-runs/2026-11-09/c29_compliance_scorecard.txt",
       "artifact_filename": "c29_compliance_scorecard.txt",
-      "timestamp": "2026-11-09T04:15:26.784843+00:00",
-      "stdout_snippet": "OK: 16667 verificações de alegações e métricas concluídas com sucesso."
+      "timestamp": "2026-11-09T17:00:55.616220+00:00",
+      "stdout_snippet": "OK: 160905 verificações de alegações e métricas concluídas com sucesso."
     }
   ]
 }

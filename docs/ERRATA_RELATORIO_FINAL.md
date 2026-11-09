@@ -118,7 +118,7 @@ Em cumprimento às regras inegociáveis do projeto — onde a evidência bruta e
 | **Pacote divergente** | Relatou `emergency`, alterou `bluetoothmidi` | Restauração fiel e nota técnica detalhada | `data/moto_g54_disabled_packages.txt.notes.md` |
 | **Ambiente Bash 3.2** | Presumido sem teste no Linux Bash 5.2 | Binário Bash 3.2 compilado e 100% dos testes executados | `docs/evidence-runs/2026-11-09/bash32-tests.txt` |
 | **macOS no CI** | Declarado "Tested in CI" | Corrigido para "Tested locally" / Bloqueado por ação humana | `docs/PLATFORMS.md`, `QUALITY_SCORECARD.md` |
-| **Cobertura de testes** | "44 testes / 100% cobertura de ramos" | 65 testes reais medidos; alegação de cobertura eliminada | `docs/evidence-runs/2026-11-09/c10_validator_tests.txt` |
+| **Cobertura de testes** | "44 testes / 100% cobertura de ramos" | 65 testes reais medidos; alegação de cobertura removida | `docs/evidence-runs/2026-11-09/c10_validator_tests.txt` |
 | **Autoauditoria amostral** | 30/30 "Agree" com alegações livres | Vereditos auditáveis (24 repo, 4 AOSP, 1 não verificado, 1 contradito) | `docs/self_audit_verdicts.json`, `docs/SELF_AUDIT_2026-11-09.md` |
 | **Branch protection** | Check `"Validate Repository"` inválido | Job agregador `"CI result"` e análise de conflito com dashboard | `docs/BRANCH_PROTECTION_NOTES.md`, `PROPOSED_VALIDATE_WORKFLOW.yml` |
 

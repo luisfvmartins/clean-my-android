@@ -1,6 +1,6 @@
 # Check ID: c08_script_tests
 # Description: Exit-code test coverage for debloat.sh and restore.sh / Cobertura de testes de código de saída (mock ADB)
-# Timestamp: 2026-11-09T04:13:10.185136+00:00
+# Timestamp: 2026-11-09T16:57:15.072904+00:00
 # Environment: Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 # Bash: GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)
 # Bash 3.2: GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
@@ -13,9 +13,9 @@
 (vazio)
 
 --- STDERR ---
-.............................
+.................................
 ----------------------------------------------------------------------
-Ran 29 tests in 33.791s
+Ran 33 tests in 76.736s
 
 OK
 

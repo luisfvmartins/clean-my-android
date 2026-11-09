@@ -1,6 +1,6 @@
 # Check ID: c11_check_claims
 # Description: Zero absolute or causal claims without evidence / Zero alegações absolutas ou causais sem evidência
-# Timestamp: 2026-11-09T04:14:13.942766+00:00
+# Timestamp: 2026-11-09T16:59:11.450288+00:00
 # Environment: Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 # Bash: GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)
 # Bash 3.2: GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
@@ -10,7 +10,7 @@
 # Exit code: 0
 
 --- STDOUT ---
-OK: 16667 verificações de alegações e métricas concluídas com sucesso.
+OK: 160905 verificações de alegações e métricas concluídas com sucesso.
 
 
 --- STDERR ---

@@ -1,6 +1,6 @@
 # Check ID: c28_sampling_self_audit
 # Description: Sampling self-audit of package classifications with primary evidence / Autoauditoria amostral de classificações com evidência primária
-# Timestamp: 2026-11-09T04:15:26.579644+00:00
+# Timestamp: 2026-11-09T17:00:55.396800+00:00
 # Environment: Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 # Bash: GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)
 # Bash 3.2: GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
@@ -10,7 +10,7 @@
 # Exit code: 0
 
 --- STDOUT ---
-Universo amostral: 377 componentes únicos
+Universo amostral: 388 componentes únicos
 Semente utilizada: 20261109
 Amostra selecionada: 30 pacotes
 OK: 30 vereditos validados com sucesso em self_audit_verdicts.json.

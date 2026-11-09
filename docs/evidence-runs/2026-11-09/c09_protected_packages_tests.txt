@@ -1,6 +1,6 @@
 # Check ID: c09_protected_packages_tests
 # Description: All 46 protected essential packages tested individually / Todos os 46 pacotes essenciais protegidos testados
-# Timestamp: 2026-11-09T04:13:44.154936+00:00
+# Timestamp: 2026-11-09T16:58:32.030195+00:00
 # Environment: Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 # Bash: GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)
 # Bash 3.2: GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
@@ -15,7 +15,7 @@
 --- STDERR ---
 .
 ----------------------------------------------------------------------
-Ran 1 test in 29.064s
+Ran 1 test in 38.055s
 
 OK
 

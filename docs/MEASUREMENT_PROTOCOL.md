@@ -105,7 +105,7 @@ To significantly reduce environmental variation and confounding factors across r
 
 4. Place the device in screen-off standby for **24 continuous hours** under the controlled conditions in Section 1.
 5. Repeat the 24-hour test for **at least 3 separate intervals** ($N \ge 3$) per state to compute arithmetic mean and sample standard deviation across runs.
-6. After each 24-hour interval, reconnect via ADB and pull telemetry dumps:
+6. After each 24-hour interval, reconnect via ADB and pull system dumps:
    ```bash
    adb shell dumpsys battery > evidence/raw-battery-final-run1.txt
    adb shell dumpsys batterystats > evidence/raw-batterystats-24h-run1.txt

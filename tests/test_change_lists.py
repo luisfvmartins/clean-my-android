@@ -168,6 +168,49 @@ class TestChangeListsAndDataSnapshots(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertIn(("reports/motorola/mock/disabled.txt", "com.android.dialer"), exceptions_map)
 
+    def test_mitigated_exception_with_placeholder_role_holder_fails(self):
+        """Exceção mitigada com 'not_tested' como role_holder falha."""
+        from scripts.check_change_lists import validate_role_holders_for_risky_exceptions
+
+        dev_dir = self.root / "reports/motorola/mock"
+        dev_dir.mkdir(parents=True, exist_ok=True)
+        func_file = dev_dir / "functional-tests.json"
+        func_file.write_text(json.dumps({
+            "role_holders": {"dialer": "not_tested"},
+            "tests": []
+        }), encoding="utf-8")
+
+        exceptions_map = {
+            ("reports/motorola/mock/changes/disabled.txt", "com.android.dialer"): {
+                "status": "mitigated",
+                "functional_risk": "dialer"
+            }
+        }
+        checks, errors = validate_role_holders_for_risky_exceptions(self.root, exceptions_map)
+        self.assertTrue(any("placeholder ou inválido" in err for err in errors))
+
+    def test_mitigated_exception_with_valid_role_holder_and_passing_test_passes(self):
+        """Exceção mitigada com titular válido e teste aprovado passa."""
+        from scripts.check_change_lists import validate_role_holders_for_risky_exceptions
+
+        dev_dir = self.root / "reports/motorola/mock"
+        dev_dir.mkdir(parents=True, exist_ok=True)
+        func_file = dev_dir / "functional-tests.json"
+        func_file.write_text(json.dumps({
+            "role_holders": {"dialer": "org.fossify.phone"},
+            "tests": [{"test_name": "Telefonia", "status": "pass", "role": "dialer"}]
+        }), encoding="utf-8")
+
+        exceptions_map = {
+            ("reports/motorola/mock/changes/disabled.txt", "com.android.dialer"): {
+                "status": "mitigated",
+                "functional_risk": "dialer"
+            }
+        }
+        checks, errors = validate_role_holders_for_risky_exceptions(self.root, exceptions_map)
+        self.assertEqual(errors, [])
+        self.assertEqual(checks, 1)
+
 
 if __name__ == "__main__":
     unittest.main()

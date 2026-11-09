@@ -1,6 +1,6 @@
 # Check ID: c06_ci_matrix
 # Description: Ubuntu + macOS CI matrix with native Bash 3.2 / Matriz CI Ubuntu + macOS com Bash 3.2 nativo
-# Timestamp: 2026-11-09T04:13:10.179026+00:00
+# Timestamp: 2026-11-09T16:57:15.072001+00:00
 # Status: Blocked by human action (Item 1)
 
 Rationale (EN): Matrix workflow prepared in docs/PROPOSED_VALIDATE_WORKFLOW.yml. Application to .github/workflows/ requires token with workflow scope.

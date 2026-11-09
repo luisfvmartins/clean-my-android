@@ -1,111 +1,97 @@
-# Placar Técnico de Qualidade e Conformidade — Clean My Android
+# Placar Consolidado de Qualidade Técnica e Conformidade — Clean My Android
 
-- **Data da avaliação:** 09 de novembro de 2026
-- **Ambiente de execução:** Linux Macmini (7.0.0-42-generic x86_64 Ubuntu 24.04), GNU Bash 5.2.21(1) (com build independente de Bash 3.2.0 para testes mock via `CMA_TEST_BASH`), Python 3.12.3, ShellCheck 0.10.0
-- **Metodologia:** Cada critério foi verificado por comando reproduzível. Critérios dependentes de intervenção física em hardware ou privilégios de governança externa estão formalmente identificados como **`bloqueado por humano`**, com referência direta à lista numerada da Seção 6.
+- **Data de avaliação:** 2026-11-09
+- **Ambiente de execução real:** Linux (`Linux Macmini 7.0.0-42-generic #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 x86_64 x86_64 x86_64 GNU/Linux`), GNU Bash (`GNU bash, versão 5.2.21(1)-release (x86_64-pc-linux-gnu)`), Bash 3.2 (`GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)`), Python (`Python 3.12.3`), ShellCheck (`version: 0.10.0`)
+- **Metodologia:** Cada critério atende exclusivamente quando comprovado por comando reproduzível com artefato em `docs/evidence-runs/`. Itens dependentes de hardware físico ou privilégios externos de governança são marcados como **`Bloqueado por ação humana`** e referenciam as pendências catalogadas.
 
 ---
 
-## 1. Tabela Consolidada de Conformidade por Categoria
+## 1. Placar Consolidado por Categoria
 
-| # | Categoria de Qualidade | Critérios Atendidos / Total | Estado Geral | Pendências Humanas Relacionadas (Seção 6) |
+| # | Categoria de Qualidade | Critérios Atendidos / Total | Situação Geral | Itens de Ação Humana Associados |
 |---|---|:---:|:---:|---|
-| 1 | Segurança dos scripts | 5 / 5 | **Atendido** | Nenhuma |
-| 2 | Testes e CI | 4 / 5 | **Parcial** | Item 1 (Aplicar workflow de matriz no GitHub com escopo de token) |
-| 3 | Disciplina de documentação | 2 / 2 | **Atendido** | Nenhuma |
-| 4 | Consistência de layout | 1 / 1 | **Atendido** | Nenhuma |
-| 5 | Reprodutibilidade | 3 / 4 | **Parcial** | Item 3 (Execução física do protocolo de medição em hardware) |
-| 6 | Portabilidade | 3 / 4 | **Parcial** | Item 1 (Workflow de matriz no CI), Item 4 (Confirmação presencial em macOS com ADB físico) |
+| 1 | Segurança dos scripts | 5 / 5 | **Atendido** | Nenhum |
+| 2 | Testes e CI | 3 / 5 | **Parcial** | Item 1 (Aplicação do workflow matricial no repositório) |
+| 3 | Disciplina documental | 2 / 2 | **Atendido** | Nenhum |
+| 4 | Consistência de layout | 1 / 1 | **Atendido** | Nenhum |
+| 5 | Reprodutibilidade | 3 / 4 | **Parcial** | Item 3 (Execução do protocolo de medição física em hardware) |
+| 6 | Portabilidade | 3 / 4 | **Parcial** | Item 1 (Workflow matricial no CI), Item 4 (Confirmação física no macOS) |
 | 7 | Processo e governança | 4 / 6 | **Parcial** | Item 1 (Ruleset/Protection), Item 2 (Revisor externo), Item 8 (Tag v0.1.0) |
-| 8 | Verificabilidade técnica | 2 / 2 | **Atendido** | Nenhuma |
-| **TOTAL** | **Consolidado do Projeto** | **25 / 29 (86.2%)** | **Conforme com bloqueios externos documentados** | **8 itens catalogados na Seção 6** |
+| 8 | Verificabilidade técnica | 2 / 2 | **Atendido** | Nenhum |
+| **TOTAL** | **Pontuação Consolidada do Projeto** | **23 / 29 (79.3%)** | **Conforme com dependências externas documentadas** | **6 itens pendentes de ação humana** |
 
 ---
 
-## 2. Detalhamento dos Critérios por Categoria
+## 2. Critérios Detalhados por Categoria
 
-### Categoria 1: Segurança dos Scripts
+### Categoria 1: Segurança dos scripts
 
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Códigos de saída documentados em `--help` | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_exit_codes_documented_in_help` | `Ran 1 test in 0.28s ... OK` | 2026-11-09 | **Atendido** |
-| Log JSONL sanitizado com rollback | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_code_0_success_and_jsonl_log` | `Ran 1 test in 0.44s ... OK` | 2026-11-09 | **Atendido** |
-| Gate dirigido por dados (`apply_support.tsv`) | `python3 scripts/check_change_lists.py` | `OK: 1226 verificações concluídas com sucesso` | 2026-11-09 | **Atendido** |
-| ShellCheck sem avisos | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | Retorno zero (sem mensagens) | 2026-11-09 | **Atendido** |
-| Pacotes protegidos ausentes em listas gerais de execução | `python3 scripts/check_change_lists.py` | Nenhuma ocorrência em `data/*disabled*.txt` | 2026-11-09 | **Atendido** |
-
----
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Códigos de saída documentados em --help | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_exit_codes_documented_in_help` | [c01_help_exit_codes.txt](evidence-runs/2026-11-09/c01_help_exit_codes.txt) | Atendido |
+| Log JSONL com auditoria e rollback | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_code_0_success_and_jsonl_log` | [c02_jsonl_log.txt](evidence-runs/2026-11-09/c02_jsonl_log.txt) | Atendido |
+| Trava orientada a dados (apply_support.tsv) | `python3 scripts/check_change_lists.py` | [c03_apply_gate.txt](evidence-runs/2026-11-09/c03_apply_gate.txt) | Atendido |
+| Zero avisos no ShellCheck | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | [c04_shellcheck.txt](evidence-runs/2026-11-09/c04_shellcheck.txt) | Atendido |
+| Nenhum pacote protegido em listas de execução geral | `python3 scripts/check_change_lists.py` | [c05_protected_packages.txt](evidence-runs/2026-11-09/c05_protected_packages.txt) | Atendido |
 
 ### Categoria 2: Testes e CI
 
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Matriz Ubuntu + macOS no CI com Bash 3.2 nativo | Inspeção de `docs/PROPOSED_VALIDATE_WORKFLOW.yml` | Workflow de matriz pronto e fixado por SHA | 2026-11-09 | **Bloqueado por humano (Item 1)** |
-| ShellCheck automatizado no CI | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | Integrado ao workflow de validação proposto | 2026-11-09 | **Atendido** |
-| Cobertura de códigos de saída de `debloat.sh` e `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (códigos 0, 1, 2, 3, 4, 5, 6, 7 cobertos com mock ADB; alegação de cobertura de linhas removida pois kcov não está disponível) | 2026-11-09 | **Atendido** |
-| Todos os 44 pacotes protegidos testados individualmente | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5` | `Ran 1 test (44 sub-testes iterados) ... OK` | 2026-11-09 | **Atendido** |
-| Testes unitários do próprio validador e sanitização | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 26 tests in 0.52s ... OK` | 2026-11-09 | **Atendido** |
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Matriz CI Ubuntu + macOS com Bash 3.2 nativo | Ação humana externa necessária | [c06_ci_matrix.txt](evidence-runs/2026-11-09/c06_ci_matrix.txt) | Bloqueado por ação humana (Item 1) |
+| ShellCheck integrado ao CI | Ação humana externa necessária | [c07_shellcheck_ci.txt](evidence-runs/2026-11-09/c07_shellcheck_ci.txt) | Bloqueado por ação humana (Item 1) |
+| Cobertura de testes de código de saída (mock ADB) | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | [c08_script_tests.txt](evidence-runs/2026-11-09/c08_script_tests.txt) | Atendido |
+| Todos os 46 pacotes essenciais protegidos testados | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5` | [c09_protected_packages_tests.txt](evidence-runs/2026-11-09/c09_protected_packages_tests.txt) | Atendido |
+| Testes unitários dos validadores e sanitização | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout tests.test_change_lists tests.test_validator_hardening` | [c10_validator_tests.txt](evidence-runs/2026-11-09/c10_validator_tests.txt) | Atendido |
 
----
+### Categoria 3: Disciplina documental
 
-### Categoria 3: Disciplina de Documentação
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Zero alegações absolutas ou causais sem evidência | `python3 scripts/check_claims.py` | [c11_check_claims.txt](evidence-runs/2026-11-09/c11_check_claims.txt) | Atendido |
+| Esquema canônico de métricas JSON validado | `python3 scripts/check_claims.py` | [c12_metrics_schema.txt](evidence-runs/2026-11-09/c12_metrics_schema.txt) | Atendido |
 
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Zero alegação absolutista sem evidência | `python3 scripts/check_claims.py` | `OK: 152019 verificações de alegações e métricas concluídas com sucesso` | 2026-11-09 | **Atendido** |
-| Métricas com esquema canônico (`kind`, `status`, `method`, `evidence`) | `python3 scripts/check_claims.py` | Todos os `metrics.json` aprovados no esquema estrito | 2026-11-09 | **Atendido** |
+### Categoria 4: Consistência de layout
 
----
-
-### Categoria 4: Consistência de Layout dos Relatórios
-
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Layout canônico imposto por nível de homologação em todos os aparelhos | `python3 scripts/validate_repository.py` | `OK: 651 verificações concluídas sem erros` | 2026-11-09 | **Atendido** |
-
----
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Layout canônico por nível de homologação em todos os aparelhos | `python3 scripts/validate_repository.py` | [c13_canonical_layout.txt](evidence-runs/2026-11-09/c13_canonical_layout.txt) | Atendido |
 
 ### Categoria 5: Reprodutibilidade
 
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Script de snapshot somente-leitura com sanitização pré-gravação | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_snapshot_code_0_success tests.test_adb_scripts.AdbScripts.test_snapshot_code_5_sanitization_leak_aborts` | `Ran 2 tests in 0.52s ... OK` | 2026-11-09 | **Atendido** |
-| Verificador automatizado de listas de alterações | `python3 scripts/check_change_lists.py` | `OK: 1226 verificações concluídas com sucesso` | 2026-11-09 | **Atendido** |
-| Documentação explícita de alterações manuais (AppOps/permissões) | Leitura de `docs/MANUAL_CHANGES.pt-BR.md` e `docs/MANUAL_CHANGES.md` | Comandos manuais exatos documentados | 2026-11-09 | **Atendido** |
-| Coleta e validação de medições físicas em aparelho real | Execução do roteiro em `docs/MEASUREMENT_PROTOCOL.md` | Requer conexão física de aparelhos sob responsabilidade do proprietário | 2026-11-09 | **Bloqueado por humano (Item 3)** |
-
----
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Utilitário de snapshot com trava de sanitização pré-escrita | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_snapshot_code_0_success tests.test_adb_scripts.AdbScripts.test_snapshot_code_5_sanitization_leak_aborts` | [c14_snapshot_utility.txt](evidence-runs/2026-11-09/c14_snapshot_utility.txt) | Atendido |
+| Verificador estático de listas de alterações e contagens | `python3 scripts/check_change_lists.py` | [c15_check_change_lists.txt](evidence-runs/2026-11-09/c15_check_change_lists.txt) | Atendido |
+| Registro explícito e reproduzível de alterações manuais | `python3 -c 'from pathlib import Path; r=Path("."); assert (r/"docs/MANUAL_CHANGES.md").is_file() and (r/"docs/MANUAL_CHANGES.pt-BR.md").is_file(); print("OK: MANUAL_CHANGES verificado")'` | [c16_manual_changes.txt](evidence-runs/2026-11-09/c16_manual_changes.txt) | Atendido |
+| Medições físicas de recursos coletadas em hardware real | Ação humana externa necessária | [c17_physical_measurements.txt](evidence-runs/2026-11-09/c17_physical_measurements.txt) | Bloqueado por ação humana (Item 3) |
 
 ### Categoria 6: Portabilidade
 
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Ausência de `mapfile` e comandos específicos GNU | `git grep -n "mapfile" scripts/` | Zero ocorrências encontradas | 2026-11-09 | **Atendido** |
-| Suporte a Linux e macOS | Testes executados sob binário Bash 3.2 local; workflow de matriz no CI pendente de aplicação humana | Testes mock ADB aprovados em Bash 3.2 (`docs/evidence-runs/2026-11-09/bash32-tests.txt`); macOS no CI pendente | 2026-11-09 | **Bloqueado por humano (Item 1)** |
-| Documentação de ressalvas de Windows/WSL2 | Inspeção de `docs/PLATFORMS.pt-BR.md` | Ressalvas de CRLF e encaminhamento USB documentadas | 2026-11-09 | **Atendido** |
-| Catálogo bilíngue centralizado para scripts | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_bilingual_cma_lang` | Mensagens em EN e PT validadas via `CMA_LANG` | 2026-11-09 | **Atendido** |
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Ausência de mapfile e flags específicas do GNU Bash 4+ | `! git grep -n 'mapfile' scripts/*.sh scripts/lib/*.sh` | [c18_no_mapfile.txt](evidence-runs/2026-11-09/c18_no_mapfile.txt) | Atendido |
+| Suporte a Linux e macOS testado em CI | Ação humana externa necessária | [c19_linux_macos_support.txt](evidence-runs/2026-11-09/c19_linux_macos_support.txt) | Bloqueado por ação humana (Item 1) |
+| Ressalvas de Windows/WSL2 e CRLF documentadas | `python3 -c 'from pathlib import Path; p=(Path("docs/PLATFORMS.md")).read_text(); assert "WSL2" in p and "CRLF" in p; print("OK: ressalvas Windows/WSL2 verificadas")'` | [c20_windows_caveats.txt](evidence-runs/2026-11-09/c20_windows_caveats.txt) | Atendido |
+| Catálogo bilíngue centralizado de mensagens (CMA_LANG) | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_bilingual_cma_lang` | [c21_bilingual_messages.txt](evidence-runs/2026-11-09/c21_bilingual_messages.txt) | Atendido |
 
----
+### Categoria 7: Processo e governança
 
-### Categoria 7: Processo e Governança
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Padrões de Conventional Commits e Squash-and-Merge | `python3 -c 'from pathlib import Path; c=(Path("CONTRIBUTING.md")).read_text(); assert "Conventional Commits" in c and "Squash" in c; print("OK: padrões de contribuição verificados")'` | [c22_conventional_commits.txt](evidence-runs/2026-11-09/c22_conventional_commits.txt) | Atendido |
+| Arquivo formal de posse de código (.github/CODEOWNERS) | `python3 -c 'from pathlib import Path; c=(Path(".github/CODEOWNERS")).read_text(); assert "@luisfvmartins" in c; print("OK: CODEOWNERS verificado")'` | [c23_codeowners.txt](evidence-runs/2026-11-09/c23_codeowners.txt) | Atendido |
+| Política de divulgação de vulnerabilidades (SECURITY.md) | `python3 -c 'from pathlib import Path; assert (Path("SECURITY.md")).is_file() and (Path("SECURITY.pt-BR.md")).is_file(); print("OK: políticas de segurança verificadas")'` | [c24_security_policy.txt](evidence-runs/2026-11-09/c24_security_policy.txt) | Atendido |
+| Changelog histórico retroativo estruturado | `python3 -c 'from pathlib import Path; assert (Path("CHANGELOG.md")).is_file() and (Path("CHANGELOG.pt-BR.md")).is_file(); print("OK: changelogs verificados")'` | [c25_changelog.txt](evidence-runs/2026-11-09/c25_changelog.txt) | Atendido |
+| Branch protection / ruleset na branch main | Ação humana externa necessária | [c26_branch_protection.txt](evidence-runs/2026-11-09/c26_branch_protection.txt) | Bloqueado por ação humana (Item 1) |
+| Revisor externo independente | Ação humana externa necessária | [c27_external_reviewer.txt](evidence-runs/2026-11-09/c27_external_reviewer.txt) | Bloqueado por ação humana (Item 2) |
 
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Padrão Conventional Commits e Squash-and-Merge | Inspeção de `CONTRIBUTING.pt-BR.md` | Padrões formalizados e documentados | 2026-11-09 | **Atendido** |
-| Arquivo de proprietários de código | Inspeção de `.github/CODEOWNERS` | Mapeamento completo para `@luisfvmartins` | 2026-11-09 | **Atendido** |
-| Política de segurança | Inspeção de `SECURITY.pt-BR.md` e `SECURITY.md` | Protocolo de reporte de vulnerabilidades e vazamento | 2026-11-09 | **Atendido** |
-| Changelog histórico retroativo estruturado | Inspeção de `CHANGELOG.md` e `CHANGELOG.pt-BR.md` | PRs #1 a #47 mapeadas estritamente do git | 2026-11-09 | **Atendido** |
-| Branch protection / ruleset na branch `main` | Execução de comandos `gh api` pelo proprietário | Requer privilégio de administração humana | 2026-11-09 | **Bloqueado por humano (Item 1)** |
-| Revisor independente externo | Revisão externa por terceiro convidado | Não simular intervenção de terceiros | 2026-11-09 | **Bloqueado por humano (Item 2)** |
+### Categoria 8: Verificabilidade técnica
 
----
-
-### Categoria 8: Verificabilidade Técnica
-
-| Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
-|---|---|---|---|:---:|
-| Metodologia de classificação e hierarquia de fontes | Inspeção de `docs/CLASSIFICATION_METHOD.pt-BR.md` | Hierarquia de 5 níveis e confiança formalizados | 2026-11-09 | **Atendido** |
-| Autoauditoria por amostragem probabilística | `python3 scripts/sample_self_audit.py` e inspeção de `docs/SELF_AUDIT_2026-11-09.pt-BR.md` | 30 pacotes auditados com semente 20261109 contra população de 388 componentes | 2026-11-09 | **Atendido** |
+| Critério | Comando / Verificação | Artefato de Evidência | Situação |
+|---|---|---|:---:|
+| Autoauditoria amostral de classificações com evidência primária | `python3 scripts/sample_self_audit.py` | [c28_sampling_self_audit.txt](evidence-runs/2026-11-09/c28_sampling_self_audit.txt) | Atendido |
+| Placar de qualidade e conformidade gerado por evidências | `python3 scripts/check_claims.py` | [c29_compliance_scorecard.txt](evidence-runs/2026-11-09/c29_compliance_scorecard.txt) | Atendido |
 
 ---
 

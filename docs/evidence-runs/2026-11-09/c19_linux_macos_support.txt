@@ -1,6 +1,6 @@
 # Check ID: c19_linux_macos_support
 # Description: Linux and macOS support tested in CI / Suporte a Linux e macOS testado em CI
-# Timestamp: 2026-11-09T04:15:23.872145+00:00
+# Timestamp: 2026-11-09T17:00:52.607141+00:00
 # Status: Blocked by human action (Item 1)
 
 Rationale (EN): Tested locally with mock ADB on real Bash 3.2 (docs/evidence-runs/2026-11-09/bash32-tests.txt); macOS CI execution requires item 1.

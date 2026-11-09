@@ -1,6 +1,6 @@
 # Check ID: c17_physical_measurements
 # Description: Physical resource measurements collected on live hardware / Medições físicas de recursos coletadas em hardware real
-# Timestamp: 2026-11-09T04:15:23.853118+00:00
+# Timestamp: 2026-11-09T17:00:52.590002+00:00
 # Status: Blocked by human action (Item 3)
 
 Rationale (EN): Protocol ready in docs/MEASUREMENT_PROTOCOL.md. Live hardware execution requires device owner intervention.

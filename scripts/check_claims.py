@@ -135,14 +135,17 @@ def validate_claims(
     allowlist, allowlist_errors = load_allowlist(allowlist_path)
     errors.extend(allowlist_errors)
 
-    target_extensions = (".md",)
-    for path in sorted(base_dir.rglob("*.md")):
+    target_extensions = (".md", ".json", ".txt")
+    for path in sorted(base_dir.rglob("*")):
         if ".git" in path.parts or ".pytest_cache" in path.parts or "__pycache__" in path.parts:
             continue
-        if not path.is_file():
+        if not path.is_file() or path.suffix not in target_extensions:
             continue
         rel = str(path.relative_to(base_dir))
-        if rel in ("data/sanitization_allowlist.json", "data/claims_allowlist.json"):
+        if (
+            rel in ("data/sanitization_allowlist.json", "data/claims_allowlist.json")
+            or rel.startswith("docs/evidence-runs/")
+        ):
             continue
         if not (
             rel.startswith(("reports/", "docs/", "data/"))

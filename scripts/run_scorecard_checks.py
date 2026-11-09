@@ -79,8 +79,10 @@ CHECKS = [
         "category_id": 2,
         "name_pt": "ShellCheck integrado ao CI",
         "name_en": "ShellCheck integrated into CI",
-        "command": "grep -n 'shellcheck' docs/PROPOSED_VALIDATE_WORKFLOW.yml",
-        "type": "command",
+        "type": "blocked_by_human",
+        "human_item": 1,
+        "rationale_pt": "ShellCheck incluído no workflow matricial proposto em docs/PROPOSED_VALIDATE_WORKFLOW.yml. Aplicação em .github/workflows/validate.yml depende de token com escopo workflow (Item 1).",
+        "rationale_en": "ShellCheck included in proposed matrix workflow in docs/PROPOSED_VALIDATE_WORKFLOW.yml. Application to .github/workflows/validate.yml requires token with workflow scope (Item 1).",
     },
     {
         "id": "c08_script_tests",
@@ -177,7 +179,7 @@ CHECKS = [
         "category_id": 6,
         "name_pt": "Ausência de mapfile e flags específicas do GNU Bash 4+",
         "name_en": "Absence of mapfile and GNU-specific flags",
-        "command": "! git grep -n 'mapfile' scripts/",
+        "command": "! git grep -n 'mapfile' scripts/*.sh scripts/lib/*.sh",
         "type": "command",
     },
     {
@@ -376,7 +378,7 @@ def get_system_environment() -> dict[str, str]:
     }
 
 
-def execute_check(check: dict, runs_dir: Path, env_info: dict, run_date: str) -> dict:
+def execute_check(check: dict, runs_dir: Path, env_info: dict, run_date: str, repo_root: Path) -> dict:
     cid = check["id"]
     ctype = check["type"]
     artifact_filename = f"{cid}.txt"
@@ -404,7 +406,7 @@ def execute_check(check: dict, runs_dir: Path, env_info: dict, run_date: str) ->
             "type": ctype,
             "status": "blocked_by_human",
             "human_item": h_item,
-            "artifact": str(artifact_path.relative_to(ROOT)),
+            "artifact": str(artifact_path.relative_to(repo_root)),
             "artifact_filename": artifact_filename,
             "timestamp": now_iso,
         }
@@ -413,7 +415,7 @@ def execute_check(check: dict, runs_dir: Path, env_info: dict, run_date: str) ->
     run = subprocess.run(
         cmd,
         shell=True,
-        cwd=ROOT,
+        cwd=repo_root,
         capture_output=True,
         text=True,
     )
@@ -448,14 +450,14 @@ def execute_check(check: dict, runs_dir: Path, env_info: dict, run_date: str) ->
         "command": cmd,
         "exit_code": run.returncode,
         "status": "met" if passed else "not_met",
-        "artifact": str(artifact_path.relative_to(ROOT)),
+        "artifact": str(artifact_path.relative_to(repo_root)),
         "artifact_filename": artifact_filename,
         "timestamp": now_iso,
         "stdout_snippet": (run.stdout or run.stderr or "").strip().splitlines()[-1] if (run.stdout or run.stderr) else "OK",
     }
 
 
-def generate_scorecards(results: list[dict], env_info: dict, run_date: str) -> None:
+def generate_scorecards(results: list[dict], env_info: dict, run_date: str, repo_root: Path) -> None:
     # Contagens por categoria
     cat_counts: dict[int, dict[str, int]] = {
         c["id"]: {"met": 0, "blocked": 0, "not_met": 0} for c in CATEGORIES
@@ -530,7 +532,32 @@ def generate_scorecards(results: list[dict], env_info: dict, run_date: str) -> N
                 lines_pt.append(f"| {name} | {cmd_str} | {art_link} | Não atendido |")
         lines_pt.append("")
 
-    (ROOT / "docs/QUALITY_SCORECARD.pt-BR.md").write_text("\n".join(lines_pt), encoding="utf-8")
+    lines_pt.extend([
+        "---",
+        "",
+        "## 6. Lista Numerada de Ações Humanas Obrigatórias",
+        "",
+        "As 8 ações operacionais e de governança a seguir dependem estritamente de intervenção humana ou acesso a hardware físico e não podem ser automatizadas em CI:",
+        "",
+        "1. **Item 1 — Proteção de Branch e Aplicação do Workflow de Matriz CI:**",
+        "   Configurar ruleset de proteção de branch na `main` do GitHub e aplicar o workflow multiplataforma proposto (`docs/PROPOSED_VALIDATE_WORKFLOW.yml`) com permissões ativas de token de workflow no repositório.",
+        "2. **Item 2 — Revisor Externo Independente:**",
+        "   Convidar formalmente um revisor técnico externo independente para auditar o repositório, verificar evidências e emitir parecer formal.",
+        "3. **Item 3 — Medição Física de Recursos em Hardware:**",
+        "   Conectar fisicamente os smartphones reais para executar as medições de [24 horas](MEASUREMENT_PROTOCOL.pt-BR.md) de repouso de bateria, telemetria térmica e ciclos de boot a frio conforme o protocolo em `docs/MEASUREMENT_PROTOCOL.pt-BR.md`.",
+        "4. **Item 4 — Validação Física com ADB Nativo em macOS:**",
+        "   Executar os scripts interativamente em uma estação física com macOS e aparelho conectado via USB para confirmar comportamento nativo com ADB físico.",
+        "5. **Item 5 — Homologação Funcional no Aparelho:**",
+        "   Executar testes manuais de estresse e validação em hardware físico (chamadas de voz, SMS, biometria, aplicativos bancários e integridade Play Integrity).",
+        "6. **Item 6 — Configuração de Assinatura de Commits com Chaves GPG:**",
+        "   Configurar chaves criptográficas GPG dos mantenedores e exigir commits assinados para integração na branch `main`.",
+        "7. **Item 7 — Revisão de Conformidade de Marcas Comerciais OEM/Operadoras:**",
+        "   Avaliar conformidade de marcas de fabricantes (Motorola, Samsung) e operadoras de telefonia nos relatórios públicos antes de publicações externas.",
+        "8. **Item 8 — Publicação Formal de Tag e Release (`v0.1.0`):**",
+        "   Criar a tag semântica formal `v0.1.0` no GitHub após a conclusão de todas as homologações em hardware físico e atendimento dos gates.",
+        "",
+    ])
+    (repo_root / "docs/QUALITY_SCORECARD.pt-BR.md").write_text("\n".join(lines_pt), encoding="utf-8")
 
     # 2. QUALITY_SCORECARD.md (EN)
     lines_en = [
@@ -588,7 +615,32 @@ def generate_scorecards(results: list[dict], env_info: dict, run_date: str) -> N
                 lines_en.append(f"| {name} | {cmd_str} | {art_link} | Not met |")
         lines_en.append("")
 
-    (ROOT / "docs/QUALITY_SCORECARD.md").write_text("\n".join(lines_en), encoding="utf-8")
+    lines_en.extend([
+        "---",
+        "",
+        "## 6. Numbered List of Mandatory Human Actions",
+        "",
+        "The following 8 operational and governance actions depend strictly on human intervention or physical access and cannot be automated in CI:",
+        "",
+        "1. **Item 1 — Branch Protection and CI Matrix Workflow Application:**",
+        "   Configure GitHub branch protection rulesets on `main` and apply the proposed multi-platform workflow (`docs/PROPOSED_VALIDATE_WORKFLOW.yml`) with active repository workflow permissions.",
+        "2. **Item 2 — External Peer Reviewer:**",
+        "   Formally invite an independent external peer reviewer to audit the repository, verify evidence, and submit an authoritative review receipt.",
+        "3. **Item 3 — Physical Hardware Resource Measurement:**",
+        "   Physically connect the actual smartphones under test to execute the 24-hour standby battery drain, thermal monitoring, and cold boot benchmarks defined in `docs/MEASUREMENT_PROTOCOL.md`.",
+        "4. **Item 4 — Native macOS Physical ADB Validation:**",
+        "   Execute scripts interactively on a physical macOS workstation with a real Android device connected via USB to confirm native BSD/Zsh/Bash behavior.",
+        "5. **Item 5 — On-Device Functional Homologation:**",
+        "   Perform physical on-device functional validation across all user-facing functions (cellular voice calls, SMS, biometrics, mobile banking applications, and Play Integrity checks).",
+        "6. **Item 6 — GPG Commit Signing Key Setup:**",
+        "   Configure project maintainer GPG keys and enforce cryptographic signature verification on all incoming pull requests and git tags.",
+        "7. **Item 7 — OEM and Carrier Trademark Compliance Review:**",
+        "   Review device documentation for compliance with manufacturer (Motorola, Samsung) and carrier trademark policies before commercial publication.",
+        "8. **Item 8 — Formal Tag and Release Publication (`v0.1.0`):**",
+        "   Tag and publish the official semantic release `v0.1.0` on GitHub after all physical hardware validations and branch protection gates are satisfied.",
+        "",
+    ])
+    (repo_root / "docs/QUALITY_SCORECARD.md").write_text("\n".join(lines_en), encoding="utf-8")
 
 
 def main() -> int:
@@ -609,7 +661,7 @@ def main() -> int:
     for check in CHECKS:
         sys.stdout.write(f" - Executando {check['id']} ({check['name_pt']})... ")
         sys.stdout.flush()
-        res = execute_check(check, runs_dir, env_info, args.run_date)
+        res = execute_check(check, runs_dir, env_info, args.run_date, args.repo_root)
         status = res["status"]
         if status == "met":
             print("OK [Met]")
@@ -634,7 +686,7 @@ def main() -> int:
     index_path.write_text(json.dumps(index_data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"\nÍndice JSON gerado em: {index_path.relative_to(args.repo_root)}")
 
-    generate_scorecards(results, env_info, args.run_date)
+    generate_scorecards(results, env_info, args.run_date, args.repo_root)
     print(f"Placares gerados: docs/QUALITY_SCORECARD.md e docs/QUALITY_SCORECARD.pt-BR.md")
     print(f"Total atendido: {index_data['summary']['met']} / {len(results)}")
     print(f"Total bloqueado por ação humana: {index_data['summary']['blocked_by_human']} / {len(results)}")
