@@ -1,0 +1,24 @@
+# CODEOWNERS for Clean My Android
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for entire repository
+* @luisfvmartins
+
+# CI workflows and security dependencies
+.github/ @luisfvmartins
+.github/workflows/ @luisfvmartins
+.github/dependabot.yml @luisfvmartins
+
+# Safety guardrails, catalog, and execution gates
+data/ @luisfvmartins
+data/protected_essential_packages.txt @luisfvmartins
+data/apply_support.tsv @luisfvmartins
+data/device_catalog.json @luisfvmartins
+
+# Scripts and testing framework
+scripts/ @luisfvmartins
+tests/ @luisfvmartins
+
+# Device reports and technical documentation
+reports/ @luisfvmartins
+docs/ @luisfvmartins

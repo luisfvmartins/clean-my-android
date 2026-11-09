@@ -23,6 +23,8 @@ MANDATORY_PAIRS: list[tuple[str, str]] = [
     # Documentos raiz
     ("README.pt-BR.md", "README.md"),
     ("CONTRIBUTING.pt-BR.md", "CONTRIBUTING.md"),
+    ("SECURITY.pt-BR.md", "SECURITY.md"),
+    ("CHANGELOG.pt-BR.md", "CHANGELOG.md"),
     ("AI_INSTRUCTIONS.pt-BR.md", "AI_INSTRUCTIONS.md"),
     ("reports/README.pt-BR.md", "reports/README.md"),
     # Guias em docs/

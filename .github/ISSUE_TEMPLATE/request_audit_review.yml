@@ -1,0 +1,65 @@
+name: Request an audit review
+description: Request a peer review, classification check, or re-assessment of an existing device audit
+title: "[REVIEW] Audit review: <Manufacturer Model>"
+labels: ["audit-review", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this issue template to request a technical review of an existing device report, propose a package reclassification, or verify homologation criteria.
+        Ensure all submitted evidence is **strictly sanitized** (no IMEI, serial, MAC, personal IP, phone numbers, or account IDs).
+  - type: input
+    id: device
+    attributes:
+      label: Device and Model
+      description: Exact commercial model and model code.
+      placeholder: Motorola Edge 60 Fusion (XT2503-1)
+    validations:
+      required: true
+  - type: input
+    id: report_link
+    attributes:
+      label: Report Directory or File
+      description: Path to the device report in the repository.
+      placeholder: reports/motorola/edge-60-fusion/
+    validations:
+      required: true
+  - type: dropdown
+    id: review_type
+    attributes:
+      label: Review Type
+      options:
+        - Package classification re-assessment
+        - Homologation level verification (Levels 1 to 4)
+        - Protected essential package discrepancy
+        - Functional test verification (calls, SMS, biometrics)
+        - Inconsistency between bilingual reports
+    validations:
+      required: true
+  - type: textarea
+    id: packages
+    attributes:
+      label: Packages or Components Under Review
+      description: List specific package names (FQPN) and their current vs suggested classifications.
+      placeholder: |
+        - com.example.package: currently classified as Medium, suggest High based on AOSP source
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Verifiable Evidence and Sources
+      description: Provide links to official AOSP source code, OEM documentation, or sanitized dumpsys output. Do not rely on speculative claims or AI training memory.
+      placeholder: |
+        - AOSP source: https://cs.android.com/...
+        - dumpsys package <pkg> output excerpt (sanitized)
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_action
+    attributes:
+      label: Suggested Corrective Action
+      description: Concrete change requested in the repository files.
+      placeholder: Update metrics.json and audit.md to reflect verified behavior.
+    validations:
+      required: true

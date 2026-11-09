@@ -89,8 +89,23 @@ Never publish:
 
 Keep raw dumps locally. Share only sanitized data needed to support the conclusions. Deleting a file later does not guarantee that published information disappears from Git history.
 
-## 5. Review and submit
+## 5. Commit standards and pull request submission
 
+The repository enforces **Conventional Commits** and uses **Squash and Merge** for integrating PRs into `main`:
+
+### Commit message convention
+- Format: `<type>(<scope>): <clear imperative description>`
+- Accepted types:
+  - `feat`: new script capabilities or new documented devices.
+  - `fix`: bug fixes in scripts, report error corrections, or technical inconsistencies.
+  - `docs`: documentation-only updates (reports, READMEs, guides).
+  - `test`: automated tests or mock framework enhancements.
+  - `refactor`: script code refactoring without behavioral alterations.
+  - `ci`: validation workflow and GitHub Actions updates.
+  - `chore`: dependency maintenance and repository metadata.
+- **Unique messages:** every commit must have a unique descriptive message. Avoid vague messages or repetitive identical commits in sequence.
+
+### Submission and integration
 ```bash
 git status --short
 git diff --check
@@ -101,7 +116,7 @@ git push -u origin HEAD
 gh pr create --repo luisfvmartins/clean-my-android --base main
 ```
 
-Adapt paths and commit messages to the files actually changed. For documentation-only or script contributions, add the corresponding files to `git add`.
+Following code review approval and passing all automated CI checks, the PR will be integrated via **Squash and Merge**, ensuring an atomic and linear history on the `main` branch.
 
 ## 6. Review criteria
 

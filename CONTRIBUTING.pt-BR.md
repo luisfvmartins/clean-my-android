@@ -89,8 +89,23 @@ Nunca publique:
 
 Mantenha dumps brutos localmente. Compartilhe apenas os dados sanitizados necessários para sustentar as conclusões. A remoção posterior de um arquivo não garante que uma informação publicada deixe de estar acessível no histórico Git.
 
-## 5. Revisar e enviar
+## 5. Padrão de commits e envio
 
+O repositório adota a convenção de **Conventional Commits** e a estratégia de integração **Squash and Merge** na branch `main`:
+
+### Padrão de mensagens de commit
+- Formato: `<tipo>(<escopo>): <descrição clara e concisa>`
+- Tipos aceitos:
+  - `feat`: nova funcionalidade em scripts ou novos dispositivos documentados.
+  - `fix`: correção de bug em script, erro em relatório ou inconsistência técnica.
+  - `docs`: alterações puramente documentais (relatórios, READMEs, guias).
+  - `test`: adição ou ajuste de testes automatizados ou mocks.
+  - `refactor`: refatoração de código de scripts sem alteração de comportamento.
+  - `ci`: alterações em workflows de validação e GitHub Actions.
+  - `chore`: manutenção geral de dependências e metadados.
+- **Mensagens únicas:** cada commit deve ter uma mensagem descritiva exclusiva. Evite mensagens genéricas ou commits repetidos em sequência com a mesma mensagem.
+
+### Envio e integração via PR
 ```bash
 git status --short
 git diff --check
@@ -101,7 +116,7 @@ git push -u origin HEAD
 gh pr create --repo luisfvmartins/clean-my-android --base main
 ```
 
-Adapte o caminho e a mensagem de commit aos arquivos realmente alterados. Para contribuições apenas documentais ou de scripts, adicione os arquivos correspondentes ao `git add`.
+Após aprovação na revisão de código e sucesso em todas as verificações automatizadas de CI, a PR será integrada via **Squash and Merge**, mantendo o histórico da branch `main` atômico e linear.
 
 ## 6. Critérios de revisão
 
