@@ -73,3 +73,17 @@ jobs:
 
       - name: Validar integridade e consistência do repositório
         run: python3 scripts/validate_repository.py
+
+  ci-result:
+    name: CI result
+    runs-on: ubuntu-latest
+    needs: [lint, validate]
+    if: always()
+    steps:
+      - name: Avaliar status agregado do CI
+        run: |
+          if [ "${{ needs.lint.result }}" != "success" ] || [ "${{ needs.validate.result }}" != "success" ]; then
+            echo "CI falhou: um ou mais jobs da matriz não obtiveram sucesso."
+            exit 1
+          fi
+          echo "Todos os checks do CI foram aprovados com sucesso."

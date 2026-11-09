@@ -87,6 +87,19 @@ class TestCanonicalLayout(unittest.TestCase):
         self.assertIn("audit.md", missing)
         self.assertIn("metrics.json", missing)
 
+    def test_branch_protection_context_matches_proposed_workflow(self) -> None:
+        """Verifica que o contexto citado na branch protection existe literalmente como job name no workflow proposto."""
+        proposed_wf = ROOT / "docs/PROPOSED_VALIDATE_WORKFLOW.yml"
+        self.assertTrue(proposed_wf.is_file(), "docs/PROPOSED_VALIDATE_WORKFLOW.yml deve existir")
+        wf_content = proposed_wf.read_text(encoding="utf-8")
+        self.assertIn("name: CI result", wf_content)
+
+        notes_file = ROOT / "docs/BRANCH_PROTECTION_NOTES.md"
+        self.assertTrue(notes_file.is_file(), "docs/BRANCH_PROTECTION_NOTES.md deve existir")
+        notes_content = notes_file.read_text(encoding="utf-8")
+        self.assertIn('"CI result"', notes_content)
+        self.assertNotIn("Validate Repository", notes_content)
+
 
 if __name__ == "__main__":
     unittest.main()
