@@ -23,7 +23,19 @@
       "readme_links_pt": "[Auditoria técnica](docs/AUDITORIA_MOTO_G54_5G.md)",
       "readme_links_en": "[Technical audit (English summary)](docs/AUDITORIA_MOTO_G54_5G.en.md) · [Full report (Portuguese)](docs/AUDITORIA_MOTO_G54_5G.md)",
       "readme_status_pt": "Inventário publicado; consulte o relatório para escopo e limitações",
-      "readme_status_en": "Inventory published; see report for scope and limitations"
+      "readme_status_en": "Inventory published; see report for scope and limitations",
+      "evidence": {
+        "inventory": [
+          "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+          "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+          "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
+          "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.md",
+          "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.md",
+          "docs/auditorias/moto-g54/lote-07-overlays-motorola-operadoras-esim.md",
+          "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.md"
+        ],
+        "audit": "docs/AUDITORIA_MOTO_G54_5G.md"
+      }
     },
     {
       "id": "motorola-edge-60-pro",
@@ -47,7 +59,13 @@
       "readme_links_pt": "[Relatório e evidências](reports/motorola/edge-60-pro/README.md)",
       "readme_links_en": "[Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md)",
       "readme_status_pt": "Validação funcional e confirmação de alguns dados pendentes",
-      "readme_status_en": "Functional validation and confirmation of some data pending"
+      "readme_status_en": "Functional validation and confirmation of some data pending",
+      "evidence": {
+        "inventory": [
+          "reports/motorola/edge-60-pro/inventario-antes.json"
+        ],
+        "audit": "reports/motorola/edge-60-pro/auditoria.md"
+      }
     },
     {
       "id": "motorola-edge-60-fusion",
@@ -71,7 +89,14 @@
       "readme_links_pt": "[Relatório e evidências](reports/motorola/edge-60-fusion/README.md)",
       "readme_links_en": "[Device overview (English)](reports/motorola/edge-60-fusion/README.en.md) · [Full audit (Portuguese)](reports/motorola/edge-60-fusion/audit.md)",
       "readme_status_pt": "Auditoria e debloat concluídos; validação funcional aprovada em chamadas, SMS, biometria e bancos. Limitação em RCS e bateria 24h pendente",
-      "readme_status_en": "Audit and debloat completed; functional validation passed for calls, SMS, biometrics, and banking apps. RCS and 24h battery pending"
+      "readme_status_en": "Audit and debloat completed; functional validation passed for calls, SMS, biometrics, and banking apps. RCS and 24h battery pending",
+      "evidence": {
+        "inventory": [
+          "reports/motorola/edge-60-fusion/before/inventory.json"
+        ],
+        "audit": "reports/motorola/edge-60-fusion/audit.md",
+        "functional_tests": "reports/motorola/edge-60-fusion/comparison-report.md"
+      }
     },
     {
       "id": "samsung-galaxy-a30s",
@@ -95,7 +120,14 @@
       "readme_links_pt": "[Relatório e evidências](reports/samsung/galaxy-a30s/README.md)",
       "readme_links_en": "[Device overview (English)](reports/samsung/galaxy-a30s/README.en.md) · [Comparison report (English summary)](reports/samsung/galaxy-a30s/comparison-report.en.md)",
       "readme_status_pt": "Auditoria e otimização cirúrgica concluídas; 48 pacotes neutralizados em dois lotes; validação funcional aprovada (ressalva em impressão PDF)",
-      "readme_status_en": "Surgical debloat completed; 48 packages neutralized across two batches; functional validation passed (PDF printing limitation noted)"
+      "readme_status_en": "Surgical debloat completed; 48 packages neutralized across two batches; functional validation passed (PDF printing limitation noted)",
+      "evidence": {
+        "inventory": [
+          "reports/samsung/galaxy-a30s/before/inventory.json"
+        ],
+        "audit": "reports/samsung/galaxy-a30s/comparison-report.md",
+        "functional_tests": "reports/samsung/galaxy-a30s/comparison-report.md"
+      }
     }
   ]
 }
