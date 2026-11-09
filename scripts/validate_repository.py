@@ -243,12 +243,88 @@ def validate_markdown_links() -> None:
 
 
 
+def validate_bilingual_parity() -> None:
+    global checks
+    checks += 1
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/validate_bilingual_parity.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        fail(f"paridade bilíngue violada: {detail}")
+
+
+def validate_homologation_levels_and_evidence() -> None:
+    global checks
+    catalog_path = ROOT / "data/device_catalog.json"
+    if not catalog_path.exists():
+        fail("data/device_catalog.json inexistente para validação de homologação")
+        return
+
+    data = json.loads(catalog_path.read_text(encoding="utf-8"))
+    devices = data.get("devices", [])
+
+    for d in devices:
+        checks += 1
+        dev_id = d.get("id", "sem-id")
+        level = d.get("homologation_level")
+        if level is None or not isinstance(level, int) or level < 0 or level > 4:
+            fail(f"{dev_id}: nível de homologação inválido ({level}). Deve ser 0 a 4.")
+            continue
+
+        report_dir = (ROOT / d["report"]).parent
+
+        # Nível 1: Exige inventário documentado
+        if level >= 1:
+            checks += 1
+            has_inventory = (
+                (report_dir / "before/packages.txt").exists()
+                or (report_dir / "packages.txt").exists()
+                or (report_dir / "before/inventory.json").exists()
+                or (ROOT / "docs/auditorias/moto-g54/lote-02-ecossistema-google.md").exists()
+            )
+            if not has_inventory:
+                fail(f"{dev_id}: Nível {level} exige inventário documentado (packages.txt/inventory.json)")
+
+        # Nível 2: Exige justificativa e registro de auditoria/modificações
+        if level >= 2:
+            checks += 1
+            has_audit = (
+                (report_dir / "audit.md").exists()
+                or (report_dir / "auditoria.md").exists()
+                or (report_dir / "comparison-report.md").exists()
+                or (report_dir / "README.md").exists()
+            )
+            if not has_audit:
+                fail(f"{dev_id}: Nível {level} exige documento de auditoria/análise")
+
+        # Nível 3: Exige matriz de testes funcionais ou comparativo estruturado
+        if level >= 3:
+            checks += 1
+            has_validation = (
+                (report_dir / "comparativo.json").exists()
+                or (report_dir / "comparison-report.md").exists()
+            )
+            if not has_validation:
+                fail(f"{dev_id}: Nível {level} exige comparativo.json ou comparison-report.md com testes funcionais")
+
+        # Nível 4: Script homologado - atualmente nenhum dispositivo reivindica
+        if level == 4:
+            fail(f"{dev_id}: Nível 4 (Script homologado) requer teste comunitário multi-dispositivo formal")
+
+
 def main() -> int:
     validate_json_files()
     validate_shell_scripts()
     validate_protected_packages()
     validate_statistics()
     validate_markdown_links()
+    validate_bilingual_parity()
+    validate_homologation_levels_and_evidence()
 
     if errors:
         print(f"FALHA: {len(errors)} problema(s) encontrado(s) em {checks} verificações.")

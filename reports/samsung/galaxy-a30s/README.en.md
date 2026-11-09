@@ -44,7 +44,7 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 4. **Meta / Facebook Background Eradication:** Disabled 4 persistent background components (`katana`, `system`, `appmanager`, `services`).
 5. **Game Optimizing Service (GOS) Throttling Removal:** Disabled *Game Optimizing Service* (`com.samsung.android.game.gos`) and satellites (`gamehome`, `gametools`), eliminating artificial CPU/GPU thermal and clock throttling on the Exynos 7904.
 6. **Idle Daemon & Multimedia Relief:** Disabled *Dynamic Lock Screen*, *Story Service*, AR/Stickers modules (*AR Emoji*, *Live Stickers*, *Google ARCore*), and scanning daemons (*Easy Setup BLE/Wi-Fi*, *AllShare*, and *Print Spooler*).
-7. **Preservation of Critical Subsystems:** Active keyboard (Samsung HoneyBoard), launcher (One UI Home), telephony/RIL/IMS stacks, and Google Play Services/Store were 100% preserved to guarantee everyday usability and banking compatibility.
+7. **Preservation of Critical Subsystems:** Active keyboard (Samsung HoneyBoard), launcher (One UI Home), telephony/RIL/IMS stacks, and Google Play Services/Store were preserved without modification, maintaining observed everyday usability and banking compatibility.
 
 ---
 
