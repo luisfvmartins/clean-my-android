@@ -1,0 +1,74 @@
+{
+  "device_model": "Motorola Moto G54 5G",
+  "model_code": "XT2343-1",
+  "codename": "cancunf",
+  "platform": "MediaTek Dimensity 7020 (MT6855)",
+  "architecture": "aarch64",
+  "os_version": "15",
+  "audit_date": "2026-11-08",
+  "metrics": [
+    {
+      "indicator": "Quantidade Total de Componentes Catalogados",
+      "kind": "count",
+      "status": "measured",
+      "method": "Contagem de pacotes e módulos APEX auditados no inventário bruto",
+      "before": "462 componentes identificados no firmware",
+      "after": "462 componentes mapeados",
+      "variation": "462 componentes analisados",
+      "evidence": [
+        "data/inventory_moto_g54.json",
+        "docs/AUDITORIA_MOTO_G54_5G.md"
+      ],
+      "limitations": "Base física do aparelho inspecionado no lote de homologação nível 1."
+    },
+    {
+      "indicator": "Componentes Públicos Documentados",
+      "kind": "count",
+      "status": "measured",
+      "method": "Filtro de pacotes de sistema e módulos APEX excluindo apps pessoais",
+      "before": "433 componentes públicos documentados",
+      "after": "433 componentes documentados",
+      "variation": "394 pacotes de sistema + 39 módulos APEX",
+      "evidence": [
+        "data/inventory_moto_g54.json",
+        "docs/AUDITORIA_MOTO_G54_5G.md"
+      ],
+      "limitations": "29 aplicativos instalados pelo usuário foram omitidos por privacidade."
+    },
+    {
+      "indicator": "Módulos Conteinerizados Project Mainline (APEX)",
+      "kind": "count",
+      "status": "measured",
+      "method": "pm list packages --apex-only e inspeção do diretório /apex",
+      "before": "39 módulos APEX ativos",
+      "after": "39 módulos APEX mantidos",
+      "variation": "0 módulos alterados (preservados integralmente)",
+      "evidence": [
+        "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.md"
+      ],
+      "limitations": "Módulos atualizáveis via Google Play System Updates."
+    },
+    {
+      "indicator": "Consumo de Bateria e Comportamento Térmico Contínuo",
+      "kind": "resource",
+      "status": "not_measured",
+      "method": "Pendente de teste padronizado de autonomia",
+      "before": "Não medido",
+      "after": "Não medido",
+      "variation": "Não medido",
+      "evidence": [],
+      "limitations": "Procedimento de debloat não executado no escopo do inventário nível 1."
+    },
+    {
+      "indicator": "Ganhos de Desempenho e Memória RAM Livre",
+      "kind": "resource",
+      "status": "not_measured",
+      "method": "Pendente de teste de desempenho",
+      "before": "Não medido",
+      "after": "Não medido",
+      "variation": "Não medido",
+      "evidence": [],
+      "limitations": "Métricas de recursos em uso real não medidas neste relatório."
+    }
+  ]
+}

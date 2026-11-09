@@ -70,6 +70,6 @@ In accordance with the **Clean My Android** project security and privacy guideli
 - `pacotes-desativados.txt`: Names of the 244 packages recorded in the `disabled-user` state.
 - `pacotes-desinstalados.txt`: Record of the 9 packages uninstalled for user 0 and notes about reverting updates in `/data/app`.
 - `permissoes-alteradas.json`: 13 runtime permission revocations, 2 documented special-permission attempts, 6 GMS AppOps changes (`UID 10387`), and 7 packages placed under network-policy restrictions.
-- `comparativo.json`: Consolidated quantitative performance metrics and functional-test status.
+- `metrics.json`: Consolidated quantitative performance metrics and functional-test status.
 
 The Portuguese source is available as [README.md](README.md).

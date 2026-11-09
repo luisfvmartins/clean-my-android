@@ -1,0 +1,14 @@
+{
+  "device": "Motorola Moto G54 5G (XT2343-1)",
+  "homologation_level": 1,
+  "audit_date": "2026-11-08",
+  "tests": [
+    {
+      "test_name": "Validação Funcional Pós-Debloat",
+      "status": "not_tested",
+      "date": "2026-11-08",
+      "tester": "Não aplicável (Nível 1 - Inventário documentado)",
+      "observation": "O escopo publicado deste modelo compreende estritamente o inventário catalogado de 462 componentes. Procedimento de debloat não executado neste relatório."
+    }
+  ]
+}

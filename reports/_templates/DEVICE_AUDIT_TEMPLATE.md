@@ -2,6 +2,14 @@
 
 > **Template:** Replace every `[placeholder]`. Delete instructions only after ensuring the required information is recorded. Do not publish raw private dumps.
 
+## Canonical file layout required by repository
+
+See [Audit status and homologation levels](../../docs/AUDIT_STATUS_AND_HOMOLOGATION.md) for required files per level:
+- **Level 1:** `README.md`, `README.en.md`, `audit.md`, `audit.en.md`, `metrics.json`, `before/inventory.json`, `functional-tests.json`
+- **Level 2:** Level 1 files + `comparison-report.md`, `comparison-report.en.md`, `after/inventory.json`, `changes/change-log.md`, `changes/change-log.en.md`, `changes/disabled-packages.txt`, `changes/removed-packages.txt`
+- **Level 3:** Level 2 files + `functional-tests.json` with real executed test results
+- **Level 4:** Level 3 files + homologated script with rollback and independent reviewer
+
 ## 1. Executive summary
 - **Manufacturer / model / variant:** [exact identity]
 - **Codename / board / product:** [values or Unknown]

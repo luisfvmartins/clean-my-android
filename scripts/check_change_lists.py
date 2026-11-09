@@ -24,7 +24,37 @@ ROOT = Path(__file__).resolve().parents[1]
 # Exceção histórica auditada: desativação do printspooler no A30s causou a perda de 'Salvar como PDF',
 # documentada como limitação honesta e justificativa para inclusão na lista de protegidos futuros.
 HISTORICAL_EXCEPTIONS = {
-    ("reports/samsung/galaxy-a30s/changes/disabled-packages.txt", "com.android.printspooler")
+    # Exceção histórica auditada: desativação do printspooler no A30s causou a perda de 'Salvar como PDF',
+    # documentada como limitação honesta e justificativa para inclusão na lista de protegidos futuros.
+    ("reports/samsung/galaxy-a30s/changes/disabled-packages.txt", "com.android.printspooler"),
+
+    # Exceções históricas do Edge 60 Pro: debloat agressivo retrospectivo documentado como Nível 2
+    # ("validação funcional pendente", sem suporte a --apply). Os 18 pacotes foram catalogados com advertência
+    # crítica explícita em audit.md, comparison-report.md e README.md.
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.bluetoothmidiservice"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.carrierdefaultapp"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.companiondevicemanager"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.contacts"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.dialer"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.emergency"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.printspooler"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.providers.contactkeys"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.providers.userdictionary"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.settings.intelligence"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.simappdialog"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.stk"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.android.vending"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.dolby.daxservice"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.google.android.apps.messaging"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.google.android.dialer"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.motorola.dolby.dolbyui"),
+    ("reports/motorola/edge-60-pro/changes/disabled-packages.txt", "com.motorola.nfwlocationattribution"),
+
+    # Exceções funcionais auditadas do Edge 60 Fusion (Nível 3): substituição deliberada e testada
+    # dos apps padrão de discador e mensagens por suíte FOSS (Fossify Phone e Fossify Messages),
+    # com permissões de RoleManager e testes funcionais de voz e SMS operacionais confirmados na sessão.
+    ("reports/motorola/edge-60-fusion/changes/disabled-packages.txt", "com.google.android.dialer"),
+    ("reports/motorola/edge-60-fusion/changes/disabled-packages.txt", "com.google.android.apps.messaging"),
 }
 
 
@@ -156,15 +186,17 @@ def validate_device_changes(root_dir: Path, protected: set[str]) -> tuple[int, l
                         continue
                     errors.append(f"{rel_file}: pacote protegido '{p}' consta na lista de alterações!")
 
-        # 4. Check counts against comparativo.json
-        comp_file = dev_dir / "comparativo.json"
+        # 4. Check counts against metrics.json (or fallback to comparativo.json)
+        comp_file = dev_dir / "metrics.json"
+        if not comp_file.is_file():
+            comp_file = dev_dir / "comparativo.json"
         if comp_file.is_file():
             checks += 1
             try:
                 comp_data = json.loads(comp_file.read_text(encoding="utf-8"))
                 for m in comp_data.get("metrics", []):
                     ind = m.get("indicator") or m.get("metric") or ""
-                    if "desativado" in ind.lower() and disabled_pkgs:
+                    if "desativado" in ind.lower() and "fábrica" not in ind.lower() and "factory" not in ind.lower() and disabled_pkgs:
                         # Check count in variation or after
                         var_str = str(m.get("variation", ""))
                         m_var = re.search(r"(\d+)\s+pacotes\s+desativados", var_str)

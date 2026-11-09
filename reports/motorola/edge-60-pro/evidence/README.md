@@ -87,4 +87,4 @@ Conforme as diretrizes de segurança e privacidade do projeto **Clean My Android
 - `pacotes-desativados.txt`: Lista nominal dos 244 pacotes em estado `disabled-user`.
 - `pacotes-desinstalados.txt`: Registro dos 9 pacotes desinstalados para o usuário 0 e notas sobre reversão de atualizações em `/data/app`.
 - `permissoes-alteradas.json`: 13 permissões runtime revogadas, 2 tentativas de permissão especial documentadas, 6 AppOps no GMS (`UID 10387`) e 7 pacotes em quarentena de netpolicy.
-- `comparativo.json`: Tabela consolidada de métricas quantitativas de desempenho e status de testes.
+- `metrics.json`: Tabela consolidada de métricas quantitativas de desempenho e status de testes.

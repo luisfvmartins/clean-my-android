@@ -1,0 +1,56 @@
+{
+  "device": "Motorola Edge 60 Fusion (scout_g_sysn)",
+  "homologation_level": 3,
+  "audit_date": "2026-11-06",
+  "tests": [
+    {
+      "test_name": "Telefonia Celular e Chamadas de Voz",
+      "status": "pass",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "Chamadas operando normalmente com Fossify Phone como discador padrão."
+    },
+    {
+      "test_name": "Envio e Recebimento de SMS",
+      "status": "pass",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "SMS validado com Fossify Messages."
+    },
+    {
+      "test_name": "Protocolo de Mensagens RCS (Google Mensagens)",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "RCS registrado como pendente após substituição do cliente oficial Google."
+    },
+    {
+      "test_name": "Conectividade de Dados Móveis e Wi-Fi",
+      "status": "pass",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "Conexões 5G e Wi-Fi estáveis sem degradação."
+    },
+    {
+      "test_name": "Autenticação Biométrica e Reconhecimento Facial",
+      "status": "pass",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "Biometria e Face Unlock plenamente funcionais."
+    },
+    {
+      "test_name": "Aplicativos Bancários e Transações Pix",
+      "status": "pass",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "Dois aplicativos bancários testados com biometria e Pix sem alertas de segurança."
+    },
+    {
+      "test_name": "Ciclo Controlado de Bateria em 24 Horas (não medido / pendente)",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Luís Martins",
+      "observation": "Autonomia contínua de 24 horas registrada como não medida."
+    }
+  ]
+}

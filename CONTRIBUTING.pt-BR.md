@@ -64,10 +64,10 @@ Crie uma pasta exclusiva seguindo a hierarquia `reports/<fabricante>/<modelo>/`,
 ```text
 reports/samsung/galaxy-model/
 ├── README.md
-├── auditoria.md
+├── audit.md
 ├── inventario-antes.json
 ├── inventario-depois.json
-├── comparativo.json
+├── metrics.json
 └── evidencias/
     └── README.md
 ```
@@ -129,7 +129,7 @@ A abertura do PR não representa aprovação automática. Após a revisão e o m
 Pull Requests direcionados à `main` executam o workflow **Validação do repositório**. Ele verifica:
 
 - sintaxe de todos os arquivos JSON versionados;
-- estrutura básica dos arquivos `comparativo.json` (quando possuem o campo `metrics`);
+- estrutura básica dos arquivos `metrics.json` (quando possuem o campo `metrics`);
 - sintaxe Bash dos scripts em `scripts/*.sh`, sem executá-los;
 - formato e duplicidade dos pacotes em `data/protected_essential_packages.txt`;
 - correspondência de `docs/ESTATISTICAS.md` com o catálogo `data/device_catalog.json`;

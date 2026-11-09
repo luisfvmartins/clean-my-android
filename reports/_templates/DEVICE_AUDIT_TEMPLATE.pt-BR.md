@@ -2,6 +2,14 @@
 
 > **Modelo:** Substitua todos os `[campos]`. Remova instruções somente após registrar as informações necessárias. Não publique dumps privados brutos.
 
+## Estrutura canônica de arquivos exigida pelo repositório
+
+Consulte [Níveis de status e homologação](../../docs/AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md) para a lista de arquivos obrigatórios por nível de homologação:
+- **Nível 1:** `README.md`, `README.en.md`, `audit.md`, `audit.en.md`, `metrics.json`, `before/inventory.json`, `functional-tests.json`
+- **Nível 2:** arquivos de Nível 1 + `comparison-report.md`, `comparison-report.en.md`, `after/inventory.json`, `changes/change-log.md`, `changes/change-log.en.md`, `changes/disabled-packages.txt`, `changes/removed-packages.txt`
+- **Nível 3:** arquivos de Nível 2 + `functional-tests.json` com resultados reais de testes
+- **Nível 4:** arquivos de Nível 3 + script homologado com rollback e revisor independente
+
 ## 1. Resumo executivo
 - **Fabricante / modelo / variante:** [identificação exata]
 - **Codinome / placa / produto:** [valores ou Desconhecido]

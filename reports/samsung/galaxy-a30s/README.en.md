@@ -63,7 +63,7 @@ The procedure was executed in non-root mode via **Android Debug Bridge (ADB)** w
 ## 📂 Document Structure
 
 - [`comparison-report.md`](comparison-report.md): Detailed technical before/after comparison report.
-- [`comparativo.json`](comparativo.json): Machine-readable structured metrics.
+- [`metrics.json`](metrics.json): Machine-readable structured metrics.
 - [`before/`](before/): Initial baseline diagnostics (package inventory, memory, battery, process, and permission logs).
 - [`changes/`](changes/): Execution log, commands used, and reversal procedures.
 - [`after/`](after/): Final confirmatory diagnostics post-optimization.

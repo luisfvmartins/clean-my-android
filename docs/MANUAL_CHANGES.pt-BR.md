@@ -29,5 +29,5 @@ Todas as intervenções aprovadas e realizadas no A30s limitaram-se estritamente
 
 Para os dispositivos da linha Motorola Edge onde foram realizadas revogações cirúrgicas de permissões de telemetria ou restrições de AppOps:
 * Todas as intervenções foram executadas **exclusivamente de forma manual**, pacote por pacote, pelo auditor responsável.
-* Os comandos exatos executados, as permissões revogadas e suas respectivas justificativas técnicas encontram-se documentados em [`reports/motorola/edge-60-pro/permissoes-alteradas.json`](../reports/motorola/edge-60-pro/permissoes-alteradas.json) e no histórico de mudanças do Edge 60 Fusion ([`reports/motorola/edge-60-fusion/changes/change-log.md`](../reports/motorola/edge-60-fusion/changes/change-log.md)).
+* Os comandos exatos executados, as permissões revogadas e suas respectivas justificativas técnicas encontram-se documentados em [`reports/motorola/edge-60-pro/changes/permission-changes.json`](../reports/motorola/edge-60-pro/changes/permission-changes.json) e no histórico de mudanças do Edge 60 Fusion ([`reports/motorola/edge-60-fusion/changes/change-log.md`](../reports/motorola/edge-60-fusion/changes/change-log.md)).
 * Nenhuma ferramenta automatizada do repositório (`debloat.sh` ou similar) executa ou executará tais comandos automaticamente.

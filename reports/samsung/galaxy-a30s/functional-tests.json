@@ -1,0 +1,56 @@
+{
+  "device": "Samsung Galaxy A30s (SM-A307GT)",
+  "homologation_level": 3,
+  "audit_date": "2026-11-04",
+  "tests": [
+    {
+      "test_name": "Telefonia Celular e Chamadas de Voz",
+      "status": "pass",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Chamadas de voz ativas e receptivas funcionando normalmente."
+    },
+    {
+      "test_name": "Envio e Recebimento de SMS",
+      "status": "pass",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Mensagens SMS recebidas e enviadas sem falhas."
+    },
+    {
+      "test_name": "Conectividade de Dados Móveis e Wi-Fi",
+      "status": "pass",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Alternância entre redes 4G LTE e Wi-Fi estável sem interrupções."
+    },
+    {
+      "test_name": "Autenticação Biométrica e Sensores",
+      "status": "pass",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Sensor de impressão digital sob o display operando normalmente."
+    },
+    {
+      "test_name": "Aplicativos Bancários e Transações Pix",
+      "status": "pass",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Apps bancários validados sem detecção de anomalias ou alertas de integridade."
+    },
+    {
+      "test_name": "Serviço de Impressão / Salvar como PDF",
+      "status": "fail",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Regressão documentada: a desativação do com.android.printspooler removeu a capacidade de gerar PDF no visualizador nativo."
+    },
+    {
+      "test_name": "Ciclo Controlado de Bateria em 24 Horas (não medido / pendente)",
+      "status": "not_tested",
+      "date": "2026-11-04",
+      "tester": "Luís Martins",
+      "observation": "Consumo de bateria não aferido sob protocolo padronizado contínuo de 24h."
+    }
+  ]
+}

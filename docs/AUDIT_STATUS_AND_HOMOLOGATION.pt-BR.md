@@ -33,6 +33,45 @@ Este padrão separa a publicação de evidências da validação funcional e da 
 | Revisor/data | Nome ou pseudônimo / data |
 | Escopo aprovado e exclusões | Lista explícita |
 
+## Estrutura canônica de arquivos por nível de homologação
+
+Cada relatório de dispositivo em `reports/<fabricante>/<modelo>/` segue uma organização canônica imposta pelo validador do repositório:
+
+```
+reports/<fabricante>/<modelo>/
+  README.md, README.en.md                       # Apresentação do dispositivo e escopo
+  audit.md, audit.en.md                         # Auditoria técnica detalhada
+  comparison-report.md, comparison-report.en.md # Relatório comparativo antes/depois
+  metrics.json                                  # Métricas estruturadas e status
+  functional-tests.json                         # Matriz de testes funcionais
+  before/                                       # inventory.json, packages-*.txt
+  after/                                        # inventory.json, packages-*.txt
+  changes/                                      # change-log(.en).md, disabled-packages.txt, removed-packages.txt
+  evidence/                                     # Registros brutos e screenshots sanitizados
+```
+
+### Arquivos obrigatórios por nível
+
+- **Nível 1 (Inventário documentado):**
+  - `README.md`, `README.en.md`
+  - `audit.md`, `audit.en.md`
+  - `metrics.json`
+  - `before/inventory.json` (ou inventário documentado em `before/`)
+  - `functional-tests.json` (com testes funcionais marcados como `not_tested` / pendentes)
+- **Nível 2 (Auditoria revisada / forense):**
+  - Todos os arquivos do Nível 1
+  - `comparison-report.md`, `comparison-report.en.md`
+  - `after/inventory.json`
+  - `changes/change-log.md`, `changes/change-log.en.md`
+  - Se houver `changes/`: `disabled-packages.txt` e `removed-packages.txt`
+- **Nível 3 (Validação funcional concluída):**
+  - Todos os arquivos do Nível 2
+  - `functional-tests.json` com resultados reais executados (voz, SMS, biometria)
+- **Nível 4 (Script homologado):**
+  - Todos os arquivos do Nível 3
+  - Script automatizado de aplicação e procedimento de rollback verificados
+  - Revisor independente identificado e hash SHA-256 do script
+
 ## Traduções
 
 Versão em inglês: [Audit status and homologation levels](AUDIT_STATUS_AND_HOMOLOGATION.md).

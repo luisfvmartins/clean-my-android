@@ -35,10 +35,10 @@ A estrutura pode ser simplificada quando uma coleta não estiver disponível. N�
 ```text
 reports/<fabricante>/<modelo>/
 ├── README.md                  # Sumário e status da auditoria
-├── auditoria.md               # Método, evidências, análise e limitações
+├── audit.md               # Método, evidências, análise e limitações
 ├── inventario-antes.json      # Inventário anterior às alterações
 ├── inventario-depois.json     # Inventário posterior às alterações
-├── comparativo.json           # Métricas antes/depois e condições de coleta
+├── metrics.json           # Métricas antes/depois e condições de coleta
 ├── pacotes-desativados.txt    # Registro do estado final, se aplicável
 ├── permissoes-alteradas.json  # Alterações documentadas, se aplicável
 └── evidencias/

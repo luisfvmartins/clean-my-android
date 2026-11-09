@@ -33,6 +33,45 @@ This standard separates the publication of evidence from functional validation a
 | Reviewer/date | Name or pseudonym / date |
 | Approved scope and exclusions | Explicit list |
 
+## Canonical file layout by homologation level
+
+Each device directory under `reports/<manufacturer>/<model>/` follows a canonical file layout enforced by the repository validator:
+
+```
+reports/<manufacturer>/<model>/
+  README.md, README.en.md                       # Device presentation and scope
+  audit.md, audit.en.md                         # Detailed technical audit
+  comparison-report.md, comparison-report.en.md # Before/after comparison report
+  metrics.json                                  # Structured metrics and status
+  functional-tests.json                         # Functional test matrix
+  before/                                       # inventory.json, packages-*.txt
+  after/                                        # inventory.json, packages-*.txt
+  changes/                                      # change-log(.en).md, disabled-packages.txt, removed-packages.txt
+  evidence/                                     # Raw records and sanitized screenshots
+```
+
+### Required files per level
+
+- **Level 1 (Inventory documented):**
+  - `README.md`, `README.en.md`
+  - `audit.md`, `audit.en.md`
+  - `metrics.json`
+  - `before/inventory.json` (or textual inventory under `before/`)
+  - `functional-tests.json` (with functional tests marked as `not_tested` / pending)
+- **Level 2 (Audit reviewed):**
+  - All files from Level 1
+  - `comparison-report.md`, `comparison-report.en.md`
+  - `after/inventory.json`
+  - `changes/change-log.md`, `changes/change-log.en.md`
+  - If `changes/` exists: `disabled-packages.txt` and `removed-packages.txt`
+- **Level 3 (Functional validation completed):**
+  - All files from Level 2
+  - `functional-tests.json` with real executed outcomes (voice calls, SMS, biometrics)
+- **Level 4 (Script homologated):**
+  - All files from Level 3
+  - Automated application script and rollback procedure verified
+  - Identified independent reviewer and script SHA-256 hash
+
 ## Translations
 
 Portuguese version: [Níveis de status e homologação](AUDIT_STATUS_AND_HOMOLOGATION.pt-BR.md).

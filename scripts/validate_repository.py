@@ -352,6 +352,68 @@ def validate_homologation_levels_and_evidence() -> None:
             if not isinstance(reviewed_at, str) or not reviewed_at.strip():
                 fail(f"{device_id}: Nível 4 exige reviewed_at.")
 
+        # Validação de layout canônico de arquivos por nível de homologação (PT-5)
+        report_path = device.get("report")
+        if report_path:
+            dev_dir = (ROOT / report_path).parent
+
+            # Nível 1: README, README.en, audit, audit.en, metrics.json, functional-tests.json, before/
+            level_1_files = [
+                "README.md",
+                "README.en.md",
+                "audit.md",
+                "audit.en.md",
+                "metrics.json",
+                "functional-tests.json",
+            ]
+            for f_name in level_1_files:
+                checks += 1
+                f_path = dev_dir / f_name
+                if not f_path.is_file() or f_path.stat().st_size == 0:
+                    fail(f"{device_id}: arquivo canônico obrigatório de Nível 1 ausente ou vazio: {f_name}")
+
+            checks += 1
+            inv_candidates = [
+                dev_dir / "before/inventory.json",
+                dev_dir / "before/packages.txt",
+                dev_dir / "before/packages-initial.txt",
+            ]
+            if not any(c.is_file() for c in inv_candidates):
+                fail(f"{device_id}: inventário canônico de Nível 1 ausente em before/")
+
+            # Nível 2+: comparison-report(.en).md, changes/change-log(.en).md, after/
+            if level >= 2:
+                level_2_files = [
+                    "comparison-report.md",
+                    "comparison-report.en.md",
+                    "changes/change-log.md",
+                    "changes/change-log.en.md",
+                ]
+                for f_name in level_2_files:
+                    checks += 1
+                    f_path = dev_dir / f_name
+                    if not f_path.is_file() or f_path.stat().st_size == 0:
+                        fail(f"{device_id}: arquivo canônico obrigatório de Nível 2 ausente ou vazio: {f_name}")
+
+                checks += 1
+                after_candidates = [
+                    dev_dir / "after/inventory.json",
+                    dev_dir / "after/packages.txt",
+                    dev_dir / "after/packages-final.txt",
+                ]
+                if not any(c.is_file() for c in after_candidates):
+                    fail(f"{device_id}: inventário canônico de Nível 2 ausente em after/")
+
+                if (dev_dir / "changes").is_dir():
+                    for f_name in [
+                        "changes/disabled-packages.txt",
+                        "changes/removed-packages.txt",
+                    ]:
+                        checks += 1
+                        f_path = dev_dir / f_name
+                        if not f_path.is_file():
+                            fail(f"{device_id}: arquivo canônico de mudanças ausente: {f_name}")
+
 
 
 def validate_adb_script_tests() -> None:

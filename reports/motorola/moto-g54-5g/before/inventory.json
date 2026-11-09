@@ -1,0 +1,18 @@
+{
+  "device": "Motorola Moto G54 5G (XT2343-1)",
+  "codename": "cancunf",
+  "android_version": "15",
+  "homologation_level": 1,
+  "component_count": 462,
+  "public_components_count": 433,
+  "raw_inventory_reference": "data/inventory_moto_g54.json",
+  "audit_batches": [
+    "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+    "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+    "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
+    "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.md",
+    "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.md",
+    "docs/auditorias/moto-g54/lote-07-overlays-motorola-operadoras-esim.md",
+    "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.md"
+  ]
+}

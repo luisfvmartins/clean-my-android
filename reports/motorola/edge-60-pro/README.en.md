@@ -17,7 +17,7 @@ The debloating and sandboxing session was performed through **Android Debug Brid
 > **Validation status: Pending.** This report reflects evidence collected during the ADB session. Canonical Android version confirmation through `getprop ro.build.version.release` and functional tests for voice calls, SMS, biometrics, banking applications, and Play Integrity remain pending in-person validation by the device owner.
 
 > [!CAUTION]
-> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components. This does not confirm the device's current state or prove a functional failure, but it conflicts with the project's current safety guardrails. This is a historical record, not a recommendation. **Do not reuse this disable list on other devices.** The actual state must be checked on-device; any restoration requires individual assessment and in-person validation of calls, SMS, SIM, emergency, Bluetooth, and contacts.
+> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `changes/disabled-packages.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components. This does not confirm the device's current state or prove a functional failure, but it conflicts with the project's current safety guardrails. This is a historical record, not a recommendation. **Do not reuse this disable list on other devices.** The actual state must be checked on-device; any restoration requires individual assessment and in-person validation of calls, SMS, SIM, emergency, Bluetooth, and contacts.
 
 ### Reported actions and observations
 
@@ -38,15 +38,15 @@ The report includes historical operational details. Those details are **not an e
 
 ## Files
 
-- [Full technical audit (English summary)](auditoria.en.md) · [Original full report (Portuguese)](README.md)
-- [Technical audit details (English summary)](auditoria.en.md) · [Original detailed audit (Portuguese)](auditoria.md)
-- [Initial package inventory](inventario-antes.json)
-- [Final package inventory](inventario-depois.json)
-- [Disabled packages](pacotes-desativados.txt)
-- [Packages uninstalled for user 0](pacotes-desinstalados.txt)
-- [Permission and AppOps changes](permissoes-alteradas.json)
-- [Metrics and test status](comparativo.json)
-- [Evidence provenance and pending collection (English)](evidencias/README.en.md) · [Portuguese source](evidencias/README.md)
+- [Full technical audit (English summary)](audit.en.md) · [Original full report (Portuguese)](README.md)
+- [Technical audit details (English summary)](audit.en.md) · [Original detailed audit (Portuguese)](audit.md)
+- [Initial package inventory](before/inventory.json)
+- [Final package inventory](after/inventory.json)
+- [Disabled packages](changes/disabled-packages.txt)
+- [Packages uninstalled for user 0](changes/removed-packages.txt)
+- [Permission and AppOps changes](changes/permission-changes.json)
+- [Metrics and test status](metrics.json)
+- [Evidence provenance and pending collection (English)](evidence/README.en.md) · [Portuguese source](evidence/README.md)
 
 ## Safety and limitations
 
@@ -62,4 +62,4 @@ The report includes historical operational details. Those details are **not an e
 
 ## Historical summary
 
-- [Historical report — English summary](historical-summary.en.md) · [Historical summary (Portuguese)](historical-summary.pt-BR.md)
+- [Historical report — English summary](comparison-report.en.md) · [Historical summary (Portuguese)](comparison-report.md)

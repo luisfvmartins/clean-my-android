@@ -19,7 +19,7 @@
     {
       "pattern_type": "ipv4_version_string",
       "value": "10.0.16.64",
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "context": "version_name",
       "justification": "Número de versão do aplicativo de câmera Motorola no inventário inicial."
     },

@@ -14,7 +14,7 @@
       "variation": "+2.7 GB (+58.7% de RAM disponível)",
       "method": "dumpsys meminfo",
       "evidence": [
-        "reports/motorola/edge-60-pro/auditoria.md"
+        "reports/motorola/edge-60-pro/audit.md"
       ],
       "limitations": "Medido via dumpsys meminfo no log de auditoria (Passo 110 vs Passo 384); variação sujeita ao gerenciamento de memória do kernel."
     },
@@ -27,7 +27,7 @@
       "variation": "~4 GB de aumento no espaço livre de /data (ganho agregado decorrente da remoção de atualizações em /data/app e limpeza de caches; ganho individual por app não medido)",
       "method": "df -h /data",
       "evidence": [
-        "reports/motorola/edge-60-pro/auditoria.md"
+        "reports/motorola/edge-60-pro/audit.md"
       ],
       "limitations": "df -h /data observado no Passo 398; ganho individual por pacote não foi medido isoladamente."
     },
@@ -40,9 +40,9 @@
       "variation": "-9 pacotes desinstalados para o usuário 0 (7 de sistema com installed=false + 2 de terceiros purgados)",
       "method": "pm list packages -f",
       "evidence": [
-        "reports/motorola/edge-60-pro/inventario-antes.json",
-        "reports/motorola/edge-60-pro/inventario-depois.json",
-        "reports/motorola/edge-60-pro/pacotes-desinstalados.txt"
+        "reports/motorola/edge-60-pro/before/inventory.json",
+        "reports/motorola/edge-60-pro/after/inventory.json",
+        "reports/motorola/edge-60-pro/changes/removed-packages.txt"
       ],
       "limitations": "Contagem obtida via pm list packages; APKs de sistema desinstalados para o Usuário 0 permanecem no firmware."
     },
@@ -55,7 +55,7 @@
       "variation": "-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)",
       "method": "pm list packages -e",
       "evidence": [
-        "reports/motorola/edge-60-pro/inventario-depois.json"
+        "reports/motorola/edge-60-pro/after/inventory.json"
       ],
       "limitations": "Contagem de pacotes habilitados no Usuário 0 pós-procedimento."
     },
@@ -68,7 +68,7 @@
       "variation": "+184 pacotes suspensos via ADB",
       "method": "pm list packages -d",
       "evidence": [
-        "reports/motorola/edge-60-pro/pacotes-desativados.txt"
+        "reports/motorola/edge-60-pro/changes/disabled-packages.txt"
       ],
       "limitations": "Desativação reversível via pm disable-user para o Usuário 0."
     },
@@ -81,8 +81,8 @@
       "variation": "Suspensão dos daemons comerciais monitorados",
       "method": "dumpsys meminfo e pm disable-user",
       "evidence": [
-        "reports/motorola/edge-60-pro/auditoria.md",
-        "reports/motorola/edge-60-pro/pacotes-desativados.txt"
+        "reports/motorola/edge-60-pro/audit.md",
+        "reports/motorola/edge-60-pro/changes/disabled-packages.txt"
       ],
       "limitations": "Monitoramento baseado em RSS via dumpsys meminfo antes e após desativação dos pacotes."
     },
@@ -95,7 +95,7 @@
       "variation": "-873 MB de carga contínua",
       "method": "dumpsys meminfo",
       "evidence": [
-        "reports/motorola/edge-60-pro/auditoria.md"
+        "reports/motorola/edge-60-pro/audit.md"
       ],
       "limitations": "dumpsys meminfo Passo 110 vs Passo 384."
     },
@@ -108,7 +108,7 @@
       "variation": "-269 MB de processos duplicados",
       "method": "am stop-user -f 11 e dumpsys meminfo",
       "evidence": [
-        "reports/motorola/edge-60-pro/auditoria.md"
+        "reports/motorola/edge-60-pro/audit.md"
       ],
       "limitations": "Comportamento de persistência de perfis secundários após reinicialização requer verificação adicional."
     },
@@ -121,7 +121,7 @@
       "variation": "-4°C a -7°C (redução térmica observada)",
       "method": "dumpsys battery",
       "evidence": [
-        "reports/motorola/edge-60-pro/auditoria.md"
+        "reports/motorola/edge-60-pro/audit.md"
       ],
       "limitations": "Leitura instantânea de sensor térmico via dumpsys battery; não reflete teste sob ciclo contínuo de estresse."
     },

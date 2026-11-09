@@ -61,7 +61,7 @@ The procedure was conducted entirely without root privileges, using the official
 - [📝 Detailed Change Log (`changes/change-log.md`)](changes/change-log.md): Record of every modified package, reason, risk, and rollback command.
 - [📋 Initial Inventory — 486 Packages (`before/packages-initial.txt`)](before/packages-initial.txt): Pre-debloat package list.
 - [📋 Final Inventory — 343 active packages / 344 listed (`after/packages-final.txt`)](after/packages-final.txt): Post-optimization active package list (includes inert system record for Gboard).
-- [🗄️ Structured JSON Metrics](comparativo.json): Repository-validated JSON indicator dataset.
+- [🗄️ Structured JSON Metrics](metrics.json): Repository-validated JSON indicator dataset.
 
 ---
 

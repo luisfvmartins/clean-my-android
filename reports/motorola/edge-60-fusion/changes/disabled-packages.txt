@@ -1,0 +1,91 @@
+# Pacotes Desativados para o Usuário 0 no Motorola Edge 60 Fusion (scout)
+# Procedimento executado via "pm disable-user --user 0" e "pm uninstall -k --user 0".
+# Total: 87 componentes mapeados no relatório de alterações.
+
+com.dti.motorola # Digital Turbine Ignite
+com.aura.oobe.motorola # ironSource AppCloud
+com.facebook.appmanager # Meta App Manager
+com.facebook.services # Meta Services
+com.facebook.system # Meta App Installer
+com.motorola.smartfeed # Moto Smart Feed
+com.motorola.appforecast # Moto App Forecast
+com.motorola.motocare # MotoCare Telemetry
+com.motorola.android.nativedropboxagent # Moto Native DropBox Agent
+com.motorola.dimo # Moto Dimo
+com.motorola.enterprise.adapter.service # Moto Enterprise Adapter
+com.google.android.setupwizard # Google Setup Wizard
+com.google.android.feedback # Google Feedback
+com.google.android.partnersetup # Google Partner Setup
+com.google.android.apps.wellbeing # Google Wellbeing
+com.motorola.wifi.motowifimetrics # Moto Wi-Fi Metrics
+com.motorola.bach.modemstats # Moto Modem Stats
+com.motorola.bug2go # Moto Bug2Go
+com.motorola.help.extlog # Moto Help ExtLog
+com.motorola.playautoinstallext # Moto PlayAutoInstall Ext
+android.autoinstalls.config.motorola.layout # Moto AutoInstall Layout
+com.motorola.omadm.service # Moto OMA-DM Service
+com.motorola.easyprefix # Moto EasyPrefix
+com.motorola.aicore # Moto AICore
+com.motorola.aiservices # Moto AI Services
+com.motorola.createwithai # Moto Create with AI
+com.motorola.spaces # Moto Spaces
+com.motorola.demo # Moto Demo
+com.motorola.attvowifi # AT&T VoWiFi Service
+com.motorola.vzw.pco.extensions.pcoreceiver # Verizon PCO Receiver
+com.motorola.motocit # MotoCIT Hardware Test
+com.mediatek.apmonitor # MediaTek AP Monitor
+com.google.android.apps.chromecast.app # Google Home
+com.google.android.projection.gearhead # Android Auto
+com.google.android.apps.magazines # Google Notícias
+com.google.android.apps.tachyon # Google Meet
+com.google.android.apps.subscriptions.red # Google One
+com.google.android.apps.restore # Google Restore
+com.google.android.apps.turbo # Device Health Services
+com.google.android.printservice.recommendation # Print Service Recommendation
+com.google.android.onetimeinitializer # One Time Initializer
+com.hitappsgames.wordsolitaire # Word Solitaire
+com.instagram.barcelona # Threads
+com.motorola.mobiledesktop.core # Moto Ready For / Desktop Core
+com.motorola.timeweatherwidget # Moto Weather Widget
+com.motorola.contacts.preloadcontacts # Moto Preload Contacts
+com.motorola.lifetimedata # Moto Lifetime Data
+com.motorola.livewallpaper3 # Moto Live Wallpaper 3
+com.motorola.iotservice # Moto IoT Service
+com.google.ambient.streaming # Google Ambient Streaming
+com.google.android.videos # Google TV
+com.google.android.apps.youtube.music # YouTube Music
+com.google.ar.core # Google Play Services for AR
+com.google.android.apps.nbu.files # Files by Google
+com.google.android.calendar # Google Agenda
+com.google.android.deskclock # Relógio do Google
+com.google.android.calculator # Calculadora Google
+com.google.android.contacts # Contatos Google (App)
+com.motorola.audiorecorder # Gravador de Voz Motorola
+com.google.android.dialer # Telefone Google (Dialer)
+com.google.android.apps.messaging # Google Mensagens (SMS)
+com.google.android.gms.location.history # Histórico de Localização Google
+com.android.hotwordenrollment.okgoogle # Hotword "Ok Google"
+com.android.hotwordenrollment.xgoogle # Hotword "Hey Google"
+com.google.android.ondevicepersonalization.services # OnDevicePersonalization
+com.google.android.federatedcompute # Federated Compute
+com.google.mainline.telemetry # Mainline Telemetry
+com.google.mainline.adservices # Mainline AdServices
+com.motorola.appdirectedsmsproxy # App-Directed SMS Proxy
+com.motorola.android.provisioning # OMA Provisioning
+com.motorola.enterprise.service # Lenovo ThinkUEM MDM
+com.motorola.mykey # ThinkShield MyKey
+com.motorola.account # Motorola Account
+com.motorola.systemui.desk # Moto Desktop TaskBar
+com.motorola.aitranslation # Moto Live Translation Stub
+com.motorola.android.providers.chromehomepage # Moto Chrome Homepage Provider
+com.motorola.setup # Moto SetupWizard Ext
+com.motorola.gesture # Moto Gesture Tutorial
+com.mediatek.op12.ims # MediaTek Verizon OP12 IMS
+com.motorola.android.overlay.payjoy # Moto PayJoy Overlay
+com.motorola.android.networkstack.overlay.mcc460 # NetworkStack MCC460 Overlay
+com.motorola.android.launcher.overlay.retail.global # Launcher Overlay Retail Global
+com.motorola.android.systemui.overlay.att # SystemUI Overlay AT&T
+com.motorola.android.systemui.overlay.sprint # SystemUI Overlay Sprint
+com.motorola.android.systemui.overlay.tmo # SystemUI Overlay T-Mobile
+com.motorola.android.systemui.overlay.usc # SystemUI Overlay US Cellular
+com.motorola.android.systemui.overlay.vzw # SystemUI Overlay Verizon

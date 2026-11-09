@@ -63,7 +63,7 @@ A documentação deste dispositivo está organizada nos seguintes arquivos:
 - [📝 Registro Detalhado de Alterações (`changes/change-log.md`)](changes/change-log.md): Tabela detalhada de cada pacote modificado, justificativa, risco e método de reversão.
 - [📋 Inventário Inicial — 486 Pacotes (`before/packages-initial.txt`)](before/packages-initial.txt): Relação dos pacotes antes do debloat.
 - [📋 Inventário Final — 343 pacotes ativos / 344 listados (`after/packages-final.txt`)](after/packages-final.txt): Relação dos pacotes ativos pós-otimização (inclui registro de sistema inerte do Gboard).
-- [🗄️ Dados Estruturados em JSON](comparativo.json): Métricas estruturadas validadas pelo repositório.
+- [🗄️ Dados Estruturados em JSON](metrics.json): Métricas estruturadas validadas pelo repositório.
 
 ---
 

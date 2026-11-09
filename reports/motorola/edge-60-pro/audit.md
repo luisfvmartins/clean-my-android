@@ -12,7 +12,7 @@
 ---
 
 > [!CAUTION]
-> **Conflito com a lista de componentes protegidos:** uma revisão posterior encontrou 18 pacotes presentes tanto em `pacotes-desativados.txt` quanto em `data/protected_essential_packages.txt`. A interseção inclui componentes de discagem e SMS, emergência, SIM Toolkit, Bluetooth, contatos e serviços do sistema.
+> **Conflito com a lista de componentes protegidos:** uma revisão posterior encontrou 18 pacotes presentes tanto em `changes/disabled-packages.txt` quanto em `data/protected_essential_packages.txt`. A interseção inclui componentes de discagem e SMS, emergência, SIM Toolkit, Bluetooth, contatos e serviços do sistema.
 >
 > Isso não confirma o estado atual do aparelho nem comprova falha funcional, mas conflita com as barreiras de segurança atuais do projeto. O registro é histórico, não uma recomendação. **Não reproduza essa lista em outros aparelhos.** O estado real deve ser verificado no dispositivo; qualquer restauração exige avaliação individual e validação presencial de chamadas, SMS, SIM, emergência, Bluetooth e contatos.
 
@@ -110,7 +110,7 @@ A inspeção executada no Passo 73 (`adb shell pm list packages -f`) revelou um 
 | **Aplicativos de Usuário (Terceiros)** | **50** | Redes sociais, ferramentas, utilitários e apps bancários |
 | **Adwares, Bloatwares e Parceiros OOBE** | **11** | `com.dti.motorola`, `com.aura.oobe.motorola`, `com.glance.lockscreenM`, `com.taboola.mip`, `com.inmobi.weather` |
 | **Operadoras Estrangeiras & Parceiras** | **10** | Overlays e stubs: `com.motorola.attvowifi`, `de.telekom.tsc`, `com.orange.update` |
-| **Total de Pacotes Catalogados** | **501** | **Base completa registrada em `inventario-antes.json`** |
+| **Total de Pacotes Catalogados** | **501** | **Base completa registrada em `before/inventory.json`** |
 
 ### 3.2. Distribuição por Partições Físicas
 - **`/product`**: 206 pacotes (aplicativos Motorola, Google e overlays de personalização).
@@ -120,7 +120,7 @@ A inspeção executada no Passo 73 (`adb shell pm list packages -f`) revelou um 
 - **`/apex`**: 34 módulos conteinerizados do Project Mainline.
 - **`/vendor`**: 19 pacotes (HALs de hardware, overlays de display e suporte a chipsets).
 
-O inventário integral com os 501 pacotes, UIDs, caminhos físicos de arquivos APK e descrições preliminares está catalogado em [`inventario-antes.json`](inventario-antes.json).
+O inventário integral com os 501 pacotes, UIDs, caminhos físicos de arquivos APK e descrições preliminares está catalogado em [`before/inventory.json`](before/inventory.json).
 
 ---
 
@@ -163,7 +163,7 @@ A desativação em nível de usuário foi aplicada a **244 pacotes**, colocando-
 - `com.google.android.gms.location.history`: Histórico de localização da conta Google.
 - `com.android.hotwordenrollment.okgoogle` e `com.android.hotwordenrollment.xgoogle`: Módulos de escuta contínua de voz.
 
-A lista completa dos 244 pacotes desativados consta em [`pacotes-desativados.txt`](pacotes-desativados.txt).
+A lista completa dos 244 pacotes desativados consta em [`changes/disabled-packages.txt`](changes/disabled-packages.txt).
 
 ### 4.2. Desinstalação para o Usuário 0 (`pm uninstall --user 0`)
 A desinstalação para o Usuário 0 totalizou **9 pacotes**, divididos em duas naturezas técnicas distintas:
@@ -256,7 +256,7 @@ Para preservar os canais de push notification (FCM) e a infraestrutura de segura
   - Aplicativos testados: `third_party_package_08`, `third_party_package_37`, `third_party_package_29`, `third_party_package_02`, `third_party_package_33`.
   - Resultado: o comando `pm revoke` não retornou erro de sintaxe, porém a inspeção via `dumpsys package` no Passo 567 confirmou que o status permaneceu `granted=true`. Trata-se de uma permissão especial do framework que não responde ao `pm revoke` padrão de permissões runtime.
 
-O detalhamento estruturado de permissões e AppOps consta em [`permissoes-alteradas.json`](permissoes-alteradas.json).
+O detalhamento estruturado de permissões e AppOps consta em [`changes/permission-changes.json`](changes/permission-changes.json).
 
 ### 4.7. Encerramento de Perfis Secundários em Background
 A verificação via `pm list users` identificou o perfil secundário `User 11`, que mantinha uma **segunda instância completa do Google Play Services em execução (`PID 25050`, consumindo 269 MB RSS)**.
@@ -308,7 +308,7 @@ Nenhum componente essencial para o hardware ou estabilidade do sistema foi danif
 - **`com.dolby.daxservice`**: Mantido para estabilidade do subsistema de processamento de áudio.
 - **Pilha de Telefonia (`com.android.phone`, IMS, TelephonyProvider)**: Preservada para chamadas, SMS, dados móveis e serviços de emergência.
 
-O catálogo pós-debloat com a situação detalhada de cada pacote consta em [`inventario-depois.json`](inventario-depois.json).
+O catálogo pós-debloat com a situação detalhada de cada pacote consta em [`after/inventory.json`](after/inventory.json).
 
 ---
 
@@ -322,7 +322,7 @@ As medições comparativas foram realizadas com ferramentas de telemetria do And
 | **Memória RAM Ocupada** | ~7.5 GB ocupados | **~4.8 GB ocupados** | **-2.7 GB de consumo de RAM** | `dumpsys meminfo` Passo 110 vs Passo 384 |
 | **Armazenamento Livre (`/data`)** | 193 GB livres | **~197 GB livres** | **~4 GB recuperados** (ganho agregado da partição; não mensurado por app) | `df -h /data` Passo 398 |
 | **Total de Pacotes do Usuário** | 501 pacotes | **492 pacotes** | -9 pacotes desinstalados para Usuário 0 | `pm list packages -f` |
-| **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | **-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)** | `inventario-depois.json` (248 preservados/ativos, 244 desativados, 9 desinstalados) |
+| **Aplicativos Habilitados** | 441 pacotes ativos | **248 pacotes preservados/ativos** | **-193 pacotes ativos (184 desativados + 9 desinstalados para o Usuário 0)** | `after/inventory.json` (248 preservados/ativos, 244 desativados, 9 desinstalados) |
 | **Aplicativos Desativados** | 60 pacotes de fábrica | **244 pacotes desativados** | +184 pacotes congelados | `pm list packages -d` Passo 89 vs Passo 701 |
 | **Adwares Monitorados em RAM** | 5 daemons (~750 MB RSS) | **Processos finalizados** | Daemons paralisados na sessão | `dumpsys meminfo` (Glance, Taboola, InMobi) |
 | **Google QuickSearchBox em RAM** | 873 MB RSS | **0 MB (processo encerrado)** | **-873 MB de carga contínua** | `dumpsys meminfo` (Search + GoogleApp) |
@@ -332,7 +332,7 @@ As medições comparativas foram realizadas com ferramentas de telemetria do And
 
 > **Nota de reconciliação:** um resumo operacional anterior registrava 257 pacotes habilitados. Esse valor não coincide com os 248 pacotes classificados como preservados/ativos no inventário final. Como a saída bruta do comando não está publicada para conferência, 257 não é tratado como valor confirmado; o comparativo utiliza a classificação do inventário estruturado.
 
-O comparativo estruturado em formato JSON está catalogado em [`comparativo.json`](comparativo.json).
+O comparativo estruturado em formato JSON está catalogado em [`metrics.json`](metrics.json).
 
 ---
 
@@ -417,7 +417,7 @@ Caso o usuário venha a reativar o daemon de atualizações (`com.motorola.ccc.o
    - `reports/motorola-edge-60-pro/inventario-depois.json`
    - `reports/motorola-edge-60-pro/pacotes-desativados.txt`
    - `reports/motorola-edge-60-pro/pacotes-desinstalados.txt`
-   - `reports/motorola-edge-60-pro/permissoes-alteradas.json`
-   - `reports/motorola-edge-60-pro/comparativo.json`
-   - `reports/motorola-edge-60-pro/evidencias/README.md`
+   - `reports/motorola-edge-60-pro/changes/permission-changes.json`
+   - `reports/motorola-edge-60-pro/metrics.json`
+   - `reports/motorola-edge-60-pro/evidence/README.md`
    - `reports/README.md` (índice geral atualizado)

@@ -39,6 +39,6 @@ A later review found 18 package identifiers present both in the historical disab
 
 The source describes four layers: user-level package disablement, reverting selected system-app updates, permission / AppOps restrictions by UID, and background network policy with DNS filtering. The details are retained in the Portuguese legacy file and must be interpreted in light of the warning above.
 
-- [Portuguese legacy historical report](historical-summary.pt-BR.md)
+- [Portuguese legacy historical report](comparison-report.md)
 - [Current English report overview](README.en.md) · [Portuguese overview](README.md)
-- [Current English technical audit summary](auditoria.en.md) · [Portuguese technical audit](auditoria.md)
+- [Current English technical audit summary](audit.en.md) · [Portuguese technical audit](audit.md)

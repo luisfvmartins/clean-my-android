@@ -66,8 +66,8 @@
       "kind": "count",
       "status": "measured",
       "before": "0 pacotes modificados",
-      "after": "88 pacotes modificados (83 desativados/desinstalados para Usuário 0 + 5 bloqueados via AppOps/IME)",
-      "variation": "+88 pacotes alterados na sessão ADB",
+      "after": "92 pacotes modificados (87 desativados para Usuário 0 + 5 bloqueados via AppOps/IME)",
+      "variation": "+87 pacotes desativados e 5 bloqueados via AppOps/IME na sessão ADB",
       "method": "pm disable-user, pm uninstall --user 0 e cmd appops",
       "evidence": [
         "reports/motorola/edge-60-fusion/changes/change-log.md"

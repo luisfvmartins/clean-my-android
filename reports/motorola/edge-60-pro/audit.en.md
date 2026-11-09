@@ -12,7 +12,7 @@
 > This English document is a structured summary of the Portuguese technical audit, not a line-by-line translation of every operational detail. The Portuguese source remains authoritative for the complete historical record. All figures below are reproduced from that source and have not been independently re-measured by this translation.
 
 > [!CAUTION]
-> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `pacotes-desativados.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components.
+> **Conflict with the protected-components list:** a post-audit review found 18 packages listed in both `changes/disabled-packages.txt` and `data/protected_essential_packages.txt`. The overlap includes dialer and SMS, emergency, SIM Toolkit, Bluetooth, contacts, and system-support components.
 >
 > This does not confirm the device's current state or prove a functional failure, but it conflicts with the project's current safety guardrails. This is a historical record, not a recommendation. **Do not reuse this disable list on other devices.** The actual state must be checked on-device; any restoration requires individual assessment and in-person validation of calls, SMS, SIM, emergency, Bluetooth, and contacts.
 
@@ -103,7 +103,7 @@ The initial inspection (`adb shell pm list packages -f`, session step 73) report
 | Third-party user applications | 50 | Social, utility, and banking apps |
 | Adware, bloatware, and OOBE partners | 11 | Digital Turbine, Aura, Glance, Taboola, InMobi |
 | Foreign carriers and partners | 10 | Carrier overlays and stubs |
-| **Total** | **501** | Recorded in `inventario-antes.json` |
+| **Total** | **501** | Recorded in `before/inventory.json` |
 
 Reported partition distribution:
 - `/product`: 206 packages.
@@ -113,7 +113,7 @@ Reported partition distribution:
 - `/apex`: 34 Project Mainline modules.
 - `/vendor`: 19 packages.
 
-See [the initial inventory](inventario-antes.json) for package-level records.
+See [the initial inventory](before/inventory.json) for package-level records.
 
 ## 5. Recorded changes
 
@@ -126,7 +126,7 @@ The source report groups the disabled packages into:
 - Motorola/Lenovo diagnostics and telemetry (Customer Care Central notifications, MotoCare, external logs, Bug2Go, lifecycle/modem statistics, Smart Feed, Qira, Smart Connect/Ready For, and gesture services).
 - De-Googling changes requested by the device owner, including replacement of Chrome, Google Phone, and Google Messages with third-party browser and Fossify alternatives; other Google apps and services were disabled.
 
-The full list is in [pacotes-desativados.txt](pacotes-desativados.txt). These historical records are not a reusable package-removal recipe.
+The full list is in [pacotes-desativados.txt](changes/disabled-packages.txt). These historical records are not a reusable package-removal recipe.
 
 ### 5.2 Uninstallation for User 0
 
@@ -166,7 +166,7 @@ The source report records 13 runtime permission revocations, involving Motorola 
 
 It also records attempts to revoke `android.permission.ACCESS_LOCAL_NETWORK` from five applications. A later `dumpsys package` inspection still showed `granted=true`; the standard `pm revoke` command did not revoke this special permission.
 
-See [permissoes-alteradas.json](permissoes-alteradas.json) for the structured record.
+See [changes/permission-changes.json](changes/permission-changes.json) for the structured record.
 
 ### 5.7 Secondary user profiles
 
@@ -204,7 +204,7 @@ Components specifically identified as preserved include:
 - `com.dolby.daxservice`, for audio processing.
 - Core telephony, IMS, and TelephonyProvider components.
 
-The detailed final state is recorded in [inventario-depois.json](inventario-depois.json).
+The detailed final state is recorded in [inventario-depois.json](after/inventory.json).
 
 ## 7. Before/after metrics reported by the source
 
@@ -214,7 +214,7 @@ The detailed final state is recorded in [inventario-depois.json](inventario-depo
 | RAM in use | ~7.5 GB | ~4.8 GB | -2.7 GB | Same measurements |
 | Free `/data` storage | 193 GB | ~197 GB | ~4 GB aggregate | `df -h /data`, step 398 |
 | Installed package count | 501 | 492 | -9 for User 0 | `pm list packages -f` |
-| Enabled / preserved packages | 441 | 248 | -193 (184 disabled + 9 uninstalled for user 0) | `inventario-depois.json` (248 preserved/active, 244 disabled, 9 uninstalled) |
+| Enabled / preserved packages | 441 | 248 | -193 (184 disabled + 9 uninstalled for user 0) | `after/inventory.json` (248 preserved/active, 244 disabled, 9 uninstalled) |
 | Disabled packages | 60 factory-disabled | 244 | +184 | `pm list packages -d`, steps 89 and 701 |
 | Google QuickSearchBox RAM | 873 MB RSS | 0 MB reported | -873 MB | `dumpsys meminfo` |
 | Secondary profile processes | User 0 + User 11 | User 0 only | -269 MB RSS | `am stop-user -f 11` |
@@ -224,7 +224,7 @@ The detailed final state is recorded in [inventario-depois.json](inventario-depo
 
 These are historical measurements from the source report, not independently replicated tests. Memory and temperature vary with workload, uptime, ambient conditions, and measurement timing. They do not establish sustained performance or battery-life gains.
 
-See [comparativo.json](comparativo.json) for the structured comparison.
+See [metrics.json](metrics.json) for the structured comparison.
 
 ## 8. Functional validation status
 
@@ -283,19 +283,19 @@ The package reconciliation and action history are documented from ADB evidence. 
 
 ## Source files
 
-- [Original full technical report (Portuguese)](auditoria.md)
-- [Evidence provenance and collection guide (English)](evidencias/README.en.md)
-- [Initial inventory](inventario-antes.json)
-- [Final inventory](inventario-depois.json)
-- [Disabled packages](pacotes-desativados.txt)
-- [Uninstalled packages](pacotes-desinstalados.txt)
-- [Permission and AppOps changes](permissoes-alteradas.json)
-- [Before/after comparison](comparativo.json)
+- [Original full technical report (Portuguese)](audit.md)
+- [Evidence provenance and collection guide (English)](evidence/README.en.md)
+- [Initial inventory](before/inventory.json)
+- [Final inventory](after/inventory.json)
+- [Disabled packages](changes/disabled-packages.txt)
+- [Uninstalled packages](changes/removed-packages.txt)
+- [Permission and AppOps changes](changes/permission-changes.json)
+- [Before/after comparison](metrics.json)
 
 **This report is not a script approval or a universal debloating procedure.**
  Memory and temperature vary with workload, uptime, ambient conditions, and measurement timing. They do not establish sustained performance or battery-life gains.
 
-See [comparativo.json](comparativo.json) for the structured comparison.
+See [metrics.json](metrics.json) for the structured comparison.
 
 ## 8. Functional validation status
 
@@ -354,13 +354,13 @@ The package reconciliation and action history are documented from ADB evidence. 
 
 ## Source files
 
-- [Original full technical report (Portuguese)](auditoria.md)
-- [Evidence provenance and collection guide (English)](evidencias/README.en.md)
-- [Initial inventory](inventario-antes.json)
-- [Final inventory](inventario-depois.json)
-- [Disabled packages](pacotes-desativados.txt)
-- [Uninstalled packages](pacotes-desinstalados.txt)
-- [Permission and AppOps changes](permissoes-alteradas.json)
-- [Before/after comparison](comparativo.json)
+- [Original full technical report (Portuguese)](audit.md)
+- [Evidence provenance and collection guide (English)](evidence/README.en.md)
+- [Initial inventory](before/inventory.json)
+- [Final inventory](after/inventory.json)
+- [Disabled packages](changes/disabled-packages.txt)
+- [Uninstalled packages](changes/removed-packages.txt)
+- [Permission and AppOps changes](changes/permission-changes.json)
+- [Before/after comparison](metrics.json)
 
 **This report is not a script approval or a universal debloating procedure.**

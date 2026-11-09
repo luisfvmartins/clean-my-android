@@ -1,0 +1,6 @@
+# Pacotes Desinstalados para o Usuário 0 no Motorola Edge 60 Fusion (scout)
+#
+# No Motorola Edge 60 Fusion, todas as alterações foram executadas de forma reversível
+# através de "pm disable-user --user 0" e "pm uninstall -k --user 0" (preservando o APK de fábrica
+# na partição de sistema e os dados em /data), sem expurgo de aplicativos de terceiros.
+# A lista completa de pacotes desativados consta em disabled-packages.txt.

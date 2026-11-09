@@ -29,5 +29,5 @@ All approved interventions on the Galaxy A30s were strictly limited to disabling
 
 For Motorola Edge devices where surgical revocations of telemetry permissions or AppOps sandboxing were performed:
 * All interventions were executed **exclusively manually**, package by package, by the reviewing auditor.
-* The exact executed commands, revoked permissions, and technical justifications are recorded in [`reports/motorola/edge-60-pro/permissoes-alteradas.json`](../reports/motorola/edge-60-pro/permissoes-alteradas.json) and in the Edge 60 Fusion change log ([`reports/motorola/edge-60-fusion/changes/change-log.md`](../reports/motorola/edge-60-fusion/changes/change-log.md)).
+* The exact executed commands, revoked permissions, and technical justifications are recorded in [`reports/motorola/edge-60-pro/changes/permission-changes.json`](../reports/motorola/edge-60-pro/changes/permission-changes.json) and in the Edge 60 Fusion change log ([`reports/motorola/edge-60-fusion/changes/change-log.md`](../reports/motorola/edge-60-fusion/changes/change-log.md)).
 * No automated tool in the repository (`debloat.sh` or otherwise) executes or will execute these commands automatically.

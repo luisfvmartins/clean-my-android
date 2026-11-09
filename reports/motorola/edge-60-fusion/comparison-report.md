@@ -23,7 +23,7 @@ Todas as métricas aqui consolidadas derivam estritamente de dados coletados via
 | **Pacotes de Sistema Ativos** | 424 pacotes | 291 pacotes | -133 pacotes de sistema desativados/bloqueados | `pm list packages -s` |
 | **Pacotes de Terceiros / Usuário** | 62 pacotes | 52 pacotes comerciais + 12 apps FOSS (64 apps) | Desativação de pacotes comerciais; integração de suíte FOSS | `pm list packages -3` |
 | **Pacotes Desativados de Fábrica** | 67 pacotes | 67 pacotes | Inalterados (preservados inativos) | `pm list packages -d` |
-| **Pacotes Modificados via ADB** | 0 pacotes | 88 pacotes (83 via disable-user/uninstall + 5 via AppOps/IME) | +88 pacotes alterados cirurgicamente | Logs de execução em `changes/change-log.md` |
+| **Pacotes Modificados via ADB** | 0 pacotes | 92 pacotes (87 via disable-user/uninstall + 5 via AppOps/IME) | +87 pacotes desativados e 5 bloqueados via AppOps | Logs de execução em `changes/change-log.md` |
 | **Memória RAM Livre** | ~2.750 MB (aprox. 2.750.000 KB) | ~4.153 MB a 4.573 MB livres | **+1,40 GB a +1,82 GB livres** (+50.9% a +66.3% de margem) | `dumpsys meminfo` (linha de base vs Etapas 8, 12 e 14) |
 | **Memória RAM Usada (Used PSS)** | ~3.800 MB PSS | ~2.721 MB a 2.881 MB PSS | **-920 MB a -1.080 MB de processos residentes** | `dumpsys meminfo` agregado |
 | **Processos Ativos em Background** | 66 daemons/processos ativos | 39 processos em repouso | **-27 processos em execução contínua** | `ps -A` e `dumpsys activity processes` |

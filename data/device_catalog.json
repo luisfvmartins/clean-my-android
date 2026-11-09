@@ -26,15 +26,9 @@
       "readme_status_en": "Inventory published; see report for scope and limitations",
       "evidence": {
         "inventory": [
-          "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
-          "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
-          "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.md",
-          "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.md",
-          "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.md",
-          "docs/auditorias/moto-g54/lote-07-overlays-motorola-operadoras-esim.md",
-          "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.md"
+          "reports/motorola/moto-g54-5g/before/inventory.json"
         ],
-        "audit": "docs/AUDITORIA_MOTO_G54_5G.md"
+        "audit": "reports/motorola/moto-g54-5g/audit.md"
       },
       "codename": "cancunf",
       "apply_supported": true
@@ -59,14 +53,14 @@
       "report_en": "reports/motorola/edge-60-pro/README.en.md",
       "catalog": "reports/motorola/edge-60-pro/README.md",
       "readme_links_pt": "[Relatório e evidências](reports/motorola/edge-60-pro/README.md)",
-      "readme_links_en": "[Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/auditoria.en.md)",
+      "readme_links_en": "[Audit summary (English)](reports/motorola/edge-60-pro/README.en.md) · [Full technical audit (English)](reports/motorola/edge-60-pro/audit.en.md)",
       "readme_status_pt": "Validação funcional e confirmação de alguns dados pendentes",
       "readme_status_en": "Functional validation and confirmation of some data pending",
       "evidence": {
         "inventory": [
-          "reports/motorola/edge-60-pro/inventario-antes.json"
+          "reports/motorola/edge-60-pro/before/inventory.json"
         ],
-        "audit": "reports/motorola/edge-60-pro/auditoria.md"
+        "audit": "reports/motorola/edge-60-pro/audit.md"
       },
       "apply_supported": false
     },
@@ -98,7 +92,7 @@
           "reports/motorola/edge-60-fusion/before/inventory.json"
         ],
         "audit": "reports/motorola/edge-60-fusion/audit.md",
-        "functional_tests": "reports/motorola/edge-60-fusion/comparison-report.md"
+        "functional_tests": "reports/motorola/edge-60-fusion/functional-tests.json"
       },
       "apply_supported": false
     },
@@ -129,8 +123,8 @@
         "inventory": [
           "reports/samsung/galaxy-a30s/before/inventory.json"
         ],
-        "audit": "reports/samsung/galaxy-a30s/comparison-report.md",
-        "functional_tests": "reports/samsung/galaxy-a30s/comparison-report.md"
+        "audit": "reports/samsung/galaxy-a30s/audit.md",
+        "functional_tests": "reports/samsung/galaxy-a30s/functional-tests.json"
       },
       "apply_supported": false
     }

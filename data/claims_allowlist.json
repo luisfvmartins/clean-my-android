@@ -267,7 +267,7 @@
       "snippet": "| 290 | **Rastreamento do Sistema (System Tracing / Perfetto UI)** | `com.androi"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "path": "reports/motorola/edge-60-pro/audit.en.md",
       "line": 104,
       "term": "Adware",
       "category": "A",
@@ -275,7 +275,7 @@
       "snippet": "| Adware, bloatware, and OOBE partners | 11 | Digital Turbine, Aura, Glance, Tab"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "path": "reports/motorola/edge-60-pro/audit.en.md",
       "line": 125,
       "term": "adware",
       "category": "A",
@@ -283,7 +283,7 @@
       "snippet": "- Commercial adware, sponsored installers, and embedded advertising (Digital Tur"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "path": "reports/motorola/edge-60-pro/audit.en.md",
       "line": 134,
       "term": "adware",
       "category": "A",
@@ -291,7 +291,7 @@
       "snippet": "- Two third-party applications located under `/data/app`, reported as DT Ignite-"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.en.md",
+      "path": "reports/motorola/edge-60-pro/audit.en.md",
       "line": 141,
       "term": "adware",
       "category": "A",
@@ -299,7 +299,7 @@
       "snippet": "Updates stored under `/data/app` were reverted for ten selected system packages."
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "path": "reports/motorola/edge-60-pro/audit.md",
       "line": 111,
       "term": "Adware",
       "category": "A",
@@ -307,7 +307,7 @@
       "snippet": "| **Adwares, Bloatwares e Parceiros OOBE** | **11** | `com.dti.motorola`, `com.a"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "path": "reports/motorola/edge-60-pro/audit.md",
       "line": 134,
       "term": "Adware",
       "category": "A",
@@ -315,7 +315,7 @@
       "snippet": "#### A. Adwares, Instaladores Fantasmas e Publicidade Embutida:"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "path": "reports/motorola/edge-60-pro/audit.md",
       "line": 203,
       "term": "adware",
       "category": "A",
@@ -323,7 +323,7 @@
       "snippet": "> Durante a sessão, o espaço livre na partição `/data` aumentou de 193 GB para a"
     },
     {
-      "path": "reports/motorola/edge-60-pro/auditoria.md",
+      "path": "reports/motorola/edge-60-pro/audit.md",
       "line": 327,
       "term": "Adware",
       "category": "A",
@@ -331,7 +331,7 @@
       "snippet": "| **Adwares Monitorados em RAM** | 5 daemons (~750 MB RSS) | **Processos finaliz"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1738,
       "term": "Adware",
       "category": "A",
@@ -339,7 +339,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1745,
       "term": "Adware",
       "category": "A",
@@ -347,7 +347,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1757,
       "term": "Adware",
       "category": "A",
@@ -355,7 +355,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1865,
       "term": "Adware",
       "category": "A",
@@ -363,7 +363,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1870,
       "term": "Adware",
       "category": "A",
@@ -371,7 +371,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1877,
       "term": "Adware",
       "category": "A",
@@ -379,7 +379,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1894,
       "term": "Adware",
       "category": "A",
@@ -387,7 +387,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1906,
       "term": "Adware",
       "category": "A",
@@ -395,7 +395,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1918,
       "term": "Adware",
       "category": "A",
@@ -403,7 +403,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 1942,
       "term": "Adware",
       "category": "A",
@@ -411,7 +411,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 3310,
       "term": "Adware",
       "category": "A",
@@ -419,7 +419,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 3322,
       "term": "Adware",
       "category": "A",
@@ -427,7 +427,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 3329,
       "term": "Rastreamento",
       "category": "A",
@@ -435,7 +435,7 @@
       "snippet": "\"function_description\": \"Rastreamento publicitário disfarçado de widget meteorol"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 3346,
       "term": "Adware",
       "category": "A",
@@ -443,7 +443,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 3353,
       "term": "Adware",
       "category": "A",
@@ -451,7 +451,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 5741,
       "term": "Adware",
       "category": "A",
@@ -459,7 +459,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 5758,
       "term": "Adware",
       "category": "A",
@@ -467,7 +467,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-antes.json",
+      "path": "reports/motorola/edge-60-pro/before/inventory.json",
       "line": 5806,
       "term": "Adware",
       "category": "A",
@@ -475,7 +475,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1165,
       "term": "Adware",
       "category": "A",
@@ -483,7 +483,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1168,
       "term": "Adware",
       "category": "A",
@@ -491,7 +491,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1176,
       "term": "Adware",
       "category": "A",
@@ -499,7 +499,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1248,
       "term": "Adware",
       "category": "A",
@@ -507,7 +507,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1253,
       "term": "Adware",
       "category": "A",
@@ -515,7 +515,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1256,
       "term": "Adware",
       "category": "A",
@@ -523,7 +523,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1269,
       "term": "Adware",
       "category": "A",
@@ -531,7 +531,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1277,
       "term": "Adware",
       "category": "A",
@@ -539,7 +539,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1285,
       "term": "Adware",
       "category": "A",
@@ -547,7 +547,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 1301,
       "term": "Adware",
       "category": "A",
@@ -555,7 +555,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 2213,
       "term": "Adware",
       "category": "A",
@@ -563,7 +563,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 2221,
       "term": "Adware",
       "category": "A",
@@ -571,7 +571,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 2224,
       "term": "Rastreamento",
       "category": "A",
@@ -579,7 +579,7 @@
       "snippet": "\"function_description\": \"Rastreamento publicitário disfarçado de widget meteorol"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 2237,
       "term": "Adware",
       "category": "A",
@@ -587,7 +587,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 2240,
       "term": "Adware",
       "category": "A",
@@ -595,7 +595,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 3832,
       "term": "Adware",
       "category": "A",
@@ -603,7 +603,7 @@
       "snippet": "\"function_description\": \"Instalador automático e silencioso de aplicativos patro"
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 3845,
       "term": "Adware",
       "category": "A",
@@ -611,7 +611,7 @@
       "snippet": "\"vendor\": \"Adware / Parceiro\","
     },
     {
-      "path": "reports/motorola/edge-60-pro/inventario-depois.json",
+      "path": "reports/motorola/edge-60-pro/after/inventory.json",
       "line": 3877,
       "term": "Adware",
       "category": "A",

@@ -1,0 +1,42 @@
+{
+  "device": "Motorola Edge 60 Pro (XT2507-1)",
+  "homologation_level": 2,
+  "audit_date": "2026-11-06",
+  "tests": [
+    {
+      "test_name": "Telefonia Celular e Chamadas de Voz",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Pendente de validação presencial",
+      "observation": "Nível 2 de homologação: testes de estabilidade de telefonia em uso diário pendentes de confirmação."
+    },
+    {
+      "test_name": "Envio e Recebimento de SMS",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Pendente de validação presencial",
+      "observation": "Recepção de SMS e notificações de operadora pendentes de ciclo completo."
+    },
+    {
+      "test_name": "Autenticação Biométrica",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Pendente de validação presencial",
+      "observation": "Validação funcional detalhada pendente."
+    },
+    {
+      "test_name": "Aplicativos Bancários",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Pendente de validação presencial",
+      "observation": "Testes de integridade bancária e Pix pendentes no dispositivo físico."
+    },
+    {
+      "test_name": "Ciclo Controlado de Bateria em 24 Horas (não medido / pendente)",
+      "status": "not_tested",
+      "date": "2026-11-06",
+      "tester": "Pendente de validação presencial",
+      "observation": "Comportamento térmico e autonomia contínua não medidos."
+    }
+  ]
+}

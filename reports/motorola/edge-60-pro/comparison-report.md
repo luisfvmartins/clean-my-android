@@ -2,10 +2,10 @@
 
 > **Arquivo legado:** este resumo foi preservado da estrutura anterior à reorganização do repositório. Os arquivos de auditoria e evidências foram organizados no diretório canônico [`reports/motorola/edge-60-pro/`](README.md). A classificação continua **pendente de validação**; este documento não é uma lista de execução nem uma homologação.
 
-[![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](auditoria.md)
-[![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](auditoria.md)
-[![Android: Pendente de Confirmação](https://img.shields.io/badge/Android-Pendente%20de%20Confirma%C3%A7%C3%A3o-yellow?logo=android&logoColor=white)](auditoria.md)
-[![Status: Pendente de Validação](https://img.shields.io/badge/Auditoria-Pendente%20de%20Valida%C3%A7%C3%A3o-orange)](auditoria.md)
+[![Dispositivo: Motorola Edge 60 Pro](https://img.shields.io/badge/Dispositivo-Motorola%20Edge%2060%20Pro-001435?logo=motorola&logoColor=white)](audit.md)
+[![Codename: cybert](https://img.shields.io/badge/Codename-cybert-blue)](audit.md)
+[![Android: Pendente de Confirmação](https://img.shields.io/badge/Android-Pendente%20de%20Confirma%C3%A7%C3%A3o-yellow?logo=android&logoColor=white)](audit.md)
+[![Status: Pendente de Validação](https://img.shields.io/badge/Auditoria-Pendente%20de%20Valida%C3%A7%C3%A3o-orange)](audit.md)
 [![Clean My Android](https://img.shields.io/badge/Projeto-Clean%20My%20Android-green)](https://github.com/luisfvmartins/clean-my-android)
 
 Este diretório contém a documentação técnica integral, inventários de pacotes (antes e depois), métricas de desempenho e histórico detalhado das ações de debloat, sandboxing e privacidade executadas no smartphone **Motorola Edge 60 Pro (`XT2507-1`)**, codinome **`cybert`**, rodando a interface **Hello UI** (versão canônica do Android pendente de confirmação via `getprop`).
@@ -61,9 +61,9 @@ reports/motorola/edge-60-pro/
 ├── inventario-depois.json     # Estado consolidado dos 501 componentes pós-debloat
 ├── pacotes-desativados.txt    # Lista nominal dos 244 pacotes desativados
 ├── pacotes-desinstalados.txt  # Lista dos 9 pacotes desinstalados e notas de atualização
-├── permissoes-alteradas.json  # Detalhamento de revogações, AppOps e Netpolicy
-├── comparativo.json          # Métricas técnicas de desempenho e status de testes em JSON
-└── evidencias/
+├── changes/permission-changes.json  # Detalhamento de revogações, AppOps e Netpolicy
+├── metrics.json          # Métricas técnicas de desempenho e status de testes em JSON
+└── evidence/
     └── README.md              # Proveniência, comandos ADB e coleta complementar pendente
 ```
 
@@ -97,10 +97,10 @@ reports/motorola/edge-60-pro/
 
 ## 🔗 Navegação e Referências
 
-- 📖 [**Relatório Completo de Auditoria Forense (`auditoria.md`)**](auditoria.md)
-- 📋 [**Inventário Antes (`inventario-antes.json`)**](inventario-antes.json)
-- 📋 [**Inventário Depois (`inventario-depois.json`)**](inventario-depois.json)
-- ⚙️ [**Permissões e AppOps Alterados (`permissoes-alteradas.json`)**](permissoes-alteradas.json)
-- 📊 [**Comparativo de Desempenho (`comparativo.json`)**](comparativo.json)
-- 🔒 [**Evidências e Coleta Complementar (`evidencias/README.md`)**](evidencias/README.md)
+- 📖 [**Relatório Completo de Auditoria Forense (`audit.md`)**](audit.md)
+- 📋 [**Inventário Antes (`before/inventory.json`)**](before/inventory.json)
+- 📋 [**Inventário Depois (`after/inventory.json`)**](after/inventory.json)
+- ⚙️ [**Permissões e AppOps Alterados (`changes/permission-changes.json`)**](changes/permission-changes.json)
+- 📊 [**Comparativo de Desempenho (`metrics.json`)**](metrics.json)
+- 🔒 [**Evidências e Coleta Complementar (`evidence/README.md`)**](evidence/README.md)
 - 🏠 [**Voltar ao Catálogo Geral de Relatórios (`reports/README.md`)**](../../README.pt-BR.md)

@@ -3,7 +3,7 @@
 # NOTA TÉCNICA SOBRE DESINSTALAÇÃO NO ANDROID (SEM ROOT):
 # 1. Aplicativos de terceiros (/data/app): a desinstalação via "pm uninstall --user 0" remove completamente o APK e os dados do usuário.
 # 2. Pacotes de sistema (/system, /product): o comando "pm uninstall -k --user 0" marca o pacote como "installed=false" para o Usuário 0 e limpa seus dados/cache em /data, mas o APK original de fábrica permanece preservado na partição de sistema (somente leitura). Não há exclusão física da partição do sistema.
-# 3. Atualizações de apps de sistema: quando um app de sistema é atualizado pela Play Store, a nova versão fica gravada em /data/app. O comando "pm uninstall <pacote>" remove essa atualização e reverte o aplicativo à versão base de fábrica.
+# 3. Atualizações de apps de sistema: veja reverted-updates.txt para os 10 pacotes de sistema cujas atualizações da Play Store em /data/app foram revertidas à imagem base antes de serem desativados.
 # 4. Mensuração de armazenamento: o ganho total de espaço livre observado na partição /data durante a sessão foi de aproximadamente 4 GB em termos agregados (de 193 GB para ~197 GB). No entanto, o ganho individual por pacote NÃO foi mensurado separadamente. Valores individuais não devem ser somados.
 
 # ==============================================================================
@@ -26,20 +26,3 @@ com.motorola.genie # Módulo de telemetria de sugestões e feedback da Motorola.
 third_party_package_20 # Componente de terceiros; identificação específica omitida por privacidade.
 
 # Total de pacotes desinstalados para o Usuário 0: 9 pacotes (2 de terceiros + 7 de sistema)
-
-# ==============================================================================
-# 3. Atualizações de sistema removidas de /data/app (10 pacotes — reversão à base)
-# ==============================================================================
-# O comando "pm uninstall <pacote>" removeu as atualizações baixadas pela Play Store
-# em /data/app, revertendo o binário para a imagem base da ROM.
-# O ganho de armazenamento individual por pacote não foi mensurado independentemente.
-com.android.chrome # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.google.android.apps.maps # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.google.android.apps.photos # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.google.android.gm # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.google.android.googlequicksearchbox # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.google.android.inputmethod.latin # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.google.android.youtube # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.inmobi.weather # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.motorola.mobiledesktop # Reversão à versão base de fábrica (atualização em /data/app removida)
-com.motorola.smartfeed # Reversão à versão base de fábrica (atualização em /data/app removida)
