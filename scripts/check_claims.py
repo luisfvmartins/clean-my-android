@@ -447,6 +447,10 @@ def main() -> int:
     total_checks += c2
     all_errors.extend(errs2)
 
+    c3, errs3 = validate_ci_platform_claims(base_dir)
+    total_checks += c3
+    all_errors.extend(errs3)
+
     if all_errors:
         print(f"FALHA: {len(all_errors)} violação(ões) de alegações/métricas:")
         for err in all_errors:

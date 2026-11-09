@@ -1,7 +1,7 @@
 # Placar Técnico de Qualidade e Conformidade — Clean My Android
 
 - **Data da avaliação:** 09 de novembro de 2026
-- **Ambiente de execução:** Linux x86_64, Bash 5.2 (com testes em subshell Bash 3.2), Python 3.12, ShellCheck 0.10.0
+- **Ambiente de execução:** Linux Macmini (7.0.0-42-generic x86_64 Ubuntu 24.04), GNU Bash 5.2.21(1) (com build independente de Bash 3.2.0 para testes mock via `CMA_TEST_BASH`), Python 3.12.3, ShellCheck 0.10.0
 - **Metodologia:** Cada critério foi verificado por comando reproduzível. Critérios dependentes de intervenção física em hardware ou privilégios de governança externa estão formalmente identificados como **`bloqueado por humano`**, com referência direta à lista numerada da Seção 6.
 
 ---
@@ -15,7 +15,7 @@
 | 3 | Disciplina de documentação | 2 / 2 | **Atendido** | Nenhuma |
 | 4 | Consistência de layout | 1 / 1 | **Atendido** | Nenhuma |
 | 5 | Reprodutibilidade | 3 / 4 | **Parcial** | Item 3 (Execução física do protocolo de medição em hardware) |
-| 6 | Portabilidade | 4 / 4 | **Atendido** | Item 4 (Confirmação presencial em macOS com ADB físico) |
+| 6 | Portabilidade | 3 / 4 | **Parcial** | Item 1 (Workflow de matriz no CI), Item 4 (Confirmação presencial em macOS com ADB físico) |
 | 7 | Processo e governança | 4 / 6 | **Parcial** | Item 1 (Ruleset/Protection), Item 2 (Revisor externo), Item 8 (Tag v0.1.0) |
 | 8 | Verificabilidade técnica | 2 / 2 | **Atendido** | Nenhuma |
 | **TOTAL** | **Consolidado do Projeto** | **25 / 29 (86.2%)** | **Conforme com bloqueios externos documentados** | **8 itens catalogados na Seção 6** |
@@ -42,7 +42,7 @@
 |---|---|---|---|:---:|
 | Matriz Ubuntu + macOS no CI com Bash 3.2 nativo | Inspeção de `docs/PROPOSED_VALIDATE_WORKFLOW.yml` | Workflow de matriz pronto e fixado por SHA | 2026-11-09 | **Bloqueado por humano (Item 1)** |
 | ShellCheck automatizado no CI | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | Integrado ao workflow de validação proposto | 2026-11-09 | **Atendido** |
-| Cobertura de todos os códigos de saída de `debloat.sh` e `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (códigos 0, 1, 2, 3, 4, 5, 6, 7 cobertos) | 2026-11-09 | **Atendido** |
+| Cobertura de códigos de saída de `debloat.sh` e `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (códigos 0, 1, 2, 3, 4, 5, 6, 7 cobertos com mock ADB; alegação de cobertura de linhas removida pois kcov não está disponível) | 2026-11-09 | **Atendido** |
 | Todos os 44 pacotes protegidos testados individualmente | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5` | `Ran 1 test (44 sub-testes iterados) ... OK` | 2026-11-09 | **Atendido** |
 | Testes unitários do próprio validador e sanitização | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 26 tests in 0.52s ... OK` | 2026-11-09 | **Atendido** |
 
@@ -81,7 +81,7 @@
 | Critério | Comando de Verificação | Resumo da Saída | Data | Estado |
 |---|---|---|---|:---:|
 | Ausência de `mapfile` e comandos específicos GNU | `git grep -n "mapfile" scripts/` | Zero ocorrências encontradas | 2026-11-09 | **Atendido** |
-| Suporte a Linux e macOS | Testes executados em Bash nativo 3.2 e documentação em `docs/PLATFORMS.md` | `OK` nos testes; documentação completa | 2026-11-09 | **Atendido** |
+| Suporte a Linux e macOS | Testes executados sob binário Bash 3.2 local; workflow de matriz no CI pendente de aplicação humana | Testes mock ADB aprovados em Bash 3.2 (`docs/evidence-runs/2026-11-09/bash32-tests.txt`); macOS no CI pendente | 2026-11-09 | **Bloqueado por humano (Item 1)** |
 | Documentação de ressalvas de Windows/WSL2 | Inspeção de `docs/PLATFORMS.pt-BR.md` | Ressalvas de CRLF e encaminhamento USB documentadas | 2026-11-09 | **Atendido** |
 | Catálogo bilíngue centralizado para scripts | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_bilingual_cma_lang` | Mensagens em EN e PT validadas via `CMA_LANG` | 2026-11-09 | **Atendido** |
 

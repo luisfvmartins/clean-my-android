@@ -1,6 +1,7 @@
 """Testes dos scripts ADB com executável simulado; nenhum aparelho físico é acessado."""
 import json
 import os
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -153,8 +154,13 @@ class AdbScripts(unittest.TestCase):
         return json.loads(self.state_file.read_text())
 
     def run_script(self, script, *args, answer=None):
+        bash_bin = os.environ.get("CMA_TEST_BASH")
+        if not bash_bin:
+            bash_bin = shutil.which("bash") or "/bin/bash"
+        elif not os.path.isabs(bash_bin):
+            bash_bin = shutil.which(bash_bin) or bash_bin
         return subprocess.run(
-            ["/bin/bash", str(script), *args],
+            [bash_bin, str(script), *args],
             input=answer,
             text=True,
             capture_output=True,

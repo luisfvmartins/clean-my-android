@@ -1,7 +1,7 @@
 # Technical Quality and Compliance Scorecard — Clean My Android
 
 - **Evaluation date:** November 09, 2026
-- **Execution environment:** Linux x86_64, Bash 5.2 (with tests under Bash 3.2 subshell), Python 3.12, ShellCheck 0.10.0
+- **Execution environment:** Linux Macmini (7.0.0-42-generic x86_64 Ubuntu 24.04), GNU Bash 5.2.21(1) (with standalone Bash 3.2.0 build for mock testing via `CMA_TEST_BASH`), Python 3.12.3, ShellCheck 0.10.0
 - **Methodology:** Every criterion is proven by reproducible command execution. Items requiring physical device presence or external governance privileges are designated as **`blocked by human action`**, directly citing the numbered list in Section 6.
 
 ---
@@ -15,7 +15,7 @@
 | 3 | Documentation discipline | 2 / 2 | **Met** | None |
 | 4 | Layout consistency | 1 / 1 | **Met** | None |
 | 5 | Reproducibility | 3 / 4 | **Partial** | Item 3 (Execute physical hardware measurement protocol) |
-| 6 | Portability | 4 / 4 | **Met** | Item 4 (On-device confirmation on macOS with physical ADB) |
+| 6 | Portability | 3 / 4 | **Partial** | Item 1 (Matrix CI workflow), Item 4 (On-device confirmation on macOS with physical ADB) |
 | 7 | Process and governance | 4 / 6 | **Partial** | Item 1 (Ruleset/Protection), Item 2 (External reviewer), Item 8 (Tag v0.1.0) |
 | 8 | Technical verifiability | 2 / 2 | **Met** | None |
 | **TOTAL** | **Consolidated Project Score** | **25 / 29 (86.2%)** | **Fully compliant with documented external dependencies** | **8 items cataloged in Section 6** |
@@ -42,7 +42,7 @@
 |---|---|---|---|:---:|
 | Ubuntu + macOS CI matrix with native Bash 3.2 | Inspection of `docs/PROPOSED_VALIDATE_WORKFLOW.yml` | Matrix workflow ready and SHA-pinned | 2026-11-09 | **Blocked by human action (Item 1)** |
 | ShellCheck integrated into CI | `shellcheck -x scripts/*.sh scripts/lib/*.sh` | Integrated into proposed validation workflow | 2026-11-09 | **Met** |
-| Full exit-code test coverage for `debloat.sh` and `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (codes 0, 1, 2, 3, 4, 5, 6, 7 covered) | 2026-11-09 | **Met** |
+| Exit-code test coverage for `debloat.sh` and `restore.sh` | `python3 -m unittest discover -s tests -p 'test_adb_scripts.py'` | `Ran 44 tests ... OK` (codes 0, 1, 2, 3, 4, 5, 6, 7 covered with mock ADB; line coverage claim removed as kcov is unavailable) | 2026-11-09 | **Met** |
 | All 44 protected essential packages tested individually | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5` | `Ran 1 test (44 iterated subtests) ... OK` | 2026-11-09 | **Met** |
 | Unit tests for validator and sanitization engine | `python3 -m unittest tests.test_claims_and_metrics tests.test_sanitization tests.test_canonical_layout` | `Ran 26 tests in 0.52s ... OK` | 2026-11-09 | **Met** |
 
@@ -81,7 +81,7 @@
 | Criterion | Verification Command | Output Summary | Date | Status |
 |---|---|---|---|:---:|
 | Absence of `mapfile` and GNU-specific flags | `git grep -n "mapfile" scripts/` | Zero occurrences found | 2026-11-09 | **Met** |
-| Linux and macOS support | Tests run under Bash 3.2 subshell; documented in `docs/PLATFORMS.md` | `OK` across test suite; complete documentation | 2026-11-09 | **Met** |
+| Linux and macOS support | Tests run under Bash 3.2 binary locally; matrix CI workflow pending human application | Mock ADB tests passed under Bash 3.2 (`docs/evidence-runs/2026-11-09/bash32-tests.txt`); macOS in CI pending | 2026-11-09 | **Blocked by human action (Item 1)** |
 | Windows/WSL2 caveats documented | Inspection of `docs/PLATFORMS.md` | CRLF and USB passthrough caveats documented | 2026-11-09 | **Met** |
 | Centralized bilingual message catalog | `python3 -m unittest tests.test_adb_scripts.AdbScripts.test_bilingual_cma_lang` | EN and PT messages validated via `CMA_LANG` | 2026-11-09 | **Met** |
 

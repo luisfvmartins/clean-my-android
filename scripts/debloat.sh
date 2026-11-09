@@ -139,7 +139,8 @@ if [[ $APPLY_MODE -eq 0 ]]; then
   exit 0
 fi
 
-if [[ ! "$PACKAGE" =~ ^[A-Za-z0-9_]+(\.[A-Za-z0-9_]+)+$ ]]; then
+PKG_REGEX='^[A-Za-z0-9_]+(\.[A-Za-z0-9_]+)+$'
+if [[ ! "$PACKAGE" =~ $PKG_REGEX ]]; then
   cma_msg err_invalid_package "$PACKAGE" >&2
   exit 2
 fi

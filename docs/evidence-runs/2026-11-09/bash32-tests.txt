@@ -1,0 +1,80 @@
+=== BASH VERSION ===
+GNU bash, version 3.2.0(2)-release (x86_64-unknown-linux-gnu)
+Copyright (C) 2005 Free Software Foundation, Inc.
+
+=== TEST SUITE EXECUTION UNDER BASH 3.2 ===
+test_bilingual_cma_lang (test_adb_scripts.AdbScripts.test_bilingual_cma_lang) ... ok
+test_debloat_code_0_already_disabled (test_adb_scripts.AdbScripts.test_debloat_code_0_already_disabled) ... ok
+test_debloat_code_0_cancel (test_adb_scripts.AdbScripts.test_debloat_code_0_cancel) ... ok
+test_debloat_code_0_help (test_adb_scripts.AdbScripts.test_debloat_code_0_help) ... ok
+test_debloat_code_0_read_only (test_adb_scripts.AdbScripts.test_debloat_code_0_read_only) ... ok
+test_debloat_code_0_success_and_jsonl_log (test_adb_scripts.AdbScripts.test_debloat_code_0_success_and_jsonl_log) ... ok
+test_debloat_code_1_multiple_devices (test_adb_scripts.AdbScripts.test_debloat_code_1_multiple_devices) ... ok
+test_debloat_code_1_no_adb (test_adb_scripts.AdbScripts.test_debloat_code_1_no_adb) ... ok
+test_debloat_code_1_no_device (test_adb_scripts.AdbScripts.test_debloat_code_1_no_device) ... ok
+test_debloat_code_2_invalid_args (test_adb_scripts.AdbScripts.test_debloat_code_2_invalid_args) ... ok
+test_debloat_code_2_invalid_package_syntax (test_adb_scripts.AdbScripts.test_debloat_code_2_invalid_package_syntax) ... ok
+test_debloat_code_3_unsupported_device_or_android (test_adb_scripts.AdbScripts.test_debloat_code_3_unsupported_device_or_android) ... ok
+test_debloat_code_5_protected_package (test_adb_scripts.AdbScripts.test_debloat_code_5_protected_package) ... ok
+test_debloat_code_6_package_not_found (test_adb_scripts.AdbScripts.test_debloat_code_6_package_not_found) ... ok
+test_debloat_code_7_final_verification_failure (test_adb_scripts.AdbScripts.test_debloat_code_7_final_verification_failure) ... ok
+test_debloat_rejects_every_protected_package_with_code_5 (test_adb_scripts.AdbScripts.test_debloat_rejects_every_protected_package_with_code_5) ... ok
+test_exit_codes_documented_in_help (test_adb_scripts.AdbScripts.test_exit_codes_documented_in_help) ... ok
+test_restore_code_0_already_enabled (test_adb_scripts.AdbScripts.test_restore_code_0_already_enabled) ... ok
+test_restore_code_0_cancel (test_adb_scripts.AdbScripts.test_restore_code_0_cancel) ... ok
+test_restore_code_0_help (test_adb_scripts.AdbScripts.test_restore_code_0_help) ... ok
+test_restore_code_0_success_and_jsonl_log (test_adb_scripts.AdbScripts.test_restore_code_0_success_and_jsonl_log) ... ok
+test_restore_code_1_device_count (test_adb_scripts.AdbScripts.test_restore_code_1_device_count) ... ok
+test_restore_code_1_no_adb (test_adb_scripts.AdbScripts.test_restore_code_1_no_adb) ... ok
+test_restore_code_2_invalid_args (test_adb_scripts.AdbScripts.test_restore_code_2_invalid_args) ... ok
+test_restore_code_3_package_not_found (test_adb_scripts.AdbScripts.test_restore_code_3_package_not_found) ... ok
+test_restore_code_4_verification_failure (test_adb_scripts.AdbScripts.test_restore_code_4_verification_failure) ... ok
+test_snapshot_code_0_success (test_adb_scripts.AdbScripts.test_snapshot_code_0_success) ... ok
+test_snapshot_code_2_invalid_args (test_adb_scripts.AdbScripts.test_snapshot_code_2_invalid_args) ... ok
+test_snapshot_code_5_sanitization_leak_aborts (test_adb_scripts.AdbScripts.test_snapshot_code_5_sanitization_leak_aborts) ... ok
+test_current_repository_devices_satisfy_layout (test_canonical_layout.TestCanonicalLayout.test_current_repository_devices_satisfy_layout) ... ok
+test_missing_level_1_file_is_detected (test_canonical_layout.TestCanonicalLayout.test_missing_level_1_file_is_detected) ... ok
+test_script_referencing_snapshot_file_fails (test_change_lists.TestChangeListsAndDataSnapshots.test_script_referencing_snapshot_file_fails)
+(c) Um script que referencie o arquivo falha. ... ok
+test_snapshot_missing_notes_file_fails (test_change_lists.TestChangeListsAndDataSnapshots.test_snapshot_missing_notes_file_fails)
+Snapshot sem arquivo .notes.md falha. ... ok
+test_snapshot_with_protected_package_documented_in_notes_passes (test_change_lists.TestChangeListsAndDataSnapshots.test_snapshot_with_protected_package_documented_in_notes_passes)
+(a) Snapshot com protegido listado nas notas passa. ... ok
+test_snapshot_with_protected_package_missing_from_notes_fails (test_change_lists.TestChangeListsAndDataSnapshots.test_snapshot_with_protected_package_missing_from_notes_fails)
+(b) Protegido sem nota falha. ... ok
+test_allowlisted_term_passes (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_allowlisted_term_passes) ... ok
+test_canonical_comparativo_schema_passes (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_canonical_comparativo_schema_passes) ... ok
+test_count_metric_claiming_effect_fails (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_count_metric_claiming_effect_fails) ... ok
+test_measured_status_missing_evidence_fails (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_measured_status_missing_evidence_fails) ... ok
+test_old_comparativo_schema_fails (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_old_comparativo_schema_fails) ... ok
+test_qualified_term_with_marker_passes (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_qualified_term_with_marker_passes) ... ok
+test_term_with_evidence_link_passes (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_term_with_evidence_link_passes) ... ok
+test_unqualified_absolute_term_fails (test_claims_and_metrics.TestClaimsAndMetricsValidator.test_unqualified_absolute_term_fails) ... ok
+test_account_name_detection (test_sanitization.TestSanitization.test_account_name_detection) ... ok
+test_clean_file_passes (test_sanitization.TestSanitization.test_clean_file_passes) ... ok
+test_imei_detection (test_sanitization.TestSanitization.test_imei_detection) ... ok
+test_luhn_algorithm (test_sanitization.TestSanitization.test_luhn_algorithm) ... ok
+test_mac_detection (test_sanitization.TestSanitization.test_mac_detection) ... ok
+test_phone_number_detection (test_sanitization.TestSanitization.test_phone_number_detection) ... ok
+test_private_ip_and_allowlist (test_sanitization.TestSanitization.test_private_ip_and_allowlist) ... ok
+test_english_claim_qualified_passes (test_validator_hardening.TestValidatorHardening.test_english_claim_qualified_passes)
+Termo em inglês qualificado com marcador [evidence](url) ou (hypothesis) passa. ... ok
+test_english_claim_unqualified_fails (test_validator_hardening.TestValidatorHardening.test_english_claim_unqualified_fails)
+Termo em inglês não qualificado (e.g. 'verified', 'highly recommended') falha. ... ok
+test_scorecard_met_missing_evidence_artifact_fails (test_validator_hardening.TestValidatorHardening.test_scorecard_met_missing_evidence_artifact_fails)
+Linha Met sem artefato correspondente em docs/evidence-runs/** falha. ... ok
+test_scorecard_met_with_existing_evidence_artifact_passes (test_validator_hardening.TestValidatorHardening.test_scorecard_met_with_existing_evidence_artifact_passes)
+Linha Met com artefato existente em docs/evidence-runs/** passa. ... ok
+test_self_audit_with_agree_or_generic_source_fails (test_validator_hardening.TestValidatorHardening.test_self_audit_with_agree_or_generic_source_fails)
+Autoauditoria com 'Agree' ou fonte genérica falha. ... ok
+test_self_audit_with_grounded_verdict_and_evidence_path_passes (test_validator_hardening.TestValidatorHardening.test_self_audit_with_grounded_verdict_and_evidence_path_passes)
+Autoauditoria com veredito suportado e evidência em arquivo do repo passa. ... ok
+test_tested_in_ci_with_matching_active_workflow_passes (test_validator_hardening.TestValidatorHardening.test_tested_in_ci_with_matching_active_workflow_passes)
+'Tested in CI (ubuntu-latest)' passa se workflow ativo tem ubuntu-latest. ... ok
+test_tested_in_ci_without_os_in_active_workflows_fails (test_validator_hardening.TestValidatorHardening.test_tested_in_ci_without_os_in_active_workflows_fails)
+'Tested in CI (macos-latest)' falha se workflow ativo só tem ubuntu-latest. ... ok
+
+----------------------------------------------------------------------
+Ran 58 tests in 27.983s
+
+OK

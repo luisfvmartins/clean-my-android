@@ -9,10 +9,10 @@ Este documento detalha o suporte e os requisitos de ambiente operacional para ex
 | Sistema Operacional | Shell / Runtime | Status de Teste | Suporte Oficial | Notas de Portabilidade |
 |---|---|:---:|:---:|---|
 | **Linux (Ubuntu, Debian, Fedora, Arch, etc.)** | GNU Bash 4.x / 5.x | Testado em CI e local | **Suportado** | Execução padrão com suporte nativo a pipes e ferramentas POSIX. |
-| **macOS (Sonoma, Sequoia, etc.)** | Apple `/bin/bash` 3.2.57 | Não testado em CI ativo (matriz proposta) | Compatibilidade declarada (Bash 3.2) | Sintaxe adaptada para Bash 3.2. Sem dependência de `mapfile`, `declare -A` ou flags exclusivas GNU. Validação em CI aguarda ativação da matriz. |
+| **macOS (Sonoma, Sequoia, etc.)** | Apple `/bin/bash` 3.2.57 | Testado localmente com mock ADB (GNU bash 3.2); não testado em CI ativo | Compatibilidade declarada (Bash 3.2) | Sintaxe adaptada para Bash 3.2. Compatibilidade com Bash 3.2 [verificada com suíte mock ADB](evidence-runs/2026-11-09/bash32-tests.txt). Validação em CI aguarda ativação da matriz. |
 | **Windows 10 / 11 (WSL2)** | Bash no Ubuntu/Debian via WSL2 | Testado pela comunidade | **Recomendado para Windows** | Requer encaminhamento da porta ADB do host Windows para o WSL2 (`usbipd-win` ou ADB server compartilhado). |
-| **Windows 10 / 11 (Git Bash / MSYS2)** | Bash emulado no Windows | **Não testado em hardware físico** | Experimental / Comunitário | Requer atenção à conversão automática de caminhos de arquivos e quebras de linha CRLF. |
-| **Windows (PowerShell / CMD nativo)** | N/A | **Não suportado** | Não suportado | Os scripts utilizam sintaxe Bash e chamadas POSIX. Não há script `.bat` ou `.ps1` nativo. |
+| **Windows 10 / 11 (Git Bash / MSYS2)** | Bash emulado no Windows | Não testado | Experimental | Requer atenção à conversão automática de caminhos de arquivos e quebras de linha CRLF. |
+| **Windows (PowerShell / CMD nativo)** | N/A | Não testado | Não suportado | Os scripts utilizam sintaxe Bash e chamadas POSIX. Não há script `.bat` ou `.ps1` nativo. |
 
 ---
 
