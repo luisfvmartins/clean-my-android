@@ -809,6 +809,1502 @@
       "category": "A",
       "rationale": "Evidência bruta imutável de inventário dump do PackageManager/sistema.",
       "snippet": "\"function_probable\": \"Rastreamento, atualização de parceiros e telemetria\","
+    },
+    {
+      "path": "docs/AUDITORIA_MOTO_G54_5G.en.md",
+      "line": 57,
+      "term": "Verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Verified em documentação técnica ou tabela de componentes.",
+      "snippet": "| Root / bootloader | Not rooted; bootloader locked; Verified Boot green; dm-verity enforcing; SELin"
+    },
+    {
+      "path": "docs/AUDITORIA_MOTO_G54_5G.en.md",
+      "line": 148,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "An INTERNET permission or active connection does not establish improper collection. Telemetry attrib"
+    },
+    {
+      "path": "docs/AUDITORIA_MOTO_G54_5G.en.md",
+      "line": 156,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "3. Gather evidence for suspect packages; do not infer telemetry solely from permissions or flags."
+    },
+    {
+      "path": "docs/AUDITORIA_MOTO_G54_5G.en.md",
+      "line": 161,
+      "term": "confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "8. To re-enable a confirmed disabled package, the source documents pm enable --user 0 package.name. "
+    },
+    {
+      "path": "docs/AUDITORIA_MOTO_G54_5G.md",
+      "line": 56,
+      "term": "Verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Verified em documentação técnica ou tabela de componentes.",
+      "snippet": "| **Estado de Root e Bootloader** | **Sem Root** (`su` inexistente; `ro.debuggable=0`; `ro.secure=1`"
+    },
+    {
+      "path": "docs/AUDIT_STATUS_AND_HOMOLOGATION.md",
+      "line": 72,
+      "term": "verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo verified em documentação técnica ou tabela de componentes.",
+      "snippet": "- Automated application script and rollback procedure verified"
+    },
+    {
+      "path": "docs/CLASSIFICATION_METHOD.md",
+      "line": 51,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "- Memory footprint telemetry (`dumpsys meminfo <package>`)."
+    },
+    {
+      "path": "docs/CLASSIFICATION_METHOD.md",
+      "line": 68,
+      "term": "Verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Verified em documentação técnica ou tabela de componentes.",
+      "snippet": "| **`high`** | Verified via AOSP code (Level 1) or official OEM documentation (Level 2), corroborate"
+    },
+    {
+      "path": "docs/CLASSIFICATION_METHOD.md",
+      "line": 80,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "3. **Technical justification:** redundant telemetry, advertising, unnecessary resource consumption, "
+    },
+    {
+      "path": "docs/CLASSIFICATION_METHOD.md",
+      "line": 81,
+      "term": "Verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Verified em documentação técnica ou tabela de componentes.",
+      "snippet": "4. **Verified dependencies:** absence of impact on essential system services and confirmation of `sh"
+    },
+    {
+      "path": "docs/CLASSIFICATION_METHOD.md",
+      "line": 83,
+      "term": "confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "6. **Observed functional outcome:** behavior confirmed on the device after intervention (e.g. \"resid"
+    },
+    {
+      "path": "docs/DOS-AND-DONTS.md",
+      "line": 23,
+      "term": "verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo verified em documentação técnica ou tabela de componentes.",
+      "snippet": "- **Don't claim a command was executed or a result was verified without evidence.**"
+    },
+    {
+      "path": "docs/DOS-AND-DONTS.md",
+      "line": 30,
+      "term": "confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "- **Don't mark untested recommendations as confirmed or safe.**"
+    },
+    {
+      "path": "docs/ESTATISTICAS.en.md",
+      "line": 9,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "- **Confirmed Android versions:** 3 (11, 15, 16)"
+    },
+    {
+      "path": "docs/EVOLUCAO_CONTRIBUICOES.en.md",
+      "line": 23,
+      "term": "verified",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo verified em documentação técnica ou tabela de componentes.",
+      "snippet": "- Distinct authors are counted by the GitHub login associated with the author of a merged PR. This d"
+    },
+    {
+      "path": "docs/EXIT_CODES.md",
+      "line": 43,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| **5** | Pre-write sanitization failure | Sanitization validator detected sensitive telemetry (IMEI"
+    },
+    {
+      "path": "docs/MANUAL_CHANGES.md",
+      "line": 30,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "For Motorola Edge devices where surgical revocations of telemetry permissions or AppOps sandboxing w"
+    },
+    {
+      "path": "docs/MEASUREMENT_PROTOCOL.md",
+      "line": 99,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "5. After exactly 24 hours, reconnect via ADB and pull telemetry dumps:"
+    },
+    {
+      "path": "docs/PACKAGE_BY_PACKAGE_AUDIT.md",
+      "line": 7,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "Record when available: package name, label, version/versionCode, UID/shared UID; state per user/prof"
+    },
+    {
+      "path": "docs/PACKAGE_BY_PACKAGE_AUDIT.md",
+      "line": 12,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "Required fields: package name; label/version/UID; manufacturer/source and evidence; category; indivi"
+    },
+    {
+      "path": "docs/PACKAGE_BY_PACKAGE_AUDIT.md",
+      "line": 17,
+      "term": "confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "- REVIEW PERMISSIONS — sensitive access without confirmed need; assess impact before revocation."
+    },
+    {
+      "path": "docs/PACKAGE_BY_PACKAGE_AUDIT.md",
+      "line": 19,
+      "term": "confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "- REVERSIBLE RESTRICTION CANDIDATE — only after dispensability/dependencies confirmed, with plan and"
+    },
+    {
+      "path": "docs/PACKAGE_BY_PACKAGE_AUDIT.md",
+      "line": 23,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "## Telemetry evidence levels"
+    },
+    {
+      "path": "docs/SANITIZATION_LOG.en.md",
+      "line": 28,
+      "term": "confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "* **Technical Analysis:** All occurrences were individually investigated in their JSON context. It w"
+    },
+    {
+      "path": "docs/USER_DEVICE_AUDIT.md",
+      "line": 315,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "- Do not infer telemetry solely from internet permission, analytics SDKs, or package ownership."
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 13,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 15,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 30 | **Google Chrome** | `com.android.chrome` | Google (GMS / App) | **Declared and observed purpo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 16,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 31 | **OK Google Hotword Enrollment** | `com.android.hotwordenrollment.okgoogle` | Google (GMS / S"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 17,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 32 | **Hey Google Hotword Enrollment** | `com.android.hotwordenrollment.xgoogle` | Google (GMS / S"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 18,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 33 | **Google Play Store** | `com.android.vending` | Google (GMS) | **Declared and observed purpos"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 19,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 34 | **Cross-Device Services (Ambient Streaming)** | `com.google.ambient.streaming` | Google (GMS "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 20,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 35 | **Switch Access** | `com.google.android.accessibility.switchaccess` | Google (Accessibility) "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 21,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 36 | **Android AdServices (Privacy Sandbox)** | `com.google.android.adservices.api` | Google (Main"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 22,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 37 | **Carrier Wi-Fi (GWP)** | `com.google.android.apps.carrier.carrierwifi` | Google (System) | *"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 25,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 38 | **Google Drive** | `com.google.android.apps.docs` | Google (Preinstalled / Updated) | **Decla"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 26,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 39 | **Google Assistant** | `com.google.android.apps.googleassistant` | Google (GMS / System) | **"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 27,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 40 | **Google Maps** | `com.google.android.apps.maps` | Google (Preinstalled / Updated) | **Declar"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 28,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 41 | **Google Messages (SMS / RCS)** | `com.google.android.apps.messaging` | Google (Default SMS a"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 29,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 42 | **Files by Google** | `com.google.android.apps.nbu.files` | Google (Preinstalled / Updated) |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 30,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 43 | **Google Photos** | `com.google.android.apps.photos` | Google (Default gallery) | **Declared "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 31,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 44 | **Android Switch / Data Restore Tool** | `com.google.android.apps.restore` | Google (System /"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 32,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 45 | **Personal Safety** | `com.google.android.apps.safetyhub` | Google (System) | **Declared and "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 33,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 46 | **Google One** | `com.google.android.apps.subscriptions.red` | Google (Preinstalled bloatware"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 34,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 47 | **Google Meet (formerly Google Duo)** | `com.google.android.apps.tachyon` | Google (Preinstal"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 37,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 48 | **Device Health Services (Adaptive Battery)** | `com.google.android.apps.turbo` | Google (Sys"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 40,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 51 | **YouTube Music** | `com.google.android.apps.youtube.music` | Google (Preinstalled / Updated "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 42,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 53 | **Android System Intelligence (Device Personalization Services)** | `com.google.android.as` |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 43,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 54 | **Private Compute Services (PCS)** | `com.google.android.as.oss` | Google (Privileged system "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 47,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 56 | **Google Calendar** | `com.google.android.calendar` | Google (Preinstalled app) | **Declared "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 49,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 58 | **Carrier Settings (Google Carrier Configuration)** | `com.google.android.carrier` | Google /"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 52,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 61 | **ConfigUpdater** | `com.google.android.configupdater` | Google (System) | **Declared and obs"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 54,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 63 | **Google Contacts** | `com.google.android.contacts` | Google (Preinstalled app) | **Declared "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 57,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 64 | **Google Clock** | `com.google.android.deskclock` | Google (Preinstalled app) | **Declared an"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 58,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 65 | **Device Lock Controller (Mainline APEX)** | `com.google.android.devicelockcontroller` | Goog"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 59,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 66 | **Google Phone (Default Dialer)** | `com.google.android.dialer` | Google (Default dialer) | *"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 61,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 68 | **Google eSIM Manager (eUICC Manager)** | `com.google.android.euicc` | Google / System | **De"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 64,
+      "term": "servers",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo servers em documentação técnica ou tabela de componentes.",
+      "snippet": "| 71 | **Federated Compute Services (Federated Learning)** | `com.google.android.federatedcompute` |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 67,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 72 | **Google Feedback (Market Feedback Agent)** | `com.google.android.feedback` | Google (System)"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 68,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 73 | **Gmail** | `com.google.android.gm` | Google (Preinstalled app) | **Declared and observed pur"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 69,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 74 | **Google Play Services (GMS Core)** | `com.google.android.gms` | Google (GMS Core) | **Declar"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 70,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 75 | **Google Location History (Google Maps Timeline)** | `com.google.android.gms.location.history"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 71,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 76 | **System Parental Controls (Google Supervision)** | `com.google.android.gms.supervision` | Go"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 72,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 77 | **Google App (Velvet / Google Search & Assistant Engine)** | `com.google.android.googlequicks"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 73,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 78 | **Google Services Framework (GSF)** | `com.google.android.gsf` | Google (GMS Core) | **Declar"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 74,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 79 | **Health Connect Backup & Restore** | `com.google.android.health.connect.backuprestore` | Goo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 79,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 82 | **Gboard (Google Keyboard — Current Default Keyboard)** | `com.google.android.inputmethod.lat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 80,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 83 | **Android Accessibility Suite (TalkBack)** | `com.google.android.marvin.talkback` | Google (A"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 84,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 87 | **On-Device Personalization Services (ODP)** | `com.google.android.ondevicepersonalization.se"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 89,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 90 | **Google Partner Setup** | `com.google.android.partnersetup` | Google (System) | **Declared a"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 92,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 93 | **Print Service Recommendation Service** | `com.google.android.printservice.recommendation` |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 93,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 94 | **Android Auto (Stub)** | `com.google.android.projection.gearhead` | Google (System) | **Decl"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 98,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 97 | **SDK Sandbox (AdServices Runtime Sandbox)** | `com.google.android.sdksandbox` | Google / Sys"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 99,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 98 | **Android Setup (Google Setup Wizard)** | `com.google.android.setupwizard` | Google (System /"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 103,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 102 | **Speech Services by Google** | `com.google.android.tts` | Google (TTS / Voice Recognition) "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 104,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 103 | **Google TV (formerly Google Play Movies)** | `com.google.android.videos` | Google (Preinsta"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 108,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 105 | **Wi-Fi Calling Activation (VoWiFi Activation)** | `com.google.android.wfcactivation` | Goog"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 111,
+      "term": "tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 108 | **YouTube** | `com.google.android.youtube` | Google (Preinstalled / Updated app) | **Declare"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 112,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 109 | **Google Play Services for AR (ARCore)** | `com.google.ar.core` | Google (System) | **Declar"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 113,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 110 | **Mainline AdServices Package** | `com.google.mainline.adservices` | Google (Mainline) | **D"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.en.md",
+      "line": 114,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 111 | **Mainline Telemetry Package** | `com.google.mainline.telemetry` | Google (Mainline) | **Dec"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 16,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 33 | **Google Play Store** | `com.android.vending` | Google (GMS) | **Finalidade Declarada e Real:"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 57,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 74 | **Google Play Services (GMS Core)** | `com.google.android.gms` | Google (GMS Core) | **Finali"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-02-ecossistema-google.md",
+      "line": 94,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 111 | **Mainline Telemetry Package** | `com.google.mainline.telemetry` | Google (Mainline) | **Fin"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 9,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "### 4.3 Batch 3 — Motorola and Lenovo Ecosystem: Apps, Services, `3c_*` Telemetry, Camera, Audio, an"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 11,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 14,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 113 | **MotoBtAptxMode (Motorola Bluetooth Metrics Service)** | `com.bluetooth.aptxmode` | Manufac"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 15,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 114 | **Lenovo ID (Lenovo Service Framework)** | `com.lenovo.lsf.user` | Manufacturer (Lenovo / Mo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 16,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 115 | **Moto Actions and Gestures (Moto Actions)** | `com.motorola.actions` | Manufacturer (Motoro"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 17,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 116 | **Motorola AI Services** | `com.motorola.aiservices` | Manufacturer (Motorola) | **Declared "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 19,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 118 | **Motorola FOTA (Legacy Firmware OTA)** | `com.motorola.android.fota` | Manufacturer (Motoro"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 20,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 119 | **Motorola Native DropBox Agent** | `com.motorola.android.nativedropboxagent` | Manufacturer"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 21,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 120 | **Chrome Homepage Provider (Motorola)** | `com.motorola.android.providers.chromehomepage` | "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 25,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 124 | **Moto App Forecast** | `com.motorola.appforecast` | Manufacturer (Motorola) | **Declared an"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 29,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 126 | **AT&T VoWiFi** | `com.motorola.attvowifi` | Manufacturer / Carrier (Motorola / AT&T US) | *"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 30,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 127 | **Motorola Audio Recorder** | `com.motorola.audiorecorder` | Manufacturer (Motorola) | **Dec"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 31,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 128 | **Motorola ModemStatsService (Bach Modem Telemetry)** | `com.motorola.bach.modemstats` | Man"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 32,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 129 | **Motorola BatteryCare** | `com.motorola.batterycare` | Manufacturer (Motorola) | **Declared"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 33,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 130 | **Moto Hub / Brazil Apps (BRApps2)** | `com.motorola.brapps` | Manufacturer / Commercial par"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 34,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 131 | **Motorola Bug2Go Stub** | `com.motorola.bug2go` | Manufacturer (Motorola) | **Declared and "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 36,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 133 | **Moto Camera 4 (MotCamera4)** | `com.motorola.camera3` | Manufacturer (Motorola) | **Declar"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 39,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 136 | **Carrier Settings Ext** | `com.motorola.carriersettingsext` | Manufacturer (Motorola) | **D"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 40,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 137 | **Motorola Device Management & Checkin Service (3c_devicemanagement-binary)** | `com.motorol"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 41,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 138 | **Motorola CCC Main PLM (3c_main)** | `com.motorola.ccc.mainplm` | Manufacturer (Motorola) |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 43,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 140 | **Motorola System Updates (3c_ota)** | `com.motorola.ccc.ota` | Manufacturer (Motorola) | **"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 45,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 142 | **Motorola Core Settings Extensions** | `com.motorola.coresettingsext` | Manufacturer (Motor"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 50,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 145 | **Dolby Atmos UI (MotoDolbyDax3)** | `com.motorola.dolby.dolbyui` | Manufacturer / Hardware "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 53,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 148 | **Motorola Enterprise Adapter Service** | `com.motorola.enterprise.adapter.service` | Manufa"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 55,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 150 | **Motorola Entitlement Service** | `com.motorola.entitlement` | Manufacturer (Motorola) | **"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 57,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 152 | **Motorola FM Radio (FM Player)** | `com.motorola.fmplayer` | Manufacturer (Motorola) | **De"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 58,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 153 | **Moto FreeForm (Floating Windows)** | `com.motorola.freeform` | Manufacturer (Motorola) | *"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 59,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 154 | **Moto Gametime (GameMode)** | `com.motorola.gamemode` | Manufacturer (Motorola) | **Declare"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 60,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 155 | **Moto GuideMe / Device Help Genie** | `com.motorola.genie` | Manufacturer (Motorola) | **De"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 62,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 157 | **Moto Help (Device Help)** | `com.motorola.help` | Manufacturer (Motorola) | **Declared and"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 63,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 158 | **Moto Feedback Assistant (ExtLog)** | `com.motorola.help.extlog` | Manufacturer (Motorola) "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 68,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 161 | **Moto App Installer (com.motorola.installer)** | `com.motorola.installer` | Manufacturer (M"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 69,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 162 | **Moto App Launcher (Launcher3QuickStep — Default Launcher)** | `com.motorola.launcher3` | M"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 71,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 164 | **LifetimeData** | `com.motorola.lifetimedata` | Manufacturer (Motorola) | **Declared and ob"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 72,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 165 | **Moto Live Wallpaper 3** | `com.motorola.livewallpaper3` | Manufacturer (Motorola) | **Decl"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 74,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 167 | **MotCameraDesktop** | `com.motorola.motcameradesktop` | Manufacturer (Motorola) | **Declare"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 75,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 168 | **Moto App (MotoAppUIRefresh)** | `com.motorola.moto` | Manufacturer (Motorola) | **Declared"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 76,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 169 | **MotoCare** | `com.motorola.motocare` | Manufacturer (Motorola) | **Declared and observed p"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 84,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 177 | **Motorola PAKS (Device Lock / Subsidy Lock Agent)** | `com.motorola.paks` | Manufacturer (M"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 85,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 178 | **Motorola PAKS Notification (Remote-Lock Push Receiver)** | `com.motorola.paks.notification"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 88,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 179 | **Moto Personalize** | `com.motorola.personalize` | Manufacturer (Motorola) | **Declared and"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 92,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 183 | **Moto Screenshot Editor** | `com.motorola.screenshoteditor` | Manufacturer (Motorola) | **D"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 93,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 184 | **Moto Secure Vault** | `com.motorola.securevault` | Manufacturer (Motorola) | **Declared an"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 94,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 185 | **Moto Secure (MotoSecurityHub)** | `com.motorola.securityhub` | Manufacturer (Motorola) | *"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 95,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 186 | **MotoSecurityHubExt** | `com.motorola.securityhubext` | Manufacturer (Motorola) | **Declare"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 96,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 187 | **Motorola SetupWizard Extensions** | `com.motorola.setup` | Manufacturer (Motorola) | **Dec"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 98,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 189 | **Moto Smart 5G** | `com.motorola.smart5g` | Manufacturer (Motorola) | **Declared and observ"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 99,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 190 | **Family Space (Moto Spaces)** | `com.motorola.spaces` | Manufacturer (Motorola) | **Declare"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 105,
+      "term": "tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 196 | **Motorola Time and Weather Widget (TimeWeather)** | `com.motorola.timeweatherwidget` | Manu"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 107,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 198 | **Motorola Wi-Fi Metrics (MotoWifiMetrics)** | `com.motorola.wifi.motowifimetrics` | Manufac"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+      "line": 29,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 128 | **Motorola ModemStatsService (Bach Modem Telemetry)** | `com.motorola.bach.modemstats` | Fab"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 11,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 13,
+      "term": "tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 200 | **Amazon App Manager** | `com.amazon.appmanager` | Carrier / Commercial Partner | **Declared"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 16,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 203 | **Dolby Atmos Service (daxService)** | `com.dolby.daxservice` | Hardware / SoC (Dolby Labora"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 19,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 206 | **Meta App Manager** | `com.facebook.appmanager` | Carrier / Commercial Partner (Meta Platfo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 20,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 207 | **Meta Services** | `com.facebook.services` | Carrier / Commercial Partner (Meta Platforms) "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 21,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 208 | **Meta App Installer** | `com.facebook.system` | Carrier / Commercial Partner (Meta Platform"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 22,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 209 | **Glance Lockscreen Motorola (InMobi / Roposo)** | `com.glance.lockscreenM` | Carrier / Comm"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 24,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 211 | **MediaTek Application Performance Monitor (ApmService)** | `com.mediatek.apmonitor` | Hardw"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 32,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 219 | **Orange Manual Selector (ironSource Aura)** | `com.orange.aura.oobe` | Carrier / Commercial"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 33,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 220 | **Orange AppCenter Updates** | `com.orange.update` | Carrier / Commercial Partner (Orange Eu"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 37,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 224 | **AppAssistantEnabler (Deutsche Telekom TSC)** | `de.telekom.tsc` | Carrier / Commercial Par"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 11,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 24,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 236 | **CarrierDefaultApp** | `com.android.carrierdefaultapp` | System (AOSP) | **Declared and obs"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 38,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 250 | **IMS Service Entitlement** | `com.android.imsserviceentitlement` | System (AOSP / Google) |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 64,
+      "term": "servers",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo servers em documentação técnica ou tabela de componentes.",
+      "snippet": "| 276 | **Remote Key Provisioning Daemon App (RKPD)** | `com.android.rkpdapp` | System (AOSP / Crypt"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 67,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 279 | **System Settings (SettingsMoto)** | `com.android.settings` | System / Manufacturer (AOSP + "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-05-sistema-base-aosp.en.md",
+      "line": 73,
+      "term": "Tracking",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Tracking em documentação técnica ou tabela de componentes.",
+      "snippet": "| 285 | **SIM Toolkit (STK)** | `com.android.stk` | System (AOSP) | **Declared and observed purpose:"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 11,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 17,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 301 | **Display Cutout Emulation (Corner)** | `com.android.internal.display.cutout.emulation.corne"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 18,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 302 | **Display Cutout Emulation (Double)** | `com.android.internal.display.cutout.emulation.doubl"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 19,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 303 | **Display Cutout Emulation (Hole)** | `com.android.internal.display.cutout.emulation.hole` |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 20,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 304 | **Display Cutout Emulation (Nocutout)** | `com.android.internal.display.cutout.emulation.noC"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 21,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 305 | **Display Cutout Emulation (Tall)** | `com.android.internal.display.cutout.emulation.tall` |"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-06-overlays-aosp-google-mediatek.en.md",
+      "line": 22,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 306 | **Display Cutout Emulation (Waterfall)** | `com.android.internal.display.cutout.emulation.wa"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-07-overlays-motorola-operadoras-esim.en.md",
+      "line": 11,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 11,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| # | Name | Package name | Origin | Purpose | Telemetry | Permissions | Risk | Classification | Rat"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 13,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 424 | **DeviceLock Mainline APEX** | `com.google.android.devicelock` | Google (Mainline) | **Decla"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 15,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 426 | **OnDevicePersonalization Mainline APEX** | `com.google.android.ondevicepersonalization` | G"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 17,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 428 | **Statsd (System Telemetry Daemon) APEX** | `com.google.android.os.statsd` | Google / System"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 30,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 441 | **DeviceConfig Infrastructure APEX** | `com.google.android.configinfrastructure` | Google / "
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 37,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Confirmed em documentação técnica ou tabela de componentes.",
+      "snippet": "| 448 | **AdServices Mainline APEX** | `com.google.android.adservices` | Google (Mainline) | **Decla"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.en.md",
+      "line": 57,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "> - **APEX modules with internal telemetry containers (already deactivated at APK level):** `com.goo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.md",
+      "line": 17,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Ocorrência técnica/contextual legítima do termo Telemetry em documentação técnica ou tabela de componentes.",
+      "snippet": "| 428 | **Statsd (System Telemetry Daemon) APEX** | `com.google.android.os.statsd` | Google / Sistem"
+    },
+    {
+      "path": "docs/APRESENTACAO_METODO_E_RESULTADOS.en.md",
+      "line": 60,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Descrição do componente de diagnóstico da Samsung DiagMonAgent",
+      "snippet": "* **Diagnostic components:** Deactivated *DiagMonAgent* (`com.sec.android.diagmonagent`) and *IMS Lo"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.en.md",
+      "line": 42,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Status catalogado de componente de notificações",
+      "snippet": "| 139 | **Motorola Notifications (3c_notification / Hello You Marketing)** | `com.motorola.ccc.notif"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-03-motorola-lenovo.md",
+      "line": 40,
+      "term": "Telemetry",
+      "category": "A",
+      "rationale": "Título em tabela de componente",
+      "snippet": "| 139 | **Notificações da Motorola (3c_notification / Hello You Marketing)** | `com.motorola.ccc.not"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 14,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Status catalogado",
+      "snippet": "| 201 | **AppCloud OOBE Motorola (ironSource Aura)** | `com.aura.oobe.motorola` | Carrier / Commerci"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 17,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Status catalogado",
+      "snippet": "| 204 | **Claro Ignite (Digital Turbine)** | `com.dti.amx` | Carrier / Commercial Partner (Digital T"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 18,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Status catalogado",
+      "snippet": "| 205 | **Motorola Ignite / Mobile Services (Digital Turbine)** | `com.dti.motorola` | Carrier / Com"
+    },
+    {
+      "path": "docs/auditorias/moto-g54/lote-04-parceiros-comerciais-e-hardware.en.md",
+      "line": 35,
+      "term": "Confirmed",
+      "category": "A",
+      "rationale": "Status catalogado",
+      "snippet": "| 222 | **Taboola MIP (Magazine Lockscreen / News Feed Ads)** | `com.taboola.mip` | Carrier / Commer"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 13,
+      "term": "Verified",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| # | Device Audited | Package (`Package Name`) | Documented Classification | Primary Source Verifie"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 16,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 02 | Motorola Edge 60 Fusion | `com.google.android.federatedcompute` | Google federated computatio"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 18,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 04 | Motorola Edge 60 Pro | `com.google.android.apps.maps` | Google Maps navigation app | Google P"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 19,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 05 | Motorola Edge 60 Pro | `com.motorola.wifi.motowifimetrics` | OEM Wi-Fi radio diagnostic telem"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 24,
+      "term": "dropper",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 10 | Motorola Edge 60 Fusion | `com.dti.motorola` | Digital Turbine Ignite commercial dropper | Di"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 32,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 18 | Samsung Galaxy A30s | `com.facebook.appmanager` | Meta App Manager background daemon | Meta P"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 36,
+      "term": "tracking",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 22 | Motorola Edge 60 Pro | `com.inmobi.weather` | InMobi ad-supported weather application | InMob"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 37,
+      "term": "verified",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 23 | Motorola Edge 60 Pro | `com.android.hotwordenrollment.xgoogle` | Hardware DSP hotword enrollm"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 39,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 25 | Motorola Edge 60 Pro | `com.motorola.aiservices` | Moto AI Services (`LearningEnabledProvider"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 40,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 26 | Samsung Galaxy A30s | `com.samsung.android.game.gametools` | Samsung Game Tools overlay panel"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 42,
+      "term": "verified",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 28 | Motorola Edge 60 Pro | `com.android.chrome` | Google Chrome web browser | Google Play / Chrom"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.md",
+      "line": 43,
+      "term": "telemetry",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 29 | Samsung Galaxy A30s | `com.samsung.android.fmm` | Samsung Find My Mobile remote locator | Sam"
+    },
+    {
+      "path": "docs/SELF_AUDIT_2026-11-09.pt-BR.md",
+      "line": 24,
+      "term": "Dropper",
+      "category": "A",
+      "rationale": "Pendente de correção no pacote C-4 (reconstrução da autoauditoria)",
+      "snippet": "| 10 | Motorola Edge 60 Fusion | `com.dti.motorola` | Dropper comercial Digital Turbine Ignite | SDK"
     }
   ]
 }

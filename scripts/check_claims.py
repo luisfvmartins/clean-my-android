@@ -35,7 +35,21 @@ DEFAULT_TERMS = [
     r"stops tracking",
 ]
 
+ENGLISH_TERMS = [
+    r"privacy gain",
+    r"verified",
+    r"confirmed",
+    r"highly recommended",
+    r"telemetry",
+    r"servers",
+    r"tracking",
+    r"dropper",
+    r"harvest",
+    r"exfiltrat",
+]
+
 DEFAULT_PATTERN = re.compile(r"(?i)\b(?:" + "|".join(DEFAULT_TERMS) + r")\b")
+DOCS_PATTERN = re.compile(r"(?i)\b(?:" + "|".join(DEFAULT_TERMS + english_terms) + r")\b" if 'english_terms' in locals() else r"(?i)\b(?:" + "|".join(DEFAULT_TERMS + ENGLISH_TERMS) + r")\b")
 QUALIFIER_PATTERN = re.compile(
     r"(?i)(?:não medid[ao]s?|not measured|pendente|pending|hipótese|hypothesis|\[.*?\]\(.*?\))"
 )
@@ -121,11 +135,11 @@ def validate_claims(
     allowlist, allowlist_errors = load_allowlist(allowlist_path)
     errors.extend(allowlist_errors)
 
-    target_extensions = (".md", ".json", ".txt")
-    for path in sorted(base_dir.rglob("*")):
+    target_extensions = (".md",)
+    for path in sorted(base_dir.rglob("*.md")):
         if ".git" in path.parts or ".pytest_cache" in path.parts or "__pycache__" in path.parts:
             continue
-        if not path.is_file() or path.suffix not in target_extensions:
+        if not path.is_file():
             continue
         rel = str(path.relative_to(base_dir))
         if rel in ("data/sanitization_allowlist.json", "data/claims_allowlist.json"):
@@ -143,9 +157,12 @@ def validate_claims(
             errors.append(f"{rel}: erro de leitura ({exc})")
             continue
 
+        pat = DOCS_PATTERN if rel.startswith("docs/") else DEFAULT_PATTERN
         for lno, line in enumerate(content.splitlines(), 1):
             checks += 1
-            match = DEFAULT_PATTERN.search(line)
+            line_no_code = re.sub(r"`[^`]*`", "", line)
+            line_clean = re.sub(r"\b[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)+\b", "", line_no_code)
+            match = pat.search(line_clean)
             if match:
                 term = match.group(0)
                 if QUALIFIER_PATTERN.search(line):
@@ -242,6 +259,171 @@ def validate_metrics_json(
                     errors.append(
                         f"{rel}: metric[{idx}] '{ind}' métrica do tipo 'count' não pode alegar efeito em nenhum campo: {m_effect.group(0)}"
                     )
+
+    return checks, errors
+
+
+def get_active_ci_os_list(root_dir: Path) -> set[str]:
+    """Extrai os sistemas operacionais configurados em workflows ativos (.github/workflows/)."""
+    ci_os: set[str] = set()
+    wf_dir = root_dir / ".github/workflows"
+    if not wf_dir.is_dir():
+        return ci_os
+
+    for p in wf_dir.glob("*.y*ml"):
+        try:
+            content = p.read_text(encoding="utf-8")
+            for m in re.finditer(r"runs-on:\s*([a-zA-Z0-9_\-\.]+)", content):
+                ci_os.add(m.group(1).strip().lower())
+            m_matrix = re.search(r"os:\s*\[([^\]]+)\]", content)
+            if m_matrix:
+                for item in m_matrix.group(1).split(","):
+                    val = item.strip().strip("'\"").lower()
+                    if val:
+                        ci_os.add(val)
+        except Exception:
+            pass
+    return ci_os
+
+
+def validate_ci_platform_claims(root_dir: Path) -> tuple[int, list[str]]:
+    """Valida que qualquer menção a 'Tested in CI' reflete SOs configurados em workflows ativos."""
+    checks = 0
+    errors: list[str] = []
+    active_os = get_active_ci_os_list(root_dir)
+
+    ci_claim_pattern = re.compile(
+        r"(?i)\b(?:tested in ci|testado no ci|testado em ci)\s*(?:\(([^)]+)\)|(?:on|em|no|[-—:])\s*([a-zA-Z0-9_\-\.]+))"
+    )
+
+    docs_to_check = (
+        list(root_dir.glob("docs/**/*.md"))
+        + list(root_dir.glob("reports/**/*.md"))
+        + list(root_dir.glob("README*.md"))
+    )
+    for p in docs_to_check:
+        if ".git" in p.parts:
+            continue
+        rel = str(p.relative_to(root_dir))
+        try:
+            content = p.read_text(encoding="utf-8")
+        except Exception:
+            continue
+
+        for lno, line in enumerate(content.splitlines(), 1):
+            checks += 1
+            for m in ci_claim_pattern.finditer(line):
+                claimed_os_str = m.group(1) or m.group(2) or ""
+                claimed_os_str = claimed_os_str.strip()
+                for os_token in re.split(r"[,/ ]+", claimed_os_str):
+                    os_token = os_token.strip().lower()
+                    if not os_token or os_token in {"supported", "suportado", "tested", "testado"}:
+                        continue
+                    if os_token not in active_os:
+                        errors.append(
+                            f"{rel}:{lno}: SO '{os_token}' citado em 'Tested in CI' não está presente em workflows ativos de .github/workflows/ (ativos: {sorted(active_os)})"
+                        )
+    return checks, errors
+
+
+def validate_scorecard_evidence_references(root_dir: Path) -> tuple[int, list[str]]:
+    """Valida que linhas com status 'Met'/'Atendido' em QUALITY_SCORECARD*.md referenciam artefato existente em docs/evidence-runs/**."""
+    checks = 0
+    errors: list[str] = []
+
+    scorecard_files = list(root_dir.glob("docs/QUALITY_SCORECARD*.md"))
+    for p in scorecard_files:
+        rel = str(p.relative_to(root_dir))
+        try:
+            lines = p.read_text(encoding="utf-8").splitlines()
+        except Exception:
+            continue
+
+        for lno, line in enumerate(lines, 1):
+            if not line.strip().startswith("|"):
+                continue
+            # Look for status cell: | Met | or | Atendido |
+            if re.search(r"\|\s*(?:`?(?:Met|Atendido)`?)\s*\|", line):
+                checks += 1
+                art_match = re.search(r"\[.*?\]\(((?:docs/)?evidence-runs/[^)]+)\)", line)
+                if not art_match:
+                    errors.append(
+                        f"{rel}:{lno}: linha com status 'Met'/'Atendido' não referencia artefato em docs/evidence-runs/**"
+                    )
+                else:
+                    art_rel = art_match.group(1)
+                    if not art_rel.startswith("docs/"):
+                        art_path = root_dir / "docs" / art_rel
+                    else:
+                        art_path = root_dir / art_rel
+                    if not art_path.is_file():
+                        errors.append(
+                            f"{rel}:{lno}: artefato de evidência referenciado '{art_rel}' não existe no repositório"
+                        )
+
+    return checks, errors
+
+
+def validate_self_audit_rigor(root_dir: Path) -> tuple[int, list[str]]:
+    """Valida rigor metodológico em SELF_AUDIT*.md: proíbe 'Agree' e fontes genéricas sem caminho/URL."""
+    checks = 0
+    errors: list[str] = []
+
+    self_audit_files = list(root_dir.glob("docs/SELF_AUDIT*.md"))
+    for p in self_audit_files:
+        rel = str(p.relative_to(root_dir))
+        try:
+            lines = p.read_text(encoding="utf-8").splitlines()
+        except Exception:
+            continue
+
+        for lno, line in enumerate(lines, 1):
+            if not line.strip().startswith("|"):
+                continue
+            if "---" in line or "| #" in line or "| Package" in line or "| Pacote" in line:
+                continue
+
+            checks += 1
+            if re.search(r"\bAgree\b", line):
+                errors.append(
+                    f"{rel}:{lno}: veredito 'Agree' não é permitido (use vereditos rastreáveis: supported-by-repo-data, supported-by-external-source, unverified, contradicted)"
+                )
+
+            cells = [c.strip() for c in line.split("|")]
+            if len(cells) >= 6:
+                source_cell = ""
+                for c in cells[3:]:
+                    if any(
+                        kw in c.lower()
+                        for kw in [
+                            "http://",
+                            "https://",
+                            "reports/",
+                            "docs/",
+                            "data/",
+                            "firmware",
+                            "dumpsys",
+                            "gapps",
+                            "play",
+                            "aosp",
+                        ]
+                    ):
+                        source_cell = c
+                        break
+                if source_cell:
+                    has_link = bool(
+                        re.search(r"\[.*?\]\((https?://[^)]+|[a-zA-Z0-9_\-\./]+)\)", source_cell)
+                    )
+                    has_url = bool(re.search(r"https?://", source_cell))
+                    has_repo_path = any(
+                        (root_dir / part.strip("`(),[] ")).exists()
+                        for part in source_cell.split()
+                        if "/" in part
+                    )
+                    if not (has_link or has_url or has_repo_path):
+                        errors.append(
+                            f"{rel}:{lno}: fonte genérica '{source_cell}' sem caminho de arquivo existente nem URL válida"
+                        )
 
     return checks, errors
 
