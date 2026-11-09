@@ -277,7 +277,7 @@ def validate_homologation_levels_and_evidence() -> None:
     devices = data.get("devices", [])
 
     def check_evidence_paths(device_id: str, evidence: dict, key: str) -> bool:
-        nonlocal checks
+        global checks
         raw_paths = evidence.get(key)
         if isinstance(raw_paths, str):
             paths = [raw_paths]
