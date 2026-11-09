@@ -32,7 +32,7 @@ This guide establishes practical safeguards for Clean My Android contributions. 
 
 ## Before submitting
 
-1. Read the PR checklist in [the pull request template](../.github/PULL_REQUEST_TEMPLATE.md).
+1. Read the PR checklist in [the pull request template](../.github/pull_request_template.md).
 2. Review the entire diff for scope, accuracy, and privacy.
 3. Run the checks relevant to the files changed.
 4. State what was tested, what was not tested, and any known limitations in the PR description.

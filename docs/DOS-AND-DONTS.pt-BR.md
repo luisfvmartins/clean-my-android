@@ -32,7 +32,7 @@ Este guia estabelece salvaguardas práticas para contribuições ao Clean My And
 
 ## Antes de enviar
 
-1. Leia a lista de verificação do [modelo de pull request](../.github/PULL_REQUEST_TEMPLATE.md).
+1. Leia a lista de verificação do [modelo de pull request](../.github/pull_request_template.md).
 2. Revise todo o diff quanto ao escopo, à precisão e à privacidade.
 3. Execute as verificações pertinentes aos arquivos alterados.
 4. Informe na descrição do PR o que foi testado, o que não foi testado e quaisquer limitações conhecidas.
