@@ -414,6 +414,26 @@ def validate_claims_and_metrics() -> None:
         fail(f"violação de alegações ou esquema de métricas: {detail}")
 
 
+def validate_change_lists_and_apply_gate() -> None:
+    """Run change lists and apply gate validation (PT-2)."""
+    global checks
+    checks += 1
+    script = ROOT / "scripts/check_change_lists.py"
+    if not script.is_file():
+        fail("scripts/check_change_lists.py não encontrado")
+        return
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        fail(f"inconsistência em listas de mudanças ou gate de aplicação: {detail}")
+
+
 def main() -> int:
     validate_json_files()
     validate_shell_scripts()
@@ -425,6 +445,7 @@ def main() -> int:
     validate_adb_script_tests()
     validate_sanitization()
     validate_claims_and_metrics()
+    validate_change_lists_and_apply_gate()
 
     if errors:
         print(f"FALHA: {len(errors)} problema(s) encontrado(s) em {checks} verificações.")

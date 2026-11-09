@@ -35,7 +35,9 @@
           "docs/auditorias/moto-g54/lote-08-modulos-project-mainline-apex.md"
         ],
         "audit": "docs/AUDITORIA_MOTO_G54_5G.md"
-      }
+      },
+      "codename": "cancunf",
+      "apply_supported": true
     },
     {
       "id": "motorola-edge-60-pro",
@@ -65,7 +67,8 @@
           "reports/motorola/edge-60-pro/inventario-antes.json"
         ],
         "audit": "reports/motorola/edge-60-pro/auditoria.md"
-      }
+      },
+      "apply_supported": false
     },
     {
       "id": "motorola-edge-60-fusion",
@@ -96,7 +99,8 @@
         ],
         "audit": "reports/motorola/edge-60-fusion/audit.md",
         "functional_tests": "reports/motorola/edge-60-fusion/comparison-report.md"
-      }
+      },
+      "apply_supported": false
     },
     {
       "id": "samsung-galaxy-a30s",
@@ -127,7 +131,8 @@
         ],
         "audit": "reports/samsung/galaxy-a30s/comparison-report.md",
         "functional_tests": "reports/samsung/galaxy-a30s/comparison-report.md"
-      }
+      },
+      "apply_supported": false
     }
   ]
 }
