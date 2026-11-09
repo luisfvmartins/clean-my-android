@@ -229,6 +229,63 @@ def validate_device_changes(root_dir: Path, protected: set[str]) -> tuple[int, l
     return checks, errors
 
 
+def is_snapshot_or_candidate_file(path: Path) -> bool:
+    """Detecta se o arquivo é snapshot ou lista histórica de candidatos pelo cabeçalho."""
+    if not path.is_file():
+        return False
+    try:
+        first_lines = "".join(path.read_text(encoding="utf-8").splitlines()[:15]).upper()
+        return any(k in first_lines for k in ["SNAPSHOT", "CANDIDATOS", "REGISTRO HISTÓRICO", "HISTÓRICA"])
+    except Exception:
+        return False
+
+
+def load_notes_protected_packages(notes_path: Path) -> set[str]:
+    """Lê os pacotes documentados no arquivo .notes.md associado."""
+    if not notes_path.is_file():
+        return set()
+    text = notes_path.read_text(encoding="utf-8")
+    matches = set(re.findall(r"`([a-zA-Z0-9_]+(?:\.[a-zA-Z0-9_]+)+)`", text))
+    for line in text.splitlines():
+        line = line.strip()
+        m = re.match(r"^\d+\.\s+`?([a-zA-Z0-9_]+(?:\.[a-zA-Z0-9_]+)+)`?", line)
+        if m:
+            matches.add(m.group(1))
+    return matches
+
+
+def check_snapshot_not_consumed_by_scripts(root_dir: Path, filename: str) -> list[str]:
+    """Verifica se nenhum script, workflow ou doc executável faz referência ao arquivo de snapshot/candidatos."""
+    errors: list[str] = []
+    candidates: list[Path] = []
+    scripts_dir = root_dir / "scripts"
+    if scripts_dir.is_dir():
+        for p in scripts_dir.rglob("*"):
+            if p.is_file() and p.suffix in {".sh", ".py"}:
+                if p.name in {"check_change_lists.py", "validate_repository.py", "generate_statistics.py"}:
+                    continue
+                candidates.append(p)
+
+    wf_dir = root_dir / ".github/workflows"
+    if wf_dir.is_dir():
+        for p in wf_dir.glob("*.yml"):
+            candidates.append(p)
+        for p in wf_dir.glob("*.yaml"):
+            candidates.append(p)
+
+    for p in candidates:
+        try:
+            content = p.read_text(encoding="utf-8")
+            if filename in content:
+                errors.append(
+                    f"{p.relative_to(root_dir)}: faz referência indevida ao arquivo de dados/snapshot '{filename}'"
+                )
+        except Exception:
+            pass
+
+    return errors
+
+
 def validate_data_disabled_lists(root_dir: Path, protected: set[str]) -> tuple[int, list[str]]:
     checks = 0
     errors: list[str] = []
@@ -251,10 +308,30 @@ def validate_data_disabled_lists(root_dir: Path, protected: set[str]) -> tuple[i
             pass
 
         pkgs = parse_packages_from_file(path)
-        for p in pkgs:
+
+        if is_snapshot_or_candidate_file(path):
+            notes_file = path.with_name(path.name + ".notes.md")
+            if not notes_file.is_file():
+                errors.append(f"{rel_path}: arquivo de snapshot/candidatos requer notas em {notes_file.name}")
+                continue
+
+            documented_pkgs = load_notes_protected_packages(notes_file)
+            for p in pkgs:
+                checks += 1
+                if p in protected:
+                    if p not in documented_pkgs:
+                        errors.append(
+                            f"{rel_path}: pacote protegido '{p}' presente no snapshot sem documentação em {notes_file.name}"
+                        )
+
             checks += 1
-            if p in protected:
-                errors.append(f"{rel_path}: pacote protegido '{p}' encontrado na lista geral de desativados!")
+            ref_errs = check_snapshot_not_consumed_by_scripts(root_dir, path.name)
+            errors.extend(ref_errs)
+        else:
+            for p in pkgs:
+                checks += 1
+                if p in protected:
+                    errors.append(f"{rel_path}: pacote protegido '{p}' encontrado na lista geral de desativados!")
 
     return checks, errors
 
